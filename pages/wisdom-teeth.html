@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert wisdom teeth removal with advanced sedation options. Free consultation, personalized assessment, and compassionate care. Modern Dental Care - your comfort is our priority.">
+    <meta name="keywords" content="wisdom teeth removal, tooth extraction, sedation dentistry, dental surgery, oral surgery, emergency dental care">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Wisdom Teeth Removal Experts | Modern Dental Care">
+    <meta property="og:description" content="Gentle extraction with advanced sedation options for your comfort. Free consultation and personalized care.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="/wisdom-teeth-removal">
+    <title>Wisdom Teeth Removal - Expert Extraction & Care | Modern Dental Care</title>
+    
+    <style>
+        /* Critical CSS - Above the fold */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --warning-yellow: #FFC107;
+            --info-blue: #17A2B8;
+            --danger-red: #DC3545;
+            --light-purple: #E7E3FF;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 20px rgba(0,0,0,0.1);
+            --shadow-heavy: 0 10px 30px rgba(0,0,0,0.1);
+            --border-radius: 8px;
+            --border-radius-lg: 15px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Skip to main content for screen readers */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Header - Optimized for performance */
+        header {
+            background: var(--clean-white);
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            will-change: transform;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover,
+        .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+            outline: 2px solid transparent;
+        }
+        
+        .emergency-button {
+            background: var(--danger-red);
+            color: var(--clean-white);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .emergency-button:hover,
+        .emergency-button:focus {
+            background: #c82333;
+            outline: 2px solid var(--danger-red);
+            outline-offset: 2px;
+        }
+        
+        /* Hero Section - Optimized loading */
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 4rem 5% 3rem;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Lazy loaded sections */
+        .content-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .content-section.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 3D Wisdom Teeth Position Visualizer - Enhanced accessibility */
+        .position-visualizer {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .visualizer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--trust-blue);
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .visualizer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .jaw-diagram {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+        }
+        
+        .jaw-svg {
+            width: 100%;
+            height: 400px;
+            background: 
+                linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%),
+                linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+        
+        .position-info {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .position-types {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .position-card {
+            padding: 1rem;
+            border-left: 4px solid var(--accent-teal);
+            background: var(--soft-gray);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: var(--border-radius);
+            position: relative;
+        }
+        
+        .position-card:hover,
+        .position-card:focus {
+            background: var(--light-purple);
+            transform: translateX(5px);
+            outline: 2px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+        
+        .position-card.active {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+        }
+        
+        .position-card h4 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        /* Enhanced Quiz Section - Improved accessibility */
+        .quiz-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--soft-gray);
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .quiz-title {
+            text-align: center;
+            color: var(--trust-blue);
+            margin-bottom: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+        }
+        
+        .quiz-progress {
+            background: var(--clean-white);
+            height: 8px;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            background: var(--accent-teal);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 4px;
+        }
+        
+        .quiz-question {
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        
+        .quiz-question h3 {
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .quiz-option {
+            background: var(--clean-white);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+        }
+        
+        .quiz-option:hover,
+        .quiz-option:focus {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            transform: translateX(5px);
+            outline: 2px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+        
+        .quiz-option.selected {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .quiz-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .quiz-result {
+            text-align: center;
+            padding: 2rem;
+            background: var(--info-blue);
+            color: var(--clean-white);
+            border-radius: 10px;
+            margin-top: 2rem;
+            display: none;
+        }
+        
+        .result-gauge {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            position: relative;
+            background: conic-gradient(
+                var(--danger-red) 0deg 120deg,
+                var(--warning-yellow) 120deg 240deg,
+                var(--success-green) 240deg 360deg
+            );
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gauge-center {
+            width: 150px;
+            height: 150px;
+            background: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .gauge-score {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+        
+        /* Recovery Timeline Tool - Performance optimized */
+        .recovery-tool {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .recovery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline-interactive {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .timeline-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-option {
+            padding: 0.8rem 1.5rem;
+            background: var(--soft-gray);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .timeline-option:hover,
+        .timeline-option:focus {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            outline: 2px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+        
+        .timeline-option.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+        }
+        
+        .timeline-display {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent-teal);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            position: relative;
+            opacity: 0;
+            animation: fadeInScale 0.5s forwards;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .timeline-content h4 {
+            font-weight: 600;
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-weight: 700;
+        }
+        
+        /* Sedation Options Selector */
+        .sedation-selector {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .sedation-tool {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .anxiety-scale {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .anxiety-scale h3 {
+            margin-bottom: 1.5rem;
+            color: var(--trust-blue);
+            font-weight: 600;
+        }
+        
+        .scale-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background: linear-gradient(to right, var(--success-green), var(--warning-yellow), var(--danger-red));
+            border-radius: 50px;
+        }
+        
+        .scale-point {
+            width: 50px;
+            height: 50px;
+            background: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 700;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .scale-point:hover,
+        .scale-point:focus {
+            transform: scale(1.1);
+            outline: 2px solid var(--clean-white);
+            outline-offset: 2px;
+        }
+        
+        .scale-point.selected {
+            transform: scale(1.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* CTA Section - Final conversion optimized */
+        .cta-section {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button-large {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow-medium);
+            font-weight: 600;
+        }
+        
+        .cta-button-large:hover,
+        .cta-button-large:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            outline: 2px solid var(--clean-white);
+            outline-offset: 2px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Animations - GPU accelerated */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Responsive Design - Mobile first approach */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 5% 2rem;
+            }
+            
+            .visualizer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .timeline-line {
+                left: 30px;
+            }
+            
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 5%;
+            }
+            
+            .nav-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .timeline-selector {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .timeline-option {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .scale-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+                padding: 1.5rem;
+                border-radius: 20px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .nav-buttons,
+            .cta-button,
+            .emergency-button,
+            .floating-reminder {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .hero {
+                background: none !important;
+                color: black !important;
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .cta-button,
+            .emergency-button,
+            .timeline-option {
+                border: 2px solid currentColor;
+            }
+        }
+        
+        /* Focus styles for better accessibility */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+        
+        /* Loading optimization */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        
+        /* Floating consultation reminder - Performance optimized */
+        .floating-reminder {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeInUp 0.5s ease-out;
+            font-weight: 600;
+            border: none;
+            text-decoration: none;
+        }
+        
+        .floating-reminder:hover,
+        .floating-reminder:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+            outline: 2px solid var(--clean-white);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo" aria-label="Modern Dental Care - Home">Modern Dental Care</a>
+            <div class="nav-buttons">
+                <button class="emergency-button" onclick="checkPain()" aria-label="Emergency pain assistance">
+                    <span aria-hidden="true">⚡</span> Pain Right Now?
+                </button>
+                <a href="#consultation" class="cta-button">Schedule Consultation</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" role="banner">
+        <h1>Wisdom Teeth Removal Experts</h1>
+        <p>Gentle extraction with advanced sedation options for your comfort</p>
+        <div class="hero-buttons">
+            <a href="#quiz" class="cta-button">Take Extraction Assessment</a>
+            <a href="#visualizer" class="cta-button" style="background: var(--accent-teal);">See 3D Position Viewer</a>
+        </div>
+    </section>
+    
+    <main id="main-content" role="main">
+        <!-- 3D Wisdom Teeth Position Visualizer -->
+        <section id="visualizer" class="position-visualizer content-section">
+            <div class="visualizer-container">
+                <h2 class="section-title">Interactive Wisdom Teeth Position Visualizer</h2>
+                <div class="visualizer-content">
+                    <div class="jaw-diagram">
+                        <div class="jaw-svg" role="img" aria-label="3D jaw model showing wisdom teeth positions">
+                            [3D Jaw Model - Interactive Visualization]
+                        </div>
+                    </div>
+                    <div class="position-info">
+                        <h3>Common Wisdom Teeth Positions</h3>
+                        <p>Click to see how different positions affect extraction complexity:</p>
+                        <div class="position-types" role="radiogroup" aria-label="Wisdom teeth position types">
+                            <button class="position-card active" onclick="showPosition('vertical')" role="radio" aria-checked="true" tabindex="0">
+                                <h4><span aria-hidden="true">↑</span> Vertical (Normal)</h4>
+                                <p>Easiest extraction, fully erupted</p>
+                            </button>
+                            <button class="position-card" onclick="showPosition('angled')" role="radio" aria-checked="false" tabindex="-1">
+                                <h4><span aria-hidden="true">↗</span> Mesial Angle</h4>
+                                <p>Most common impaction, moderate difficulty</p>
+                            </button>
+                            <button class="position-card" onclick="showPosition('horizontal')" role="radio" aria-checked="false" tabindex="-1">
+                                <h4><span aria-hidden="true">→</span> Horizontal</h4>
+                                <p>Complex extraction, surgical approach needed</p>
+                            </button>
+                            <button class="position-card" onclick="showPosition('inverted')" role="radio" aria-checked="false" tabindex="-1">
+                                <h4><span aria-hidden="true">↓</span> Inverted</h4>
+                                <p>Rare position, specialist referral recommended</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enhanced Extraction Quiz -->
+        <section id="quiz" class="quiz-section content-section">
+            <div class="quiz-container">
+                <h2 class="quiz-title">Wisdom Teeth Extraction Necessity Assessment</h2>
+                <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                
+                <form id="quiz-content" role="form" aria-label="Wisdom teeth assessment quiz">
+                    <div class="quiz-question" style="animation-delay: 0.1s;">
+                        <h3>1. Are you experiencing pain in the back of your mouth?</h3>
+                        <div class="quiz-options" role="radiogroup" aria-label="Pain level options">
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="pain" value="3" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">😫</span>
+                                <div>
+                                    <strong>Yes, frequently</strong>
+                                    <p>Constant or recurring pain</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="pain" value="2" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">😐</span>
+                                <div>
+                                    <strong>Sometimes</strong>
+                                    <p>Occasional discomfort</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="pain" value="0" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">😊</span>
+                                <div>
+                                    <strong>No pain</strong>
+                                    <p>No discomfort at all</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="quiz-question" style="animation-delay: 0.2s;">
+                        <h3>2. Do you have difficulty cleaning your back teeth?</h3>
+                        <div class="quiz-options" role="radiogroup" aria-label="Cleaning difficulty options">
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="cleaning" value="3" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">🦷</span>
+                                <div>
+                                    <strong>Yes, very difficult</strong>
+                                    <p>Can't reach properly with brush/floss</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="cleaning" value="2" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">🪥</span>
+                                <div>
+                                    <strong>Somewhat difficult</strong>
+                                    <p>Challenging but manageable</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="cleaning" value="0" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">✨</span>
+                                <div>
+                                    <strong>No difficulty</strong>
+                                    <p>Easy to clean thoroughly</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="quiz-question" style="animation-delay: 0.3s;">
+                        <h3>3. Have you noticed swelling or tenderness in your gums?</h3>
+                        <div class="quiz-options" role="radiogroup" aria-label="Swelling frequency options">
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="swelling" value="3" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">🔴</span>
+                                <div>
+                                    <strong>Yes, often</strong>
+                                    <p>Regular swelling or infection</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="swelling" value="1" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">🟡</span>
+                                <div>
+                                    <strong>Occasionally</strong>
+                                    <p>Infrequent episodes</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="swelling" value="0" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">🟢</span>
+                                <div>
+                                    <strong>Never</strong>
+                                    <p>No swelling issues</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="quiz-question" style="animation-delay: 0.4s;">
+                        <h3>4. What's your age range?</h3>
+                        <div class="quiz-options" role="radiogroup" aria-label="Age range options">
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="age" value="2" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">🎓</span>
+                                <div>
+                                    <strong>16-20 years</strong>
+                                    <p>Ideal extraction window</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="age" value="1" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">👨</span>
+                                <div>
+                                    <strong>21-25 years</strong>
+                                    <p>Common extraction age</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="age" value="0" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">👴</span>
+                                <div>
+                                    <strong>26+ years</strong>
+                                    <p>Monitoring recommended</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="quiz-question" style="animation-delay: 0.5s;">
+                        <h3>5. Has your dentist mentioned your wisdom teeth?</h3>
+                        <div class="quiz-options" role="radiogroup" aria-label="Dentist recommendation options">
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="dentist" value="3" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">⚠️</span>
+                                <div>
+                                    <strong>Yes, recommended removal</strong>
+                                    <p>Professional assessment done</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="dentist" value="1" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">👀</span>
+                                <div>
+                                    <strong>Monitoring them</strong>
+                                    <p>Regular check-ups scheduled</p>
+                                </div>
+                            </label>
+                            <label class="quiz-option" tabindex="0">
+                                <input type="radio" name="dentist" value="0" class="visually-hidden">
+                                <span class="quiz-icon" aria-hidden="true">❓</span>
+                                <div>
+                                    <strong>Not discussed</strong>
+                                    <p>No evaluation yet</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                
+                    <button type="submit" class="cta-button" style="margin-top: 2rem; width: 100%;">Get Your Assessment Results</button>
+                </form>
+                
+                <div id="quiz-result" class="quiz-result" role="region" aria-label="Quiz results" aria-live="polite">
+                    <h3>Your Wisdom Teeth Assessment</h3>
+                    <div class="result-gauge" role="img" aria-label="Risk score gauge">
+                        <div class="gauge-center">
+                            <div class="gauge-score" id="gaugeScore" aria-label="Risk score">0</div>
+                            <div>Risk Score</div>
+                        </div>
+                    </div>
+                    <p id="result-text"></p>
+                    <div id="result-recommendations"></div>
+                    <a href="#consultation" class="cta-button" style="margin-top: 1rem;">Schedule Your Consultation</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Recovery Timeline Tool -->
+        <section class="recovery-tool content-section">
+            <div class="recovery-container">
+                <h2 class="section-title">Personalized Recovery Timeline</h2>
+                <div class="timeline-interactive">
+                    <p style="text-align: center; margin-bottom: 2rem;">Select your extraction type to see your recovery timeline:</p>
+                    <div class="timeline-selector" role="tablist" aria-label="Recovery timeline options">
+                        <button class="timeline-option active" role="tab" aria-selected="true" aria-controls="timeline-simple" onclick="showTimeline('simple')">Simple Extraction</button>
+                        <button class="timeline-option" role="tab" aria-selected="false" aria-controls="timeline-surgical" onclick="showTimeline('surgical')">Surgical Extraction</button>
+                        <button class="timeline-option" role="tab" aria-selected="false" aria-controls="timeline-multiple" onclick="showTimeline('multiple')">Multiple Teeth</button>
+                        <button class="timeline-option" role="tab" aria-selected="false" aria-controls="timeline-complex" onclick="showTimeline('complex')">Complex Case</button>
+                    </div>
+                    
+                    <div class="timeline-display" id="timelineDisplay" role="tabpanel" aria-label="Recovery timeline details">
+                        <div class="timeline-line" aria-hidden="true"></div>
+                        <!-- Timeline items will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sedation Options Selector -->
+        <section class="sedation-selector content-section">
+            <h2 class="section-title">Find Your Comfort Level - Sedation Selector</h2>
+            <div class="sedation-tool">
+                <div class="anxiety-scale">
+                    <h3>Rate your dental anxiety level:</h3>
+                    <div class="scale-container" role="radiogroup" aria-label="Anxiety level from 1 to 5">
+                        <button class="scale-point" onclick="selectAnxiety(1)" data-level="1" role="radio" aria-checked="false" aria-label="Anxiety level 1 - Very relaxed">1</button>
+                        <button class="scale-point" onclick="selectAnxiety(2)" data-level="2" role="radio" aria-checked="false" aria-label="Anxiety level 2">2</button>
+                        <button class="scale-point" onclick="selectAnxiety(3)" data-level="3" role="radio" aria-checked="false" aria-label="Anxiety level 3">3</button>
+                        <button class="scale-point" onclick="selectAnxiety(4)" data-level="4" role="radio" aria-checked="false" aria-label="Anxiety level 4">4</button>
+                        <button class="scale-point" onclick="selectAnxiety(5)" data-level="5" role="radio" aria-checked="false" aria-label="Anxiety level 5 - Very anxious">5</button>
+                    </div>
+                    <p style="margin-top: 1rem;">1 = Very Relaxed, 5 = Very Anxious</p>
+                </div>
+                
+                <div id="sedation-recommendation" class="sedation-recommendation" role="region" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- CTA Section -->
+    <section id="consultation" class="cta-section">
+        <h2>Ready to Schedule Your Wisdom Teeth Consultation?</h2>
+        <p>Our expert team is here to make your extraction as comfortable as possible</p>
+        <a href="#" class="cta-button-large" onclick="scheduleConsultation()">Book Your Free Consultation</a>
+        <p style="margin-top: 1rem; font-size: 1rem;">Or call us at <a href="tel:+1234567890" style="color: inherit; text-decoration: underline;">(123) 456-7890</a></p>
+    </section>
+    
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2024 Modern Dental Care. Expert wisdom teeth removal with compassionate care.</p>
+        <p>State-of-the-art technology meets patient-centered comfort</p>
+    </footer>
+    
+    <!-- Floating consultation reminder -->
+    <a href="#consultation" class="floating-reminder" id="floatingReminder" aria-label="Schedule consultation">
+        <span aria-hidden="true">📅</span> Ready to Schedule?
+    </a>
+    
+    <script>
+        // Performance optimized JavaScript with accessibility enhancements
+        
+        // Enhanced Quiz Logic with proper form handling
+        const quizForm = document.getElementById('quiz-content');
+        let quizAnswers = {};
+        const totalQuestions = 5;
+        
+        // Add event listeners for form elements
+        quizForm.addEventListener('change', handleQuizAnswer);
+        quizForm.addEventListener('submit', calculateQuizResult);
+        
+        function handleQuizAnswer(event) {
+            if (event.target.type === 'radio') {
+                const questionName = event.target.name;
+                const score = parseInt(event.target.value);
+                quizAnswers[questionName] = score;
+                
+                // Update visual selection
+                const option = event.target.closest('.quiz-option');
+                const allOptions = option.parentElement.querySelectorAll('.quiz-option');
+                
+                allOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                
+                // Update progress bar
+                const progress = (Object.keys(quizAnswers).length / totalQuestions) * 100;
+                const progressBar = document.getElementById('progressBar');
+                progressBar.style.width = progress + '%';
+                progressBar.setAttribute('aria-valuenow', progress);
+                
+                // Announce progress to screen readers
+                if (Object.keys(quizAnswers).length === totalQuestions) {
+                    announceToScreenReader('All questions answered. You can now submit for results.');
+                }
+            }
+        }
+        
+        function calculateQuizResult(event) {
+            event.preventDefault();
+            
+            const answerCount = Object.keys(quizAnswers).length;
+            
+            if (answerCount < totalQuestions) {
+                announceToScreenReader('Please answer all questions to get your complete assessment.');
+                // Focus on first unanswered question
+                const firstUnanswered = quizForm.querySelector('input[type="radio"]:not(:checked)');
+                if (firstUnanswered) {
+                    firstUnanswered.focus();
+                }
+                return;
+            }
+            
+            // Calculate total score
+            let totalScore = 0;
+            for (let key in quizAnswers) {
+                totalScore += quizAnswers[key];
+            }
+            
+            // Show result with proper accessibility
+            quizForm.style.display = 'none';
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.style.display = 'block';
+            resultDiv.focus(); // Focus on results for screen readers
+            
+            // Animate gauge with accessibility consideration
+            const gaugeScore = document.getElementById('gaugeScore');
+            let currentScore = 0;
+            const targetScore = totalScore;
+            const increment = targetScore / 30;
+            
+            const gaugeAnimation = setInterval(() => {
+                currentScore += increment;
+                if (currentScore >= targetScore) {
+                    currentScore = targetScore;
+                    clearInterval(gaugeAnimation);
+                    announceToScreenReader(`Assessment complete. Your risk score is ${targetScore}.`);
+                }
+                gaugeScore.textContent = Math.round(currentScore);
+                gaugeScore.setAttribute('aria-label', `Risk score: ${Math.round(currentScore)}`);
+            }, 50);
+            
+            // Generate recommendations
+            let recommendation = '';
+            let urgency = '';
+            
+            if (totalScore >= 12) {
+                urgency = 'HIGH PRIORITY';
+                recommendation = 'Multiple indicators suggest wisdom teeth removal is strongly recommended. Schedule a consultation within the next 2 weeks.';
+            } else if (totalScore >= 7) {
+                urgency = 'MODERATE PRIORITY';
+                recommendation = 'You\'re showing signs that extraction may be beneficial. A consultation within the next month is advisable.';
+            } else {
+                urgency = 'LOW PRIORITY';
+                recommendation = 'Currently, your wisdom teeth aren\'t causing significant issues. Regular monitoring is recommended.';
+            }
+            
+            document.getElementById('result-text').innerHTML = `<strong>Priority Level: ${urgency}</strong><br>${recommendation}`;
+            
+            // Add specific recommendations
+            const recDiv = document.getElementById('result-recommendations');
+            recDiv.innerHTML = `
+                <h4 style="margin-top: 2rem;">Personalized Recommendations:</h4>
+                <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
+                    ${quizAnswers.pain >= 2 ? '<li>Pain management consultation recommended</li>' : ''}
+                    ${quizAnswers.cleaning >= 2 ? '<li>Increased cavity risk - extraction prevents future problems</li>' : ''}
+                    ${quizAnswers.swelling >= 2 ? '<li>Signs of infection - prompt evaluation needed</li>' : ''}
+                    ${quizAnswers.age === 2 ? '<li>Optimal age for extraction - easier healing</li>' : ''}
+                    ${quizAnswers.dentist >= 2 ? '<li>Professional recommendation supports extraction</li>' : ''}
+                </ul>
+            `;
+        }
+        
+        // Position Visualizer with keyboard navigation
+        function showPosition(type) {
+            const cards = document.querySelectorAll('.position-card');
+            const activeCard = event.target.closest('.position-card');
+            
+            // Update ARIA states
+            cards.forEach(card => {
+                card.classList.remove('active');
+                card.setAttribute('aria-checked', 'false');
+                card.setAttribute('tabindex', '-1');
+            });
+            
+            activeCard.classList.add('active');
+            activeCard.setAttribute('aria-checked', 'true');
+            activeCard.setAttribute('tabindex', '0');
+            
+            announceToScreenReader(`Selected ${type} position. ${activeCard.querySelector('p').textContent}`);
+        }
+        
+        // Timeline Functions with enhanced accessibility
+        const timelines = {
+            simple: [
+                { day: 'Day 1', title: 'Immediate Recovery', desc: 'Rest, ice, soft foods only' },
+                { day: 'Day 2-3', title: 'Initial Healing', desc: 'Swelling peaks, continue medications' },
+                { day: 'Day 4-7', title: 'Improvement', desc: 'Return to normal activities gradually' },
+                { day: 'Week 2', title: 'Healed', desc: 'Most patients fully recovered' }
+            ],
+            surgical: [
+                { day: 'Day 1-2', title: 'Post-Surgery Care', desc: 'Strict rest, pain management protocol' },
+                { day: 'Day 3-5', title: 'Swelling Management', desc: 'Peak swelling, switch to warm compress' },
+                { day: 'Week 1', title: 'Stitch Check', desc: 'Follow-up for suture removal if needed' },
+                { day: 'Week 2-3', title: 'Full Recovery', desc: 'Gradual return to all normal foods' }
+            ],
+            multiple: [
+                { day: 'Day 1-3', title: 'Intensive Care', desc: 'Extended rest period, liquid diet' },
+                { day: 'Day 4-7', title: 'Gradual Progress', desc: 'Introduce soft solids, gentle rinses' },
+                { day: 'Week 2', title: 'Healing Check', desc: 'Professional evaluation of all sites' },
+                { day: 'Week 3-4', title: 'Complete Healing', desc: 'All extraction sites fully closed' }
+            ],
+            complex: [
+                { day: 'Day 1-3', title: 'Critical Care', desc: 'Hospital-grade pain management' },
+                { day: 'Week 1', title: 'Close Monitoring', desc: 'Daily check-ins, specialized care' },
+                { day: 'Week 2-3', title: 'Steady Progress', desc: 'Gradual improvement expected' },
+                { day: 'Month 1-2', title: 'Full Recovery', desc: 'Complete healing with follow-ups' }
+            ]
+        };
+        
+        function showTimeline(type) {
+            // Update active button with proper ARIA states
+            const buttons = document.querySelectorAll('.timeline-option');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            
+            const activeButton = event.target;
+            activeButton.classList.add('active');
+            activeButton.setAttribute('aria-selected', 'true');
+            
+            // Clear and populate timeline
+            const display = document.getElementById('timelineDisplay');
+            display.innerHTML = '<div class="timeline-line" aria-hidden="true"></div>';
+            
+            timelines[type].forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item';
+                timelineItem.style.animationDelay = `${index * 0.1}s`;
+                
+                timelineItem.innerHTML = `
+                    <div class="timeline-content">
+                        <h4>${item.day}</h4>
+                        <h5>${item.title}</h5>
+                        <p>${item.desc}</p>
+                    </div>
+                    <div class="timeline-marker" aria-label="Timeline step ${index + 1}">${index + 1}</div>
+                `;
+                
+                display.appendChild(timelineItem);
+            });
+            
+            announceToScreenReader(`Updated timeline for ${type} extraction. ${timelines[type].length} recovery steps shown.`);
+        }
+        
+        // Initialize with simple timeline
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstTimelineButton = document.querySelector('.timeline-option');
+            if (firstTimelineButton) {
+                firstTimelineButton.click();
+            }
+        });
+        
+        // Anxiety Scale Functions with enhanced accessibility
+        function selectAnxiety(level) {
+            const points = document.querySelectorAll('.scale-point');
+            
+            // Update ARIA states
+            points.forEach(point => {
+                point.classList.remove('selected');
+                point.setAttribute('aria-checked', 'false');
+            });
+            
+            const selectedPoint = event.target;
+            selectedPoint.classList.add('selected');
+            selectedPoint.setAttribute('aria-checked', 'true');
+            
+            // Show recommendation
+            const recDiv = document.getElementById('sedation-recommendation');
+            recDiv.style.display = 'block';
+            
+            let recommendation = '';
+            
+            if (level <= 2) {
+                recommendation = 'Your low anxiety level means local anesthesia should be sufficient for your comfort.';
+            } else if (level <= 4) {
+                recommendation = 'Moderate anxiety can be well-managed with nitrous oxide (laughing gas) for a relaxed experience.';
+            } else {
+                recommendation = 'For high anxiety, IV sedation will ensure you\'re completely comfortable and have no memory of the procedure.';
+            }
+            
+            recDiv.innerHTML = `<h4>Recommended for You:</h4><p>${recommendation}</p>`;
+            announceToScreenReader(`Selected anxiety level ${level}. ${recommendation}`);
+        }
+        
+        // Utility Functions with accessibility
+        function checkPain() {
+            if (confirm('Are you experiencing wisdom tooth pain right now?')) {
+                announceToScreenReader('Connecting you to our emergency line for immediate assistance.');
+                window.location.href = 'tel:+1234567890';
+            }
+        }
+        
+        function scheduleConsultation() {
+            announceToScreenReader('Thank you for your interest! Our scheduling team will contact you within 24 hours to arrange your free consultation.');
+        }
+        
+        // Screen reader announcements
+        function announceToScreenReader(message) {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.classList.add('visually-hidden');
+            announcement.textContent = message;
+            
+            document.body.appendChild(announcement);
+            
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+        
+        // Floating consultation reminder with performance optimization
+        let hasScrolled = false;
+        let scrollTimeout;
+        
+        function handleScroll() {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            
+            scrollTimeout = setTimeout(() => {
+                const scrolled = window.pageYOffset;
+                const height = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercentage = (scrolled / height) * 100;
+                
+                const floatingReminder = document.getElementById('floatingReminder');
+                
+                if (scrollPercentage > 50 && !hasScrolled) {
+                    hasScrolled = true;
+                    floatingReminder.style.display = 'flex';
+                    announceToScreenReader('Consultation scheduling reminder now available at bottom right of page.');
+                }
+            }, 100);
+        }
+        
+        // Intersection Observer for lazy loading content sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '50px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Initialize performance optimizations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe content sections for lazy loading
+            document.querySelectorAll('.content-section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Add optimized scroll listener
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            
+            // Preload critical resources
+            const criticalImages = document.querySelectorAll('img[data-critical]');
+            criticalImages.forEach(img => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = img.dataset.src || img.src;
+                document.head.appendChild(link);
+            });
+            
+            // Initialize quiz progress
+            const progressBar = document.getElementById('progressBar');
+            progressBar.setAttribute('aria-valuenow', '0');
+            progressBar.setAttribute('aria-valuetext', '0% complete');
+        });
+        
+        // Service Worker registration for offline support (in production)
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+            navigator.serviceWorker.register('/sw.js').catch(console.error);
+        }
+        
+        // Error boundary for graceful degradation
+        window.addEventListener('error', function(event) {
+            console.error('JavaScript error:', event.error);
+            // In production, send to error tracking service
+        });
+    </script>
+</body>
+</html>

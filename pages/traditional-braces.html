@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Braces - Advanced Treatment Options & Payment Plans | SmileCare Dental</title>
+    <meta name="description" content="Modern traditional braces with interactive comparison tools, flexible payment calculator, and lifestyle compatibility quiz. Schedule your orthodontic consultation today!">
+    <meta name="keywords" content="traditional braces, metal braces, ceramic braces, orthodontics, teeth straightening">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smilecare.dental/traditional-braces">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS inlined for faster rendering -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --warning-yellow: #FFC107;
+            --danger-red: #DC3545;
+            --light-blue: #E6F3FF;
+            --gradient-start: #0077BE;
+            --gradient-end: #00A8A8;
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --border-radius: 10px;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 20px rgba(0,0,0,0.1);
+            --shadow-heavy: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            font-display: swap;
+        }
+        
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 9999;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Critical above-the-fold styles */
+        header {
+            background: var(--clean-white);
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--trust-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-height: 44px;
+            justify-content: center;
+        }
+        
+        .cta-button:hover,
+        .cta-button:focus {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+            outline: 2px solid transparent;
+        }
+        
+        .cta-button:focus-visible {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        .cta-button.secondary {
+            background: var(--trust-blue);
+        }
+        
+        .cta-button.secondary:hover,
+        .cta-button.secondary:focus {
+            background: #005a8e;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,119,190,0.08) 0%, rgba(0,168,168,0.08) 100%);
+            padding: 4rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent-teal) 0%, transparent 70%);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text h1 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Loading states */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--soft-gray);
+            border-radius: 50%;
+            border-top-color: var(--trust-blue);
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Error states */
+        .error {
+            color: var(--danger-red);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        
+        /* Form validation */
+        .form-group input:invalid {
+            border-color: var(--danger-red);
+        }
+        
+        .form-group input:valid {
+            border-color: var(--success-green);
+        }
+    </style>
+    
+    <!-- Schema markup for better SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "SmileCare Dental",
+        "description": "Modern traditional braces with advanced bracket technology",
+        "url": "https://smilecare.dental",
+        "telephone": "+1-555-SMILE-99",
+        "medicalSpecialty": "Orthodontics",
+        "priceRange": "$2500-$6000",
+        "paymentAccepted": ["Cash", "Credit Card", "Insurance", "Financing"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header with improved navigation -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo">
+                <span role="img" aria-label="Tooth icon" style="font-size: 1.5rem;">🦷</span>
+                SmileCare Dental
+            </div>
+            <ul class="nav-links">
+                <li><a href="#compare" aria-describedby="compare-desc">Compare Options</a></li>
+                <li><a href="#calculator" aria-describedby="calculator-desc">Cost Calculator</a></li>
+                <li><a href="#lifestyle" aria-describedby="lifestyle-desc">Lifestyle Quiz</a></li>
+                <li><a href="#tracking" aria-describedby="tracking-desc">Progress</a></li>
+                <li><a href="#stories" aria-describedby="stories-desc">Success Stories</a></li>
+            </ul>
+            <a href="#consultation" class="cta-button" aria-describedby="cta-desc">
+                Schedule Free Consultation
+            </a>
+        </nav>
+        
+        <!-- Hidden descriptions for screen readers -->
+        <div class="sr-only">
+            <div id="compare-desc">Compare different bracket types and features</div>
+            <div id="calculator-desc">Calculate treatment costs with payment options</div>
+            <div id="lifestyle-desc">Quiz to find the best bracket type for you</div>
+            <div id="tracking-desc">Track treatment progress and milestones</div>
+            <div id="stories-desc">View patient transformation stories</div>
+            <div id="cta-desc">Schedule your free orthodontic consultation</div>
+        </div>
+    </header>
+
+    <!-- Main content with improved structure -->
+    <main id="main-content" role="main">
+        <!-- Hero Section with Interactive Elements -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 id="hero-heading">
+                        Modern Traditional Braces for Your Perfect Smile
+                    </h1>
+                    <p>
+                        Advanced bracket technology with personalized treatment plans and flexible payment options starting at $89/month
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#calculator" class="cta-button">
+                            <span aria-hidden="true">💰</span>
+                            Calculate Your Cost
+                        </a>
+                        <a href="#compare" class="cta-button secondary">
+                            <span aria-hidden="true">⚖️</span>
+                            Compare Bracket Types
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="braces-showcase" role="img" aria-labelledby="showcase-heading">
+                    <h2 id="showcase-heading" class="showcase-title">Interactive Bracket Preview</h2>
+                    <div class="braces-visual">
+                        <div class="teeth-display" id="teethDisplay" 
+                             role="application" 
+                             aria-label="Interactive braces visualization"
+                             tabindex="0">
+                            <div class="wire" aria-hidden="true"></div>
+                            <!-- Teeth will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="bracket-selector" role="radiogroup" aria-labelledby="bracket-options">
+                        <h3 id="bracket-options" class="sr-only">Bracket Type Options</h3>
+                        <button class="bracket-option active" 
+                                role="radio" 
+                                aria-checked="true" 
+                                onclick="changeBracketType('metal')"
+                                aria-describedby="metal-desc">
+                            Metal
+                        </button>
+                        <button class="bracket-option" 
+                                role="radio" 
+                                aria-checked="false" 
+                                onclick="changeBracketType('ceramic')"
+                                aria-describedby="ceramic-desc">
+                            Ceramic
+                        </button>
+                        <button class="bracket-option" 
+                                role="radio" 
+                                aria-checked="false" 
+                                onclick="changeBracketType('gold')"
+                                aria-describedby="gold-desc">
+                            Gold
+                        </button>
+                        <button class="bracket-option" 
+                                role="radio" 
+                                aria-checked="false" 
+                                onclick="changeBracketType('self-ligating')"
+                                aria-describedby="self-desc">
+                            Self-Ligating
+                        </button>
+                    </div>
+                    
+                    <!-- Hidden descriptions -->
+                    <div class="sr-only">
+                        <div id="metal-desc">Traditional stainless steel brackets, most affordable option</div>
+                        <div id="ceramic-desc">Clear or tooth-colored brackets, less visible</div>
+                        <div id="gold-desc">Gold-plated brackets, premium aesthetic option</div>
+                        <div id="self-desc">Advanced brackets with built-in clips, fewer adjustments</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Comparison Tool -->
+        <section class="comparison-section" id="compare" aria-labelledby="comparison-heading">
+            <div class="comparison-container">
+                <div class="comparison-header">
+                    <h2 id="comparison-heading">Choose Your Perfect Bracket Type</h2>
+                    <p>Click to compare features, benefits, and pricing</p>
+                </div>
+                
+                <div class="comparison-grid" role="grid" aria-label="Bracket type comparison">
+                    <div class="bracket-type-card" 
+                         role="gridcell" 
+                         tabindex="0" 
+                         onclick="selectBracketType(this, 'metal')"
+                         onkeydown="handleCardKeydown(event, this, 'metal')"
+                         aria-describedby="metal-features">
+                        <div class="bracket-icon" aria-hidden="true">🔧</div>
+                        <div class="bracket-name">Metal Braces</div>
+                        <div class="bracket-price" aria-label="Starting at $2,500">From $2,500</div>
+                        <p>The most popular and affordable option</p>
+                        <ul class="bracket-features" id="metal-features">
+                            <li>Most effective for complex cases</li>
+                            <li>Durable stainless steel</li>
+                            <li>Colorful elastic options</li>
+                            <li>Fastest results</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bracket-type-card" 
+                         role="gridcell" 
+                         tabindex="0" 
+                         onclick="selectBracketType(this, 'ceramic')"
+                         onkeydown="handleCardKeydown(event, this, 'ceramic')"
+                         aria-describedby="ceramic-features">
+                        <div class="bracket-icon" aria-hidden="true">✨</div>
+                        <div class="bracket-name">Ceramic Braces</div>
+                        <div class="bracket-price" aria-label="Starting at $3,500">From $3,500</div>
+                        <p>Discreet and professional appearance</p>
+                        <ul class="bracket-features" id="ceramic-features">
+                            <li>Clear or tooth-colored brackets</li>
+                            <li>Less noticeable than metal</li>
+                            <li>Stain-resistant material</li>
+                            <li>Same effectiveness as metal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bracket-type-card" 
+                         role="gridcell" 
+                         tabindex="0" 
+                         onclick="selectBracketType(this, 'self-ligating')"
+                         onkeydown="handleCardKeydown(event, this, 'self-ligating')"
+                         aria-describedby="self-features">
+                        <div class="bracket-icon" aria-hidden="true">⚡</div>
+                        <div class="bracket-name">Self-Ligating</div>
+                        <div class="bracket-price" aria-label="Starting at $4,000">From $4,000</div>
+                        <p>Advanced technology for comfort</p>
+                        <ul class="bracket-features" id="self-features">
+                            <li>No elastic ties needed</li>
+                            <li>Less friction, more comfort</li>
+                            <li>Fewer adjustment visits</li>
+                            <li>Easier to clean</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bracket-type-card" 
+                         role="gridcell" 
+                         tabindex="0" 
+                         onclick="selectBracketType(this, 'gold')"
+                         onkeydown="handleCardKeydown(event, this, 'gold')"
+                         aria-describedby="gold-features">
+                        <div class="bracket-icon" aria-hidden="true">💎</div>
+                        <div class="bracket-name">Gold Braces</div>
+                        <div class="bracket-price" aria-label="Starting at $4,500">From $4,500</div>
+                        <p>Premium style with unique appeal</p>
+                        <ul class="bracket-features" id="gold-features">
+                            <li>Gold-plated stainless steel</li>
+                            <li>Hypoallergenic option</li>
+                            <li>Distinctive appearance</li>
+                            <li>Same strength as metal</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="comparisonDetails" 
+                     style="display: none; margin-top: 2rem;" 
+                     role="region" 
+                     aria-labelledby="comparison-details-heading"
+                     aria-live="polite">
+                    <!-- Detailed comparison will be shown here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Cost Calculator -->
+        <section class="calculator-section" id="calculator" aria-labelledby="calculator-heading">
+            <div class="calculator-container">
+                <h2 id="calculator-heading">Personalized Cost Calculator</h2>
+                <p>Get your exact monthly payment with insurance and financing options</p>
+                
+                <div class="calculator-box">
+                    <form class="calculator-form" onsubmit="return false;" novalidate>
+                        <div class="calculator-inputs">
+                            <div class="input-group">
+                                <label for="bracketTypeCalc">
+                                    Bracket Type
+                                    <span class="tooltip" 
+                                          data-tooltip="Different brackets have different costs" 
+                                          aria-label="Help: Different brackets have different costs">?</span>
+                                </label>
+                                <select id="bracketTypeCalc" 
+                                        onchange="updateCalculation()" 
+                                        aria-describedby="bracket-help">
+                                    <option value="2500">Metal Braces - $2,500</option>
+                                    <option value="3500">Ceramic Braces - $3,500</option>
+                                    <option value="4000">Self-Ligating - $4,000</option>
+                                    <option value="4500">Gold Braces - $4,500</option>
+                                </select>
+                                <div id="bracket-help" class="sr-only">Select your preferred bracket type</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="complexity">
+                                    Treatment Complexity
+                                    <span class="tooltip" 
+                                          data-tooltip="Based on your orthodontist's assessment" 
+                                          aria-label="Help: Based on your orthodontist's assessment">?</span>
+                                </label>
+                                <select id="complexity" 
+                                        onchange="updateCalculation()" 
+                                        aria-describedby="complexity-help">
+                                    <option value="1">Simple (12-18 months)</option>
+                                    <option value="1.25">Moderate (18-24 months)</option>
+                                    <option value="1.5">Complex (24-30 months)</option>
+                                </select>
+                                <div id="complexity-help" class="sr-only">Treatment duration estimate</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="insuranceCoverage">
+                                    Insurance Coverage (%)
+                                    <span class="tooltip" 
+                                          data-tooltip="Typical ortho coverage is 50%" 
+                                          aria-label="Help: Typical ortho coverage is 50%">?</span>
+                                </label>
+                                <input type="number" 
+                                       id="insuranceCoverage" 
+                                       value="50" 
+                                       min="0" 
+                                       max="100" 
+                                       step="5"
+                                       onchange="updateCalculation()" 
+                                       aria-describedby="insurance-help">
+                                <div id="insurance-help" class="sr-only">Enter percentage covered by insurance</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="insuranceMax">
+                                    Insurance Maximum ($)
+                                    <span class="tooltip" 
+                                          data-tooltip="Lifetime ortho benefit limit" 
+                                          aria-label="Help: Lifetime ortho benefit limit">?</span>
+                                </label>
+                                <input type="number" 
+                                       id="insuranceMax" 
+                                       value="1500" 
+                                       min="0" 
+                                       max="5000" 
+                                       step="100"
+                                       onchange="updateCalculation()" 
+                                       aria-describedby="max-help">
+                                <div id="max-help" class="sr-only">Maximum insurance benefit amount</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="downPayment">
+                                    Down Payment ($)
+                                    <span class="tooltip" 
+                                          data-tooltip="Initial payment amount" 
+                                          aria-label="Help: Initial payment amount">?</span>
+                                </label>
+                                <input type="number" 
+                                       id="downPayment" 
+                                       value="500" 
+                                       min="0" 
+                                       max="2000" 
+                                       step="100"
+                                       onchange="updateCalculation()" 
+                                       aria-describedby="down-help">
+                                <div id="down-help" class="sr-only">Amount paid upfront</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="paymentTerm">
+                                    Payment Term (months)
+                                    <span class="tooltip" 
+                                          data-tooltip="Length of payment plan" 
+                                          aria-label="Help: Length of payment plan">?</span>
+                                </label>
+                                <select id="paymentTerm" 
+                                        onchange="updateCalculation()" 
+                                        aria-describedby="term-help">
+                                    <option value="12">12 months</option>
+                                    <option value="18">18 months</option>
+                                    <option value="24" selected>24 months</option>
+                                    <option value="36">36 months</option>
+                                    <option value="48">48 months</option>
+                                </select>
+                                <div id="term-help" class="sr-only">Choose payment plan duration</div>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-results" role="region" aria-labelledby="results-heading" aria-live="polite">
+                            <div class="results-summary">
+                                <h3 id="results-heading">Your Investment</h3>
+                                <div class="total-cost" id="totalCost" aria-label="Total treatment cost">$4,000</div>
+                                <div class="monthly-payment">
+                                    Monthly: <span id="monthlyPayment" aria-label="Monthly payment amount">$125</span>
+                                </div>
+                                <button class="cta-button" 
+                                        style="width: 100%;" 
+                                        onclick="lockInRate()"
+                                        aria-describedby="lock-help">
+                                    🔒 Lock in This Rate
+                                </button>
+                                <div id="lock-help" class="sr-only">Reserve this rate with no obligation</div>
+                            </div>
+                            
+                            <div class="payment-breakdown">
+                                <h3>Cost Breakdown</h3>
+                                <div class="breakdown-item">
+                                    <span>Base Treatment Cost</span>
+                                    <span id="baseCost">$4,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Insurance Coverage</span>
+                                    <span id="insuranceAmount" style="color: var(--success-green);">-$1,500</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Down Payment</span>
+                                    <span id="downPaymentAmount">-$500</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Financed Amount</span>
+                                    <span id="financedAmount">$2,000</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>Total Out-of-Pocket</span>
+                                    <span id="outOfPocket">$2,500</span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories" id="stories" aria-labelledby="stories-heading">
+            <div class="stories-container">
+                <h2 id="stories-heading">Real Patients, Amazing Transformations</h2>
+                <p>Filter by age, treatment type, or concern</p>
+                
+                <div class="story-filters" role="tablist" aria-label="Filter success stories">
+                    <button class="filter-button active" 
+                            role="tab" 
+                            aria-selected="true" 
+                            aria-controls="all-stories"
+                            onclick="filterStories('all')">
+                        All Stories
+                    </button>
+                    <button class="filter-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="teen-stories"
+                            onclick="filterStories('teen')">
+                        Teens
+                    </button>
+                    <button class="filter-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="adult-stories"
+                            onclick="filterStories('adult')">
+                        Adults
+                    </button>
+                    <button class="filter-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="complex-stories"
+                            onclick="filterStories('complex')">
+                        Complex Cases
+                    </button>
+                    <button class="filter-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="fast-stories"
+                            onclick="filterStories('fast')">
+                        Fast Results
+                    </button>
+                </div>
+                
+                <div class="stories-grid" 
+                     role="tabpanel" 
+                     aria-labelledby="stories-heading">
+                    <article class="story-card" data-category="teen fast">
+                        <div class="patient-header">
+                            <div class="patient-avatar" aria-hidden="true">ET</div>
+                            <div class="patient-info">
+                                <h3>Emma Thompson</h3>
+                                <div class="patient-meta">16 years old • High School Student</div>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <blockquote>
+                                "I was worried about having braces for senior year, but with the accelerated treatment, I got them off just in time for prom! The ceramic brackets were barely noticeable in photos."
+                            </blockquote>
+                            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <div class="treatment-details">
+                            <div class="detail-item">
+                                <div class="detail-value">12 months</div>
+                                <div>Duration</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Ceramic</div>
+                                <div>Type</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Crowding</div>
+                                <div>Issue</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="story-card" data-category="adult complex">
+                        <div class="patient-header">
+                            <div class="patient-avatar" aria-hidden="true">MR</div>
+                            <div class="patient-info">
+                                <h3>Michael Rodriguez</h3>
+                                <div class="patient-meta">42 years old • Sales Director</div>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <blockquote>
+                                "After years of hiding my smile in meetings, I finally decided to get braces. The self-ligating option meant fewer appointments, perfect for my travel schedule. Best investment I've made!"
+                            </blockquote>
+                            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <div class="treatment-details">
+                            <div class="detail-item">
+                                <div class="detail-value">18 months</div>
+                                <div>Duration</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Self-Ligating</div>
+                                <div>Type</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Crossbite</div>
+                                <div>Issue</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="story-card" data-category="teen complex">
+                        <div class="patient-header">
+                            <div class="patient-avatar" aria-hidden="true">JW</div>
+                            <div class="patient-info">
+                                <h3>Jake Williams</h3>
+                                <div class="patient-meta">14 years old • Basketball Player</div>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <blockquote>
+                                "Playing sports with braces was my biggest concern, but the custom mouthguard worked perfectly. My teammates barely noticed I had braces, and my shot improved with better jaw alignment!"
+                            </blockquote>
+                            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <div class="treatment-details">
+                            <div class="detail-item">
+                                <div class="detail-value">24 months</div>
+                                <div>Duration</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Metal</div>
+                                <div>Type</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Overbite</div>
+                                <div>Issue</div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="story-card" data-category="adult fast">
+                        <div class="patient-header">
+                            <div class="patient-avatar" aria-hidden="true">SC</div>
+                            <div class="patient-info">
+                                <h3>Sarah Chen</h3>
+                                <div class="patient-meta">35 years old • Wedding Planner</div>
+                            </div>
+                        </div>
+                        <div class="story-content">
+                            <blockquote>
+                                "I needed straight teeth for my own wedding! With AcceleDent and frequent adjustments, I completed treatment in just 10 months. The payment plan made it affordable too."
+                            </blockquote>
+                            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        </div>
+                        <div class="treatment-details">
+                            <div class="detail-item">
+                                <div class="detail-value">10 months</div>
+                                <div>Duration</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Ceramic</div>
+                                <div>Type</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-value">Gaps</div>
+                                <div>Issue</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced CTA Section -->
+        <section class="cta-section" id="consultation" aria-labelledby="cta-heading">
+            <div class="cta-content">
+                <h2 id="cta-heading">Ready to Start Your Smile Journey?</h2>
+                <p>Join thousands who've transformed their smiles with modern braces</p>
+                <div class="cta-buttons">
+                    <button class="cta-button white" 
+                            onclick="scheduleConsultation()" 
+                            aria-describedby="schedule-help">
+                        📅 Schedule Free Consultation
+                    </button>
+                    <button class="cta-button white" 
+                            onclick="virtualAssessment()" 
+                            aria-describedby="virtual-help">
+                        💻 Get Virtual Assessment
+                    </button>
+                </div>
+                <div class="offer-banner">
+                    🎉 Limited Time: Save $500 + Free Teeth Whitening + 0% Financing
+                </div>
+                
+                <!-- Hidden descriptions -->
+                <div class="sr-only">
+                    <div id="schedule-help">Book an in-person consultation at our office</div>
+                    <div id="virtual-help">Complete assessment online from home</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with proper structure -->
+    <footer role="contentinfo" style="background: var(--charcoal); color: var(--clean-white); padding: 3rem 5%; text-align: center;">
+        <p style="margin-bottom: 1rem;">© 2024 SmileCare Dental. All rights reserved.</p>
+        <p style="font-size: 0.875rem; opacity: 0.8;">State-of-the-art technology meets compassionate care</p>
+    </footer>
+
+    <!-- Optimized JavaScript with improved performance -->
+    <script>
+        // Performance optimizations
+        let debounceTimer;
+        const debounce = (func, delay) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(func, delay);
+        };
+
+        // Generate teeth display with improved accessibility
+        function generateTeethDisplay() {
+            const display = document.getElementById('teethDisplay');
+            const teethHTML = [];
+            
+            // Generate 16 teeth (simplified upper jaw)
+            for (let i = 0; i < 16; i++) {
+                teethHTML.push(`
+                    <div class="tooth-with-bracket" 
+                         role="button" 
+                         tabindex="0" 
+                         aria-label="Tooth ${i + 1} with bracket"
+                         data-index="${i}">
+                        <div class="bracket" id="bracket-${i}" aria-hidden="true"></div>
+                    </div>
+                `);
+            }
+            
+            display.innerHTML = '<div class="wire" aria-hidden="true"></div>' + teethHTML.join('');
+            
+            // Add keyboard support to teeth
+            const teeth = display.querySelectorAll('.tooth-with-bracket');
+            teeth.forEach(tooth => {
+                tooth.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        // Trigger visual feedback
+                        this.style.transform = 'scale(1.1)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 200);
+                    }
+                });
+            });
+        }
+        
+        // Change bracket type visualization with accessibility
+        function changeBracketType(type) {
+            // Update radio button states
+            document.querySelectorAll('.bracket-option').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-checked', 'false');
+            });
+            event.target.classList.add('active');
+            event.target.setAttribute('aria-checked', 'true');
+            
+            // Update brackets appearance
+            const brackets = document.querySelectorAll('.bracket');
+            brackets.forEach(bracket => {
+                bracket.className = 'bracket';
+                bracket.removeAttribute('style');
+                
+                switch(type) {
+                    case 'ceramic':
+                        bracket.classList.add('ceramic');
+                        bracket.style.background = 'rgba(255, 255, 255, 0.8)';
+                        bracket.style.border = '1px solid #CCC';
+                        break;
+                    case 'gold':
+                        bracket.classList.add('gold');
+                        bracket.style.background = 'linear-gradient(135deg, #FFD700, #FFA500)';
+                        break;
+                    case 'self-ligating':
+                        bracket.style.background = '#333';
+                        bracket.style.borderRadius = '3px';
+                        break;
+                    default:
+                        bracket.style.background = '#333';
+                }
+            });
+            
+            // Announce change to screen readers
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.className = 'sr-only';
+            announcement.textContent = `Bracket type changed to ${type}`;
+            document.body.appendChild(announcement);
+            setTimeout(() => announcement.remove(), 1000);
+        }
+        
+        // Enhanced bracket card selection
+        let selectedBrackets = [];
+        
+        function selectBracketType(card, type) {
+            card.classList.toggle('selected');
+            
+            if (card.classList.contains('selected')) {
+                selectedBrackets.push(type);
+                card.setAttribute('aria-pressed', 'true');
+            } else {
+                selectedBrackets = selectedBrackets.filter(t => t !== type);
+                card.setAttribute('aria-pressed', 'false');
+            }
+            
+            // Show comparison details if 2 or more selected
+            if (selectedBrackets.length >= 2) {
+                showComparisonDetails();
+            } else {
+                document.getElementById('comparisonDetails').style.display = 'none';
+            }
+        }
+        
+        function handleCardKeydown(event, card, type) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                selectBracketType(card, type);
+            }
+        }
+        
+        function showComparisonDetails() {
+            const details = document.getElementById('comparisonDetails');
+            details.style.display = 'block';
+            details.innerHTML = `
+                <h3 id="comparison-details-heading">Detailed Comparison</h3>
+                <div style="background: var(--light-blue); padding: 2rem; border-radius: 15px;">
+                    <p style="text-align: center;">Comparing ${selectedBrackets.length} bracket types...</p>
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <button class="cta-button" onclick="downloadComparison()">
+                            📊 Download Comparison PDF
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Enhanced cost calculator with validation
+        function updateCalculation() {
+            debounce(() => {
+                try {
+                    const bracketCost = parseFloat(document.getElementById('bracketTypeCalc').value) || 0;
+                    const complexity = parseFloat(document.getElementById('complexity').value) || 1;
+                    const insuranceCoverage = parseFloat(document.getElementById('insuranceCoverage').value) / 100 || 0;
+                    const insuranceMax = parseFloat(document.getElementById('insuranceMax').value) || 0;
+                    const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
+                    const paymentTerm = parseInt(document.getElementById('paymentTerm').value) || 24;
+                    
+                    const baseCost = bracketCost * complexity;
+                    const insuranceAmount = Math.min(baseCost * insuranceCoverage, insuranceMax);
+                    const afterInsurance = Math.max(0, baseCost - insuranceAmount);
+                    const financedAmount = Math.max(0, afterInsurance - downPayment);
+                    const monthlyPayment = financedAmount / paymentTerm;
+                    
+                    // Update display with proper formatting
+                    document.getElementById('totalCost').textContent = formatCurrency(baseCost);
+                    document.getElementById('baseCost').textContent = formatCurrency(baseCost);
+                    document.getElementById('insuranceAmount').textContent = '-' + formatCurrency(insuranceAmount);
+                    document.getElementById('downPaymentAmount').textContent = '-' + formatCurrency(downPayment);
+                    document.getElementById('financedAmount').textContent = formatCurrency(financedAmount);
+                    document.getElementById('outOfPocket').textContent = formatCurrency(afterInsurance);
+                    document.getElementById('monthlyPayment').textContent = formatCurrency(monthlyPayment);
+                    
+                    // Update aria-labels for screen readers
+                    document.getElementById('totalCost').setAttribute('aria-label', `Total treatment cost: ${formatCurrency(baseCost)}`);
+                    document.getElementById('monthlyPayment').setAttribute('aria-label', `Monthly payment: ${formatCurrency(monthlyPayment)}`);
+                    
+                } catch (error) {
+                    console.error('Calculation error:', error);
+                }
+            }, 300);
+        }
+        
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount || 0);
+        }
+        
+        // Enhanced story filtering with accessibility
+        function filterStories(category) {
+            // Update tab states
+            document.querySelectorAll('.filter-button').forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            event.target.classList.add('active');
+            event.target.setAttribute('aria-selected', 'true');
+            
+            // Filter stories with animation
+            const stories = document.querySelectorAll('.story-card');
+            stories.forEach((story, index) => {
+                if (category === 'all' || story.dataset.category.includes(category)) {
+                    story.style.display = 'block';
+                    story.style.opacity = '0';
+                    story.style.transform = 'translateY(20px)';
+                    
+                    setTimeout(() => {
+                        story.style.transition = 'all 0.5s ease';
+                        story.style.opacity = '1';
+                        story.style.transform = 'translateY(0)';
+                    }, index * 100);
+                } else {
+                    story.style.display = 'none';
+                }
+            });
+            
+            // Announce filter change
+            const visibleCount = document.querySelectorAll(`.story-card[data-category*="${category}"]`).length;
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.className = 'sr-only';
+            announcement.textContent = `Showing ${category === 'all' ? 'all' : visibleCount} stories`;
+            document.body.appendChild(announcement);
+            setTimeout(() => announcement.remove(), 2000);
+        }
+        
+        // Enhanced CTA functions with analytics tracking
+        function scheduleConsultation() {
+            // Track interaction for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'schedule_consultation', {
+                    event_category: 'engagement',
+                    event_label: 'traditional_braces_page'
+                });
+            }
+            
+            alert('Opening scheduling system... In a real implementation, this would show an interactive calendar to book your free consultation.');
+        }
+        
+        function virtualAssessment() {
+            // Track interaction for analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'virtual_assessment', {
+                    event_category: 'engagement',
+                    event_label: 'traditional_braces_page'
+                });
+            }
+            
+            alert('Starting virtual assessment... In a real implementation, this would open a photo upload tool for remote evaluation.');
+        }
+        
+        function lockInRate() {
+            alert('Rate locked! In a real implementation, this would save the calculation and create a lead.');
+        }
+        
+        function downloadComparison() {
+            alert('Downloading comparison... In a real implementation, this would generate a PDF comparison chart.');
+        }
+        
+        // Smooth scrolling with focus management
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Set focus for screen readers
+                    if (target.hasAttribute('tabindex')) {
+                        target.focus();
+                    } else {
+                        target.setAttribute('tabindex', '-1');
+                        target.focus();
+                        target.addEventListener('blur', () => {
+                            target.removeAttribute('tabindex');
+                        }, { once: true });
+                    }
+                }
+            });
+        });
+        
+        // Intersection Observer for performance
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            generateTeethDisplay();
+            updateCalculation();
+            
+            // Observe elements for animation
+            document.querySelectorAll('.bracket-type-card, .story-card, .breakdown-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+            
+            // Add error handling for form inputs
+            document.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('invalid', function(e) {
+                    const errorMsg = this.validationMessage || 'Please check this field';
+                    console.warn('Form validation error:', errorMsg);
+                });
+            });
+        });
+        
+        // Error handling for images and resources
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.target.style.display = 'none';
+                console.warn('Image failed to load:', e.target.src);
+            }
+        }, true);
+        
+        // Preload critical resources
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                // Preload next likely navigation
+                const link = document.createElement('link');
+                link.rel = 'prefetch';
+                link.href = '/pediatric-dentistry';
+                document.head.appendChild(link);
+            });
+        }
+    </script>
+    
+    <!-- Additional non-critical CSS -->
+    <style>
+        /* Non-critical styles loaded after initial render */
+        .braces-showcase {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-heavy);
+            backdrop-filter: blur(10px);
+        }
+        
+        .showcase-title {
+            font-size: 1.25rem;
+            color: var(--trust-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .braces-visual {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--soft-gray) 0%, var(--light-blue) 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .teeth-display {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 3px;
+            padding: 2rem;
+        }
+        
+        .tooth-with-bracket {
+            width: 35px;
+            height: 45px;
+            background: var(--clean-white);
+            border: 2px solid #DDD;
+            border-radius: 40% 40% 50% 50%;
+            position: relative;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+        }
+        
+        .tooth-with-bracket:hover,
+        .tooth-with-bracket:focus {
+            transform: scale(1.05);
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        .bracket {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 15px;
+            background: var(--charcoal);
+            border-radius: 2px;
+            transition: all var(--transition-normal);
+        }
+        
+        .wire {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #666;
+            z-index: 1;
+            border-radius: 1px;
+        }
+        
+        .bracket-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .bracket-option {
+            padding: 0.5rem 1rem;
+            background: var(--soft-gray);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .bracket-option:hover,
+        .bracket-option:focus {
+            border-color: var(--trust-blue);
+            transform: translateY(-2px);
+        }
+        
+        .bracket-option.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        /* Comparison section styles */
+        .comparison-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .comparison-header h2 {
+            font-size: 2.25rem;
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .bracket-type-card {
+            background: var(--soft-gray);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .bracket-type-card:hover,
+        .bracket-type-card:focus {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--trust-blue);
+        }
+        
+        .bracket-type-card.selected {
+            background: var(--light-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,119,190,0.2);
+            border-color: var(--trust-blue);
+        }
+        
+        .bracket-type-card.selected::after {
+            content: '✓';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 30px;
+            height: 30px;
+            background: var(--success-green);
+            color: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transform: scale(1);
+            transition: all var(--transition-normal);
+        }
+        
+        .bracket-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .bracket-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .bracket-price {
+            font-size: 1.5rem;
+            color: var(--success-green);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .bracket-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+        
+        .bracket-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .bracket-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+        }
+        
+        /* Calculator section styles */
+        .calculator-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .calculator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .calculator-container h2 {
+            font-size: 2.25rem;
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .calculator-box {
+            background: var(--clean-white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-align: left;
+        }
+        
+        .input-group label {
+            font-weight: 600;
+            color: var(--charcoal);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .input-group input,
+        .input-group select {
+            padding: 0.75rem;
+            border: 2px solid var(--soft-gray);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color var(--transition-fast);
+            min-height: 44px;
+        }
+        
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.1);
+        }
+        
+        .tooltip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.75rem;
+            cursor: help;
+            position: relative;
+        }
+        
+        .tooltip:hover::after,
+        .tooltip:focus::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 150%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 0.5rem;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.875rem;
+            z-index: 10;
+            opacity: 1;
+        }
+        
+        .calculator-results {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+        }
+        
+        .results-summary {
+            background: var(--light-blue);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .results-summary h3 {
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .total-cost {
+            font-size: 3rem;
+            color: var(--trust-blue);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .monthly-payment {
+            font-size: 1.5rem;
+            color: var(--success-green);
+            margin-bottom: 1rem;
+        }
+        
+        .payment-breakdown {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .payment-breakdown h3 {
+            color: var(--trust-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #DDD;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .breakdown-item:hover {
+            background-color: rgba(0, 119, 190, 0.05);
+        }
+        
+        .breakdown-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            color: var(--trust-blue);
+            padding-top: 1rem;
+        }
+        
+        /* Success stories styles */
+        .success-stories {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .stories-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stories-container h2 {
+            font-size: 2.25rem;
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .story-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            padding: 0.75rem 1.5rem;
+            background: var(--soft-gray);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            min-height: 44px;
+        }
+        
+        .filter-button:hover,
+        .filter-button:focus {
+            border-color: var(--trust-blue);
+            transform: translateY(-2px);
+        }
+        
+        .filter-button.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .story-card {
+            background: var(--soft-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: all var(--transition-normal);
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .patient-header {
+            padding: 1.5rem;
+            background: var(--clean-white);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .patient-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .patient-info h3 {
+            color: var(--trust-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .patient-meta {
+            font-size: 0.875rem;
+            color: #666;
+        }
+        
+        .story-content {
+            padding: 1.5rem;
+        }
+        
+        .story-content blockquote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            quotes: '"' '"' ''' ''';
+        }
+        
+        .story-content blockquote::before {
+            content: open-quote;
+        }
+        
+        .story-content blockquote::after {
+            content: close-quote;
+        }
+        
+        .rating {
+            color: #FFD700;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .treatment-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background: var(--clean-white);
+            font-size: 0.875rem;
+        }
+        
+        .detail-item {
+            text-align: center;
+        }
+        
+        .detail-value {
+            font-weight: bold;
+            color: var(--trust-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        /* CTA Section styles */
+        .cta-section {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            padding: 4rem 5%;
+            text-align: center;
+            color: var(--clean-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before,
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .cta-section::before {
+            top: -150px;
+            left: -150px;
+        }
+        
+        .cta-section::after {
+            bottom: -150px;
+            right: -150px;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button.white {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+        }
+        
+        .cta-button.white:hover,
+        .cta-button.white:focus {
+            background: var(--soft-gray);
+        }
+        
+        .offer-banner {
+            display: inline-block;
+            background: var(--success-green);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Mobile responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .calculator-results {
+                grid-template-columns: 1fr;
+            }
+            
+            .teeth-display {
+                grid-template-columns: repeat(4, 1fr);
+                padding: 1rem;
+            }
+            
+            .tooth-with-bracket {
+                width: 25px;
+                height: 35px;
+            }
+            
+            .bracket {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .bracket-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --trust-blue: #0066CC;
+                --soft-gray: #E8E8E8;
+                --light-blue: #CCE5FF;
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .offer-banner {
+                animation: none;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .cta-button,
+            .bracket-selector,
+            .story-filters {
+                display: none;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            .story-card,
+            .bracket-type-card {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Modern Dental Care - Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow administrative areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow specific bots full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Crawl delay for respectful bots
+User-agent: *
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://moderndentalcare.com/sitemap.xml
