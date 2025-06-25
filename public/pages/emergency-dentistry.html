@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="24/7 emergency dental care with same-day appointments. Expert pain relief and urgent treatment. Call now for immediate dental emergencies.">
+    <meta name="keywords" content="emergency dentist, dental emergency, toothache, same day dental, 24/7 dentist">
+    <title>24/7 Emergency Dental Care - Same Day Treatment | Modern Dental Care</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --emergency-red: #DC3545;
+            --warning-orange: #FFC107;
+            --light-blue: #E3F2FD;
+            --dark-red: #B71C1C;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+        }
+        
+        /* Performance Optimizations */
+        .hero {
+            will-change: transform;
+        }
+        
+        .stage-marker, .pain-point, .floating-button {
+            will-change: transform;
+        }
+        
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Focus Management */
+        button:focus, .cta-button:focus, .severity-option:focus {
+            outline: 3px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+        
+        /* Emergency Banner - Optimized for conversion */
+        .emergency-banner {
+            background: var(--emergency-red);
+            color: var(--clean-white);
+            text-align: center;
+            padding: 1rem;
+            font-weight: bold;
+            position: relative;
+            animation: urgentFlash 2s infinite;
+        }
+        
+        @keyframes urgentFlash {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.9; }
+        }
+        
+        .emergency-banner a {
+            color: var(--clean-white);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .emergency-banner a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Wait Time Indicator - Real-time style */
+        .wait-time-banner {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wait-time-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .wait-time-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+        }
+        
+        .wait-time-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .wait-time-indicator.green {
+            background: var(--success-green);
+            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+        }
+        
+        .wait-time-indicator.yellow {
+            background: var(--warning-orange);
+            box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+        }
+        
+        .wait-time-indicator.red {
+            background: var(--emergency-red);
+            box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+        }
+        
+        /* Header */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        .emergency-line-button {
+            background: var(--dark-red);
+            color: var(--clean-white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+            animation: emergencyPulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+        
+        .emergency-line-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6);
+        }
+        
+        /* Hero Section - Conversion Optimized */
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .call-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            font-weight: 600;
+            min-width: 44px; /* WCAG touch target */
+            min-height: 44px;
+        }
+        
+        .call-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+        }
+        
+        .severity-button {
+            background: var(--emergency-red);
+            color: var(--clean-white);
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        
+        .severity-button:hover {
+            background: var(--dark-red);
+            transform: translateY(-3px);
+        }
+        
+        /* Emergency Triage System - Enhanced Accessibility */
+        .triage-system {
+            padding: 3rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .triage-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--trust-blue);
+            margin-bottom: 3rem;
+        }
+        
+        .triage-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .triage-card {
+            background: var(--clean-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .triage-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .triage-header {
+            padding: 1.5rem;
+            color: var(--clean-white);
+            text-align: center;
+        }
+        
+        .triage-immediate { 
+            background: var(--dark-red); 
+        }
+        
+        .triage-urgent { 
+            background: var(--emergency-red); 
+        }
+        
+        .triage-soon { 
+            background: var(--warning-orange); 
+            color: var(--charcoal); 
+        }
+        
+        .triage-content {
+            padding: 1.5rem;
+        }
+        
+        .triage-content h4 {
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .triage-list {
+            list-style: none;
+        }
+        
+        .triage-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--soft-gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .triage-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--emergency-red);
+            font-weight: bold;
+        }
+        
+        /* Interactive Pain Assessment - Improved UX */
+        .pain-assessment {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .pain-tool {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--soft-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .pain-scale-visual {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            position: relative;
+            background: linear-gradient(to right, var(--success-green), var(--warning-orange), var(--emergency-red));
+            border-radius: 50px;
+            padding: 0.5rem;
+        }
+        
+        .pain-point {
+            width: 60px;
+            height: 60px;
+            background: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        
+        .pain-point:hover {
+            transform: scale(1.1);
+            border-color: var(--trust-blue);
+        }
+        
+        .pain-point.selected {
+            transform: scale(1.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-color: var(--trust-blue);
+        }
+        
+        .pain-point:focus {
+            outline: 3px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+        
+        .pain-description {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--light-blue);
+            border-radius: 10px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        /* Emergency Guide - Improved Layout */
+        .emergency-guide {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--soft-gray);
+        }
+        
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .emergency-card {
+            background: var(--clean-white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--emergency-red);
+        }
+        
+        .emergency-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .emergency-card h3 {
+            color: var(--emergency-red);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .severity-badge {
+            background: var(--emergency-red);
+            color: var(--clean-white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .emergency-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .emergency-card li {
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .emergency-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: bold;
+        }
+        
+        .action-button {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 1rem;
+            width: 100%;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-height: 44px;
+        }
+        
+        .action-button:hover {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+        }
+        
+        /* After Hours Protocol */
+        .after-hours {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .protocol-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+        
+        .protocol-step {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .protocol-step:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            background: var(--accent-teal);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Floating Emergency Tools - Enhanced */
+        .floating-tools {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 1000;
+        }
+        
+        .floating-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: none;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        
+        .floating-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .emergency-call {
+            background: var(--emergency-red);
+            color: var(--clean-white);
+            animation: pulse 2s infinite;
+        }
+        
+        .severity-check {
+            background: var(--warning-orange);
+            color: var(--charcoal);
+        }
+        
+        .chat-support {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+        }
+        
+        /* Modal Improvements */
+        .emergency-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            z-index: 1500;
+        }
+        
+        .emergency-overlay.active {
+            display: block;
+        }
+        
+        .severity-checker {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            z-index: 2000;
+            max-width: 600px;
+            width: 90%;
+            display: none;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .severity-checker.active {
+            display: block;
+        }
+        
+        .severity-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .severity-header h2 {
+            color: var(--emergency-red);
+            margin-bottom: 0.5rem;
+        }
+        
+        .severity-question {
+            margin-bottom: 2rem;
+        }
+        
+        .severity-question h3 {
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+        
+        .severity-options {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .severity-option {
+            padding: 1rem;
+            border: 2px solid var(--soft-gray);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .severity-option:hover {
+            border-color: var(--emergency-red);
+            background: var(--light-blue);
+        }
+        
+        .severity-result {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light-blue);
+            border-radius: 10px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .severity-result.critical {
+            background: rgba(220, 53, 69, 0.1);
+            border: 2px solid var(--emergency-red);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        /* Animations - Optimized */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+            }
+        }
+        
+        @keyframes emergencyPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Responsive Design - Enhanced */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .wait-time-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .floating-tools {
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .floating-button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            
+            .emergency-line-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .call-button, .severity-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .floating-tools, .emergency-banner, .emergency-overlay {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+            
+            .hero {
+                background: none !important;
+                color: var(--charcoal) !important;
+            }
+        }
+        
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            .severity-option:hover {
+                background: var(--charcoal);
+                color: var(--clean-white);
+            }
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            .hero h1, .pain-point, .emergency-card {
+                animation: none;
+            }
+            
+            .floating-button:hover, .call-button:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <a href="tel:+1234567890" aria-label="Call emergency dental line">
+            📞 DENTAL EMERGENCY? Call Now: (123) 456-7890 - Available 24/7
+        </a>
+    </div>
+    
+    <!-- Wait Time Indicator -->
+    <div class="wait-time-banner" role="status" aria-live="polite">
+        <div class="wait-time-content">
+            <div class="wait-time-item">
+                <span class="wait-time-indicator green" aria-label="Good availability"></span>
+                <span>ER Alternative: 15 min wait</span>
+            </div>
+            <div class="wait-time-item">
+                <span class="wait-time-indicator yellow" aria-label="Moderate availability"></span>
+                <span>After Hours: On-call available</span>
+            </div>
+            <div class="wait-time-item">
+                <span class="wait-time-indicator green" aria-label="Good availability"></span>
+                <span>Next appointment: 30 min</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo">Modern Dental Care</div>
+            <button class="emergency-line-button" onclick="makeCall()" aria-label="Call emergency dental line">
+                📞 EMERGENCY LINE
+            </button>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div id="main-content">
+            <h1>24/7 Emergency Dental Care</h1>
+            <p>Immediate relief when you need it most. Same-day appointments available with expert pain management.</p>
+            <div class="hero-buttons">
+                <a href="tel:+1234567890" class="call-button" aria-label="Call emergency hotline">
+                    📞 Call Emergency Hotline
+                </a>
+                <button class="severity-button" onclick="openSeverityChecker()" aria-label="Open severity assessment tool">
+                    🚨 Check Severity Now
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Emergency Triage System -->
+    <section class="triage-system" aria-labelledby="triage-title">
+        <div class="triage-container">
+            <h2 id="triage-title" class="section-title">Emergency Triage Guide</h2>
+            <div class="triage-levels">
+                <article class="triage-card">
+                    <header class="triage-header triage-immediate">
+                        <h3>IMMEDIATE - Call 911</h3>
+                        <p>Life-threatening emergencies</p>
+                    </header>
+                    <div class="triage-content">
+                        <h4>Symptoms:</h4>
+                        <ul class="triage-list">
+                            <li>Facial swelling affecting breathing</li>
+                            <li>Uncontrolled bleeding</li>
+                            <li>Severe trauma to face/jaw</li>
+                            <li>Signs of serious infection</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="triage-card">
+                    <header class="triage-header triage-urgent">
+                        <h3>URGENT - Call Us Now</h3>
+                        <p>Same-day treatment needed</p>
+                    </header>
+                    <div class="triage-content">
+                        <h4>Symptoms:</h4>
+                        <ul class="triage-list">
+                            <li>Knocked-out tooth</li>
+                            <li>Severe, constant pain</li>
+                            <li>Dental abscess</li>
+                            <li>Broken tooth with exposed nerve</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="triage-card">
+                    <header class="triage-header triage-soon">
+                        <h3>SOON - Within 24-48 Hours</h3>
+                        <p>Prompt care recommended</p>
+                    </header>
+                    <div class="triage-content">
+                        <h4>Symptoms:</h4>
+                        <ul class="triage-list">
+                            <li>Lost filling or crown</li>
+                            <li>Moderate tooth pain</li>
+                            <li>Minor chips or cracks</li>
+                            <li>Mild gum swelling</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive Pain Assessment Tool -->
+    <section class="pain-assessment" aria-labelledby="pain-title">
+        <h2 id="pain-title" class="section-title">Interactive Pain Assessment</h2>
+        <div class="pain-tool">
+            <p style="text-align: center; margin-bottom: 2rem;">Rate your pain level for immediate recommendations:</p>
+            <div class="pain-scale-visual" role="radiogroup" aria-labelledby="pain-title">
+                <button class="pain-point" onclick="assessPain(0)" data-level="0" role="radio" aria-checked="false" aria-label="Pain level 0 - no pain">0</button>
+                <button class="pain-point" onclick="assessPain(2)" data-level="2" role="radio" aria-checked="false" aria-label="Pain level 2 - mild">2</button>
+                <button class="pain-point" onclick="assessPain(4)" data-level="4" role="radio" aria-checked="false" aria-label="Pain level 4 - moderate">4</button>
+                <button class="pain-point" onclick="assessPain(6)" data-level="6" role="radio" aria-checked="false" aria-label="Pain level 6 - strong">6</button>
+                <button class="pain-point" onclick="assessPain(8)" data-level="8" role="radio" aria-checked="false" aria-label="Pain level 8 - severe">8</button>
+                <button class="pain-point" onclick="assessPain(10)" data-level="10" role="radio" aria-checked="false" aria-label="Pain level 10 - worst possible">10</button>
+            </div>
+            <div id="pain-description" class="pain-description" role="status" aria-live="polite"></div>
+        </div>
+    </section>
+    
+    <!-- Emergency Guide -->
+    <section class="emergency-guide" aria-labelledby="guide-title">
+        <h2 id="guide-title" class="section-title">Common Dental Emergencies - What to Do</h2>
+        <div class="emergency-grid">
+            <article class="emergency-card">
+                <h3>
+                    🦷 Severe Toothache
+                    <span class="severity-badge">URGENT</span>
+                </h3>
+                <p>Persistent, throbbing pain that doesn't respond to over-the-counter medication.</p>
+                <ul>
+                    <li>Rinse with warm salt water</li>
+                    <li>Apply cold compress externally</li>
+                    <li>Take recommended pain reliever</li>
+                    <li>Call us immediately</li>
+                </ul>
+                <button class="action-button" onclick="showFirstAid('toothache')" aria-label="View first aid video for toothache">View First Aid Video</button>
+            </article>
+            
+            <article class="emergency-card">
+                <h3>
+                    🩸 Knocked-Out Tooth
+                    <span class="severity-badge">CRITICAL</span>
+                </h3>
+                <p>Time is critical! We have the best chance of saving your tooth within 1 hour.</p>
+                <ul>
+                    <li>Handle tooth by crown only</li>
+                    <li>Rinse gently if dirty</li>
+                    <li>Try to reinsert or store in milk</li>
+                    <li>Get to us within 30 minutes</li>
+                </ul>
+                <button class="action-button" onclick="startTimer()" aria-label="Start 30 minute emergency timer">Start 30-Min Timer</button>
+            </article>
+            
+            <article class="emergency-card">
+                <h3>
+                    🔨 Broken/Chipped Tooth
+                    <span class="severity-badge">URGENT</span>
+                </h3>
+                <p>Sharp edges can cut your mouth and expose nerves causing severe pain.</p>
+                <ul>
+                    <li>Save any broken pieces</li>
+                    <li>Rinse mouth with warm water</li>
+                    <li>Cover sharp edges with wax</li>
+                    <li>Apply gauze if bleeding</li>
+                </ul>
+                <button class="action-button" onclick="showFirstAid('broken')" aria-label="View emergency care steps for broken tooth">Emergency Care Steps</button>
+            </article>
+            
+            <article class="emergency-card">
+                <h3>
+                    🤕 Dental Abscess
+                    <span class="severity-badge">CRITICAL</span>
+                </h3>
+                <p>Infection that can spread to other parts of your body if untreated.</p>
+                <ul>
+                    <li>Rinse with salt water</li>
+                    <li>Never attempt to drain</li>
+                    <li>Take temperature</li>
+                    <li>Seek immediate care</li>
+                </ul>
+                <button class="action-button" onclick="checkSymptoms()" aria-label="Check infection symptoms">Check Infection Signs</button>
+            </article>
+        </div>
+    </section>
+    
+    <!-- After Hours Protocol -->
+    <section class="after-hours" aria-labelledby="protocol-title">
+        <h2 id="protocol-title" style="margin-bottom: 2rem;">After-Hours Emergency Protocol</h2>
+        <div class="protocol-steps">
+            <div class="protocol-step">
+                <div class="step-number" aria-label="Step 1">1</div>
+                <h3>Call Emergency Line</h3>
+                <p>Our on-call dentist will assess your situation and provide immediate guidance.</p>
+            </div>
+            
+            <div class="protocol-step">
+                <div class="step-number" aria-label="Step 2">2</div>
+                <h3>Video Consultation</h3>
+                <p>If needed, we can assess your emergency via secure video call for faster triage.</p>
+            </div>
+            
+            <div class="protocol-step">
+                <div class="step-number" aria-label="Step 3">3</div>
+                <h3>Emergency Treatment</h3>
+                <p>Meet at our office or partner facility for immediate care, any time day or night.</p>
+            </div>
+        </div>
+        <a href="tel:+1234567890" class="call-button" style="margin-top: 2rem;" aria-label="Contact on-call dentist">
+            📞 Contact On-Call Dentist
+        </a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Modern Dental Care. Your trusted partner in dental emergencies.</p>
+        <p>State-of-the-art technology meets compassionate emergency care</p>
+    </footer>
+    
+    <!-- Floating Emergency Tools -->
+    <div class="floating-tools" role="toolbar" aria-label="Emergency tools">
+        <button class="floating-button emergency-call" onclick="makeCall()" aria-label="Call emergency line">📞</button>
+        <button class="floating-button severity-check" onclick="openSeverityChecker()" aria-label="Check severity">🚨</button>
+        <button class="floating-button chat-support" onclick="openChat()" aria-label="Live chat support">💬</button>
+    </div>
+    
+    <!-- Emergency Overlay -->
+    <div class="emergency-overlay" onclick="closeOverlays()" aria-hidden="true"></div>
+    
+    <!-- Severity Checker Modal -->
+    <div class="severity-checker" id="severityChecker" role="dialog" aria-labelledby="severity-title" aria-modal="true">
+        <div class="severity-header">
+            <h2 id="severity-title">Emergency Severity Assessment</h2>
+            <p>Answer these questions to determine your urgency level</p>
+        </div>
+        
+        <div id="severity-questions">
+            <div class="severity-question">
+                <h3>1. How would you rate your pain?</h3>
+                <div class="severity-options" role="radiogroup">
+                    <button class="severity-option" onclick="selectSeverity('pain', 'mild')" role="radio" aria-checked="false">Mild discomfort (1-3)</button>
+                    <button class="severity-option" onclick="selectSeverity('pain', 'moderate')" role="radio" aria-checked="false">Moderate pain (4-7)</button>
+                    <button class="severity-option" onclick="selectSeverity('pain', 'severe')" role="radio" aria-checked="false">Severe pain (8-10)</button>
+                </div>
+            </div>
+            
+            <div class="severity-question">
+                <h3>2. Are you experiencing swelling?</h3>
+                <div class="severity-options" role="radiogroup">
+                    <button class="severity-option" onclick="selectSeverity('swelling', 'none')" role="radio" aria-checked="false">No swelling</button>
+                    <button class="severity-option" onclick="selectSeverity('swelling', 'minor')" role="radio" aria-checked="false">Minor swelling</button>
+                    <button class="severity-option" onclick="selectSeverity('swelling', 'major')" role="radio" aria-checked="false">Major swelling affecting face/neck</button>
+                </div>
+            </div>
+            
+            <div class="severity-question">
+                <h3>3. Is there bleeding?</h3>
+                <div class="severity-options" role="radiogroup">
+                    <button class="severity-option" onclick="selectSeverity('bleeding', 'none')" role="radio" aria-checked="false">No bleeding</button>
+                    <button class="severity-option" onclick="selectSeverity('bleeding', 'controlled')" role="radio" aria-checked="false">Minor bleeding, controlled</button>
+                    <button class="severity-option" onclick="selectSeverity('bleeding', 'uncontrolled')" role="radio" aria-checked="false">Heavy, uncontrolled bleeding</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="severity-result" class="severity-result" role="status" aria-live="polite"></div>
+        
+        <button class="action-button" onclick="closeSeverityChecker()" aria-label="Close severity checker">Close</button>
+    </div>
+    
+    <script>
+        // Enhanced Emergency Functions with Accessibility
+        let severityAnswers = {};
+        let emergencyTimer = null;
+        
+        function makeCall() {
+            // Track conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'emergency_call', {
+                    'event_category': 'engagement',
+                    'event_label': 'emergency_hotline'
+                });
+            }
+            window.location.href = 'tel:+1234567890';
+        }
+        
+        function openSeverityChecker() {
+            const modal = document.getElementById('severityChecker');
+            const overlay = document.querySelector('.emergency-overlay');
+            
+            modal.classList.add('active');
+            overlay.classList.add('active');
+            
+            // Focus management for accessibility
+            modal.focus();
+            
+            // Track engagement
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'severity_checker_open', {
+                    'event_category': 'engagement',
+                    'event_label': 'assessment_tool'
+                });
+            }
+        }
+        
+        function closeSeverityChecker() {
+            document.getElementById('severityChecker').classList.remove('active');
+            document.querySelector('.emergency-overlay').classList.remove('active');
+            severityAnswers = {};
+            
+            // Reset radio button states
+            document.querySelectorAll('.severity-option').forEach(option => {
+                option.setAttribute('aria-checked', 'false');
+                option.classList.remove('selected');
+            });
+        }
+        
+        function closeOverlays() {
+            closeSeverityChecker();
+        }
+        
+        function selectSeverity(category, level) {
+            severityAnswers[category] = level;
+            
+            // Update aria-checked states
+            const questionDiv = event.target.closest('.severity-question');
+            questionDiv.querySelectorAll('.severity-option').forEach(option => {
+                option.setAttribute('aria-checked', 'false');
+                option.classList.remove('selected');
+            });
+            
+            event.target.setAttribute('aria-checked', 'true');
+            event.target.classList.add('selected');
+            
+            if (Object.keys(severityAnswers).length === 3) {
+                calculateSeverity();
+            }
+        }
+        
+        function calculateSeverity() {
+            const resultDiv = document.getElementById('severity-result');
+            let urgencyScore = 0;
+            
+            // Calculate urgency score
+            if (severityAnswers.pain === 'severe') urgencyScore += 3;
+            else if (severityAnswers.pain === 'moderate') urgencyScore += 2;
+            else urgencyScore += 1;
+            
+            if (severityAnswers.swelling === 'major') urgencyScore += 3;
+            else if (severityAnswers.swelling === 'minor') urgencyScore += 1;
+            
+            if (severityAnswers.bleeding === 'uncontrolled') urgencyScore += 3;
+            else if (severityAnswers.bleeding === 'controlled') urgencyScore += 1;
+            
+            // Show result
+            resultDiv.style.display = 'block';
+            
+            // Track assessment completion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'severity_assessment_complete', {
+                    'event_category': 'conversion',
+                    'event_label': 'urgency_score_' + urgencyScore
+                });
+            }
+            
+            if (urgencyScore >= 7) {
+                resultDiv.classList.add('critical');
+                resultDiv.innerHTML = `
+                    <h3 style="color: var(--emergency-red);">IMMEDIATE EMERGENCY</h3>
+                    <p>Call us immediately or visit the nearest emergency room!</p>
+                    <button class="call-button" onclick="makeCall()" aria-label="Call emergency line now">📞 Call Now</button>
+                `;
+            } else if (urgencyScore >= 4) {
+                resultDiv.innerHTML = `
+                    <h3 style="color: var(--warning-orange);">URGENT CARE NEEDED</h3>
+                    <p>You need same-day treatment. Call us now for immediate appointment.</p>
+                    <button class="call-button" onclick="makeCall()" aria-label="Call for same-day care">📞 Call for Same-Day Care</button>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <h3 style="color: var(--success-green);">PROMPT CARE RECOMMENDED</h3>
+                    <p>Schedule an appointment within 24-48 hours to prevent complications.</p>
+                    <button class="action-button" onclick="scheduleAppointment()" aria-label="Schedule dental appointment">Schedule Appointment</button>
+                `;
+            }
+            
+            document.getElementById('severity-questions').style.display = 'none';
+            
+            // Announce result to screen readers
+            resultDiv.setAttribute('aria-live', 'assertive');
+        }
+        
+        function assessPain(level) {
+            // Remove previous selections and update aria-checked
+            document.querySelectorAll('.pain-point').forEach(point => {
+                point.classList.remove('selected');
+                point.setAttribute('aria-checked', 'false');
+            });
+            
+            // Add selection to clicked point
+            event.target.classList.add('selected');
+            event.target.setAttribute('aria-checked', 'true');
+            
+            const descDiv = document.getElementById('pain-description');
+            descDiv.style.display = 'block';
+            
+            // Track pain assessment
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'pain_assessment', {
+                    'event_category': 'engagement',
+                    'event_label': 'pain_level_' + level
+                });
+            }
+            
+            if (level >= 8) {
+                descDiv.innerHTML = `
+                    <h3 style="color: var(--emergency-red);">Severe Pain (${level}/10)</h3>
+                    <p>This level of pain requires immediate attention. Call our emergency line now!</p>
+                    <button class="call-button" onclick="makeCall()" aria-label="Call emergency line for severe pain">📞 Call Emergency Line</button>
+                `;
+            } else if (level >= 5) {
+                descDiv.innerHTML = `
+                    <h3 style="color: var(--warning-orange);">Moderate Pain (${level}/10)</h3>
+                    <p>You need prompt care. We can see you today to address this pain.</p>
+                    <button class="action-button" onclick="makeCall()" aria-label="Call for same-day visit">📞 Call for Same-Day Visit</button>
+                `;
+            } else {
+                descDiv.innerHTML = `
+                    <h3 style="color: var(--success-green);">Mild Pain (${level}/10)</h3>
+                    <p>Monitor your symptoms. Schedule a regular appointment if pain persists.</p>
+                    <button class="action-button" onclick="scheduleAppointment()" aria-label="Schedule regular appointment">Schedule Appointment</button>
+                `;
+            }
+        }
+        
+        function showFirstAid(type) {
+            // Track interaction
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'first_aid_video', {
+                    'event_category': 'engagement',
+                    'event_label': type
+                });
+            }
+            alert(`Opening first aid video for ${type}. In a real implementation, this would play an instructional video.`);
+        }
+        
+        function startTimer() {
+            if (emergencyTimer) clearInterval(emergencyTimer);
+            
+            // Track timer usage
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'emergency_timer_start', {
+                    'event_category': 'engagement',
+                    'event_label': 'knocked_out_tooth'
+                });
+            }
+            
+            let timeLeft = 30 * 60; // 30 minutes in seconds
+            const timerDisplay = document.createElement('div');
+            timerDisplay.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: var(--emergency-red);
+                color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                z-index: 2000;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            `;
+            timerDisplay.setAttribute('role', 'timer');
+            timerDisplay.setAttribute('aria-live', 'polite');
+            document.body.appendChild(timerDisplay);
+            
+            emergencyTimer = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerDisplay.textContent = `Time Critical: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(emergencyTimer);
+                    timerDisplay.textContent = 'TIME EXPIRED - CALL NOW!';
+                    timerDisplay.style.animation = 'pulse 1s infinite';
+                    timerDisplay.setAttribute('aria-live', 'assertive');
+                }
+                
+                timeLeft--;
+            }, 1000);
+        }
+        
+        function checkSymptoms() {
+            openSeverityChecker();
+        }
+        
+        function openChat() {
+            // Track chat interaction
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'chat_support', {
+                    'event_category': 'engagement',
+                    'event_label': 'emergency_chat'
+                });
+            }
+            alert('Live chat support opening... Available 24/7 for emergency guidance.');
+        }
+        
+        function scheduleAppointment() {
+            // Track scheduling intent
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'schedule_appointment', {
+                    'event_category': 'conversion',
+                    'event_label': 'regular_appointment'
+                });
+            }
+            alert('Opening online scheduling system for next available appointment...');
+        }
+        
+        // Update wait times dynamically (simulation)
+        setInterval(() => {
+            const indicators = document.querySelectorAll('.wait-time-indicator');
+            indicators.forEach(indicator => {
+                const random = Math.random();
+                indicator.classList.remove('green', 'yellow', 'red');
+                if (random > 0.7) {
+                    indicator.classList.add('red');
+                    indicator.setAttribute('aria-label', 'Busy availability');
+                } else if (random > 0.3) {
+                    indicator.classList.add('yellow');
+                    indicator.setAttribute('aria-label', 'Moderate availability');
+                } else {
+                    indicator.classList.add('green');
+                    indicator.setAttribute('aria-label', 'Good availability');
+                }
+            });
+        }, 30000); // Update every 30 seconds
+        
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeOverlays();
+            }
+        });
+        
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                const loadTime = performance.now();
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'page_load_time', {
+                        'event_category': 'performance',
+                        'value': Math.round(loadTime)
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
