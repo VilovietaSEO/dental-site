@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pain-Free Root Canal Treatment - Save Your Smile | DentalCare Excellence</title>
-    <meta name="description" content="Advanced root canal treatment with 98% success rate. Pain-free procedures using laser therapy, sedation, and compassionate care. Emergency appointments available.">
-    <meta name="keywords" content="root canal, endodontic, pain-free dental, emergency dentist, tooth pain relief">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://dentalcareexcellence.com/root-canals">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ffffff' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E" as="image">
+    <title>Root Canal Treatment - Pain-Free Endodontic Care | DentalCare Excellence</title>
+    <meta name="description" content="State-of-the-art root canal treatment with advanced technology and compassionate care. Pain-free procedures with 98% success rate.">
     
     <style>
         * {
@@ -28,10 +22,6 @@
             --success-green: #28A745;
             --warning-yellow: #FFC107;
             --danger-red: #DC3545;
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-medium: 0 8px 24px rgba(0,0,0,0.12);
-            --border-radius: 8px;
         }
         
         body {
@@ -39,18 +29,17 @@
             line-height: 1.6;
             color: var(--charcoal);
             background-color: var(--clean-white);
-            font-display: swap;
         }
         
         .container {
-            max-width: min(1200px, 95vw);
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 clamp(1rem, 3vw, 2rem);
+            padding: 0 20px;
         }
         
         header {
             background: var(--clean-white);
-            box-shadow: var(--shadow-soft);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -64,15 +53,15 @@
         }
         
         .logo {
-            font-size: clamp(1.25rem, 3vw, 1.5rem);
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: var(--trust-blue);
         }
         
         .hero {
             background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
             color: var(--clean-white);
-            padding: clamp(3rem, 8vw, 5rem) 0;
+            padding: 4rem 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -85,72 +74,56 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-            animation: pulse 20s ease-in-out infinite;
-            will-change: transform;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
         }
         
         @keyframes pulse {
-            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
-            50% { transform: scale(1.1) rotate(180deg); opacity: 0.5; }
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
         }
         
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
             position: relative;
             z-index: 1;
-            line-height: 1.2;
         }
         
         .hero p {
-            font-size: clamp(1.1rem, 3vw, 1.25rem);
+            font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.95;
             position: relative;
             z-index: 1;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
         .cta-button {
             display: inline-block;
             background: var(--success-green);
             color: var(--clean-white);
-            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
-            border-radius: var(--border-radius);
+            padding: 1rem 2rem;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: var(--transition-smooth);
-            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             cursor: pointer;
             border: none;
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-size: 1rem;
             position: relative;
             z-index: 1;
-            min-width: 44px;
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
         }
         
-        .cta-button:hover, .cta-button:focus {
+        .cta-button:hover {
             background: #239a3b;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
-            outline: 2px solid transparent;
-        }
-        
-        .cta-button:focus-visible {
-            outline: 2px solid var(--clean-white);
-            outline-offset: 2px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         
         .section {
-            padding: clamp(3rem, 8vw, 4rem) 0;
+            padding: 4rem 0;
         }
         
         .section-alt {
@@ -158,33 +131,31 @@
         }
         
         h2 {
-            font-size: clamp(1.75rem, 4vw, 2rem);
+            font-size: 2rem;
             color: var(--trust-blue);
             margin-bottom: 2rem;
             text-align: center;
-            line-height: 1.3;
         }
         
-        /* Enhanced Myth Buster with better accessibility */
+        /* Interactive Myth Buster */
         .myth-buster {
             background: var(--clean-white);
-            padding: clamp(2rem, 5vw, 3rem);
-            border-radius: 16px;
-            box-shadow: var(--shadow-medium);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin: 2rem 0;
         }
         
         .myth-question {
-            font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+            font-size: 1.5rem;
             color: var(--trust-blue);
             margin-bottom: 2rem;
             text-align: center;
-            font-weight: 600;
         }
         
         .myth-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
@@ -192,57 +163,32 @@
         .myth-option {
             background: var(--soft-gray);
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all 0.3s ease;
             text-align: center;
             border: 3px solid transparent;
-            min-height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
         }
         
-        .myth-option:hover, .myth-option:focus {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-            border-color: var(--accent-teal);
-        }
-        
-        .myth-option:focus-visible {
-            outline: 2px solid var(--trust-blue);
-            outline-offset: 2px;
+        .myth-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .myth-option.correct {
             border-color: var(--success-green);
             background: rgba(40, 167, 69, 0.1);
-            animation: correctPulse 0.6s ease-out;
         }
         
         .myth-option.incorrect {
             border-color: var(--danger-red);
             background: rgba(220, 53, 69, 0.1);
-            animation: shake 0.5s ease-out;
-        }
-        
-        @keyframes correctPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
         }
         
         .myth-result {
             text-align: center;
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 10px;
             margin-top: 2rem;
             display: none;
         }
@@ -263,18 +209,18 @@
             }
         }
         
-        /* Enhanced Pain Management Explorer */
+        /* Pain Management Explorer */
         .pain-explorer {
             background: var(--clean-white);
-            padding: clamp(2rem, 5vw, 3rem);
-            border-radius: 16px;
-            box-shadow: var(--shadow-medium);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin: 2rem 0;
         }
         
         .pain-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -282,50 +228,35 @@
         .pain-option {
             background: var(--soft-gray);
             padding: 1.5rem;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: all 0.3s ease;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 140px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid transparent;
         }
         
-        .pain-option:hover, .pain-option:focus {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-            border-color: var(--accent-teal);
-        }
-        
-        .pain-option:focus-visible {
-            outline: 2px solid var(--trust-blue);
-            outline-offset: 2px;
+        .pain-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
         
         .pain-option.selected {
             background: var(--accent-teal);
             color: var(--clean-white);
-            border-color: var(--trust-blue);
         }
         
         .pain-option-icon {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            display: block;
         }
         
         .pain-detail {
-            background: linear-gradient(135deg, var(--soft-gray) 0%, #e8f4f8 100%);
+            background: var(--soft-gray);
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 10px;
             margin-top: 2rem;
             display: none;
-            border-left: 4px solid var(--accent-teal);
         }
         
         .pain-detail.show {
@@ -333,24 +264,24 @@
             animation: slideIn 0.5s ease;
         }
         
-        /* Enhanced Success Stories Carousel */
+        /* Success Stories Carousel */
         .success-carousel {
             position: relative;
-            max-width: 900px;
+            max-width: 800px;
             margin: 2rem auto;
             overflow: hidden;
-            border-radius: 16px;
-            box-shadow: var(--shadow-medium);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         .success-stories {
             display: flex;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.5s ease;
         }
         
         .success-story {
             min-width: 100%;
-            padding: clamp(2rem, 5vw, 3rem);
+            padding: 3rem;
             background: var(--clean-white);
         }
         
@@ -358,32 +289,28 @@
             display: flex;
             align-items: center;
             margin-bottom: 1.5rem;
-            gap: 1rem;
         }
         
         .story-avatar {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-teal) 0%, var(--trust-blue) 100%);
+            background: var(--accent-teal);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2rem;
             color: var(--clean-white);
-            font-weight: 700;
-            flex-shrink: 0;
+            margin-right: 1.5rem;
         }
         
         .story-info h4 {
             color: var(--trust-blue);
             margin-bottom: 0.25rem;
-            font-size: 1.2rem;
         }
         
         .story-rating {
             color: var(--warning-yellow);
-            font-size: 1.1rem;
         }
         
         .carousel-controls {
@@ -394,75 +321,52 @@
             display: flex;
             justify-content: space-between;
             padding: 0 1rem;
-            pointer-events: none;
         }
         
         .carousel-btn {
             background: var(--trust-blue);
             color: var(--clean-white);
             border: none;
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             cursor: pointer;
-            transition: var(--transition-smooth);
-            pointer-events: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
         }
         
-        .carousel-btn:hover, .carousel-btn:focus {
+        .carousel-btn:hover {
             background: var(--accent-teal);
             transform: scale(1.1);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .carousel-btn:focus-visible {
-            outline: 2px solid var(--clean-white);
-            outline-offset: 2px;
         }
         
         .carousel-indicators {
             display: flex;
             justify-content: center;
             gap: 0.5rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
         
         .indicator {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: var(--soft-gray);
             cursor: pointer;
-            transition: var(--transition-smooth);
-            border: 2px solid transparent;
-        }
-        
-        .indicator:hover, .indicator:focus {
-            background: var(--accent-teal);
-        }
-        
-        .indicator:focus-visible {
-            outline: 2px solid var(--trust-blue);
-            outline-offset: 2px;
+            transition: all 0.3s ease;
         }
         
         .indicator.active {
             background: var(--trust-blue);
-            width: 32px;
-            border-radius: 6px;
+            width: 30px;
+            border-radius: 5px;
         }
         
-        /* Enhanced Special Offer */
+        /* Special Offer with Countdown */
         .special-offer {
             background: linear-gradient(135deg, var(--success-green) 0%, #1e7e34 100%);
             color: var(--clean-white);
-            padding: clamp(2rem, 5vw, 3rem);
-            border-radius: 16px;
+            padding: 3rem;
+            border-radius: 15px;
             text-align: center;
             margin: 2rem 0;
             position: relative;
@@ -472,55 +376,134 @@
         .offer-countdown {
             display: flex;
             justify-content: center;
-            gap: clamp(1rem, 3vw, 2rem);
+            gap: 2rem;
             margin: 2rem 0;
-            flex-wrap: wrap;
         }
         
         .countdown-unit {
             background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            padding: clamp(1rem, 3vw, 1.5rem);
-            border-radius: 12px;
-            min-width: clamp(80px, 20vw, 100px);
-            transition: var(--transition-smooth);
-        }
-        
-        .countdown-unit:hover {
-            transform: scale(1.05);
-            background: rgba(255,255,255,0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 100px;
         }
         
         .countdown-number {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: bold;
             display: block;
-            line-height: 1;
         }
         
         .countdown-label {
-            font-size: clamp(0.8rem, 2vw, 0.9rem);
+            font-size: 0.9rem;
             opacity: 0.9;
-            margin-top: 0.25rem;
         }
         
-        /* FAQ Enhancement with better accessibility */
+        /* Instagram Feed Integration */
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .instagram-post {
+            background: var(--soft-gray);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .instagram-post:hover {
+            transform: scale(1.05);
+        }
+        
+        .instagram-post::before {
+            content: "📷";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+        
+        /* Video Testimonials */
+        .video-testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-card {
+            background: var(--clean-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            background: var(--soft-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: var(--trust-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover .play-button {
+            background: var(--accent-teal);
+            transform: scale(1.1);
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-info h4 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Enhanced FAQ with search */
         .faq-search {
             background: var(--clean-white);
             padding: 1rem 1.5rem;
-            border-radius: 12px;
+            border-radius: 10px;
             border: 2px solid var(--soft-gray);
             font-size: 1rem;
             width: 100%;
             max-width: 600px;
             margin: 0 auto 2rem;
-            transition: var(--transition-smooth);
+            transition: border-color 0.3s ease;
         }
         
         .faq-search:focus {
             outline: none;
             border-color: var(--trust-blue);
-            box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.1);
         }
         
         .faq-container {
@@ -531,19 +514,14 @@
         .faq-item {
             background: var(--clean-white);
             margin-bottom: 1rem;
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: var(--transition-smooth);
-            border: 1px solid rgba(0, 119, 190, 0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
         
         .faq-item.hidden {
             display: none;
-        }
-        
-        .faq-item:hover {
-            box-shadow: var(--shadow-medium);
         }
         
         .faq-question {
@@ -553,48 +531,40 @@
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            transition: var(--transition-smooth);
-            min-height: 44px;
+            transition: background 0.3s ease;
         }
         
-        .faq-question:hover, .faq-question:focus {
+        .faq-question:hover {
             background: var(--soft-gray);
-        }
-        
-        .faq-question:focus-visible {
-            outline: 2px solid var(--trust-blue);
-            outline-offset: -2px;
         }
         
         .faq-answer {
             padding: 0 1.5rem;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+            transition: max-height 0.3s ease, padding 0.3s ease;
         }
         
         .faq-answer.active {
             padding: 1.5rem;
-            max-height: 400px;
+            max-height: 500px;
         }
         
         .faq-toggle {
             font-size: 1.5rem;
             transition: transform 0.3s ease;
-            min-width: 24px;
-            text-align: center;
         }
         
         .faq-toggle.active {
             transform: rotate(45deg);
         }
         
-        /* Emergency Banner */
+        /* Emergency banner enhancement */
         .emergency-banner {
-            background: linear-gradient(135deg, var(--danger-red) 0%, #c82333 100%);
+            background: var(--success-green);
             color: var(--clean-white);
             padding: 2rem;
-            border-radius: 12px;
+            border-radius: 10px;
             text-align: center;
             margin: 2rem 0;
             position: relative;
@@ -624,785 +594,599 @@
             text-align: center;
         }
         
-        /* Accessibility improvements */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            :root {
-                --trust-blue: #0066CC;
-                --accent-teal: #008888;
-                --success-green: #006600;
-            }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        /* Mobile optimizations */
         @media (max-width: 768px) {
-            .hero {
-                padding: 3rem 0;
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .myth-options {
                 grid-template-columns: 1fr;
             }
             
-            .pain-options {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
             .offer-countdown {
+                flex-wrap: wrap;
                 gap: 1rem;
             }
             
-            .carousel-controls {
-                padding: 0 0.5rem;
+            .countdown-unit {
+                min-width: 80px;
+                padding: 1rem;
             }
             
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .pain-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .story-header {
-                flex-direction: column;
-                text-align: center;
+            .countdown-number {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="container" role="navigation" aria-label="Main navigation">
-            <div class="logo" role="img" aria-label="DentalCare Excellence">DentalCare Excellence</div>
-            <a href="tel:1-800-DENTIST" class="cta-button" aria-label="Call emergency dental hotline">
-                Emergency: 1-800-DENTIST
-            </a>
+        <nav class="container">
+            <div class="logo">DentalCare Excellence</div>
+            <a href="tel:1-800-DENTIST" class="cta-button">Emergency: 1-800-DENTIST</a>
         </nav>
     </header>
     
-    <main>
-        <section class="hero" role="banner">
-            <div class="container">
-                <h1>Modern Root Canal Treatment</h1>
-                <p>Pain-free procedures with advanced technology and compassionate care. 98% success rate guaranteed.</p>
-                <a href="#appointment" class="cta-button" aria-describedby="consultation-description">
-                    Schedule Your Consultation
-                </a>
-                <div id="consultation-description" class="sr-only">
-                    Book a free consultation to discuss your root canal treatment options
-                </div>
-            </div>
-        </section>
-        
-        <section class="section" role="region" aria-labelledby="myth-buster-heading">
-            <div class="container">
-                <h2 id="myth-buster-heading">Interactive Root Canal Myth Buster</h2>
-                <div class="myth-buster">
-                    <h3 class="myth-question">What do you think about root canal treatment?</h3>
-                    <p class="sr-only">Select one of the options below to test your knowledge about root canals:</p>
-                    
-                    <div class="myth-options" role="group" aria-labelledby="myth-buster-heading">
-                        <button class="myth-option" onclick="checkMyth('painful')" aria-describedby="myth-painful-desc">
-                            <h4>😰 "Root canals are extremely painful"</h4>
-                            <div id="myth-painful-desc" class="sr-only">Test if root canals are actually painful</div>
-                        </button>
-                        <button class="myth-option" onclick="checkMyth('extract')" aria-describedby="myth-extract-desc">
-                            <h4>🦷 "It's better to just pull the tooth"</h4>
-                            <div id="myth-extract-desc" class="sr-only">Learn about tooth extraction vs root canal</div>
-                        </button>
-                        <button class="myth-option" onclick="checkMyth('relief')" aria-describedby="myth-relief-desc">
-                            <h4>😌 "Root canals relieve pain"</h4>
-                            <div id="myth-relief-desc" class="sr-only">Discover if root canals actually provide pain relief</div>
-                        </button>
-                        <button class="myth-option" onclick="checkMyth('expensive')" aria-describedby="myth-expensive-desc">
-                            <h4>💰 "They're too expensive"</h4>
-                            <div id="myth-expensive-desc" class="sr-only">Learn about root canal costs and value</div>
-                        </button>
-                    </div>
-                    
-                    <div class="myth-result" id="mythResult" role="region" aria-live="polite" aria-atomic="true"></div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section section-alt" role="region" aria-labelledby="pain-management-heading">
-            <div class="container">
-                <h2 id="pain-management-heading">Pain Management Options Explorer</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Discover our comprehensive comfort options for a pain-free experience</p>
-                
-                <div class="pain-explorer">
-                    <div class="pain-options" role="group" aria-labelledby="pain-management-heading">
-                        <button class="pain-option" onclick="explorePainOption('sedation')" aria-describedby="sedation-desc">
-                            <span class="pain-option-icon" aria-hidden="true">💤</span>
-                            <h4>Conscious Sedation</h4>
-                            <div id="sedation-desc" class="sr-only">Learn about conscious sedation options</div>
-                        </button>
-                        <button class="pain-option" onclick="explorePainOption('laser')" aria-describedby="laser-desc">
-                            <span class="pain-option-icon" aria-hidden="true">🔬</span>
-                            <h4>Laser Therapy</h4>
-                            <div id="laser-desc" class="sr-only">Discover advanced laser therapy benefits</div>
-                        </button>
-                        <button class="pain-option" onclick="explorePainOption('numbing')" aria-describedby="numbing-desc">
-                            <span class="pain-option-icon" aria-hidden="true">💉</span>
-                            <h4>Advanced Numbing</h4>
-                            <div id="numbing-desc" class="sr-only">Learn about our advanced numbing techniques</div>
-                        </button>
-                        <button class="pain-option" onclick="explorePainOption('aromatherapy')" aria-describedby="aromatherapy-desc">
-                            <span class="pain-option-icon" aria-hidden="true">🌿</span>
-                            <h4>Aromatherapy</h4>
-                            <div id="aromatherapy-desc" class="sr-only">Explore aromatherapy relaxation options</div>
-                        </button>
-                        <button class="pain-option" onclick="explorePainOption('music')" aria-describedby="music-desc">
-                            <span class="pain-option-icon" aria-hidden="true">🎵</span>
-                            <h4>Music Therapy</h4>
-                            <div id="music-desc" class="sr-only">Learn about personalized music therapy</div>
-                        </button>
-                        <button class="pain-option" onclick="explorePainOption('vr')" aria-describedby="vr-desc">
-                            <span class="pain-option-icon" aria-hidden="true">🥽</span>
-                            <h4>VR Distraction</h4>
-                            <div id="vr-desc" class="sr-only">Discover virtual reality distraction technology</div>
-                        </button>
-                    </div>
-                    
-                    <div class="pain-detail" id="painDetail" role="region" aria-live="polite" aria-atomic="true"></div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section" role="region" aria-labelledby="success-stories-heading">
-            <div class="container">
-                <h2 id="success-stories-heading">Real Patient Success Stories</h2>
-                
-                <div class="success-carousel" role="region" aria-labelledby="success-stories-heading">
-                    <div class="success-stories" id="successStories" aria-live="polite">
-                        <article class="success-story">
-                            <div class="story-header">
-                                <div class="story-avatar" aria-hidden="true">JM</div>
-                                <div class="story-info">
-                                    <h4>Jennifer M.</h4>
-                                    <p>Root Canal - Molar</p>
-                                    <div class="story-rating" aria-label="5 out of 5 stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <blockquote>
-                                "I was terrified of getting a root canal, but Dr. Smith made it completely painless. I actually fell asleep during the procedure! The tooth that was causing me agony for weeks now feels perfect."
-                            </blockquote>
-                            <cite style="color: #666; font-size: 0.9rem;">Verified Patient - 2 weeks ago</cite>
-                        </article>
-                        
-                        <article class="success-story">
-                            <div class="story-header">
-                                <div class="story-avatar" aria-hidden="true">RD</div>
-                                <div class="story-info">
-                                    <h4>Robert D.</h4>
-                                    <p>Root Canal - Front Tooth</p>
-                                    <div class="story-rating" aria-label="5 out of 5 stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <blockquote>
-                                "After a sports injury, I needed an emergency root canal. The team got me in the same day, and the procedure was quick and comfortable. You'd never know I had work done - my tooth looks and feels natural!"
-                            </blockquote>
-                            <cite style="color: #666; font-size: 0.9rem;">Verified Patient - 1 month ago</cite>
-                        </article>
-                        
-                        <article class="success-story">
-                            <div class="story-header">
-                                <div class="story-avatar" aria-hidden="true">SL</div>
-                                <div class="story-info">
-                                    <h4>Sarah L.</h4>
-                                    <p>Root Canal - Premolar</p>
-                                    <div class="story-rating" aria-label="5 out of 5 stars">★★★★★</div>
-                                </div>
-                            </div>
-                            <blockquote>
-                                "The microscope technology they use is amazing. My previous dentist said I'd need extraction, but here they saved my tooth! The whole experience was so much better than I expected."
-                            </blockquote>
-                            <cite style="color: #666; font-size: 0.9rem;">Verified Patient - 3 weeks ago</cite>
-                        </article>
-                    </div>
-                    
-                    <div class="carousel-controls" aria-label="Carousel navigation">
-                        <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Previous testimonial">‹</button>
-                        <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Next testimonial">›</button>
-                    </div>
-                </div>
-                
-                <div class="carousel-indicators" role="tablist" aria-label="Testimonial indicators">
-                    <button class="indicator active" onclick="goToSlide(0)" role="tab" aria-label="View testimonial 1" aria-selected="true"></button>
-                    <button class="indicator" onclick="goToSlide(1)" role="tab" aria-label="View testimonial 2" aria-selected="false"></button>
-                    <button class="indicator" onclick="goToSlide(2)" role="tab" aria-label="View testimonial 3" aria-selected="false"></button>
-                </div>
-            </div>
-        </section>
-        
+    <section class="hero">
         <div class="container">
-            <div class="special-offer" role="region" aria-labelledby="special-offer-heading">
-                <div class="emergency-pulse" aria-hidden="true"></div>
-                <h2 id="special-offer-heading" style="color: var(--clean-white); font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem; position: relative;">
-                    Limited Time Offer - Save $200!
-                </h2>
-                <p style="font-size: clamp(1.1rem, 3vw, 1.2rem); margin-bottom: 1rem; position: relative;">
-                    Complete Root Canal Treatment Package
-                </p>
-                
-                <div class="offer-countdown" id="offerCountdown" aria-label="Offer expires in:">
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="days" aria-label="2 days">2</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="hours" aria-label="14 hours">14</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="minutes" aria-label="32 minutes">32</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-number" id="seconds" aria-label="45 seconds">45</span>
-                        <span class="countdown-label">Seconds</span>
-                    </div>
-                </div>
-                
-                <button class="cta-button" style="background: var(--clean-white); color: var(--success-green); font-size: clamp(1.1rem, 3vw, 1.2rem); padding: clamp(1rem, 3vw, 1.2rem) clamp(2rem, 5vw, 2.5rem); position: relative;" onclick="alert('Booking system would open here')">
-                    Claim Your Savings Now
-                </button>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9; position: relative;">
-                    *Includes consultation, X-rays, treatment, and follow-up care
-                </p>
-            </div>
+            <h1>Modern Root Canal Treatment</h1>
+            <p>Pain-free procedures with advanced technology and compassionate care</p>
+            <a href="#appointment" class="cta-button">Schedule Your Consultation</a>
         </div>
-        
-        <div class="container">
-            <div class="emergency-banner" role="alert">
-                <div class="emergency-pulse" aria-hidden="true"></div>
-                <h3 style="position: relative; font-size: clamp(1.25rem, 3.5vw, 1.5rem); margin-bottom: 1rem;">24/7 Emergency Root Canal Service</h3>
-                <p style="position: relative;">Severe tooth pain can't wait. We're here for you day and night.</p>
-                <a href="tel:1-800-DENTIST" class="cta-button" style="background: var(--clean-white); color: var(--danger-red); position: relative; margin-top: 1rem;" aria-label="Call emergency dental hotline">
-                    Call Emergency Line: 1-800-DENTIST
-                </a>
-            </div>
-        </div>
-        
-        <section class="section section-alt" role="region" aria-labelledby="faq-heading">
-            <div class="container">
-                <h2 id="faq-heading">Frequently Asked Questions</h2>
-                
-                <label for="faq-search" class="sr-only">Search frequently asked questions</label>
-                <input type="text" id="faq-search" class="faq-search" placeholder="Search your questions..." onkeyup="searchFAQ(this.value)" aria-describedby="search-help">
-                <div id="search-help" class="sr-only">Type keywords to filter questions</div>
-                
-                <div class="faq-container">
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>How do I know if I need a root canal?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>Common signs include severe toothache, prolonged sensitivity to hot or cold, tooth discoloration, swelling and tenderness in nearby gums, and a persistent pimple on the gums. However, sometimes there are no symptoms, which is why regular checkups are important.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>Is a root canal really painless?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>Yes! With modern anesthetics and techniques, root canal treatment is typically no more uncomfortable than getting a filling. Most patients report feeling immediate relief from the pain that brought them in. We also offer sedation options for anxious patients.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>How long does a root canal take?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>Most root canals can be completed in 60-90 minutes. Complex cases may require a second visit. With our advanced technology, we've significantly reduced treatment time while improving outcomes.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>What's the success rate of root canal treatment?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>Our root canal treatments have a 98% success rate. With proper care and restoration (usually a crown), a root canal-treated tooth can last a lifetime. We use advanced microscopes and 3D imaging to ensure thorough treatment.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>Will I need a crown after my root canal?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>In most cases, yes. A crown protects the treated tooth from fracture and restores its full function. We'll discuss the best restoration option for your specific situation during your consultation.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>Is root canal treatment covered by insurance?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>Most dental insurance plans cover 70-80% of root canal treatment. Our team will help verify your benefits and provide a detailed cost estimate. We also offer flexible payment plans to make treatment affordable.</p>
-                        </div>
-                    </article>
-                    
-                    <article class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-                            <span>What happens if I don't get a root canal?</span>
-                            <span class="faq-toggle" aria-hidden="true">+</span>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            <p>Without treatment, the infection can spread to surrounding teeth and bone, potentially causing an abscess. This can lead to more serious health issues and eventual tooth loss. Early treatment is always easier and more successful.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section" id="appointment" role="region" aria-labelledby="appointment-heading">
-            <div class="container" style="text-align: center;">
-                <h2 id="appointment-heading">Don't Let Tooth Pain Control Your Life</h2>
-                <p style="font-size: clamp(1rem, 2.5vw, 1.1rem); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Schedule your consultation today and discover how comfortable modern root canal treatment can be.
-                </p>
-                <button class="cta-button" onclick="alert('Booking system would open here')" aria-describedby="booking-description">
-                    Book Your Appointment Now
-                </button>
-                <div id="booking-description" class="sr-only">
-                    Opens our online booking system to schedule your appointment
-                </div>
-                <p style="margin-top: 1rem; color: #666;">
-                    Or call: <a href="tel:1-800-DENTIST" style="color: var(--trust-blue); text-decoration: none;" aria-label="Call dental office">1-800-DENTIST</a>
-                </p>
-            </div>
-        </section>
-    </main>
+    </section>
     
-    <footer role="contentinfo">
+    <section class="section">
+        <div class="container">
+            <h2>Interactive Root Canal Myth Buster</h2>
+            <div class="myth-buster">
+                <h3 class="myth-question">What do you think about root canal treatment?</h3>
+                
+                <div class="myth-options" id="mythOptions">
+                    <div class="myth-option" onclick="checkMyth('painful')">
+                        <h4>😰 "Root canals are extremely painful"</h4>
+                    </div>
+                    <div class="myth-option" onclick="checkMyth('extract')">
+                        <h4>🦷 "It's better to just pull the tooth"</h4>
+                    </div>
+                    <div class="myth-option" onclick="checkMyth('relief')">
+                        <h4>😌 "Root canals relieve pain"</h4>
+                    </div>
+                    <div class="myth-option" onclick="checkMyth('expensive')">
+                        <h4>💰 "They're too expensive"</h4>
+                    </div>
+                </div>
+                
+                <div class="myth-result" id="mythResult"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Pain Management Options Explorer</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Click to explore our comfort options</p>
+            
+            <div class="pain-explorer">
+                <div class="pain-options">
+                    <div class="pain-option" onclick="explorePainOption('sedation')">
+                        <div class="pain-option-icon">💤</div>
+                        <h4>Conscious Sedation</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('laser')">
+                        <div class="pain-option-icon">🔬</div>
+                        <h4>Laser Therapy</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('numbing')">
+                        <div class="pain-option-icon">💉</div>
+                        <h4>Advanced Numbing</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('aromatherapy')">
+                        <div class="pain-option-icon">🌿</div>
+                        <h4>Aromatherapy</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('music')">
+                        <div class="pain-option-icon">🎵</div>
+                        <h4>Music Therapy</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('vr')">
+                        <div class="pain-option-icon">🥽</div>
+                        <h4>VR Distraction</h4>
+                    </div>
+                </div>
+                
+                <div class="pain-detail" id="painDetail"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Real Patient Success Stories</h2>
+            
+            <div class="success-carousel">
+                <div class="success-stories" id="successStories">
+                    <div class="success-story">
+                        <div class="story-header">
+                            <div class="story-avatar">JM</div>
+                            <div class="story-info">
+                                <h4>Jennifer M.</h4>
+                                <p>Root Canal - Molar</p>
+                                <div class="story-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"I was terrified of getting a root canal, but Dr. Smith made it completely painless. I actually fell asleep during the procedure! The tooth that was causing me agony for weeks now feels perfect."</p>
+                        <small style="color: #666;">Verified Patient - 2 weeks ago</small>
+                    </div>
+                    
+                    <div class="success-story">
+                        <div class="story-header">
+                            <div class="story-avatar">RD</div>
+                            <div class="story-info">
+                                <h4>Robert D.</h4>
+                                <p>Root Canal - Front Tooth</p>
+                                <div class="story-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"After a sports injury, I needed an emergency root canal. The team got me in the same day, and the procedure was quick and comfortable. You'd never know I had work done - my tooth looks and feels natural!"</p>
+                        <small style="color: #666;">Verified Patient - 1 month ago</small>
+                    </div>
+                    
+                    <div class="success-story">
+                        <div class="story-header">
+                            <div class="story-avatar">SL</div>
+                            <div class="story-info">
+                                <h4>Sarah L.</h4>
+                                <p>Root Canal - Premolar</p>
+                                <div class="story-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"The microscope technology they use is amazing. My previous dentist said I'd need extraction, but here they saved my tooth! The whole experience was so much better than I expected."</p>
+                        <small style="color: #666;">Verified Patient - 3 weeks ago</small>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="moveCarousel(-1)">‹</button>
+                    <button class="carousel-btn" onclick="moveCarousel(1)">›</button>
+                </div>
+            </div>
+            
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="special-offer">
+            <div class="emergency-pulse"></div>
+            <h2 style="color: var(--clean-white); font-size: 2.5rem; margin-bottom: 1rem; position: relative;">
+                Limited Time Offer - Save $200!
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem; position: relative;">
+                Complete Root Canal Treatment Package
+            </p>
+            
+            <div class="offer-countdown" id="offerCountdown">
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="days">2</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="hours">14</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="minutes">32</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="seconds">45</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            
+            <button class="cta-button" style="background: var(--clean-white); color: var(--success-green); font-size: 1.2rem; padding: 1.2rem 2.5rem; position: relative;">
+                Claim Your Savings Now
+            </button>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9; position: relative;">
+                *Includes consultation, X-rays, treatment, and follow-up care
+            </p>
+        </div>
+    </div>
+    
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Follow Our Success Stories</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Real patients, real transformations @dentalcare_excellence
+            </p>
+            
+            <div class="instagram-feed">
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="cta-button" style="background: var(--accent-teal);">
+                    Follow Us on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Video Testimonials</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Hear directly from our patients about their root canal experience
+            </p>
+            
+            <div class="video-testimonials">
+                <div class="video-card" onclick="playVideo('testimonial1')">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Mike's Story: From Pain to Relief</h4>
+                        <p>Emergency root canal saved my vacation</p>
+                    </div>
+                </div>
+                
+                <div class="video-card" onclick="playVideo('testimonial2')">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Lisa's Experience: Anxiety to Confidence</h4>
+                        <p>How sedation made all the difference</p>
+                    </div>
+                </div>
+                
+                <div class="video-card" onclick="playVideo('testimonial3')">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>David's Journey: Complex Case Success</h4>
+                        <p>When other dentists said extraction was the only option</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="emergency-banner">
+            <div class="emergency-pulse"></div>
+            <h3 style="position: relative; font-size: 1.5rem; margin-bottom: 1rem;">24/7 Emergency Root Canal Service</h3>
+            <p style="position: relative;">Severe tooth pain can't wait. We're here for you day and night.</p>
+            <a href="tel:1-800-DENTIST" class="cta-button" style="background: var(--clean-white); color: var(--success-green); position: relative;">
+                Call Emergency Line: 1-800-DENTIST
+            </a>
+        </div>
+    </div>
+    
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <input type="text" class="faq-search" placeholder="Search your questions..." onkeyup="searchFAQ(this.value)">
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I know if I need a root canal?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Common signs include severe toothache, prolonged sensitivity to hot or cold, tooth discoloration, swelling and tenderness in nearby gums, and a persistent pimple on the gums. However, sometimes there are no symptoms, which is why regular checkups are important.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is a root canal really painless?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! With modern anesthetics and techniques, root canal treatment is typically no more uncomfortable than getting a filling. Most patients report feeling immediate relief from the pain that brought them in. We also offer sedation options for anxious patients.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long does a root canal take?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most root canals can be completed in 60-90 minutes. Complex cases may require a second visit. With our advanced technology, we've significantly reduced treatment time while improving outcomes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's the success rate of root canal treatment?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our root canal treatments have a 98% success rate. With proper care and restoration (usually a crown), a root canal-treated tooth can last a lifetime. We use advanced microscopes and 3D imaging to ensure thorough treatment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Will I need a crown after my root canal?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In most cases, yes. A crown protects the treated tooth from fracture and restores its full function. We'll discuss the best restoration option for your specific situation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is root canal treatment covered by insurance?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most dental insurance plans cover root canal treatment. Our team will help verify your benefits and provide a detailed cost estimate. We also offer flexible payment plans to make treatment affordable.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What happens if I don't get a root canal?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Without treatment, the infection can spread to surrounding teeth and bone, potentially causing an abscess. This can lead to more serious health issues and eventual tooth loss. Early treatment is always easier and more successful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="appointment">
+        <div class="container" style="text-align: center;">
+            <h2>Don't Let Tooth Pain Control Your Life</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Schedule your consultation today and discover how comfortable modern root canal treatment can be.
+            </p>
+            <a href="#" class="cta-button" onclick="alert('Booking system would open here')">Book Your Appointment Now</a>
+        </div>
+    </section>
+    
+    <footer>
         <div class="container">
             <p>&copy; 2024 DentalCare Excellence. All rights reserved. | State-of-the-art technology meets compassionate care.</p>
         </div>
     </footer>
     
     <script>
-        // Performance optimized JavaScript with error handling
-        (function() {
-            'use strict';
+        // Myth Buster functionality
+        function checkMyth(myth) {
+            const options = document.querySelectorAll('.myth-option');
+            const result = document.getElementById('mythResult');
             
-            // Myth Buster functionality with enhanced accessibility
-            window.checkMyth = function(myth) {
-                try {
-                    const options = document.querySelectorAll('.myth-option');
-                    const result = document.getElementById('mythResult');
-                    const clickedOption = event.target.closest('.myth-option');
-                    
-                    if (!clickedOption || !result) return;
-                    
-                    options.forEach(option => {
-                        option.classList.remove('correct', 'incorrect');
-                        option.setAttribute('aria-selected', 'false');
-                    });
-                    
-                    let message = '';
-                    let isCorrect = false;
-                    
-                    const messages = {
-                        painful: {
-                            correct: false,
-                            title: 'Myth Busted!',
-                            text: 'Modern root canals are virtually pain-free! With advanced anesthetics and techniques, most patients report it feels similar to getting a filling. In fact, root canals relieve the severe pain caused by infected teeth.'
-                        },
-                        extract: {
-                            correct: false,
-                            title: 'Myth Busted!',
-                            text: 'Saving your natural tooth is always the best option! Root canals have a 98% success rate and preserve your natural smile. Extraction leads to more expensive replacements and can affect neighboring teeth.'
-                        },
-                        relief: {
-                            correct: true,
-                            title: 'That\'s Right!',
-                            text: 'Root canals are designed to relieve pain, not cause it. By removing the infected pulp and sealing the tooth, we eliminate the source of your pain and save your natural tooth.'
-                        },
-                        expensive: {
-                            correct: false,
-                            title: 'Myth Busted!',
-                            text: 'Root canals are actually cost-effective in the long run. Compared to extraction and replacement with an implant or bridge, root canal treatment is more affordable and preserves your natural tooth.'
-                        }
-                    };
-                    
-                    const mythData = messages[myth];
-                    if (mythData) {
-                        isCorrect = mythData.correct;
-                        const color = isCorrect ? 'var(--success-green)' : 'var(--danger-red)';
-                        message = `<h3 style="color: ${color};">${mythData.title}</h3><p>${mythData.text}</p>`;
-                    }
-                    
-                    clickedOption.classList.add(isCorrect ? 'correct' : 'incorrect');
-                    clickedOption.setAttribute('aria-selected', 'true');
-                    
-                    result.innerHTML = message + '<button class="cta-button" style="margin-top: 1rem;" onclick="resetMythBuster()">Try Another Question</button>';
-                    result.classList.add('show');
-                    result.style.background = isCorrect ? 'rgba(40, 167, 69, 0.1)' : 'rgba(220, 53, 69, 0.1)';
-                    result.setAttribute('aria-live', 'polite');
-                } catch (error) {
-                    console.error('Error in checkMyth:', error);
-                }
-            };
-            
-            window.resetMythBuster = function() {
-                try {
-                    document.querySelectorAll('.myth-option').forEach(option => {
-                        option.classList.remove('correct', 'incorrect');
-                        option.setAttribute('aria-selected', 'false');
-                    });
-                    const result = document.getElementById('mythResult');
-                    if (result) {
-                        result.classList.remove('show');
-                    }
-                } catch (error) {
-                    console.error('Error in resetMythBuster:', error);
-                }
-            };
-            
-            // Pain Management Explorer with enhanced UX
-            window.explorePainOption = function(option) {
-                try {
-                    const options = document.querySelectorAll('.pain-option');
-                    const detail = document.getElementById('painDetail');
-                    const clickedOption = event.target.closest('.pain-option');
-                    
-                    if (!clickedOption || !detail) return;
-                    
-                    options.forEach(opt => {
-                        opt.classList.remove('selected');
-                        opt.setAttribute('aria-selected', 'false');
-                    });
-                    
-                    clickedOption.classList.add('selected');
-                    clickedOption.setAttribute('aria-selected', 'true');
-                    
-                    const details = {
-                        sedation: {
-                            title: 'Conscious Sedation',
-                            content: 'Relax completely with our safe sedation options. You\'ll be awake but deeply relaxed, with little to no memory of the procedure. Perfect for anxious patients or longer treatments. Our certified anesthesiologist ensures your safety throughout.'
-                        },
-                        laser: {
-                            title: 'Advanced Laser Therapy',
-                            content: 'Our cutting-edge laser technology reduces post-operative pain and speeds healing. The laser sterilizes the treatment area and promotes faster tissue recovery with minimal discomfort. FDA-approved and clinically proven.'
-                        },
-                        numbing: {
-                            title: 'Computer-Assisted Anesthesia',
-                            content: 'Our computerized delivery system provides precise, pressure-free numbing. The slow, controlled injection means you\'ll barely feel anything - many patients don\'t even realize they\'ve been numbed! More effective than traditional methods.'
-                        },
-                        aromatherapy: {
-                            title: 'Therapeutic Aromatherapy',
-                            content: 'Choose from lavender, eucalyptus, or citrus scents to create a calming environment. Clinical studies show aromatherapy can reduce dental anxiety by up to 40% and lower cortisol levels naturally.'
-                        },
-                        music: {
-                            title: 'Personalized Music Therapy',
-                            content: 'Bring your playlist or choose from our curated relaxation music. Noise-canceling headphones block out dental sounds while you enjoy your favorite tunes. Scientifically proven to reduce perceived pain.'
-                        },
-                        vr: {
-                            title: 'Virtual Reality Distraction',
-                            content: 'Escape to a tropical beach or peaceful forest with our VR headsets. This cutting-edge technology has been shown to reduce perceived pain by up to 70% and anxiety by 50%. Truly transformative experience.'
-                        }
-                    };
-                    
-                    const selected = details[option];
-                    if (selected) {
-                        detail.innerHTML = `
-                            <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">${selected.title}</h3>
-                            <p>${selected.content}</p>
-                            <button class="cta-button" style="margin-top: 1rem;" onclick="alert('This option has been added to your consultation request')">Request This Option</button>
-                        `;
-                        detail.classList.add('show');
-                    }
-                } catch (error) {
-                    console.error('Error in explorePainOption:', error);
-                }
-            };
-            
-            // Enhanced Carousel functionality with accessibility
-            let currentSlide = 0;
-            const totalSlides = 3;
-            
-            window.moveCarousel = function(direction) {
-                try {
-                    currentSlide += direction;
-                    if (currentSlide < 0) currentSlide = totalSlides - 1;
-                    if (currentSlide >= totalSlides) currentSlide = 0;
-                    updateCarousel();
-                } catch (error) {
-                    console.error('Error in moveCarousel:', error);
-                }
-            };
-            
-            window.goToSlide = function(slide) {
-                try {
-                    if (slide >= 0 && slide < totalSlides) {
-                        currentSlide = slide;
-                        updateCarousel();
-                    }
-                } catch (error) {
-                    console.error('Error in goToSlide:', error);
-                }
-            };
-            
-            function updateCarousel() {
-                try {
-                    const stories = document.getElementById('successStories');
-                    if (stories) {
-                        stories.style.transform = `translateX(-${currentSlide * 100}%)`;
-                    }
-                    
-                    document.querySelectorAll('.indicator').forEach((ind, index) => {
-                        const isActive = index === currentSlide;
-                        ind.classList.toggle('active', isActive);
-                        ind.setAttribute('aria-selected', isActive.toString());
-                    });
-                } catch (error) {
-                    console.error('Error in updateCarousel:', error);
-                }
-            }
-            
-            // Auto-advance carousel with pause on hover
-            let carouselInterval = setInterval(() => {
-                if (!document.querySelector('.success-carousel:hover')) {
-                    moveCarousel(1);
-                }
-            }, 7000);
-            
-            // Pause auto-advance on focus or hover
-            const carousel = document.querySelector('.success-carousel');
-            if (carousel) {
-                carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-                carousel.addEventListener('mouseleave', () => {
-                    carouselInterval = setInterval(() => moveCarousel(1), 7000);
-                });
-            }
-            
-            // Enhanced Countdown timer with accessibility
-            function updateCountdown() {
-                try {
-                    const endDate = new Date();
-                    endDate.setDate(endDate.getDate() + 2);
-                    endDate.setHours(23, 59, 59);
-                    
-                    const now = new Date();
-                    const diff = endDate - now;
-                    
-                    if (diff <= 0) {
-                        // Offer expired
-                        document.querySelectorAll('.countdown-number').forEach(el => el.textContent = '0');
-                        return;
-                    }
-                    
-                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                    
-                    const elements = {
-                        days: document.getElementById('days'),
-                        hours: document.getElementById('hours'),
-                        minutes: document.getElementById('minutes'),
-                        seconds: document.getElementById('seconds')
-                    };
-                    
-                    if (elements.days) {
-                        elements.days.textContent = days;
-                        elements.days.setAttribute('aria-label', `${days} days`);
-                    }
-                    if (elements.hours) {
-                        elements.hours.textContent = hours;
-                        elements.hours.setAttribute('aria-label', `${hours} hours`);
-                    }
-                    if (elements.minutes) {
-                        elements.minutes.textContent = minutes;
-                        elements.minutes.setAttribute('aria-label', `${minutes} minutes`);
-                    }
-                    if (elements.seconds) {
-                        elements.seconds.textContent = seconds;
-                        elements.seconds.setAttribute('aria-label', `${seconds} seconds`);
-                    }
-                } catch (error) {
-                    console.error('Error in updateCountdown:', error);
-                }
-            }
-            
-            setInterval(updateCountdown, 1000);
-            updateCountdown();
-            
-            // Enhanced FAQ functionality with accessibility
-            window.toggleFAQ = function(element) {
-                try {
-                    const answer = element.nextElementSibling;
-                    const toggle = element.querySelector('.faq-toggle');
-                    const isExpanded = element.getAttribute('aria-expanded') === 'true';
-                    
-                    // Close other open FAQs
-                    document.querySelectorAll('.faq-question').forEach(q => {
-                        if (q !== element) {
-                            q.setAttribute('aria-expanded', 'false');
-                            q.nextElementSibling.classList.remove('active');
-                            q.nextElementSibling.setAttribute('aria-hidden', 'true');
-                            q.querySelector('.faq-toggle').classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current FAQ
-                    const newState = !isExpanded;
-                    element.setAttribute('aria-expanded', newState.toString());
-                    answer.classList.toggle('active', newState);
-                    answer.setAttribute('aria-hidden', (!newState).toString());
-                    toggle.classList.toggle('active', newState);
-                } catch (error) {
-                    console.error('Error in toggleFAQ:', error);
-                }
-            };
-            
-            // Enhanced FAQ search with debouncing
-            let searchTimeout;
-            window.searchFAQ = function(query) {
-                clearTimeout(searchTimeout);
-                searchTimeout = setTimeout(() => {
-                    try {
-                        const faqItems = document.querySelectorAll('.faq-item');
-                        const lowerQuery = query.toLowerCase().trim();
-                        
-                        faqItems.forEach(item => {
-                            const question = item.querySelector('.faq-question span:first-child');
-                            const answer = item.querySelector('.faq-answer');
-                            
-                            if (question && answer) {
-                                const questionText = question.textContent.toLowerCase();
-                                const answerText = answer.textContent.toLowerCase();
-                                
-                                const matches = !lowerQuery || 
-                                               questionText.includes(lowerQuery) || 
-                                               answerText.includes(lowerQuery);
-                                
-                                item.classList.toggle('hidden', !matches);
-                            }
-                        });
-                    } catch (error) {
-                        console.error('Error in searchFAQ:', error);
-                    }
-                }, 300);
-            };
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        // Focus management for accessibility
-                        if (target.hasAttribute('tabindex') || target.tagName.match(/^(A|BUTTON|INPUT|TEXTAREA|SELECT)$/)) {
-                            target.focus();
-                        }
-                    }
-                });
+            options.forEach(option => {
+                option.classList.remove('correct', 'incorrect');
             });
             
-            // Intersection Observer for animations with reduced motion support
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let message = '';
+            let isCorrect = false;
             
-            if (!prefersReducedMotion) {
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-                
-                const observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, observerOptions);
-                
-                // Observe elements for animation
-                document.querySelectorAll('.myth-option, .pain-option, .success-story, .faq-item').forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(20px)';
-                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    observer.observe(el);
-                });
+            switch(myth) {
+                case 'painful':
+                    message = '<h3 style="color: var(--danger-red);">Myth Busted!</h3><p>Modern root canals are virtually pain-free! With advanced anesthetics and techniques, most patients report it feels similar to getting a filling. In fact, root canals relieve the severe pain caused by infected teeth.</p>';
+                    break;
+                case 'extract':
+                    message = '<h3 style="color: var(--danger-red);">Myth Busted!</h3><p>Saving your natural tooth is always the best option! Root canals have a 98% success rate and preserve your natural smile. Extraction leads to more expensive replacements and can affect neighboring teeth.</p>';
+                    break;
+                case 'relief':
+                    message = '<h3 style="color: var(--success-green);">That\'s Right!</h3><p>Root canals are designed to relieve pain, not cause it. By removing the infected pulp and sealing the tooth, we eliminate the source of your pain and save your natural tooth.</p>';
+                    isCorrect = true;
+                    break;
+                case 'expensive':
+                    message = '<h3 style="color: var(--danger-red);">Myth Busted!</h3><p>Root canals are actually cost-effective in the long run. Compared to extraction and replacement with an implant or bridge, root canal treatment is more affordable and preserves your natural tooth.</p>';
+                    break;
             }
             
-            // Keyboard navigation improvements
-            document.addEventListener('keydown', function(e) {
-                // Escape key to close modals/expanded content
-                if (e.key === 'Escape') {
-                    document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(q => {
-                        toggleFAQ(q);
-                    });
+            event.target.closest('.myth-option').classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            result.innerHTML = message + '<button class="cta-button" style="margin-top: 1rem;" onclick="resetMythBuster()">Try Another</button>';
+            result.classList.add('show');
+            result.style.background = isCorrect ? 'rgba(40, 167, 69, 0.1)' : 'rgba(220, 53, 69, 0.1)';
+        }
+        
+        function resetMythBuster() {
+            document.querySelectorAll('.myth-option').forEach(option => {
+                option.classList.remove('correct', 'incorrect');
+            });
+            document.getElementById('mythResult').classList.remove('show');
+        }
+        
+        // Pain Management Explorer
+        function explorePainOption(option) {
+            const options = document.querySelectorAll('.pain-option');
+            const detail = document.getElementById('painDetail');
+            
+            options.forEach(opt => opt.classList.remove('selected'));
+            event.target.closest('.pain-option').classList.add('selected');
+            
+            const details = {
+                sedation: {
+                    title: 'Conscious Sedation',
+                    content: 'Relax completely with our safe sedation options. You\'ll be awake but deeply relaxed, with little to no memory of the procedure. Perfect for anxious patients or longer treatments.'
+                },
+                laser: {
+                    title: 'Laser Therapy',
+                    content: 'Our advanced laser technology reduces post-operative pain and speeds healing. The laser sterilizes the area and promotes faster tissue recovery with minimal discomfort.'
+                },
+                numbing: {
+                    title: 'Computer-Assisted Anesthesia',
+                    content: 'Our computerized delivery system provides precise, pressure-free numbing. The slow, controlled injection means you\'ll barely feel anything - many patients don\'t even realize they\'ve been numbed!'
+                },
+                aromatherapy: {
+                    title: 'Aromatherapy Relaxation',
+                    content: 'Choose from lavender, eucalyptus, or citrus scents to create a calming environment. Studies show aromatherapy can reduce dental anxiety by up to 40%.'
+                },
+                music: {
+                    title: 'Personalized Music Therapy',
+                    content: 'Bring your playlist or choose from our curated relaxation music. Noise-canceling headphones block out dental sounds while you enjoy your favorite tunes.'
+                },
+                vr: {
+                    title: 'Virtual Reality Distraction',
+                    content: 'Escape to a tropical beach or peaceful forest with our VR headsets. This cutting-edge technology has been shown to reduce perceived pain by up to 70%.'
                 }
-                
-                // Arrow keys for carousel navigation
-                if (e.target.closest('.carousel-indicators')) {
-                    if (e.key === 'ArrowLeft') {
-                        e.preventDefault();
-                        moveCarousel(-1);
-                    } else if (e.key === 'ArrowRight') {
-                        e.preventDefault();
-                        moveCarousel(1);
-                    }
+            };
+            
+            const selected = details[option];
+            detail.innerHTML = `
+                <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">${selected.title}</h3>
+                <p>${selected.content}</p>
+                <button class="cta-button" style="margin-top: 1rem;">Request This Option</button>
+            `;
+            detail.classList.add('show');
+        }
+        
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 3;
+        
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateCarousel();
+        }
+        
+        function goToSlide(slide) {
+            currentSlide = slide;
+            updateCarousel();
+        }
+        
+        function updateCarousel() {
+            const stories = document.getElementById('successStories');
+            stories.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            document.querySelectorAll('.indicator').forEach((ind, index) => {
+                ind.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        // Auto-advance carousel
+        setInterval(() => moveCarousel(1), 5000);
+        
+        // Countdown timer
+        function updateCountdown() {
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 2);
+            endDate.setHours(23, 59, 59);
+            
+            const now = new Date();
+            const diff = endDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ functionality
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            answer.classList.toggle('active');
+            toggle.classList.toggle('active');
+            
+            // Close other open FAQs
+            const allFAQs = document.querySelectorAll('.faq-item');
+            allFAQs.forEach(faq => {
+                if (faq !== element.parentElement) {
+                    faq.querySelector('.faq-answer').classList.remove('active');
+                    faq.querySelector('.faq-toggle').classList.remove('active');
                 }
             });
+        }
+        
+        // FAQ search functionality
+        function searchFAQ(query) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const lowerQuery = query.toLowerCase();
             
-            // Performance monitoring
-            if ('performance' in window) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        const navigation = performance.getEntriesByType('navigation')[0];
-                        if (navigation && navigation.loadEventEnd > 3000) {
-                            console.warn('Page load time exceeded 3 seconds:', navigation.loadEventEnd);
-                        }
-                    }, 0);
-                });
-            }
-            
-        })();
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question span:first-child').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(lowerQuery) || answer.includes(lowerQuery)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Video player mock
+        function playVideo(videoId) {
+            alert(`Video player for ${videoId} would open here`);
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.myth-option, .pain-option, .success-story, .video-card, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>
