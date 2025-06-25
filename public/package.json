@@ -1,0 +1,38 @@
+{
+  "name": "modern-dental-care-website",
+  "version": "1.0.0",
+  "description": "Production-ready dental practice website with interactive health assessment quiz",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "echo 'CSS minification would go here'",
+    "minify-js": "echo 'JS minification would go here'",
+    "validate": "npm run validate-html && npm run validate-css",
+    "validate-html": "echo 'HTML validation would go here'",
+    "validate-css": "echo 'CSS validation would go here'",
+    "serve": "npx http-server -p 8080",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "dental",
+    "dentist",
+    "healthcare",
+    "website",
+    "quiz",
+    "assessment"
+  ],
+  "author": "Modern Dental Care",
+  "license": "Private",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "private"
+  }
+}
