@@ -559,6 +559,15 @@
             }
         }
     </style>
+    
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -871,6 +880,69 @@
     </footer>
 
     <script>
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'page_name': 'dentures',
+                    ...parameters
+                });
+            }
+        }
+        
+        // API Configuration
+        const API_CONFIG = {
+            consultation: '/api/book-consultation',
+            costCalculator: '/api/cost-calculator',
+            timeout: 10000
+        };
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.style.opacity = '0.6';
+                    element.style.cursor = 'not-allowed';
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.style.opacity = '';
+                    element.style.cursor = '';
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#28A745' : type === 'error' ? '#DC3545' : '#0077BE'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                z-index: 10000;
+                max-width: 90%;
+                animation: slideIn 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
         // Enhanced mobile menu with accessibility
         function toggleMobileMenu() {
             const navLinks = document.getElementById('navLinks');
@@ -898,19 +970,27 @@
             dentureTypeSelect.value = typeMap[type] || 'full';
             calculateDentureCost();
             
+            // Track type selection
+            trackEvent('denture_type_selected', {
+                denture_type: type,
+                source: 'quick_select_button'
+            });
+            
             // Smooth scroll with offset for fixed header
             const calculator = document.querySelector('.cost-calculator');
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const elementPosition = calculator.offsetTop - headerHeight - 20;
-            
-            window.scrollTo({
-                top: elementPosition,
-                behavior: 'smooth'
-            });
+            if (calculator) {
+                const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+                const elementPosition = calculator.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
 
         // Enhanced cost calculator with better UX
-        function calculateDentureCost() {
+        async function calculateDentureCost() {
             const dentureType = document.getElementById('dentureType').value;
             const materialQuality = document.getElementById('materialQuality').value;
             const insuranceCoverage = document.getElementById('insuranceCoverage').value;
@@ -958,6 +1038,35 @@
             animateNumberChange('finalCost', Math.round(finalCost));
             animateNumberChange('totalCost', Math.round(finalCost));
             document.getElementById('monthlyPayment').textContent = monthlyPayment;
+            
+            // Track cost calculation
+            trackEvent('cost_calculated', {
+                denture_type: dentureType,
+                material_quality: materialQuality,
+                insurance_coverage: insuranceCoverage,
+                final_cost: Math.round(finalCost),
+                has_extractions: extraction
+            });
+            
+            // Send to API for analytics
+            try {
+                if (API_CONFIG.costCalculator) {
+                    await fetch(API_CONFIG.costCalculator, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            dentureType,
+                            materialQuality,
+                            insuranceCoverage,
+                            extractionCount,
+                            finalCost: Math.round(finalCost),
+                            timestamp: new Date().toISOString()
+                        })
+                    }).catch(() => {}); // Graceful fail
+                }
+            } catch (error) {
+                console.error('Cost calculator API error:', error);
+            }
         }
 
         // Animate number changes for better UX
@@ -972,27 +1081,117 @@
         }
 
         // Enhanced form submission with validation
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic validation
-            const inputs = this.querySelectorAll('input[required], select[required]');
-            let valid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    valid = false;
-                    input.focus();
+        const consultationForm = document.getElementById('consultationForm');
+        if (consultationForm) {
+            consultationForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const button = e.target.querySelector('button[type="submit"]');
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData);
+                
+                // Create or find error/success message elements
+                let errorDiv = e.target.querySelector('.error-message');
+                let successDiv = e.target.querySelector('.success-message');
+                
+                if (!errorDiv) {
+                    errorDiv = document.createElement('div');
+                    errorDiv.className = 'error-message';
+                    errorDiv.style.cssText = 'color: #DC3545; padding: 1rem; background: #FFEBEE; border-radius: 8px; margin: 1rem 0; display: none;';
+                    button.parentNode.insertBefore(errorDiv, button);
+                }
+                
+                if (!successDiv) {
+                    successDiv = document.createElement('div');
+                    successDiv.className = 'success-message';
+                    successDiv.style.cssText = 'color: #28A745; padding: 1rem; background: #E8F5E9; border-radius: 8px; margin: 1rem 0; display: none;';
+                    button.parentNode.insertBefore(successDiv, button);
+                }
+                
+                // Reset messages
+                errorDiv.style.display = 'none';
+                successDiv.style.display = 'none';
+                
+                // Validation
+                const inputs = this.querySelectorAll('input[required], select[required]');
+                let valid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        valid = false;
+                        input.style.borderColor = '#DC3545';
+                        input.addEventListener('input', function() {
+                            this.style.borderColor = '';
+                        }, { once: true });
+                    }
+                });
+                
+                if (!valid) {
+                    errorDiv.textContent = 'Please fill in all required fields.';
+                    errorDiv.style.display = 'block';
                     return;
                 }
+                
+                // Email validation
+                const email = data.email;
+                if (email && !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                    errorDiv.textContent = 'Please enter a valid email address.';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                LoadingStateManager.setLoading(button, true, 'Submitting...');
+                
+                try {
+                    // Track form submission
+                    trackEvent('consultation_form_submitted', {
+                        denture_interest: data.dentureInterest || 'not_specified',
+                        form_location: 'consultation_section'
+                    });
+                    
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                    
+                    if (API_CONFIG.consultation) {
+                        const response = await fetch(API_CONFIG.consultation, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                ...data,
+                                service: 'dentures_consultation',
+                                timestamp: new Date().toISOString()
+                            })
+                        });
+                        
+                        if (!response.ok) throw new Error('API request failed');
+                    }
+                    
+                    // Show success
+                    successDiv.innerHTML = '<strong>Thank you!</strong> We will contact you within 24 hours to schedule your free consultation with transparent pricing.';
+                    successDiv.style.display = 'block';
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Track successful submission
+                    trackEvent('consultation_form_success');
+                    
+                    // Show notification
+                    showNotification('Consultation request submitted successfully!', 'success');
+                    
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    errorDiv.innerHTML = '<strong>Something went wrong.</strong> Please try again or call us at <a href="tel:1-800-SMILE-NOW" style="color: inherit; font-weight: bold;">1-800-SMILE-NOW</a>';
+                    errorDiv.style.display = 'block';
+                    
+                    trackEvent('consultation_form_error', {
+                        error_message: error.message
+                    });
+                } finally {
+                    LoadingStateManager.setLoading(button, false);
+                }
             });
-            
-            if (valid) {
-                // Show success message
-                alert('Thank you for your interest! We will contact you within 24 hours to schedule your free consultation with transparent pricing.');
-                this.reset();
-            }
-        });
+        }
 
         // Enhanced intersection observer for animations
         const observerOptions = {
@@ -1041,14 +1240,163 @@
             }
         });
 
-        // Initialize calculator on page load
-        calculateDentureCost();
+        // Mobile functionality enhancements
+        function enhanceMobileExperience() {
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            
+            if (isMobile) {
+                // Improve touch targets
+                document.querySelectorAll('button, .cta-button, a').forEach(btn => {
+                    const height = btn.offsetHeight;
+                    if (height < 44) {
+                        btn.style.minHeight = '44px';
+                        btn.style.padding = '12px 16px';
+                    }
+                });
+                
+                // Add touch feedback
+                document.addEventListener('touchstart', function(e) {
+                    if (e.target.matches('button, .cta-button, .denture-option, select, input[type="checkbox"]')) {
+                        e.target.style.transform = 'scale(0.95)';
+                    }
+                });
+                
+                document.addEventListener('touchend', function(e) {
+                    if (e.target.matches('button, .cta-button, .denture-option, select, input[type="checkbox"]')) {
+                        setTimeout(() => {
+                            e.target.style.transform = '';
+                        }, 100);
+                    }
+                });
+            }
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track page view
+            trackEvent('page_view', {
+                page_title: 'Dentures',
+                page_location: window.location.href
+            });
+            
+            // Initialize calculator
+            calculateDentureCost();
+            
+            // Enhance mobile experience
+            enhanceMobileExperience();
+            
+            // Track CTA button clicks
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    trackEvent('cta_click', {
+                        button_text: buttonText,
+                        button_location: this.closest('section')?.className || 'unknown'
+                    });
+                });
+            });
+            
+            // Track cost calculator interactions
+            const costInputs = document.querySelectorAll('#dentureType, #materialQuality, #insuranceCoverage, #extraction');
+            costInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    trackEvent('calculator_interaction', {
+                        field_changed: this.id,
+                        new_value: this.type === 'checkbox' ? this.checked : this.value
+                    });
+                });
+            });
+            
+            // Handle extraction checkbox toggle
+            const extractionCheckbox = document.getElementById('extraction');
+            const extractionCount = document.getElementById('extractionCount');
+            const extractionDetails = document.querySelector('.extraction-details');
+            
+            if (extractionCheckbox && extractionCount && extractionDetails) {
+                extractionCheckbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        extractionDetails.style.display = 'block';
+                        extractionCount.focus();
+                    } else {
+                        extractionDetails.style.display = 'none';
+                        extractionCount.value = '0';
+                    }
+                    calculateDentureCost();
+                });
+                
+                // Update extraction count display
+                extractionCount.addEventListener('input', function() {
+                    const countDisplay = document.getElementById('extraction-count');
+                    if (countDisplay) {
+                        countDisplay.textContent = this.value;
+                    }
+                    calculateDentureCost();
+                });
+            }
+            
+            // Add CSS for animations and loading states
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+                .loading { 
+                    position: relative;
+                    color: transparent !important;
+                }
+                .loading::after {
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border: 2px solid transparent;
+                    border-top-color: currentColor;
+                    border-radius: 50%;
+                    animation: spin 0.8s linear infinite;
+                }
+                @keyframes spin {
+                    to { transform: rotate(360deg); }
+                }
+                @media (max-width: 768px) {
+                    .cost-calculator select,
+                    .cost-calculator input {
+                        font-size: 16px; /* Prevent zoom on iOS */
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
 
         // Performance optimization: Lazy load non-critical scripts
         if ('requestIdleCallback' in window) {
             requestIdleCallback(() => {
                 // Additional non-critical functionality can be loaded here
+                console.log('Page fully loaded and interactive');
             });
+        }
+        
+        // Error boundary for graceful degradation
+        window.addEventListener('error', function(event) {
+            console.error('JavaScript error:', event.error);
+            trackEvent('javascript_error', {
+                error_message: event.error?.message || 'Unknown error',
+                error_line: event.lineno
+            });
+        });
+        
+        // Service Worker registration for offline support (in production)
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+            navigator.serviceWorker.register('/sw.js').catch(console.error);
         }
     </script>
 </body>

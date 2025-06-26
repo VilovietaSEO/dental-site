@@ -6,16 +6,22 @@
     <title>New Patient Special - $99 Complete Exam Package | DentalCare Excellence</title>
     <meta name="description" content="New patients save over $300! Get a complete dental exam, X-rays, cleaning, and personalized treatment plan for only $99. Limited time offer with instant coupon generator.">
     <meta name="keywords" content="new patient special, dental exam, dental cleaning, dental discount, affordable dentist">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Open Graph tags for social sharing -->
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Open Graph tags -->
     <meta property="og:title" content="New Patient Special - $99 Complete Exam Package">
     <meta property="og:description" content="Save over $300 on your first dental visit! Complete exam, X-rays, and cleaning for just $99.">
     <meta property="og:type" content="website">
     
     <style>
-        /* CSS Variables for consistent theming */
         :root {
             --trust-blue: #0077BE;
             --clean-white: #FFFFFF;
@@ -31,10 +37,8 @@
             --shadow-heavy: 0 10px 30px rgba(0,0,0,0.2);
             --border-radius: 10px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --animation-bounce: bounce 2s infinite;
         }
 
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -54,7 +58,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Skip link for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -71,14 +74,12 @@
             top: 6px;
         }
 
-        /* Container and layout */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header and navigation */
         header {
             background-color: var(--clean-white);
             box-shadow: var(--shadow-light);
@@ -132,7 +133,6 @@
             background: var(--trust-blue);
         }
 
-        /* Enhanced CTA Button */
         .cta-button {
             background-color: var(--success-green);
             color: var(--clean-white);
@@ -163,7 +163,6 @@
             transform: translateY(0);
         }
 
-        /* Urgency banner with enhanced visibility */
         .urgency-banner {
             background: linear-gradient(90deg, var(--warning-red), #FF6B6B);
             color: var(--clean-white);
@@ -189,7 +188,6 @@
             60% { transform: translateY(-5px); }
         }
 
-        /* Hero section with enhanced design */
         .hero {
             background: linear-gradient(135deg, var(--success-green) 0%, var(--accent-teal) 100%);
             color: var(--clean-white);
@@ -226,7 +224,6 @@
             font-weight: 700;
         }
 
-        /* Enhanced pricing display */
         .price-highlight {
             font-size: clamp(3rem, 8vw, 5rem);
             font-weight: bold;
@@ -258,7 +255,6 @@
             color: rgba(255,255,255,0.9);
         }
 
-        /* Enhanced offer card */
         .offer-card {
             background-color: rgba(255,255,255,0.95);
             color: var(--charcoal);
@@ -291,7 +287,6 @@
             color: var(--success-green);
         }
 
-        /* Enhanced countdown timer */
         .countdown {
             background: linear-gradient(45deg, var(--warning-red), #FF6B6B);
             color: var(--clean-white);
@@ -314,7 +309,6 @@
             font-size: 1.5rem;
         }
 
-        /* Enhanced instant coupon */
         .instant-coupon {
             background: linear-gradient(45deg, var(--gold), #FFE55C);
             color: var(--charcoal);
@@ -354,7 +348,6 @@
             transform: scale(1.05);
         }
 
-        /* Section styling */
         .section-header {
             text-align: center;
             margin-bottom: 3rem;
@@ -374,7 +367,6 @@
             margin: 0 auto;
         }
 
-        /* Enhanced services grid */
         .included-services {
             padding: 4rem 0;
             background-color: var(--soft-gray);
@@ -430,7 +422,6 @@
             animation: bounce 3s infinite;
         }
 
-        /* Enhanced timeline */
         .first-visit {
             padding: 4rem 0;
         }
@@ -484,7 +475,6 @@
             font-size: 0.9rem;
         }
 
-        /* Enhanced forms */
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -517,47 +507,6 @@
             box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
         }
 
-        /* Enhanced team section */
-        .team-section {
-            padding: 4rem 0;
-            background-color: var(--soft-gray);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-member {
-            background-color: var(--clean-white);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            box-shadow: var(--shadow-medium);
-            transition: var(--transition);
-        }
-
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-heavy);
-        }
-
-        .member-photo {
-            width: 120px;
-            height: 120px;
-            background-color: var(--accent-teal);
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--clean-white);
-            box-shadow: var(--shadow-light);
-        }
-
-        /* Enhanced mobile menu */
         .mobile-menu {
             display: none;
             background: none;
@@ -574,7 +523,6 @@
             outline-offset: 2px;
         }
 
-        /* Enhanced responsive design */
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
@@ -618,7 +566,6 @@
             }
         }
 
-        /* Focus management and accessibility */
         *:focus {
             outline: none;
         }
@@ -632,7 +579,6 @@
             outline-offset: 2px;
         }
 
-        /* Animation classes */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -644,7 +590,6 @@
             transform: translateY(0);
         }
 
-        /* High contrast mode support */
         @media (prefers-contrast: high) {
             :root {
                 --shadow-light: 0 2px 10px rgba(0,0,0,0.3);
@@ -653,7 +598,6 @@
             }
         }
 
-        /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -672,13 +616,11 @@
             }
         }
 
-        /* Loading states */
         .loading {
             opacity: 0.7;
             pointer-events: none;
         }
 
-        /* Print styles */
         @media print {
             header,
             .mobile-menu,
@@ -707,7 +649,7 @@
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
-            <a href="#book-now" class="cta-button">Claim Offer</a>
+            <a href="#book-now" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Claim Offer Header'});">Claim Offer</a>
             <button class="mobile-menu" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
         </nav>
     </header>
@@ -727,7 +669,7 @@
                         </p>
                         <div class="price-highlight">$99</div>
                         <p style="font-size: 1.2rem; margin-bottom: 2rem;">Save Over $300 on Your First Visit!</p>
-                        <a href="#coupon-generator" class="cta-button" style="font-size: 1.3rem; padding: 1rem 2rem;">
+                        <a href="#coupon-generator" class="cta-button" style="font-size: 1.3rem; padding: 1rem 2rem;" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Generate Coupon Hero'});">
                             Generate My Instant Coupon
                         </a>
                         <div class="countdown" id="countdown">
@@ -978,7 +920,7 @@
     </footer>
 
     <script>
-        // Enhanced mobile menu with accessibility
+        // Mobile menu toggle
         function toggleMobileMenu() {
             const navLinks = document.getElementById('navLinks');
             const mobileMenuBtn = document.querySelector('.mobile-menu');
@@ -987,21 +929,26 @@
             navLinks.classList.toggle('active');
             mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
             
-            // Focus management
             if (!isOpen) {
                 navLinks.querySelector('a').focus();
             }
         }
 
-        // Enhanced coupon generation with validation
+        // Coupon generation with tracking
         function generateCoupon() {
             const coupons = ['SAVE99NOW', 'DENTAL99', 'SMILE99', 'NEWPATIENT99', 'SPECIAL99'];
             const randomCoupon = coupons[Math.floor(Math.random() * coupons.length)];
             
-            // Animate the generation
             const generateBtn = document.getElementById('generateCoupon');
             generateBtn.classList.add('loading');
             generateBtn.textContent = 'Generating...';
+            
+            // Track coupon generation
+            gtag('event', 'generate', {
+                'event_category': 'Coupon',
+                'event_label': randomCoupon,
+                'value': 99
+            });
             
             setTimeout(() => {
                 document.getElementById('couponCode').textContent = randomCoupon;
@@ -1025,10 +972,16 @@
             }, 1000);
         }
 
-        // Enhanced copy functionality with feedback
+        // Copy coupon functionality
         function copyCoupon() {
             const couponCode = document.getElementById('couponCode').textContent;
             const button = document.querySelector('.copy-button');
+            
+            // Track coupon copy
+            gtag('event', 'copy', {
+                'event_category': 'Coupon',
+                'event_label': couponCode
+            });
             
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(couponCode).then(() => {
@@ -1041,7 +994,6 @@
             }
         }
 
-        // Fallback copy method for older browsers
         function fallbackCopy(text, button) {
             const textArea = document.createElement('textarea');
             textArea.value = text;
@@ -1058,7 +1010,7 @@
             } catch (err) {
                 console.error('Failed to copy text: ', err);
                 button.textContent = '❌ Copy Failed';
-                button.style.backgroundColor = var(--warning-red);
+                button.style.backgroundColor = 'var(--warning-red)';
             }
             
             document.body.removeChild(textArea);
@@ -1074,11 +1026,11 @@
             }, 2000);
         }
 
-        // Enhanced form submission with validation
+        // Form submission with validation and tracking
         document.getElementById('newPatientForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Enhanced validation
+            // Validation
             const requiredFields = this.querySelectorAll('input[required], select[required]');
             let isValid = true;
             let firstInvalidField = null;
@@ -1086,7 +1038,7 @@
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
-                    field.style.borderColor = var(--warning-red);
+                    field.style.borderColor = 'var(--warning-red)';
                     field.setAttribute('aria-invalid', 'true');
                     
                     if (!firstInvalidField) {
@@ -1103,7 +1055,7 @@
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (emailField.value && !emailRegex.test(emailField.value)) {
                 isValid = false;
-                emailField.style.borderColor = var(--warning-red);
+                emailField.style.borderColor = 'var(--warning-red)';
                 emailField.setAttribute('aria-invalid', 'true');
                 if (!firstInvalidField) firstInvalidField = emailField;
             }
@@ -1121,13 +1073,35 @@
                 return;
             }
             
+            // Track form submission
+            gtag('event', 'submit', {
+                'event_category': 'Form',
+                'event_label': 'New Patient Special',
+                'value': 99
+            });
+            
+            // Simulate API submission
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                appointmentTime: document.getElementById('appointmentTime').value,
+                insurance: document.getElementById('insurance').value,
+                reason: document.getElementById('reason').value,
+                offer: 'new-patient-special-99',
+                couponCode: document.getElementById('couponCode').textContent || 'NOT_GENERATED'
+            };
+            
+            // In production, send to API endpoint
+            console.log('Form data to submit:', formData);
+            
             // Success handling
             alert('Thank you! We\'ll contact you within 1 hour to confirm your appointment and secure your $99 special rate. Don\'t forget to mention your coupon code!');
             this.reset();
             updateSpots();
         });
 
-        // Enhanced countdown timers with better formatting
+        // Countdown timers
         function updateCountdown() {
             const endDate = new Date();
             endDate.setDate(endDate.getDate() + 2);
@@ -1173,7 +1147,7 @@
         updateCountdown();
         updateFlashTimer();
 
-        // Enhanced spots management
+        // Update spots with tracking
         function updateSpots() {
             const spots = document.getElementById('spotsLeft');
             const spots2 = document.getElementById('spotsLeft2');
@@ -1184,9 +1158,15 @@
                 spots.textContent = currentSpots;
                 spots2.textContent = currentSpots;
                 
-                // Update urgency messaging
+                // Track urgency
                 if (currentSpots <= 5) {
                     document.querySelector('.urgency-banner').style.background = 'linear-gradient(90deg, #DC3545, #FF0000)';
+                    
+                    gtag('event', 'view_item', {
+                        'event_category': 'Urgency',
+                        'event_label': 'Low Spots Warning',
+                        'value': currentSpots
+                    });
                 }
             }
         }
@@ -1198,7 +1178,7 @@
             }
         }, 45000);
 
-        // Enhanced scroll functionality
+        // Scroll to form
         function scrollToForm() {
             const target = document.getElementById('book-now');
             const headerHeight = document.querySelector('header').offsetHeight;
@@ -1209,9 +1189,15 @@
                 top: elementPosition,
                 behavior: 'smooth'
             });
+            
+            // Track scroll to form
+            gtag('event', 'scroll', {
+                'event_category': 'Engagement',
+                'event_label': 'Scroll to Form'
+            });
         }
 
-        // Enhanced intersection observer for animations
+        // Intersection observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1221,6 +1207,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    
+                    // Track section views
+                    if (entry.target.classList.contains('service-item')) {
+                        gtag('event', 'view_item', {
+                            'event_category': 'Content',
+                            'event_label': 'Service Item View'
+                        });
+                    }
                 }
             });
         }, observerOptions);
@@ -1230,7 +1224,7 @@
             observer.observe(el);
         });
 
-        // Enhanced smooth scrolling for anchor links
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1259,8 +1253,15 @@
             }
         });
 
-        // Performance optimization: Initialize on load
+        // Performance optimization
         document.addEventListener('DOMContentLoaded', function() {
+            // Track page view
+            gtag('event', 'page_view', {
+                'page_title': 'New Patient Special',
+                'page_location': window.location.href,
+                'page_path': '/new-patient-special'
+            });
+            
             // Preload critical elements
             const criticalImages = document.querySelectorAll('img[data-src]');
             if ('IntersectionObserver' in window) {
@@ -1279,10 +1280,14 @@
             }
         });
 
-        // Enhanced error handling
+        // Error handling
         window.addEventListener('error', function(e) {
             console.error('JavaScript error:', e.error);
-            // Graceful degradation for critical features
+            // Track errors
+            gtag('event', 'exception', {
+                'description': e.error.toString(),
+                'fatal': false
+            });
         });
 
         // Performance monitoring
@@ -1292,6 +1297,13 @@
                     const perfData = performance.getEntriesByType('navigation')[0];
                     if (perfData.loadEventEnd - perfData.loadEventStart > 3000) {
                         console.warn('Page load time exceeded 3 seconds');
+                        
+                        // Track slow page load
+                        gtag('event', 'timing_complete', {
+                            'name': 'load',
+                            'value': perfData.loadEventEnd - perfData.loadEventStart,
+                            'event_category': 'Performance'
+                        });
                     }
                 }, 0);
             });

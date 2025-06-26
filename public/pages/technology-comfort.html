@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience state-of-the-art dental technology with unmatched comfort at SmileCare Dental. CEREC same-day crowns, laser dentistry, and anxiety-free care.">
+    <meta name="description" content="Experience state-of-the-art dental technology with unmatched comfort at DentalCare Excellence. CEREC same-day crowns, laser dentistry, and anxiety-free care.">
     <meta name="keywords" content="dental technology, CEREC crowns, laser dentistry, digital dentistry, comfortable dental care, sedation dentistry">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Advanced Dental Technology & Patient Comfort | SmileCare Dental">
+    <meta property="og:title" content="Advanced Dental Technology & Patient Comfort | DentalCare Excellence">
     <meta property="og:description" content="State-of-the-art technology meets compassionate care. Experience painless, efficient dental treatments with our cutting-edge equipment.">
-    <title>Advanced Technology & Patient Comfort | SmileCare Dental</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Advanced Technology & Patient Comfort | DentalCare Excellence</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -40,7 +48,6 @@
             overflow-x: hidden;
         }
         
-        /* Header */
         header {
             background: var(--clean-white);
             box-shadow: var(--shadow);
@@ -124,7 +131,6 @@
             box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
         }
         
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
             color: var(--clean-white);
@@ -169,7 +175,6 @@
             z-index: 1;
         }
         
-        /* Technology Showcase */
         .tech-showcase {
             padding: 5rem 5%;
             background: var(--soft-gray);
@@ -289,7 +294,6 @@
             color: var(--trust-blue);
         }
         
-        /* Technology Comparison */
         .tech-comparison {
             background: var(--clean-white);
             padding: 2rem 0;
@@ -387,7 +391,6 @@
             font-weight: bold;
         }
         
-        /* Equipment Tour */
         .equipment-tour {
             padding: 5rem 5%;
             background: var(--clean-white);
@@ -506,7 +509,6 @@
             color: var(--trust-blue);
         }
         
-        /* Comfort Section */
         .comfort-section {
             padding: 5rem 5%;
             background: var(--soft-gray);
@@ -619,7 +621,6 @@
             box-shadow: 0 4px 12px rgba(0, 119, 190, 0.4);
         }
         
-        /* Anxiety Management */
         .anxiety-management {
             padding: 5rem 5%;
             background: var(--clean-white);
@@ -708,7 +709,6 @@
             box-shadow: 0 4px 12px rgba(0, 168, 168, 0.4);
         }
         
-        /* Safety Section */
         .safety-section {
             padding: 5rem 5%;
             background: var(--soft-gray);
@@ -760,7 +760,6 @@
             line-height: 1.6;
         }
         
-        /* Innovation CTA */
         .innovation-cta {
             background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
             color: var(--clean-white);
@@ -851,7 +850,6 @@
             top: 0;
         }
         
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -977,7 +975,6 @@
             transform: translateY(-3px);
         }
         
-        /* Footer */
         footer {
             background: var(--charcoal);
             color: var(--clean-white);
@@ -1024,7 +1021,6 @@
             color: var(--accent-teal);
         }
         
-        /* Accessibility */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -1037,13 +1033,11 @@
             border: 0;
         }
         
-        /* Focus states */
         *:focus {
             outline: 2px solid var(--trust-blue);
             outline-offset: 2px;
         }
         
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -1105,7 +1099,6 @@
             }
         }
         
-        /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             *,
             *::before,
@@ -1116,7 +1109,6 @@
             }
         }
         
-        /* High contrast mode */
         @media (prefers-contrast: high) {
             .tech-card {
                 border: 2px solid var(--charcoal);
@@ -1127,7 +1119,6 @@
             }
         }
         
-        /* Print styles */
         @media print {
             .nav-links,
             .modal,
@@ -1149,14 +1140,14 @@
 <body>
     <header>
         <nav role="navigation" aria-label="Main navigation">
-            <a href="index.html" class="logo" aria-label="SmileCare Dental Home">SmileCare Dental</a>
+            <a href="index.html" class="logo" aria-label="DentalCare Excellence Home">DentalCare Excellence</a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a href="technology.html" aria-current="page">Technology</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="dental_book_appointment_v3.html" class="cta-button">Book Now</a>
+                <a href="dental_book-appointment_v4.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book Now Header'});">Book Now</a>
             </div>
         </nav>
     </header>
@@ -1460,8 +1451,8 @@
             <h2 id="cta-title">Experience the Future of Dentistry Today</h2>
             <p>Join thousands of patients who've discovered a better way to care for their smiles</p>
             <div class="innovation-buttons">
-                <a href="dental_book_appointment_v3.html" class="cta-button quick-book" aria-label="Schedule your visit with same day availability">Schedule Your Visit</a>
-                <a href="tel:555-123-4567" class="cta-button" style="background: transparent; border: 2px solid white;" aria-label="Call us at 555-123-4567">Call (555) 123-4567</a>
+                <a href="dental_book-appointment_v4.html" class="cta-button quick-book" aria-label="Schedule your visit with same day availability" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule Visit Technology'});">Schedule Your Visit</a>
+                <a href="tel:555-123-4567" class="cta-button" style="background: transparent; border: 2px solid white;" aria-label="Call us at 555-123-4567" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Call Technology'});">Call (555) 123-4567</a>
                 <button class="cta-button" onclick="startFullTour()" style="background: rgba(255,255,255,0.2); border: 2px solid white;" aria-label="Take virtual tour first">Take Virtual Tour First</button>
             </div>
         </section>
@@ -1475,7 +1466,7 @@
                 <a href="sitemap.html">Sitemap</a>
                 <a href="accessibility.html">Accessibility</a>
             </nav>
-            <p>&copy; 2024 SmileCare Dental. All rights reserved.</p>
+            <p>&copy; 2024 DentalCare Excellence. All rights reserved.</p>
         </div>
     </footer>
 
@@ -1488,6 +1479,13 @@
     </div>
 
     <script>
+        // Track page view
+        gtag('event', 'page_view', {
+            'page_title': 'Technology & Comfort',
+            'page_location': window.location.href,
+            'page_path': '/technology-comfort'
+        });
+
         // Performance optimization: Lazy load animations
         const observerOptions = {
             threshold: 0.1,
@@ -1501,6 +1499,14 @@
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                     observer.unobserve(entry.target); // Stop observing after animation
+                    
+                    // Track technology card views
+                    if (entry.target.classList.contains('tech-card')) {
+                        gtag('event', 'view_item', {
+                            'event_category': 'Technology',
+                            'event_label': entry.target.querySelector('h3').textContent
+                        });
+                    }
                 }
             });
         }, observerOptions);
@@ -1536,6 +1542,14 @@
             content.setAttribute('aria-hidden', !isExpanded);
             button.setAttribute('aria-expanded', !isExpanded);
             
+            // Track comparison view
+            if (!isExpanded) {
+                gtag('event', 'comparison_view', {
+                    'event_category': 'Technology',
+                    'event_label': id
+                });
+            }
+            
             // Scroll to content if opening
             if (!isExpanded) {
                 setTimeout(() => {
@@ -1548,6 +1562,13 @@
         function openTechDemo(techType) {
             const modal = document.getElementById('modal');
             const modalBody = document.getElementById('modal-body');
+            
+            // Track tech demo click
+            gtag('event', 'tech_demo_click', {
+                'event_category': 'Technology',
+                'event_label': techType,
+                'value': 1
+            });
             
             const techContent = {
                 'cerec': {
@@ -1612,7 +1633,7 @@
                     `).join('')}
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="dental_book_appointment_v3.html" class="cta-button">Experience This Technology</a>
+                    <a href="dental_book-appointment_v4.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Experience Technology Modal'});">Experience This Technology</a>
                 </div>
             `;
             
@@ -1633,6 +1654,12 @@
         function openEquipmentTour(area) {
             const modal = document.getElementById('modal');
             const modalBody = document.getElementById('modal-body');
+            
+            // Track tour click
+            gtag('event', 'equipment_tour_click', {
+                'event_category': 'Technology',
+                'event_label': area
+            });
             
             const tourContent = {
                 'reception': {
@@ -1680,7 +1707,7 @@
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
                     <button class="cta-button" onclick="startFullTour()" style="margin-right: 1rem;">Start Complete Tour</button>
-                    <a href="dental_book_appointment_v3.html" class="cta-button">Schedule Visit</a>
+                    <a href="dental_book-appointment_v4.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule Visit Tour Modal'});">Schedule Visit</a>
                 </div>
             `;
             
@@ -1700,6 +1727,12 @@
         function openComfortPreview(amenity) {
             const modal = document.getElementById('modal');
             const modalBody = document.getElementById('modal-body');
+            
+            // Track comfort preview click
+            gtag('event', 'comfort_preview_click', {
+                'event_category': 'Comfort',
+                'event_label': amenity
+            });
             
             const comfortContent = {
                 'sedation': {
@@ -1750,7 +1783,7 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="dental_book_appointment_v3.html" class="cta-button">Book with These Amenities</a>
+                    <a href="dental_book-appointment_v4.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book with Amenities Modal'});">Book with These Amenities</a>
                 </div>
             `;
             
@@ -1769,6 +1802,12 @@
         function openAnxietyInfo(type) {
             const modal = document.getElementById('modal');
             const modalBody = document.getElementById('modal-body');
+            
+            // Track anxiety info click
+            gtag('event', 'anxiety_info_click', {
+                'event_category': 'Anxiety Management',
+                'event_label': type
+            });
             
             const anxietyContent = {
                 'relaxation': {
@@ -1819,7 +1858,7 @@
                     </ul>
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="dental_book_appointment_v3.html" class="cta-button">Schedule Consultation</a>
+                    <a href="dental_book-appointment_v4.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule Consultation Anxiety Modal'});">Schedule Consultation</a>
                 </div>
             `;
             
@@ -1836,11 +1875,17 @@
 
         // Show availability redirect with optimization
         function showAvailability() {
+            // Track availability check
+            gtag('event', 'availability_check', {
+                'event_category': 'Scheduling',
+                'event_label': 'Technology Page'
+            });
+            
             // Add loading state for better UX
             event.target.innerHTML = '<div class="loading" style="display: inline-block; margin-right: 0.5rem;"></div>Loading...';
             
             setTimeout(() => {
-                window.location.href = 'dental_book_appointment_v3.html';
+                window.location.href = 'dental_book-appointment_v4.html';
             }, 500);
         }
 
@@ -1848,6 +1893,12 @@
         function startFullTour() {
             const modal = document.getElementById('modal');
             const modalBody = document.getElementById('modal-body');
+            
+            // Track full tour start
+            gtag('event', 'full_tour_start', {
+                'event_category': 'Technology',
+                'event_label': 'Complete 360 Tour'
+            });
             
             modalBody.innerHTML = `
                 <div class="modal-header">
@@ -1868,7 +1919,7 @@
                 </div>
                 <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--soft-gray); border-radius: 8px;">
                     <p style="margin-bottom: 1rem;"><strong>Tour includes:</strong> Interactive hotspots, 360° room views, equipment demonstrations, and patient testimonials</p>
-                    <a href="dental_book_appointment_v3.html" class="cta-button">Schedule After Tour</a>
+                    <a href="dental_book-appointment_v4.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule After Tour'});">Schedule After Tour</a>
                 </div>
             `;
             
@@ -1972,7 +2023,7 @@
             // Preload next likely page
             const link = document.createElement('link');
             link.rel = 'prefetch';
-            link.href = 'dental_book_appointment_v3.html';
+            link.href = 'dental_book-appointment_v4.html';
             document.head.appendChild(link);
             
             // Initialize any additional performance optimizations
@@ -1981,10 +2032,13 @@
             }
         });
 
-        // Analytics and performance tracking (placeholder)
+        // Analytics and performance tracking
         function trackInteraction(action, element) {
-            // Google Analytics or other tracking would go here
-            console.log(`User interaction: ${action} on ${element}`);
+            // Google Analytics tracking
+            gtag('event', action, {
+                'event_category': 'User Interaction',
+                'event_label': element
+            });
         }
 
         // Add interaction tracking to key elements
@@ -1993,6 +2047,35 @@
                 trackInteraction('click', this.querySelector('h3')?.textContent || this.textContent);
             });
         });
+
+        // Error tracking
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            // Track errors
+            gtag('event', 'exception', {
+                'description': e.error.toString(),
+                'fatal': false
+            });
+        });
+
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData && perfData.loadEventEnd - perfData.loadEventStart > 3000) {
+                        console.warn('Page load time exceeded 3 seconds');
+                        
+                        // Track slow page load
+                        gtag('event', 'timing_complete', {
+                            'name': 'load',
+                            'value': perfData.loadEventEnd - perfData.loadEventStart,
+                            'event_category': 'Performance'
+                        });
+                    }
+                }, 0);
+            });
+        }
     </script>
 </body>
 </html>

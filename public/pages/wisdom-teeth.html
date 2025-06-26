@@ -1,1472 +1,1669 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="service-name" content="wisdom-teeth">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert wisdom teeth removal with advanced sedation options. Free consultation, personalized assessment, and compassionate care. Modern Dental Care - your comfort is our priority.">
-    <meta name="keywords" content="wisdom teeth removal, tooth extraction, sedation dentistry, dental surgery, oral surgery, emergency dental care">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Wisdom Teeth Removal Experts | Modern Dental Care">
-    <meta property="og:description" content="Gentle extraction with advanced sedation options for your comfort. Free consultation and personalized care.">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="/wisdom-teeth-removal">
-    <title>Wisdom Teeth Removal - Expert Extraction & Care | Modern Dental Care</title>
+    <title>Wisdom Teeth Removal - Safe & Comfortable Extraction | SmileCare Dental</title>
+    <meta name="description" content="Expert wisdom teeth removal with sedation options. Free consultation includes X-rays and personalized treatment plan. Most insurance accepted.">
+    <meta name="keywords" content="wisdom teeth removal, tooth extraction, oral surgery, sedation dentistry, impacted wisdom teeth">
+    <link rel="canonical" href="https://smilecare.dental/services/wisdom-teeth">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     
     <style>
-        /* Critical CSS - Above the fold */
+        :root {
+            --primary-purple: #7C3AED;
+            --primary-indigo: #4F46E5;
+            --accent-blue: #3B82F6;
+            --success-green: #10B981;
+            --warning-orange: #F59E0B;
+            --error-red: #EF4444;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-600: #4B5563;
+            --gray-900: #111827;
+            --white: #FFFFFF;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-        :root {
-            --trust-blue: #0077BE;
-            --clean-white: #FFFFFF;
-            --accent-teal: #00A8A8;
-            --soft-gray: #F5F5F5;
-            --charcoal: #333333;
-            --success-green: #28A745;
-            --warning-yellow: #FFC107;
-            --info-blue: #17A2B8;
-            --danger-red: #DC3545;
-            --light-purple: #E7E3FF;
-            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
-            --shadow-medium: 0 5px 20px rgba(0,0,0,0.1);
-            --shadow-heavy: 0 10px 30px rgba(0,0,0,0.1);
-            --border-radius: 8px;
-            --border-radius-lg: 15px;
-            --transition: all 0.3s ease;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: var(--charcoal);
-            background-color: var(--clean-white);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            color: var(--gray-900);
+            background-color: var(--white);
         }
         
-        /* Skip to main content for screen readers */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip link for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
-            left: 6px;
-            background: var(--trust-blue);
+            left: 0;
+            background: var(--primary-purple);
             color: white;
             padding: 8px;
             text-decoration: none;
-            z-index: 10000;
+            z-index: 100;
         }
         
         .skip-link:focus {
-            top: 6px;
+            top: 0;
         }
         
-        /* Header - Optimized for performance */
+        /* Header */
         header {
-            background: var(--clean-white);
-            box-shadow: var(--shadow-light);
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
-            will-change: transform;
+            z-index: 50;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 1rem 0;
         }
         
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--trust-blue);
+            color: var(--primary-purple);
             text-decoration: none;
         }
         
-        .nav-buttons {
+        .nav-links {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             align-items: center;
         }
         
-        .cta-button {
-            background: var(--success-green);
-            color: var(--clean-white);
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: var(--transition);
+        .nav-links a {
+            color: var(--gray-600);
             text-decoration: none;
-            display: inline-block;
+            font-weight: 500;
+            transition: color 0.3s;
         }
         
-        .cta-button:hover,
-        .cta-button:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
-            outline: 2px solid transparent;
+        .nav-links a:hover {
+            color: var(--primary-purple);
         }
         
-        .emergency-button {
-            background: var(--danger-red);
-            color: var(--clean-white);
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-        
-        .emergency-button:hover,
-        .emergency-button:focus {
-            background: #c82333;
-            outline: 2px solid var(--danger-red);
-            outline-offset: 2px;
-        }
-        
-        /* Hero Section - Optimized loading */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
-            color: var(--clean-white);
-            padding: 4rem 5% 3rem;
+            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-indigo) 100%);
+            color: var(--white);
+            padding: 4rem 0;
             text-align: center;
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
         
         .hero h1 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease-out;
+            font-size: 2.5rem;
             font-weight: 700;
+            margin-bottom: 1rem;
         }
         
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
+        .hero-subtitle {
+            font-size: 1.25rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            opacity: 0.9;
         }
         
-        .hero-buttons {
+        .hero-cta {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
         
-        /* Lazy loaded sections */
-        .content-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .content-section.loaded {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* 3D Wisdom Teeth Position Visualizer - Enhanced accessibility */
-        .position-visualizer {
-            padding: 4rem 5%;
-            background: var(--soft-gray);
-        }
-        
-        .visualizer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            color: var(--trust-blue);
-            margin-bottom: 3rem;
-            font-weight: 700;
-        }
-        
-        .visualizer-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .jaw-diagram {
-            background: var(--clean-white);
-            padding: 2rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-heavy);
-            position: relative;
-        }
-        
-        .jaw-svg {
-            width: 100%;
-            height: 400px;
-            background: 
-                linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%),
-                linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            color: var(--charcoal);
+        /* Button Styles */
+        .btn {
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
             font-weight: 600;
-        }
-        
-        .position-info {
-            background: var(--clean-white);
-            padding: 2rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-heavy);
-        }
-        
-        .position-types {
-            display: grid;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .position-card {
-            padding: 1rem;
-            border-left: 4px solid var(--accent-teal);
-            background: var(--soft-gray);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
             cursor: pointer;
-            transition: var(--transition);
-            border-radius: var(--border-radius);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             position: relative;
+            overflow: hidden;
         }
         
-        .position-card:hover,
-        .position-card:focus {
-            background: var(--light-purple);
-            transform: translateX(5px);
-            outline: 2px solid var(--accent-teal);
-            outline-offset: 2px;
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-purple);
         }
         
-        .position-card.active {
-            background: var(--accent-teal);
-            color: var(--clean-white);
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         
-        .position-card h4 {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
         }
         
-        /* Enhanced Quiz Section - Improved accessibility */
-        .quiz-section {
-            padding: 4rem 5%;
-            background: var(--clean-white);
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-purple);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn.loading {
+            color: transparent;
+        }
+        
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Assessment Quiz Section */
+        .assessment-quiz {
+            padding: 4rem 0;
+            background: var(--gray-50);
         }
         
         .quiz-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--soft-gray);
-            padding: 3rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-heavy);
-        }
-        
-        .quiz-title {
-            text-align: center;
-            color: var(--trust-blue);
-            margin-bottom: 2rem;
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
+            max-width: 700px;
+            margin: 2rem auto;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         .quiz-progress {
-            background: var(--clean-white);
+            width: 100%;
             height: 8px;
+            background: var(--gray-200);
             border-radius: 4px;
             margin-bottom: 2rem;
             overflow: hidden;
-            position: relative;
         }
         
-        .progress-bar {
-            background: var(--accent-teal);
+        .quiz-progress-bar {
             height: 100%;
+            background: var(--primary-purple);
+            transition: width 0.3s ease;
             width: 0%;
-            transition: width 0.5s ease;
-            border-radius: 4px;
         }
         
         .quiz-question {
             margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeIn 0.5s forwards;
         }
         
         .quiz-question h3 {
+            font-size: 1.25rem;
+            color: var(--gray-900);
             margin-bottom: 1rem;
-            color: var(--charcoal);
-            font-weight: 600;
         }
         
         .quiz-options {
-            display: flex;
-            flex-direction: column;
+            display: grid;
             gap: 1rem;
         }
         
         .quiz-option {
-            background: var(--clean-white);
-            padding: 1rem;
-            border-radius: var(--border-radius);
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
             cursor: pointer;
-            transition: var(--transition);
-            border: 2px solid transparent;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            position: relative;
+            transition: all 0.3s;
+            background: var(--white);
         }
         
-        .quiz-option:hover,
-        .quiz-option:focus {
-            background: var(--accent-teal);
-            color: var(--clean-white);
-            transform: translateX(5px);
-            outline: 2px solid var(--accent-teal);
-            outline-offset: 2px;
+        .quiz-option:hover {
+            border-color: var(--primary-purple);
+            background: var(--gray-50);
         }
         
         .quiz-option.selected {
-            background: var(--trust-blue);
-            color: var(--clean-white);
-            border-color: var(--trust-blue);
+            border-color: var(--primary-purple);
+            background: rgba(124, 58, 237, 0.1);
         }
         
-        .quiz-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .quiz-result {
-            text-align: center;
-            padding: 2rem;
-            background: var(--info-blue);
-            color: var(--clean-white);
-            border-radius: 10px;
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-top: 2rem;
+        }
+        
+        .quiz-results {
             display: none;
+            text-align: center;
         }
         
-        .result-gauge {
-            width: 200px;
-            height: 200px;
-            margin: 2rem auto;
+        .quiz-results h3 {
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .quiz-recommendation {
+            background: var(--gray-50);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        /* Process Timeline */
+        .process-timeline {
+            padding: 4rem 0;
+        }
+        
+        .timeline {
             position: relative;
-            background: conic-gradient(
-                var(--danger-red) 0deg 120deg,
-                var(--warning-yellow) 120deg 240deg,
-                var(--success-green) 240deg 360deg
-            );
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            max-width: 800px;
+            margin: 2rem auto;
         }
         
-        .gauge-center {
-            width: 150px;
-            height: 150px;
-            background: var(--clean-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--gray-200);
         }
         
-        .gauge-score {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--charcoal);
-        }
-        
-        /* Recovery Timeline Tool - Performance optimized */
-        .recovery-tool {
-            padding: 4rem 5%;
-            background: var(--soft-gray);
-        }
-        
-        .recovery-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .timeline-interactive {
-            background: var(--clean-white);
-            padding: 2rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-heavy);
-        }
-        
-        .timeline-selector {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .timeline-option {
-            padding: 0.8rem 1.5rem;
-            background: var(--soft-gray);
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-        
-        .timeline-option:hover,
-        .timeline-option:focus {
-            background: var(--accent-teal);
-            color: var(--clean-white);
-            outline: 2px solid var(--accent-teal);
-            outline-offset: 2px;
-        }
-        
-        .timeline-option.active {
-            background: var(--trust-blue);
-            color: var(--clean-white);
-        }
-        
-        .timeline-display {
+        .timeline-item {
             position: relative;
             padding: 2rem 0;
         }
         
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--accent-teal);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 2rem 0;
-            position: relative;
-            opacity: 0;
-            animation: fadeInScale 0.5s forwards;
-        }
-        
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
         .timeline-content {
             width: 45%;
-            background: var(--soft-gray);
+            background: var(--white);
             padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow-medium);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        .timeline-content h4 {
-            font-weight: 600;
-            color: var(--trust-blue);
-            margin-bottom: 0.5rem;
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
         }
         
         .timeline-marker {
             position: absolute;
             left: 50%;
+            top: 2rem;
             transform: translateX(-50%);
-            width: 30px;
-            height: 30px;
-            background: var(--accent-teal);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-purple);
             border-radius: 50%;
-            z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--clean-white);
+            color: var(--white);
             font-weight: 700;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
         }
         
-        /* Sedation Options Selector */
-        .sedation-selector {
-            padding: 4rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Sedation Options */
+        .sedation-options {
+            padding: 4rem 0;
+            background: var(--gray-50);
         }
         
-        .sedation-tool {
-            background: var(--clean-white);
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .sedation-card {
+            background: var(--white);
             padding: 2rem;
-            border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-heavy);
-        }
-        
-        .anxiety-scale {
-            margin: 2rem 0;
+            border-radius: 12px;
             text-align: center;
-        }
-        
-        .anxiety-scale h3 {
-            margin-bottom: 1.5rem;
-            color: var(--trust-blue);
-            font-weight: 600;
-        }
-        
-        .scale-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 1rem;
-            background: linear-gradient(to right, var(--success-green), var(--warning-yellow), var(--danger-red));
-            border-radius: 50px;
-        }
-        
-        .scale-point {
-            width: 50px;
-            height: 50px;
-            background: var(--clean-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-weight: 700;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
             border: 2px solid transparent;
-        }
-        
-        .scale-point:hover,
-        .scale-point:focus {
-            transform: scale(1.1);
-            outline: 2px solid var(--clean-white);
-            outline-offset: 2px;
-        }
-        
-        .scale-point.selected {
-            transform: scale(1.2);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        
-        /* CTA Section - Final conversion optimized */
-        .cta-section {
-            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
-            color: var(--clean-white);
-            padding: 4rem 5%;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-        
-        .cta-button-large {
-            background: var(--success-green);
-            color: var(--clean-white);
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 50px;
             cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: var(--shadow-medium);
-            font-weight: 600;
         }
         
-        .cta-button-large:hover,
-        .cta-button-large:focus {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            outline: 2px solid var(--clean-white);
-            outline-offset: 2px;
+        .sedation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            border-color: var(--primary-purple);
         }
         
-        /* Footer */
-        footer {
-            background: var(--charcoal);
-            color: var(--clean-white);
-            padding: 3rem 5%;
-            text-align: center;
+        .sedation-card.selected {
+            border-color: var(--primary-purple);
+            background: rgba(124, 58, 237, 0.05);
         }
         
-        footer p {
+        .sedation-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sedation-card h3 {
+            color: var(--primary-purple);
             margin-bottom: 0.5rem;
         }
         
-        /* Animations - GPU accelerated */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .sedation-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--success-green);
+            margin-top: 1rem;
         }
         
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
         }
         
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        /* Responsive Design - Mobile first approach */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+        
+        .faq-question h3 {
+            font-size: 1.125rem;
+            color: var(--gray-900);
+            margin: 0;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--gray-600);
+        }
+        
+        /* Appointment Form */
+        .appointment-section {
+            padding: 4rem 0;
+            background: var(--gray-50);
+        }
+        
+        .appointment-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 2rem auto 0;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
         @media (max-width: 768px) {
-            .hero {
-                padding: 3rem 5% 2rem;
-            }
-            
-            .visualizer-content {
+            .form-row {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+        
+        .form-group input.error {
+            border-color: var(--error-red);
+            background-color: rgba(239, 68, 68, 0.05);
+        }
+        
+        .error-message {
+            color: var(--error-red);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.has-error .error-message {
+            display: block;
+        }
+        
+        /* Symptom Selector */
+        .symptom-selector {
+            margin-bottom: 2rem;
+        }
+        
+        .symptom-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .symptom-button {
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 6px;
+            background: var(--white);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        
+        .symptom-button:hover {
+            border-color: var(--primary-purple);
+            background: var(--gray-50);
+        }
+        
+        .symptom-button.selected {
+            border-color: var(--primary-purple);
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--primary-purple);
+            font-weight: 600;
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            color: var(--white);
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .notification[data-type="success"] {
+            background: var(--success-green);
+        }
+        
+        .notification[data-type="error"] {
+            background: var(--error-red);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        /* Floating Consultation Button */
+        .floating-consultation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-purple);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+            z-index: 100;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-consultation:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(124, 58, 237, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
             }
             
-            .timeline-line {
-                left: 30px;
+            .nav-links {
+                display: none;
             }
             
-            .timeline-item,
-            .timeline-item:nth-child(even) {
-                flex-direction: column;
-                align-items: flex-start;
+            .timeline::before {
+                left: 20px;
             }
             
             .timeline-content {
                 width: calc(100% - 60px);
-                margin-left: 60px;
+                margin-left: 60px !important;
             }
             
             .timeline-marker {
-                left: 30px;
+                left: 20px;
             }
             
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem 5%;
-            }
-            
-            .nav-buttons {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .timeline-selector {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .timeline-option {
-                width: 100%;
-                text-align: center;
-            }
-            
-            .scale-container {
-                flex-wrap: wrap;
-                gap: 1rem;
-                padding: 1.5rem;
-                border-radius: 20px;
+            .floating-consultation {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.875rem 1.5rem;
+                font-size: 0.875rem;
             }
         }
         
-        /* Print styles */
-        @media print {
-            .nav-buttons,
-            .cta-button,
-            .emergency-button,
-            .floating-reminder {
-                display: none !important;
-            }
-            
-            body {
-                font-size: 12pt;
-                line-height: 1.4;
-            }
-            
-            .hero {
-                background: none !important;
-                color: black !important;
-            }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            .cta-button,
-            .emergency-button,
-            .timeline-option {
-                border: 2px solid currentColor;
-            }
-        }
-        
-        /* Focus styles for better accessibility */
-        .visually-hidden {
-            position: absolute !important;
-            width: 1px !important;
-            height: 1px !important;
-            padding: 0 !important;
-            margin: -1px !important;
-            overflow: hidden !important;
-            clip: rect(0, 0, 0, 0) !important;
-            white-space: nowrap !important;
-            border: 0 !important;
-        }
-        
-        /* Loading optimization */
-        .lazy-load {
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .lazy-load.loaded {
-            opacity: 1;
-        }
-        
-        /* Floating consultation reminder - Performance optimized */
-        .floating-reminder {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--success-green);
-            color: var(--clean-white);
-            padding: 1rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            gap: 0.5rem;
-            animation: fadeInUp 0.5s ease-out;
-            font-weight: 600;
-            border: none;
-            text-decoration: none;
-        }
-        
-        .floating-reminder:hover,
-        .floating-reminder:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
-            outline: 2px solid var(--clean-white);
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid var(--primary-purple);
             outline-offset: 2px;
+        }
+        
+        /* Section headings */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto 2rem;
         }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main" class="skip-link">Skip to main content</a>
     
-    <!-- Header -->
-    <header role="banner">
-        <nav role="navigation" aria-label="Main navigation">
-            <a href="/" class="logo" aria-label="Modern Dental Care - Home">Modern Dental Care</a>
-            <div class="nav-buttons">
-                <button class="emergency-button" onclick="checkPain()" aria-label="Emergency pain assistance">
-                    <span aria-hidden="true">⚡</span> Pain Right Now?
-                </button>
-                <a href="#consultation" class="cta-button">Schedule Consultation</a>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">SmileCare Dental</a>
+            <div class="nav-links">
+                <a href="/services">Services</a>
+                <a href="/about">About</a>
+                <a href="/insurance">Insurance</a>
+                <a href="/contact">Contact</a>
+                <a href="tel:5551234567" class="btn btn-primary">Call Now</a>
             </div>
         </nav>
     </header>
     
-    <!-- Hero Section -->
-    <section class="hero" role="banner">
-        <h1>Wisdom Teeth Removal Experts</h1>
-        <p>Gentle extraction with advanced sedation options for your comfort</p>
-        <div class="hero-buttons">
-            <a href="#quiz" class="cta-button">Take Extraction Assessment</a>
-            <a href="#visualizer" class="cta-button" style="background: var(--accent-teal);">See 3D Position Viewer</a>
-        </div>
-    </section>
-    
-    <main id="main-content" role="main">
-        <!-- 3D Wisdom Teeth Position Visualizer -->
-        <section id="visualizer" class="position-visualizer content-section">
-            <div class="visualizer-container">
-                <h2 class="section-title">Interactive Wisdom Teeth Position Visualizer</h2>
-                <div class="visualizer-content">
-                    <div class="jaw-diagram">
-                        <div class="jaw-svg" role="img" aria-label="3D jaw model showing wisdom teeth positions">
-                            [3D Jaw Model - Interactive Visualization]
-                        </div>
-                    </div>
-                    <div class="position-info">
-                        <h3>Common Wisdom Teeth Positions</h3>
-                        <p>Click to see how different positions affect extraction complexity:</p>
-                        <div class="position-types" role="radiogroup" aria-label="Wisdom teeth position types">
-                            <button class="position-card active" onclick="showPosition('vertical')" role="radio" aria-checked="true" tabindex="0">
-                                <h4><span aria-hidden="true">↑</span> Vertical (Normal)</h4>
-                                <p>Easiest extraction, fully erupted</p>
-                            </button>
-                            <button class="position-card" onclick="showPosition('angled')" role="radio" aria-checked="false" tabindex="-1">
-                                <h4><span aria-hidden="true">↗</span> Mesial Angle</h4>
-                                <p>Most common impaction, moderate difficulty</p>
-                            </button>
-                            <button class="position-card" onclick="showPosition('horizontal')" role="radio" aria-checked="false" tabindex="-1">
-                                <h4><span aria-hidden="true">→</span> Horizontal</h4>
-                                <p>Complex extraction, surgical approach needed</p>
-                            </button>
-                            <button class="position-card" onclick="showPosition('inverted')" role="radio" aria-checked="false" tabindex="-1">
-                                <h4><span aria-hidden="true">↓</span> Inverted</h4>
-                                <p>Rare position, specialist referral recommended</p>
-                            </button>
-                        </div>
-                    </div>
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Wisdom Teeth Removal Made Simple</h1>
+                <p class="hero-subtitle">Expert extraction with comfort-focused care and flexible sedation options</p>
+                <div class="hero-cta">
+                    <a href="#appointment" class="btn btn-primary" data-action="book-consultation">
+                        Schedule Free Consultation
+                    </a>
+                    <a href="#quiz" class="btn btn-secondary" data-action="take-assessment">
+                        Take Assessment Quiz
+                    </a>
                 </div>
             </div>
         </section>
         
-        <!-- Enhanced Extraction Quiz -->
-        <section id="quiz" class="quiz-section content-section">
-            <div class="quiz-container">
-                <h2 class="quiz-title">Wisdom Teeth Extraction Necessity Assessment</h2>
-                <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz progress">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
+        <!-- Assessment Quiz Section -->
+        <section id="quiz" class="assessment-quiz">
+            <div class="container">
+                <h2 class="section-title">Do You Need Your Wisdom Teeth Removed?</h2>
+                <p class="section-subtitle">Take our quick assessment to find out</p>
                 
-                <form id="quiz-content" role="form" aria-label="Wisdom teeth assessment quiz">
-                    <div class="quiz-question" style="animation-delay: 0.1s;">
-                        <h3>1. Are you experiencing pain in the back of your mouth?</h3>
-                        <div class="quiz-options" role="radiogroup" aria-label="Pain level options">
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="pain" value="3" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">😫</span>
-                                <div>
-                                    <strong>Yes, frequently</strong>
-                                    <p>Constant or recurring pain</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="pain" value="2" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">😐</span>
-                                <div>
-                                    <strong>Sometimes</strong>
-                                    <p>Occasional discomfort</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="pain" value="0" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">😊</span>
-                                <div>
-                                    <strong>No pain</strong>
-                                    <p>No discomfort at all</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                
-                    <div class="quiz-question" style="animation-delay: 0.2s;">
-                        <h3>2. Do you have difficulty cleaning your back teeth?</h3>
-                        <div class="quiz-options" role="radiogroup" aria-label="Cleaning difficulty options">
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="cleaning" value="3" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">🦷</span>
-                                <div>
-                                    <strong>Yes, very difficult</strong>
-                                    <p>Can't reach properly with brush/floss</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="cleaning" value="2" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">🪥</span>
-                                <div>
-                                    <strong>Somewhat difficult</strong>
-                                    <p>Challenging but manageable</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="cleaning" value="0" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">✨</span>
-                                <div>
-                                    <strong>No difficulty</strong>
-                                    <p>Easy to clean thoroughly</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                
-                    <div class="quiz-question" style="animation-delay: 0.3s;">
-                        <h3>3. Have you noticed swelling or tenderness in your gums?</h3>
-                        <div class="quiz-options" role="radiogroup" aria-label="Swelling frequency options">
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="swelling" value="3" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">🔴</span>
-                                <div>
-                                    <strong>Yes, often</strong>
-                                    <p>Regular swelling or infection</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="swelling" value="1" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">🟡</span>
-                                <div>
-                                    <strong>Occasionally</strong>
-                                    <p>Infrequent episodes</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="swelling" value="0" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">🟢</span>
-                                <div>
-                                    <strong>Never</strong>
-                                    <p>No swelling issues</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                
-                    <div class="quiz-question" style="animation-delay: 0.4s;">
-                        <h3>4. What's your age range?</h3>
-                        <div class="quiz-options" role="radiogroup" aria-label="Age range options">
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="age" value="2" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">🎓</span>
-                                <div>
-                                    <strong>16-20 years</strong>
-                                    <p>Ideal extraction window</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="age" value="1" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">👨</span>
-                                <div>
-                                    <strong>21-25 years</strong>
-                                    <p>Common extraction age</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="age" value="0" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">👴</span>
-                                <div>
-                                    <strong>26+ years</strong>
-                                    <p>Monitoring recommended</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                
-                    <div class="quiz-question" style="animation-delay: 0.5s;">
-                        <h3>5. Has your dentist mentioned your wisdom teeth?</h3>
-                        <div class="quiz-options" role="radiogroup" aria-label="Dentist recommendation options">
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="dentist" value="3" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">⚠️</span>
-                                <div>
-                                    <strong>Yes, recommended removal</strong>
-                                    <p>Professional assessment done</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="dentist" value="1" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">👀</span>
-                                <div>
-                                    <strong>Monitoring them</strong>
-                                    <p>Regular check-ups scheduled</p>
-                                </div>
-                            </label>
-                            <label class="quiz-option" tabindex="0">
-                                <input type="radio" name="dentist" value="0" class="visually-hidden">
-                                <span class="quiz-icon" aria-hidden="true">❓</span>
-                                <div>
-                                    <strong>Not discussed</strong>
-                                    <p>No evaluation yet</p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                
-                    <button type="submit" class="cta-button" style="margin-top: 2rem; width: 100%;">Get Your Assessment Results</button>
-                </form>
-                
-                <div id="quiz-result" class="quiz-result" role="region" aria-label="Quiz results" aria-live="polite">
-                    <h3>Your Wisdom Teeth Assessment</h3>
-                    <div class="result-gauge" role="img" aria-label="Risk score gauge">
-                        <div class="gauge-center">
-                            <div class="gauge-score" id="gaugeScore" aria-label="Risk score">0</div>
-                            <div>Risk Score</div>
-                        </div>
-                    </div>
-                    <p id="result-text"></p>
-                    <div id="result-recommendations"></div>
-                    <a href="#consultation" class="cta-button" style="margin-top: 1rem;">Schedule Your Consultation</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Interactive Recovery Timeline Tool -->
-        <section class="recovery-tool content-section">
-            <div class="recovery-container">
-                <h2 class="section-title">Personalized Recovery Timeline</h2>
-                <div class="timeline-interactive">
-                    <p style="text-align: center; margin-bottom: 2rem;">Select your extraction type to see your recovery timeline:</p>
-                    <div class="timeline-selector" role="tablist" aria-label="Recovery timeline options">
-                        <button class="timeline-option active" role="tab" aria-selected="true" aria-controls="timeline-simple" onclick="showTimeline('simple')">Simple Extraction</button>
-                        <button class="timeline-option" role="tab" aria-selected="false" aria-controls="timeline-surgical" onclick="showTimeline('surgical')">Surgical Extraction</button>
-                        <button class="timeline-option" role="tab" aria-selected="false" aria-controls="timeline-multiple" onclick="showTimeline('multiple')">Multiple Teeth</button>
-                        <button class="timeline-option" role="tab" aria-selected="false" aria-controls="timeline-complex" onclick="showTimeline('complex')">Complex Case</button>
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar"></div>
                     </div>
                     
-                    <div class="timeline-display" id="timelineDisplay" role="tabpanel" aria-label="Recovery timeline details">
-                        <div class="timeline-line" aria-hidden="true"></div>
-                        <!-- Timeline items will be inserted here -->
+                    <div id="quiz-content">
+                        <!-- Questions will be dynamically inserted here -->
+                    </div>
+                    
+                    <div class="quiz-controls">
+                        <button class="btn btn-secondary" id="quiz-prev" style="display: none;">Previous</button>
+                        <span id="quiz-counter">Question 1 of 5</span>
+                        <button class="btn btn-primary" id="quiz-next">Next</button>
+                    </div>
+                    
+                    <div class="quiz-results" id="quiz-results">
+                        <h3>Your Assessment Results</h3>
+                        <div class="quiz-recommendation" id="quiz-recommendation"></div>
+                        <button class="btn btn-primary" data-action="book-from-quiz">
+                            Schedule Your Consultation
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Sedation Options Selector -->
-        <section class="sedation-selector content-section">
-            <h2 class="section-title">Find Your Comfort Level - Sedation Selector</h2>
-            <div class="sedation-tool">
-                <div class="anxiety-scale">
-                    <h3>Rate your dental anxiety level:</h3>
-                    <div class="scale-container" role="radiogroup" aria-label="Anxiety level from 1 to 5">
-                        <button class="scale-point" onclick="selectAnxiety(1)" data-level="1" role="radio" aria-checked="false" aria-label="Anxiety level 1 - Very relaxed">1</button>
-                        <button class="scale-point" onclick="selectAnxiety(2)" data-level="2" role="radio" aria-checked="false" aria-label="Anxiety level 2">2</button>
-                        <button class="scale-point" onclick="selectAnxiety(3)" data-level="3" role="radio" aria-checked="false" aria-label="Anxiety level 3">3</button>
-                        <button class="scale-point" onclick="selectAnxiety(4)" data-level="4" role="radio" aria-checked="false" aria-label="Anxiety level 4">4</button>
-                        <button class="scale-point" onclick="selectAnxiety(5)" data-level="5" role="radio" aria-checked="false" aria-label="Anxiety level 5 - Very anxious">5</button>
-                    </div>
-                    <p style="margin-top: 1rem;">1 = Very Relaxed, 5 = Very Anxious</p>
-                </div>
+        <!-- Process Timeline -->
+        <section class="process-timeline">
+            <div class="container">
+                <h2 class="section-title">Your Wisdom Teeth Journey</h2>
+                <p class="section-subtitle">What to expect from consultation to recovery</p>
                 
-                <div id="sedation-recommendation" class="sedation-recommendation" role="region" aria-live="polite"></div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Free Consultation</h3>
+                            <p>X-rays, examination, and personalized treatment plan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Pre-Surgery Prep</h3>
+                            <p>Choose sedation, get instructions, arrange transportation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Surgery Day</h3>
+                            <p>45-60 minute procedure with your chosen sedation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>Recovery</h3>
+                            <p>3-4 days rest, soft foods, prescribed medications</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">5</div>
+                        <div class="timeline-content">
+                            <h3>Follow-up</h3>
+                            <p>Check healing progress, remove stitches if needed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sedation Options -->
+        <section class="sedation-options">
+            <div class="container">
+                <h2 class="section-title">Choose Your Comfort Level</h2>
+                <p class="section-subtitle">Sedation options to match your needs and preferences</p>
+                
+                <div class="options-grid">
+                    <div class="sedation-card" data-sedation="local" role="button" tabindex="0" aria-pressed="false">
+                        <div class="sedation-icon">💉</div>
+                        <h3>Local Anesthesia</h3>
+                        <p>Numbing injection only. You'll be awake but won't feel pain.</p>
+                        <ul style="text-align: left; margin: 1rem 0; padding-left: 1.5rem;">
+                            <li>Most affordable option</li>
+                            <li>Quick recovery</li>
+                            <li>Drive yourself home</li>
+                        </ul>
+                        <p class="sedation-price">Included</p>
+                    </div>
+                    
+                    <div class="sedation-card" data-sedation="nitrous" role="button" tabindex="0" aria-pressed="false">
+                        <div class="sedation-icon">🎈</div>
+                        <h3>Nitrous Oxide</h3>
+                        <p>Laughing gas for relaxation. Stay conscious but calm.</p>
+                        <ul style="text-align: left; margin: 1rem 0; padding-left: 1.5rem;">
+                            <li>Reduces anxiety</li>
+                            <li>Wears off quickly</li>
+                            <li>Safe for most patients</li>
+                        </ul>
+                        <p class="sedation-price">+$150</p>
+                    </div>
+                    
+                    <div class="sedation-card" data-sedation="iv" role="button" tabindex="0" aria-pressed="false">
+                        <div class="sedation-icon">😴</div>
+                        <h3>IV Sedation</h3>
+                        <p>Twilight sleep. You won't remember the procedure.</p>
+                        <ul style="text-align: left; margin: 1rem 0; padding-left: 1.5rem;">
+                            <li>No memory of surgery</li>
+                            <li>Deep relaxation</li>
+                            <li>Need a driver</li>
+                        </ul>
+                        <p class="sedation-price">+$450</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Common Questions</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does wisdom teeth removal take?</h3>
+                            <span class="faq-icon">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                The procedure typically takes 45-60 minutes for all four wisdom teeth. Simple extractions may be quicker (20-30 minutes), while impacted teeth may take longer. We'll give you a time estimate during your consultation.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What's the recovery time?</h3>
+                            <span class="faq-icon">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Most patients return to normal activities in 3-4 days. Complete healing takes about 2 weeks. We provide detailed aftercare instructions and are available 24/7 for any concerns during recovery.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is wisdom teeth removal covered by insurance?</h3>
+                            <span class="faq-icon">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Most dental insurance plans cover 50-80% of wisdom teeth removal when medically necessary. We'll verify your coverage during the free consultation and provide a detailed cost breakdown. Payment plans are available.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What are the signs I need my wisdom teeth removed?</h3>
+                            <span class="faq-icon">⌄</span>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Common signs include: pain in the back of your mouth, swollen or tender gums, difficulty opening your mouth, bad breath or taste, crowding of other teeth, or cysts visible on X-rays. Even without symptoms, impacted wisdom teeth should be evaluated.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Appointment Form -->
+        <section id="appointment" class="appointment-section">
+            <div class="container">
+                <h2 class="section-title">Schedule Your Free Consultation</h2>
+                <p class="section-subtitle">Includes X-rays, exam, and personalized treatment plan</p>
+                
+                <form class="appointment-form" data-appointment>
+                    <!-- Patient Information -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                            <span class="error-message">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                            <span class="error-message">Please enter a valid email</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567">
+                            <span class="error-message">Please enter a valid phone number</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <select id="age" name="age" required aria-required="true">
+                                <option value="">Select age range</option>
+                                <option value="16-20">16-20 years</option>
+                                <option value="21-25">21-25 years</option>
+                                <option value="26-30">26-30 years</option>
+                                <option value="31+">31+ years</option>
+                            </select>
+                            <span class="error-message">Please select your age range</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Symptoms -->
+                    <div class="symptom-selector">
+                        <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">
+                            Current Symptoms (select all that apply)
+                        </label>
+                        <div class="symptom-grid">
+                            <button type="button" class="symptom-button" data-symptom="pain" aria-pressed="false">Pain</button>
+                            <button type="button" class="symptom-button" data-symptom="swelling" aria-pressed="false">Swelling</button>
+                            <button type="button" class="symptom-button" data-symptom="infection" aria-pressed="false">Infection</button>
+                            <button type="button" class="symptom-button" data-symptom="crowding" aria-pressed="false">Crowding</button>
+                            <button type="button" class="symptom-button" data-symptom="difficulty" aria-pressed="false">Difficulty Eating</button>
+                            <button type="button" class="symptom-button" data-symptom="none" aria-pressed="false">No Symptoms</button>
+                        </div>
+                        <input type="hidden" id="symptoms" name="symptoms" value="">
+                    </div>
+                    
+                    <!-- Appointment Preferences -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferred-date">Preferred Date *</label>
+                            <input type="date" id="preferred-date" name="preferred-date" required aria-required="true">
+                            <span class="error-message">Please select a date</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-time">Preferred Time *</label>
+                            <select id="preferred-time" name="preferred-time" required aria-required="true">
+                                <option value="">Select time</option>
+                                <option value="morning">Morning (8AM-12PM)</option>
+                                <option value="afternoon">Afternoon (12PM-5PM)</option>
+                                <option value="flexible">I'm Flexible</option>
+                            </select>
+                            <span class="error-message">Please select a time</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sedation-interest">Sedation Preference (optional)</label>
+                        <select id="sedation-interest" name="sedation-interest">
+                            <option value="">Not sure yet</option>
+                            <option value="local">Local anesthesia only</option>
+                            <option value="nitrous">Nitrous oxide (laughing gas)</option>
+                            <option value="iv">IV sedation (sleep through it)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information (optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Any questions or concerns about the procedure?"></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="service-interest" value="Wisdom Teeth Removal">
+                    <input type="hidden" name="quiz-score" id="quiz-score" value="">
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
+                        Book Free Consultation
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; color: var(--gray-600); font-size: 0.875rem;">
+                        Free consultation includes X-rays ($150 value)
+                    </p>
+                </form>
             </div>
         </section>
     </main>
     
-    <!-- CTA Section -->
-    <section id="consultation" class="cta-section">
-        <h2>Ready to Schedule Your Wisdom Teeth Consultation?</h2>
-        <p>Our expert team is here to make your extraction as comfortable as possible</p>
-        <a href="#" class="cta-button-large" onclick="scheduleConsultation()">Book Your Free Consultation</a>
-        <p style="margin-top: 1rem; font-size: 1rem;">Or call us at <a href="tel:+1234567890" style="color: inherit; text-decoration: underline;">(123) 456-7890</a></p>
-    </section>
-    
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <p>&copy; 2024 Modern Dental Care. Expert wisdom teeth removal with compassionate care.</p>
-        <p>State-of-the-art technology meets patient-centered comfort</p>
-    </footer>
-    
-    <!-- Floating consultation reminder -->
-    <a href="#consultation" class="floating-reminder" id="floatingReminder" aria-label="Schedule consultation">
-        <span aria-hidden="true">📅</span> Ready to Schedule?
+    <!-- Floating Consultation Button -->
+    <a href="#appointment" class="floating-consultation" aria-label="Schedule free consultation">
+        <span>Free Consultation</span>
+        <span>→</span>
     </a>
     
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-        // Performance optimized JavaScript with accessibility enhancements
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Enhanced Production JavaScript -->
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'https://api.smilecare.dental';
+        const API_ENDPOINTS = {
+            bookAppointment: '/api/book-appointment',
+            submitQuiz: '/api/wisdom-teeth-quiz'
+        };
         
-        // Enhanced Quiz Logic with proper form handling
-        const quizForm = document.getElementById('quiz-content');
-        let quizAnswers = {};
-        const totalQuestions = 5;
+        // Quiz Questions
+        const quizQuestions = [
+            {
+                question: "Are you experiencing pain in the back of your mouth?",
+                options: [
+                    { text: "Yes, frequently", value: 3 },
+                    { text: "Sometimes", value: 2 },
+                    { text: "Rarely", value: 1 },
+                    { text: "No pain", value: 0 }
+                ]
+            },
+            {
+                question: "Have you noticed swelling in your gums?",
+                options: [
+                    { text: "Yes, significant swelling", value: 3 },
+                    { text: "Some swelling", value: 2 },
+                    { text: "Minor swelling", value: 1 },
+                    { text: "No swelling", value: 0 }
+                ]
+            },
+            {
+                question: "Is it difficult to open your mouth fully?",
+                options: [
+                    { text: "Yes, very difficult", value: 3 },
+                    { text: "Somewhat difficult", value: 2 },
+                    { text: "Slightly difficult", value: 1 },
+                    { text: "No difficulty", value: 0 }
+                ]
+            },
+            {
+                question: "Have you had infections in the area?",
+                options: [
+                    { text: "Multiple infections", value: 3 },
+                    { text: "One infection", value: 2 },
+                    { text: "Possible infection", value: 1 },
+                    { text: "No infections", value: 0 }
+                ]
+            },
+            {
+                question: "Are your other teeth feeling crowded?",
+                options: [
+                    { text: "Yes, very crowded", value: 3 },
+                    { text: "Somewhat crowded", value: 2 },
+                    { text: "Slightly crowded", value: 1 },
+                    { text: "No crowding", value: 0 }
+                ]
+            }
+        ];
         
-        // Add event listeners for form elements
-        quizForm.addEventListener('change', handleQuizAnswer);
-        quizForm.addEventListener('submit', calculateQuizResult);
+        let currentQuestion = 0;
+        let quizScore = 0;
+        let quizAnswers = [];
         
-        function handleQuizAnswer(event) {
-            if (event.target.type === 'radio') {
-                const questionName = event.target.name;
-                const score = parseInt(event.target.value);
-                quizAnswers[questionName] = score;
-                
-                // Update visual selection
-                const option = event.target.closest('.quiz-option');
-                const allOptions = option.parentElement.querySelectorAll('.quiz-option');
-                
-                allOptions.forEach(opt => opt.classList.remove('selected'));
-                option.classList.add('selected');
-                
-                // Update progress bar
-                const progress = (Object.keys(quizAnswers).length / totalQuestions) * 100;
-                const progressBar = document.getElementById('progressBar');
-                progressBar.style.width = progress + '%';
-                progressBar.setAttribute('aria-valuenow', progress);
-                
-                // Announce progress to screen readers
-                if (Object.keys(quizAnswers).length === totalQuestions) {
-                    announceToScreenReader('All questions answered. You can now submit for results.');
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // GA4 Event Tracking
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    event_category: 'engagement',
+                    event_label: 'wisdom_teeth_page',
+                    ...parameters
+                });
+            }
+        }
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.setAttribute('aria-busy', 'true');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.setAttribute('aria-busy', 'false');
                 }
             }
         }
         
-        function calculateQuizResult(event) {
+        // Notification System
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            const icon = type === 'success' ? '✓' : '✕';
+            notification.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
+        // Initialize Quiz
+        function initializeQuiz() {
+            const quizContent = document.getElementById('quiz-content');
+            const quizPrev = document.getElementById('quiz-prev');
+            const quizNext = document.getElementById('quiz-next');
+            const quizCounter = document.getElementById('quiz-counter');
+            const progressBar = document.querySelector('.quiz-progress-bar');
+            
+            function renderQuestion() {
+                const question = quizQuestions[currentQuestion];
+                const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
+                
+                progressBar.style.width = `${progress}%`;
+                quizCounter.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+                
+                quizContent.innerHTML = `
+                    <div class="quiz-question">
+                        <h3>${question.question}</h3>
+                        <div class="quiz-options">
+                            ${question.options.map((option, index) => `
+                                <div class="quiz-option" data-value="${option.value}" data-index="${index}" role="button" tabindex="0" aria-pressed="false">
+                                    ${option.text}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                // Add click handlers to options
+                document.querySelectorAll('.quiz-option').forEach(option => {
+                    option.addEventListener('click', selectOption);
+                    option.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            selectOption.call(this);
+                        }
+                    });
+                });
+                
+                // Restore selected answer if going back
+                if (quizAnswers[currentQuestion] !== undefined) {
+                    const selectedOption = document.querySelector(`.quiz-option[data-index="${quizAnswers[currentQuestion].index}"]`);
+                    if (selectedOption) {
+                        selectedOption.classList.add('selected');
+                        selectedOption.setAttribute('aria-pressed', 'true');
+                    }
+                }
+                
+                // Update button visibility
+                quizPrev.style.display = currentQuestion > 0 ? 'inline-flex' : 'none';
+                quizNext.textContent = currentQuestion === quizQuestions.length - 1 ? 'Get Results' : 'Next';
+            }
+            
+            function selectOption() {
+                // Remove selected from all options
+                document.querySelectorAll('.quiz-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.setAttribute('aria-pressed', 'false');
+                });
+                
+                // Add selected to clicked option
+                this.classList.add('selected');
+                this.setAttribute('aria-pressed', 'true');
+                
+                // Store answer
+                quizAnswers[currentQuestion] = {
+                    value: parseInt(this.dataset.value),
+                    index: parseInt(this.dataset.index)
+                };
+            }
+            
+            function showResults() {
+                // Calculate total score
+                quizScore = quizAnswers.reduce((sum, answer) => sum + (answer ? answer.value : 0), 0);
+                const maxScore = quizQuestions.length * 3;
+                const percentage = (quizScore / maxScore) * 100;
+                
+                // Track quiz completion
+                trackEvent('wisdom_teeth_quiz_complete', {
+                    quiz_score: quizScore,
+                    percentage: Math.round(percentage)
+                });
+                
+                // Hide quiz content and controls
+                document.getElementById('quiz-content').style.display = 'none';
+                document.querySelector('.quiz-controls').style.display = 'none';
+                document.querySelector('.quiz-progress').style.display = 'none';
+                
+                // Show results
+                const results = document.getElementById('quiz-results');
+                const recommendation = document.getElementById('quiz-recommendation');
+                
+                let message = '';
+                if (percentage >= 75) {
+                    message = `<strong>Urgent Recommendation:</strong> Based on your symptoms, you likely need your wisdom teeth removed soon. Schedule a free consultation to prevent further complications.`;
+                } else if (percentage >= 50) {
+                    message = `<strong>Recommended:</strong> Your symptoms suggest your wisdom teeth may be causing problems. A consultation would help determine the best course of action.`;
+                } else if (percentage >= 25) {
+                    message = `<strong>Monitor Closely:</strong> You have some symptoms that warrant professional evaluation. Early intervention can prevent future problems.`;
+                } else {
+                    message = `<strong>Preventive Care:</strong> While you're not experiencing significant symptoms, a consultation can determine if preventive removal is recommended.`;
+                }
+                
+                recommendation.innerHTML = message;
+                results.style.display = 'block';
+                
+                // Store quiz score in hidden field
+                document.getElementById('quiz-score').value = quizScore;
+                
+                // Scroll to results
+                results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            
+            // Event handlers
+            quizNext.addEventListener('click', function() {
+                if (!quizAnswers[currentQuestion]) {
+                    showNotification('Please select an answer before continuing', 'error');
+                    return;
+                }
+                
+                if (currentQuestion < quizQuestions.length - 1) {
+                    currentQuestion++;
+                    renderQuestion();
+                } else {
+                    showResults();
+                }
+            });
+            
+            quizPrev.addEventListener('click', function() {
+                if (currentQuestion > 0) {
+                    currentQuestion--;
+                    renderQuestion();
+                }
+            });
+            
+            // Initialize first question
+            renderQuestion();
+        }
+        
+        // Initialize Sedation Options
+        function initializeSedationOptions() {
+            const sedationCards = document.querySelectorAll('.sedation-card');
+            
+            sedationCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remove selected from all
+                    sedationCards.forEach(c => {
+                        c.classList.remove('selected');
+                        c.setAttribute('aria-pressed', 'false');
+                    });
+                    
+                    // Add selected to clicked
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    
+                    // Update form field
+                    const sedationType = this.dataset.sedation;
+                    document.getElementById('sedation-interest').value = sedationType;
+                    
+                    // Track selection
+                    trackEvent('sedation_option_selected', {
+                        sedation_type: sedationType,
+                        price: this.querySelector('.sedation-price').textContent
+                    });
+                });
+                
+                // Keyboard support
+                card.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+        
+        // Initialize FAQ Accordion
+        function initializeFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const wasActive = item.classList.contains('active');
+                    
+                    // Close all FAQs
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Toggle clicked FAQ
+                    if (!wasActive) {
+                        item.classList.add('active');
+                        
+                        // Track FAQ interaction
+                        trackEvent('faq_opened', {
+                            question: question.querySelector('h3').textContent
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Initialize Symptom Selector
+        function initializeSymptomSelector() {
+            const symptomButtons = document.querySelectorAll('.symptom-button');
+            const symptomsInput = document.getElementById('symptoms');
+            
+            symptomButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const symptom = this.dataset.symptom;
+                    
+                    if (symptom === 'none') {
+                        // If "No Symptoms" is clicked, deselect all others
+                        symptomButtons.forEach(btn => {
+                            if (btn !== this) {
+                                btn.classList.remove('selected');
+                                btn.setAttribute('aria-pressed', 'false');
+                            }
+                        });
+                    } else {
+                        // If any other symptom is clicked, deselect "No Symptoms"
+                        const noneButton = document.querySelector('[data-symptom="none"]');
+                        if (noneButton) {
+                            noneButton.classList.remove('selected');
+                            noneButton.setAttribute('aria-pressed', 'false');
+                        }
+                    }
+                    
+                    // Toggle current button
+                    this.classList.toggle('selected');
+                    const isSelected = this.classList.contains('selected');
+                    this.setAttribute('aria-pressed', isSelected.toString());
+                    
+                    // Update hidden input with selected symptoms
+                    const selectedSymptoms = Array.from(symptomButtons)
+                        .filter(btn => btn.classList.contains('selected'))
+                        .map(btn => btn.dataset.symptom);
+                    
+                    symptomsInput.value = selectedSymptoms.join(',');
+                    
+                    // Track symptom selection
+                    trackEvent('symptom_selected', {
+                        symptom: symptom,
+                        selected: isSelected,
+                        total_symptoms: selectedSymptoms.length
+                    });
+                });
+            });
+        }
+        
+        // Form Validation
+        function validateForm(form) {
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    formGroup.classList.add('has-error');
+                    field.classList.add('error');
+                } else {
+                    formGroup.classList.remove('has-error');
+                    field.classList.remove('error');
+                }
+                
+                // Email validation
+                if (field.type === 'email' && field.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                }
+                
+                // Phone validation
+                if (field.type === 'tel' && field.value) {
+                    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+                    if (!phoneRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                }
+            });
+            
+            return isValid;
+        }
+        
+        // Appointment Form Submission
+        async function handleAppointmentSubmission(event) {
             event.preventDefault();
             
-            const answerCount = Object.keys(quizAnswers).length;
-            
-            if (answerCount < totalQuestions) {
-                announceToScreenReader('Please answer all questions to get your complete assessment.');
-                // Focus on first unanswered question
-                const firstUnanswered = quizForm.querySelector('input[type="radio"]:not(:checked)');
-                if (firstUnanswered) {
-                    firstUnanswered.focus();
-                }
+            const form = event.target;
+            if (!validateForm(form)) {
+                showNotification('Please fill in all required fields correctly', 'error');
+                trackEvent('appointment_form_validation_error');
                 return;
             }
             
-            // Calculate total score
-            let totalScore = 0;
-            for (let key in quizAnswers) {
-                totalScore += quizAnswers[key];
-            }
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
             
-            // Show result with proper accessibility
-            quizForm.style.display = 'none';
-            const resultDiv = document.getElementById('quiz-result');
-            resultDiv.style.display = 'block';
-            resultDiv.focus(); // Focus on results for screen readers
+            LoadingStateManager.setLoading(button, true, 'Booking...');
             
-            // Animate gauge with accessibility consideration
-            const gaugeScore = document.getElementById('gaugeScore');
-            let currentScore = 0;
-            const targetScore = totalScore;
-            const increment = targetScore / 30;
+            const appointmentData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                age: formData.get('age'),
+                symptoms: formData.get('symptoms'),
+                preferredDate: formData.get('preferred-date'),
+                preferredTime: formData.get('preferred-time'),
+                sedationInterest: formData.get('sedation-interest'),
+                message: formData.get('message'),
+                serviceInterest: 'Wisdom Teeth Removal',
+                quizScore: formData.get('quiz-score'),
+                source: 'wisdom-teeth-page',
+                timestamp: new Date().toISOString()
+            };
             
-            const gaugeAnimation = setInterval(() => {
-                currentScore += increment;
-                if (currentScore >= targetScore) {
-                    currentScore = targetScore;
-                    clearInterval(gaugeAnimation);
-                    announceToScreenReader(`Assessment complete. Your risk score is ${targetScore}.`);
+            // Track submission
+            trackEvent('appointment_form_submit', {
+                service: 'wisdom_teeth',
+                age_range: appointmentData.age,
+                has_symptoms: appointmentData.symptoms !== '',
+                sedation_preference: appointmentData.sedationInterest || 'undecided',
+                quiz_taken: appointmentData.quizScore !== ''
+            });
+            
+            try {
+                const response = await fetch(API_BASE_URL + API_ENDPOINTS.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                gaugeScore.textContent = Math.round(currentScore);
-                gaugeScore.setAttribute('aria-label', `Risk score: ${Math.round(currentScore)}`);
-            }, 50);
-            
-            // Generate recommendations
-            let recommendation = '';
-            let urgency = '';
-            
-            if (totalScore >= 12) {
-                urgency = 'HIGH PRIORITY';
-                recommendation = 'Multiple indicators suggest wisdom teeth removal is strongly recommended. Schedule a consultation within the next 2 weeks.';
-            } else if (totalScore >= 7) {
-                urgency = 'MODERATE PRIORITY';
-                recommendation = 'You\'re showing signs that extraction may be beneficial. A consultation within the next month is advisable.';
-            } else {
-                urgency = 'LOW PRIORITY';
-                recommendation = 'Currently, your wisdom teeth aren\'t causing significant issues. Regular monitoring is recommended.';
+                
+                const result = await response.json();
+                
+                trackEvent('appointment_booking_success', {
+                    appointment_id: result.appointmentId,
+                    service: 'wisdom_teeth'
+                });
+                
+                showNotification(
+                    `Thank you, ${appointmentData.name}! Your free consultation has been scheduled. We'll contact you within 1 hour to confirm. Remember, the consultation includes free X-rays!`,
+                    'success'
+                );
+                
+                // Reset form
+                form.reset();
+                document.querySelectorAll('.symptom-button, .sedation-card').forEach(element => {
+                    element.classList.remove('selected');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                trackEvent('appointment_booking_error', {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                showNotification(
+                    'Unable to book appointment online. Please call us at (555) 123-4567 for immediate assistance.',
+                    'error'
+                );
+            } finally {
+                LoadingStateManager.setLoading(button, false);
             }
-            
-            document.getElementById('result-text').innerHTML = `<strong>Priority Level: ${urgency}</strong><br>${recommendation}`;
-            
-            // Add specific recommendations
-            const recDiv = document.getElementById('result-recommendations');
-            recDiv.innerHTML = `
-                <h4 style="margin-top: 2rem;">Personalized Recommendations:</h4>
-                <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
-                    ${quizAnswers.pain >= 2 ? '<li>Pain management consultation recommended</li>' : ''}
-                    ${quizAnswers.cleaning >= 2 ? '<li>Increased cavity risk - extraction prevents future problems</li>' : ''}
-                    ${quizAnswers.swelling >= 2 ? '<li>Signs of infection - prompt evaluation needed</li>' : ''}
-                    ${quizAnswers.age === 2 ? '<li>Optimal age for extraction - easier healing</li>' : ''}
-                    ${quizAnswers.dentist >= 2 ? '<li>Professional recommendation supports extraction</li>' : ''}
-                </ul>
-            `;
         }
         
-        // Position Visualizer with keyboard navigation
-        function showPosition(type) {
-            const cards = document.querySelectorAll('.position-card');
-            const activeCard = event.target.closest('.position-card');
-            
-            // Update ARIA states
-            cards.forEach(card => {
-                card.classList.remove('active');
-                card.setAttribute('aria-checked', 'false');
-                card.setAttribute('tabindex', '-1');
+        // Initialize Interactive Elements
+        function initializeInteractiveElements() {
+            // CTA buttons
+            document.querySelectorAll('[data-action]').forEach(button => {
+                button.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    
+                    const action = this.dataset.action;
+                    
+                    // Track all CTA clicks
+                    trackEvent('cta_click', {
+                        action: action,
+                        button_text: this.textContent.trim(),
+                        location: this.closest('section')?.className || 'unknown'
+                    });
+                    
+                    switch(action) {
+                        case 'book-consultation':
+                            document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => document.getElementById('name').focus(), 500);
+                            break;
+                            
+                        case 'take-assessment':
+                            document.getElementById('quiz').scrollIntoView({ behavior: 'smooth' });
+                            break;
+                            
+                        case 'book-from-quiz':
+                            document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => document.getElementById('name').focus(), 500);
+                            break;
+                    }
+                });
             });
             
-            activeCard.classList.add('active');
-            activeCard.setAttribute('aria-checked', 'true');
-            activeCard.setAttribute('tabindex', '0');
+            // Phone links
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    trackEvent('phone_click', {
+                        location: this.closest('section')?.className || 'header'
+                    });
+                });
+            });
             
-            announceToScreenReader(`Selected ${type} position. ${activeCard.querySelector('p').textContent}`);
+            // Mobile touch optimization
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.btn, .quiz-option, .sedation-card, .symptom-button').forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                });
+            }
         }
         
-        // Timeline Functions with enhanced accessibility
-        const timelines = {
-            simple: [
-                { day: 'Day 1', title: 'Immediate Recovery', desc: 'Rest, ice, soft foods only' },
-                { day: 'Day 2-3', title: 'Initial Healing', desc: 'Swelling peaks, continue medications' },
-                { day: 'Day 4-7', title: 'Improvement', desc: 'Return to normal activities gradually' },
-                { day: 'Week 2', title: 'Healed', desc: 'Most patients fully recovered' }
-            ],
-            surgical: [
-                { day: 'Day 1-2', title: 'Post-Surgery Care', desc: 'Strict rest, pain management protocol' },
-                { day: 'Day 3-5', title: 'Swelling Management', desc: 'Peak swelling, switch to warm compress' },
-                { day: 'Week 1', title: 'Stitch Check', desc: 'Follow-up for suture removal if needed' },
-                { day: 'Week 2-3', title: 'Full Recovery', desc: 'Gradual return to all normal foods' }
-            ],
-            multiple: [
-                { day: 'Day 1-3', title: 'Intensive Care', desc: 'Extended rest period, liquid diet' },
-                { day: 'Day 4-7', title: 'Gradual Progress', desc: 'Introduce soft solids, gentle rinses' },
-                { day: 'Week 2', title: 'Healing Check', desc: 'Professional evaluation of all sites' },
-                { day: 'Week 3-4', title: 'Complete Healing', desc: 'All extraction sites fully closed' }
-            ],
-            complex: [
-                { day: 'Day 1-3', title: 'Critical Care', desc: 'Hospital-grade pain management' },
-                { day: 'Week 1', title: 'Close Monitoring', desc: 'Daily check-ins, specialized care' },
-                { day: 'Week 2-3', title: 'Steady Progress', desc: 'Gradual improvement expected' },
-                { day: 'Month 1-2', title: 'Full Recovery', desc: 'Complete healing with follow-ups' }
-            ]
-        };
-        
-        function showTimeline(type) {
-            // Update active button with proper ARIA states
-            const buttons = document.querySelectorAll('.timeline-option');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-            });
-            
-            const activeButton = event.target;
-            activeButton.classList.add('active');
-            activeButton.setAttribute('aria-selected', 'true');
-            
-            // Clear and populate timeline
-            const display = document.getElementById('timelineDisplay');
-            display.innerHTML = '<div class="timeline-line" aria-hidden="true"></div>';
-            
-            timelines[type].forEach((item, index) => {
-                const timelineItem = document.createElement('div');
-                timelineItem.className = 'timeline-item';
-                timelineItem.style.animationDelay = `${index * 0.1}s`;
-                
-                timelineItem.innerHTML = `
-                    <div class="timeline-content">
-                        <h4>${item.day}</h4>
-                        <h5>${item.title}</h5>
-                        <p>${item.desc}</p>
-                    </div>
-                    <div class="timeline-marker" aria-label="Timeline step ${index + 1}">${index + 1}</div>
-                `;
-                
-                display.appendChild(timelineItem);
-            });
-            
-            announceToScreenReader(`Updated timeline for ${type} extraction. ${timelines[type].length} recovery steps shown.`);
-        }
-        
-        // Initialize with simple timeline
+        // Initialize on DOM load
         document.addEventListener('DOMContentLoaded', function() {
-            const firstTimelineButton = document.querySelector('.timeline-option');
-            if (firstTimelineButton) {
-                firstTimelineButton.click();
-            }
-        });
-        
-        // Anxiety Scale Functions with enhanced accessibility
-        function selectAnxiety(level) {
-            const points = document.querySelectorAll('.scale-point');
+            // Set minimum date for appointment picker
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('preferred-date').setAttribute('min', today);
             
-            // Update ARIA states
-            points.forEach(point => {
-                point.classList.remove('selected');
-                point.setAttribute('aria-checked', 'false');
+            // Initialize components
+            initializeQuiz();
+            initializeSedationOptions();
+            initializeFAQ();
+            initializeSymptomSelector();
+            initializeInteractiveElements();
+            
+            // Attach form handler
+            document.querySelector('[data-appointment]').addEventListener('submit', handleAppointmentSubmission);
+            
+            // Real-time validation
+            document.querySelectorAll('input[required], select[required]').forEach(field => {
+                field.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (!this.value.trim()) {
+                        formGroup.classList.add('has-error');
+                        this.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('has-error');
+                        this.classList.remove('error');
+                    }
+                });
             });
             
-            const selectedPoint = event.target;
-            selectedPoint.classList.add('selected');
-            selectedPoint.setAttribute('aria-checked', 'true');
-            
-            // Show recommendation
-            const recDiv = document.getElementById('sedation-recommendation');
-            recDiv.style.display = 'block';
-            
-            let recommendation = '';
-            
-            if (level <= 2) {
-                recommendation = 'Your low anxiety level means local anesthesia should be sufficient for your comfort.';
-            } else if (level <= 4) {
-                recommendation = 'Moderate anxiety can be well-managed with nitrous oxide (laughing gas) for a relaxed experience.';
-            } else {
-                recommendation = 'For high anxiety, IV sedation will ensure you\'re completely comfortable and have no memory of the procedure.';
-            }
-            
-            recDiv.innerHTML = `<h4>Recommended for You:</h4><p>${recommendation}</p>`;
-            announceToScreenReader(`Selected anxiety level ${level}. ${recommendation}`);
-        }
-        
-        // Utility Functions with accessibility
-        function checkPain() {
-            if (confirm('Are you experiencing wisdom tooth pain right now?')) {
-                announceToScreenReader('Connecting you to our emergency line for immediate assistance.');
-                window.location.href = 'tel:+1234567890';
-            }
-        }
-        
-        function scheduleConsultation() {
-            announceToScreenReader('Thank you for your interest! Our scheduling team will contact you within 24 hours to arrange your free consultation.');
-        }
-        
-        // Screen reader announcements
-        function announceToScreenReader(message) {
-            const announcement = document.createElement('div');
-            announcement.setAttribute('aria-live', 'polite');
-            announcement.setAttribute('aria-atomic', 'true');
-            announcement.classList.add('visually-hidden');
-            announcement.textContent = message;
-            
-            document.body.appendChild(announcement);
-            
-            setTimeout(() => {
-                document.body.removeChild(announcement);
-            }, 1000);
-        }
-        
-        // Floating consultation reminder with performance optimization
-        let hasScrolled = false;
-        let scrollTimeout;
-        
-        function handleScroll() {
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-            }
-            
-            scrollTimeout = setTimeout(() => {
-                const scrolled = window.pageYOffset;
-                const height = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercentage = (scrolled / height) * 100;
-                
-                const floatingReminder = document.getElementById('floatingReminder');
-                
-                if (scrollPercentage > 50 && !hasScrolled) {
-                    hasScrolled = true;
-                    floatingReminder.style.display = 'flex';
-                    announceToScreenReader('Consultation scheduling reminder now available at bottom right of page.');
+            // Phone number formatting
+            document.getElementById('phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 6) {
+                    value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+                } else if (value.length >= 3) {
+                    value = value.slice(0, 3) + '-' + value.slice(3);
                 }
-            }, 100);
-        }
-        
-        // Intersection Observer for lazy loading content sections
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '50px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('loaded');
-                    observer.unobserve(entry.target);
+                e.target.value = value;
+            });
+            
+            // Floating button visibility
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', debounce(function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const floatingBtn = document.querySelector('.floating-consultation');
+                
+                if (scrollTop > 300) {
+                    floatingBtn.style.opacity = '1';
+                    floatingBtn.style.transform = 'translateY(0)';
+                } else {
+                    floatingBtn.style.opacity = '0';
+                    floatingBtn.style.transform = 'translateY(100px)';
                 }
-            });
-        }, observerOptions);
-        
-        // Initialize performance optimizations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Observe content sections for lazy loading
-            document.querySelectorAll('.content-section').forEach(section => {
-                observer.observe(section);
-            });
+                
+                lastScrollTop = scrollTop;
+            }, 100));
             
-            // Add optimized scroll listener
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            
-            // Preload critical resources
-            const criticalImages = document.querySelectorAll('img[data-critical]');
-            criticalImages.forEach(img => {
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.as = 'image';
-                link.href = img.dataset.src || img.src;
-                document.head.appendChild(link);
+            // Track page load
+            trackEvent('page_view', {
+                page_title: 'Wisdom Teeth Removal',
+                page_location: window.location.href
             });
-            
-            // Initialize quiz progress
-            const progressBar = document.getElementById('progressBar');
-            progressBar.setAttribute('aria-valuenow', '0');
-            progressBar.setAttribute('aria-valuetext', '0% complete');
-        });
-        
-        // Service Worker registration for offline support (in production)
-        if ('serviceWorker' in navigator && location.protocol === 'https:') {
-            navigator.serviceWorker.register('/sw.js').catch(console.error);
-        }
-        
-        // Error boundary for graceful degradation
-        window.addEventListener('error', function(event) {
-            console.error('JavaScript error:', event.error);
-            // In production, send to error tracking service
         });
     </script>
 </body>

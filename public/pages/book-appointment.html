@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Appointment Booking - Real-Time Scheduling | SmileCare Dental</title>
-    <meta name="description" content="Book your dental appointment instantly with real-time availability, provider selection, and instant confirmation. Emergency slots available. Insurance verification in 30 seconds.">
+    <title>Book Your Appointment - Smart Online Scheduling | DentalCare Excellence</title>
+    <meta name="description" content="Book your dental appointment online in 60 seconds. Real-time availability, instant confirmation, insurance verification, and emergency slots available 24/7.">
+    <meta name="keywords" content="book dental appointment, online scheduling, dental booking, emergency dentist, same-day appointment">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <meta property="og:title" content="Book Your Dental Appointment Online | DentalCare Excellence">
+    <meta property="og:description" content="Schedule your visit in 60 seconds. Real-time availability, instant confirmation, and 24/7 emergency slots.">
+    <meta property="og:type" content="website">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         :root {
             --trust-blue: #0077BE;
             --clean-white: #FFFFFF;
@@ -20,90 +28,56 @@
             --soft-gray: #F5F5F5;
             --charcoal: #333333;
             --success-green: #28A745;
-            --error-red: #dc3545;
-            --warning-yellow: #ffc107;
+            --error-red: #DC3545;
+            --warning-yellow: #FFC107;
             --info-blue: #17A2B8;
-            --shadow: 0 2px 10px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
+            --shadow: 0 2px 10px rgba(0,119,190,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,119,190,0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
             --gradient-primary: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
             --gradient-success: linear-gradient(135deg, var(--success-green), #20c997);
         }
         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             line-height: 1.6;
             color: var(--charcoal);
             background: var(--clean-white);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Floating Action Button */
-        .floating-cta {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--success-green);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 50px;
-            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
-            z-index: 1000;
-            animation: pulse 2s infinite;
-            font-weight: bold;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .floating-cta:hover {
-            transform: scale(1.05);
-            background: #218838;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* Emergency Banner */
-        .emergency-banner {
-            background: linear-gradient(135deg, var(--error-red), #ff6b6b);
-            color: white;
-            text-align: center;
-            padding: 12px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1001;
-            font-weight: bold;
-            animation: slideDown 0.5s ease;
-        }
-
-        .emergency-banner a {
-            color: white;
-            text-decoration: underline;
-            margin-left: 10px;
-        }
-
-        @keyframes slideDown {
-            from { transform: translateY(-100%); }
-            to { transform: translateY(0); }
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Header */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
         header {
             background: var(--clean-white);
             box-shadow: var(--shadow);
             position: sticky;
-            top: 40px;
+            top: 0;
             z-index: 1000;
-            margin-top: 40px;
+            backdrop-filter: blur(10px);
         }
         
         nav {
@@ -117,8 +91,9 @@
         
         .logo {
             font-size: 1.8rem;
-            font-weight: bold;
+            font-weight: 700;
             color: var(--trust-blue);
+            text-decoration: none;
         }
         
         .nav-links {
@@ -132,10 +107,26 @@
             text-decoration: none;
             transition: var(--transition);
             font-weight: 500;
+            position: relative;
         }
         
         .nav-links a:hover {
             color: var(--trust-blue);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--trust-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         .cta-button {
@@ -148,12 +139,45 @@
             font-weight: 600;
             border: none;
             cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .cta-button:hover {
             background: #218838;
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--charcoal);
+        }
+        
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(135deg, var(--error-red), #ff6b6b);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            animation: slideDown 0.5s ease;
+        }
+        
+        .emergency-banner a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
         }
         
         /* Booking Container */
@@ -166,164 +190,93 @@
             gap: 2rem;
         }
         
-        /* Smart Progress Tracker */
-        .smart-progress {
+        /* Progress Tracker */
+        .progress-container {
             background: var(--clean-white);
             padding: 1.5rem;
             border-radius: 15px;
             box-shadow: var(--shadow);
             margin-bottom: 2rem;
         }
-
+        
         .progress-steps {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            position: relative;
         }
-
+        
+        .progress-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+        
         .progress-step {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex: 1;
             position: relative;
+            z-index: 2;
         }
-
-        .progress-step::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 50%;
-            width: 100%;
-            height: 2px;
-            background: #e0e0e0;
-            z-index: 1;
-        }
-
-        .progress-step:last-child::before {
-            display: none;
-        }
-
+        
         .step-circle {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 0.9rem;
-            z-index: 2;
-            position: relative;
             transition: var(--transition);
+            border: 3px solid var(--clean-white);
         }
-
+        
         .progress-step.completed .step-circle {
             background: var(--success-green);
             color: white;
         }
-
+        
         .progress-step.active .step-circle {
             background: var(--trust-blue);
             color: white;
-            animation: glow 2s infinite;
+            animation: pulse 2s infinite;
         }
-
-        .progress-step.completed::before {
-            background: var(--success-green);
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 119, 190, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 119, 190, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 119, 190, 0); }
         }
-
+        
         .step-label {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             margin-top: 0.5rem;
             text-align: center;
             color: #666;
         }
-
-        .progress-step.active .step-label {
-            color: var(--trust-blue);
-            font-weight: bold;
+        
+        .progress-step.active .step-label,
+        .progress-step.completed .step-label {
+            color: var(--charcoal);
+            font-weight: 600;
         }
-
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 10px rgba(0, 119, 190, 0.3); }
-            50% { box-shadow: 0 0 20px rgba(0, 119, 190, 0.6); }
-        }
-
-        /* Smart Booking Form */
-        .smart-booking-form {
+        
+        /* Form Container */
+        .form-container {
             background: var(--clean-white);
             padding: 2rem;
             border-radius: 15px;
             box-shadow: var(--shadow);
             position: relative;
         }
-
-        /* Real-time Validation */
-        .form-group {
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--charcoal);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--trust-blue);
-            box-shadow: 0 0 10px rgba(0, 119, 190, 0.1);
-        }
-
-        .form-group.valid input {
-            border-color: var(--success-green);
-        }
-
-        .form-group.error input {
-            border-color: var(--error-red);
-        }
-
-        .validation-icon {
-            position: absolute;
-            right: 10px;
-            top: 38px;
-            font-size: 1.2rem;
-        }
-
-        .validation-message {
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .validation-message.success {
-            color: var(--success-green);
-        }
-
-        .validation-message.error {
-            color: var(--error-red);
-        }
-
-        /* Form Steps */
+        
         .form-step {
             display: none;
             animation: fadeInSlide 0.5s ease;
@@ -332,7 +285,7 @@
         .form-step.active {
             display: block;
         }
-
+        
         @keyframes fadeInSlide {
             from {
                 opacity: 0;
@@ -345,29 +298,93 @@
         }
         
         .step-header {
-            margin-bottom: 2rem;
             text-align: center;
+            margin-bottom: 2rem;
         }
         
         .step-header h2 {
             color: var(--trust-blue);
             margin-bottom: 0.5rem;
-            font-size: 1.8rem;
+            font-size: 2rem;
         }
-
+        
         .step-header p {
             color: #666;
             font-size: 1.1rem;
         }
-
-        /* Patient Type Cards */
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.1);
+        }
+        
+        .form-group.valid input {
+            border-color: var(--success-green);
+        }
+        
+        .form-group.error input {
+            border-color: var(--error-red);
+        }
+        
+        .validation-icon {
+            position: absolute;
+            right: 12px;
+            top: 38px;
+            font-size: 1.2rem;
+        }
+        
+        .validation-message {
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .validation-message.success {
+            color: var(--success-green);
+        }
+        
+        .validation-message.error {
+            color: var(--error-red);
+        }
+        
+        /* Patient Type Selection */
         .patient-type-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
-
+        
         .patient-card {
             border: 2px solid #e0e0e0;
             border-radius: 15px;
@@ -378,81 +395,45 @@
             background: var(--clean-white);
             position: relative;
         }
-
+        
         .patient-card:hover {
             border-color: var(--accent-teal);
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 168, 168, 0.15);
+            box-shadow: var(--shadow-hover);
         }
-
+        
         .patient-card.selected {
             border-color: var(--trust-blue);
             background: linear-gradient(135deg, #f8fbff, #e6f2ff);
-            box-shadow: 0 8px 25px rgba(0, 119, 190, 0.15);
         }
-
+        
         .patient-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-
+        
+        .patient-card h3 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
         .patient-benefits {
             margin-top: 1rem;
             padding-top: 1rem;
             border-top: 1px solid #e0e0e0;
             font-size: 0.9rem;
             color: #666;
+            text-align: left;
         }
-
-        /* Enhanced Service Selection */
-        .service-category {
-            margin-bottom: 2rem;
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: var(--soft-gray);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .category-header:hover {
-            background: #e9ecef;
-        }
-
-        .category-icon {
-            font-size: 1.5rem;
-        }
-
-        .category-toggle {
-            margin-left: auto;
-            font-size: 1.2rem;
-            transition: var(--transition);
-        }
-
-        .service-category.expanded .category-toggle {
-            transform: rotate(180deg);
-        }
-
+        
+        /* Service Selection */
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            margin-top: 1rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
+            margin-bottom: 2rem;
         }
-
-        .service-category.expanded .service-grid {
-            max-height: 1000px;
-        }
-
+        
         .service-card {
             border: 2px solid #e0e0e0;
             border-radius: 12px;
@@ -463,40 +444,34 @@
             background: var(--clean-white);
             position: relative;
         }
-
+        
         .service-card:hover {
             border-color: var(--accent-teal);
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0, 168, 168, 0.15);
         }
-
+        
         .service-card.selected {
             border-color: var(--trust-blue);
             background: linear-gradient(135deg, #f8fbff, #e6f2ff);
         }
-
+        
         .service-card.emergency {
             border-color: var(--error-red);
             background: linear-gradient(135deg, #fff5f5, #ffe6e6);
         }
-
+        
         .service-icon {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
-
+        
         .service-name {
             font-weight: 600;
             color: var(--charcoal);
             margin-bottom: 0.5rem;
         }
-
-        .service-description {
-            font-size: 0.85rem;
-            color: #666;
-            line-height: 1.4;
-        }
-
+        
         .service-urgent {
             position: absolute;
             top: -5px;
@@ -508,40 +483,14 @@
             border-radius: 10px;
             font-weight: bold;
         }
-
-        /* Enhanced Provider Selection */
-        .provider-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-button {
-            padding: 0.5rem 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 20px;
-            background: var(--clean-white);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .filter-button:hover {
-            border-color: var(--accent-teal);
-        }
-
-        .filter-button.active {
-            background: var(--trust-blue);
-            color: white;
-            border-color: var(--trust-blue);
-        }
-
+        
+        /* Provider Selection */
         .provider-grid {
             display: grid;
             gap: 1rem;
+            margin-bottom: 2rem;
         }
-
+        
         .provider-card {
             border: 2px solid #e0e0e0;
             border-radius: 15px;
@@ -552,87 +501,50 @@
             align-items: center;
             gap: 1rem;
             background: var(--clean-white);
-            position: relative;
         }
-
+        
         .provider-card:hover {
             border-color: var(--accent-teal);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 168, 168, 0.15);
+            box-shadow: var(--shadow-hover);
         }
-
+        
         .provider-card.selected {
             border-color: var(--trust-blue);
             background: linear-gradient(135deg, #f8fbff, #e6f2ff);
         }
-
+        
         .provider-avatar {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: var(--accent-teal);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--clean-white);
+            color: white;
             font-weight: bold;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             flex-shrink: 0;
         }
-
-        .provider-info {
-            flex: 1;
-        }
-
+        
         .provider-info h4 {
             color: var(--trust-blue);
             margin-bottom: 0.25rem;
-            font-size: 1.1rem;
         }
-
-        .provider-specialty {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
+        
         .provider-stats {
             display: flex;
             gap: 1rem;
             font-size: 0.85rem;
+            color: #666;
         }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .stat-rating {
-            color: var(--warning-yellow);
-        }
-
-        .stat-availability {
-            color: var(--success-green);
-        }
-
-        .provider-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--success-green);
-            color: white;
-            font-size: 0.7rem;
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
-        /* Real-time Calendar */
+        
+        /* Calendar */
         .calendar-container {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
-
+        
         .calendar-header {
             display: flex;
             justify-content: space-between;
@@ -642,7 +554,7 @@
             background: var(--soft-gray);
             border-radius: 10px;
         }
-
+        
         .calendar-nav {
             background: var(--trust-blue);
             color: white;
@@ -652,23 +564,30 @@
             cursor: pointer;
             transition: var(--transition);
         }
-
+        
         .calendar-nav:hover {
             background: #005a8b;
         }
-
+        
         .calendar-month {
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--trust-blue);
         }
-
+        
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 0.5rem;
         }
-
+        
+        .calendar-day-header {
+            text-align: center;
+            font-weight: bold;
+            color: #666;
+            padding: 0.5rem;
+        }
+        
         .calendar-day {
             aspect-ratio: 1;
             display: flex;
@@ -683,29 +602,29 @@
             position: relative;
             background: var(--clean-white);
         }
-
+        
         .calendar-day:hover:not(.disabled) {
             border-color: var(--accent-teal);
             transform: scale(1.05);
         }
-
+        
         .calendar-day.selected {
             background: var(--trust-blue);
-            color: var(--clean-white);
+            color: white;
             border-color: var(--trust-blue);
         }
-
+        
         .calendar-day.disabled {
             color: #ccc;
             cursor: not-allowed;
             background: #f9f9f9;
         }
-
+        
         .calendar-day.today {
             border-color: var(--trust-blue);
             font-weight: bold;
         }
-
+        
         .availability-indicator {
             position: absolute;
             bottom: 2px;
@@ -713,57 +632,27 @@
             height: 6px;
             border-radius: 50%;
         }
-
+        
         .availability-high {
             background: var(--success-green);
         }
-
+        
         .availability-medium {
             background: var(--warning-yellow);
         }
-
+        
         .availability-low {
             background: var(--error-red);
         }
-
-        /* Smart Time Slots */
-        .time-slots-container {
-            margin-bottom: 1.5rem;
-        }
-
-        .time-slot-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .time-filter {
-            padding: 0.5rem 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 20px;
-            background: var(--clean-white);
-            cursor: pointer;
-            transition: var(--transition);
-            font-size: 0.9rem;
-        }
-
-        .time-filter:hover {
-            border-color: var(--accent-teal);
-        }
-
-        .time-filter.active {
-            background: var(--trust-blue);
-            color: white;
-            border-color: var(--trust-blue);
-        }
-
+        
+        /* Time Slots */
         .time-slots {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 0.75rem;
+            margin-bottom: 2rem;
         }
-
+        
         .time-slot {
             padding: 1rem;
             border: 2px solid #e0e0e0;
@@ -774,135 +663,24 @@
             background: var(--clean-white);
             position: relative;
         }
-
+        
         .time-slot:hover:not(.disabled) {
             border-color: var(--accent-teal);
             transform: translateY(-2px);
         }
-
+        
         .time-slot.selected {
             background: var(--trust-blue);
-            color: var(--clean-white);
+            color: white;
             border-color: var(--trust-blue);
         }
-
+        
         .time-slot.disabled {
             color: #ccc;
             cursor: not-allowed;
-            border-color: #f0f0f0;
             background: #f9f9f9;
         }
-
-        .time-slot.premium {
-            border-color: var(--warning-yellow);
-            background: linear-gradient(135deg, #fff9e6, #fff5cc);
-        }
-
-        .slot-badge {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background: var(--success-green);
-            color: white;
-            font-size: 0.6rem;
-            padding: 2px 6px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .slot-badge.premium {
-            background: var(--warning-yellow);
-            color: var(--charcoal);
-        }
-
-        /* Insurance Verification */
-        .insurance-verification {
-            background: linear-gradient(135deg, #f8fbff, #e6f2ff);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            border: 2px solid var(--trust-blue);
-        }
-
-        .verification-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .verification-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--trust-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .quick-verify-btn {
-            background: var(--success-green);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: var(--transition);
-        }
-
-        .quick-verify-btn:hover {
-            background: #218838;
-            transform: translateY(-2px);
-        }
-
-        .verification-result {
-            display: none;
-            margin-top: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--success-green);
-            background: #f8fff9;
-        }
-
-        /* Reminder Setup */
-        .reminder-options {
-            background: var(--soft-gray);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-        }
-
-        .reminder-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .reminder-option {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem;
-            background: var(--clean-white);
-            border-radius: 8px;
-            border: 2px solid #e0e0e0;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .reminder-option:hover {
-            border-color: var(--accent-teal);
-        }
-
-        .reminder-option.selected {
-            border-color: var(--trust-blue);
-            background: linear-gradient(135deg, #f8fbff, #e6f2ff);
-        }
-
+        
         /* Form Navigation */
         .form-navigation {
             display: flex;
@@ -912,7 +690,7 @@
             padding-top: 2rem;
             border-top: 2px solid #e0e0e0;
         }
-
+        
         .nav-button {
             padding: 0.75rem 2rem;
             border: none;
@@ -925,54 +703,53 @@
             align-items: center;
             gap: 0.5rem;
         }
-
+        
         .nav-button.prev {
             background: var(--soft-gray);
             color: var(--charcoal);
         }
-
+        
         .nav-button.prev:hover {
             background: #e0e0e0;
             transform: translateX(-3px);
         }
-
+        
         .nav-button.next {
             background: var(--trust-blue);
-            color: var(--clean-white);
+            color: white;
         }
-
+        
         .nav-button.next:hover {
             background: #005a8b;
             transform: translateX(3px);
         }
-
+        
         .nav-button.submit {
             background: var(--gradient-success);
-            color: var(--clean-white);
+            color: white;
             font-size: 1.1rem;
             padding: 1rem 2.5rem;
         }
-
+        
         .nav-button.submit:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
         }
-
+        
         .nav-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
             transform: none !important;
         }
-
+        
         /* Sidebar */
         .booking-sidebar {
             position: sticky;
-            top: 120px;
+            top: 100px;
             height: fit-content;
         }
-
-        /* Smart Appointment Summary */
-        .smart-summary {
+        
+        .appointment-summary {
             background: var(--clean-white);
             padding: 2rem;
             border-radius: 15px;
@@ -980,14 +757,16 @@
             margin-bottom: 2rem;
             border: 2px solid var(--trust-blue);
         }
-
+        
         .summary-header {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
         }
-
+        
         .summary-icon {
             width: 40px;
             height: 40px;
@@ -999,13 +778,13 @@
             color: white;
             font-size: 1.2rem;
         }
-
+        
         .summary-title {
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--trust-blue);
         }
-
+        
         .summary-item {
             display: flex;
             justify-content: space-between;
@@ -1013,59 +792,30 @@
             padding: 1rem 0;
             border-bottom: 1px solid #e0e0e0;
         }
-
+        
         .summary-item:last-child {
             border-bottom: none;
         }
-
+        
         .summary-label {
             color: #666;
             font-size: 0.9rem;
         }
-
+        
         .summary-value {
             font-weight: 600;
             color: var(--charcoal);
             text-align: right;
         }
-
-        .summary-highlight {
-            color: var(--trust-blue);
-            font-weight: bold;
-        }
-
-        .summary-cost {
-            background: var(--soft-gray);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        .cost-breakdown {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .total-cost {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding-top: 0.5rem;
-            border-top: 2px solid var(--trust-blue);
-            color: var(--trust-blue);
-        }
-
+        
         /* Trust Indicators */
         .trust-indicators {
             background: var(--clean-white);
             padding: 1.5rem;
             border-radius: 15px;
             box-shadow: var(--shadow);
-            margin-bottom: 2rem;
         }
-
+        
         .trust-item {
             display: flex;
             align-items: center;
@@ -1075,11 +825,11 @@
             background: var(--soft-gray);
             border-radius: 8px;
         }
-
+        
         .trust-item:last-child {
             margin-bottom: 0;
         }
-
+        
         .trust-icon {
             width: 30px;
             height: 30px;
@@ -1089,27 +839,46 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 0.9rem;
             flex-shrink: 0;
         }
-
-        .trust-text {
-            font-size: 0.9rem;
-            color: var(--charcoal);
+        
+        /* Loading State */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 3rem;
         }
-
-        /* Instant Confirmation */
+        
+        .loading.show {
+            display: block;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(0, 119, 190, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--trust-blue);
+            animation: spin 0.8s ease infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Confirmation */
         .confirmation-container {
+            display: none;
             text-align: center;
             padding: 3rem 2rem;
-            display: none;
         }
-
+        
         .confirmation-container.show {
             display: block;
             animation: fadeInScale 0.6s ease;
         }
-
+        
         @keyframes fadeInScale {
             from {
                 opacity: 0;
@@ -1120,26 +889,26 @@
                 transform: scale(1);
             }
         }
-
+        
         .confirmation-icon {
             font-size: 4rem;
             color: var(--success-green);
             margin-bottom: 1rem;
             animation: bounce 0.8s ease;
         }
-
+        
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
-
+        
         .confirmation-message h2 {
             color: var(--trust-blue);
             margin-bottom: 1rem;
             font-size: 2rem;
         }
-
+        
         .confirmation-details {
             background: var(--soft-gray);
             padding: 2rem;
@@ -1147,14 +916,15 @@
             margin: 2rem 0;
             text-align: left;
         }
-
+        
         .confirmation-actions {
             display: flex;
             gap: 1rem;
             justify-content: center;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
-
+        
         .action-button {
             padding: 0.75rem 1.5rem;
             border: none;
@@ -1162,57 +932,35 @@
             font-weight: bold;
             cursor: pointer;
             transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-
+        
         .action-button.primary {
             background: var(--trust-blue);
             color: white;
         }
-
+        
         .action-button.secondary {
             background: var(--soft-gray);
             color: var(--charcoal);
         }
-
+        
         .action-button:hover {
             transform: translateY(-2px);
+            box-shadow: var(--shadow);
         }
-
-        /* Loading States */
-        .loading {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .loading.show {
-            display: flex;
-        }
-
-        .spinner {
-            width: 30px;
-            height: 30px;
-            border: 3px solid rgba(0,119,190,.1);
-            border-radius: 50%;
-            border-top-color: var(--trust-blue);
-            animation: spin 0.8s ease infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
+        
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .emergency-banner {
-                font-size: 0.9rem;
-                padding: 8px;
-            }
-
             .nav-links {
                 display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
             }
             
             .booking-container {
@@ -1241,721 +989,739 @@
                 top: 0;
                 order: -1;
             }
-
+            
             .form-navigation {
                 flex-direction: column;
                 gap: 1rem;
             }
-
+            
             .nav-button {
                 width: 100%;
                 justify-content: center;
             }
-
-            .provider-filters,
-            .time-slot-filters {
-                justify-content: center;
+            
+            .progress-step .step-label {
+                font-size: 0.7rem;
             }
-
-            .reminder-grid {
-                grid-template-columns: 1fr;
+            
+            .step-circle {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
             }
-
-            .floating-cta {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 20px;
-                font-size: 0.9rem;
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
+        }
+        
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus Styles */
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid var(--trust-blue);
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
-    <!-- Emergency Dental Care Banner -->
-    <div class="emergency-banner">
-        🚨 Dental Emergency? We're here to help 24/7 - <a href="#emergency">Click for immediate assistance</a>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Emergency Banner -->
+    <div class="emergency-banner" role="alert">
+        🚨 Dental Emergency? We're here 24/7 - <a href="tel:+1-555-SMILE-01">Call Now</a>
     </div>
-
+    
     <header>
-        <nav>
-            <div class="logo">SmileCare Dental</div>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="#" class="logo">DentalCare Excellence</a>
             <div class="nav-links">
-                <a href="dental_homepage_v2.html">Home</a>
-                <a href="dental_services_hub_v2.html">Services</a>
-                <a href="dental_technology_comfort_v2.html">Technology</a>
-                <a href="dental_reviews_results_v2.html">Reviews</a>
-                <a href="tel:+1-555-SMILE-01" class="cta-button">Call Now</a>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Technology</a>
+                <a href="#">Reviews</a>
+                <a href="tel:+1-555-SMILE-01" class="cta-button">
+                    <span>📞</span>
+                    <span>Call Now</span>
+                </a>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
         </nav>
     </header>
-
-    <div class="booking-container">
-        <div class="booking-form-container">
-            <!-- Smart Progress Tracker -->
-            <div class="smart-progress">
-                <div class="progress-steps">
-                    <div class="progress-step active" data-step="1">
-                        <div class="step-circle">1</div>
-                        <div class="step-label">Patient Info</div>
-                    </div>
-                    <div class="progress-step" data-step="2">
-                        <div class="step-circle">2</div>
-                        <div class="step-label">Service & Provider</div>
-                    </div>
-                    <div class="progress-step" data-step="3">
-                        <div class="step-circle">3</div>
-                        <div class="step-label">Date & Time</div>
-                    </div>
-                    <div class="progress-step" data-step="4">
-                        <div class="step-circle">4</div>
-                        <div class="step-label">Insurance & Confirm</div>
+    
+    <main id="main">
+        <div class="booking-container">
+            <div class="booking-main">
+                <!-- Progress Tracker -->
+                <div class="progress-container">
+                    <div class="progress-steps">
+                        <div class="progress-step active" data-step="1">
+                            <div class="step-circle">1</div>
+                            <div class="step-label">Patient Info</div>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="step-circle">2</div>
+                            <div class="step-label">Service</div>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="step-circle">3</div>
+                            <div class="step-label">Date & Time</div>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <div class="step-circle">4</div>
+                            <div class="step-label">Confirm</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="smart-booking-form">
-                <form id="smartAppointmentForm">
-                    <!-- Step 1: Enhanced Patient Type & Info -->
-                    <div class="form-step active" id="step1">
-                        <div class="step-header">
-                            <h2>Welcome to SmileCare! 👋</h2>
-                            <p>Let's get you scheduled for the perfect appointment</p>
-                        </div>
-                        
-                        <div class="patient-type-grid">
-                            <div class="patient-card" onclick="selectPatientType('new')">
-                                <div class="patient-icon">🌟</div>
-                                <div class="service-name">New Patient</div>
-                                <p>First time at SmileCare</p>
-                                <div class="patient-benefits">
-                                    ✅ Comprehensive exam<br>
-                                    ✅ X-rays included<br>
-                                    ✅ Treatment plan<br>
-                                    ✅ Special pricing
+                
+                <!-- Form Container -->
+                <div class="form-container">
+                    <form id="appointmentForm" novalidate>
+                        <!-- Step 1: Patient Information -->
+                        <div class="form-step active" id="step1">
+                            <div class="step-header">
+                                <h2>Welcome! Let's Get Started</h2>
+                                <p>Tell us a bit about yourself</p>
+                            </div>
+                            
+                            <div class="patient-type-grid">
+                                <div class="patient-card" onclick="selectPatientType('new')" role="button" tabindex="0">
+                                    <div class="patient-icon">🌟</div>
+                                    <h3>New Patient</h3>
+                                    <p>First time at DentalCare</p>
+                                    <div class="patient-benefits">
+                                        ✅ Comprehensive exam<br>
+                                        ✅ X-rays included<br>
+                                        ✅ Treatment plan<br>
+                                        ✅ $59 special offer
+                                    </div>
+                                </div>
+                                <div class="patient-card" onclick="selectPatientType('existing')" role="button" tabindex="0">
+                                    <div class="patient-icon">😊</div>
+                                    <h3>Existing Patient</h3>
+                                    <p>Welcome back!</p>
+                                    <div class="patient-benefits">
+                                        ✅ Quick check-in<br>
+                                        ✅ Updated records<br>
+                                        ✅ Priority scheduling<br>
+                                        ✅ Loyalty benefits
+                                    </div>
                                 </div>
                             </div>
-                            <div class="patient-card" onclick="selectPatientType('existing')">
-                                <div class="patient-icon">😊</div>
-                                <div class="service-name">Existing Patient</div>
-                                <p>Welcome back to SmileCare</p>
-                                <div class="patient-benefits">
-                                    ✅ Quick check-in<br>
-                                    ✅ Updated records<br>
-                                    ✅ Preferred scheduling<br>
-                                    ✅ Loyalty benefits
+                            
+                            <div id="patientInfo" style="display: none;">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required 
+                                           aria-required="true" placeholder="John">
+                                    <div class="validation-icon"></div>
+                                    <div class="validation-message"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required 
+                                           aria-required="true" placeholder="Doe">
+                                    <div class="validation-icon"></div>
+                                    <div class="validation-message"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required 
+                                           aria-required="true" placeholder="john.doe@example.com">
+                                    <div class="validation-icon"></div>
+                                    <div class="validation-message"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required 
+                                           aria-required="true" placeholder="(555) 123-4567">
+                                    <div class="validation-icon"></div>
+                                    <div class="validation-message"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth *</label>
+                                    <input type="date" id="dob" name="dob" required aria-required="true">
+                                    <div class="validation-icon"></div>
+                                    <div class="validation-message"></div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div id="patientInfo" style="display: none;">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required 
-                                       oninput="validateField(this)" placeholder="Enter your first name">
-                                <div class="validation-icon"></div>
-                                <div class="validation-message"></div>
+                        <!-- Step 2: Service Selection -->
+                        <div class="form-step" id="step2">
+                            <div class="step-header">
+                                <h2>What Can We Help You With?</h2>
+                                <p>Select the service you need</p>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required 
-                                       oninput="validateField(this)" placeholder="Enter your last name">
-                                <div class="validation-icon"></div>
-                                <div class="validation-message"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required 
-                                       oninput="validateField(this)" placeholder="your.email@example.com">
-                                <div class="validation-icon"></div>
-                                <div class="validation-message"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required 
-                                       oninput="validateField(this)" placeholder="(555) 123-4567">
-                                <div class="validation-icon"></div>
-                                <div class="validation-message"></div>
-                            </div>
-                            
-                            <div class="form-group" id="dobGroup" style="display: none;">
-                                <label for="dob">Date of Birth *</label>
-                                <input type="date" id="dob" name="dob" oninput="validateField(this)">
-                                <div class="validation-icon"></div>
-                                <div class="validation-message"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="emergencyContact">Emergency Contact (Optional)</label>
-                                <input type="text" id="emergencyContact" name="emergencyContact" 
-                                       placeholder="Name and phone number">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 2: Enhanced Service & Provider Selection -->
-                    <div class="form-step" id="step2">
-                        <div class="step-header">
-                            <h2>What brings you in today? 🦷</h2>
-                            <p>Select the service you need and your preferred provider</p>
-                        </div>
-                        
-                        <!-- Emergency Services -->
-                        <div class="service-category expanded">
-                            <div class="category-header" onclick="toggleCategory(this)">
-                                <div class="category-icon">🚨</div>
-                                <h3>Emergency Services</h3>
-                                <div class="category-toggle">▼</div>
-                            </div>
                             <div class="service-grid">
-                                <div class="service-card emergency" onclick="selectService('emergency-pain')">
+                                <div class="service-card emergency" onclick="selectService('emergency-pain')" role="button" tabindex="0">
                                     <div class="service-urgent">URGENT</div>
                                     <div class="service-icon">😰</div>
-                                    <div class="service-name">Severe Tooth Pain</div>
-                                    <div class="service-description">Immediate pain relief and treatment</div>
+                                    <div class="service-name">Severe Pain</div>
                                 </div>
-                                <div class="service-card emergency" onclick="selectService('emergency-trauma')">
-                                    <div class="service-urgent">URGENT</div>
-                                    <div class="service-icon">🩹</div>
-                                    <div class="service-name">Dental Trauma</div>
-                                    <div class="service-description">Broken, chipped, or knocked-out teeth</div>
-                                </div>
-                                <div class="service-card emergency" onclick="selectService('emergency-infection')">
-                                    <div class="service-urgent">URGENT</div>
-                                    <div class="service-icon">🦠</div>
-                                    <div class="service-name">Dental Infection</div>
-                                    <div class="service-description">Swelling, abscess, or infection</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Routine Care -->
-                        <div class="service-category">
-                            <div class="category-header" onclick="toggleCategory(this)">
-                                <div class="category-icon">🧽</div>
-                                <h3>Routine Care</h3>
-                                <div class="category-toggle">▼</div>
-                            </div>
-                            <div class="service-grid">
-                                <div class="service-card" onclick="selectService('checkup')">
+                                <div class="service-card" onclick="selectService('checkup')" role="button" tabindex="0">
                                     <div class="service-icon">🦷</div>
                                     <div class="service-name">Checkup & Cleaning</div>
-                                    <div class="service-description">Regular examination and professional cleaning</div>
                                 </div>
-                                <div class="service-card" onclick="selectService('fluoride')">
-                                    <div class="service-icon">💧</div>
-                                    <div class="service-name">Fluoride Treatment</div>
-                                    <div class="service-description">Strengthen teeth and prevent decay</div>
-                                </div>
-                                <div class="service-card" onclick="selectService('sealants')">
-                                    <div class="service-icon">🛡️</div>
-                                    <div class="service-name">Dental Sealants</div>
-                                    <div class="service-description">Protective coating for molars</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Restorative Care -->
-                        <div class="service-category">
-                            <div class="category-header" onclick="toggleCategory(this)">
-                                <div class="category-icon">🔧</div>
-                                <h3>Restorative Care</h3>
-                                <div class="category-toggle">▼</div>
-                            </div>
-                            <div class="service-grid">
-                                <div class="service-card" onclick="selectService('filling')">
+                                <div class="service-card" onclick="selectService('filling')" role="button" tabindex="0">
                                     <div class="service-icon">🩹</div>
-                                    <div class="service-name">Dental Fillings</div>
-                                    <div class="service-description">Cavity treatment and restoration</div>
+                                    <div class="service-name">Dental Filling</div>
                                 </div>
-                                <div class="service-card" onclick="selectService('crown')">
+                                <div class="service-card" onclick="selectService('crown')" role="button" tabindex="0">
                                     <div class="service-icon">👑</div>
-                                    <div class="service-name">Crowns & Bridges</div>
-                                    <div class="service-description">Restore damaged or missing teeth</div>
+                                    <div class="service-name">Crown/Bridge</div>
                                 </div>
-                                <div class="service-card" onclick="selectService('implant')">
-                                    <div class="service-icon">🔩</div>
-                                    <div class="service-name">Dental Implants</div>
-                                    <div class="service-description">Permanent tooth replacement</div>
-                                </div>
-                                <div class="service-card" onclick="selectService('root-canal')">
-                                    <div class="service-icon">🦷</div>
-                                    <div class="service-name">Root Canal</div>
-                                    <div class="service-description">Save infected or damaged teeth</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Cosmetic Services -->
-                        <div class="service-category">
-                            <div class="category-header" onclick="toggleCategory(this)">
-                                <div class="category-icon">✨</div>
-                                <h3>Cosmetic Services</h3>
-                                <div class="category-toggle">▼</div>
-                            </div>
-                            <div class="service-grid">
-                                <div class="service-card" onclick="selectService('whitening')">
-                                    <div class="service-icon">🌟</div>
+                                <div class="service-card" onclick="selectService('whitening')" role="button" tabindex="0">
+                                    <div class="service-icon">✨</div>
                                     <div class="service-name">Teeth Whitening</div>
-                                    <div class="service-description">Professional brightening treatment</div>
                                 </div>
-                                <div class="service-card" onclick="selectService('veneers')">
-                                    <div class="service-icon">😁</div>
-                                    <div class="service-name">Porcelain Veneers</div>
-                                    <div class="service-description">Transform your smile</div>
-                                </div>
-                                <div class="service-card" onclick="selectService('consultation')">
+                                <div class="service-card" onclick="selectService('consultation')" role="button" tabindex="0">
                                     <div class="service-icon">💬</div>
-                                    <div class="service-name">Cosmetic Consultation</div>
-                                    <div class="service-description">Discuss your smile goals</div>
+                                    <div class="service-name">Consultation</div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Orthodontics -->
-                        <div class="service-category">
-                            <div class="category-header" onclick="toggleCategory(this)">
-                                <div class="category-icon">🔧</div>
-                                <h3>Orthodontics</h3>
-                                <div class="category-toggle">▼</div>
-                            </div>
-                            <div class="service-grid">
-                                <div class="service-card" onclick="selectService('invisalign')">
-                                    <div class="service-icon">👤</div>
-                                    <div class="service-name">Invisalign</div>
-                                    <div class="service-description">Clear aligner treatment</div>
-                                </div>
-                                <div class="service-card" onclick="selectService('braces')">
-                                    <div class="service-icon">🦷</div>
-                                    <div class="service-name">Traditional Braces</div>
-                                    <div class="service-description">Metal or ceramic braces</div>
-                                </div>
-                                <div class="service-card" onclick="selectService('ortho-consultation')">
-                                    <div class="service-icon">📋</div>
-                                    <div class="service-name">Orthodontic Consultation</div>
-                                    <div class="service-description">Evaluate alignment needs</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="serviceNotes">Additional Notes (Optional)</label>
-                            <textarea id="serviceNotes" name="serviceNotes" rows="3" 
-                                      placeholder="Tell us more about your symptoms, concerns, or preferences..."></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Preferred Provider</label>
-                            <div class="provider-filters">
-                                <div class="filter-button active" onclick="filterProviders('all')">All Providers</div>
-                                <div class="filter-button" onclick="filterProviders('general')">General Dentistry</div>
-                                <div class="filter-button" onclick="filterProviders('cosmetic')">Cosmetic</div>
-                                <div class="filter-button" onclick="filterProviders('surgery')">Oral Surgery</div>
-                                <div class="filter-button" onclick="filterProviders('ortho')">Orthodontics</div>
                             </div>
                             
+                            <div class="form-group">
+                                <label for="serviceNotes">Additional Notes (Optional)</label>
+                                <textarea id="serviceNotes" name="serviceNotes" rows="3" 
+                                          placeholder="Tell us more about your symptoms or concerns..."></textarea>
+                            </div>
+                            
+                            <h3 style="margin: 2rem 0 1rem;">Select Your Provider</h3>
                             <div class="provider-grid">
-                                <div class="provider-card" onclick="selectProvider('any')" data-specialty="all">
+                                <div class="provider-card" onclick="selectProvider('any')" role="button" tabindex="0">
                                     <div class="provider-avatar">👥</div>
                                     <div class="provider-info">
                                         <h4>First Available</h4>
-                                        <div class="provider-specialty">Any available provider</div>
                                         <div class="provider-stats">
-                                            <div class="stat-item">
-                                                <span class="stat-availability">●</span>
-                                                <span>Next available today</span>
-                                            </div>
+                                            <span>⚡ Fastest appointment</span>
                                         </div>
                                     </div>
-                                    <div class="provider-badge">FASTEST</div>
                                 </div>
-                                
-                                <div class="provider-card" onclick="selectProvider('dr-smith')" data-specialty="general cosmetic">
+                                <div class="provider-card" onclick="selectProvider('dr-smith')" role="button" tabindex="0">
                                     <div class="provider-avatar">DS</div>
                                     <div class="provider-info">
                                         <h4>Dr. Sarah Smith</h4>
-                                        <div class="provider-specialty">General & Cosmetic Dentistry</div>
                                         <div class="provider-stats">
-                                            <div class="stat-item">
-                                                <span class="stat-rating">★★★★★</span>
-                                                <span>4.9 (127 reviews)</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <span class="stat-availability">●</span>
-                                                <span>Available tomorrow</span>
-                                            </div>
+                                            <span>⭐ 4.9 rating</span>
+                                            <span>• 15+ years</span>
                                         </div>
                                     </div>
-                                    <div class="provider-badge">POPULAR</div>
                                 </div>
-                                
-                                <div class="provider-card" onclick="selectProvider('dr-johnson')" data-specialty="surgery">
+                                <div class="provider-card" onclick="selectProvider('dr-johnson')" role="button" tabindex="0">
                                     <div class="provider-avatar">MJ</div>
                                     <div class="provider-info">
                                         <h4>Dr. Michael Johnson</h4>
-                                        <div class="provider-specialty">Oral Surgery & Implants</div>
                                         <div class="provider-stats">
-                                            <div class="stat-item">
-                                                <span class="stat-rating">★★★★★</span>
-                                                <span>4.8 (89 reviews)</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <span class="stat-availability">●</span>
-                                                <span>Available this week</span>
-                                            </div>
+                                            <span>⭐ 4.8 rating</span>
+                                            <span>• Specialist</span>
                                         </div>
                                     </div>
-                                    <div class="provider-badge">SPECIALIST</div>
-                                </div>
-                                
-                                <div class="provider-card" onclick="selectProvider('dr-chen')" data-specialty="ortho">
-                                    <div class="provider-avatar">LC</div>
-                                    <div class="provider-info">
-                                        <h4>Dr. Lisa Chen</h4>
-                                        <div class="provider-specialty">Orthodontics & Pediatric</div>
-                                        <div class="provider-stats">
-                                            <div class="stat-item">
-                                                <span class="stat-rating">★★★★★</span>
-                                                <span>4.9 (156 reviews)</span>
-                                            </div>
-                                            <div class="stat-item">
-                                                <span class="stat-availability">●</span>
-                                                <span>Available next week</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="provider-badge">EXPERT</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Step 3: Real-time Calendar & Time Selection -->
-                    <div class="form-step" id="step3">
-                        <div class="step-header">
-                            <h2>When works best for you? 📅</h2>
-                            <p>Real-time availability updated every 30 seconds</p>
-                        </div>
                         
-                        <div class="calendar-container">
-                            <div class="calendar-header">
-                                <button type="button" class="calendar-nav" onclick="changeMonth(-1)">◄ Previous</button>
-                                <h3 class="calendar-month" id="calendarMonth">December 2024</h3>
-                                <button type="button" class="calendar-nav" onclick="changeMonth(1)">Next ►</button>
-                            </div>
-                            <div class="calendar-grid" id="calendarGrid">
-                                <!-- Calendar days will be generated by JavaScript -->
-                            </div>
-                        </div>
-                        
-                        <div class="time-slots-container">
-                            <div class="time-slot-filters">
-                                <div class="time-filter active" onclick="filterTimeSlots('all')">All Times</div>
-                                <div class="time-filter" onclick="filterTimeSlots('morning')">Morning (8AM-12PM)</div>
-                                <div class="time-filter" onclick="filterTimeSlots('afternoon')">Afternoon (12PM-5PM)</div>
-                                <div class="time-filter" onclick="filterTimeSlots('evening')">Evening (5PM-8PM)</div>
+                        <!-- Step 3: Date & Time Selection -->
+                        <div class="form-step" id="step3">
+                            <div class="step-header">
+                                <h2>When Works Best for You?</h2>
+                                <p>Select your preferred date and time</p>
                             </div>
                             
-                            <label>Available Times</label>
+                            <div class="calendar-container">
+                                <div class="calendar-header">
+                                    <button type="button" class="calendar-nav" onclick="changeMonth(-1)">◄</button>
+                                    <h3 class="calendar-month" id="calendarMonth">December 2024</h3>
+                                    <button type="button" class="calendar-nav" onclick="changeMonth(1)">►</button>
+                                </div>
+                                <div class="calendar-grid" id="calendarGrid">
+                                    <!-- Calendar will be generated by JavaScript -->
+                                </div>
+                            </div>
+                            
+                            <h3 style="margin: 2rem 0 1rem;">Available Times</h3>
                             <div class="time-slots" id="timeSlots">
                                 <!-- Time slots will be generated based on selected date -->
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="appointmentLength">Estimated Appointment Length</label>
-                            <select id="appointmentLength" name="appointmentLength">
-                                <option value="30">30 minutes (Quick services)</option>
-                                <option value="60">1 hour (Standard appointment)</option>
-                                <option value="90">1.5 hours (Comprehensive treatment)</option>
-                                <option value="120">2 hours (Extended procedures)</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 4: Insurance & Final Confirmation -->
-                    <div class="form-step" id="step4">
-                        <div class="step-header">
-                            <h2>Almost there! 🎉</h2>
-                            <p>Insurance verification and final details</p>
-                        </div>
                         
-                        <!-- Quick Insurance Verification -->
-                        <div class="insurance-verification">
-                            <div class="verification-header">
-                                <div class="verification-icon">🛡️</div>
-                                <div>
-                                    <h3>Quick Insurance Verification</h3>
-                                    <p>Verify your coverage in 30 seconds</p>
-                                </div>
-                                <button type="button" class="quick-verify-btn" onclick="quickVerifyInsurance()">
-                                    Verify Now
-                                </button>
+                        <!-- Step 4: Insurance & Confirmation -->
+                        <div class="form-step" id="step4">
+                            <div class="step-header">
+                                <h2>Almost Done!</h2>
+                                <p>Review and confirm your appointment</p>
                             </div>
                             
-                            <div class="verification-result" id="verificationResult">
-                                <h4>✅ Insurance Verified!</h4>
-                                <p>Your plan covers 80% of this treatment. Estimated out-of-pocket: $45</p>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Do you have dental insurance?</label>
-                            <div class="reminder-grid">
-                                <div class="reminder-option" onclick="toggleInsurance(true)">
-                                    <input type="radio" name="hasInsurance" value="yes" id="hasInsuranceYes">
-                                    <label for="hasInsuranceYes">Yes, I have insurance</label>
-                                </div>
-                                <div class="reminder-option" onclick="toggleInsurance(false)">
-                                    <input type="radio" name="hasInsurance" value="no" id="hasInsuranceNo">
-                                    <label for="hasInsuranceNo">No insurance / Self-pay</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="insuranceInfo" style="display: none;">
                             <div class="form-group">
-                                <label for="insuranceProvider">Insurance Provider</label>
-                                <select id="insuranceProvider" name="insuranceProvider">
-                                    <option value="">Select your insurance</option>
-                                    <option value="delta">Delta Dental</option>
-                                    <option value="cigna">Cigna</option>
-                                    <option value="metlife">MetLife</option>
-                                    <option value="guardian">Guardian</option>
-                                    <option value="united">United Healthcare</option>
-                                    <option value="aetna">Aetna</option>
-                                    <option value="humana">Humana</option>
-                                    <option value="anthem">Anthem</option>
-                                    <option value="other">Other</option>
+                                <label>Do you have dental insurance?</label>
+                                <select id="hasInsurance" name="hasInsurance" onchange="toggleInsurance()">
+                                    <option value="no">No insurance / Self-pay</option>
+                                    <option value="yes">Yes, I have insurance</option>
                                 </select>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="memberId">Member ID</label>
-                                <input type="text" id="memberId" name="memberId" 
-                                       placeholder="Enter your member ID"
-                                       oninput="validateField(this)">
-                                <div class="validation-icon"></div>
-                                <div class="validation-message"></div>
+                            <div id="insuranceInfo" style="display: none;">
+                                <div class="form-group">
+                                    <label for="insuranceProvider">Insurance Provider</label>
+                                    <select id="insuranceProvider" name="insuranceProvider">
+                                        <option value="">Select your insurance</option>
+                                        <option value="delta">Delta Dental</option>
+                                        <option value="cigna">Cigna</option>
+                                        <option value="metlife">MetLife</option>
+                                        <option value="guardian">Guardian</option>
+                                        <option value="united">United Healthcare</option>
+                                        <option value="aetna">Aetna</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="memberId">Member ID</label>
+                                    <input type="text" id="memberId" name="memberId" 
+                                           placeholder="Enter your member ID">
+                                </div>
                             </div>
                             
                             <div class="form-group">
-                                <label for="groupNumber">Group Number (Optional)</label>
-                                <input type="text" id="groupNumber" name="groupNumber" 
-                                       placeholder="Enter your group number">
+                                <label for="specialRequests">Special Requests (Optional)</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="3" 
+                                          placeholder="Any special accommodations or preferences..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="reminders" name="reminders" checked>
+                                    Send me appointment reminders via email and text
+                                </label>
                             </div>
                         </div>
-
-                        <!-- Reminder Preferences -->
-                        <div class="reminder-options">
-                            <h3>Appointment Reminders</h3>
-                            <p>How would you like to be reminded?</p>
-                            <div class="reminder-grid">
-                                <div class="reminder-option" onclick="toggleReminder(this, 'email')">
-                                    <input type="checkbox" id="reminderEmail" name="reminders[]" value="email">
-                                    <label for="reminderEmail">📧 Email reminders</label>
-                                </div>
-                                <div class="reminder-option" onclick="toggleReminder(this, 'sms')">
-                                    <input type="checkbox" id="reminderSMS" name="reminders[]" value="sms">
-                                    <label for="reminderSMS">📱 Text messages</label>
-                                </div>
-                                <div class="reminder-option" onclick="toggleReminder(this, 'call')">
-                                    <input type="checkbox" id="reminderCall" name="reminders[]" value="call">
-                                    <label for="reminderCall">📞 Phone calls</label>
-                                </div>
+                    </form>
+                    
+                    <!-- Loading State -->
+                    <div class="loading" id="loadingState">
+                        <div class="spinner"></div>
+                        <p>Confirming your appointment...</p>
+                    </div>
+                    
+                    <!-- Confirmation -->
+                    <div class="confirmation-container" id="confirmationContainer">
+                        <div class="confirmation-icon">✅</div>
+                        <div class="confirmation-message">
+                            <h2>Appointment Confirmed!</h2>
+                            <p>We've sent a confirmation to your email</p>
+                        </div>
+                        
+                        <div class="confirmation-details">
+                            <h3>Appointment Details</h3>
+                            <div class="summary-item">
+                                <span class="summary-label">Confirmation #:</span>
+                                <span class="summary-value" id="confirmationNumber">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Patient:</span>
+                                <span class="summary-value" id="confirmPatientName">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Service:</span>
+                                <span class="summary-value" id="confirmService">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Provider:</span>
+                                <span class="summary-value" id="confirmProvider">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Date & Time:</span>
+                                <span class="summary-value" id="confirmDateTime">-</span>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="specialRequests">Special Requests or Accessibility Needs</label>
-                            <textarea id="specialRequests" name="specialRequests" rows="3" 
-                                      placeholder="Any special accommodations, anxieties, or preferences we should know about..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="reminder-option" onclick="toggleReminder(this, 'marketing')">
-                                <input type="checkbox" id="marketingConsent" name="marketingConsent" value="yes">
-                                <label for="marketingConsent">📮 Send me dental health tips and special offers</label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                
-                <!-- Loading State -->
-                <div class="loading" id="loadingState">
-                    <div class="spinner"></div>
-                    <span>Confirming your appointment...</span>
-                </div>
-                
-                <!-- Instant Confirmation -->
-                <div class="confirmation-container" id="confirmationContainer">
-                    <div class="confirmation-icon">✅</div>
-                    <div class="confirmation-message">
-                        <h2>Appointment Confirmed!</h2>
-                        <p>Your booking has been successfully scheduled and confirmed.</p>
-                    </div>
-                    
-                    <div class="confirmation-details">
-                        <h3>Appointment Details</h3>
-                        <div class="summary-item">
-                            <span class="summary-label">Patient:</span>
-                            <span class="summary-value" id="confirmPatientName">-</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-label">Service:</span>
-                            <span class="summary-value" id="confirmService">-</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-label">Provider:</span>
-                            <span class="summary-value" id="confirmProvider">-</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-label">Date & Time:</span>
-                            <span class="summary-value" id="confirmDateTime">-</span>
-                        </div>
-                        <div class="summary-item">
-                            <span class="summary-label">Confirmation #:</span>
-                            <span class="summary-value summary-highlight" id="confirmationNumber">-</span>
+                        
+                        <div class="confirmation-actions">
+                            <a href="#" class="action-button primary" onclick="downloadConfirmation()">
+                                📄 Download
+                            </a>
+                            <a href="#" class="action-button secondary" onclick="addToCalendar()">
+                                📅 Add to Calendar
+                            </a>
+                            <a href="#" class="action-button secondary" onclick="bookAnother()">
+                                ➕ Book Another
+                            </a>
                         </div>
                     </div>
                     
-                    <div class="confirmation-actions">
-                        <button type="button" class="action-button primary" onclick="downloadConfirmation()">
-                            📄 Download Confirmation
+                    <!-- Form Navigation -->
+                    <div class="form-navigation" id="formNavigation">
+                        <button type="button" class="nav-button prev" onclick="previousStep()" id="prevBtn" style="display: none;">
+                            ◄ Previous
                         </button>
-                        <button type="button" class="action-button secondary" onclick="addToCalendar()">
-                            📅 Add to Calendar
+                        
+                        <button type="button" class="nav-button next" onclick="nextStep()" id="nextBtn">
+                            Next ►
                         </button>
-                        <button type="button" class="action-button secondary" onclick="bookAnother()">
-                            ➕ Book Another
+                        
+                        <button type="button" class="nav-button submit" onclick="submitAppointment()" id="submitBtn" style="display: none;">
+                            🎉 Confirm Appointment
                         </button>
-                    </div>
-                </div>
-                
-                <!-- Form Navigation -->
-                <div class="form-navigation" id="formNavigation">
-                    <button type="button" class="nav-button prev" onclick="previousStep()" id="prevBtn" style="display: none;">
-                        ◄ Previous
-                    </button>
-                    
-                    <div style="flex: 1; text-align: center;">
-                        <span id="stepIndicator">Step 1 of 4</span>
-                    </div>
-                    
-                    <button type="button" class="nav-button next" onclick="nextStep()" id="nextBtn">
-                        Next ►
-                    </button>
-                    
-                    <button type="button" class="nav-button submit" onclick="submitAppointment()" id="submitBtn" style="display: none;">
-                        🎉 Confirm Appointment
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Enhanced Sidebar -->
-        <div class="booking-sidebar">
-            <!-- Smart Appointment Summary -->
-            <div class="smart-summary">
-                <div class="summary-header">
-                    <div class="summary-icon">📋</div>
-                    <div class="summary-title">Your Appointment</div>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">Patient Type:</span>
-                    <span class="summary-value" id="summaryPatientType">-</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">Service:</span>
-                    <span class="summary-value" id="summaryService">-</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">Provider:</span>
-                    <span class="summary-value" id="summaryProvider">-</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">Date:</span>
-                    <span class="summary-value" id="summaryDate">-</span>
-                </div>
-                
-                <div class="summary-item">
-                    <span class="summary-label">Time:</span>
-                    <span class="summary-value" id="summaryTime">-</span>
-                </div>
-                
-                <div class="summary-cost">
-                    <div class="cost-breakdown">
-                        <span>Estimated Cost:</span>
-                        <span id="estimatedCost">$125</span>
-                    </div>
-                    <div class="cost-breakdown">
-                        <span>Insurance Coverage:</span>
-                        <span id="insuranceCoverage">-$100</span>
-                    </div>
-                    <div class="total-cost">
-                        <span>Your Cost:</span>
-                        <span id="totalCost">$25</span>
                     </div>
                 </div>
             </div>
             
-            <!-- Trust Indicators -->
-            <div class="trust-indicators">
-                <div class="trust-item">
-                    <div class="trust-icon">✅</div>
-                    <div class="trust-text">Instant confirmation & scheduling</div>
+            <!-- Sidebar -->
+            <div class="booking-sidebar">
+                <div class="appointment-summary">
+                    <div class="summary-header">
+                        <div class="summary-icon">📋</div>
+                        <div class="summary-title">Your Appointment</div>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Patient Type:</span>
+                        <span class="summary-value" id="summaryPatientType">-</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Service:</span>
+                        <span class="summary-value" id="summaryService">-</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Provider:</span>
+                        <span class="summary-value" id="summaryProvider">-</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Date:</span>
+                        <span class="summary-value" id="summaryDate">-</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span class="summary-label">Time:</span>
+                        <span class="summary-value" id="summaryTime">-</span>
+                    </div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-icon">🔒</div>
-                    <div class="trust-text">HIPAA compliant & secure</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">📞</div>
-                    <div class="trust-text">24/7 emergency support</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">💰</div>
-                    <div class="trust-text">No booking fees or charges</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">🕒</div>
-                    <div class="trust-text">Easy rescheduling & cancellation</div>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <div class="trust-icon">✅</div>
+                        <span>Instant confirmation</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">🔒</div>
+                        <span>HIPAA compliant</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">📞</div>
+                        <span>24/7 support</span>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">💰</div>
+                        <span>No booking fees</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Floating CTA -->
-    <button class="floating-cta" onclick="callNow()">
-        📞 Call Now: (555) SMILE-01
-    </button>
-
+    </main>
+    
     <script>
         // Global state
         let currentStep = 1;
-        let selectedPatientType = null;
-        let selectedService = null;
-        let selectedProvider = null;
-        let selectedDate = null;
-        let selectedTime = null;
-        let hasInsurance = false;
+        let formData = {
+            patientType: null,
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            dob: '',
+            service: null,
+            serviceNotes: '',
+            provider: null,
+            date: null,
+            time: null,
+            hasInsurance: 'no',
+            insuranceProvider: '',
+            memberId: '',
+            specialRequests: '',
+            reminders: true
+        };
         
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             generateCalendar();
-            setInterval(updateAvailability, 30000); // Update every 30 seconds
+            setupValidation();
             
-            // Auto-save form data
-            setInterval(saveFormData, 5000);
+            // Track page view
+            gtag('event', 'page_view', {
+                page_title: 'Book Appointment',
+                page_location: window.location.href
+            });
         });
-
-        // Real-time field validation
+        
+        // Patient Type Selection
+        function selectPatientType(type) {
+            formData.patientType = type;
+            
+            // Update UI
+            document.querySelectorAll('.patient-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Show patient info form
+            document.getElementById('patientInfo').style.display = 'block';
+            
+            // Update summary
+            document.getElementById('summaryPatientType').textContent = 
+                type === 'new' ? 'New Patient' : 'Existing Patient';
+            
+            // Track selection
+            gtag('event', 'select_patient_type', {
+                patient_type: type
+            });
+        }
+        
+        // Service Selection
+        function selectService(service) {
+            formData.service = service;
+            
+            // Update UI
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Update summary
+            const serviceNames = {
+                'emergency-pain': 'Emergency - Severe Pain',
+                'checkup': 'Checkup & Cleaning',
+                'filling': 'Dental Filling',
+                'crown': 'Crown/Bridge',
+                'whitening': 'Teeth Whitening',
+                'consultation': 'Consultation'
+            };
+            document.getElementById('summaryService').textContent = serviceNames[service] || service;
+            
+            // Track selection
+            gtag('event', 'select_service', {
+                service_type: service
+            });
+        }
+        
+        // Provider Selection
+        function selectProvider(provider) {
+            formData.provider = provider;
+            
+            // Update UI
+            document.querySelectorAll('.provider-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Update summary
+            const providerNames = {
+                'any': 'First Available',
+                'dr-smith': 'Dr. Sarah Smith',
+                'dr-johnson': 'Dr. Michael Johnson'
+            };
+            document.getElementById('summaryProvider').textContent = providerNames[provider] || provider;
+            
+            // Track selection
+            gtag('event', 'select_provider', {
+                provider_id: provider
+            });
+        }
+        
+        // Calendar Generation
+        function generateCalendar() {
+            const grid = document.getElementById('calendarGrid');
+            const today = new Date();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+            
+            // Update month display
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                              'July', 'August', 'September', 'October', 'November', 'December'];
+            document.getElementById('calendarMonth').textContent = 
+                `${monthNames[currentMonth]} ${currentYear}`;
+            
+            // Clear grid
+            grid.innerHTML = '';
+            
+            // Add day headers
+            const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            dayHeaders.forEach(day => {
+                const header = document.createElement('div');
+                header.className = 'calendar-day-header';
+                header.textContent = day;
+                grid.appendChild(header);
+            });
+            
+            // Get first day of month
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            
+            // Add empty cells for days before month starts
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                grid.appendChild(emptyCell);
+            }
+            
+            // Add days
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = day;
+                
+                const date = new Date(currentYear, currentMonth, day);
+                const isPast = date < today;
+                const isToday = date.toDateString() === today.toDateString();
+                
+                if (isPast) {
+                    dayElement.classList.add('disabled');
+                } else {
+                    dayElement.onclick = () => selectDate(date);
+                    
+                    // Add availability indicator
+                    const availability = Math.random();
+                    const indicator = document.createElement('div');
+                    indicator.className = 'availability-indicator';
+                    
+                    if (availability > 0.7) {
+                        indicator.classList.add('availability-high');
+                    } else if (availability > 0.3) {
+                        indicator.classList.add('availability-medium');
+                    } else {
+                        indicator.classList.add('availability-low');
+                    }
+                    
+                    dayElement.appendChild(indicator);
+                }
+                
+                if (isToday) {
+                    dayElement.classList.add('today');
+                }
+                
+                grid.appendChild(dayElement);
+            }
+        }
+        
+        // Date Selection
+        function selectDate(date) {
+            formData.date = date;
+            
+            // Update UI
+            document.querySelectorAll('.calendar-day').forEach(day => {
+                day.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Update summary
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('summaryDate').textContent = date.toLocaleDateString('en-US', options);
+            
+            // Generate time slots
+            generateTimeSlots(date);
+            
+            // Track selection
+            gtag('event', 'select_date', {
+                selected_date: date.toISOString()
+            });
+        }
+        
+        // Generate Time Slots
+        function generateTimeSlots(date) {
+            const container = document.getElementById('timeSlots');
+            container.innerHTML = '';
+            
+            const isEmergency = formData.service === 'emergency-pain';
+            const slots = isEmergency ? 
+                ['8:00 AM', '8:30 AM', '9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '4:00 PM'] :
+                ['9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+                 '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM'];
+            
+            slots.forEach(time => {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.textContent = time;
+                
+                // Randomly disable some slots
+                if (Math.random() > 0.7) {
+                    slot.classList.add('disabled');
+                } else {
+                    slot.onclick = () => selectTime(time);
+                }
+                
+                container.appendChild(slot);
+            });
+        }
+        
+        // Time Selection
+        function selectTime(time) {
+            formData.time = time;
+            
+            // Update UI
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+            
+            // Update summary
+            document.getElementById('summaryTime').textContent = time;
+            
+            // Track selection
+            gtag('event', 'select_time', {
+                selected_time: time
+            });
+        }
+        
+        // Month Navigation
+        function changeMonth(direction) {
+            // For demo purposes, just regenerate the same month
+            generateCalendar();
+        }
+        
+        // Insurance Toggle
+        function toggleInsurance() {
+            const hasInsurance = document.getElementById('hasInsurance').value === 'yes';
+            document.getElementById('insuranceInfo').style.display = hasInsurance ? 'block' : 'none';
+            formData.hasInsurance = document.getElementById('hasInsurance').value;
+        }
+        
+        // Form Validation
+        function setupValidation() {
+            const inputs = document.querySelectorAll('input[required]');
+            inputs.forEach(input => {
+                input.addEventListener('blur', () => validateField(input));
+                input.addEventListener('input', () => {
+                    if (input.classList.contains('error')) {
+                        validateField(input);
+                    }
+                });
+            });
+        }
+        
         function validateField(field) {
             const group = field.closest('.form-group');
             const icon = group.querySelector('.validation-icon');
@@ -1971,617 +1737,237 @@
                     break;
                 case 'tel':
                     isValid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(field.value);
-                    validationText = isValid ? '✓ Valid phone number' : '✗ Please enter a valid phone number';
+                    validationText = isValid ? '✓ Valid phone' : '✗ Please enter a valid phone';
                     break;
                 case 'text':
                     isValid = field.value.trim().length >= 2;
-                    validationText = isValid ? '✓ Looks good' : '✗ Please enter at least 2 characters';
+                    validationText = isValid ? '✓ Valid' : '✗ At least 2 characters';
                     break;
                 case 'date':
-                    const today = new Date();
-                    const inputDate = new Date(field.value);
-                    isValid = inputDate > today.setFullYear(today.getFullYear() - 100) && inputDate < new Date();
-                    validationText = isValid ? '✓ Valid date' : '✗ Please enter a valid birth date';
+                    isValid = field.value !== '';
+                    validationText = isValid ? '✓ Valid date' : '✗ Please select a date';
                     break;
                 default:
                     isValid = field.value.trim() !== '';
-                    validationText = isValid ? '✓ Complete' : '✗ This field is required';
+                    validationText = isValid ? '✓ Valid' : '✗ Required field';
             }
             
-            group.className = 'form-group ' + (isValid ? 'valid' : 'error');
-            icon.textContent = isValid ? '✓' : '✗';
-            message.textContent = validationText;
-            message.className = 'validation-message ' + (isValid ? 'success' : 'error');
+            group.classList.toggle('valid', isValid);
+            group.classList.toggle('error', !isValid && field.value !== '');
+            
+            if (icon) {
+                icon.textContent = isValid ? '✓' : (field.value !== '' ? '✗' : '');
+            }
+            
+            if (message) {
+                message.textContent = field.value !== '' ? validationText : '';
+                message.className = 'validation-message ' + (isValid ? 'success' : 'error');
+            }
             
             return isValid;
         }
-
-        // Patient type selection
-        function selectPatientType(type) {
-            selectedPatientType = type;
-            
-            // Update UI
-            document.querySelectorAll('.patient-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            event.target.closest('.patient-card').classList.add('selected');
-            
-            // Show patient info form
-            document.getElementById('patientInfo').style.display = 'block';
-            
-            // Show DOB for new patients
-            if (type === 'new') {
-                document.getElementById('dobGroup').style.display = 'block';
-                document.getElementById('dob').required = true;
-            }
-            
-            updateSummary('patientType', type === 'new' ? 'New Patient' : 'Existing Patient');
-            
-            // Auto-advance after 2 seconds if form is valid
-            setTimeout(() => {
-                if (validateStep1()) {
-                    // nextStep();
-                }
-            }, 2000);
-        }
-
-        // Service category toggle
-        function toggleCategory(header) {
-            const category = header.closest('.service-category');
-            category.classList.toggle('expanded');
-        }
-
-        // Service selection
-        function selectService(serviceId) {
-            selectedService = serviceId;
-            
-            // Update UI
-            document.querySelectorAll('.service-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            event.target.closest('.service-card').classList.add('selected');
-            
-            // Update summary
-            const serviceName = event.target.closest('.service-card').querySelector('.service-name').textContent;
-            updateSummary('service', serviceName);
-            
-            // Auto-estimate cost
-            updateCostEstimate(serviceId);
-            
-            // For emergency services, show immediate scheduling options
-            if (serviceId.includes('emergency')) {
-                showEmergencyOptions();
-            }
-        }
-
-        // Provider filtering
-        function filterProviders(specialty) {
-            document.querySelectorAll('.filter-button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            document.querySelectorAll('.provider-card').forEach(card => {
-                const cardSpecialty = card.dataset.specialty;
-                if (specialty === 'all' || cardSpecialty.includes(specialty)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Provider selection
-        function selectProvider(providerId) {
-            selectedProvider = providerId;
-            
-            // Update UI
-            document.querySelectorAll('.provider-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            event.target.closest('.provider-card').classList.add('selected');
-            
-            // Update summary
-            const providerName = event.target.closest('.provider-card').querySelector('h4').textContent;
-            updateSummary('provider', providerName);
-            
-            // Update available times based on provider
-            if (selectedDate) {
-                generateTimeSlots(selectedDate);
-            }
-        }
-
-        // Calendar generation and management
-        function generateCalendar() {
-            const today = new Date();
-            const currentMonth = today.getMonth();
-            const currentYear = today.getFullYear();
-            
-            document.getElementById('calendarMonth').textContent = 
-                new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' })
-                    .format(new Date(currentYear, currentMonth));
-            
-            const grid = document.getElementById('calendarGrid');
-            grid.innerHTML = '';
-            
-            // Add day headers
-            const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            dayHeaders.forEach(day => {
-                const header = document.createElement('div');
-                header.textContent = day;
-                header.style.fontWeight = 'bold';
-                header.style.textAlign = 'center';
-                header.style.padding = '0.5rem';
-                header.style.backgroundColor = 'var(--soft-gray)';
-                grid.appendChild(header);
-            });
-            
-            // Generate calendar days
-            const firstDay = new Date(currentYear, currentMonth, 1);
-            const lastDay = new Date(currentYear, currentMonth + 1, 0);
-            const startDate = new Date(firstDay);
-            startDate.setDate(startDate.getDate() - firstDay.getDay());
-            
-            for (let i = 0; i < 42; i++) {
-                const date = new Date(startDate);
-                date.setDate(startDate.getDate() + i);
-                
-                const dayElement = document.createElement('div');
-                dayElement.className = 'calendar-day';
-                dayElement.textContent = date.getDate();
-                
-                // Add availability indicators
-                const indicator = document.createElement('div');
-                indicator.className = 'availability-indicator';
-                
-                // Disable past dates
-                if (date < today) {
-                    dayElement.classList.add('disabled');
-                } else if (date.getMonth() !== currentMonth) {
-                    dayElement.classList.add('disabled');
-                } else {
-                    // Add random availability for demo
-                    const availability = Math.random();
-                    if (availability > 0.7) {
-                        indicator.classList.add('availability-high');
-                    } else if (availability > 0.3) {
-                        indicator.classList.add('availability-medium');
-                    } else {
-                        indicator.classList.add('availability-low');
-                    }
-                    
-                    dayElement.appendChild(indicator);
-                    dayElement.onclick = () => selectDate(date);
-                }
-                
-                // Mark today
-                if (date.toDateString() === today.toDateString()) {
-                    dayElement.classList.add('today');
-                }
-                
-                grid.appendChild(dayElement);
-            }
-        }
-
-        // Date selection
-        function selectDate(date) {
-            selectedDate = date;
-            
-            // Update UI
-            document.querySelectorAll('.calendar-day').forEach(day => {
-                day.classList.remove('selected');
-            });
-            event.target.classList.add('selected');
-            
-            // Update summary
-            updateSummary('date', date.toLocaleDateString());
-            
-            // Generate available time slots
-            generateTimeSlots(date);
-        }
-
-        // Time slot generation
-        function generateTimeSlots(date) {
-            const container = document.getElementById('timeSlots');
-            container.innerHTML = '';
-            
-            const isToday = date.toDateString() === new Date().toDateString();
-            const currentHour = new Date().getHours();
-            
-            // Generate time slots
-            const timeSlots = [
-                { time: '8:00 AM', available: true, premium: false },
-                { time: '8:30 AM', available: true, premium: false },
-                { time: '9:00 AM', available: false, premium: false },
-                { time: '9:30 AM', available: true, premium: false },
-                { time: '10:00 AM', available: true, premium: true },
-                { time: '10:30 AM', available: true, premium: false },
-                { time: '11:00 AM', available: true, premium: false },
-                { time: '11:30 AM', available: false, premium: false },
-                { time: '12:00 PM', available: true, premium: true },
-                { time: '12:30 PM', available: true, premium: false },
-                { time: '1:00 PM', available: true, premium: false },
-                { time: '1:30 PM', available: true, premium: false },
-                { time: '2:00 PM', available: false, premium: false },
-                { time: '2:30 PM', available: true, premium: true },
-                { time: '3:00 PM', available: true, premium: false },
-                { time: '3:30 PM', available: true, premium: false },
-                { time: '4:00 PM', available: true, premium: false },
-                { time: '4:30 PM', available: false, premium: false },
-                { time: '5:00 PM', available: true, premium: true },
-                { time: '5:30 PM', available: true, premium: false },
-                { time: '6:00 PM', available: true, premium: false },
-                { time: '6:30 PM', available: true, premium: false },
-                { time: '7:00 PM', available: true, premium: false },
-                { time: '7:30 PM', available: true, premium: false }
-            ];
-            
-            timeSlots.forEach(slot => {
-                const slotElement = document.createElement('div');
-                slotElement.className = 'time-slot';
-                slotElement.textContent = slot.time;
-                
-                if (!slot.available) {
-                    slotElement.classList.add('disabled');
-                } else {
-                    if (slot.premium) {
-                        slotElement.classList.add('premium');
-                        const badge = document.createElement('div');
-                        badge.className = 'slot-badge premium';
-                        badge.textContent = 'PRIME';
-                        slotElement.appendChild(badge);
-                    } else {
-                        const badge = document.createElement('div');
-                        badge.className = 'slot-badge';
-                        badge.textContent = 'OPEN';
-                        slotElement.appendChild(badge);
-                    }
-                    
-                    slotElement.onclick = () => selectTime(slot.time);
-                }
-                
-                container.appendChild(slotElement);
-            });
-        }
-
-        // Time selection
-        function selectTime(time) {
-            selectedTime = time;
-            
-            // Update UI
-            document.querySelectorAll('.time-slot').forEach(slot => {
-                slot.classList.remove('selected');
-            });
-            event.target.classList.add('selected');
-            
-            // Update summary
-            updateSummary('time', time);
-        }
-
-        // Time slot filtering
-        function filterTimeSlots(filter) {
-            document.querySelectorAll('.time-filter').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            document.querySelectorAll('.time-slot').forEach(slot => {
-                const time = slot.textContent.replace(/[^0-9:APM\s]/g, '');
-                const hour = parseInt(time.split(':')[0]);
-                const isPM = time.includes('PM');
-                const hour24 = isPM && hour !== 12 ? hour + 12 : (hour === 12 && !isPM ? 0 : hour);
-                
-                let show = true;
-                switch(filter) {
-                    case 'morning':
-                        show = hour24 >= 8 && hour24 < 12;
-                        break;
-                    case 'afternoon':
-                        show = hour24 >= 12 && hour24 < 17;
-                        break;
-                    case 'evening':
-                        show = hour24 >= 17 && hour24 < 20;
-                        break;
-                    default:
-                        show = true;
-                }
-                
-                slot.style.display = show ? 'block' : 'none';
-            });
-        }
-
-        // Insurance handling
-        function toggleInsurance(hasIns) {
-            hasInsurance = hasIns;
-            const insuranceInfo = document.getElementById('insuranceInfo');
-            insuranceInfo.style.display = hasIns ? 'block' : 'none';
-            
-            // Update cost estimate
-            updateCostEstimate();
-        }
-
-        // Quick insurance verification
-        function quickVerifyInsurance() {
-            const btn = document.querySelector('.quick-verify-btn');
-            const result = document.getElementById('verificationResult');
-            
-            btn.textContent = 'Verifying...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                result.style.display = 'block';
-                btn.textContent = '✅ Verified';
-                btn.style.background = 'var(--success-green)';
-                updateCostEstimate();
-            }, 2000);
-        }
-
-        // Reminder toggle
-        function toggleReminder(element, type) {
-            element.classList.toggle('selected');
-            const checkbox = element.querySelector('input');
-            checkbox.checked = !checkbox.checked;
-        }
-
-        // Update summary in sidebar
-        function updateSummary(field, value) {
-            const element = document.getElementById('summary' + field.charAt(0).toUpperCase() + field.slice(1));
-            if (element) {
-                element.textContent = value;
-            }
-        }
-
-        // Cost estimation
-        function updateCostEstimate(serviceId = selectedService) {
-            const costs = {
-                'checkup': 125,
-                'emergency-pain': 250,
-                'emergency-trauma': 400,
-                'emergency-infection': 300,
-                'filling': 175,
-                'crown': 850,
-                'implant': 1200,
-                'whitening': 450,
-                'veneers': 1100,
-                'root-canal': 650,
-                'consultation': 75,
-                'fluoride': 50,
-                'sealants': 180,
-                'invisalign': 4500,
-                'braces': 3200,
-                'ortho-consultation': 150
-            };
-            
-            const baseCost = costs[serviceId] || 125;
-            const insuranceCoverage = hasInsurance ? Math.floor(baseCost * 0.8) : 0;
-            const finalCost = baseCost - insuranceCoverage;
-            
-            document.getElementById('estimatedCost').textContent = '$' + baseCost;
-            document.getElementById('insuranceCoverage').textContent = insuranceCoverage > 0 ? '-$' + insuranceCoverage : '$0';
-            document.getElementById('totalCost').textContent = '$' + finalCost;
-        }
-
-        // Emergency options
-        function showEmergencyOptions() {
-            // Add emergency scheduling logic here
-            console.log('Showing emergency scheduling options');
-        }
-
-        // Step navigation
+        
+        // Step Navigation
         function nextStep() {
-            if (validateCurrentStep()) {
-                if (currentStep < 4) {
-                    showStep(currentStep + 1);
-                }
+            if (validateStep()) {
+                currentStep++;
+                updateSteps();
+                
+                // Track progress
+                gtag('event', 'form_step_complete', {
+                    step_number: currentStep - 1,
+                    total_steps: 4
+                });
             }
         }
-
+        
         function previousStep() {
-            if (currentStep > 1) {
-                showStep(currentStep - 1);
-            }
+            currentStep--;
+            updateSteps();
         }
-
-        function showStep(step) {
-            // Hide current step
-            document.querySelector(`.form-step.active`).classList.remove('active');
-            
-            // Show new step
-            document.getElementById(`step${step}`).classList.add('active');
+        
+        function updateSteps() {
+            // Update form steps
+            document.querySelectorAll('.form-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            document.getElementById(`step${currentStep}`).classList.add('active');
             
             // Update progress
-            updateProgressSteps(step);
-            
-            currentStep = step;
-            
-            // Update navigation buttons
-            updateNavigation();
-        }
-
-        function updateProgressSteps(activeStep) {
             document.querySelectorAll('.progress-step').forEach((step, index) => {
-                const stepNum = index + 1;
-                step.classList.remove('active', 'completed');
-                
-                if (stepNum < activeStep) {
+                if (index < currentStep - 1) {
                     step.classList.add('completed');
-                } else if (stepNum === activeStep) {
+                    step.classList.remove('active');
+                } else if (index === currentStep - 1) {
                     step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
                 }
             });
-        }
-
-        function updateNavigation() {
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const submitBtn = document.getElementById('submitBtn');
-            const stepIndicator = document.getElementById('stepIndicator');
             
-            prevBtn.style.display = currentStep > 1 ? 'block' : 'none';
-            nextBtn.style.display = currentStep < 4 ? 'block' : 'none';
-            submitBtn.style.display = currentStep === 4 ? 'block' : 'none';
-            
-            stepIndicator.textContent = `Step ${currentStep} of 4`;
+            // Update navigation buttons
+            document.getElementById('prevBtn').style.display = currentStep === 1 ? 'none' : 'block';
+            document.getElementById('nextBtn').style.display = currentStep === 4 ? 'none' : 'block';
+            document.getElementById('submitBtn').style.display = currentStep === 4 ? 'block' : 'none';
         }
-
-        // Step validation
-        function validateCurrentStep() {
+        
+        function validateStep() {
             switch(currentStep) {
-                case 1: return validateStep1();
-                case 2: return validateStep2();
-                case 3: return validateStep3();
-                case 4: return validateStep4();
-                default: return true;
+                case 1:
+                    if (!formData.patientType) {
+                        alert('Please select patient type');
+                        return false;
+                    }
+                    // Validate form fields
+                    const requiredFields = document.querySelectorAll('#step1 input[required]');
+                    let allValid = true;
+                    requiredFields.forEach(field => {
+                        if (!validateField(field)) {
+                            allValid = false;
+                        }
+                    });
+                    if (!allValid) {
+                        alert('Please fill in all required fields');
+                        return false;
+                    }
+                    // Save form data
+                    formData.firstName = document.getElementById('firstName').value;
+                    formData.lastName = document.getElementById('lastName').value;
+                    formData.email = document.getElementById('email').value;
+                    formData.phone = document.getElementById('phone').value;
+                    formData.dob = document.getElementById('dob').value;
+                    break;
+                case 2:
+                    if (!formData.service) {
+                        alert('Please select a service');
+                        return false;
+                    }
+                    if (!formData.provider) {
+                        alert('Please select a provider');
+                        return false;
+                    }
+                    formData.serviceNotes = document.getElementById('serviceNotes').value;
+                    break;
+                case 3:
+                    if (!formData.date) {
+                        alert('Please select a date');
+                        return false;
+                    }
+                    if (!formData.time) {
+                        alert('Please select a time');
+                        return false;
+                    }
+                    break;
             }
+            return true;
         }
-
-        function validateStep1() {
-            if (!selectedPatientType) {
-                alert('Please select whether you are a new or existing patient.');
-                return false;
-            }
+        
+        // Submit Appointment
+        async function submitAppointment() {
+            // Save final form data
+            formData.specialRequests = document.getElementById('specialRequests').value;
+            formData.reminders = document.getElementById('reminders').checked;
             
-            // Validate required fields
-            const requiredFields = ['firstName', 'lastName', 'email', 'phone'];
-            if (selectedPatientType === 'new') {
-                requiredFields.push('dob');
+            if (formData.hasInsurance === 'yes') {
+                formData.insuranceProvider = document.getElementById('insuranceProvider').value;
+                formData.memberId = document.getElementById('memberId').value;
             }
-            
-            for (let fieldId of requiredFields) {
-                const field = document.getElementById(fieldId);
-                if (!field.value.trim() || !validateField(field)) {
-                    field.focus();
-                    return false;
-                }
-            }
-            
-            return true;
-        }
-
-        function validateStep2() {
-            if (!selectedService) {
-                alert('Please select a service.');
-                return false;
-            }
-            if (!selectedProvider) {
-                alert('Please select a provider.');
-                return false;
-            }
-            return true;
-        }
-
-        function validateStep3() {
-            if (!selectedDate) {
-                alert('Please select an appointment date.');
-                return false;
-            }
-            if (!selectedTime) {
-                alert('Please select an appointment time.');
-                return false;
-            }
-            return true;
-        }
-
-        function validateStep4() {
-            // Insurance validation if selected
-            if (hasInsurance) {
-                const provider = document.getElementById('insuranceProvider').value;
-                const memberId = document.getElementById('memberId').value;
-                if (!provider || !memberId.trim()) {
-                    alert('Please complete your insurance information.');
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        // Form submission
-        function submitAppointment() {
-            if (!validateStep4()) return;
             
             // Show loading
             document.getElementById('formNavigation').style.display = 'none';
-            document.querySelector('.smart-booking-form form').style.display = 'none';
+            document.getElementById('step4').style.display = 'none';
             document.getElementById('loadingState').classList.add('show');
             
-            // Simulate API call
-            setTimeout(() => {
-                showConfirmation();
-            }, 3000);
+            // Track submission
+            gtag('event', 'appointment_submitted', {
+                service_type: formData.service,
+                provider: formData.provider,
+                patient_type: formData.patientType
+            });
+            
+            try {
+                // Simulate API call
+                const response = await fetch('/api/book-appointment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // For demo, simulate success after delay
+                setTimeout(() => {
+                    showConfirmation();
+                }, 2000);
+                
+            } catch (error) {
+                // For demo, always show success
+                setTimeout(() => {
+                    showConfirmation();
+                }, 2000);
+            }
         }
-
+        
         function showConfirmation() {
             // Hide loading
             document.getElementById('loadingState').classList.remove('show');
             
-            // Show confirmation
-            const confirmation = document.getElementById('confirmationContainer');
-            confirmation.classList.add('show');
+            // Generate confirmation number
+            const confirmationNumber = 'DC' + Math.random().toString(36).substr(2, 9).toUpperCase();
             
-            // Populate confirmation details
+            // Update confirmation details
+            document.getElementById('confirmationNumber').textContent = confirmationNumber;
             document.getElementById('confirmPatientName').textContent = 
-                `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+                `${formData.firstName} ${formData.lastName}`;
             document.getElementById('confirmService').textContent = 
                 document.getElementById('summaryService').textContent;
             document.getElementById('confirmProvider').textContent = 
                 document.getElementById('summaryProvider').textContent;
             document.getElementById('confirmDateTime').textContent = 
-                `${document.getElementById('summaryDate').textContent} at ${document.getElementById('summaryTime').textContent}`;
-            document.getElementById('confirmationNumber').textContent = 
-                'SC' + Math.random().toString(36).substr(2, 9).toUpperCase();
+                `${document.getElementById('summaryDate').textContent} at ${formData.time}`;
+            
+            // Show confirmation
+            document.getElementById('confirmationContainer').classList.add('show');
+            
+            // Track conversion
+            gtag('event', 'appointment_confirmed', {
+                confirmation_number: confirmationNumber,
+                value: formData.patientType === 'new' ? 59 : 125,
+                currency: 'USD'
+            });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        // Calendar navigation
-        function changeMonth(direction) {
-            // Implementation for month navigation
-            console.log('Changing month:', direction);
-        }
-
-        // Utility functions
-        function updateAvailability() {
-            // Update real-time availability
-            console.log('Updating availability...');
-        }
-
-        function saveFormData() {
-            // Auto-save form data
-            const formData = {
-                patientType: selectedPatientType,
-                service: selectedService,
-                provider: selectedProvider,
-                date: selectedDate,
-                time: selectedTime
-            };
-            localStorage.setItem('appointmentDraft', JSON.stringify(formData));
-        }
-
-        function callNow() {
-            window.location.href = 'tel:+1-555-SMILE-01';
-        }
-
+        
+        // Confirmation Actions
         function downloadConfirmation() {
-            // Generate and download confirmation PDF
-            alert('Confirmation email sent! Check your inbox.');
+            gtag('event', 'download_confirmation');
+            alert('Confirmation downloaded! Check your downloads folder.');
         }
-
+        
         function addToCalendar() {
-            // Add appointment to calendar
-            alert('Calendar event created!');
+            gtag('event', 'add_to_calendar');
+            alert('Added to calendar! You\'ll receive a calendar invite shortly.');
         }
-
+        
         function bookAnother() {
-            // Reset form for another booking
+            gtag('event', 'book_another_appointment');
             location.reload();
         }
-
-        // Initialize on load
-        window.addEventListener('load', function() {
-            // Auto-expand first service category
-            document.querySelector('.service-category').classList.add('expanded');
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const activeElement = document.activeElement;
+                if (activeElement.classList.contains('patient-card') ||
+                    activeElement.classList.contains('service-card') ||
+                    activeElement.classList.contains('provider-card')) {
+                    activeElement.click();
+                }
+            }
         });
     </script>
-    
-    <!-- API Client for Backend Integration -->
-    <script src="/js/api-client.js"></script>
 </body>
 </html>

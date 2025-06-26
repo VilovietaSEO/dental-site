@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Reviews & Smile Gallery | SmileCare Dental</title>
-    <meta name="description" content="Discover why 15,000+ patients trust SmileCare Dental. Read verified reviews, view before/after galleries, and see real patient transformations with 4.9★ rating.">
-    <meta name="keywords" content="dental reviews, patient testimonials, before after gallery, dental transformations, SmileCare reviews">
-    <link rel="canonical" href="https://smilecare-dental.com/reviews-results">
-    <meta property="og:title" content="Patient Reviews & Results | SmileCare Dental">
+    <title>Patient Reviews & Smile Gallery | DentalCare Excellence</title>
+    <meta name="description" content="Discover why 15,000+ patients trust DentalCare Excellence. Read verified reviews, view before/after galleries, and see real patient transformations with 4.9★ rating.">
+    <meta name="keywords" content="dental reviews, patient testimonials, before after gallery, dental transformations, DentalCare reviews">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <meta property="og:title" content="Patient Reviews & Results | DentalCare Excellence">
     <meta property="og:description" content="See why 15,000+ patients trust us with their smiles. 4.9★ rating, verified reviews, and amazing transformations.">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
-    
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.google.com">
     
     <style>
-        /* Critical CSS - Optimized for performance */
         :root {
             --trust-blue: #0077BE;
             --clean-white: #FFFFFF;
@@ -32,7 +31,6 @@
             --shadow: 0 2px 10px rgba(0,119,190,0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --border-radius: 12px;
-            --spacing-unit: 1rem;
         }
         
         * {
@@ -46,13 +44,11 @@
             line-height: 1.6;
             color: var(--charcoal);
             background: var(--clean-white);
-            font-feature-settings: 'kern' 1, 'liga' 1;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Skip to main content for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -69,7 +65,6 @@
             top: 6px;
         }
         
-        /* Header - Optimized */
         header {
             background: var(--clean-white);
             box-shadow: var(--shadow);
@@ -83,7 +78,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: var(--spacing-unit) 5%;
+            padding: 1rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -148,7 +143,6 @@
             outline: none;
         }
         
-        /* Hero Section - Enhanced */
         .hero {
             background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
             color: var(--clean-white);
@@ -191,7 +185,6 @@
             z-index: 2;
         }
         
-        /* Live Reviews Bar - Performance optimized */
         .live-reviews-bar {
             background: var(--success-green);
             color: var(--clean-white);
@@ -225,7 +218,6 @@
             100% { transform: translate3d(-100%, 0, 0); }
         }
         
-        /* Statistics Bar - Enhanced */
         .stats-bar {
             background: var(--soft-gray);
             padding: 3rem 5%;
@@ -287,7 +279,6 @@
             50% { opacity: 0.8; transform: scale(1.05); }
         }
         
-        /* Reviews Section - Enhanced UX */
         .reviews-section {
             padding: 4rem 5%;
             background: var(--clean-white);
@@ -390,7 +381,6 @@
             border-color: var(--trust-blue);
         }
         
-        /* Reviews Grid - Optimized Layout */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -498,225 +488,76 @@
             background: var(--trust-blue);
             color: var(--clean-white);
             padding: 0.2rem 0.75rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-left: auto;
             font-weight: 600;
-            margin-left: 0.5rem;
         }
         
-        .review-text {
-            line-height: 1.7;
-            color: var(--charcoal);
+        .review-content {
             margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--charcoal);
         }
         
-        .review-footer {
+        .review-helpful {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
             gap: 1rem;
-        }
-        
-        .review-service {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--accent-teal);
-            color: var(--clean-white);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .helpful-votes {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: #666;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
         
         .helpful-btn {
-            background: var(--soft-gray);
-            border: 1px solid #ddd;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
+            background: none;
+            border: 1px solid #e0e0e0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             cursor: pointer;
             transition: var(--transition);
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
+            font-size: 0.85rem;
         }
         
-        .helpful-btn:hover,
-        .helpful-btn:focus {
-            background: var(--trust-blue);
-            color: var(--clean-white);
-            border-color: var(--trust-blue);
-            outline: none;
-        }
-        
-        .helpful-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-        /* Video Testimonials - Enhanced */
-        .video-testimonials {
-            padding: 4rem 5%;
+        .helpful-btn:hover {
             background: var(--soft-gray);
+            border-color: var(--accent-teal);
         }
         
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .video-card {
-            background: var(--clean-white);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-        
-        .video-card:hover,
-        .video-card:focus {
-            transform: scale(1.03);
-            box-shadow: 0 10px 30px rgba(0,119,190,0.15);
-            outline: none;
-        }
-        
-        .video-thumbnail {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--clean-white);
-            font-size: 3rem;
-            position: relative;
-        }
-        
-        .video-duration,
-        .video-views {
-            position: absolute;
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        
-        .video-duration {
-            bottom: 10px;
-            right: 10px;
-        }
-        
-        .video-views {
-            top: 10px;
-            left: 10px;
-        }
-        
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--trust-blue);
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        .video-card:hover .play-button {
-            background: var(--clean-white);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-        
-        .video-info {
-            padding: 1.5rem;
-        }
-        
-        .video-info h4 {
-            color: var(--trust-blue);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .video-info p {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-        /* Gallery Section - Optimized */
         .gallery-section {
             padding: 4rem 5%;
-            background: var(--clean-white);
+            background: var(--soft-gray);
         }
         
-        .gallery-controls {
+        .gallery-tabs {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             flex-wrap: wrap;
         }
         
-        .gallery-filter {
-            padding: 0.75rem 1.5rem;
-            background: var(--soft-gray);
+        .tab-btn {
+            padding: 0.75rem 2rem;
+            background: var(--clean-white);
             border: 2px solid transparent;
-            border-radius: 8px;
+            border-radius: 25px;
             cursor: pointer;
             transition: var(--transition);
-            font-weight: 500;
+            font-weight: 600;
+            color: var(--charcoal);
         }
         
-        .gallery-filter:hover,
-        .gallery-filter:focus,
-        .gallery-filter.active {
+        .tab-btn:hover,
+        .tab-btn:focus {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            transform: translateY(-2px);
+        }
+        
+        .tab-btn.active {
             background: var(--trust-blue);
             color: var(--clean-white);
             border-color: var(--trust-blue);
-            outline: none;
-            transform: translateY(-2px);
-        }
-        
-        .similar-cases-btn {
-            background: var(--accent-teal);
-            color: var(--clean-white);
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .similar-cases-btn:hover,
-        .similar-cases-btn:focus {
-            background: #008888;
-            transform: translateY(-2px);
-            outline: none;
         }
         
         .gallery-grid {
@@ -728,270 +569,177 @@
         }
         
         .gallery-item {
-            position: relative;
+            background: var(--clean-white);
             border-radius: var(--border-radius);
             overflow: hidden;
-            cursor: pointer;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            background: var(--clean-white);
-        }
-        
-        .gallery-item:hover,
-        .gallery-item:focus {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,119,190,0.15);
-            outline: none;
-        }
-        
-        .before-after-container {
+            cursor: pointer;
             position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,119,190,0.15);
+        }
+        
+        .gallery-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
             height: 250px;
+            position: relative;
+        }
+        
+        .before-img,
+        .after-img {
+            position: relative;
             overflow: hidden;
             background: var(--soft-gray);
-        }
-        
-        .before-image,
-        .after-image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            color: var(--charcoal);
-            font-weight: 600;
+            font-size: 3rem;
         }
         
-        .before-image {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        }
-        
-        .after-image {
-            clip-path: inset(0 0 0 50%);
-            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
-            color: var(--clean-white);
-        }
-        
-        .slider-handle {
+        .before-label,
+        .after-label {
             position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: var(--clean-white);
-            cursor: ew-resize;
-            z-index: 10;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-        
-        .slider-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: var(--clean-white);
-            border-radius: 50%;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--trust-blue);
-            font-weight: bold;
-        }
-        
-        .case-details {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0,0,0,0.8);
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
             color: white;
-            padding: 0.75rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            opacity: 0;
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-        }
-        
-        .gallery-item:hover .case-details {
-            opacity: 1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
         
         .gallery-info {
             padding: 1.5rem;
         }
         
-        .treatment-type {
-            font-weight: 600;
+        .gallery-info h3 {
             color: var(--trust-blue);
             margin-bottom: 0.5rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         
-        .gallery-info p {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-        
-        .case-similarity {
-            background: var(--success-green);
-            color: var(--clean-white);
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-        
-        /* Google Reviews Integration */
-        .google-reviews {
-            background: var(--soft-gray);
-            padding: 3rem 5%;
-        }
-        
-        .google-rating {
+        .treatment-details {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
         }
         
-        .google-score {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--trust-blue);
+        .video-testimonials {
+            padding: 4rem 5%;
+            background: var(--clean-white);
         }
         
-        .google-stars {
-            font-size: 2rem;
-            color: #ffa500;
-        }
-        
-        .google-reviews-grid {
+        .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
-        .google-review {
-            background: var(--clean-white);
-            padding: 1.5rem;
+        .video-card {
+            background: var(--soft-gray);
             border-radius: var(--border-radius);
-            border-left: 4px solid #4285f4;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            cursor: pointer;
         }
         
-        .google-review:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.15);
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,119,190,0.15);
         }
         
-        .google-badge {
-            background: #4285f4;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-        
-        /* Review CTA Section */
-        .review-cta {
-            padding: 4rem 5%;
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
             background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
-            color: var(--clean-white);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .review-cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 30px 30px;
-            animation: float 30s infinite linear;
-        }
-        
-        .review-cta h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .review-cta > p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .review-platforms {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .platform-btn {
-            background: rgba(255,255,255,0.15);
-            color: var(--clean-white);
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--trust-blue);
             transition: var(--transition);
-            border: 2px solid transparent;
-            position: relative;
-            backdrop-filter: blur(10px);
+        }
+        
+        .video-card:hover .play-btn {
+            transform: scale(1.1);
+            background: white;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+            background: var(--clean-white);
+        }
+        
+        .video-info h3 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button-light {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
+            transition: var(--transition);
         }
         
-        .platform-btn:hover,
-        .platform-btn:focus {
-            background: rgba(255,255,255,0.25);
-            border-color: var(--clean-white);
-            transform: translateY(-3px);
-            outline: none;
+        .cta-button-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
         }
         
-        .platform-rating {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: var(--success-green);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        /* Footer */
         footer {
             background: var(--charcoal);
             color: var(--clean-white);
@@ -999,35 +747,6 @@
             text-align: center;
         }
         
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: var(--clean-white);
-            text-decoration: none;
-            transition: var(--transition);
-            padding: 0.5rem;
-            border-radius: 4px;
-        }
-        
-        .footer-links a:hover,
-        .footer-links a:focus {
-            color: var(--accent-teal);
-            background: rgba(255,255,255,0.1);
-            outline: none;
-        }
-        
-        /* Modal - Enhanced */
         .modal {
             display: none;
             position: fixed;
@@ -1050,7 +769,6 @@
             position: relative;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         
         .close-modal {
@@ -1059,195 +777,43 @@
             right: 1rem;
             font-size: 2rem;
             cursor: pointer;
+            background: none;
+            border: none;
             color: var(--charcoal);
-            transition: var(--transition);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
         }
         
-        .close-modal:hover,
-        .close-modal:focus {
-            background: var(--soft-gray);
+        .close-modal:hover {
             color: var(--trust-blue);
-            outline: none;
         }
         
-        /* Loading States */
-        .loading {
-            text-align: center;
-            padding: 2rem;
-            color: #666;
-        }
-        
-        .loading::before {
-            content: '';
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid var(--soft-gray);
-            border-radius: 50%;
-            border-top-color: var(--trust-blue);
-            animation: spin 1s ease-in-out infinite;
-            margin-bottom: 1rem;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        /* Accessibility Enhancements */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            :root {
-                --shadow: 0 2px 10px rgba(0,0,0,0.8);
-            }
-            
-            .review-card,
-            .stat-item,
-            .video-card,
-            .gallery-item {
-                border: 2px solid var(--charcoal);
-            }
-        }
-        
-        /* Mobile Responsiveness - Enhanced */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
             
-            .nav-links.mobile-open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--clean-white);
-                box-shadow: var(--shadow);
-                padding: 1rem;
-                gap: 1rem;
+            .reviews-grid {
+                grid-template-columns: 1fr;
             }
             
-            .hero {
-                padding: 2rem 5%;
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
             
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .reviews-grid,
-            .gallery-grid,
             .video-grid {
                 grid-template-columns: 1fr;
             }
             
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .review-controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .review-filter {
-                justify-content: center;
-            }
-            
-            .live-ticker {
-                animation-duration: 40s;
-            }
-            
-            .modal {
-                padding: 1rem;
-            }
-            
-            .modal-content {
-                margin: 10% auto;
-                padding: 1.5rem;
-            }
-            
-            .review-platforms {
+            .cta-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
-            .platform-btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
-            }
         }
         
-        @media (max-width: 480px) {
-            .booking-container {
-                padding: 0 3%;
-            }
-            
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-            
-            .review-card,
-            .stat-item {
-                padding: 1.5rem;
-            }
-            
-            .before-after-container {
-                height: 200px;
-            }
-        }
-        
-        /* Print Styles */
-        @media print {
-            .live-reviews-bar,
-            .video-testimonials,
-            .review-cta,
-            header,
-            footer {
-                display: none;
-            }
-            
-            .review-card {
-                break-inside: avoid;
-                box-shadow: none;
-                border: 1px solid #ddd;
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
@@ -1255,1426 +821,661 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <header role="banner">
+    <header>
         <nav role="navigation" aria-label="Main navigation">
-            <a href="index.html" class="logo" aria-label="SmileCare Dental Homepage">SmileCare Dental</a>
+            <div class="logo">DentalCare Excellence</div>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="technology.html">Technology</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="dental_book_appointment_v3.html" class="cta-button" aria-label="Book appointment now">
-                    <span aria-hidden="true">📅</span> Book Now
-                </a>
+                <a href="/">Home</a>
+                <a href="/services">Services</a>
+                <a href="/reviews" aria-current="page">Reviews</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/book-appointment" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book Now Header'});">Book Now</a>
             </div>
         </nav>
     </header>
-
+    
     <main id="main-content">
-        <section class="hero" aria-labelledby="hero-title">
-            <h1 id="hero-title" class="fade-in">Real Patients, Real Smiles, Real Results</h1>
-            <p class="fade-in">Discover why over 15,000 patients trust SmileCare Dental for their oral health journey</p>
-        </section>
-
-        <!-- Live Review Feed -->
-        <section class="live-reviews-bar" aria-label="Live patient reviews" role="marquee">
-            <div class="live-ticker" id="liveTicker" aria-live="polite">
-                <div class="live-review">
-                    <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
-                    <span>"Life-changing smile makeover! Dr. Smith is incredible." - Sarah M.</span>
-                </div>
-                <div class="live-review">
-                    <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
-                    <span>"Pain-free experience with cutting-edge technology." - John D.</span>
-                </div>
-                <div class="live-review">
-                    <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
-                    <span>"Amazing results with my dental implants!" - Maria L.</span>
-                </div>
-                <div class="live-review">
-                    <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
-                    <span>"Best Invisalign treatment in the city!" - David K.</span>
-                </div>
-                <div class="live-review">
-                    <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
-                    <span>"Professional team, comfortable environment." - Lisa R.</span>
-                </div>
+        <section class="hero">
+            <h1>Real Patients, Real Stories, Real Results</h1>
+            <p>Join 15,000+ happy patients who have transformed their smiles and lives with us</p>
+            <div class="cta-buttons">
+                <a href="#reviews" class="cta-button">Read Reviews</a>
+                <a href="#gallery" class="cta-button-light">View Transformations</a>
             </div>
         </section>
-
-        <section class="stats-bar" aria-labelledby="stats-title">
+        
+        <div class="live-reviews-bar" role="region" aria-label="Live patient reviews">
+            <div class="live-ticker">
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Best dental experience ever!" - Sarah M.</span>
+                </div>
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Life-changing results, amazing team!" - John D.</span>
+                </div>
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Painless procedure, exceeded expectations!" - Maria L.</span>
+                </div>
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Professional, caring, and affordable!" - Robert K.</span>
+                </div>
+            </div>
+        </div>
+        
+        <section class="stats-bar">
             <div class="stats-container">
-                <div class="stat-item fade-in" tabindex="0">
-                    <div class="live-indicator" aria-label="Live counter">LIVE</div>
-                    <span class="stat-number" data-count="15247" aria-label="15,247 happy patients">0</span>
+                <div class="stat-item">
+                    <span class="live-indicator">LIVE</span>
+                    <span class="stat-number">15,247</span>
                     <span class="stat-label">Happy Patients</span>
                 </div>
-                <div class="stat-item fade-in" tabindex="0">
-                    <span class="stat-number" data-count="4.9" aria-label="4.9 out of 5 average rating">0</span>
+                <div class="stat-item">
+                    <span class="stat-number">4.9★</span>
                     <span class="stat-label">Average Rating</span>
                 </div>
-                <div class="stat-item fade-in" tabindex="0">
-                    <div class="live-indicator" aria-label="Live counter">LIVE</div>
-                    <span class="stat-number" data-count="98.7" aria-label="98.7% satisfaction rate">0</span>
-                    <span class="stat-label">% Satisfaction Rate</span>
-                </div>
-                <div class="stat-item fade-in" tabindex="0">
-                    <div class="live-indicator" aria-label="Live counter">LIVE</div>
-                    <span class="stat-number" data-count="2847" aria-label="2,847 five-star reviews">0</span>
+                <div class="stat-item">
+                    <span class="stat-number">3,526</span>
                     <span class="stat-label">5-Star Reviews</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Would Recommend</span>
                 </div>
             </div>
         </section>
-
-        <section class="reviews-section" aria-labelledby="reviews-title">
+        
+        <section id="reviews" class="reviews-section">
             <div class="section-header">
-                <h2 id="reviews-title">Verified Patient Testimonials</h2>
-                <p>Read authentic experiences from our satisfied patients</p>
+                <h2>Patient Reviews & Testimonials</h2>
+                <p>Verified reviews from real patients across multiple platforms</p>
             </div>
             
             <div class="review-controls">
-                <div class="review-filter" role="tablist" aria-label="Filter reviews by service">
-                    <button class="filter-btn active" role="tab" aria-selected="true" aria-controls="reviewsGrid" onclick="filterReviews('all')">
+                <div class="review-filter">
+                    <button class="filter-btn active" onclick="filterReviews('all')">
                         All Reviews
-                        <span class="filter-count" aria-label="847 total reviews">847</span>
+                        <span class="filter-count">3526</span>
                     </button>
-                    <button class="filter-btn" role="tab" aria-selected="false" aria-controls="reviewsGrid" onclick="filterReviews('cosmetic')">
+                    <button class="filter-btn" onclick="filterReviews('cosmetic')">
                         Cosmetic
-                        <span class="filter-count" aria-label="312 cosmetic reviews">312</span>
+                        <span class="filter-count">892</span>
                     </button>
-                    <button class="filter-btn" role="tab" aria-selected="false" aria-controls="reviewsGrid" onclick="filterReviews('general')">
-                        General Dentistry
-                        <span class="filter-count" aria-label="421 general dentistry reviews">421</span>
-                    </button>
-                    <button class="filter-btn" role="tab" aria-selected="false" aria-controls="reviewsGrid" onclick="filterReviews('implants')">
+                    <button class="filter-btn" onclick="filterReviews('implants')">
                         Implants
-                        <span class="filter-count" aria-label="156 implant reviews">156</span>
+                        <span class="filter-count">456</span>
                     </button>
-                    <button class="filter-btn" role="tab" aria-selected="false" aria-controls="reviewsGrid" onclick="filterReviews('orthodontics')">
-                        Orthodontics
-                        <span class="filter-count" aria-label="203 orthodontic reviews">203</span>
+                    <button class="filter-btn" onclick="filterReviews('general')">
+                        General
+                        <span class="filter-count">1378</span>
                     </button>
                 </div>
-                
                 <div class="review-sort">
-                    <label for="sortSelect">Sort by:</label>
-                    <select id="sortSelect" class="sort-select" onchange="sortReviews()" aria-label="Sort reviews">
-                        <option value="newest">Newest First</option>
-                        <option value="oldest">Oldest First</option>
-                        <option value="rating">Highest Rating</option>
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" class="sort-select" onchange="sortReviews()">
+                        <option value="recent">Most Recent</option>
                         <option value="helpful">Most Helpful</option>
+                        <option value="rating">Highest Rating</option>
                     </select>
                 </div>
             </div>
             
-            <div class="reviews-grid" id="reviewsGrid" role="tabpanel" aria-live="polite">
-                <article class="review-card featured verified fade-in" data-category="cosmetic" data-date="2024-12-01" data-rating="5" data-helpful="24">
+            <div class="reviews-grid" id="reviewsGrid">
+                <article class="review-card featured verified">
                     <div class="review-header">
-                        <div class="reviewer-avatar" aria-hidden="true">JD</div>
+                        <div class="reviewer-avatar">JT</div>
                         <div class="reviewer-info">
-                            <div class="reviewer-name">Jennifer Davis</div>
+                            <div class="reviewer-name">Jennifer Thompson</div>
                             <div class="review-date">2 weeks ago</div>
-                            <span class="platform-badge">Google</span>
                         </div>
-                        <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <div class="platform-badge">Google</div>
                     </div>
-                    <p class="review-text">"I've been self-conscious about my smile for years. Dr. Smith and the team completely transformed my teeth with veneers. The process was comfortable, and the results exceeded my expectations. I can't stop smiling now!"</p>
-                    <div class="review-footer">
-                        <span class="review-service">Porcelain Veneers</span>
-                        <div class="helpful-votes">
-                            <span aria-live="polite">24 found helpful</span>
-                            <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                                <span aria-hidden="true">👍</span> Helpful
-                            </button>
-                        </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "I cannot express how grateful I am for the exceptional care I received at DentalCare Excellence. After years of hiding my smile due to crooked and discolored teeth, I finally have the confidence to smile freely. The entire team, especially Dr. Smith, made me feel comfortable throughout my Invisalign and whitening journey. The results exceeded my expectations!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 127 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
                     </div>
                 </article>
                 
-                <article class="review-card verified fade-in" data-category="implants" data-date="2024-11-28" data-rating="5" data-helpful="18">
+                <article class="review-card verified">
                     <div class="review-header">
-                        <div class="reviewer-avatar" aria-hidden="true">RH</div>
+                        <div class="reviewer-avatar">MR</div>
                         <div class="reviewer-info">
-                            <div class="reviewer-name">Robert Harrison</div>
+                            <div class="reviewer-name">Michael Rodriguez</div>
                             <div class="review-date">1 month ago</div>
-                            <span class="platform-badge">Yelp</span>
                         </div>
-                        <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <div class="platform-badge">Yelp</div>
                     </div>
-                    <p class="review-text">"After losing a tooth in an accident, I was worried about the implant process. The team made everything so easy and painless. My new tooth looks and feels completely natural. Outstanding care from start to finish!"</p>
-                    <div class="review-footer">
-                        <span class="review-service">Dental Implants</span>
-                        <div class="helpful-votes">
-                            <span aria-live="polite">18 found helpful</span>
-                            <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                                <span aria-hidden="true">👍</span> Helpful
-                            </button>
-                        </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Dental implant procedure was seamless! I was terrified going in, but the sedation options and Dr. Johnson's expertise made it completely painless. Six months later, I can eat anything I want and my new tooth looks completely natural. Worth every penny!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 89 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
                     </div>
                 </article>
                 
-                <article class="review-card verified fade-in" data-category="general" data-date="2024-12-05" data-rating="5" data-helpful="31">
+                <article class="review-card verified">
                     <div class="review-header">
-                        <div class="reviewer-avatar" aria-hidden="true">MM</div>
+                        <div class="reviewer-avatar">SB</div>
                         <div class="reviewer-info">
-                            <div class="reviewer-name">Maria Martinez</div>
+                            <div class="reviewer-name">Sarah Bennett</div>
                             <div class="review-date">3 weeks ago</div>
-                            <span class="platform-badge">Google</span>
                         </div>
-                        <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <div class="platform-badge">Facebook</div>
                     </div>
-                    <p class="review-text">"Best dental experience ever! The office is beautiful, the technology is amazing, and everyone is so friendly. They even have massage chairs! My whole family comes here now."</p>
-                    <div class="review-footer">
-                        <span class="review-service">Family Dentistry</span>
-                        <div class="helpful-votes">
-                            <span aria-live="polite">31 found helpful</span>
-                            <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                                <span aria-hidden="true">👍</span> Helpful
-                            </button>
-                        </div>
+                    <div class="review-rating">
+                        ★★★★★
                     </div>
-                </article>
-                
-                <article class="review-card verified fade-in" data-category="orthodontics" data-date="2024-11-15" data-rating="5" data-helpful="22">
-                    <div class="review-header">
-                        <div class="reviewer-avatar" aria-hidden="true">TC</div>
-                        <div class="reviewer-info">
-                            <div class="reviewer-name">Thomas Chen</div>
-                            <div class="review-date">2 months ago</div>
-                            <span class="platform-badge">Facebook</span>
-                        </div>
-                        <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                    <div class="review-content">
+                        "Best dental experience for someone with severe anxiety! The entire staff understood my fears and worked with me every step of the way. The virtual reality headset during my root canal was a game-changer. I actually fell asleep during the procedure!"
                     </div>
-                    <p class="review-text">"Invisalign treatment was life-changing! The 3D scanning technology showed me exactly what my results would look like. Treatment was faster than expected, and I love my new smile!"</p>
-                    <div class="review-footer">
-                        <span class="review-service">Invisalign</span>
-                        <div class="helpful-votes">
-                            <span aria-live="polite">22 found helpful</span>
-                            <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                                <span aria-hidden="true">👍</span> Helpful
-                            </button>
-                        </div>
+                    <div class="review-helpful">
+                        <span>👍 156 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
                     </div>
                 </article>
                 
-                <article class="review-card verified fade-in" data-category="cosmetic" data-date="2024-12-10" data-rating="5" data-helpful="15">
+                <article class="review-card verified">
                     <div class="review-header">
-                        <div class="reviewer-avatar" aria-hidden="true">SJ</div>
+                        <div class="reviewer-avatar">DW</div>
                         <div class="reviewer-info">
-                            <div class="reviewer-name">Sarah Johnson</div>
+                            <div class="reviewer-name">David Wilson</div>
                             <div class="review-date">1 week ago</div>
-                            <span class="platform-badge">Google</span>
                         </div>
-                        <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <div class="platform-badge">Google</div>
                     </div>
-                    <p class="review-text">"Professional teeth whitening here was incredible! Results in just one visit, and the staff made sure I was comfortable the entire time. My teeth are several shades whiter!"</p>
-                    <div class="review-footer">
-                        <span class="review-service">Teeth Whitening</span>
-                        <div class="helpful-votes">
-                            <span aria-live="polite">15 found helpful</span>
-                            <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                                <span aria-hidden="true">👍</span> Helpful
-                            </button>
-                        </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Brought my entire family here and we're all impressed! Kids actually look forward to their cleanings thanks to the entertainment systems and friendly hygienists. The membership plan saves us so much money compared to our old dentist. Highly recommend!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 72 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
                     </div>
                 </article>
                 
-                <article class="review-card verified fade-in" data-category="general" data-date="2024-11-20" data-rating="5" data-helpful="28">
+                <article class="review-card verified">
                     <div class="review-header">
-                        <div class="reviewer-avatar" aria-hidden="true">KB</div>
+                        <div class="reviewer-avatar">LM</div>
                         <div class="reviewer-info">
-                            <div class="reviewer-name">Kevin Brown</div>
-                            <div class="review-date">1 month ago</div>
-                            <span class="platform-badge">Yelp</span>
+                            <div class="reviewer-name">Lisa Martinez</div>
+                            <div class="review-date">2 months ago</div>
                         </div>
-                        <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
+                        <div class="platform-badge">Healthgrades</div>
                     </div>
-                    <p class="review-text">"I used to have severe dental anxiety, but this practice changed everything. The sedation options and caring staff made my root canal completely stress-free. Highly recommend!"</p>
-                    <div class="review-footer">
-                        <span class="review-service">Root Canal Therapy</span>
-                        <div class="helpful-votes">
-                            <span aria-live="polite">28 found helpful</span>
-                            <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                                <span aria-hidden="true">👍</span> Helpful
-                            </button>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Emergency appointment on a Saturday saved my vacation! Cracked tooth was fixed with a same-day crown using their CEREC technology. No temporary crown needed, and it matches perfectly. The staff stayed late to help me. Forever grateful!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 94 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+                
+                <article class="review-card verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">RJ</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Robert Johnson</div>
+                            <div class="review-date">1 month ago</div>
                         </div>
+                        <div class="platform-badge">Google</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Full mouth reconstruction changed my life at 65! Multiple implants, crowns, and veneers gave me a smile I haven't had in decades. The financing options made it affordable, and the results are stunning. I feel 20 years younger!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 118 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
                     </div>
                 </article>
             </div>
             
-            <div style="text-align: center; margin-top: 2rem;">
-                <button class="cta-button" onclick="loadMoreReviews()" aria-label="Load additional patient reviews">
-                    Load More Reviews
-                </button>
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="cta-button" onclick="loadMoreReviews()">Load More Reviews</button>
             </div>
         </section>
-
-        <!-- Google Reviews Integration -->
-        <section class="google-reviews" aria-labelledby="google-reviews-title">
+        
+        <section id="gallery" class="gallery-section">
             <div class="section-header">
-                <h2 id="google-reviews-title">Live Google Reviews</h2>
-                <div class="google-rating">
-                    <span class="google-score" aria-label="4.9 out of 5">4.9</span>
-                    <span class="google-stars" aria-label="5 stars">★★★★★</span>
-                    <span>Based on 847 Google reviews</span>
-                </div>
+                <h2>Smile Transformation Gallery</h2>
+                <p>Real patient results - see the difference we can make</p>
             </div>
             
-            <div class="google-reviews-grid" id="googleReviews" aria-live="polite">
-                <div class="loading" role="status" aria-label="Loading Google reviews">Loading latest Google reviews...</div>
-            </div>
-        </section>
-
-        <section class="video-testimonials" aria-labelledby="video-testimonials-title">
-            <div class="section-header">
-                <h2 id="video-testimonials-title">Patient Video Stories</h2>
-                <p>Watch our patients share their authentic transformation journeys</p>
-            </div>
-            
-            <div class="video-grid">
-                <div class="video-card" onclick="playVideo('video1')" onkeydown="handleVideoKeydown(event, 'video1')" tabindex="0" role="button" aria-label="Play video: Complete Smile Makeover">
-                    <div class="video-thumbnail">
-                        <span aria-hidden="true">🎬</span>
-                        <div class="video-duration" aria-label="Duration 3 minutes 24 seconds">3:24</div>
-                        <div class="video-views" aria-label="1,200 views">1.2K views</div>
-                    </div>
-                    <div class="play-button" aria-hidden="true">▶</div>
-                    <div class="video-info">
-                        <h4>Complete Smile Makeover</h4>
-                        <p>Lisa's journey to a perfect smile with veneers</p>
-                    </div>
-                </div>
-                
-                <div class="video-card" onclick="playVideo('video2')" onkeydown="handleVideoKeydown(event, 'video2')" tabindex="0" role="button" aria-label="Play video: Overcoming Dental Anxiety">
-                    <div class="video-thumbnail">
-                        <span aria-hidden="true">🎬</span>
-                        <div class="video-duration" aria-label="Duration 2 minutes 18 seconds">2:18</div>
-                        <div class="video-views" aria-label="856 views">856 views</div>
-                    </div>
-                    <div class="play-button" aria-hidden="true">▶</div>
-                    <div class="video-info">
-                        <h4>Overcoming Dental Anxiety</h4>
-                        <p>How Mark conquered his fears with sedation dentistry</p>
-                    </div>
-                </div>
-                
-                <div class="video-card" onclick="playVideo('video3')" onkeydown="handleVideoKeydown(event, 'video3')" tabindex="0" role="button" aria-label="Play video: Family Dental Care Experience">
-                    <div class="video-thumbnail">
-                        <span aria-hidden="true">🎬</span>
-                        <div class="video-duration" aria-label="Duration 4 minutes 12 seconds">4:12</div>
-                        <div class="video-views" aria-label="2,100 views">2.1K views</div>
-                    </div>
-                    <div class="play-button" aria-hidden="true">▶</div>
-                    <div class="video-info">
-                        <h4>Family Dental Care Experience</h4>
-                        <p>The Johnsons share their family's positive experience</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="gallery-section" aria-labelledby="gallery-title">
-            <div class="section-header">
-                <h2 id="gallery-title">Before & After Gallery</h2>
-                <p>See the amazing transformations we've achieved for our patients</p>
-            </div>
-            
-            <div class="gallery-controls">
-                <button class="gallery-filter active" onclick="filterGallery('all')" aria-pressed="true">All Cases</button>
-                <button class="gallery-filter" onclick="filterGallery('veneers')" aria-pressed="false">Veneers</button>
-                <button class="gallery-filter" onclick="filterGallery('invisalign')" aria-pressed="false">Invisalign</button>
-                <button class="gallery-filter" onclick="filterGallery('implants')" aria-pressed="false">Implants</button>
-                <button class="gallery-filter" onclick="filterGallery('whitening')" aria-pressed="false">Whitening</button>
-                <button class="similar-cases-btn" onclick="findSimilarCases()" aria-label="Find cases similar to yours">Find Similar to My Case</button>
+            <div class="gallery-tabs">
+                <button class="tab-btn active" onclick="showGallery('all')">All Transformations</button>
+                <button class="tab-btn" onclick="showGallery('veneers')">Veneers</button>
+                <button class="tab-btn" onclick="showGallery('implants')">Implants</button>
+                <button class="tab-btn" onclick="showGallery('invisalign')">Invisalign</button>
+                <button class="tab-btn" onclick="showGallery('whitening')">Whitening</button>
             </div>
             
             <div class="gallery-grid" id="galleryGrid">
-                <div class="gallery-item" data-treatment="veneers" onclick="openCaseModal('case1')" onkeydown="handleGalleryKeydown(event, 'case1')" tabindex="0" role="button" aria-label="View porcelain veneers case details">
-                    <div class="before-after-container" onmousemove="handleSlider(event, this)" ontouchmove="handleTouchSlider(event, this)">
-                        <div class="before-image" aria-label="Before treatment">Before</div>
-                        <div class="after-image" aria-label="After treatment">After</div>
-                        <div class="slider-handle" aria-label="Drag to compare before and after">
-                            <div class="slider-button" aria-hidden="true">↔</div>
+                <article class="gallery-item" onclick="openGalleryModal('veneers1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😊
                         </div>
-                        <div class="case-details">
-                            Patient Age: 34<br>
-                            Treatment Time: 3 weeks<br>
-                            Investment: $12,000
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            😁
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <div class="treatment-type">Porcelain Veneers</div>
-                        <p>Complete smile transformation with 8 upper veneers</p>
-                        <span class="case-similarity">85% similar to your case</span>
+                        <h3>Complete Smile Makeover</h3>
+                        <p>10 porcelain veneers transformed this patient's smile</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Veneers</span>
+                            <span>Duration: 2 weeks</span>
+                        </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="gallery-item" data-treatment="invisalign" onclick="openCaseModal('case2')" onkeydown="handleGalleryKeydown(event, 'case2')" tabindex="0" role="button" aria-label="View Invisalign treatment case details">
-                    <div class="before-after-container" onmousemove="handleSlider(event, this)" ontouchmove="handleTouchSlider(event, this)">
-                        <div class="before-image" aria-label="Before treatment">Before</div>
-                        <div class="after-image" aria-label="After treatment">After</div>
-                        <div class="slider-handle" aria-label="Drag to compare before and after">
-                            <div class="slider-button" aria-hidden="true">↔</div>
+                <article class="gallery-item" onclick="openGalleryModal('implant1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            🦷
                         </div>
-                        <div class="case-details">
-                            Patient Age: 28<br>
-                            Treatment Time: 18 months<br>
-                            Investment: $5,500
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            ✨
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <div class="treatment-type">Invisalign Treatment</div>
-                        <p>18-month orthodontic correction for perfect alignment</p>
-                        <span class="case-similarity">92% similar to your case</span>
+                        <h3>Single Tooth Implant</h3>
+                        <p>Natural-looking implant replaced missing front tooth</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Implant</span>
+                            <span>Duration: 4 months</span>
+                        </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="gallery-item" data-treatment="implants" onclick="openCaseModal('case3')" onkeydown="handleGalleryKeydown(event, 'case3')" tabindex="0" role="button" aria-label="View dental implants case details">
-                    <div class="before-after-container" onmousemove="handleSlider(event, this)" ontouchmove="handleTouchSlider(event, this)">
-                        <div class="before-image" aria-label="Before treatment">Before</div>
-                        <div class="after-image" aria-label="After treatment">After</div>
-                        <div class="slider-handle" aria-label="Drag to compare before and after">
-                            <div class="slider-button" aria-hidden="true">↔</div>
+                <article class="gallery-item" onclick="openGalleryModal('invisalign1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            🙂
                         </div>
-                        <div class="case-details">
-                            Patient Age: 55<br>
-                            Treatment Time: 6 months<br>
-                            Investment: $18,000
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            😄
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <div class="treatment-type">Dental Implants</div>
-                        <p>Full arch restoration with implant-supported bridge</p>
-                        <span class="case-similarity">78% similar to your case</span>
+                        <h3>Invisalign Success</h3>
+                        <p>Straightened teeth without traditional braces</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Invisalign</span>
+                            <span>Duration: 14 months</span>
+                        </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="gallery-item" data-treatment="whitening" onclick="openCaseModal('case4')" onkeydown="handleGalleryKeydown(event, 'case4')" tabindex="0" role="button" aria-label="View teeth whitening case details">
-                    <div class="before-after-container" onmousemove="handleSlider(event, this)" ontouchmove="handleTouchSlider(event, this)">
-                        <div class="before-image" aria-label="Before treatment">Before</div>
-                        <div class="after-image" aria-label="After treatment">After</div>
-                        <div class="slider-handle" aria-label="Drag to compare before and after">
-                            <div class="slider-button" aria-hidden="true">↔</div>
+                <article class="gallery-item" onclick="openGalleryModal('whitening1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😊
                         </div>
-                        <div class="case-details">
-                            Patient Age: 42<br>
-                            Treatment Time: 1 hour<br>
-                            Investment: $450
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            ⭐
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <div class="treatment-type">Professional Teeth Whitening</div>
-                        <p>Professional whitening - 8 shades brighter in one visit</p>
-                        <span class="case-similarity">95% similar to your case</span>
+                        <h3>Professional Whitening</h3>
+                        <p>8 shades whiter in just one visit</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Zoom Whitening</span>
+                            <span>Duration: 90 minutes</span>
+                        </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="gallery-item" data-treatment="veneers" onclick="openCaseModal('case5')" onkeydown="handleGalleryKeydown(event, 'case5')" tabindex="0" role="button" aria-label="View composite bonding case details">
-                    <div class="before-after-container" onmousemove="handleSlider(event, this)" ontouchmove="handleTouchSlider(event, this)">
-                        <div class="before-image" aria-label="Before treatment">Before</div>
-                        <div class="after-image" aria-label="After treatment">After</div>
-                        <div class="slider-handle" aria-label="Drag to compare before and after">
-                            <div class="slider-button" aria-hidden="true">↔</div>
+                <article class="gallery-item" onclick="openGalleryModal('fullmouth1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😔
                         </div>
-                        <div class="case-details">
-                            Patient Age: 29<br>
-                            Treatment Time: 2 weeks<br>
-                            Investment: $800
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            🤩
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <div class="treatment-type">Composite Bonding</div>
-                        <p>Chip repair and aesthetic enhancement with bonding</p>
-                        <span class="case-similarity">89% similar to your case</span>
+                        <h3>Full Mouth Reconstruction</h3>
+                        <p>Complete restoration with implants and crowns</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Multiple</span>
+                            <span>Duration: 8 months</span>
+                        </div>
                     </div>
-                </div>
+                </article>
                 
-                <div class="gallery-item" data-treatment="veneers" onclick="openCaseModal('case6')" onkeydown="handleGalleryKeydown(event, 'case6')" tabindex="0" role="button" aria-label="View full mouth reconstruction case details">
-                    <div class="before-after-container" onmousemove="handleSlider(event, this)" ontouchmove="handleTouchSlider(event, this)">
-                        <div class="before-image" aria-label="Before treatment">Before</div>
-                        <div class="after-image" aria-label="After treatment">After</div>
-                        <div class="slider-handle" aria-label="Drag to compare before and after">
-                            <div class="slider-button" aria-hidden="true">↔</div>
+                <article class="gallery-item" onclick="openGalleryModal('gummy1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😬
                         </div>
-                        <div class="case-details">
-                            Patient Age: 48<br>
-                            Treatment Time: 8 weeks<br>
-                            Investment: $22,000
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            😃
                         </div>
                     </div>
                     <div class="gallery-info">
-                        <div class="treatment-type">Full Mouth Reconstruction</div>
-                        <p>Complete dental rehabilitation with crowns and veneers</p>
-                        <span class="case-similarity">67% similar to your case</span>
+                        <h3>Gummy Smile Correction</h3>
+                        <p>Laser gum contouring for perfect proportions</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Laser Surgery</span>
+                            <span>Duration: 1 hour</span>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
-
-        <section class="review-cta" aria-labelledby="cta-title">
-            <h2 id="cta-title">Share Your SmileCare Experience</h2>
-            <p>Your feedback helps us serve you better and helps others find quality dental care</p>
-            
-            <div class="review-platforms">
-                <a href="#" class="platform-btn" onclick="openReviewPlatform('google')" aria-label="Leave a review on Google">
-                    <span aria-hidden="true">⭐</span> Review on Google
-                    <span class="platform-rating" aria-label="Current rating 4.9 stars">4.9★</span>
-                </a>
-                <a href="#" class="platform-btn" onclick="openReviewPlatform('yelp')" aria-label="Leave a review on Yelp">
-                    <span aria-hidden="true">⭐</span> Review on Yelp
-                    <span class="platform-rating" aria-label="Current rating 4.8 stars">4.8★</span>
-                </a>
-                <a href="#" class="platform-btn" onclick="openReviewPlatform('facebook')" aria-label="Leave a review on Facebook">
-                    <span aria-hidden="true">⭐</span> Review on Facebook
-                    <span class="platform-rating" aria-label="Current rating 4.9 stars">4.9★</span>
-                </a>
+        
+        <section class="video-testimonials">
+            <div class="section-header">
+                <h2>Video Testimonials</h2>
+                <p>Hear directly from our patients about their experiences</p>
             </div>
             
-            <div style="margin-top: 2rem;">
-                <a href="dental_book_appointment_v3.html" class="cta-button" aria-label="Book your appointment to experience our excellence">
-                    <span aria-hidden="true">📅</span> Experience Excellence Yourself
-                </a>
+            <div class="video-grid">
+                <article class="video-card" onclick="playVideo('testimonial1')">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Sarah's Invisalign Journey</h3>
+                        <p>"From crooked to confident in 12 months"</p>
+                        <span style="color: #666; font-size: 0.9rem;">Duration: 2:45</span>
+                    </div>
+                </article>
+                
+                <article class="video-card" onclick="playVideo('testimonial2')">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>John's Implant Experience</h3>
+                        <p>"Pain-free and life-changing results"</p>
+                        <span style="color: #666; font-size: 0.9rem;">Duration: 3:12</span>
+                    </div>
+                </article>
+                
+                <article class="video-card" onclick="playVideo('testimonial3')">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Maria's Smile Makeover</h3>
+                        <p>"10 veneers gave me a Hollywood smile"</p>
+                        <span style="color: #666; font-size: 0.9rem;">Duration: 4:08</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Ready to Join Our Happy Patient Family?</h2>
+            <p>Start your journey to a healthier, more confident smile today</p>
+            <div class="cta-buttons">
+                <a href="/book-appointment" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book Appointment Reviews'});">Schedule Your Consultation</a>
+                <a href="tel:555-123-4567" class="cta-button-light" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Call Reviews'});">Call (555) 123-4567</a>
             </div>
         </section>
     </main>
-
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="sitemap.html">Sitemap</a>
-                <a href="accessibility.html">Accessibility</a>
-            </div>
-            <p>&copy; 2024 SmileCare Dental. All rights reserved. | <a href="tel:555-123-4567" style="color: var(--accent-teal);">(555) 123-4567</a></p>
-        </div>
+    
+    <footer>
+        <p>&copy; 2024 DentalCare Excellence. All rights reserved.</p>
+        <p>Creating beautiful smiles and happy patients since 2005</p>
     </footer>
-
-    <!-- Modal for case details and videos -->
-    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    
+    <!-- Modal for gallery and video -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            <button class="close-modal" onclick="closeModal()" aria-label="Close">&times;</button>
             <div id="modal-body"></div>
         </div>
     </div>
-
+    
     <script>
-        // Performance optimization: Use requestIdleCallback for non-critical tasks
-        const scheduleWork = window.requestIdleCallback || function(cb) { setTimeout(cb, 1); };
-        
-        // Debounce utility for performance
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-        
-        // Optimized counter animation using requestAnimationFrame
-        function animateCounter() {
-            const counters = document.querySelectorAll('.stat-number');
-            
-            counters.forEach(counter => {
-                const target = parseFloat(counter.getAttribute('data-count'));
-                const increment = target / 100;
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.textContent = counter.getAttribute('data-count').includes('.') 
-                            ? current.toFixed(1) 
-                            : Math.floor(current).toLocaleString();
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target % 1 === 0 ? target.toLocaleString() : target.toFixed(1);
-                    }
-                };
-                
-                updateCounter();
-            });
-        }
-
-        // Optimized live stats update
-        function updateLiveStats() {
-            scheduleWork(() => {
-                document.querySelectorAll('.live-indicator').forEach(indicator => {
-                    const statNumber = indicator.nextElementSibling;
-                    if (statNumber && statNumber.classList.contains('stat-number')) {
-                        const currentValue = parseInt(statNumber.textContent.replace(/,/g, ''));
-                        const increment = Math.floor(Math.random() * 3) + 1;
-                        const newValue = currentValue + increment;
-                        statNumber.textContent = newValue.toLocaleString();
-                        statNumber.setAttribute('data-count', newValue);
-                    }
-                });
-            });
-        }
-
-        // Update stats every 45 seconds (optimized frequency)
-        setInterval(updateLiveStats, 45000);
-
-        // Enhanced Intersection Observer with performance optimizations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    
-                    if (entry.target.classList.contains('stat-item')) {
-                        // Only animate counters once
-                        if (!entry.target.hasAttribute('data-animated')) {
-                            entry.target.setAttribute('data-animated', 'true');
-                            scheduleWork(() => animateCounter());
-                        }
-                    }
-                    
-                    // Unobserve after animation to improve performance
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Initialize fade-in animations
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(el);
+        // Track page view
+        gtag('event', 'page_view', {
+            'page_title': 'Reviews & Results',
+            'page_location': window.location.href,
+            'page_path': '/reviews-results'
         });
-
-        // Enhanced review filtering with accessibility
+        
+        // Filter reviews
         function filterReviews(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            const reviews = document.querySelectorAll('.review-card');
-            const activeButton = event.target;
-            
-            // Update ARIA states
-            buttons.forEach(btn => {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
             });
-            activeButton.classList.add('active');
-            activeButton.setAttribute('aria-selected', 'true');
+            event.target.classList.add('active');
             
-            let visibleCount = 0;
-            reviews.forEach(review => {
-                if (category === 'all' || review.getAttribute('data-category') === category) {
-                    review.style.display = 'block';
-                    review.setAttribute('aria-hidden', 'false');
-                    visibleCount++;
-                } else {
-                    review.style.display = 'none';
-                    review.setAttribute('aria-hidden', 'true');
-                }
+            // Track filter
+            gtag('event', 'filter_reviews', {
+                'event_category': 'Reviews',
+                'event_label': category
             });
-
-            // Update filter count with animation
-            const countElement = activeButton.querySelector('.filter-count');
-            if (countElement) {
-                countElement.style.transform = 'scale(1.2)';
-                setTimeout(() => {
-                    countElement.textContent = visibleCount;
-                    countElement.style.transform = 'scale(1)';
-                }, 150);
-            }
             
-            // Announce change to screen readers
-            const announcement = `Showing ${visibleCount} ${category === 'all' ? 'total' : category} reviews`;
-            announceToScreenReader(announcement);
+            // In production, filter reviews based on category
+            console.log('Filtering reviews by:', category);
         }
-
-        // Advanced sorting with performance optimization
+        
+        // Sort reviews
         function sortReviews() {
-            const sortValue = document.getElementById('sortSelect').value;
-            const reviewsGrid = document.getElementById('reviewsGrid');
-            const reviews = Array.from(reviewsGrid.querySelectorAll('.review-card'));
+            const sortValue = document.getElementById('sort').value;
             
-            reviews.sort((a, b) => {
-                switch(sortValue) {
-                    case 'newest':
-                        return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
-                    case 'oldest':
-                        return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
-                    case 'rating':
-                        return parseInt(b.getAttribute('data-rating')) - parseInt(a.getAttribute('data-rating'));
-                    case 'helpful':
-                        return parseInt(b.getAttribute('data-helpful')) - parseInt(a.getAttribute('data-helpful'));
-                    default:
-                        return 0;
-                }
+            // Track sort
+            gtag('event', 'sort_reviews', {
+                'event_category': 'Reviews',
+                'event_label': sortValue
             });
             
-            // Use document fragment for better performance
-            const fragment = document.createDocumentFragment();
-            reviews.forEach(review => fragment.appendChild(review));
-            reviewsGrid.appendChild(fragment);
-            
-            announceToScreenReader(`Reviews sorted by ${sortValue}`);
+            // In production, sort reviews
+            console.log('Sorting reviews by:', sortValue);
         }
-
-        // Enhanced helpful marking with optimistic updates
+        
+        // Mark review as helpful
         function markHelpful(button) {
-            if (button.disabled) return;
-            
-            const helpfulSpan = button.previousElementSibling;
-            const currentCount = parseInt(helpfulSpan.textContent.split(' ')[0]);
-            const newCount = currentCount + 1;
-            
-            // Optimistic update
-            helpfulSpan.textContent = `${newCount} found helpful`;
+            const helpfulCount = button.previousElementSibling;
+            const currentCount = parseInt(helpfulCount.textContent.match(/\d+/)[0]);
+            helpfulCount.innerHTML = `👍 ${currentCount + 1} found this helpful`;
             button.disabled = true;
-            button.innerHTML = '<span aria-hidden="true">✓</span> Helpful';
-            button.style.opacity = '0.7';
+            button.textContent = 'Thanks!';
             
-            // Update data attribute
-            const reviewCard = button.closest('.review-card');
-            reviewCard.setAttribute('data-helpful', newCount);
-            
-            // Simulate API call
-            setTimeout(() => {
-                button.style.backgroundColor = 'var(--success-green)';
-                button.style.color = 'white';
-                announceToScreenReader('Thank you for your feedback');
-            }, 300);
+            // Track helpful
+            gtag('event', 'mark_helpful', {
+                'event_category': 'Reviews',
+                'value': 1
+            });
         }
-
-        // Optimized load more reviews with virtual scrolling concept
+        
+        // Load more reviews
         function loadMoreReviews() {
-            const reviewsGrid = document.getElementById('reviewsGrid');
-            const button = event.target;
-            const originalText = button.textContent;
+            // Track load more
+            gtag('event', 'load_more', {
+                'event_category': 'Reviews',
+                'event_label': 'Load More Reviews'
+            });
             
-            button.innerHTML = '<span class="loading"></span> Loading...';
-            button.disabled = true;
-            
-            // Simulate API call with realistic delay
-            setTimeout(() => {
-                const additionalReviews = [
-                    {
-                        name: 'Emily Rodriguez',
-                        initials: 'ER',
-                        service: 'Dental Crown',
-                        text: 'Perfect fit and natural look! The digital impression technology made the process so much easier.',
-                        category: 'general',
-                        platform: 'Google',
-                        rating: 5,
-                        helpful: 12,
-                        date: '2024-11-25'
-                    },
-                    {
-                        name: 'Michael Thompson',
-                        initials: 'MT',
-                        service: 'Gum Disease Treatment',
-                        text: 'Professional and thorough treatment. My gums are healthier than ever!',
-                        category: 'general',
-                        platform: 'Yelp',
-                        rating: 5,
-                        helpful: 8,
-                        date: '2024-11-20'
-                    }
-                ];
-                
-                const fragment = document.createDocumentFragment();
-                additionalReviews.forEach((review, index) => {
-                    const reviewElement = createReviewElement(review);
-                    reviewElement.style.opacity = '0';
-                    reviewElement.style.transform = 'translateY(20px)';
-                    fragment.appendChild(reviewElement);
-                    
-                    // Staggered animation
-                    setTimeout(() => {
-                        reviewElement.style.transition = 'all 0.6s ease';
-                        reviewElement.style.opacity = '1';
-                        reviewElement.style.transform = 'translateY(0)';
-                    }, index * 200);
-                });
-                
-                reviewsGrid.appendChild(fragment);
-                
-                button.textContent = originalText;
-                button.disabled = false;
-                
-                announceToScreenReader(`${additionalReviews.length} more reviews loaded`);
-            }, 1200);
+            // In production, load more reviews via API
+            alert('Loading more reviews...');
         }
         
-        // Helper function to create review elements
-        function createReviewElement(review) {
-            const article = document.createElement('article');
-            article.className = 'review-card verified fade-in';
-            article.setAttribute('data-category', review.category);
-            article.setAttribute('data-date', review.date);
-            article.setAttribute('data-rating', review.rating);
-            article.setAttribute('data-helpful', review.helpful);
-            
-            article.innerHTML = `
-                <div class="review-header">
-                    <div class="reviewer-avatar" aria-hidden="true">${review.initials}</div>
-                    <div class="reviewer-info">
-                        <div class="reviewer-name">${review.name}</div>
-                        <div class="review-date">1 week ago</div>
-                        <span class="platform-badge">${review.platform}</span>
-                    </div>
-                    <div class="review-rating" aria-label="${review.rating} out of 5 stars">${'★'.repeat(review.rating)}</div>
-                </div>
-                <p class="review-text">"${review.text}"</p>
-                <div class="review-footer">
-                    <span class="review-service">${review.service}</span>
-                    <div class="helpful-votes">
-                        <span aria-live="polite">${review.helpful} found helpful</span>
-                        <button class="helpful-btn" onclick="markHelpful(this)" aria-label="Mark this review as helpful">
-                            <span aria-hidden="true">👍</span> Helpful
-                        </button>
-                    </div>
-                </div>
-            `;
-            
-            return article;
-        }
-
-        // Enhanced gallery filtering with smooth animations
-        function filterGallery(treatment) {
-            const buttons = document.querySelectorAll('.gallery-filter');
-            const items = document.querySelectorAll('.gallery-item');
-            const activeButton = event.target;
-            
-            // Update button states
-            buttons.forEach(btn => {
+        // Show gallery category
+        function showGallery(category) {
+            // Update active tab
+            document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('active');
-                btn.setAttribute('aria-pressed', 'false');
             });
-            activeButton.classList.add('active');
-            activeButton.setAttribute('aria-pressed', 'true');
+            event.target.classList.add('active');
             
-            // Animate items
-            items.forEach((item, index) => {
-                if (treatment === 'all' || item.getAttribute('data-treatment') === treatment) {
-                    item.style.display = 'block';
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    item.setAttribute('aria-hidden', 'false');
-                    
-                    setTimeout(() => {
-                        item.style.transition = 'all 0.4s ease';
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, index * 100);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    item.setAttribute('aria-hidden', 'true');
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 400);
-                }
+            // Track gallery filter
+            gtag('event', 'filter_gallery', {
+                'event_category': 'Gallery',
+                'event_label': category
             });
-        }
-
-        // Enhanced similar cases finder with accessibility
-        function findSimilarCases() {
-            const modal = document.getElementById('modal');
-            const modalBody = document.getElementById('modal-body');
             
-            modalBody.innerHTML = `
-                <h3 id="modal-title" style="color: var(--trust-blue); margin-bottom: 1rem;">Find Cases Similar to Yours</h3>
-                <form onsubmit="searchSimilarCases(event)">
-                    <div style="margin-bottom: 1rem;">
-                        <label for="dental-issue">What dental issue would you like to address?</label>
-                        <select id="dental-issue" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;" required>
-                            <option value="">Select your concern</option>
-                            <option value="crooked">Crooked/misaligned teeth</option>
-                            <option value="discolored">Discolored/stained teeth</option>
-                            <option value="chipped">Chipped/broken teeth</option>
-                            <option value="missing">Missing teeth</option>
-                            <option value="gaps">Gaps between teeth</option>
-                            <option value="worn">Worn down teeth</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label for="age-range">Your age range:</label>
-                        <select id="age-range" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;" required>
-                            <option value="">Select age range</option>
-                            <option value="18-25">18-25</option>
-                            <option value="26-35">26-35</option>
-                            <option value="36-45">36-45</option>
-                            <option value="46-55">46-55</option>
-                            <option value="56+">56+</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 1rem;">
-                        <label for="budget-range">Investment range:</label>
-                        <select id="budget-range" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;" required>
-                            <option value="">Select budget range</option>
-                            <option value="under-1000">Under $1,000</option>
-                            <option value="1000-5000">$1,000 - $5,000</option>
-                            <option value="5000-15000">$5,000 - $15,000</option>
-                            <option value="15000+">$15,000+</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="cta-button" style="width: 100%;">Find Similar Cases</button>
-                </form>
-            `;
-            
-            modal.style.display = 'block';
-            modal.setAttribute('aria-hidden', 'false');
-            
-            // Focus the first form element
-            setTimeout(() => {
-                const firstInput = modal.querySelector('select');
-                if (firstInput) firstInput.focus();
-            }, 100);
-        }
-
-        // Enhanced search results with better UX
-        function searchSimilarCases(event) {
-            event.preventDefault();
-            const modalBody = document.getElementById('modal-body');
-            const formData = new FormData(event.target);
-            
-            // Show loading state
-            modalBody.innerHTML = `
-                <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Finding Similar Cases...</h3>
-                <div class="loading" style="text-align: center; padding: 2rem;">Analyzing your criteria</div>
-            `;
-            
-            setTimeout(() => {
-                modalBody.innerHTML = `
-                    <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Cases Similar to Yours</h3>
-                    <div style="margin-bottom: 2rem; padding: 1rem; background: var(--soft-gray); border-radius: 8px;">
-                        <p><strong>Great news!</strong> We found <strong>12 similar cases</strong> with an average satisfaction rate of <strong>98.5%</strong></p>
-                    </div>
-                    <div style="display: grid; gap: 1rem; max-height: 400px; overflow-y: auto;">
-                        <div style="border: 2px solid var(--success-green); padding: 1.5rem; border-radius: 8px; background: #f8fff8;">
-                            <strong style="color: var(--success-green);">✓ Best Match: 95% Similar</strong><br>
-                            <strong>Treatment:</strong> Invisalign + Professional Whitening<br>
-                            <strong>Duration:</strong> 14 months<br>
-                            <strong>Investment:</strong> $6,200<br>
-                            <strong>Patient satisfaction:</strong> <span style="color: #ffa500;">★★★★★</span> (5.0/5)
-                        </div>
-                        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
-                            <strong style="color: var(--trust-blue);">Case #2: 92% Similar</strong><br>
-                            <strong>Treatment:</strong> Porcelain Veneers<br>
-                            <strong>Duration:</strong> 3 weeks<br>
-                            <strong>Investment:</strong> $8,500<br>
-                            <strong>Patient satisfaction:</strong> <span style="color: #ffa500;">★★★★★</span> (4.9/5)
-                        </div>
-                        <div style="border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px;">
-                            <strong style="color: var(--trust-blue);">Case #3: 89% Similar</strong><br>
-                            <strong>Treatment:</strong> Composite Bonding<br>
-                            <strong>Duration:</strong> 1 visit<br>
-                            <strong>Investment:</strong> $1,200<br>
-                            <strong>Patient satisfaction:</strong> <span style="color: #ffa500;">★★★★★</span> (4.8/5)
-                        </div>
-                    </div>
-                    <div style="text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd;">
-                        <p style="margin-bottom: 1rem; color: #666;">Ready to start your transformation?</p>
-                        <a href="dental_book_appointment_v3.html" class="cta-button">Schedule Your Consultation</a>
-                    </div>
-                `;
-            }, 1500);
-        }
-
-        // Enhanced case modal with detailed information
-        function openCaseModal(caseId) {
-            const modal = document.getElementById('modal');
-            const modalBody = document.getElementById('modal-body');
-            
-            const caseData = {
-                'case1': {
-                    title: 'Porcelain Veneers Transformation',
-                    before: 'Severely stained and slightly misaligned front teeth causing confidence issues',
-                    after: 'Beautiful, uniform white smile with perfect alignment and natural appearance',
-                    details: 'Patient Age: 34 | Treatment Time: 3 weeks | Investment: $12,000',
-                    process: '1. Initial consultation and digital smile design\n2. Minimally invasive tooth preparation\n3. Temporary veneers for comfort\n4. Custom veneer fabrication in our lab\n5. Final veneer placement and bite adjustment\n6. Follow-up care and maintenance guidance',
-                    satisfaction: '5.0/5 stars',
-                    testimonial: '"Dr. Smith changed my life! I finally have the confidence to smile in photos."'
-                },
-                'case2': {
-                    title: 'Invisalign Orthodontic Treatment',
-                    before: 'Severely crooked and crowded teeth affecting bite function and confidence',
-                    after: 'Perfectly aligned teeth with improved bite function and stunning smile',
-                    details: 'Patient Age: 28 | Treatment Time: 18 months | Investment: $5,500',
-                    process: '1. 3D digital scan and comprehensive treatment planning\n2. Custom aligner fabrication using advanced technology\n3. Progress monitoring appointments every 6-8 weeks\n4. Mid-treatment refinements for optimal results\n5. Final refinement aligners if needed\n6. Retainer fitting and long-term maintenance plan',
-                    satisfaction: '4.9/5 stars',
-                    testimonial: '"The 3D preview showed exactly what my smile would look like. Amazing technology!"'
-                }
-            };
-            
-            const caseInfo = caseData[caseId] || caseData['case1'];
-            
-            modalBody.innerHTML = `
-                <h3 id="modal-title" style="color: var(--trust-blue); margin-bottom: 1rem;">${caseInfo.title}</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
-                    <div>
-                        <h4 style="color: var(--charcoal); margin-bottom: 0.5rem;">Before Treatment:</h4>
-                        <p style="background: #fff3cd; padding: 1rem; border-radius: 8px; border-left: 4px solid #ffc107;">${caseInfo.before}</p>
-                    </div>
-                    <div>
-                        <h4 style="color: var(--charcoal); margin-bottom: 0.5rem;">After Treatment:</h4>
-                        <p style="background: #d1eddb; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success-green);">${caseInfo.after}</p>
-                    </div>
-                </div>
-                <div style="background: #f0f8ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-                    <h4 style="color: var(--trust-blue); margin-bottom: 0.5rem;">Treatment Details:</h4>
-                    <p style="margin-bottom: 1rem;">${caseInfo.details}</p>
-                    <p><strong>Patient Satisfaction:</strong> <span style="color: #ffa500;">${caseInfo.satisfaction}</span></p>
-                </div>
-                <div style="margin-bottom: 2rem;">
-                    <h4 style="color: var(--charcoal); margin-bottom: 0.5rem;">Step-by-Step Process:</h4>
-                    <div style="background: var(--soft-gray); padding: 1.5rem; border-radius: 8px; white-space: pre-line; line-height: 1.6;">${caseInfo.process}</div>
-                </div>
-                <div style="background: #e8f5e8; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-                    <h4 style="color: var(--success-green); margin-bottom: 0.5rem;">Patient Testimonial:</h4>
-                    <p style="font-style: italic; color: var(--charcoal);">${caseInfo.testimonial}</p>
-                </div>
-                <div style="text-align: center;">
-                    <a href="dental_book_appointment_v3.html" class="cta-button" style="margin-right: 1rem;">Book Similar Treatment</a>
-                    <button onclick="findSimilarCases()" class="nav-button" style="background: var(--accent-teal); color: white; border: none;">Find More Similar Cases</button>
-                </div>
-            `;
-            
-            modal.style.display = 'block';
-            modal.setAttribute('aria-hidden', 'false');
-            
-            // Focus the modal for accessibility
-            setTimeout(() => {
-                const modalTitle = modal.querySelector('#modal-title');
-                if (modalTitle) modalTitle.focus();
-            }, 100);
-        }
-
-        // Enhanced before/after slider with touch support
-        function handleSlider(e, container) {
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-            
-            requestAnimationFrame(() => {
-                container.querySelector('.after-image').style.clipPath = `inset(0 0 0 ${percentage}%)`;
-                container.querySelector('.slider-handle').style.left = `${percentage}%`;
-            });
+            // In production, filter gallery items
+            console.log('Showing gallery:', category);
         }
         
-        // Touch support for mobile devices
-        function handleTouchSlider(e, container) {
-            e.preventDefault();
-            if (e.touches && e.touches[0]) {
-                handleSlider({ clientX: e.touches[0].clientX }, container);
-            }
+        // Open gallery modal
+        function openGalleryModal(imageId) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track gallery view
+            gtag('event', 'view_transformation', {
+                'event_category': 'Gallery',
+                'event_label': imageId
+            });
+            
+            modalBody.innerHTML = `
+                <div style="text-align: center;">
+                    <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Before & After Transformation</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <h4>Before</h4>
+                            <div style="background: var(--soft-gray); height: 300px; display: flex; align-items: center; justify-content: center; font-size: 5rem; border-radius: 8px;">
+                                😊
+                            </div>
+                        </div>
+                        <div>
+                            <h4>After</h4>
+                            <div style="background: var(--soft-gray); height: 300px; display: flex; align-items: center; justify-content: center; font-size: 5rem; border-radius: 8px;">
+                                😁
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 2rem;">This patient's transformation shows the dramatic improvement possible with our advanced treatments.</p>
+                    <a href="/book-appointment" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book from Gallery Modal'});">
+                        Start Your Transformation
+                    </a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
         }
-
-        // Enhanced video player with accessibility
+        
+        // Play video testimonial
         function playVideo(videoId) {
             const modal = document.getElementById('modal');
             const modalBody = document.getElementById('modal-body');
             
-            const videoData = {
-                'video1': {
-                    title: 'Complete Smile Makeover Success Story',
-                    description: 'Watch Lisa share her incredible transformation journey with porcelain veneers and how it changed her confidence.',
-                    duration: '3:24',
-                    transcript: 'Full video transcript available for accessibility'
-                },
-                'video2': {
-                    title: 'Overcoming Dental Anxiety',
-                    description: 'Mark explains how our sedation dentistry and compassionate care helped him overcome years of dental fear.',
-                    duration: '2:18',
-                    transcript: 'Full video transcript available for accessibility'
-                },
-                'video3': {
-                    title: 'Family Dental Care Experience',
-                    description: 'The Johnson family discusses why they trust SmileCare for all their dental needs, from routine cleanings to complex treatments.',
-                    duration: '4:12',
-                    transcript: 'Full video transcript available for accessibility'
-                }
-            };
-            
-            const video = videoData[videoId] || videoData['video1'];
+            // Track video play
+            gtag('event', 'play_video', {
+                'event_category': 'Video Testimonial',
+                'event_label': videoId
+            });
             
             modalBody.innerHTML = `
-                <h3 id="modal-title" style="color: var(--trust-blue); margin-bottom: 1rem;">${video.title}</h3>
-                <div style="background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue)); height: 300px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; border-radius: 10px; color: white; position: relative;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 4rem; margin-bottom: 1rem;">🎬</div>
-                        <div style="font-size: 1.2rem; margin-bottom: 0.5rem;">Video Player (${video.duration})</div>
-                        <small style="opacity: 0.9;">In production, this would play the actual patient testimonial video</small>
-                    </div>
-                    <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); padding: 0.5rem; border-radius: 5px; font-size: 0.9rem;">
-                        ${video.duration}
-                    </div>
-                </div>
-                <div style="background: var(--soft-gray); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-                    <p style="margin-bottom: 1rem;">${video.description}</p>
-                    <p style="font-size: 0.9rem; color: #666;"><strong>Accessibility:</strong> ${video.transcript}</p>
-                </div>
                 <div style="text-align: center;">
-                    <a href="dental_book_appointment_v3.html" class="cta-button" style="margin-right: 1rem;">Schedule Your Consultation</a>
-                    <button onclick="closeModal()" class="nav-button" style="background: var(--soft-gray); color: var(--charcoal); border: 1px solid #ddd;">Close</button>
+                    <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Patient Video Testimonial</h3>
+                    <div style="background: var(--soft-gray); height: 400px; display: flex; align-items: center; justify-content: center; font-size: 3rem; border-radius: 8px; margin-bottom: 2rem;">
+                        ▶️ Video Player
+                    </div>
+                    <p>In production, this would play the actual patient testimonial video.</p>
                 </div>
             `;
             
             modal.style.display = 'block';
             modal.setAttribute('aria-hidden', 'false');
-            
-            // Focus the modal title
-            setTimeout(() => {
-                const modalTitle = modal.querySelector('#modal-title');
-                if (modalTitle) modalTitle.focus();
-            }, 100);
         }
         
-        // Keyboard navigation support
-        function handleVideoKeydown(event, videoId) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                playVideo(videoId);
-            }
-        }
-        
-        function handleGalleryKeydown(event, caseId) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                openCaseModal(caseId);
-            }
-        }
-
-        // Review platform redirect with analytics
-        function openReviewPlatform(platform) {
-            const urls = {
-                google: 'https://g.page/r/smilecare-dental/review',
-                yelp: 'https://www.yelp.com/writeareview/biz/smilecare-dental',
-                facebook: 'https://www.facebook.com/smilecare-dental/reviews'
-            };
-            
-            // In production, track the click and open the actual URL
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'review_platform_click', {
-                    'platform': platform,
-                    'source': 'reviews_page'
-                });
-            }
-            
-            // For demo purposes
-            const message = `Opening ${platform.charAt(0).toUpperCase() + platform.slice(1)} reviews...\n\nIn production: ${urls[platform]}`;
-            alert(message);
-        }
-
-        // Enhanced Google Reviews loading with error handling
-        function loadGoogleReviews() {
-            const container = document.getElementById('googleReviews');
-            
-            // Simulate API call with error handling
-            setTimeout(() => {
-                try {
-                    container.innerHTML = `
-                        <div class="google-review">
-                            <div class="google-badge">Google Review</div>
-                            <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
-                            <p>"Exceptional service! The entire team is professional and caring. My dental implant procedure was completely painless and the results are perfect."</p>
-                            <small style="color: #666;">- Michael R., <time datetime="2024-12-15">2 days ago</time></small>
-                        </div>
-                        <div class="google-review">
-                            <div class="google-badge">Google Review</div>
-                            <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
-                            <p>"Best dental office in town! The technology is incredible and the staff makes you feel like family. Highly recommend to everyone."</p>
-                            <small style="color: #666;">- Amanda K., <time datetime="2024-12-12">5 days ago</time></small>
-                        </div>
-                        <div class="google-review">
-                            <div class="google-badge">Google Review</div>
-                            <div class="review-rating" aria-label="5 out of 5 stars">★★★★★</div>
-                            <p>"Dr. Smith transformed my smile with veneers. The attention to detail and care throughout the process was outstanding. I couldn't be happier!"</p>
-                            <small style="color: #666;">- James L., <time datetime="2024-12-10">1 week ago</time></small>
-                        </div>
-                    `;
-                    
-                    announceToScreenReader('Google reviews loaded successfully');
-                } catch (error) {
-                    container.innerHTML = `
-                        <div style="text-align: center; padding: 2rem; color: #666;">
-                            <p>Unable to load reviews at this time. Please visit our <a href="#" onclick="openReviewPlatform('google')" style="color: var(--trust-blue);">Google page</a> to see all reviews.</p>
-                        </div>
-                    `;
-                }
-            }, 2000);
-        }
-
-        // Enhanced modal functions with focus management
+        // Close modal
         function closeModal() {
             const modal = document.getElementById('modal');
             modal.style.display = 'none';
             modal.setAttribute('aria-hidden', 'true');
-            
-            // Return focus to the element that opened the modal
-            const lastFocusedElement = document.activeElement;
-            if (lastFocusedElement && lastFocusedElement.focus) {
-                lastFocusedElement.blur();
+        }
+        
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
             }
         }
-
-        // Enhanced window click handler with better event delegation
-        window.addEventListener('click', function(event) {
-            const modal = document.getElementById('modal');
-            if (event.target === modal) {
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
                 closeModal();
             }
         });
         
-        // Escape key handler for modal
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const modal = document.getElementById('modal');
-                if (modal && modal.style.display === 'block') {
-                    closeModal();
-                }
-            }
-        });
-
-        // Accessibility helper function
-        function announceToScreenReader(message) {
-            const announcement = document.createElement('div');
-            announcement.setAttribute('aria-live', 'polite');
-            announcement.setAttribute('aria-atomic', 'true');
-            announcement.style.position = 'absolute';
-            announcement.style.left = '-10000px';
-            announcement.style.width = '1px';
-            announcement.style.height = '1px';
-            announcement.style.overflow = 'hidden';
-            announcement.textContent = message;
-            
-            document.body.appendChild(announcement);
-            
-            setTimeout(() => {
-                document.body.removeChild(announcement);
-            }, 1000);
+        // Update live stats
+        function updateLiveStats() {
+            const patientCount = document.querySelector('.stat-number');
+            const currentCount = parseInt(patientCount.textContent.replace(',', ''));
+            patientCount.textContent = (currentCount + 1).toLocaleString();
         }
         
-        // Enhanced slider touch support with better performance
-        document.querySelectorAll('.before-after-container').forEach(container => {
-            let isDragging = false;
-            let lastX = 0;
-            
-            // Mouse events
-            container.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                handleSlider(e, container);
-            });
-            
-            container.addEventListener('mousemove', (e) => {
-                if (isDragging) {
-                    handleSlider(e, container);
+        // Simulate live updates
+        setInterval(updateLiveStats, 30000); // Update every 30 seconds
+        
+        // Lazy load images
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // In production, load actual images
+                    entry.target.style.opacity = '1';
+                    imageObserver.unobserve(entry.target);
                 }
             });
-            
-            container.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-            
-            container.addEventListener('mouseleave', () => {
-                isDragging = false;
-            });
-            
-            // Touch events with improved performance
-            container.addEventListener('touchstart', (e) => {
-                isDragging = true;
-                lastX = e.touches[0].clientX;
-                handleTouchSlider(e, container);
-            }, { passive: false });
-            
-            container.addEventListener('touchmove', (e) => {
-                if (isDragging && Math.abs(e.touches[0].clientX - lastX) > 5) {
-                    handleTouchSlider(e, container);
-                    lastX = e.touches[0].clientX;
-                }
-            }, { passive: false });
-            
-            container.addEventListener('touchend', () => {
-                isDragging = false;
-            });
+        }, observerOptions);
+        
+        // Observe gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transition = 'opacity 0.5s ease';
+            imageObserver.observe(item);
         });
         
-        // Service Worker registration for offline support (production ready)
-        if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch(registrationError => {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
-        }
-        
-        // Performance monitoring
-        function logPerformanceMetrics() {
-            if ('performance' in window) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        const perfData = performance.getEntriesByType('navigation')[0];
-                        const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                        
-                        // In production, send to analytics
-                        console.log('Page load time:', loadTime + 'ms');
-                        
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'timing_complete', {
-                                'name': 'load',
-                                'value': Math.round(loadTime)
-                            });
-                        }
-                    }, 0);
-                });
-            }
-        }
-        
-        // Initialize everything when DOM is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load Google reviews
-            loadGoogleReviews();
-            
-            // Log performance metrics
-            logPerformanceMetrics();
-            
-            // Initialize lazy loading for images (if any)
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            if (img.dataset.src) {
-                                img.src = img.dataset.src;
-                                img.removeAttribute('data-src');
-                                observer.unobserve(img);
-                            }
-                        }
-                    });
-                });
-                
-                document.querySelectorAll('img[data-src]').forEach(img => {
-                    imageObserver.observe(img);
-                });
-            }
-            
-            // Initialize tooltips for better UX
-            document.querySelectorAll('[title]').forEach(element => {
-                element.addEventListener('mouseenter', function() {
-                    const tooltip = document.createElement('div');
-                    tooltip.className = 'tooltip';
-                    tooltip.textContent = this.title;
-                    tooltip.style.cssText = `
-                        position: absolute;
-                        background: rgba(0,0,0,0.9);
-                        color: white;
-                        padding: 0.5rem;
-                        border-radius: 4px;
-                        font-size: 0.8rem;
-                        pointer-events: none;
-                        z-index: 10000;
-                        max-width: 200px;
-                    `;
-                    
-                    document.body.appendChild(tooltip);
-                    
-                    const rect = this.getBoundingClientRect();
-                    tooltip.style.left = rect.left + 'px';
-                    tooltip.style.top = (rect.bottom + 5) + 'px';
-                    
-                    this.removeAttribute('title');
-                    this.dataset.originalTitle = tooltip.textContent;
-                });
-                
-                element.addEventListener('mouseleave', function() {
-                    const tooltip = document.querySelector('.tooltip');
-                    if (tooltip) {
-                        tooltip.remove();
-                    }
-                    
-                    if (this.dataset.originalTitle) {
-                        this.title = this.dataset.originalTitle;
-                        delete this.dataset.originalTitle;
-                    }
-                });
+        // Error tracking
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            gtag('event', 'exception', {
+                'description': e.error.toString(),
+                'fatal': false
             });
         });
-    </script>
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Dentist",
-        "name": "SmileCare Dental",
-        "url": "https://smilecare-dental.com",
-        "telephone": "+1-555-123-4567",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Dental Lane",
-            "addressLocality": "Your City",
-            "addressRegion": "Your State",
-            "postalCode": "12345",
-            "addressCountry": "US"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "847",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Jennifer Davis"
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "reviewBody": "I've been self-conscious about my smile for years. Dr. Smith and the team completely transformed my teeth with veneers. The process was comfortable, and the results exceeded my expectations."
-            }
-        ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Dental Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Porcelain Veneers"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Invisalign Treatment"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Dental Implants"
-                    }
-                }
-            ]
-        }
-    }
     </script>
 </body>
 </html>

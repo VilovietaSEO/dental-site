@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="service-name" content="veneers">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Porcelain Veneers - Perfect Smile in 4 Weeks | DentalCare Excellence</title>
@@ -1825,456 +1826,446 @@
             <p>&copy; 2024 DentalCare Excellence. All rights reserved. | State-of-the-art technology meets compassionate care.</p>
         </div>
     </footer>
-    
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-        // Performance optimized JavaScript with comprehensive error handling
-        (function() {
-            'use strict';
-            
-            // 3D Preview interaction with enhanced UX
-            let rotationX = 0;
-            let rotationY = 0;
-            let isRotating = false;
-            
-            window.rotate3D = function(event) {
-                try {
-                    const preview = document.getElementById('smilePreview3D');
-                    if (!preview || !isRotating) return;
-                    
-                    const rect = preview.getBoundingClientRect();
-                    const x = event.clientX - rect.left;
-                    const y = event.clientY - rect.top;
-                    
-                    rotationY = ((x / rect.width) - 0.5) * 30;
-                    rotationX = ((y / rect.height) - 0.5) * -30;
-                    
-                    preview.style.transform = `perspective(1000px) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-                } catch (error) {
-                    console.error('Error in rotate3D:', error);
-                }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
             };
-            
-            window.reset3D = function() {
-                try {
-                    const preview = document.getElementById('smilePreview3D');
-                    if (preview) {
-                        preview.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-                        isRotating = false;
-                    }
-                } catch (error) {
-                    console.error('Error in reset3D:', error);
-                }
-            };
-            
-            // Enable rotation on mouse enter
-            const preview3D = document.getElementById('smilePreview3D');
-            if (preview3D) {
-                preview3D.addEventListener('mouseenter', () => {
-                    isRotating = true;
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
                 });
-                preview3D.addEventListener('mouseleave', reset3D);
             }
-            
-            // Enhanced Style selection with accessibility
-            let selectedStyle = 'natural';
-            window.selectStyle = function(style) {
-                try {
-                    selectedStyle = style;
-                    document.querySelectorAll('.customizer-section:first-child .style-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-checked', 'false');
-                    });
-                    
-                    const clickedBtn = event.target.closest('.style-btn');
-                    if (clickedBtn) {
-                        clickedBtn.classList.add('active');
-                        clickedBtn.setAttribute('aria-checked', 'true');
-                    }
-                } catch (error) {
-                    console.error('Error in selectStyle:', error);
-                }
-            };
-            
-            // Enhanced Shape selection
-            let selectedShape = 'square';
-            window.selectShape = function(shape) {
-                try {
-                    selectedShape = shape;
-                    document.querySelectorAll('.customizer-section:nth-child(2) .style-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-checked', 'false');
-                    });
-                    
-                    const clickedBtn = event.target.closest('.style-btn');
-                    if (clickedBtn) {
-                        clickedBtn.classList.add('active');
-                        clickedBtn.setAttribute('aria-checked', 'true');
-                    }
-                } catch (error) {
-                    console.error('Error in selectShape:', error);
-                }
-            };
-            
-            // Enhanced Shade selection with live preview
-            const shades = ['#e8d8a8', '#f0e4c0', '#f5edd6', '#f8f4e6', '#faf8f0', '#fcfcf8', '#fefefe', '#ffffff', '#ffffff', '#ffffff'];
-            const shadeNames = ['A4', 'A3.5', 'A3', 'A2', 'A1', 'BL4', 'BL3', 'BL2', 'BL1', 'Hollywood White'];
-            
-            window.updateShade = function(value) {
-                try {
-                    const index = parseInt(value) - 1;
-                    const preview = document.getElementById('shadePreview');
-                    const valueDisplay = document.getElementById('shadeValue');
-                    
-                    if (preview && shades[index]) {
-                        preview.style.background = shades[index];
-                        preview.style.transform = 'scale(1.05)';
-                        setTimeout(() => {
-                            preview.style.transform = 'scale(1)';
-                        }, 200);
-                    }
-                    
-                    if (valueDisplay && shadeNames[index]) {
-                        valueDisplay.textContent = shadeNames[index];
-                    }
-                } catch (error) {
-                    console.error('Error in updateShade:', error);
-                }
-            };
-            
-            // Enhanced design saving
-            window.saveDesign = function() {
-                try {
-                    const design = {
-                        style: selectedStyle,
-                        shape: selectedShape,
-                        shade: document.getElementById('shadeValue')?.textContent || 'BL2'
-                    };
-                    
-                    alert(`Your custom smile design has been saved!\n\nStyle: ${design.style}\nShape: ${design.shape}\nShade: ${design.shade}\n\nA specialist will contact you within 24 hours with your personalized quote and treatment plan.`);
-                } catch (error) {
-                    console.error('Error in saveDesign:', error);
-                }
-            };
-            
-            // Enhanced photo upload
-            window.uploadPhoto = function() {
-                try {
-                    alert('Photo upload feature would open here - allowing you to see your virtual smile makeover on your actual photo using AI technology');
-                } catch (error) {
-                    console.error('Error in uploadPhoto:', error);
-                }
-            };
-            
-            // Enhanced Results filtering with smooth transitions
-            window.filterResults = function(category) {
-                try {
-                    document.querySelectorAll('.filter-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-selected', 'false');
-                    });
-                    
-                    const clickedBtn = event.target;
-                    if (clickedBtn) {
-                        clickedBtn.classList.add('active');
-                        clickedBtn.setAttribute('aria-selected', 'true');
-                    }
-                    
-                    const cards = document.querySelectorAll('.result-card');
-                    cards.forEach(card => {
-                        const shouldShow = category === 'all' || card.dataset.category.includes(category);
-                        
-                        if (shouldShow) {
-                            card.style.display = 'block';
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(20px)';
-                            
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 100);
-                        } else {
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(-20px)';
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                } catch (error) {
-                    console.error('Error in filterResults:', error);
-                }
-            };
-            
-            // Enhanced Timeline functionality with keyboard navigation
-            let currentStep = 1;
-            
-            window.showStep = function(step) {
-                try {
-                    currentStep = step;
-                    
-                    // Update active states
-                    document.querySelectorAll('.timeline-step').forEach((s, index) => {
-                        s.classList.remove('active', 'completed');
-                        s.setAttribute('aria-selected', 'false');
-                        
-                        if (index + 1 < step) s.classList.add('completed');
-                        if (index + 1 === step) {
-                            s.classList.add('active');
-                            s.setAttribute('aria-selected', 'true');
-                        }
-                    });
-                    
-                    // Update progress bar with smooth animation
-                    const progress = ((step - 1) / 4) * 100;
-                    const progressFill = document.getElementById('progressFill');
-                    if (progressFill) {
-                        progressFill.style.width = progress + '%';
-                    }
-                    
-                    // Show corresponding details
-                    document.querySelectorAll('.step-details').forEach(detail => {
-                        detail.classList.remove('active');
-                    });
-                    
-                    const targetDetail = document.getElementById(`step${step}`);
-                    if (targetDetail) {
-                        targetDetail.classList.add('active');
-                    }
-                } catch (error) {
-                    console.error('Error in showStep:', error);
-                }
-            };
-            
-            // Initialize progress animation
-            setTimeout(() => {
-                const progressFill = document.getElementById('progressFill');
-                if (progressFill) {
-                    progressFill.style.width = '0%';
-                }
-            }, 500);
-            
-            // Enhanced Package builder with real-time updates
-            let selectedVeneers = {};
-            
-            window.toggleVeneer = function(id, name, price) {
-                try {
-                    const option = event.target.closest('.veneer-option');
-                    if (!option) return;
-                    
-                    if (selectedVeneers[id]) {
-                        delete selectedVeneers[id];
-                        option.classList.remove('selected');
-                        option.setAttribute('aria-checked', 'false');
-                    } else {
-                        selectedVeneers[id] = { name, price };
-                        option.classList.add('selected');
-                        option.setAttribute('aria-checked', 'true');
-                    }
-                    
-                    updatePackageSummary();
-                } catch (error) {
-                    console.error('Error in toggleVeneer:', error);
-                }
-            };
-            
-            function updatePackageSummary() {
-                try {
-                    const selectedDiv = document.getElementById('selectedVeneers');
-                    const count = Object.keys(selectedVeneers).length;
-                    let subtotal = 0;
-                    
-                    if (selectedDiv) {
-                        selectedDiv.innerHTML = '';
-                        Object.values(selectedVeneers).forEach(veneer => {
-                            const row = document.createElement('div');
-                            row.className = 'summary-row';
-                            row.innerHTML = `<span>${veneer.name}</span><span>$${veneer.price.toLocaleString()}</span>`;
-                            selectedDiv.appendChild(row);
-                            subtotal += veneer.price;
-                        });
-                    }
-                    
-                    // Calculate tiered discount based on quantity
-                    let discount = 0;
-                    if (count >= 8) discount = subtotal * 0.25; // 25% for full smile
-                    else if (count >= 6) discount = subtotal * 0.20; // 20% for 6+
-                    else if (count >= 4) discount = subtotal * 0.15; // 15% for 4+
-                    else if (count >= 2) discount = subtotal * 0.10; // 10% for 2+
-                    
-                    const elements = {
-                        subtotal: document.getElementById('subtotal'),
-                        discount: document.getElementById('discount'),
-                        totalPrice: document.getElementById('totalPrice')
-                    };
-                    
-                    if (elements.subtotal) {
-                        elements.subtotal.textContent = `$${subtotal.toLocaleString()}`;
-                    }
-                    if (elements.discount) {
-                        elements.discount.textContent = `-$${Math.round(discount).toLocaleString()}`;
-                    }
-                    if (elements.totalPrice) {
-                        elements.totalPrice.textContent = `$${Math.round(subtotal - discount).toLocaleString()}`;
-                    }
-                } catch (error) {
-                    console.error('Error in updatePackageSummary:', error);
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
                 }
             }
+        }
+
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
             
-            // Enhanced Social proof tabs
-            window.showProof = function(type) {
-                try {
-                    document.querySelectorAll('.proof-tab').forEach(tab => {
-                        tab.classList.remove('active');
-                        tab.setAttribute('aria-selected', 'false');
-                    });
-                    
-                    const clickedTab = event.target;
-                    if (clickedTab) {
-                        clickedTab.classList.add('active');
-                        clickedTab.setAttribute('aria-selected', 'true');
-                    }
-                    
-                    document.querySelectorAll('.proof-content').forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    
-                    const targetContent = document.getElementById(`${type}-content`);
-                    if (targetContent) {
-                        targetContent.classList.add('active');
-                    }
-                } catch (error) {
-                    console.error('Error in showProof:', error);
-                }
-            };
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
             
-            // Enhanced Instagram and video functions
-            window.openInstagramPost = function(id) {
-                try {
-                    alert(`Instagram post ${id} would open in modal with detailed before/after photos and patient story`);
-                } catch (error) {
-                    console.error('Error in openInstagramPost:', error);
-                }
-            };
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
             
-            window.playVideo = function(id) {
-                try {
-                    alert(`Video ${id} would play in modal with patient testimonial and treatment details`);
-                } catch (error) {
-                    console.error('Error in playVideo:', error);
-                }
-            };
-            
-            window.viewMoreResults = function() {
-                try {
-                    alert('More results gallery would open with 50+ additional transformations filtered by treatment type');
-                } catch (error) {
-                    console.error('Error in viewMoreResults:', error);
-                }
-            };
-            
-            // Enhanced Referral calculator
-            window.updateReferralCalc = function(value) {
-                try {
-                    const countElement = document.getElementById('referralCount');
-                    const savingsElement = document.getElementById('referralSavings');
-                    
-                    if (countElement) {
-                        countElement.textContent = value;
-                    }
-                    
-                    const savings = value * 500;
-                    if (savingsElement) {
-                        savingsElement.textContent = `$${savings.toLocaleString()}`;
-                    }
-                } catch (error) {
-                    console.error('Error in updateReferralCalc:', error);
-                }
-            };
-            
-            // Enhanced Countdown timer with expiration handling
-            function updateCountdown() {
-                try {
-                    const endDate = new Date();
-                    endDate.setDate(endDate.getDate() + 3);
-                    endDate.setHours(23, 59, 59);
-                    
-                    const now = new Date();
-                    const diff = endDate - now;
-                    
-                    if (diff <= 0) {
-                        document.querySelectorAll('.countdown-number').forEach(el => {
-                            el.textContent = '0';
-                            el.setAttribute('aria-label', '0');
-                        });
-                        return;
-                    }
-                    
-                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                    
-                    const elements = {
-                        days: document.getElementById('days'),
-                        hours: document.getElementById('hours'),
-                        minutes: document.getElementById('minutes'),
-                        seconds: document.getElementById('seconds')
-                    };
-                    
-                    Object.entries({days, hours, minutes, seconds}).forEach(([key, value]) => {
-                        const element = elements[key];
-                        if (element) {
-                            element.textContent = value;
-                            element.setAttribute('aria-label', `${value} ${key}`);
-                        }
-                    });
-                } catch (error) {
-                    console.error('Error in updateCountdown:', error);
-                }
-            }
-            
-            setInterval(updateCountdown, 1000);
-            updateCountdown();
-            
-            // Enhanced keyboard navigation
-            document.addEventListener('keydown', function(e) {
-                // Escape key functionality
-                if (e.key === 'Escape') {
-                    // Close any open modals or results
-                    document.querySelectorAll('.proof-content.active').forEach(content => {
-                        if (content.id !== 'instagram-content') {
-                            showProof('instagram');
-                        }
-                    });
-                }
-                
-                // Arrow keys for timeline navigation
-                if (e.target.closest('.timeline-steps')) {
-                    const steps = Array.from(document.querySelectorAll('.timeline-step'));
-                    const currentIndex = steps.findIndex(step => step.classList.contains('active'));
-                    
-                    if (e.key === 'ArrowLeft' && currentIndex > 0) {
-                        e.preventDefault();
-                        showStep(currentIndex);
-                        steps[currentIndex - 1].focus();
-                    } else if (e.key === 'ArrowRight' && currentIndex < steps.length - 1) {
-                        e.preventDefault();
-                        showStep(currentIndex + 2);
-                        steps[currentIndex + 1].focus();
-                    }
-                }
-                
-                // Enter/Space for interactive elements
-                if ((e.key === 'Enter' || e.key === ' ') && e.target.hasAttribute('role')) {
-                    if (e.target.getAttribute('role') === 'button') {
-                        e.preventDefault();
-                        e.target.click();
-                    }
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
                 }
             });
             
-            // Smooth scrolling for anchor links
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -2284,55 +2275,95 @@
                             behavior: 'smooth',
                             block: 'start'
                         });
-                        
-                        // Focus management for accessibility
-                        if (target.hasAttribute('tabindex') || target.tagName.match(/^(A|BUTTON|INPUT|TEXTAREA|SELECT)$/)) {
-                            target.focus();
-                        }
                     }
                 });
             });
-            
-            // Intersection Observer for animations (respecting reduced motion)
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            
-            if (!prefersReducedMotion) {
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-                
-                const observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, observerOptions);
-                
-                // Observe elements for animation
-                document.querySelectorAll('.result-card, .timeline-step, .referral-card, .veneer-option, .style-btn').forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(20px)';
-                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    observer.observe(el);
-                });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
             }
             
-            // Performance monitoring
-            if ('performance' in window) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        const navigation = performance.getEntriesByType('navigation')[0];
-                        if (navigation && navigation.loadEventEnd > 3000) {
-                            console.warn('Page load time exceeded 3 seconds:', navigation.loadEventEnd);
-                        }
-                    }, 0);
-                });
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
             }
             
-        })();
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
     </script>
+
 </body>
 </html>

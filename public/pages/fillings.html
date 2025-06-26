@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="service-name" content="fillings">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pain-Free Dental Fillings - Same Day Treatment | SmileCare Dental</title>
@@ -1731,503 +1732,543 @@
         </div>
     </footer>
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-        // Enhanced Cost Calculator Logic with Accessibility and Performance
-        const insuranceToggle = document.getElementById('insuranceToggle');
-        const insuranceDetails = document.getElementById('insuranceDetails');
-        
-        // Performance optimization - Throttle function
-        const throttle = (func, delay) => {
-            let timeoutId;
-            let lastExecTime = 0;
-            return function (...args) {
-                const currentTime = Date.now();
-                if (currentTime - lastExecTime > delay) {
-                    func.apply(this, args);
-                    lastExecTime = currentTime;
-                } else {
-                    clearTimeout(timeoutId);
-                    timeoutId = setTimeout(() => {
-                        func.apply(this, args);
-                        lastExecTime = Date.now();
-                    }, delay - (currentTime - lastExecTime));
-                }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
             };
         };
-        
-        // Enhanced header scroll effect
-        let ticking = false;
-        const header = document.getElementById('header');
-        
-        function updateHeader() {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            ticking = false;
-        }
-        
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(updateHeader);
-                ticking = true;
-            }
-        }
-        
-        window.addEventListener('scroll', requestTick, { passive: true });
-        
-        // Enhanced insurance toggle with keyboard support
-        function toggleInsurance() {
-            const isActive = insuranceToggle.classList.toggle('active');
-            insuranceToggle.setAttribute('aria-checked', isActive);
-            insuranceDetails.style.display = isActive ? 'block' : 'none';
-            calculateCost();
-        }
-        
-        insuranceToggle.addEventListener('click', toggleInsurance);
-        insuranceToggle.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleInsurance();
-            }
-        });
 
-        // Add event listeners to all form inputs with throttling
-        const throttledCalculate = throttle(calculateCost, 150);
-        document.querySelectorAll('#costCalculator select').forEach(select => {
-            select.addEventListener('change', throttledCalculate);
-        });
-
-        function calculateCost() {
-            const fillings = document.getElementById('fillingsNumber').value;
-            const surface = document.getElementById('surfaceType').value;
-            const material = document.getElementById('materialType').value;
-            const hasInsurance = insuranceToggle.classList.contains('active');
-            const coverage = hasInsurance ? parseInt(document.getElementById('insuranceCoverage').value) : 0;
-            
-            // Return early if required fields are missing
-            if (!fillings || !surface || !material) {
-                document.getElementById('totalCost').textContent = '$---';
-                return;
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
+                });
             }
-            
-            // Base prices
-            const prices = {
-                composite: { single: 200, double: 250, triple: 350 },
-                amalgam: { single: 150, double: 200, triple: 250 },
-                ceramic: { single: 450, double: 550, triple: 650 }
-            };
-            
-            let basePrice = prices[material][surface] * parseInt(fillings);
-            let discount = hasInsurance ? basePrice * (coverage / 100) : 0;
-            let total = basePrice - discount;
-            
-            // Update display with animation
-            const totalElement = document.getElementById('totalCost');
-            totalElement.style.opacity = '0.5';
-            setTimeout(() => {
-                totalElement.textContent = `$${total.toFixed(0)}`;
-                totalElement.style.opacity = '1';
-            }, 100);
-            
-            // Update payment options
-            updatePaymentOptions(total);
         }
 
-        function updatePaymentOptions(total) {
-            const paymentOptions = document.querySelectorAll('.payment-option');
-            const terms = [6, 12, 18, 24];
-            const rates = [0, 0, 0, 0.059];
-            
-            paymentOptions.forEach((option, index) => {
-                const term = terms[index];
-                const rate = rates[index];
-                let monthly;
-                
-                if (rate === 0) {
-                    monthly = total / term;
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
                 } else {
-                    const monthlyRate = rate / 12;
-                    monthly = total * (monthlyRate * Math.pow(1 + monthlyRate, term)) / (Math.pow(1 + monthlyRate, term) - 1);
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
                 }
-                
-                option.querySelector('.monthly-payment').textContent = `$${monthly.toFixed(0)}`;
-            });
-        }
-
-        // Enhanced payment option selection with keyboard support
-        document.querySelectorAll('.payment-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('selected'));
-                this.classList.add('selected');
-            });
-            
-            option.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    option.click();
-                }
-            });
-        });
-
-        // Enhanced 3D Visualization Steps with keyboard support
-        const stepCards = document.querySelectorAll('.step-card');
-        const cavity = document.getElementById('cavity');
-        const filling = document.getElementById('filling');
-
-        stepCards.forEach(card => {
-            function activateStep() {
-                stepCards.forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
-                
-                const step = parseInt(card.dataset.step);
-                animateToothStep(step);
-            }
-            
-            card.addEventListener('click', activateStep);
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    activateStep();
-                }
-            });
-        });
-
-        function animateToothStep(step) {
-            switch(step) {
-                case 1:
-                    cavity.style.opacity = '0.8';
-                    filling.style.opacity = '0';
-                    break;
-                case 2:
-                    cavity.style.opacity = '0.8';
-                    filling.style.opacity = '0';
-                    break;
-                case 3:
-                    cavity.style.r = '25';
-                    cavity.style.opacity = '0.6';
-                    break;
-                case 4:
-                    cavity.style.opacity = '0.2';
-                    filling.style.opacity = '0.8';
-                    break;
-                case 5:
-                    cavity.style.opacity = '0';
-                    filling.style.opacity = '1';
-                    break;
             }
         }
 
-        // Enhanced Pain Scale Interactive with accessibility
-        const painLevels = document.querySelectorAll('.pain-level');
-        
-        painLevels.forEach(level => {
-            function selectPainLevel() {
-                const levelNum = level.dataset.level;
-                
-                // Hide all info boxes
-                document.querySelectorAll('.pain-info-box').forEach(box => {
-                    box.classList.remove('active');
-                });
-                
-                // Show selected info box
-                const targetBox = document.getElementById(`painInfo${levelNum}`);
-                if (targetBox) {
-                    targetBox.classList.add('active');
-                }
-            }
-            
-            level.addEventListener('click', selectPainLevel);
-            level.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    selectPainLevel();
-                }
-            });
-        });
-
-        // Enhanced Material Comparison with accessibility
-        const materialOptions = document.querySelectorAll('.material-option');
-        
-        materialOptions.forEach(option => {
-            function selectMaterial() {
-                const material = option.dataset.material;
-                
-                // Update buttons
-                materialOptions.forEach(opt => {
-                    opt.classList.remove('active');
-                    opt.setAttribute('aria-pressed', 'false');
-                });
-                option.classList.add('active');
-                option.setAttribute('aria-pressed', 'true');
-                
-                // Update details
-                document.querySelectorAll('.material-details').forEach(detail => {
-                    detail.classList.remove('active');
-                });
-                const targetDetail = document.getElementById(`${material}Details`);
-                if (targetDetail) {
-                    targetDetail.classList.add('active');
-                }
-            }
-            
-            option.addEventListener('click', selectMaterial);
-            option.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    selectMaterial();
-                }
-            });
-        });
-
-        // Enhanced Gallery Filters with accessibility
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        
-        filterBtns.forEach(btn => {
-            function filterGallery() {
-                const filter = btn.dataset.filter;
-                
-                // Update buttons
-                filterBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-pressed', 'false');
-                });
-                btn.classList.add('active');
-                btn.setAttribute('aria-pressed', 'true');
-                
-                // Filter cards
-                document.querySelectorAll('.before-after-card').forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-            
-            btn.addEventListener('click', filterGallery);
-            btn.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    filterGallery();
-                }
-            });
-        });
-
-        // Enhanced Before/After Slider with accessibility
-        document.querySelectorAll('.before-after-slider').forEach(slider => {
-            let isDown = false;
-            const afterImg = slider.querySelector('.after-img');
-            const handle = slider.querySelector('.slider-handle');
-            
-            function updateSlider(x) {
-                const rect = slider.getBoundingClientRect();
-                const percent = Math.max(0, Math.min(100, ((x - rect.left) / rect.width) * 100));
-                
-                afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-                handle.style.left = `${percent}%`;
-                handle.setAttribute('aria-valuenow', Math.round(percent));
-            }
-            
-            // Mouse events
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                updateSlider(e.clientX);
-            });
-            
-            document.addEventListener('mouseup', () => isDown = false);
-            document.addEventListener('mouseleave', () => isDown = false);
-            
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                updateSlider(e.clientX);
-            });
-            
-            // Touch events for mobile
-            slider.addEventListener('touchstart', (e) => {
-                isDown = true;
-                updateSlider(e.touches[0].clientX);
-            }, { passive: true });
-            
-            slider.addEventListener('touchmove', (e) => {
-                if (!isDown) return;
-                updateSlider(e.touches[0].clientX);
-            }, { passive: true });
-            
-            slider.addEventListener('touchend', () => isDown = false);
-            
-            // Keyboard accessibility for slider
-            handle.setAttribute('role', 'slider');
-            handle.setAttribute('aria-valuemin', '0');
-            handle.setAttribute('aria-valuemax', '100');
-            handle.setAttribute('aria-valuenow', '50');
-            
-            handle.addEventListener('keydown', (e) => {
-                let currentValue = parseInt(handle.getAttribute('aria-valuenow'));
-                let newValue = currentValue;
-                
-                switch(e.key) {
-                    case 'ArrowLeft':
-                    case 'ArrowDown':
-                        newValue = Math.max(0, currentValue - 5);
-                        break;
-                    case 'ArrowRight':
-                    case 'ArrowUp':
-                        newValue = Math.min(100, currentValue + 5);
-                        break;
-                    case 'Home':
-                        newValue = 0;
-                        break;
-                    case 'End':
-                        newValue = 100;
-                        break;
-                    default:
-                        return;
-                }
-                
-                e.preventDefault();
-                afterImg.style.clipPath = `inset(0 ${100 - newValue}% 0 0)`;
-                handle.style.left = `${newValue}%`;
-                handle.setAttribute('aria-valuenow', newValue);
-            });
-        });
-
-        // Enhanced Countdown Timer
-        function updateCountdown() {
-            const now = new Date();
-            const endDate = new Date(now);
-            endDate.setDate(endDate.getDate() + 2);
-            endDate.setHours(23, 59, 59, 999);
-            
-            const diff = endDate - now;
-            
-            if (diff <= 0) {
-                // Reset to 2 days if expired
-                endDate.setDate(now.getDate() + 2);
-                return updateCountdown();
-            }
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-            
-            if (daysEl) daysEl.textContent = days;
-            if (hoursEl) hoursEl.textContent = hours;
-            if (minutesEl) minutesEl.textContent = minutes;
-            if (secondsEl) secondsEl.textContent = seconds;
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // Enhanced form submission with validation
-        function handleFormSubmit(event) {
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
             event.preventDefault();
-            const email = document.getElementById('email');
-            const errorDiv = document.getElementById('email-error');
-            const button = event.target.querySelector('button');
-            const loading = button.querySelector('.loading');
             
-            // Reset error state
-            errorDiv.style.display = 'none';
-            errorDiv.textContent = '';
-            email.style.borderColor = '';
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
             
-            // Validate email
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value || !emailPattern.test(email.value)) {
-                errorDiv.textContent = 'Please enter a valid email address';
-                errorDiv.style.display = 'block';
-                email.style.borderColor = 'var(--warning-orange)';
-                email.focus();
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
                 return;
             }
             
             // Show loading state
-            loading.style.display = 'inline-block';
-            button.disabled = true;
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
             
-            // Simulate API call
-            setTimeout(() => {
-                alert('Thank you! We\'ll contact you within 30 minutes to confirm your emergency appointment.');
-                event.target.reset();
-                loading.style.display = 'none';
-                button.disabled = false;
-            }, 1500);
-        }
-
-        // Enhanced smooth scrolling with offset for fixed header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Initialize calculator
-        calculateCost();
-
-        // Enhanced scroll animations with Intersection Observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements that should animate on scroll
-        document.querySelectorAll('.detail-card, .stat-card, .step-card, .case-details').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Performance monitoring
-        if ('PerformanceObserver' in window) {
-            const perfObserver = new PerformanceObserver((list) => {
-                for (const entry of list.getEntries()) {
-                    if (entry.entryType === 'largest-contentful-paint') {
-                        console.log('LCP:', entry.startTime);
-                    }
-                }
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
             });
             
             try {
-                perfObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-            } catch (e) {
-                // Ignore if not supported
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
             }
         }
 
-        // Preload critical images
-        function preloadImage(src) {
-            const img = new Image();
-            img.src = src;
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
         }
 
-        // Preload hero image if not already loaded
-        const heroImg = document.querySelector('.hero-image img');
-        if (heroImg && heroImg.complete === false) {
-            preloadImage(heroImg.src);
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
         }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
     </script>
+
 </body>
 </html>

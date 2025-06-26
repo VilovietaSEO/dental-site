@@ -6,6 +6,9 @@
     <title>Dental Services & Pricing | Modern Dental Care - Book Same-Day Appointments</title>
     <meta name="description" content="Explore our complete dental services with transparent pricing. Virtual consultations available. Insurance accepted. Payment plans from $49/month. Book online instantly!">
     
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
+    
     <style>
         * {
             margin: 0;
@@ -1126,8 +1129,23 @@
             }
         }
     </style>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Content Wrapper -->
+    <main style="padding-top: 120px;">
+    
     <!-- Floating Elements -->
     <div class="floating-elements">
         <a href="#" class="virtual-consult-btn" onclick="openVirtualConsult(event)">
@@ -2193,7 +2211,206 @@
         }
     </script>
     
-    <!-- API Client for Backend Integration -->
-    <script src="/js/api-client.js"></script>
+    </main>
+    
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Enhanced API Client for Wave 4 -->
+    <script src="/api-client-v4.js"></script>
+    
+    <!-- Load Header and Footer Components -->
+    <script src="/js/load-components.js"></script>
+    
+    <!-- Global Scripts -->
+    <script src="/assets/js/global.js"></script>
+    
+    <!-- Enhanced Button Functionality for Services Hub -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track service card clicks
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.closest('button')) {
+                        const serviceName = this.querySelector('h3').textContent;
+                        const serviceUrl = this.dataset.url || '#';
+                        
+                        dentalAPI.sendAnalyticsEvent('service_card_clicked', {
+                            service: serviceName,
+                            category: this.dataset.category || 'general',
+                            location: 'services_hub'
+                        });
+                        
+                        if (serviceUrl !== '#') {
+                            window.location.href = serviceUrl;
+                        }
+                    }
+                });
+                
+                // Add data-url attribute based on service
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                if (title.includes('cleaning')) card.dataset.url = '/preventive-care.html';
+                else if (title.includes('emergency')) card.dataset.url = '/emergency-dentistry.html';
+                else if (title.includes('implant')) card.dataset.url = '/dental-implants.html';
+                else if (title.includes('invisalign')) card.dataset.url = '/invisalign.html';
+                else if (title.includes('whitening')) card.dataset.url = '/teeth-whitening.html';
+                else if (title.includes('crown')) card.dataset.url = '/crowns-bridges.html';
+                else if (title.includes('veneer')) card.dataset.url = '/veneers.html';
+                else if (title.includes('filling')) card.dataset.url = '/fillings.html';
+                else if (title.includes('root canal')) card.dataset.url = '/root-canals.html';
+                else if (title.includes('wisdom')) card.dataset.url = '/wisdom-teeth.html';
+                else if (title.includes('denture')) card.dataset.url = '/dentures.html';
+                else if (title.includes('gum')) card.dataset.url = '/gum-disease.html';
+            });
+            
+            // Enhance all book appointment buttons
+            document.querySelectorAll('.book-btn').forEach(button => {
+                button.setAttribute('data-action', 'book-appointment');
+                button.setAttribute('data-location', 'service-card');
+                button.setAttribute('data-service', button.closest('.service-card').querySelector('h3').textContent);
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const service = this.dataset.service;
+                    
+                    dentalAPI.sendAnalyticsEvent('cta_clicked', {
+                        action: 'book_appointment',
+                        location: 'service_card',
+                        service: service,
+                        category: this.closest('.service-card').dataset.category || 'general'
+                    });
+                    
+                    // Store selected service for pre-filling appointment form
+                    sessionStorage.setItem('selectedService', service);
+                    
+                    window.location.href = '/book-appointment.html';
+                });
+                
+                // Add touch support
+                dentalAPI.addTouchSupport(button, function() {
+                    button.click();
+                });
+            });
+            
+            // Enhance emergency CTA
+            const emergencyCTA = document.querySelector('.emergency-cta');
+            if (emergencyCTA) {
+                emergencyCTA.setAttribute('data-action', 'emergency-call');
+                emergencyCTA.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    dentalAPI.sendAnalyticsEvent('emergency_cta_clicked', {
+                        location: 'services_hub',
+                        action: 'call'
+                    });
+                    
+                    window.location.href = 'tel:+15551234567';
+                });
+            }
+            
+            // Handle virtual consultation form
+            const virtualForm = document.getElementById('virtualConsultForm');
+            if (virtualForm) {
+                virtualForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    
+                    // Validate form
+                    if (!this.checkValidity()) {
+                        this.reportValidity();
+                        return;
+                    }
+                    
+                    // Prepare contact data
+                    const contactData = {
+                        name: this.name.value.trim(),
+                        email: this.email.value.trim().toLowerCase(),
+                        phone: this.phone.value.trim(),
+                        message: this.concern.value.trim(),
+                        formType: 'virtual_consultation',
+                        urgency: 'normal',
+                        subject: 'Virtual Consultation Request'
+                    };
+                    
+                    try {
+                        // Submit to API
+                        const result = await dentalAPI.submitContact(submitButton, contactData);
+                        
+                        // Show success message
+                        const modal = document.getElementById('virtualModal');
+                        modal.innerHTML = `
+                            <div class="modal-content">
+                                <div style="text-align: center; padding: 2rem;">
+                                    <h2 style="color: #28a745; margin-bottom: 1rem;">✅ Request Sent!</h2>
+                                    <p>Thank you for your virtual consultation request.</p>
+                                    <p><strong>Ticket #: ${result.ticketId}</strong></p>
+                                    <p>We'll contact you within 24 hours to schedule your virtual consultation.</p>
+                                    <button class="cta-button" onclick="closeVirtualConsult()" style="margin-top: 1rem;">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                        
+                        // Close modal after 5 seconds
+                        setTimeout(() => {
+                            closeVirtualConsult();
+                        }, 5000);
+                        
+                    } catch (error) {
+                        alert('We couldn\\'t send your request. Please call us at (555) 123-4567.');
+                    }
+                });
+            }
+            
+            // Filter functionality with analytics
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Track filter usage
+                    dentalAPI.sendAnalyticsEvent('service_filter_used', {
+                        category: category,
+                        location: 'services_hub'
+                    });
+                    
+                    // Existing filter logic
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const cards = document.querySelectorAll('.service-card');
+                    cards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Track scroll to categories
+            const categoryObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const category = entry.target.querySelector('h2').textContent;
+                        dentalAPI.sendAnalyticsEvent('category_viewed', {
+                            category: category,
+                            location: 'services_hub'
+                        });
+                        categoryObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            document.querySelectorAll('.service-category').forEach(category => {
+                categoryObserver.observe(category);
+            });
+        });
+    </script>
 </body>
 </html>

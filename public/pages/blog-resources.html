@@ -919,6 +919,15 @@
             border: 0 !important;
         }
     </style>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -1725,6 +1734,190 @@
             }
         `;
         document.head.appendChild(style);
+    </script>
+    
+    <!-- Enhanced API Client for Wave 4 -->
+    <script src="/api-client-v4.js"></script>
+    
+    <!-- Enhanced Button Functionality for Blog/Resources -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhance all CTA buttons
+            document.querySelectorAll('.cta-button').forEach(button => {
+                if (!button.dataset.action) {
+                    button.setAttribute('data-action', 'book-appointment');
+                    button.setAttribute('data-location', 'blog-resources');
+                }
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    dentalAPI.sendAnalyticsEvent('cta_clicked', {
+                        action: this.dataset.action || 'book_appointment',
+                        location: this.dataset.location || 'blog-resources',
+                        context: this.closest('.article-card')?.querySelector('h3')?.textContent || 'general'
+                    });
+                    
+                    if (this.dataset.action === 'download') {
+                        // Handle download
+                        const downloadUrl = this.dataset.url;
+                        window.open(downloadUrl, '_blank');
+                    } else {
+                        window.location.href = '/book-appointment.html';
+                    }
+                });
+                
+                // Add touch support
+                dentalAPI.addTouchSupport(button, function() {
+                    button.click();
+                });
+            });
+            
+            // Track article card clicks
+            document.querySelectorAll('.article-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.closest('button')) {
+                        const articleTitle = this.querySelector('h3').textContent;
+                        const category = this.querySelector('.article-category').textContent;
+                        
+                        dentalAPI.sendAnalyticsEvent('article_clicked', {
+                            title: articleTitle,
+                            category: category,
+                            location: 'blog-resources'
+                        });
+                    }
+                });
+            });
+            
+            // Track search usage
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                let searchTimeout;
+                searchInput.addEventListener('input', function() {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        if (this.value.trim()) {
+                            dentalAPI.sendAnalyticsEvent('search_performed', {
+                                query: this.value.trim(),
+                                location: 'blog-resources',
+                                results_count: document.querySelectorAll('.article-card:not([style*="display: none"])').length
+                            });
+                        }
+                    }, 1000); // Debounce for 1 second
+                });
+            }
+            
+            // Track filter usage
+            const originalFilterFunction = window.filterArticles;
+            window.filterArticles = function(category) {
+                // Call original function
+                if (originalFilterFunction) {
+                    originalFilterFunction(category);
+                }
+                
+                // Track analytics
+                dentalAPI.sendAnalyticsEvent('filter_used', {
+                    category: category,
+                    location: 'blog-resources'
+                });
+            };
+            
+            // Track downloadable resource clicks
+            document.querySelectorAll('[data-resource]').forEach(resource => {
+                resource.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const resourceName = this.dataset.resource;
+                    const resourceType = this.dataset.type || 'pdf';
+                    
+                    dentalAPI.sendAnalyticsEvent('resource_downloaded', {
+                        name: resourceName,
+                        type: resourceType,
+                        location: 'blog-resources'
+                    });
+                    
+                    // Simulate download (in production, would link to actual files)
+                    alert(`Download started: ${resourceName}.${resourceType}`);
+                });
+            });
+            
+            // Handle newsletter signup
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    
+                    if (!emailInput.value || !emailInput.checkValidity()) {
+                        emailInput.reportValidity();
+                        return;
+                    }
+                    
+                    const contactData = {
+                        email: emailInput.value.trim().toLowerCase(),
+                        name: 'Newsletter Subscriber',
+                        message: 'Newsletter subscription request',
+                        formType: 'newsletter',
+                        subject: 'Newsletter Signup'
+                    };
+                    
+                    try {
+                        const result = await dentalAPI.submitContact(submitButton, contactData);
+                        
+                        // Show success message
+                        this.innerHTML = `
+                            <div style="text-align: center; padding: 1rem;">
+                                <h3 style="color: #28a745;">✅ Successfully Subscribed!</h3>
+                                <p>Thank you for subscribing to our newsletter.</p>
+                            </div>
+                        `;
+                        
+                    } catch (error) {
+                        alert('Could not subscribe. Please try again later.');
+                    }
+                });
+            }
+            
+            // Track scroll depth on articles
+            const articleSections = document.querySelectorAll('.content-section');
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionTitle = entry.target.querySelector('h2')?.textContent || 'Unknown Section';
+                        dentalAPI.sendAnalyticsEvent('article_section_viewed', {
+                            section: sectionTitle,
+                            article: document.querySelector('h1')?.textContent || 'Blog Resources',
+                            location: 'blog-resources'
+                        });
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            articleSections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            // Add print tracking
+            window.addEventListener('beforeprint', function() {
+                dentalAPI.sendAnalyticsEvent('article_printed', {
+                    title: document.querySelector('h1')?.textContent || 'Blog Resources',
+                    location: 'blog-resources'
+                });
+            });
+            
+            // Track video plays if any
+            document.querySelectorAll('video').forEach(video => {
+                video.addEventListener('play', function() {
+                    dentalAPI.sendAnalyticsEvent('video_played', {
+                        video_title: this.getAttribute('data-title') || 'Unnamed Video',
+                        location: 'blog-resources'
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>

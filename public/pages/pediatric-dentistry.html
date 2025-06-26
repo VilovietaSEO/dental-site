@@ -1,90 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="service-name" content="pediatric-dentistry">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Pediatric Dentistry - Interactive Kids Dental Care | SmileCare Dental</title>
-    <meta name="description" content="Magical pediatric dental care with animated characters, reward tracking, educational games, and gentle treatment. Schedule your child's fun dental adventure today!">
-    <meta name="keywords" content="pediatric dentistry, kids dentist, children dental care, fun dental visits, gentle dentist">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://smilecare.dental/pediatric-dentistry">
+    <title>Pediatric Dentistry - Fun & Gentle Dental Care for Kids | SmileCare Dental</title>
+    <meta name="description" content="Specialized pediatric dental care in a fun, kid-friendly environment. First visit free for children under 3. Expert care that makes kids actually enjoy going to the dentist!">
+    <meta name="keywords" content="pediatric dentist, kids dentist, children's dental care, baby teeth, dental sealants, fluoride treatment">
+    <link rel="canonical" href="https://smilecare.dental/services/pediatric-dentistry">
     
-    <!-- Preconnect to external resources for faster loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"></noscript>
     
-    <!-- Open Graph tags for social sharing -->
-    <meta property="og:title" content="Fun Pediatric Dentistry - Interactive Kids Dental Care">
-    <meta property="og:description" content="Magical dental care that makes kids love visiting the dentist. Animated characters, reward system, and gentle treatment.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://smilecare.dental/pediatric-dentistry">
-    
-    <!-- Schema.org markup for pediatric dental office -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Dentist",
-        "name": "SmileCare Kids Dental",
-        "speciality": "Pediatric Dentistry",
-        "description": "Fun, gentle pediatric dental care with interactive experiences for children of all ages",
-        "url": "https://smilecare.dental/pediatric-dentistry",
-        "telephone": "+1-555-KIDS-123",
-        "priceRange": "$",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Pediatric Dental Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Children's Dental Cleaning",
-                        "description": "Gentle cleanings with fun themes and characters"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Pediatric Dental Sealants",
-                        "description": "Protective coating to prevent cavities in children"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Children's Fluoride Treatment",
-                        "description": "Strengthening treatment with kid-friendly flavors"
-                    }
-                }
-            ]
-        }
-    }
-    </script>
-    
-    <!-- Critical CSS inlined for faster rendering -->
     <style>
-        /* CSS Variables for consistent theming */
         :root {
-            --trust-blue: #0077BE;
-            --clean-white: #FFFFFF;
-            --accent-teal: #00A8A8;
-            --soft-gray: #F5F5F5;
-            --charcoal: #333333;
-            --success-green: #28A745;
-            --kid-purple: #9B59B6;
-            --kid-orange: #F39C12;
-            --kid-pink: #FF6B9D;
-            --kid-yellow: #FFD93D;
-            --kid-green: #6BCF7F;
-            --light-purple: #E8D5F2;
-            --light-orange: #FFE5CC;
-            --light-pink: #FFE0EC;
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-medium: 0 8px 24px rgba(0,0,0,0.12);
-            --border-radius: 8px;
+            --kid-purple: #9333EA;
+            --kid-pink: #EC4899;
+            --kid-blue: #3B82F6;
+            --kid-green: #10B981;
+            --kid-yellow: #F59E0B;
+            --kid-orange: #F97316;
+            --soft-purple: #F3E8FF;
+            --soft-pink: #FCE7F3;
+            --parent-blue: #1E40AF;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-600: #4B5563;
+            --gray-900: #111827;
+            --success: #059669;
+            --error: #DC2626;
         }
         
         * {
@@ -93,1792 +38,1381 @@
             box-sizing: border-box;
         }
         
-        html {
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: var(--white);
+            overflow-x: hidden;
         }
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--charcoal);
-            background-color: var(--clean-white);
-            overflow-x: hidden;
-            font-display: swap;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        /* Fun font for headings */
+        h1, h2, h3 {
+            font-family: 'Fredoka', cursive;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         /* Skip link for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
-            left: 6px;
-            background: var(--trust-blue);
-            color: var(--clean-white);
+            left: 0;
+            background: var(--parent-blue);
+            color: white;
             padding: 8px;
             text-decoration: none;
-            border-radius: 4px;
-            z-index: 9999;
-            font-weight: 600;
+            z-index: 100;
         }
         
         .skip-link:focus {
-            top: 6px;
+            top: 0;
         }
         
-        /* Screen reader only content */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* Error handling for interactive elements */
-        .error {
-            color: #dc3545;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
-        }
-        
-        .form-control:invalid:not(:placeholder-shown) + .error {
-            display: block;
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            :root {
-                --charcoal: #000000;
-                --clean-white: #FFFFFF;
-                --trust-blue: #0066CC;
-            }
-        }
-        
-        /* Focus styles for better keyboard navigation */
-        *:focus {
-            outline: 2px solid var(--trust-blue);
-            outline-offset: 2px;
-        }
-        
-        button:focus,
-        a:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 2px solid var(--trust-blue);
-            outline-offset: 2px;
-        }
-        
-        /* Animated Background Elements */
-        .floating-shapes {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 20s infinite ease-in-out;
-        }
-        
-        .shape.circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--kid-purple);
-        }
-        
-        .shape.star {
-            width: 60px;
-            height: 60px;
-            background: var(--kid-yellow);
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        }
-        
-        .shape.heart {
-            width: 60px;
-            height: 60px;
-            background: var(--kid-pink);
-            transform: rotate(-45deg);
-            clip-path: path('M20,30 C20,20 10,15 10,25 C10,15 0,20 0,30 C0,40 20,55 20,55 C20,55 40,40 40,30 C40,20 30,15 30,25 C30,15 20,20 20,30 Z');
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(90deg); }
-            50% { transform: translateY(0) rotate(180deg); }
-            75% { transform: translateY(20px) rotate(270deg); }
-        }
-        
-        /* Header Styles */
+        /* Header */
         header {
-            background: var(--clean-white);
-            box-shadow: var(--shadow-soft);
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 119, 190, 0.1);
+            z-index: 50;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 1rem 0;
         }
         
         .logo {
-            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-size: 1.5rem;
             font-weight: 700;
-            color: var(--trust-blue);
+            color: var(--kid-purple);
+            text-decoration: none;
+            font-family: 'Fredoka', cursive;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            text-decoration: none;
-        }
-        
-        .logo img {
-            height: 40px;
-            animation: wiggle 2s ease-in-out infinite;
-        }
-        
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
         }
         
         .nav-links {
             display: flex;
             gap: 2rem;
-            list-style: none;
             align-items: center;
         }
         
         .nav-links a {
+            color: var(--gray-600);
             text-decoration: none;
-            color: var(--charcoal);
             font-weight: 500;
-            transition: var(--transition-smooth);
-            position: relative;
+            transition: color 0.3s;
         }
         
         .nav-links a:hover {
             color: var(--kid-purple);
         }
         
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: var(--kid-purple);
-            transition: var(--transition-smooth);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .cta-button {
-            background: var(--success-green);
-            color: var(--clean-white);
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .cta-button:hover {
-            background: #218838;
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .cta-button.fun {
-            background: linear-gradient(45deg, var(--kid-purple), var(--kid-pink));
-            animation: rainbow 3s ease-in-out infinite;
-        }
-        
-        @keyframes rainbow {
-            0%, 100% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(30deg); }
-        }
-        
-        /* Hero Section - Magical Theme */
+        /* Hero Section with fun animations */
         .hero {
-            background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-pink) 50%, var(--light-orange) 100%);
-            padding: clamp(3rem, 8vw, 5rem) 5%;
+            background: linear-gradient(135deg, var(--soft-purple) 0%, var(--soft-pink) 100%);
+            padding: 4rem 0;
             position: relative;
             overflow: hidden;
         }
         
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
+        .hero::before {
+            content: '🦷';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            top: -2rem;
+            right: 5%;
+            animation: float 3s ease-in-out infinite;
         }
         
-        .hero-text h1 {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            color: var(--trust-blue);
+        .hero::after {
+            content: '🌈';
+            position: absolute;
+            font-size: 6rem;
+            opacity: 0.1;
+            bottom: -2rem;
+            left: 10%;
+            animation: float 3s ease-in-out infinite 1.5s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--kid-purple);
             margin-bottom: 1rem;
-            line-height: 1.2;
+            text-align: center;
         }
         
-        .hero-text h1 span {
-            background: linear-gradient(45deg, var(--kid-purple), var(--kid-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-        
-        @keyframes sparkle {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.2); }
-        }
-        
-        .hero-text p {
-            font-size: clamp(1rem, 3vw, 1.25rem);
-            color: var(--charcoal);
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            text-align: center;
             margin-bottom: 2rem;
         }
         
-        .hero-buttons {
+        .hero-cta {
             display: flex;
             gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
         }
         
-        /* Interactive Tooth Characters */
-        .character-playground {
+        /* Button Styles */
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             position: relative;
-            height: 400px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 30px;
-            padding: 2rem;
-            box-shadow: var(--shadow-medium);
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
         }
         
-        .main-character {
+        .btn-primary {
+            background: var(--kid-purple);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--kid-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--kid-purple);
+            border: 2px solid var(--kid-purple);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--soft-purple);
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn.loading {
+            color: transparent;
+        }
+        
+        .btn.loading::after {
+            content: '';
             position: absolute;
+            width: 20px;
+            height: 20px;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150px;
-            height: 180px;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--kid-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--kid-purple);
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--kid-purple);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Parent Info Section */
+        .parent-info {
+            background: var(--gray-50);
+            padding: 4rem 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .info-card h3 {
+            color: var(--parent-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+        
+        /* Kid-Friendly Activities Section */
+        .activities {
+            padding: 4rem 0;
+            background: linear-gradient(to bottom, var(--white), var(--soft-purple));
+        }
+        
+        .activity-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .activity-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
             cursor: pointer;
-            transition: var(--transition-smooth);
         }
         
-        .tooth-body {
+        .activity-card:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .activity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Parent-Friendly Appointment Form */
+        .appointment-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .appointment-form {
+            background: var(--gray-50);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 2rem auto 0;
+            border: 3px solid var(--soft-purple);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-header h3 {
+            color: var(--kid-purple);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+        }
+        
+        .form-section-title {
+            font-weight: 600;
+            color: var(--parent-blue);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-900);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #FFFFFF 0%, #F0F0F0 100%);
-            border-radius: 40% 40% 50% 50%;
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            animation: bounce 2s ease-in-out infinite;
+            padding: 0.875rem;
+            border: 2px solid var(--gray-50);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: var(--white);
         }
         
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--kid-purple);
+            box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+        }
+        
+        .form-group input.error {
+            border-color: var(--error);
+            background-color: rgba(220, 38, 38, 0.05);
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.has-error .error-message {
+            display: block;
+        }
+        
+        /* Child Selector Buttons */
+        .child-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .child-option {
+            padding: 1rem;
+            border: 2px solid var(--gray-50);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+        
+        .child-option:hover {
+            border-color: var(--kid-purple);
+            transform: translateY(-2px);
+        }
+        
+        .child-option.selected {
+            border-color: var(--kid-purple);
+            background: var(--soft-purple);
+        }
+        
+        .child-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Concern Checkboxes */
+        .concern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .concern-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .concern-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .concern-item label {
+            cursor: pointer;
+            font-weight: normal;
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            color: var(--white);
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .notification[data-type="success"] {
+            background: var(--success);
+        }
+        
+        .notification[data-type="error"] {
+            background: var(--error);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        /* Floating Emergency Button for Parents */
+        .floating-emergency {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--error);
+            color: var(--white);
+            padding: 0.875rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+            z-index: 100;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .floating-emergency:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(220, 38, 38, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .floating-emergency {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.75rem 1.25rem;
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid var(--kid-purple);
+            outline-offset: 2px;
+        }
+        
+        /* Fun animations for kids */
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
         
-        .tooth-face {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            text-align: center;
-        }
-        
-        .eyes {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 10px;
-        }
-        
-        .eye {
-            width: 20px;
-            height: 20px;
-            background: var(--charcoal);
-            border-radius: 50%;
-            position: relative;
-        }
-        
-        .eye::after {
-            content: '';
-            position: absolute;
-            top: 25%;
-            left: 25%;
-            width: 8px;
-            height: 8px;
-            background: white;
-            border-radius: 50%;
-        }
-        
-        .smile {
-            width: 50px;
-            height: 25px;
-            border: 3px solid var(--charcoal);
-            border-top: none;
-            border-radius: 0 0 50px 50px;
-            margin: 0 auto;
-        }
-        
-        .tooth-sparkles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        
-        .sparkle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: var(--kid-yellow);
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            animation: twinkle 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes twinkle {
-            0%, 100% { transform: scale(0) rotate(0deg); opacity: 0; }
-            50% { transform: scale(1) rotate(180deg); opacity: 1; }
-        }
-        
-        .friend-characters {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-        }
-        
-        .friend {
-            width: 60px;
-            height: 70px;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .friend:hover,
-        .friend:focus {
-            transform: scale(1.2) rotate(10deg);
-        }
-        
-        /* Mobile responsive adjustments */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .character-playground {
-                height: 300px;
-            }
-            
-            .main-character {
-                width: 120px;
-                height: 150px;
-            }
-        }
-        
-        /* Print styles */
-        @media print {
-            .floating-shapes,
-            .nav-links,
-            .cta-button,
-            .character-playground {
-                display: none;
-            }
-            
-            body {
-                background: white;
-                color: black;
-            }
+        .bounce-animation {
+            animation: bounce 2s ease-in-out infinite;
         }
     </style>
 </head>
 <body>
-    <!-- Skip link for screen readers -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main" class="skip-link">Skip to main content</a>
     
-    <!-- Floating Background Shapes -->
-    <div class="floating-shapes" aria-hidden="true">
-        <div class="shape circle" style="top: 10%; left: 5%;"></div>
-        <div class="shape star" style="top: 20%; right: 10%;"></div>
-        <div class="shape heart" style="bottom: 15%; left: 15%;"></div>
-        <div class="shape circle" style="bottom: 25%; right: 20%; background: var(--kid-orange);"></div>
-        <div class="shape star" style="top: 50%; left: 45%; animation-delay: 2s;"></div>
-    </div>
-
-    <!-- Header -->
     <header>
-        <nav role="navigation" aria-label="Main navigation">
-            <a href="#" class="logo" aria-label="SmileCare Kids Dental homepage">
-                <span style="font-size: 2rem;" aria-hidden="true">🦷</span>
+        <nav class="container">
+            <a href="/" class="logo">
+                <span>🦷</span>
                 SmileCare Kids
             </a>
-            <ul class="nav-links">
-                <li><a href="#journey" aria-describedby="journey-desc">Age Groups</a></li>
-                <li><a href="#visualizer" aria-describedby="visualizer-desc">Treatments</a></li>
-                <li><a href="#rewards" aria-describedby="rewards-desc">Rewards</a></li>
-                <li><a href="#parents" aria-describedby="parents-desc">Parents</a></li>
-                <li><a href="#games" aria-describedby="games-desc">Fun Zone</a></li>
-            </ul>
-            <a href="#book" class="cta-button fun" role="button" aria-label="Book a magical dental visit">
-                <span aria-hidden="true">🌟</span> Book Magic Visit
-            </a>
+            <div class="nav-links">
+                <a href="/services">Services</a>
+                <a href="/about">About</a>
+                <a href="/parents">For Parents</a>
+                <a href="/contact">Contact</a>
+                <a href="tel:5551234567" class="btn btn-primary">Call Now</a>
+            </div>
         </nav>
-        
-        <!-- Hidden descriptions for screen readers -->
-        <div class="sr-only">
-            <span id="journey-desc">Explore dental care options for different age groups</span>
-            <span id="visualizer-desc">View interactive treatment explanations</span>
-            <span id="rewards-desc">Learn about our reward system for kids</span>
-            <span id="parents-desc">Access parent resources and information</span>
-            <span id="games-desc">Play educational dental games</span>
-        </div>
     </header>
-
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section - Magical Theme -->
-        <section class="hero" role="banner">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Welcome to the <span>Magical World</span> of Healthy Smiles!</h1>
-                    <p>Where every visit is an adventure and every smile sparkles with joy!</p>
-                    <div class="hero-buttons">
-                        <a href="#book" class="cta-button" role="button" aria-label="Schedule your child's first dental visit">
-                            <span aria-hidden="true">🎉</span> Schedule First Visit
-                        </a>
-                        <a href="#tour" class="cta-button fun" role="button" aria-label="Take a virtual tour of our office">
-                            <span aria-hidden="true">🎮</span> Virtual Office Tour
-                        </a>
-                    </div>
+    
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="bounce-animation">Where Kids Love Going to the Dentist! 🌟</h1>
+                <p class="hero-subtitle">Gentle, fun dental care that makes children smile. First visit FREE for kids under 3!</p>
+                <div class="hero-cta">
+                    <a href="#appointment" class="btn btn-primary" data-action="book-kids-appointment">
+                        <span>Book Your Child's Visit</span>
+                        <span>🎈</span>
+                    </a>
+                    <a href="#virtual-tour" class="btn btn-secondary" data-action="virtual-tour">
+                        <span>Take Virtual Tour</span>
+                        <span>🎮</span>
+                    </a>
                 </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Kids Love SmileCare</h2>
+                <p class="section-subtitle">We've created a dental experience that's actually fun for children!</p>
                 
-                <div class="character-playground" id="characterPlayground" role="application" aria-label="Interactive tooth character playground">
-                    <button class="main-character" onclick="makeToothHappy()" 
-                            aria-label="Click the tooth character to make it happy"
-                            role="button"
-                            tabindex="0"
-                            onkeydown="handleKeyPress(event, 'makeToothHappy')">
-                        <div class="tooth-body">
-                            <div class="tooth-face">
-                                <div class="eyes" aria-hidden="true">
-                                    <div class="eye"></div>
-                                    <div class="eye"></div>
-                                </div>
-                                <div class="smile" aria-hidden="true"></div>
-                            </div>
-                            <div class="tooth-sparkles" aria-hidden="true">
-                                <div class="sparkle" style="top: 10%; left: 20%;"></div>
-                                <div class="sparkle" style="top: 30%; right: 15%; animation-delay: 0.5s;"></div>
-                                <div class="sparkle" style="bottom: 20%; left: 30%; animation-delay: 1s;"></div>
-                            </div>
-                        </div>
-                    </button>
-                    
-                    <div class="friend-characters" role="group" aria-label="Tooth friends with dental tips">
-                        <button class="friend" onclick="showCharacterMessage('brush')" 
-                                aria-label="Toothbrush character - click for brushing tips"
-                                tabindex="0"
-                                onkeydown="handleKeyPress(event, 'brush')">
-                            <div style="font-size: 3rem;" aria-hidden="true">🪥</div>
-                        </button>
-                        <button class="friend" onclick="showCharacterMessage('apple')" 
-                                aria-label="Apple character - click for healthy eating tips"
-                                tabindex="0"
-                                onkeydown="handleKeyPress(event, 'apple')">
-                            <div style="font-size: 3rem;" aria-hidden="true">🍎</div>
-                        </button>
-                        <button class="friend" onclick="showCharacterMessage('water')" 
-                                aria-label="Water droplet character - click for hydration tips"
-                                tabindex="0"
-                                onkeydown="handleKeyPress(event, 'water')">
-                            <div style="font-size: 3rem;" aria-hidden="true">💧</div>
-                        </button>
-                        <button class="friend" onclick="showCharacterMessage('star')" 
-                                aria-label="Star character - click for encouragement"
-                                tabindex="0"
-                                onkeydown="handleKeyPress(event, 'star')">
-                            <div style="font-size: 3rem;" aria-hidden="true">⭐</div>
-                        </button>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Game Room</h3>
+                        <p>Play games while you wait! Xbox, PlayStation, and tablets available.</p>
                     </div>
                     
-                    <div id="characterMessage" 
-                         style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); background: var(--kid-yellow); padding: 1rem 2rem; border-radius: 20px; display: none; font-weight: bold; box-shadow: var(--shadow-medium);"
-                         role="alert"
-                         aria-live="polite"
-                         aria-atomic="true">
-                        Click me!
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Prize Tower</h3>
+                        <p>Every child gets to pick a prize after their visit!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📺</div>
+                        <h3>Ceiling TVs</h3>
+                        <p>Watch your favorite shows during treatment.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🦄</div>
+                        <h3>Themed Rooms</h3>
+                        <p>Choose from underwater, space, or jungle themed rooms!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">😊</div>
+                        <h3>No Scary Tools</h3>
+                        <p>We use kid-friendly names for all our instruments.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Art Wall</h3>
+                        <p>Your child's artwork could be featured on our wall!</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Age-Specific Journey Selector -->
-        <section class="journey-selector" id="journey" aria-labelledby="journey-title">
-            <div class="journey-container">
-                <div class="journey-header">
-                    <h2 id="journey-title">Choose Your Smile Adventure!</h2>
-                    <p>Special care designed for every age and stage</p>
-                </div>
+        
+        <!-- Parent Information Section -->
+        <section class="parent-info">
+            <div class="container">
+                <h2 class="section-title">Information for Parents</h2>
+                <p class="section-subtitle">Everything you need to know about your child's dental care</p>
                 
-                <div class="age-cards" role="group" aria-label="Age-specific dental care options">
-                    <div class="age-card" onclick="selectAgeGroup('baby')" 
-                         role="button" 
-                         tabindex="0"
-                         aria-label="First Smiles program for ages 0-2 years"
-                         onkeydown="handleKeyPress(event, 'baby')">
-                        <span class="age-icon" aria-hidden="true">👶</span>
-                        <h3 class="age-title">First Smiles</h3>
-                        <p class="age-range">0-2 years</p>
-                        <p>Baby's first dental home with gentle care</p>
-                        <ul class="age-features">
-                            <li>First tooth celebration</li>
-                            <li>Teething comfort tips</li>
-                            <li>Parent lap exams</li>
-                            <li>Growth tracking</li>
-                        </ul>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>First Visit Guide</h3>
+                        <p>We recommend the first visit by age 1 or within 6 months of the first tooth. The visit includes a gentle exam, cleaning, and parent education.</p>
                     </div>
                     
-                    <div class="age-card" onclick="selectAgeGroup('toddler')" 
-                         role="button" 
-                         tabindex="0"
-                         aria-label="Little Explorers program for ages 3-5 years"
-                         onkeydown="handleKeyPress(event, 'toddler')">
-                        <span class="age-icon" aria-hidden="true">🧒</span>
-                        <h3 class="age-title">Little Explorers</h3>
-                        <p class="age-range">3-5 years</p>
-                        <p>Fun-filled visits with favorite characters</p>
-                        <ul class="age-features">
-                            <li>Happy cleanings</li>
-                            <li>Fluoride superhero shield</li>
-                            <li>Counting teeth games</li>
-                            <li>Treasure chest rewards</li>
-                        </ul>
+                    <div class="info-card">
+                        <h3>Insurance & Payment</h3>
+                        <p>We accept all major insurance plans and offer flexible payment options. CareCredit available with 0% financing for 12 months.</p>
                     </div>
                     
-                    <div class="age-card" onclick="selectAgeGroup('child')" 
-                         role="button" 
-                         tabindex="0"
-                         aria-label="Smile Champions program for ages 6-12 years"
-                         onkeydown="handleKeyPress(event, 'child')">
-                        <span class="age-icon" aria-hidden="true">👧</span>
-                        <h3 class="age-title">Smile Champions</h3>
-                        <p class="age-range">6-12 years</p>
-                        <p>Building healthy habits that last</p>
-                        <ul class="age-features">
-                            <li>Sealant protection</li>
-                            <li>Sports guard fitting</li>
-                            <li>Orthodontic preview</li>
-                            <li>Cavity-free club</li>
-                        </ul>
+                    <div class="info-card">
+                        <h3>Preventive Care</h3>
+                        <p>Regular cleanings, fluoride treatments, and sealants can prevent 80% of cavities. We focus on prevention first!</p>
                     </div>
                     
-                    <div class="age-card" onclick="selectAgeGroup('teen')" 
-                         role="button" 
-                         tabindex="0"
-                         aria-label="Teen Zone program for ages 13+ years"
-                         onkeydown="handleKeyPress(event, 'teen')">
-                        <span class="age-icon" aria-hidden="true">🧑</span>
-                        <h3 class="age-title">Teen Zone</h3>
-                        <p class="age-range">13+ years</p>
-                        <p>Confidence-building smile care</p>
-                        <ul class="age-features">
-                            <li>Whitening options</li>
-                            <li>Wisdom teeth check</li>
-                            <li>Invisalign consults</li>
-                            <li>Social media smiles</li>
-                        </ul>
+                    <div class="info-card">
+                        <h3>Behavior Management</h3>
+                        <p>Our team is specially trained in child psychology and uses positive reinforcement techniques to ensure comfort.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Interactive Treatment Visualizer -->
-        <section class="treatment-visualizer" id="visualizer" aria-labelledby="visualizer-title">
-            <div class="visualizer-container">
-                <h2 id="visualizer-title" style="text-align: center; margin-bottom: 1rem;">See How We Keep Smiles Healthy!</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Click to explore our gentle treatments</p>
+        
+        <!-- Kid Activities Section -->
+        <section class="activities" id="virtual-tour">
+            <div class="container">
+                <h2 class="section-title">Fun Activities at Our Office</h2>
+                <p class="section-subtitle">See what makes our office special!</p>
                 
-                <div class="visualizer-box">
-                    <div class="treatment-selector" role="tablist" aria-label="Treatment options">
-                        <button class="treatment-option active" 
-                                onclick="showTreatment('cleaning')" 
-                                role="tab"
-                                aria-selected="true"
-                                aria-controls="treatment-panel"
-                                id="tab-cleaning"
-                                tabindex="0">
-                            <span aria-hidden="true">🦷</span> Happy Cleaning
-                        </button>
-                        <button class="treatment-option" 
-                                onclick="showTreatment('sealant')" 
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="treatment-panel"
-                                id="tab-sealant"
-                                tabindex="-1">
-                            <span aria-hidden="true">🛡️</span> Cavity Shield
-                        </button>
-                        <button class="treatment-option" 
-                                onclick="showTreatment('fluoride')" 
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="treatment-panel"
-                                id="tab-fluoride"
-                                tabindex="-1">
-                            <span aria-hidden="true">✨</span> Super Fluoride
-                        </button>
-                        <button class="treatment-option" 
-                                onclick="showTreatment('filling')" 
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="treatment-panel"
-                                id="tab-filling"
-                                tabindex="-1">
-                            <span aria-hidden="true">🔧</span> Tooth Repair
-                        </button>
+                <div class="activity-cards">
+                    <div class="activity-card" data-activity="games">
+                        <div class="activity-icon">🎮</div>
+                        <h3>Video Games</h3>
+                        <p>Latest games available</p>
                     </div>
                     
-                    <div class="treatment-display" role="tabpanel" id="treatment-panel" aria-labelledby="tab-cleaning">
-                        <div class="treatment-visual" aria-label="Treatment visualization">
-                            <div class="treatment-animation" id="treatmentAnimation">
-                                <!-- Animation content populated by JavaScript -->
-                            </div>
-                        </div>
+                    <div class="activity-card" data-activity="movies">
+                        <div class="activity-icon">🎬</div>
+                        <h3>Movie Theater</h3>
+                        <p>Watch during treatment</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="playground">
+                        <div class="activity-icon">🛝</div>
+                        <h3>Indoor Playground</h3>
+                        <p>Safe & sanitized daily</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="crafts">
+                        <div class="activity-icon">🎨</div>
+                        <h3>Arts & Crafts</h3>
+                        <p>Create masterpieces</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="reading">
+                        <div class="activity-icon">📚</div>
+                        <h3>Story Corner</h3>
+                        <p>Hundreds of books</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="photo">
+                        <div class="activity-icon">📸</div>
+                        <h3>Photo Booth</h3>
+                        <p>Fun props included</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Parent-Friendly Appointment Form -->
+        <section id="appointment" class="appointment-section">
+            <div class="container">
+                <h2 class="section-title">Schedule Your Child's Visit</h2>
+                <p class="section-subtitle">Quick and easy booking for busy parents</p>
+                
+                <form class="appointment-form" data-appointment>
+                    <div class="form-header">
+                        <h3>Let's Get Started! 🚀</h3>
+                        <p>Fill out this form and we'll contact you within 30 minutes during business hours</p>
+                    </div>
+                    
+                    <!-- Parent Information -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span>👨‍👩‍👧‍👦</span>
+                            Parent/Guardian Information
+                        </h4>
                         
-                        <div class="treatment-details">
-                            <h3 id="treatmentTitle" style="color: var(--trust-blue); margin-bottom: 1rem;">Happy Cleaning Adventure</h3>
-                            <p id="treatmentDescription">Our gentle cleaning removes sugar bugs and makes teeth sparkle!</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parent-name">Your Name *</label>
+                                <input type="text" id="parent-name" name="parent-name" required aria-required="true">
+                                <span class="error-message">Please enter your name</span>
+                            </div>
                             
-                            <div class="treatment-steps" role="list" aria-label="Treatment steps">
-                                <div class="step" role="listitem">
-                                    <div class="step-number" aria-hidden="true">1</div>
-                                    <div>
-                                        <h4>Magic Toothbrush</h4>
-                                        <p>Special spinning brush with yummy toothpaste</p>
-                                    </div>
-                                </div>
-                                <div class="step" role="listitem">
-                                    <div class="step-number" aria-hidden="true">2</div>
-                                    <div>
-                                        <h4>Water Fountain</h4>
-                                        <p>Rinse away all the sugar bugs</p>
-                                    </div>
-                                </div>
-                                <div class="step" role="listitem">
-                                    <div class="step-number" aria-hidden="true">3</div>
-                                    <div>
-                                        <h4>Sparkle Polish</h4>
-                                        <p>Make teeth super shiny and smooth</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reward Tracking System -->
-        <section class="reward-system" id="rewards" aria-labelledby="rewards-title">
-            <div class="reward-container">
-                <h2 id="rewards-title" style="text-align: center; margin-bottom: 1rem;">Smile Points Reward System</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Earn points for healthy habits and unlock amazing rewards!</p>
-                
-                <div class="reward-dashboard">
-                    <div class="reward-content">
-                        <div class="points-display" role="status" aria-live="polite">
-                            <h3>Your Smile Points</h3>
-                            <div class="points-number" aria-label="Current points: 1,250">1,250</div>
-                            <p>Only 250 points to your next reward!</p>
-                        </div>
-                        
-                        <h3 style="text-align: center; margin-bottom: 1.5rem;">Achievements Unlocked</h3>
-                        <div class="achievements-grid" role="group" aria-label="Achievement badges">
-                            <div class="achievement unlocked" 
-                                 role="button" 
-                                 tabindex="0"
-                                 aria-label="First Visit Hero achievement - unlocked"
-                                 aria-describedby="achievement-1-desc">
-                                <div class="achievement-icon" aria-hidden="true">🦷</div>
-                                <p>First Visit Hero</p>
-                                <span id="achievement-1-desc" class="sr-only">You completed your first dental visit successfully</span>
-                            </div>
-                            <div class="achievement unlocked" 
-                                 role="button" 
-                                 tabindex="0"
-                                 aria-label="Brushing Champion achievement - unlocked"
-                                 aria-describedby="achievement-2-desc">
-                                <div class="achievement-icon" aria-hidden="true">🪥</div>
-                                <p>Brushing Champion</p>
-                                <span id="achievement-2-desc" class="sr-only">You brush your teeth twice daily consistently</span>
-                            </div>
-                            <div class="achievement unlocked" 
-                                 role="button" 
-                                 tabindex="0"
-                                 aria-label="Healthy Eater achievement - unlocked"
-                                 aria-describedby="achievement-3-desc">
-                                <div class="achievement-icon" aria-hidden="true">🍎</div>
-                                <p>Healthy Eater</p>
-                                <span id="achievement-3-desc" class="sr-only">You choose tooth-friendly foods consistently</span>
-                            </div>
-                            <div class="achievement" 
-                                 role="button" 
-                                 tabindex="0"
-                                 aria-label="Cavity-Free Star achievement - locked"
-                                 aria-describedby="achievement-4-desc">
-                                <div class="achievement-icon" aria-hidden="true">⭐</div>
-                                <p>Cavity-Free Star</p>
-                                <span id="achievement-4-desc" class="sr-only">Complete a year without cavities to unlock this achievement</span>
-                            </div>
-                            <div class="achievement" 
-                                 role="button" 
-                                 tabindex="0"
-                                 aria-label="Perfect Check-up achievement - locked"
-                                 aria-describedby="achievement-5-desc">
-                                <div class="achievement-icon" aria-hidden="true">🏆</div>
-                                <p>Perfect Check-up</p>
-                                <span id="achievement-5-desc" class="sr-only">Get a perfect score on your next dental check-up</span>
-                            </div>
-                            <div class="achievement" 
-                                 role="button" 
-                                 tabindex="0"
-                                 aria-label="Flossing Master achievement - locked"
-                                 aria-describedby="achievement-6-desc">
-                                <div class="achievement-icon" aria-hidden="true">🎯</div>
-                                <p>Flossing Master</p>
-                                <span id="achievement-6-desc" class="sr-only">Floss daily for 30 days to unlock this achievement</span>
+                            <div class="form-group">
+                                <label for="parent-email">Email Address *</label>
+                                <input type="email" id="parent-email" name="parent-email" required aria-required="true">
+                                <span class="error-message">Please enter a valid email</span>
                             </div>
                         </div>
                         
-                        <div style="text-align: center; margin-top: 2rem;">
-                            <button class="cta-button white" 
-                                    onclick="viewRewardStore()"
-                                    aria-label="View available rewards in the reward store">
-                                View Reward Store
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Parent Dashboard -->
-        <section class="parent-dashboard" id="parents" aria-labelledby="parents-title">
-            <div class="dashboard-container">
-                <h2 id="parents-title" style="text-align: center; margin-bottom: 1rem;">Parent Resource Center</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Everything you need to support your child's dental health journey</p>
-                
-                <div class="dashboard-grid">
-                    <div class="dashboard-card" role="article" aria-labelledby="progress-title">
-                        <div class="card-header">
-                            <div class="card-icon" aria-hidden="true">📊</div>
-                            <div>
-                                <h3 id="progress-title">Treatment Progress</h3>
-                                <p>Track your child's dental milestones</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parent-phone">Phone Number *</label>
+                                <input type="tel" id="parent-phone" name="parent-phone" required aria-required="true" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567">
+                                <span class="error-message">Please enter a valid phone number</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-contact">Preferred Contact Method</label>
+                                <select id="preferred-contact" name="preferred-contact">
+                                    <option value="phone">Phone Call</option>
+                                    <option value="text">Text Message</option>
+                                    <option value="email">Email</option>
+                                </select>
                             </div>
                         </div>
+                    </div>
+                    
+                    <!-- Child Information -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span>👶</span>
+                            Child Information
+                        </h4>
                         
-                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="75% of yearly check-ups completed">
-                            <div class="progress-fill" style="width: 75%;">75%</div>
-                        </div>
-                        <p>3 of 4 yearly check-ups completed</p>
-                        
-                        <div style="margin-top: 1.5rem;">
-                            <h4>Upcoming Milestones:</h4>
-                            <ul style="list-style: none; margin-top: 0.5rem;" role="list">
-                                <li style="padding: 0.5rem 0;" role="listitem">✓ 6-year molars check</li>
-                                <li style="padding: 0.5rem 0;" role="listitem">○ Orthodontic evaluation</li>
-                                <li style="padding: 0.5rem 0;" role="listitem">○ Annual x-rays</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="dashboard-card" role="article" aria-labelledby="billing-title">
-                        <div class="card-header">
-                            <div class="card-icon" aria-hidden="true">💰</div>
-                            <div>
-                                <h3 id="billing-title">Insurance & Billing</h3>
-                                <p>Maximize your benefits</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="child-name">Child's Name *</label>
+                                <input type="text" id="child-name" name="child-name" required aria-required="true">
+                                <span class="error-message">Please enter child's name</span>
                             </div>
-                        </div>
-                        
-                        <div style="display: grid; gap: 1rem; margin-top: 1rem;">
-                            <div style="padding: 1rem; background: var(--soft-gray); border-radius: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span>Benefits Used</span>
-                                    <strong aria-label="$750 used out of $1500 total">$750 / $1500</strong>
-                                </div>
+                            
+                            <div class="form-group">
+                                <label for="child-age">Child's Age *</label>
+                                <select id="child-age" name="child-age" required aria-required="true">
+                                    <option value="">Select age</option>
+                                    <option value="0-2">0-2 years (First visit FREE!)</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="6-8">6-8 years</option>
+                                    <option value="9-12">9-12 years</option>
+                                    <option value="13-17">13-17 years</option>
+                                </select>
+                                <span class="error-message">Please select child's age</span>
                             </div>
-                            <div style="padding: 1rem; background: var(--light-purple); border-radius: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span>Remaining</span>
-                                    <strong style="color: var(--kid-purple);" aria-label="$750 remaining">$750</strong>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button class="cta-button" 
-                                style="width: 100%; margin-top: 1rem;"
-                                onclick="viewBenefitDetails()"
-                                aria-label="View detailed insurance benefit information">
-                            View Benefit Details
-                        </button>
-                    </div>
-                    
-                    <div class="dashboard-card" role="article" aria-labelledby="resources-title">
-                        <div class="card-header">
-                            <div class="card-icon" aria-hidden="true">📚</div>
-                            <div>
-                                <h3 id="resources-title">Educational Resources</h3>
-                                <p>Age-appropriate guides</p>
-                            </div>
-                        </div>
-                        
-                        <nav aria-label="Educational resources">
-                            <ul style="list-style: none; margin-top: 1rem;">
-                                <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--soft-gray);">
-                                    <a href="#" 
-                                       style="color: var(--trust-blue); text-decoration: none; display: flex; justify-content: space-between; align-items: center;"
-                                       aria-label="Read the First Tooth Care Guide">
-                                        <span><span aria-hidden="true">🦷</span> First Tooth Care Guide</span>
-                                        <span aria-hidden="true">→</span>
-                                    </a>
-                                </li>
-                                <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--soft-gray);">
-                                    <a href="#" 
-                                       style="color: var(--trust-blue); text-decoration: none; display: flex; justify-content: space-between; align-items: center;"
-                                       aria-label="Learn about Sugar and Your Child's Teeth">
-                                        <span><span aria-hidden="true">🍬</span> Sugar & Your Child's Teeth</span>
-                                        <span aria-hidden="true">→</span>
-                                    </a>
-                                </li>
-                                <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--soft-gray);">
-                                    <a href="#" 
-                                       style="color: var(--trust-blue); text-decoration: none; display: flex; justify-content: space-between; align-items: center;"
-                                       aria-label="Read about Sports and Dental Safety">
-                                        <span><span aria-hidden="true">🏃</span> Sports & Dental Safety</span>
-                                        <span aria-hidden="true">→</span>
-                                    </a>
-                                </li>
-                                <li style="padding: 0.75rem 0;">
-                                    <a href="#" 
-                                       style="color: var(--trust-blue); text-decoration: none; display: flex; justify-content: space-between; align-items: center;"
-                                       aria-label="Get Bedtime Routine Tips for oral health">
-                                        <span><span aria-hidden="true">😴</span> Bedtime Routine Tips</span>
-                                        <span aria-hidden="true">→</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    
-                    <div class="dashboard-card" role="article" aria-labelledby="calendar-title">
-                        <div class="card-header">
-                            <div class="card-icon" aria-hidden="true">📅</div>
-                            <div>
-                                <h3 id="calendar-title">Family Calendar</h3>
-                                <p>Manage all appointments</p>
-                            </div>
-                        </div>
-                        
-                        <div style="margin-top: 1rem;">
-                            <h4>Upcoming Appointments:</h4>
-                            <div style="margin-top: 1rem; display: grid; gap: 0.75rem;" role="list" aria-label="Upcoming appointments">
-                                <div style="padding: 1rem; background: var(--light-orange); border-radius: 10px;" role="listitem">
-                                    <strong>Emma - Cleaning</strong>
-                                    <p style="font-size: 0.875rem;">July 15, 2024 at 2:00 PM</p>
-                                </div>
-                                <div style="padding: 1rem; background: var(--light-purple); border-radius: 10px;" role="listitem">
-                                    <strong>Jake - Sealants</strong>
-                                    <p style="font-size: 0.875rem;">July 22, 2024 at 3:30 PM</p>
-                                </div>
-                            </div>
-                            <button class="cta-button" 
-                                    style="width: 100%; margin-top: 1rem;"
-                                    onclick="scheduleFamilyVisit()"
-                                    aria-label="Schedule a family dental visit">
-                                Schedule Family Visit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Fun Education Games -->
-        <section class="education-games" id="games" aria-labelledby="games-title">
-            <div class="games-container">
-                <h2 id="games-title" style="text-align: center; margin-bottom: 1rem;">Smile Academy Fun Zone!</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Learn about dental health while having a blast!</p>
-                
-                <div class="games-grid" role="group" aria-label="Educational dental games">
-                    <div class="game-card" 
-                         onclick="playGame('brush-hero')" 
-                         role="button"
-                         tabindex="0"
-                         aria-label="Play Brush Hero Adventure game for ages 4-8"
-                         onkeydown="handleKeyPress(event, 'brush-hero')">
-                        <div class="game-preview" 
-                             style="background: linear-gradient(135deg, var(--kid-purple), var(--kid-pink)); display: flex; align-items: center; justify-content: center; font-size: 4rem;"
-                             aria-hidden="true">
-                            🦸‍♂️
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Brush Hero Adventure</h3>
-                            <span class="game-age">Ages 4-8</span>
-                            <p>Battle sugar bugs and save Tooth City!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="game-card" 
-                         onclick="playGame('food-sort')" 
-                         role="button"
-                         tabindex="0"
-                         aria-label="Play Healthy Food Quest game for ages 5-10"
-                         onkeydown="handleKeyPress(event, 'food-sort')">
-                        <div class="game-preview" 
-                             style="background: linear-gradient(135deg, var(--kid-green), var(--kid-yellow)); display: flex; align-items: center; justify-content: center; font-size: 4rem;"
-                             aria-hidden="true">
-                            🍎
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Healthy Food Quest</h3>
-                            <span class="game-age">Ages 5-10</span>
-                            <p>Sort foods to build a healthy smile!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="game-card" 
-                         onclick="playGame('tooth-fairy')" 
-                         role="button"
-                         tabindex="0"
-                         aria-label="Play Tooth Fairy Flight game for ages 6-12"
-                         onkeydown="handleKeyPress(event, 'tooth-fairy')">
-                        <div class="game-preview" 
-                             style="background: linear-gradient(135deg, var(--kid-orange), var(--kid-yellow)); display: flex; align-items: center; justify-content: center; font-size: 4rem;"
-                             aria-hidden="true">
-                            🧚‍♀️
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Tooth Fairy Flight</h3>
-                            <span class="game-age">Ages 6-12</span>
-                            <p>Collect lost teeth on magical missions!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="game-card" 
-                         onclick="playGame('dental-quiz')" 
-                         role="button"
-                         tabindex="0"
-                         aria-label="Play Smile Trivia Challenge game for ages 8 and up"
-                         onkeydown="handleKeyPress(event, 'dental-quiz')">
-                        <div class="game-preview" 
-                             style="background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal)); display: flex; align-items: center; justify-content: center; font-size: 4rem;"
-                             aria-hidden="true">
-                            🎯
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Smile Trivia Challenge</h3>
-                            <span class="game-age">Ages 8+</span>
-                            <p>Test your dental knowledge!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="game-card" 
-                         onclick="playGame('coloring')" 
-                         role="button"
-                         tabindex="0"
-                         aria-label="Access Color and Create activities for ages 3-7"
-                         onkeydown="handleKeyPress(event, 'coloring')">
-                        <div class="game-preview" 
-                             style="background: linear-gradient(135deg, var(--kid-pink), var(--kid-purple)); display: flex; align-items: center; justify-content: center; font-size: 4rem;"
-                             aria-hidden="true">
-                            🎨
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">Color & Create</h3>
-                            <span class="game-age">Ages 3-7</span>
-                            <p>Print coloring pages and activities!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="game-card" 
-                         onclick="playGame('ar-brush')" 
-                         role="button"
-                         tabindex="0"
-                         aria-label="Use AR Brushing Coach for all ages"
-                         onkeydown="handleKeyPress(event, 'ar-brush')">
-                        <div class="game-preview" 
-                             style="background: linear-gradient(135deg, var(--success-green), var(--kid-green)); display: flex; align-items: center; justify-content: center; font-size: 4rem;"
-                             aria-hidden="true">
-                            📱
-                        </div>
-                        <div class="game-info">
-                            <h3 class="game-title">AR Brushing Coach</h3>
-                            <span class="game-age">All Ages</span>
-                            <p>Interactive brushing timer with AR!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Virtual Tour -->
-        <section class="virtual-tour" id="tour" aria-labelledby="tour-title">
-            <div class="tour-container">
-                <h2 id="tour-title" style="text-align: center; color: var(--clean-white); margin-bottom: 1rem;">Take a Virtual Office Tour!</h2>
-                <p style="text-align: center; color: var(--clean-white); margin-bottom: 2rem;">Explore our fun and friendly office before your visit</p>
-                
-                <div class="tour-viewer">
-                    <div class="room-display" id="roomDisplay" role="img" aria-label="Virtual office room view">
-                        <div class="room-content">
-                            <h3 style="font-size: 2rem; color: var(--trust-blue); margin-bottom: 1rem;">Welcome to Our Jungle Room!</h3>
-                            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Where wild smiles are tamed!</p>
-                            <div style="font-size: 6rem;" aria-hidden="true">🦁</div>
-                        </div>
-                    </div>
-                    
-                    <nav class="room-navigation" aria-label="Office room navigation">
-                        <button class="room-button active" 
-                                onclick="showRoom('jungle')" 
-                                aria-label="View Jungle themed room"
-                                aria-pressed="true">Jungle Room</button>
-                        <button class="room-button" 
-                                onclick="showRoom('ocean')" 
-                                aria-label="View Ocean themed room"
-                                aria-pressed="false">Ocean Room</button>
-                        <button class="room-button" 
-                                onclick="showRoom('space')" 
-                                aria-label="View Space themed room"
-                                aria-pressed="false">Space Room</button>
-                        <button class="room-button" 
-                                onclick="showRoom('gameroom')" 
-                                aria-label="View Game room"
-                                aria-pressed="false">Game Room</button>
-                    </nav>
-                </div>
-            </div>
-        </section>
-
-        <!-- Appointment Booking -->
-        <section class="appointment-booking" id="book" aria-labelledby="booking-title">
-            <div class="booking-container">
-                <h2 id="booking-title" style="text-align: center; margin-bottom: 1rem;">Book Your Magic Dental Visit!</h2>
-                <p style="text-align: center; margin-bottom: 2rem;">Schedule appointments for the whole family in one easy step</p>
-                
-                <div class="booking-box">
-                    <div class="booking-steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="4" aria-label="Booking step 1 of 4">
-                        <div class="booking-step active" aria-current="step">
-                            <div class="step-circle">1</div>
-                            <p>Children</p>
-                        </div>
-                        <div class="booking-step">
-                            <div class="step-circle">2</div>
-                            <p>Services</p>
-                        </div>
-                        <div class="booking-step">
-                            <div class="step-circle">3</div>
-                            <p>Date & Time</p>
-                        </div>
-                        <div class="booking-step">
-                            <div class="step-circle">4</div>
-                            <p>Confirm</p>
-                        </div>
-                    </div>
-                    
-                    <form class="booking-form" onsubmit="submitBooking(event)" novalidate>
-                        <fieldset>
-                            <legend class="sr-only">Select children for appointment</legend>
-                            <label>Select Children for Appointment</label>
-                            <div class="child-selector" role="group" aria-label="Child age categories">
-                                <div class="child-option" 
-                                     onclick="selectChild(this)" 
-                                     role="button"
-                                     tabindex="0"
-                                     aria-label="Add baby or toddler to appointment"
-                                     onkeydown="handleKeyPress(event, 'child')">
-                                    <div style="font-size: 2rem;" aria-hidden="true">👶</div>
-                                    <p>Add Baby/Toddler</p>
-                                </div>
-                                <div class="child-option" 
-                                     onclick="selectChild(this)" 
-                                     role="button"
-                                     tabindex="0"
-                                     aria-label="Add child to appointment"
-                                     onkeydown="handleKeyPress(event, 'child')">
-                                    <div style="font-size: 2rem;" aria-hidden="true">🧒</div>
-                                    <p>Add Child</p>
-                                </div>
-                                <div class="child-option" 
-                                     onclick="selectChild(this)" 
-                                     role="button"
-                                     tabindex="0"
-                                     aria-label="Add teen to appointment"
-                                     onkeydown="handleKeyPress(event, 'child')">
-                                    <div style="font-size: 2rem;" aria-hidden="true">👦</div>
-                                    <p>Add Teen</p>
-                                </div>
-                                <div class="child-option" 
-                                     onclick="selectChild(this)" 
-                                     role="button"
-                                     tabindex="0"
-                                     aria-label="Add another child to appointment"
-                                     onkeydown="handleKeyPress(event, 'child')">
-                                    <div style="font-size: 2rem;" aria-hidden="true">➕</div>
-                                    <p>Add Another</p>
-                                </div>
-                            </div>
-                        </fieldset>
-                        
-                        <div class="form-group">
-                            <label for="parent-name">Parent/Guardian Information *</label>
-                            <input type="text" 
-                                   id="parent-name"
-                                   name="parent-name"
-                                   placeholder="Your Name" 
-                                   required 
-                                   aria-required="true"
-                                   aria-describedby="parent-name-error">
-                            <div id="parent-name-error" class="error" role="alert" aria-live="polite"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Contact Information *</label>
-                            <input type="email" 
-                                   id="email"
-                                   name="email"
-                                   placeholder="Email Address" 
-                                   required 
-                                   aria-required="true"
-                                   aria-describedby="email-error">
-                            <div id="email-error" class="error" role="alert" aria-live="polite"></div>
-                            <input type="tel" 
-                                   id="phone"
-                                   name="phone"
-                                   placeholder="Phone Number" 
-                                   required 
-                                   aria-required="true"
-                                   aria-describedby="phone-error"
-                                   style="margin-top: 0.5rem;">
-                            <div id="phone-error" class="error" role="alert" aria-live="polite"></div>
+                            <label>Is this your child's first dental visit?</label>
+                            <div class="child-selector">
+                                <div class="child-option" data-first-visit="yes" role="button" tabindex="0" aria-pressed="false">
+                                    <div class="child-icon">🌟</div>
+                                    <div>Yes, first visit!</div>
+                                </div>
+                                <div class="child-option" data-first-visit="no" role="button" tabindex="0" aria-pressed="false">
+                                    <div class="child-icon">😊</div>
+                                    <div>No, been before</div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="first-visit" name="first-visit" value="">
+                        </div>
+                    </div>
+                    
+                    <!-- Appointment Details -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span>📅</span>
+                            Appointment Preferences
+                        </h4>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferred-date">Preferred Date *</label>
+                                <input type="date" id="preferred-date" name="preferred-date" required aria-required="true">
+                                <span class="error-message">Please select a date</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-time">Preferred Time *</label>
+                                <select id="preferred-time" name="preferred-time" required aria-required="true">
+                                    <option value="">Select time</option>
+                                    <option value="early-morning">Early Morning (8-9 AM)</option>
+                                    <option value="morning">Morning (9 AM-12 PM)</option>
+                                    <option value="after-school">After School (3-5 PM)</option>
+                                    <option value="evening">Evening (5-6 PM)</option>
+                                    <option value="saturday">Saturday</option>
+                                </select>
+                                <span class="error-message">Please select a time</span>
+                            </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="notes">Special Notes (Optional)</label>
-                            <textarea id="notes"
-                                      name="notes"
-                                      rows="3" 
-                                      placeholder="Any concerns or special needs?"
-                                      aria-describedby="notes-help"></textarea>
-                            <div id="notes-help" class="sr-only">This field is optional. You can describe any special needs or concerns.</div>
+                            <label>Reason for Visit (check all that apply)</label>
+                            <div class="concern-grid">
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-checkup" name="concerns" value="checkup">
+                                    <label for="concern-checkup">Regular Checkup</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-cleaning" name="concerns" value="cleaning">
+                                    <label for="concern-cleaning">Cleaning</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-cavity" name="concerns" value="cavity">
+                                    <label for="concern-cavity">Possible Cavity</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-pain" name="concerns" value="pain">
+                                    <label for="concern-pain">Tooth Pain</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-anxiety" name="concerns" value="anxiety">
+                                    <label for="concern-anxiety">Dental Anxiety</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-other" name="concerns" value="other">
+                                    <label for="concern-other">Other Concern</label>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div style="text-align: center; margin-top: 2rem;">
-                            <button type="submit" 
-                                    class="cta-button fun" 
-                                    style="font-size: 1.1rem; padding: 1rem 2rem;"
-                                    aria-label="Continue to service selection step">
-                                <span aria-hidden="true">🌟</span> Continue to Service Selection
-                            </button>
+                        <div class="form-group">
+                            <label for="special-needs">Special Needs or Instructions (Optional)</label>
+                            <textarea id="special-needs" name="special-needs" rows="3" placeholder="Let us know about any special needs, fears, or medical conditions we should be aware of"></textarea>
                         </div>
-                    </form>
-                    
-                    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--light-purple); border-radius: 15px; text-align: center;" role="banner">
-                        <h4 style="color: var(--kid-purple); margin-bottom: 0.5rem;"><span aria-hidden="true">🎁</span> New Patient Special!</h4>
-                        <p>FREE dental kit + First visit exam only $49 (reg. $295)</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section" role="banner">
-            <div class="cta-content">
-                <h2>Ready for a Dental Adventure?</h2>
-                <p>Join thousands of happy kids who love coming to the dentist!</p>
-                <div class="cta-buttons">
-                    <button class="cta-button white" 
-                            onclick="scheduleVisit()"
-                            aria-label="Schedule your child's first dental visit">
-                        <span aria-hidden="true">📅</span> Schedule First Visit
+                    
+                    <input type="hidden" name="service-interest" value="Pediatric Dentistry">
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
+                        <span>Book Appointment</span>
+                        <span>🎉</span>
                     </button>
-                    <button class="cta-button white" 
-                            onclick="virtualConsult()"
-                            aria-label="Start a virtual consultation chat">
-                        <span aria-hidden="true">💬</span> Chat with Us
-                    </button>
-                </div>
-                <div class="gift-banner" role="banner">
-                    <span aria-hidden="true">🎁</span> New Patients: FREE Toy + Dental Kit + $49 First Visit!
-                </div>
+                    
+                    <p style="text-align: center; margin-top: 1rem; color: var(--gray-600); font-size: 0.875rem;">
+                        We'll confirm your appointment within 30 minutes during business hours
+                    </p>
+                </form>
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer style="background: var(--charcoal); color: var(--clean-white); padding: 3rem 5%; text-align: center;" role="contentinfo">
-        <p style="margin-bottom: 1rem;">© 2024 SmileCare Kids Dental. All rights reserved.</p>
-        <p style="font-size: 0.875rem; opacity: 0.8;">Where every smile tells a happy story! <span aria-hidden="true">🌟</span></p>
-    </footer>
-
+    
+    <!-- Floating Emergency Button -->
+    <a href="tel:5551234567" class="floating-emergency" aria-label="Call for dental emergency">
+        <span>🚨</span>
+        <span>Dental Emergency?</span>
+    </a>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
-        // Performance optimization with debouncing
-        let debounceTimer;
-        const debounce = (func, delay) => {
-            clearTimeout(debounceTimer);
-            debounceTimer = setTimeout(func, delay);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Enhanced Production JavaScript -->
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'https://api.smilecare.dental';
+        const API_ENDPOINTS = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact'
         };
         
-        // Enhanced keyboard navigation support
-        function handleKeyPress(event, action) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                if (typeof action === 'function') {
-                    action();
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // GA4 Event Tracking
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    event_category: 'engagement',
+                    event_label: 'pediatric_dentistry_page',
+                    ...parameters
+                });
+            }
+        }
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.setAttribute('aria-busy', 'true');
                 } else {
-                    switch(action) {
-                        case 'makeToothHappy':
-                            makeToothHappy();
-                            break;
-                        case 'brush':
-                        case 'apple':
-                        case 'water':
-                        case 'star':
-                            showCharacterMessage(action);
-                            break;
-                        case 'baby':
-                        case 'toddler':
-                        case 'child':
-                        case 'teen':
-                            selectAgeGroup(action);
-                            break;
-                        case 'child':
-                            selectChild(event.target);
-                            break;
-                        default:
-                            if (action.includes('-')) {
-                                playGame(action);
-                            }
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.setAttribute('aria-busy', 'false');
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            const icon = type === 'success' ? '✓' : '✕';
+            notification.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
+        // Form Validation
+        function validateForm(form) {
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    formGroup.classList.add('has-error');
+                    field.classList.add('error');
+                } else {
+                    formGroup.classList.remove('has-error');
+                    field.classList.remove('error');
+                }
+                
+                // Email validation
+                if (field.type === 'email' && field.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
                     }
                 }
-            }
-        }
-        
-        // Enhanced character interactions with better accessibility
-        function makeToothHappy() {
-            const tooth = document.querySelector('.main-character');
-            tooth.style.transform = 'translate(-50%, -50%) scale(1.2) rotate(360deg)';
-            
-            // Show sparkles with animation
-            const sparkles = tooth.querySelectorAll('.sparkle');
-            sparkles.forEach(sparkle => {
-                sparkle.style.animation = 'none';
-                setTimeout(() => {
-                    sparkle.style.animation = 'twinkle 1.5s ease-in-out infinite';
-                }, 100);
-            });
-            
-            // Show message with proper ARIA announcements
-            showMessage('Yay! I love being clean!');
-            
-            setTimeout(() => {
-                tooth.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
-            }, 500);
-        }
-        
-        function showCharacterMessage(character) {
-            const messages = {
-                brush: "Brush twice a day to keep cavities away!",
-                apple: "Crunchy fruits and veggies make teeth strong!",
-                water: "Water is the best drink for healthy teeth!",
-                star: "You're a dental superstar!"
-            };
-            
-            showMessage(messages[character]);
-        }
-        
-        function showMessage(text) {
-            const messageEl = document.getElementById('characterMessage');
-            messageEl.textContent = text;
-            messageEl.style.display = 'block';
-            
-            // Auto-hide message for better UX
-            debounce(() => {
-                messageEl.style.display = 'none';
-            }, 3000);
-        }
-        
-        // Enhanced age group selection with focus management
-        function selectAgeGroup(age) {
-            // Update all cards with smooth transitions
-            document.querySelectorAll('.age-card').forEach(card => {
-                card.style.transform = 'scale(0.95)';
-                card.style.opacity = '0.5';
-                card.setAttribute('aria-selected', 'false');
-            });
-            
-            // Highlight selected with better accessibility
-            const selectedCard = event.currentTarget || document.querySelector(`[onclick*="${age}"]`);
-            selectedCard.style.transform = 'scale(1.05)';
-            selectedCard.style.opacity = '1';
-            selectedCard.setAttribute('aria-selected', 'true');
-            
-            // Show relevant content with proper announcement
-            const ageNames = {
-                baby: 'baby and toddler',
-                toddler: 'little explorer',
-                child: 'school-age child',
-                teen: 'teenager'
-            };
-            
-            showMessage(`Perfect! Let's explore ${ageNames[age]} dental care!`);
-        }
-        
-        // Enhanced treatment visualizer with better accessibility
-        const treatments = {
-            cleaning: {
-                title: "Happy Cleaning Adventure",
-                description: "Our gentle cleaning removes sugar bugs and makes teeth sparkle!",
-                steps: [
-                    { number: 1, title: "Magic Toothbrush", desc: "Special spinning brush with yummy toothpaste" },
-                    { number: 2, title: "Water Fountain", desc: "Rinse away all the sugar bugs" },
-                    { number: 3, title: "Sparkle Polish", desc: "Make teeth super shiny and smooth" }
-                ]
-            },
-            sealant: {
-                title: "Cavity Shield Protection",
-                description: "Paint on invisible armor that protects teeth from cavities!",
-                steps: [
-                    { number: 1, title: "Clean & Dry", desc: "Prepare teeth for shield application" },
-                    { number: 2, title: "Paint Shield", desc: "Apply protective coating to molars" },
-                    { number: 3, title: "Light Magic", desc: "Special light makes shield super strong" }
-                ]
-            },
-            fluoride: {
-                title: "Super Fluoride Power",
-                description: "Strengthen teeth with vitamin treatment that tastes great!",
-                steps: [
-                    { number: 1, title: "Flavor Choice", desc: "Pick your favorite: bubble gum, grape, or mint" },
-                    { number: 2, title: "Apply Vitamins", desc: "Paint or foam application for 1 minute" },
-                    { number: 3, title: "Strong Teeth", desc: "Teeth absorb strength vitamins" }
-                ]
-            },
-            filling: {
-                title: "Tooth Repair Mission",
-                description: "Fix cavities with gentle care and make teeth healthy again!",
-                steps: [
-                    { number: 1, title: "Sleepy Spray", desc: "Numbing gel and spray so nothing hurts" },
-                    { number: 2, title: "Clean Cave", desc: "Remove sugar bugs from tiny cave" },
-                    { number: 3, title: "Fill & Shine", desc: "Fill with tooth-colored material" }
-                ]
-            }
-        };
-        
-        function showTreatment(type) {
-            // Update buttons with proper ARIA states
-            document.querySelectorAll('.treatment-option').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-selected', 'false');
-                btn.setAttribute('tabindex', '-1');
-            });
-            
-            const activeBtn = event ? event.target : document.querySelector(`[onclick*="${type}"]`);
-            activeBtn.classList.add('active');
-            activeBtn.setAttribute('aria-selected', 'true');
-            activeBtn.setAttribute('tabindex', '0');
-            
-            // Update content with proper labeling
-            const treatment = treatments[type];
-            const titleEl = document.getElementById('treatmentTitle');
-            const descEl = document.getElementById('treatmentDescription');
-            const panelEl = document.getElementById('treatment-panel');
-            
-            titleEl.textContent = treatment.title;
-            descEl.textContent = treatment.description;
-            panelEl.setAttribute('aria-labelledby', activeBtn.id);
-            
-            // Update steps with enhanced accessibility
-            const stepsHTML = treatment.steps.map(step => `
-                <div class="step" role="listitem">
-                    <div class="step-number" aria-hidden="true">${step.number}</div>
-                    <div>
-                        <h4>${step.title}</h4>
-                        <p>${step.desc}</p>
-                    </div>
-                </div>
-            `).join('');
-            
-            document.querySelector('.treatment-steps').innerHTML = stepsHTML;
-            
-            // Update animation
-            updateTreatmentAnimation(type);
-        }
-        
-        function updateTreatmentAnimation(type) {
-            const animation = document.getElementById('treatmentAnimation');
-            const icons = {
-                cleaning: '🦷✨',
-                sealant: '🛡️',
-                fluoride: '💪',
-                filling: '🔧'
-            };
-            
-            animation.innerHTML = `
-                <div style="font-size: 8rem; animation: bounce 2s ease-in-out infinite;" aria-hidden="true">
-                    ${icons[type]}
-                </div>
-            `;
-        }
-        
-        // Initialize treatment display
-        document.addEventListener('DOMContentLoaded', () => {
-            showTreatment('cleaning');
-        });
-        
-        // Enhanced game functions with error handling
-        function playGame(gameType) {
-            const gameMessages = {
-                'brush-hero': "Loading Brush Hero Adventure... Get ready to save Tooth City!",
-                'food-sort': "Starting Healthy Food Quest... Can you beat the high score?",
-                'tooth-fairy': "Launching Tooth Fairy Flight... Magical missions await!",
-                'dental-quiz': "Opening Smile Trivia... Test your dental knowledge!",
-                'coloring': "Preparing coloring pages... Choose your favorite character!",
-                'ar-brush': "Starting AR Brushing Coach... Camera permission needed!"
-            };
-            
-            try {
-                const message = gameMessages[gameType] || "Loading game...";
-                alert(message + "\n\nIn a real implementation, this would open the game!");
-            } catch (error) {
-                console.error('Error loading game:', error);
-                alert("Sorry, there was an issue loading the game. Please try again!");
-            }
-        }
-        
-        // Enhanced virtual tour with better navigation
-        const rooms = {
-            jungle: {
-                title: "Welcome to Our Jungle Room!",
-                description: "Where wild smiles are tamed!",
-                icon: "🦁"
-            },
-            ocean: {
-                title: "Dive into Our Ocean Room!",
-                description: "Where smiles swim with joy!",
-                icon: "🐠"
-            },
-            space: {
-                title: "Blast Off in Our Space Room!",
-                description: "Where smiles reach for the stars!",
-                icon: "🚀"
-            },
-            gameroom: {
-                title: "Play in Our Game Room!",
-                description: "Fun while you wait!",
-                icon: "🎮"
-            }
-        };
-        
-        function showRoom(roomName) {
-            // Update buttons with proper ARIA states
-            document.querySelectorAll('.room-button').forEach(btn => {
-                btn.classList.remove('active');
-                btn.setAttribute('aria-pressed', 'false');
-            });
-            
-            const activeBtn = event ? event.target : document.querySelector(`[onclick*="${roomName}"]`);
-            activeBtn.classList.add('active');
-            activeBtn.setAttribute('aria-pressed', 'true');
-            
-            // Update room display with enhanced accessibility
-            const room = rooms[roomName];
-            const displayEl = document.getElementById('roomDisplay');
-            displayEl.innerHTML = `
-                <div class="room-content">
-                    <h3 style="font-size: 2rem; color: var(--trust-blue); margin-bottom: 1rem;">${room.title}</h3>
-                    <p style="font-size: 1.25rem; margin-bottom: 2rem;">${room.description}</p>
-                    <div style="font-size: 6rem;" aria-hidden="true">${room.icon}</div>
-                </div>
-            `;
-            displayEl.setAttribute('aria-label', `${room.title} - ${room.description}`);
-        }
-        
-        // Enhanced booking functions with validation
-        function selectChild(element) {
-            element.classList.toggle('selected');
-            element.setAttribute('aria-pressed', element.classList.contains('selected') ? 'true' : 'false');
-        }
-        
-        function submitBooking(event) {
-            event.preventDefault();
-            
-            // Form validation
-            const form = event.target;
-            const formData = new FormData(form);
-            let isValid = true;
-            
-            // Clear previous errors
-            document.querySelectorAll('.error').forEach(error => {
-                error.style.display = 'none';
-            });
-            
-            // Validate required fields
-            const requiredFields = ['parent-name', 'email', 'phone'];
-            requiredFields.forEach(fieldName => {
-                const field = form.querySelector(`[name="${fieldName}"]`);
-                const value = formData.get(fieldName);
                 
-                if (!value || value.trim() === '') {
-                    isValid = false;
-                    const errorEl = document.getElementById(`${fieldName}-error`);
-                    errorEl.textContent = 'This field is required.';
-                    errorEl.style.display = 'block';
-                    
-                    if (isValid) field.focus(); // Focus first invalid field
+                // Phone validation
+                if (field.type === 'tel' && field.value) {
+                    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+                    if (!phoneRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
                 }
             });
             
-            // Email validation
-            const email = formData.get('email');
-            if (email && !/\S+@\S+\.\S+/.test(email)) {
+            // Check if first visit is selected
+            const firstVisitInput = form.querySelector('#first-visit');
+            if (!firstVisitInput.value) {
                 isValid = false;
-                const errorEl = document.getElementById('email-error');
-                errorEl.textContent = 'Please enter a valid email address.';
-                errorEl.style.display = 'block';
+                showNotification('Please select if this is your child\'s first visit', 'error');
             }
             
-            if (isValid) {
-                alert("Great! Let's continue to select services for each child. In a real implementation, this would proceed to the next step.");
-            }
+            return isValid;
         }
         
-        // Enhanced CTA functions
-        function scheduleVisit() {
-            const bookingSection = document.getElementById('book');
-            bookingSection.scrollIntoView({ behavior: 'smooth' });
+        // Initialize Child Selectors
+        function initializeChildSelectors() {
+            const childOptions = document.querySelectorAll('.child-option');
+            const firstVisitInput = document.getElementById('first-visit');
             
-            // Focus the first form field for better UX
-            setTimeout(() => {
-                const firstInput = bookingSection.querySelector('input');
-                if (firstInput) firstInput.focus();
-            }, 500);
-        }
-        
-        function virtualConsult() {
-            alert("Opening virtual consultation chat... A team member will be with you shortly!");
-        }
-        
-        // Additional functions for parent dashboard
-        function viewRewardStore() {
-            alert("Opening reward store... Choose from toys, books, and special treats!");
-        }
-        
-        function viewBenefitDetails() {
-            alert("Loading detailed insurance benefit information...");
-        }
-        
-        function scheduleFamilyVisit() {
-            scheduleVisit();
-        }
-        
-        // Enhanced sparkle cursor effect
-        document.addEventListener('mousemove', (e) => {
-            if (Math.random() > 0.98) {
-                createSparkle(e.clientX, e.clientY);
-            }
-        });
-        
-        function createSparkle(x, y) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle-cursor';
-            sparkle.style.position = 'fixed';
-            sparkle.style.left = x + 'px';
-            sparkle.style.top = y + 'px';
-            sparkle.style.width = '20px';
-            sparkle.style.height = '20px';
-            sparkle.style.pointerEvents = 'none';
-            sparkle.style.zIndex = '9999';
-            sparkle.setAttribute('aria-hidden', 'true');
-            
-            const colors = ['var(--kid-purple)', 'var(--kid-pink)', 'var(--kid-yellow)', 'var(--kid-orange)'];
-            sparkle.style.background = colors[Math.floor(Math.random() * colors.length)];
-            sparkle.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
-            sparkle.style.animation = 'sparkle-fade 1s ease-out forwards';
-            
-            document.body.appendChild(sparkle);
-            
-            setTimeout(() => sparkle.remove(), 1000);
-        }
-        
-        // Add sparkle fade animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes sparkle-fade {
-                0% {
-                    transform: translate(-50%, -50%) scale(0) rotate(0deg);
-                    opacity: 1;
-                }
-                100% {
-                    transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // Enhanced smooth scrolling with focus management
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            childOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const isFirstVisit = this.dataset.firstVisit;
+                    
+                    // Remove selected from all
+                    childOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                        opt.setAttribute('aria-pressed', 'false');
                     });
                     
-                    // Manage focus for better accessibility
-                    if (target.hasAttribute('tabindex') || target.querySelector('[tabindex]')) {
-                        setTimeout(() => {
-                            const focusTarget = target.hasAttribute('tabindex') ? target : target.querySelector('[tabindex]');
-                            if (focusTarget) focusTarget.focus();
-                        }, 500);
-                    }
-                }
-            });
-        });
-        
-        // Intersection Observer for animations with performance optimization
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements with better performance
-        document.addEventListener('DOMContentLoaded', () => {
-            const elementsToObserve = document.querySelectorAll('.age-card, .dashboard-card, .game-card, .step');
-            elementsToObserve.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'all 0.6s ease-out';
-                observer.observe(el);
-            });
-        });
-        
-        // Enhanced achievement animations
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.achievement').forEach(achievement => {
-                const icon = achievement.querySelector('.achievement-icon');
-                icon.style.transition = 'transform 0.5s ease-out';
-                
-                achievement.addEventListener('mouseenter', function() {
-                    if (this.classList.contains('unlocked')) {
-                        icon.style.transform = 'rotate(360deg) scale(1.2)';
+                    // Add selected to clicked
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    
+                    // Update hidden input
+                    firstVisitInput.value = isFirstVisit;
+                    
+                    // Track selection
+                    trackEvent('first_visit_selected', {
+                        is_first_visit: isFirstVisit
+                    });
+                    
+                    // Show special message for first visits
+                    if (isFirstVisit === 'yes') {
+                        const ageSelect = document.getElementById('child-age');
+                        if (ageSelect.value === '0-2') {
+                            showNotification('Great news! First visits are FREE for children under 3!', 'success');
+                        }
                     }
                 });
                 
-                achievement.addEventListener('mouseleave', function() {
-                    if (this.classList.contains('unlocked')) {
-                        icon.style.transform = 'rotate(0deg) scale(1)';
-                    }
-                });
-                
-                // Keyboard support for achievements
-                achievement.addEventListener('keydown', function(e) {
+                // Keyboard support
+                option.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
                         e.preventDefault();
-                        this.dispatchEvent(new Event('mouseenter'));
-                        setTimeout(() => {
-                            this.dispatchEvent(new Event('mouseleave'));
-                        }, 500);
+                        this.click();
                     }
                 });
             });
-        });
-        
-        // Error handling for all interactive elements
-        window.addEventListener('error', function(e) {
-            console.error('JavaScript error:', e.error);
-            // Gracefully handle errors without breaking the user experience
-        });
-        
-        // Performance monitoring
-        if ('PerformanceObserver' in window) {
-            const observer = new PerformanceObserver((list) => {
-                list.getEntries().forEach((entry) => {
-                    if (entry.entryType === 'largest-contentful-paint') {
-                        console.log('LCP:', entry.startTime);
-                    }
-                });
-            });
-            observer.observe({entryTypes: ['largest-contentful-paint']});
         }
+        
+        // Initialize Activity Cards
+        function initializeActivityCards() {
+            const activityCards = document.querySelectorAll('.activity-card');
+            
+            activityCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const activity = this.dataset.activity;
+                    
+                    // Add fun animation
+                    this.style.transform = 'scale(1.1) rotate(5deg)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 300);
+                    
+                    // Track activity interest
+                    trackEvent('activity_card_clicked', {
+                        activity_type: activity
+                    });
+                });
+            });
+        }
+        
+        // Parent-Friendly Appointment Submission
+        async function handleAppointmentSubmission(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            if (!validateForm(form)) {
+                trackEvent('appointment_form_validation_error');
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            
+            LoadingStateManager.setLoading(button, true, 'Booking...');
+            
+            // Collect selected concerns
+            const concerns = [];
+            form.querySelectorAll('input[name="concerns"]:checked').forEach(checkbox => {
+                concerns.push(checkbox.value);
+            });
+            
+            const appointmentData = {
+                parentName: formData.get('parent-name'),
+                parentEmail: formData.get('parent-email'),
+                parentPhone: formData.get('parent-phone'),
+                preferredContact: formData.get('preferred-contact'),
+                childName: formData.get('child-name'),
+                childAge: formData.get('child-age'),
+                isFirstVisit: formData.get('first-visit'),
+                preferredDate: formData.get('preferred-date'),
+                preferredTime: formData.get('preferred-time'),
+                concerns: concerns,
+                specialNeeds: formData.get('special-needs'),
+                serviceInterest: 'Pediatric Dentistry',
+                source: 'pediatric-dentistry-page',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Track submission
+            trackEvent('pediatric_appointment_submit', {
+                child_age: appointmentData.childAge,
+                is_first_visit: appointmentData.isFirstVisit,
+                concerns_count: concerns.length,
+                has_special_needs: !!appointmentData.specialNeeds
+            });
+            
+            try {
+                const response = await fetch(API_BASE_URL + API_ENDPOINTS.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                trackEvent('pediatric_appointment_success', {
+                    appointment_id: result.appointmentId,
+                    child_age: appointmentData.childAge
+                });
+                
+                // Special message for first visits under 3
+                let successMessage = `Perfect! ${appointmentData.childName}'s appointment has been scheduled. `;
+                if (appointmentData.isFirstVisit === 'yes' && appointmentData.childAge === '0-2') {
+                    successMessage += 'This first visit is completely FREE! ';
+                }
+                successMessage += 'We\'ll contact you within 30 minutes to confirm.';
+                
+                showNotification(successMessage, 'success');
+                
+                // Reset form
+                form.reset();
+                document.querySelectorAll('.child-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.setAttribute('aria-pressed', 'false');
+                });
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                trackEvent('pediatric_appointment_error', {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                showNotification(
+                    'Unable to book appointment online. Please call us at (555) 123-4567 and we\'ll help you right away!',
+                    'error'
+                );
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+        
+        // Initialize Interactive Elements
+        function initializeInteractiveElements() {
+            // CTA buttons
+            document.querySelectorAll('[data-action]').forEach(button => {
+                button.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    
+                    const action = this.dataset.action;
+                    
+                    // Track all CTA clicks
+                    trackEvent('cta_click', {
+                        action: action,
+                        button_text: this.textContent.trim(),
+                        location: this.closest('section')?.className || 'unknown'
+                    });
+                    
+                    switch(action) {
+                        case 'book-kids-appointment':
+                            document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => document.getElementById('parent-name').focus(), 500);
+                            break;
+                            
+                        case 'virtual-tour':
+                            document.getElementById('virtual-tour').scrollIntoView({ behavior: 'smooth' });
+                            // Animate activity cards
+                            document.querySelectorAll('.activity-card').forEach((card, index) => {
+                                setTimeout(() => {
+                                    card.style.transform = 'scale(1.05)';
+                                    setTimeout(() => {
+                                        card.style.transform = '';
+                                    }, 300);
+                                }, index * 100);
+                            });
+                            break;
+                    }
+                });
+            });
+            
+            // Phone links with special tracking for emergency
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    const isEmergency = this.classList.contains('floating-emergency');
+                    trackEvent('phone_click', {
+                        location: isEmergency ? 'emergency_button' : 'header',
+                        is_emergency: isEmergency
+                    });
+                });
+            });
+            
+            // Mobile touch optimization
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.btn, .child-option, .activity-card').forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                });
+            }
+        }
+        
+        // Age-based messaging
+        function handleAgeSelection() {
+            const ageSelect = document.getElementById('child-age');
+            const firstVisitValue = document.getElementById('first-visit').value;
+            
+            ageSelect.addEventListener('change', function() {
+                if (this.value === '0-2' && firstVisitValue === 'yes') {
+                    showNotification('Awesome! First visits are FREE for children under 3!', 'success');
+                    trackEvent('free_visit_eligible', {
+                        child_age: this.value
+                    });
+                }
+            });
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date for appointment picker
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('preferred-date').setAttribute('min', today);
+            
+            // Initialize components
+            initializeChildSelectors();
+            initializeActivityCards();
+            initializeInteractiveElements();
+            handleAgeSelection();
+            
+            // Attach form handler
+            document.querySelector('[data-appointment]').addEventListener('submit', handleAppointmentSubmission);
+            
+            // Real-time validation
+            document.querySelectorAll('input[required], select[required]').forEach(field => {
+                field.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (!this.value.trim()) {
+                        formGroup.classList.add('has-error');
+                        this.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('has-error');
+                        this.classList.remove('error');
+                    }
+                });
+            });
+            
+            // Phone number formatting
+            document.getElementById('parent-phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 6) {
+                    value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+                } else if (value.length >= 3) {
+                    value = value.slice(0, 3) + '-' + value.slice(3);
+                }
+                e.target.value = value;
+            });
+            
+            // Floating emergency button visibility
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', debounce(function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const floatingBtn = document.querySelector('.floating-emergency');
+                
+                if (scrollTop > 200) {
+                    floatingBtn.style.opacity = '1';
+                    floatingBtn.style.transform = 'translateY(0)';
+                } else {
+                    floatingBtn.style.opacity = '0';
+                    floatingBtn.style.transform = 'translateY(100px)';
+                }
+                
+                lastScrollTop = scrollTop;
+            }, 100));
+            
+            // Track page load
+            trackEvent('page_view', {
+                page_title: 'Pediatric Dentistry',
+                page_location: window.location.href
+            });
+            
+            // Add fun hover effects to emojis
+            document.querySelectorAll('.feature-icon, .activity-icon, .child-icon').forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.2) rotate(10deg)';
+                });
+                
+                icon.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+        });
     </script>
 </body>
 </html>

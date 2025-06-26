@@ -900,6 +900,15 @@
             }
         }
     </style>
+    
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -1374,6 +1383,70 @@
     <script>
         // Performance optimized JavaScript with accessibility enhancements
         
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'page_name': 'gum_disease_treatment',
+                    ...parameters
+                });
+            }
+        }
+        
+        // API Configuration
+        const API_CONFIG = {
+            evaluation: '/api/book-evaluation',
+            symptomCheck: '/api/symptom-check',
+            riskAssessment: '/api/risk-assessment',
+            timeout: 10000
+        };
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.style.opacity = '0.6';
+                    element.style.cursor = 'not-allowed';
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.style.opacity = '';
+                    element.style.cursor = '';
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#28A745' : type === 'error' ? '#DC3545' : '#0077BE'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                z-index: 10000;
+                max-width: 90%;
+                animation: slideIn 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
         // Symptom tracking with proper form handling
         const symptomForm = document.getElementById('symptom-form');
         let symptomScores = {};
@@ -1383,10 +1456,14 @@
         let riskAnswers = {};
         
         // Add event listeners for forms
-        symptomForm.addEventListener('change', handleSymptomChange);
-        symptomForm.addEventListener('submit', calculateRisk);
-        calculatorForm.addEventListener('change', handleRiskFormChange);
-        calculatorForm.addEventListener('submit', calculateRiskScore);
+        if (symptomForm) {
+            symptomForm.addEventListener('change', handleSymptomChange);
+            symptomForm.addEventListener('submit', calculateRisk);
+        }
+        if (calculatorForm) {
+            calculatorForm.addEventListener('change', handleRiskFormChange);
+            calculatorForm.addEventListener('submit', calculateRiskScore);
+        }
         
         // Symptom form handling
         function handleSymptomChange(event) {
@@ -1410,12 +1487,31 @@
             }
         }
         
-        function calculateRisk(event) {
+        async function calculateRisk(event) {
             event.preventDefault();
+            
+            const button = event.target.querySelector('button[type="submit"]');
+            LoadingStateManager.setLoading(button, true, 'Calculating...');
             
             const totalScore = Object.values(symptomScores).reduce((a, b) => a + b, 0);
             const maxScore = 50;
             const percentage = Math.min((totalScore / maxScore) * 100, 100);
+            
+            // Track symptom check
+            trackEvent('symptom_check_completed', {
+                symptom_count: Object.keys(symptomScores).length,
+                risk_percentage: percentage
+            });
+            
+            try {
+                // Simulate API call
+                if (API_CONFIG.symptomCheck) {
+                    await fetch(API_CONFIG.symptomCheck, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ symptoms: symptomScores, percentage })
+                    }).catch(() => {}); // Graceful fail
+                }
             
             // Show results
             const resultsDiv = document.getElementById('risk-results');
@@ -1474,6 +1570,12 @@
             
             announceToScreenReader(`Risk assessment complete. ${riskLevel}. ${riskMessage}`);
             resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            } catch (error) {
+                console.error('Risk calculation error:', error);
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
         }
         
         // Stage visualization with accessibility
@@ -1566,8 +1668,11 @@
             }
         }
         
-        function calculateRiskScore(event) {
+        async function calculateRiskScore(event) {
             event.preventDefault();
+            
+            const button = event.target.querySelector('button[type="submit"]');
+            if (button) LoadingStateManager.setLoading(button, true, 'Analyzing...');
             
             if (Object.keys(riskAnswers).length < 5) {
                 announceToScreenReader('Please answer all questions to get your risk score.');
@@ -1629,6 +1734,31 @@
             `;
             
             announceToScreenReader(`Risk calculation complete. You have ${riskCategory.toLowerCase()}. ${message}`);
+            
+            // Track risk assessment completion
+            trackEvent('risk_assessment_completed', {
+                risk_level: riskCategory,
+                risk_score: Math.round(percentage)
+            });
+            
+            // Send to API
+            try {
+                if (API_CONFIG.riskAssessment) {
+                    await fetch(API_CONFIG.riskAssessment, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ 
+                            answers: riskAnswers,
+                            riskLevel: riskCategory,
+                            score: Math.round(percentage)
+                        })
+                    }).catch(() => {});
+                }
+            } catch (error) {
+                console.error('Risk assessment API error:', error);
+            } finally {
+                if (button) LoadingStateManager.setLoading(button, false);
+            }
         }
         
         // Treatment comparison
@@ -1661,8 +1791,37 @@
         }
         
         // Utility Functions
-        function scheduleEvaluation() {
-            announceToScreenReader('Thank you for taking the first step! Our periodontal team will contact you within 24 hours to schedule your free evaluation.');
+        async function scheduleEvaluation() {
+            const button = event.target;
+            LoadingStateManager.setLoading(button, true, 'Scheduling...');
+            
+            trackEvent('evaluation_request', {
+                source: 'gum_disease_page',
+                action: 'schedule_evaluation'
+            });
+            
+            try {
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                if (API_CONFIG.evaluation) {
+                    await fetch(API_CONFIG.evaluation, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ 
+                            service: 'gum_disease_evaluation',
+                            timestamp: new Date().toISOString()
+                        })
+                    }).catch(() => {});
+                }
+                
+                showNotification('Thank you! Our periodontal team will contact you within 24 hours.', 'success');
+                announceToScreenReader('Thank you for taking the first step! Our periodontal team will contact you within 24 hours to schedule your free evaluation.');
+            } catch (error) {
+                showNotification('Something went wrong. Please call us at 1-800-SMILE-NOW.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
         }
         
         function showPreventionTips() {
@@ -1728,16 +1887,70 @@
         // Keyboard navigation support
         function handleKeyDown(event) {
             // Modal keyboard navigation
-            if (document.getElementById('riskCalculator').style.display === 'block') {
+            const modal = document.getElementById('riskCalculator');
+            if (modal && modal.style.display === 'block') {
                 if (event.key === 'Escape') {
                     closeRiskCalculator();
                     event.preventDefault();
                 }
+                
+                // Tab trap for accessibility
+                if (event.key === 'Tab') {
+                    const focusableElements = modal.querySelectorAll(
+                        'button, input, select, textarea, a[href], [tabindex]:not([tabindex="-1"])'
+                    );
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+                    
+                    if (event.shiftKey && document.activeElement === firstElement) {
+                        lastElement.focus();
+                        event.preventDefault();
+                    } else if (!event.shiftKey && document.activeElement === lastElement) {
+                        firstElement.focus();
+                        event.preventDefault();
+                    }
+                }
+            }
+        }
+        
+        // Mobile functionality enhancements
+        function enhanceMobileExperience() {
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            
+            if (isMobile) {
+                // Improve touch targets
+                document.querySelectorAll('button, .cta-button, .risk-button').forEach(btn => {
+                    const height = btn.offsetHeight;
+                    if (height < 44) {
+                        btn.style.minHeight = '44px';
+                        btn.style.padding = '12px 16px';
+                    }
+                });
+                
+                // Add touch feedback
+                document.addEventListener('touchstart', function(e) {
+                    if (e.target.matches('button, .cta-button, .risk-button, .symptom-item, .risk-option')) {
+                        e.target.style.transform = 'scale(0.95)';
+                    }
+                });
+                
+                document.addEventListener('touchend', function(e) {
+                    if (e.target.matches('button, .cta-button, .risk-button, .symptom-item, .risk-option')) {
+                        setTimeout(() => {
+                            e.target.style.transform = '';
+                        }, 100);
+                    }
+                });
             }
         }
         
         // Initialize performance optimizations
         document.addEventListener('DOMContentLoaded', function() {
+            // Track page view
+            trackEvent('page_view', {
+                page_title: 'Gum Disease Treatment',
+                page_location: window.location.href
+            });
             // Observe content sections for lazy loading
             document.querySelectorAll('.content-section').forEach(section => {
                 observer.observe(section);
@@ -1767,6 +1980,56 @@
                     tab.setAttribute('tabindex', '-1');
                 }
             });
+            
+            // Enhance mobile experience
+            enhanceMobileExperience();
+            
+            // Track CTA button clicks
+            document.querySelectorAll('.cta-button, .risk-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    trackEvent('cta_click', {
+                        button_text: buttonText,
+                        button_location: this.closest('section')?.className || 'header'
+                    });
+                });
+            });
+            
+            // Add CSS for animations
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+                .loading { 
+                    position: relative;
+                    color: transparent !important;
+                }
+                .loading::after {
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border: 2px solid transparent;
+                    border-top-color: currentColor;
+                    border-radius: 50%;
+                    animation: spin 0.8s linear infinite;
+                }
+                @keyframes spin {
+                    to { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
         });
         
         // Service Worker registration for offline support (in production)
@@ -1791,6 +2054,168 @@
                 }, 0);
             });
         }
+    </script>
+    
+    <!-- Contact Form Section -->
+    <section class="contact-section" style="padding: 4rem 0; background: var(--soft-gray); margin-top: 3rem;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Schedule Your Free Gum Health Evaluation</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Take the first step towards healthier gums. Our specialists are ready to help.</p>
+            
+            <form id="evaluationForm" style="max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <div style="display: grid; gap: 1rem;">
+                    <div>
+                        <label for="fullName" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="symptoms" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Current Symptoms</label>
+                        <select id="symptoms" name="symptoms" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem;">
+                            <option value="">Select primary concern</option>
+                            <option value="bleeding">Bleeding gums</option>
+                            <option value="recession">Gum recession</option>
+                            <option value="pain">Gum pain/tenderness</option>
+                            <option value="swelling">Swollen gums</option>
+                            <option value="breath">Persistent bad breath</option>
+                            <option value="prevention">Preventive care</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Additional Information</label>
+                        <textarea id="message" name="message" rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <div id="formError" style="color: var(--warning-red); display: none; padding: 1rem; background: var(--light-red); border-radius: 8px;"></div>
+                    <div id="formSuccess" style="color: var(--success-green); display: none; padding: 1rem; background: var(--light-green); border-radius: 8px;"></div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%; padding: 1rem; font-size: 1.1rem;">
+                        Request Free Evaluation
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <script>
+        // Form submission handler
+        document.getElementById('evaluationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const button = e.target.querySelector('button[type="submit"]');
+            const errorDiv = document.getElementById('formError');
+            const successDiv = document.getElementById('formSuccess');
+            
+            // Reset messages
+            errorDiv.style.display = 'none';
+            successDiv.style.display = 'none';
+            
+            // Validate form
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            if (!data.fullName || !data.email || !data.phone) {
+                errorDiv.textContent = 'Please fill in all required fields.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                errorDiv.textContent = 'Please enter a valid email address.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            
+            // Phone validation
+            const phoneRegex = /^[\d\s\-\(\)\+]+$/;
+            if (!phoneRegex.test(data.phone) || data.phone.replace(/\D/g, '').length < 10) {
+                errorDiv.textContent = 'Please enter a valid phone number.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            try {
+                // Track form submission
+                trackEvent('evaluation_form_submitted', {
+                    symptom: data.symptoms || 'not_specified',
+                    form_location: 'contact_section'
+                });
+                
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                if (API_CONFIG.evaluation) {
+                    const response = await fetch(API_CONFIG.evaluation, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            ...data,
+                            service: 'gum_disease_evaluation',
+                            timestamp: new Date().toISOString()
+                        })
+                    });
+                    
+                    if (!response.ok) throw new Error('API request failed');
+                }
+                
+                // Show success
+                successDiv.innerHTML = '<strong>Thank you!</strong> We\'ve received your request and will contact you within 24 hours to schedule your free evaluation.';
+                successDiv.style.display = 'block';
+                
+                // Reset form
+                e.target.reset();
+                
+                // Track successful submission
+                trackEvent('evaluation_form_success', {
+                    symptom: data.symptoms || 'not_specified'
+                });
+                
+                // Show notification
+                showNotification('Request submitted successfully! We\'ll be in touch soon.', 'success');
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                errorDiv.innerHTML = '<strong>Something went wrong.</strong> Please try again or call us directly at <a href="tel:1-800-SMILE-NOW" style="color: inherit; font-weight: bold;">1-800-SMILE-NOW</a>';
+                errorDiv.style.display = 'block';
+                
+                trackEvent('evaluation_form_error', {
+                    error_message: error.message
+                });
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        });
+        
+        // Add input formatting for phone number
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+            e.target.value = value;
+        });
     </script>
 </body>
 </html>
