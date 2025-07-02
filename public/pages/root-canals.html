@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="root-canals">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Canal Treatment - Pain-Free Endodontic Care | DentalCare Excellence</title>
+    <meta name="description" content="State-of-the-art root canal treatment with advanced technology and compassionate care. Pain-free procedures with 98% success rate.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --warning-yellow: #FFC107;
+            --danger-red: #DC3545;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
+            color: var(--clean-white);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button:hover {
+            background: #239a3b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section-alt {
+            background: var(--soft-gray);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--trust-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        /* Interactive Myth Buster */
+        .myth-buster {
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .myth-question {
+            font-size: 1.5rem;
+            color: var(--trust-blue);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .myth-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .myth-option {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 3px solid transparent;
+        }
+        
+        .myth-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .myth-option.correct {
+            border-color: var(--success-green);
+            background: rgba(40, 167, 69, 0.1);
+        }
+        
+        .myth-option.incorrect {
+            border-color: var(--danger-red);
+            background: rgba(220, 53, 69, 0.1);
+        }
+        
+        .myth-result {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            display: none;
+        }
+        
+        .myth-result.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Pain Management Explorer */
+        .pain-explorer {
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .pain-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .pain-option {
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pain-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .pain-option.selected {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+        }
+        
+        .pain-option-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pain-detail {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            display: none;
+        }
+        
+        .pain-detail.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+        
+        /* Success Stories Carousel */
+        .success-carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .success-stories {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .success-story {
+            min-width: 100%;
+            padding: 3rem;
+            background: var(--clean-white);
+        }
+        
+        .story-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .story-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent-teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--clean-white);
+            margin-right: 1.5rem;
+        }
+        
+        .story-info h4 {
+            color: var(--trust-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .story-rating {
+            color: var(--warning-yellow);
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+        
+        .carousel-btn {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-btn:hover {
+            background: var(--accent-teal);
+            transform: scale(1.1);
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--soft-gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: var(--trust-blue);
+            width: 30px;
+            border-radius: 5px;
+        }
+        
+        /* Special Offer with Countdown */
+        .special-offer {
+            background: linear-gradient(135deg, var(--success-green) 0%, #1e7e34 100%);
+            color: var(--clean-white);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .offer-countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .countdown-unit {
+            background: rgba(255,255,255,0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Instagram Feed Integration */
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .instagram-post {
+            background: var(--soft-gray);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .instagram-post:hover {
+            transform: scale(1.05);
+        }
+        
+        .instagram-post::before {
+            content: "📷";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+        
+        /* Video Testimonials */
+        .video-testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-card {
+            background: var(--clean-white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            background: var(--soft-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: var(--trust-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover .play-button {
+            background: var(--accent-teal);
+            transform: scale(1.1);
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-info h4 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Enhanced FAQ with search */
+        .faq-search {
+            background: var(--clean-white);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border: 2px solid var(--soft-gray);
+            font-size: 1rem;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .faq-search:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--clean-white);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.hidden {
+            display: none;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--soft-gray);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-toggle.active {
+            transform: rotate(45deg);
+        }
+        
+        /* Emergency banner enhancement */
+        .emergency-banner {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: emergencyPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes emergencyPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+        }
+        
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .myth-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .offer-countdown {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .countdown-unit {
+                min-width: 80px;
+                padding: 1rem;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">DentalCare Excellence</div>
+            <a href="tel:1-800-DENTIST" class="cta-button">Emergency: 1-800-DENTIST</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Modern Root Canal Treatment</h1>
+            <p>Pain-free procedures with advanced technology and compassionate care</p>
+            <a href="#appointment" class="cta-button">Schedule Your Consultation</a>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Interactive Root Canal Myth Buster</h2>
+            <div class="myth-buster">
+                <h3 class="myth-question">What do you think about root canal treatment?</h3>
+                
+                <div class="myth-options" id="mythOptions">
+                    <div class="myth-option" onclick="checkMyth('painful')">
+                        <h4>😰 "Root canals are extremely painful"</h4>
+                    </div>
+                    <div class="myth-option" onclick="checkMyth('extract')">
+                        <h4>🦷 "It's better to just pull the tooth"</h4>
+                    </div>
+                    <div class="myth-option" onclick="checkMyth('relief')">
+                        <h4>😌 "Root canals relieve pain"</h4>
+                    </div>
+                    <div class="myth-option" onclick="checkMyth('expensive')">
+                        <h4>💰 "They're too expensive"</h4>
+                    </div>
+                </div>
+                
+                <div class="myth-result" id="mythResult"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Pain Management Options Explorer</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Click to explore our comfort options</p>
+            
+            <div class="pain-explorer">
+                <div class="pain-options">
+                    <div class="pain-option" onclick="explorePainOption('sedation')">
+                        <div class="pain-option-icon">💤</div>
+                        <h4>Conscious Sedation</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('laser')">
+                        <div class="pain-option-icon">🔬</div>
+                        <h4>Laser Therapy</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('numbing')">
+                        <div class="pain-option-icon">💉</div>
+                        <h4>Advanced Numbing</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('aromatherapy')">
+                        <div class="pain-option-icon">🌿</div>
+                        <h4>Aromatherapy</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('music')">
+                        <div class="pain-option-icon">🎵</div>
+                        <h4>Music Therapy</h4>
+                    </div>
+                    <div class="pain-option" onclick="explorePainOption('vr')">
+                        <div class="pain-option-icon">🥽</div>
+                        <h4>VR Distraction</h4>
+                    </div>
+                </div>
+                
+                <div class="pain-detail" id="painDetail"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Real Patient Success Stories</h2>
+            
+            <div class="success-carousel">
+                <div class="success-stories" id="successStories">
+                    <div class="success-story">
+                        <div class="story-header">
+                            <div class="story-avatar">JM</div>
+                            <div class="story-info">
+                                <h4>Jennifer M.</h4>
+                                <p>Root Canal - Molar</p>
+                                <div class="story-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"I was terrified of getting a root canal, but Dr. Smith made it completely painless. I actually fell asleep during the procedure! The tooth that was causing me agony for weeks now feels perfect."</p>
+                        <small style="color: #666;">Verified Patient - 2 weeks ago</small>
+                    </div>
+                    
+                    <div class="success-story">
+                        <div class="story-header">
+                            <div class="story-avatar">RD</div>
+                            <div class="story-info">
+                                <h4>Robert D.</h4>
+                                <p>Root Canal - Front Tooth</p>
+                                <div class="story-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"After a sports injury, I needed an emergency root canal. The team got me in the same day, and the procedure was quick and comfortable. You'd never know I had work done - my tooth looks and feels natural!"</p>
+                        <small style="color: #666;">Verified Patient - 1 month ago</small>
+                    </div>
+                    
+                    <div class="success-story">
+                        <div class="story-header">
+                            <div class="story-avatar">SL</div>
+                            <div class="story-info">
+                                <h4>Sarah L.</h4>
+                                <p>Root Canal - Premolar</p>
+                                <div class="story-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"The microscope technology they use is amazing. My previous dentist said I'd need extraction, but here they saved my tooth! The whole experience was so much better than I expected."</p>
+                        <small style="color: #666;">Verified Patient - 3 weeks ago</small>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="moveCarousel(-1)">‹</button>
+                    <button class="carousel-btn" onclick="moveCarousel(1)">›</button>
+                </div>
+            </div>
+            
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="special-offer">
+            <div class="emergency-pulse"></div>
+            <h2 style="color: var(--clean-white); font-size: 2.5rem; margin-bottom: 1rem; position: relative;">
+                Limited Time Offer - Save $200!
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem; position: relative;">
+                Complete Root Canal Treatment Package
+            </p>
+            
+            <div class="offer-countdown" id="offerCountdown">
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="days">2</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="hours">14</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="minutes">32</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-unit">
+                    <span class="countdown-number" id="seconds">45</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            
+            <button class="cta-button" style="background: var(--clean-white); color: var(--success-green); font-size: 1.2rem; padding: 1.2rem 2.5rem; position: relative;">
+                Claim Your Savings Now
+            </button>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9; position: relative;">
+                *Includes consultation, X-rays, treatment, and follow-up care
+            </p>
+        </div>
+    </div>
+    
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Follow Our Success Stories</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Real patients, real transformations @dentalcare_excellence
+            </p>
+            
+            <div class="instagram-feed">
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+                <div class="instagram-post" onclick="alert('Instagram post would open here')"></div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="cta-button" style="background: var(--accent-teal);">
+                    Follow Us on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Video Testimonials</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Hear directly from our patients about their root canal experience
+            </p>
+            
+            <div class="video-testimonials">
+                <div class="video-card" onclick="playVideo('testimonial1')">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Mike's Story: From Pain to Relief</h4>
+                        <p>Emergency root canal saved my vacation</p>
+                    </div>
+                </div>
+                
+                <div class="video-card" onclick="playVideo('testimonial2')">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Lisa's Experience: Anxiety to Confidence</h4>
+                        <p>How sedation made all the difference</p>
+                    </div>
+                </div>
+                
+                <div class="video-card" onclick="playVideo('testimonial3')">
+                    <div class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4>David's Journey: Complex Case Success</h4>
+                        <p>When other dentists said extraction was the only option</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="emergency-banner">
+            <div class="emergency-pulse"></div>
+            <h3 style="position: relative; font-size: 1.5rem; margin-bottom: 1rem;">24/7 Emergency Root Canal Service</h3>
+            <p style="position: relative;">Severe tooth pain can't wait. We're here for you day and night.</p>
+            <a href="tel:1-800-DENTIST" class="cta-button" style="background: var(--clean-white); color: var(--success-green); position: relative;">
+                Call Emergency Line: 1-800-DENTIST
+            </a>
+        </div>
+    </div>
+    
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <input type="text" class="faq-search" placeholder="Search your questions..." onkeyup="searchFAQ(this.value)">
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I know if I need a root canal?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Common signs include severe toothache, prolonged sensitivity to hot or cold, tooth discoloration, swelling and tenderness in nearby gums, and a persistent pimple on the gums. However, sometimes there are no symptoms, which is why regular checkups are important.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is a root canal really painless?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! With modern anesthetics and techniques, root canal treatment is typically no more uncomfortable than getting a filling. Most patients report feeling immediate relief from the pain that brought them in. We also offer sedation options for anxious patients.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long does a root canal take?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most root canals can be completed in 60-90 minutes. Complex cases may require a second visit. With our advanced technology, we've significantly reduced treatment time while improving outcomes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's the success rate of root canal treatment?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our root canal treatments have a 98% success rate. With proper care and restoration (usually a crown), a root canal-treated tooth can last a lifetime. We use advanced microscopes and 3D imaging to ensure thorough treatment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Will I need a crown after my root canal?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In most cases, yes. A crown protects the treated tooth from fracture and restores its full function. We'll discuss the best restoration option for your specific situation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is root canal treatment covered by insurance?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most dental insurance plans cover root canal treatment. Our team will help verify your benefits and provide a detailed cost estimate. We also offer flexible payment plans to make treatment affordable.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What happens if I don't get a root canal?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Without treatment, the infection can spread to surrounding teeth and bone, potentially causing an abscess. This can lead to more serious health issues and eventual tooth loss. Early treatment is always easier and more successful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="appointment">
+        <div class="container" style="text-align: center;">
+            <h2>Don't Let Tooth Pain Control Your Life</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Schedule your consultation today and discover how comfortable modern root canal treatment can be.
+            </p>
+            <a href="#" class="cta-button" onclick="alert('Booking system would open here')">Book Your Appointment Now</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DentalCare Excellence. All rights reserved. | State-of-the-art technology meets compassionate care.</p>
+        </div>
+    </footer>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
+                });
+            }
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                }
+            }
+        }
+
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

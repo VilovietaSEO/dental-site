@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Reviews & Smile Gallery | DentalCare Excellence</title>
+    <meta name="description" content="Discover why 15,000+ patients trust DentalCare Excellence. Read verified reviews, view before/after galleries, and see real patient transformations with 4.9★ rating.">
+    <meta name="keywords" content="dental reviews, patient testimonials, before after gallery, dental transformations, DentalCare reviews">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <meta property="og:title" content="Patient Reviews & Results | DentalCare Excellence">
+    <meta property="og:description" content="See why 15,000+ patients trust us with their smiles. 4.9★ rating, verified reviews, and amazing transformations.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --shadow: 0 2px 10px rgba(0,119,190,0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: var(--clean-white);
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        header {
+            background: var(--clean-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+        
+        .nav-links a:focus::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--trust-blue);
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-button:hover,
+        .cta-button:focus {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            outline: none;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-100px); }
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .live-reviews-bar {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 5%;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .live-ticker {
+            display: inline-flex;
+            animation: scroll 60s linear infinite;
+            will-change: transform;
+        }
+        
+        .live-review {
+            margin-right: 4rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            white-space: nowrap;
+        }
+        
+        .review-stars {
+            color: #ffa500;
+            font-size: 1.1rem;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translate3d(100%, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        
+        .stats-bar {
+            background: var(--soft-gray);
+            padding: 3rem 5%;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1.5rem;
+            background: var(--clean-white);
+            border-radius: var(--border-radius);
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,119,190,0.15);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--trust-blue);
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: var(--charcoal);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .live-indicator {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        
+        .reviews-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .review-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .review-filter {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--soft-gray);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn:focus {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+            outline: none;
+            transform: translateY(-2px);
+        }
+        
+        .filter-btn.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .filter-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        .review-sort {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .sort-select {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            background: var(--clean-white);
+            transition: var(--transition);
+        }
+        
+        .sort-select:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .review-card {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            position: relative;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow);
+        }
+        
+        .review-card:hover,
+        .review-card:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,119,190,0.12);
+            border-color: var(--accent-teal);
+        }
+        
+        .review-card.featured {
+            border-color: var(--success-green);
+            background: linear-gradient(145deg, #f8fffe, #ffffff);
+            position: relative;
+        }
+        
+        .review-card.featured::before {
+            content: '⭐ Featured Review';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .review-card.verified::after {
+            content: '✓ Verified Patient';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .reviewer-info {
+            flex: 1;
+        }
+        
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--charcoal);
+            font-size: 1rem;
+        }
+        
+        .review-date {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .review-rating {
+            color: #ffa500;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .platform-badge {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.2rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-left: auto;
+            font-weight: 600;
+        }
+        
+        .review-content {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+        }
+        
+        .review-helpful {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .helpful-btn {
+            background: none;
+            border: 1px solid #e0e0e0;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+        
+        .helpful-btn:hover {
+            background: var(--soft-gray);
+            border-color: var(--accent-teal);
+        }
+        
+        .gallery-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 0.75rem 2rem;
+            background: var(--clean-white);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+        
+        .tab-btn:hover,
+        .tab-btn:focus {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            transform: translateY(-2px);
+        }
+        
+        .tab-btn.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            background: var(--clean-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,119,190,0.15);
+        }
+        
+        .gallery-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            height: 250px;
+            position: relative;
+        }
+        
+        .before-img,
+        .after-img {
+            position: relative;
+            overflow: hidden;
+            background: var(--soft-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .before-label,
+        .after-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .gallery-info {
+            padding: 1.5rem;
+        }
+        
+        .gallery-info h3 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .video-testimonials {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .video-card {
+            background: var(--soft-gray);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,119,190,0.15);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .play-btn {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--trust-blue);
+            transition: var(--transition);
+        }
+        
+        .video-card:hover .play-btn {
+            transform: scale(1.1);
+            background: white;
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+            background: var(--clean-white);
+        }
+        
+        .video-info h3 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button-light {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .cta-button-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+        }
+        
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background: var(--clean-white);
+            max-width: 800px;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--charcoal);
+        }
+        
+        .close-modal:hover {
+            color: var(--trust-blue);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo">DentalCare Excellence</div>
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="/services">Services</a>
+                <a href="/reviews" aria-current="page">Reviews</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/book-appointment" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book Now Header'});">Book Now</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <section class="hero">
+            <h1>Real Patients, Real Stories, Real Results</h1>
+            <p>Join 15,000+ happy patients who have transformed their smiles and lives with us</p>
+            <div class="cta-buttons">
+                <a href="#reviews" class="cta-button">Read Reviews</a>
+                <a href="#gallery" class="cta-button-light">View Transformations</a>
+            </div>
+        </section>
+        
+        <div class="live-reviews-bar" role="region" aria-label="Live patient reviews">
+            <div class="live-ticker">
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Best dental experience ever!" - Sarah M.</span>
+                </div>
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Life-changing results, amazing team!" - John D.</span>
+                </div>
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Painless procedure, exceeded expectations!" - Maria L.</span>
+                </div>
+                <div class="live-review">
+                    <span class="review-stars">★★★★★</span>
+                    <span>"Professional, caring, and affordable!" - Robert K.</span>
+                </div>
+            </div>
+        </div>
+        
+        <section class="stats-bar">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="live-indicator">LIVE</span>
+                    <span class="stat-number">15,247</span>
+                    <span class="stat-label">Happy Patients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3,526</span>
+                    <span class="stat-label">5-Star Reviews</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Would Recommend</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="reviews" class="reviews-section">
+            <div class="section-header">
+                <h2>Patient Reviews & Testimonials</h2>
+                <p>Verified reviews from real patients across multiple platforms</p>
+            </div>
+            
+            <div class="review-controls">
+                <div class="review-filter">
+                    <button class="filter-btn active" onclick="filterReviews('all')">
+                        All Reviews
+                        <span class="filter-count">3526</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterReviews('cosmetic')">
+                        Cosmetic
+                        <span class="filter-count">892</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterReviews('implants')">
+                        Implants
+                        <span class="filter-count">456</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterReviews('general')">
+                        General
+                        <span class="filter-count">1378</span>
+                    </button>
+                </div>
+                <div class="review-sort">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" class="sort-select" onchange="sortReviews()">
+                        <option value="recent">Most Recent</option>
+                        <option value="helpful">Most Helpful</option>
+                        <option value="rating">Highest Rating</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="reviews-grid" id="reviewsGrid">
+                <article class="review-card featured verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">JT</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Jennifer Thompson</div>
+                            <div class="review-date">2 weeks ago</div>
+                        </div>
+                        <div class="platform-badge">Google</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "I cannot express how grateful I am for the exceptional care I received at DentalCare Excellence. After years of hiding my smile due to crooked and discolored teeth, I finally have the confidence to smile freely. The entire team, especially Dr. Smith, made me feel comfortable throughout my Invisalign and whitening journey. The results exceeded my expectations!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 127 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+                
+                <article class="review-card verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">MR</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Michael Rodriguez</div>
+                            <div class="review-date">1 month ago</div>
+                        </div>
+                        <div class="platform-badge">Yelp</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Dental implant procedure was seamless! I was terrified going in, but the sedation options and Dr. Johnson's expertise made it completely painless. Six months later, I can eat anything I want and my new tooth looks completely natural. Worth every penny!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 89 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+                
+                <article class="review-card verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">SB</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Sarah Bennett</div>
+                            <div class="review-date">3 weeks ago</div>
+                        </div>
+                        <div class="platform-badge">Facebook</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Best dental experience for someone with severe anxiety! The entire staff understood my fears and worked with me every step of the way. The virtual reality headset during my root canal was a game-changer. I actually fell asleep during the procedure!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 156 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+                
+                <article class="review-card verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">DW</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">David Wilson</div>
+                            <div class="review-date">1 week ago</div>
+                        </div>
+                        <div class="platform-badge">Google</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Brought my entire family here and we're all impressed! Kids actually look forward to their cleanings thanks to the entertainment systems and friendly hygienists. The membership plan saves us so much money compared to our old dentist. Highly recommend!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 72 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+                
+                <article class="review-card verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">LM</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Lisa Martinez</div>
+                            <div class="review-date">2 months ago</div>
+                        </div>
+                        <div class="platform-badge">Healthgrades</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Emergency appointment on a Saturday saved my vacation! Cracked tooth was fixed with a same-day crown using their CEREC technology. No temporary crown needed, and it matches perfectly. The staff stayed late to help me. Forever grateful!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 94 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+                
+                <article class="review-card verified">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">RJ</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Robert Johnson</div>
+                            <div class="review-date">1 month ago</div>
+                        </div>
+                        <div class="platform-badge">Google</div>
+                    </div>
+                    <div class="review-rating">
+                        ★★★★★
+                    </div>
+                    <div class="review-content">
+                        "Full mouth reconstruction changed my life at 65! Multiple implants, crowns, and veneers gave me a smile I haven't had in decades. The financing options made it affordable, and the results are stunning. I feel 20 years younger!"
+                    </div>
+                    <div class="review-helpful">
+                        <span>👍 118 found this helpful</span>
+                        <button class="helpful-btn" onclick="markHelpful(this)">Helpful</button>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="cta-button" onclick="loadMoreReviews()">Load More Reviews</button>
+            </div>
+        </section>
+        
+        <section id="gallery" class="gallery-section">
+            <div class="section-header">
+                <h2>Smile Transformation Gallery</h2>
+                <p>Real patient results - see the difference we can make</p>
+            </div>
+            
+            <div class="gallery-tabs">
+                <button class="tab-btn active" onclick="showGallery('all')">All Transformations</button>
+                <button class="tab-btn" onclick="showGallery('veneers')">Veneers</button>
+                <button class="tab-btn" onclick="showGallery('implants')">Implants</button>
+                <button class="tab-btn" onclick="showGallery('invisalign')">Invisalign</button>
+                <button class="tab-btn" onclick="showGallery('whitening')">Whitening</button>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <article class="gallery-item" onclick="openGalleryModal('veneers1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😊
+                        </div>
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            😁
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Complete Smile Makeover</h3>
+                        <p>10 porcelain veneers transformed this patient's smile</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Veneers</span>
+                            <span>Duration: 2 weeks</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item" onclick="openGalleryModal('implant1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            🦷
+                        </div>
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            ✨
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Single Tooth Implant</h3>
+                        <p>Natural-looking implant replaced missing front tooth</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Implant</span>
+                            <span>Duration: 4 months</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item" onclick="openGalleryModal('invisalign1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            🙂
+                        </div>
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            😄
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Invisalign Success</h3>
+                        <p>Straightened teeth without traditional braces</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Invisalign</span>
+                            <span>Duration: 14 months</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item" onclick="openGalleryModal('whitening1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😊
+                        </div>
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            ⭐
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Professional Whitening</h3>
+                        <p>8 shades whiter in just one visit</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Zoom Whitening</span>
+                            <span>Duration: 90 minutes</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item" onclick="openGalleryModal('fullmouth1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😔
+                        </div>
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            🤩
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Full Mouth Reconstruction</h3>
+                        <p>Complete restoration with implants and crowns</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Multiple</span>
+                            <span>Duration: 8 months</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="gallery-item" onclick="openGalleryModal('gummy1')">
+                    <div class="gallery-images">
+                        <div class="before-img">
+                            <span class="before-label">Before</span>
+                            😬
+                        </div>
+                        <div class="after-img">
+                            <span class="after-label">After</span>
+                            😃
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Gummy Smile Correction</h3>
+                        <p>Laser gum contouring for perfect proportions</p>
+                        <div class="treatment-details">
+                            <span>Treatment: Laser Surgery</span>
+                            <span>Duration: 1 hour</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="video-testimonials">
+            <div class="section-header">
+                <h2>Video Testimonials</h2>
+                <p>Hear directly from our patients about their experiences</p>
+            </div>
+            
+            <div class="video-grid">
+                <article class="video-card" onclick="playVideo('testimonial1')">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Sarah's Invisalign Journey</h3>
+                        <p>"From crooked to confident in 12 months"</p>
+                        <span style="color: #666; font-size: 0.9rem;">Duration: 2:45</span>
+                    </div>
+                </article>
+                
+                <article class="video-card" onclick="playVideo('testimonial2')">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>John's Implant Experience</h3>
+                        <p>"Pain-free and life-changing results"</p>
+                        <span style="color: #666; font-size: 0.9rem;">Duration: 3:12</span>
+                    </div>
+                </article>
+                
+                <article class="video-card" onclick="playVideo('testimonial3')">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Maria's Smile Makeover</h3>
+                        <p>"10 veneers gave me a Hollywood smile"</p>
+                        <span style="color: #666; font-size: 0.9rem;">Duration: 4:08</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <h2>Ready to Join Our Happy Patient Family?</h2>
+            <p>Start your journey to a healthier, more confident smile today</p>
+            <div class="cta-buttons">
+                <a href="/book-appointment" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book Appointment Reviews'});">Schedule Your Consultation</a>
+                <a href="tel:555-123-4567" class="cta-button-light" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Call Reviews'});">Call (555) 123-4567</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 DentalCare Excellence. All rights reserved.</p>
+        <p>Creating beautiful smiles and happy patients since 2005</p>
+    </footer>
+    
+    <!-- Modal for gallery and video -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()" aria-label="Close">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Track page view
+        gtag('event', 'page_view', {
+            'page_title': 'Reviews & Results',
+            'page_location': window.location.href,
+            'page_path': '/reviews-results'
+        });
+        
+        // Filter reviews
+        function filterReviews(category) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Track filter
+            gtag('event', 'filter_reviews', {
+                'event_category': 'Reviews',
+                'event_label': category
+            });
+            
+            // In production, filter reviews based on category
+            console.log('Filtering reviews by:', category);
+        }
+        
+        // Sort reviews
+        function sortReviews() {
+            const sortValue = document.getElementById('sort').value;
+            
+            // Track sort
+            gtag('event', 'sort_reviews', {
+                'event_category': 'Reviews',
+                'event_label': sortValue
+            });
+            
+            // In production, sort reviews
+            console.log('Sorting reviews by:', sortValue);
+        }
+        
+        // Mark review as helpful
+        function markHelpful(button) {
+            const helpfulCount = button.previousElementSibling;
+            const currentCount = parseInt(helpfulCount.textContent.match(/\d+/)[0]);
+            helpfulCount.innerHTML = `👍 ${currentCount + 1} found this helpful`;
+            button.disabled = true;
+            button.textContent = 'Thanks!';
+            
+            // Track helpful
+            gtag('event', 'mark_helpful', {
+                'event_category': 'Reviews',
+                'value': 1
+            });
+        }
+        
+        // Load more reviews
+        function loadMoreReviews() {
+            // Track load more
+            gtag('event', 'load_more', {
+                'event_category': 'Reviews',
+                'event_label': 'Load More Reviews'
+            });
+            
+            // In production, load more reviews via API
+            alert('Loading more reviews...');
+        }
+        
+        // Show gallery category
+        function showGallery(category) {
+            // Update active tab
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Track gallery filter
+            gtag('event', 'filter_gallery', {
+                'event_category': 'Gallery',
+                'event_label': category
+            });
+            
+            // In production, filter gallery items
+            console.log('Showing gallery:', category);
+        }
+        
+        // Open gallery modal
+        function openGalleryModal(imageId) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track gallery view
+            gtag('event', 'view_transformation', {
+                'event_category': 'Gallery',
+                'event_label': imageId
+            });
+            
+            modalBody.innerHTML = `
+                <div style="text-align: center;">
+                    <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Before & After Transformation</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <h4>Before</h4>
+                            <div style="background: var(--soft-gray); height: 300px; display: flex; align-items: center; justify-content: center; font-size: 5rem; border-radius: 8px;">
+                                😊
+                            </div>
+                        </div>
+                        <div>
+                            <h4>After</h4>
+                            <div style="background: var(--soft-gray); height: 300px; display: flex; align-items: center; justify-content: center; font-size: 5rem; border-radius: 8px;">
+                                😁
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 2rem;">This patient's transformation shows the dramatic improvement possible with our advanced treatments.</p>
+                    <a href="/book-appointment" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book from Gallery Modal'});">
+                        Start Your Transformation
+                    </a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+        }
+        
+        // Play video testimonial
+        function playVideo(videoId) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track video play
+            gtag('event', 'play_video', {
+                'event_category': 'Video Testimonial',
+                'event_label': videoId
+            });
+            
+            modalBody.innerHTML = `
+                <div style="text-align: center;">
+                    <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Patient Video Testimonial</h3>
+                    <div style="background: var(--soft-gray); height: 400px; display: flex; align-items: center; justify-content: center; font-size: 3rem; border-radius: 8px; margin-bottom: 2rem;">
+                        ▶️ Video Player
+                    </div>
+                    <p>In production, this would play the actual patient testimonial video.</p>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+        }
+        
+        // Close modal
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+        }
+        
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Update live stats
+        function updateLiveStats() {
+            const patientCount = document.querySelector('.stat-number');
+            const currentCount = parseInt(patientCount.textContent.replace(',', ''));
+            patientCount.textContent = (currentCount + 1).toLocaleString();
+        }
+        
+        // Simulate live updates
+        setInterval(updateLiveStats, 30000); // Update every 30 seconds
+        
+        // Lazy load images
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // In production, load actual images
+                    entry.target.style.opacity = '1';
+                    imageObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transition = 'opacity 0.5s ease';
+            imageObserver.observe(item);
+        });
+        
+        // Error tracking
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            gtag('event', 'exception', {
+                'description': e.error.toString(),
+                'fatal': false
+            });
+        });
+    </script>
+</body>
+</html>

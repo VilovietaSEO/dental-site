@@ -1,0 +1,16 @@
+{
+  "name": "dental-site-production",
+  "version": "1.0.0",
+  "description": "Modern Dental Care website with lead capture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {},
+  "keywords": ["dental", "healthcare", "vercel", "supabase"],
+  "author": "",
+  "license": "ISC"
+}

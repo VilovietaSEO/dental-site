@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="crowns-bridges">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same-Day Dental Crowns & Bridges - CEREC Technology | SmileCare Dental</title>
+    <meta name="description" content="Save your natural teeth with advanced crowns & bridges. Same-day CEREC technology, 10-year warranty, 0% financing. Emergency appointments available!">
+    <meta name="keywords" content="dental crowns, dental bridges, CEREC same day, crown replacement, emergency dental, tooth restoration">
+    <link rel="canonical" href="https://smilecare.dental/crowns-bridges">
+    <meta property="og:title" content="Same-Day Dental Crowns & Bridges - CEREC Technology">
+    <meta property="og:description" content="Save your natural teeth! Same-day crowns with 10-year warranty, emergency appointments available.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: rgba(0, 168, 168, 0.1);
+            --gradient-primary: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            --warning-red: #dc3545;
+            --warning-orange: #FF6B35;
+        }
+        
+        /* Preload critical fonts */
+        @font-display: swap;
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Screen reader only content */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Header Enhanced */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            will-change: transform;
+        }
+        
+        header.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-teal);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--trust-blue);
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--success-green);
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .cta-button:hover::before,
+        .cta-button:focus::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-button:hover {
+            background: #239a3b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        /* Hero Section Enhanced */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 8rem 5% 4rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .urgency-badge {
+            background: var(--warning-orange);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem;
+            border-radius: 10px;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--clean-white);
+            padding: 1rem 2rem;
+            border: 2px solid var(--clean-white);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+        }
+        
+        /* Why Wait Section Enhanced */
+        .consequences-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .consequences-timeline {
+            max-width: 1000px;
+            margin: 3rem auto;
+            position: relative;
+        }
+        
+        .timeline-path {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--success-green), var(--warning-orange), var(--warning-red));
+            transform: translateX(-50%);
+        }
+        
+        .consequence-stage {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .consequence-stage:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .consequence-content {
+            width: 45%;
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .consequence-content:hover {
+            transform: scale(1.05);
+        }
+        
+        .consequence-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--clean-white);
+            z-index: 2;
+        }
+        
+        .stage-1 .consequence-marker { background: var(--success-green); }
+        .stage-2 .consequence-marker { background: var(--warning-orange); }
+        .stage-3 .consequence-marker { background: var(--warning-red); }
+        
+        /* Advanced Cost Calculator Enhanced */
+        .calculator-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .calculator-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .calculator-input {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .calculator-output {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--trust-blue);
+        }
+        
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            min-height: 44px;
+        }
+        
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+        }
+        
+        .material-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .material-option {
+            background: var(--clean-white);
+            border: 2px solid #e0e0e0;
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            min-height: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .material-option:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-3px);
+        }
+        
+        .material-option.selected {
+            border-color: var(--trust-blue);
+            background: var(--light-teal);
+        }
+        
+        .cost-breakdown {
+            margin-top: 2rem;
+        }
+        
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .total-cost {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .payment-plans {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .payment-plan {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-plan:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        /* 3D Crown Designer Enhanced */
+        .crown-designer {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .designer-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .crown-preview {
+            background: var(--clean-white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+            height: 500px;
+        }
+        
+        .crown-3d-model {
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: grab;
+        }
+        
+        .crown-3d-model:active {
+            cursor: grabbing;
+        }
+        
+        .crown-svg {
+            width: 300px;
+            height: 300px;
+            animation: rotate3d 20s linear infinite;
+        }
+        
+        @keyframes rotate3d {
+            from { transform: rotateY(0deg) rotateX(-20deg); }
+            to { transform: rotateY(360deg) rotateX(-20deg); }
+        }
+        
+        .designer-controls {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .control-section {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .color-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.1);
+        }
+        
+        .color-swatch.selected {
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.2);
+        }
+        
+        /* Animated Procedure Steps Enhanced */
+        .procedure-animation {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .animation-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            position: relative;
+            height: 600px;
+            background: var(--soft-gray);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .procedure-stage {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .procedure-stage.active {
+            opacity: 1;
+        }
+        
+        .stage-visual {
+            text-align: center;
+        }
+        
+        .stage-controls {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .stage-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .stage-btn.active {
+            background: var(--accent-teal);
+            transform: scale(1.5);
+        }
+        
+        .stage-btn:focus {
+            outline: 2px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+        
+        /* Patient Concerns Enhanced */
+        .concerns-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .concerns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .concern-card {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .concern-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .concern-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .concern-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+        
+        .concern-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .concern-title {
+            font-size: 1.25rem;
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .concern-solution {
+            color: var(--success-green);
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        /* Material Comparison Enhanced */
+        .comparison-enhanced {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .comparison-interactive {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .comparison-filters {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-chip {
+            padding: 0.75rem 1.5rem;
+            background: var(--soft-gray);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-chip:hover {
+            border-color: var(--accent-teal);
+        }
+        
+        .filter-chip.active {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border-color: var(--accent-teal);
+        }
+        
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--clean-white);
+        }
+        
+        .comparison-table th {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:hover {
+            background: var(--light-teal);
+        }
+        
+        .rating-stars {
+            color: #FFD700;
+            font-size: 1.25rem;
+        }
+        
+        .best-value {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+        
+        /* Gallery Enhanced */
+        .gallery-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .gallery-viewer {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .gallery-main {
+            background: var(--soft-gray);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            position: relative;
+            height: 500px;
+        }
+        
+        .gallery-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .gallery-slide.active {
+            opacity: 1;
+        }
+        
+        .before-after-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .before-section, .after-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .before-section img, .after-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-label {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        
+        .case-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: var(--clean-white);
+            padding: 1.5rem;
+        }
+        
+        .gallery-thumbnails {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            overflow-x: auto;
+            padding: 1rem;
+        }
+        
+        .thumbnail {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .thumbnail:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        
+        .thumbnail.active {
+            opacity: 1;
+            box-shadow: 0 0 0 3px var(--accent-teal);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Success Guarantees Enhanced */
+        .guarantees-section {
+            padding: 4rem 5%;
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+        }
+        
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .guarantee-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .guarantee-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-10px);
+        }
+        
+        .guarantee-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .guarantee-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guarantee-years {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--success-green);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* CTA Section Enhanced */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before,
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .cta-section::before {
+            top: -150px;
+            left: -150px;
+        }
+        
+        .cta-section::after {
+            bottom: -150px;
+            right: -150px;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .special-offer {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .offer-timer {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-wrap: wrap;
+        }
+        
+        .timer-unit {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 44px;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        /* Footer Enhanced */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 4rem 5% 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            padding: 0.5rem 0;
+        }
+        
+        .footer-section a {
+            color: var(--clean-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-teal);
+        }
+        
+        /* Mobile Responsiveness Enhanced */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .calculator-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .designer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .consequence-stage,
+            .consequence-stage:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .consequence-content {
+                width: 100%;
+            }
+            
+            .timeline-path {
+                left: 20px;
+            }
+            
+            .consequence-marker {
+                left: 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .offer-timer {
+                font-size: 1.25rem;
+                gap: 0.5rem;
+            }
+            
+            .hero-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: var(--charcoal);
+            }
+            
+            .cta-button {
+                border: 3px solid var(--clean-white);
+            }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        /* Loading States */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: var(--clean-white);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">SmileCare Dental</div>
+            <ul class="nav-links">
+                <li><a href="#calculator">Cost Calculator</a></li>
+                <li><a href="#designer">3D Designer</a></li>
+                <li><a href="#materials">Compare Materials</a></li>
+                <li><a href="#concerns">Your Concerns</a></li>
+                <li><a href="#gallery">Real Results</a></li>
+                <li><a href="#book" class="cta-button">Book CEREC Same-Day</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section Enhanced -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <div class="urgency-badge">⚡ Same-Day Crowns Available - No Temporary Needed!</div>
+                <h1>Save Your Natural Teeth with Advanced Crowns & Bridges</h1>
+                <p>Don't wait until it's too late - damaged teeth worsen quickly. Get permanent restoration in just one visit with CEREC technology.</p>
+                <div class="hero-features">
+                    <div class="hero-feature">✨ Same-Day Completion</div>
+                    <div class="hero-feature">🦷 Natural Appearance</div>
+                    <div class="hero-feature">💪 10-Year Warranty</div>
+                    <div class="hero-feature">💰 0% Financing</div>
+                </div>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#calculator" class="cta-button" style="font-size: 1.25rem; padding: 1rem 2rem;">
+                        Calculate Your Cost Now →
+                    </a>
+                    <a href="#book" class="btn-secondary">
+                        Emergency Appointments
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="crown-3d-model">
+                    <svg class="crown-svg" viewBox="0 0 300 300" role="img" aria-label="3D crown and bridge model">
+                        <defs>
+                            <linearGradient id="crownGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FAFAFA;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="toothGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5DEB3;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Prepared tooth -->
+                        <ellipse cx="150" cy="200" rx="40" ry="60" fill="url(#toothGradient)" />
+                        
+                        <!-- Crown -->
+                        <path d="M150 50 C180 50 210 80 210 130 L210 180 C210 200 190 220 150 220 C110 220 90 200 90 180 L90 130 C90 80 120 50 150 50" 
+                              fill="url(#crownGradient)" stroke="#00A8A8" stroke-width="2" opacity="0.9"/>
+                        
+                        <!-- Crown details -->
+                        <ellipse cx="150" cy="90" rx="50" ry="40" fill="url(#crownGradient)" stroke="#00A8A8" stroke-width="1"/>
+                        
+                        <!-- Highlight -->
+                        <ellipse cx="135" cy="80" rx="15" ry="20" fill="rgba(255,255,255,0.6)" />
+                    </svg>
+                    <div style="position: absolute; bottom: 2rem; font-size: 0.875rem; opacity: 0.8;">
+                        Interactive 3D Preview
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Wait Section Enhanced -->
+    <section class="consequences-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Happens When You Delay Treatment?</h2>
+                <p>See the real cost of waiting - both financial and health-wise</p>
+            </div>
+            
+            <div class="consequences-timeline">
+                <div class="timeline-path"></div>
+                
+                <div class="consequence-stage stage-1">
+                    <div class="consequence-marker">NOW</div>
+                    <div class="consequence-content">
+                        <h3>Today: Simple Crown Needed</h3>
+                        <p>Your tooth has significant damage but can be saved with a crown</p>
+                        <div style="margin-top: 1rem;">
+                            <strong style="color: var(--success-green);">Cost: $1,200</strong><br>
+                            <strong>Treatment time: 1-2 visits</strong><br>
+                            <strong>Success rate: 95%</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="consequence-stage stage-2">
+                    <div class="consequence-marker">6mo</div>
+                    <div class="consequence-content">
+                        <h3>6 Months: Root Canal + Crown</h3>
+                        <p>Decay reaches the nerve, requiring additional treatment</p>
+                        <div style="margin-top: 1rem;">
+                            <strong style="color: var(--warning-orange);">Cost: $2,500+</strong><br>
+                            <strong>Treatment time: 3-4 visits</strong><br>
+                            <strong>Pain level: Significant</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="consequence-stage stage-3">
+                    <div class="consequence-marker">1yr+</div>
+                    <div class="consequence-content">
+                        <h3>1 Year+: Extraction & Implant</h3>
+                        <p>Tooth cannot be saved, requires removal and replacement</p>
+                        <div style="margin-top: 1rem;">
+                            <strong style="color: var(--warning-red);">Cost: $4,500+</strong><br>
+                            <strong>Treatment time: 6+ months</strong><br>
+                            <strong>Bone loss: Irreversible</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#book" class="cta-button" style="font-size: 1.25rem; padding: 1rem 2rem;">
+                    Save Your Tooth Today - Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Cost Calculator Enhanced -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Instant Crown & Bridge Cost Calculator</h2>
+                <p>Get your exact price with insurance and financing options</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-input">
+                    <h3>Customize Your Treatment</h3>
+                    
+                    <div class="form-group">
+                        <label for="treatmentType">Treatment Type</label>
+                        <select id="treatmentType">
+                            <option value="" disabled selected>Select treatment type</option>
+                            <option value="crown">Single Crown</option>
+                            <option value="bridge3">3-Unit Bridge (1 missing tooth)</option>
+                            <option value="bridge4">4-Unit Bridge (2 missing teeth)</option>
+                            <option value="multiple">Multiple Crowns</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="crownCount" style="display: none;">
+                        <label for="numberOfCrowns">Number of Crowns</label>
+                        <input type="number" id="numberOfCrowns" value="2" min="2" max="8">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Select Your Material</label>
+                        <div class="material-selector">
+                            <div class="material-option selected" data-material="pfm" role="button" tabindex="0" aria-pressed="true">
+                                <strong>Porcelain-Metal</strong>
+                                <div style="font-size: 0.875rem;">Good strength</div>
+                            </div>
+                            <div class="material-option" data-material="ceramic" role="button" tabindex="0" aria-pressed="false">
+                                <strong>All-Ceramic</strong>
+                                <div style="font-size: 0.875rem;">Best aesthetics</div>
+                            </div>
+                            <div class="material-option" data-material="zirconia" role="button" tabindex="0" aria-pressed="false">
+                                <strong>Zirconia</strong>
+                                <div style="font-size: 0.875rem;">Ultimate strength</div>
+                            </div>
+                            <div class="material-option" data-material="gold" role="button" tabindex="0" aria-pressed="false">
+                                <strong>Gold Alloy</strong>
+                                <div style="font-size: 0.875rem;">Longest lasting</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="insuranceStatus">Do you have dental insurance?</label>
+                        <select id="insuranceStatus">
+                            <option value="none">No Insurance</option>
+                            <option value="basic">Basic Coverage (50%)</option>
+                            <option value="major">Major Coverage (50-80%)</option>
+                            <option value="premium">Premium Coverage (80%+)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sameDay">Need same-day service? (CEREC)</label>
+                        <select id="sameDay">
+                            <option value="no">Traditional (2 visits)</option>
+                            <option value="yes">Same-Day CEREC (+$200)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="calculator-output">
+                    <h3>Your Treatment Estimate</h3>
+                    
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span>Base Treatment Cost</span>
+                            <span id="baseCost">$1,200</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Material Selection</span>
+                            <span id="materialCost">Included</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Same-Day Service</span>
+                            <span id="sameDayCost">$0</span>
+                        </div>
+                        <div class="cost-item" style="color: var(--success-green);">
+                            <span>Insurance Savings</span>
+                            <span id="insuranceSavings">-$0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="total-cost" id="totalCost" role="status" aria-live="polite">$1,200</div>
+                    
+                    <div class="payment-plans">
+                        <div class="payment-plan">
+                            <strong>6 Months</strong>
+                            <div style="font-size: 1.5rem;" id="payment6">$200/mo</div>
+                            <small>0% Interest</small>
+                        </div>
+                        <div class="payment-plan">
+                            <strong>12 Months</strong>
+                            <div style="font-size: 1.5rem;" id="payment12">$100/mo</div>
+                            <small>0% Interest</small>
+                        </div>
+                        <div class="payment-plan">
+                            <strong>24 Months</strong>
+                            <div style="font-size: 1.5rem;" id="payment24">$52/mo</div>
+                            <small>5.9% APR</small>
+                        </div>
+                        <div class="payment-plan">
+                            <strong>60 Months</strong>
+                            <div style="font-size: 1.5rem;" id="payment60">$23/mo</div>
+                            <small>7.9% APR</small>
+                        </div>
+                    </div>
+                    
+                    <a href="#book" class="cta-button" style="width: 100%; margin-top: 1.5rem; text-align: center;">
+                        Lock In This Price - Schedule Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Crown Designer Enhanced -->
+    <section id="designer" class="crown-designer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Design Your Perfect Crown</h2>
+                <p>See exactly how your new crown will look with our 3D preview</p>
+            </div>
+            
+            <div class="designer-container">
+                <div class="crown-preview">
+                    <div class="crown-3d-model" id="crownModel">
+                        <svg class="crown-svg" viewBox="0 0 300 300" id="crownSvg" role="img" aria-label="Interactive 3D crown model">
+                            <defs>
+                                <linearGradient id="customCrownGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FAFAFA;stop-opacity:1" id="gradientStart" />
+                                    <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" id="gradientEnd" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Tooth preparation -->
+                            <ellipse cx="150" cy="200" rx="35" ry="55" fill="#F5DEB3" opacity="0.8" />
+                            
+                            <!-- Crown body -->
+                            <path d="M150 60 C175 60 200 85 200 125 L200 175 C200 195 182 210 150 210 C118 210 100 195 100 175 L100 125 C100 85 125 60 150 60" 
+                                  fill="url(#customCrownGradient)" stroke="#00A8A8" stroke-width="2"/>
+                            
+                            <!-- Crown anatomy details -->
+                            <ellipse cx="150" cy="95" rx="45" ry="35" fill="url(#customCrownGradient)" stroke="#00A8A8" stroke-width="1"/>
+                            
+                            <!-- Cusps -->
+                            <circle cx="130" cy="90" r="8" fill="url(#customCrownGradient)" />
+                            <circle cx="170" cy="90" r="8" fill="url(#customCrownGradient)" />
+                            
+                            <!-- Highlight -->
+                            <ellipse cx="135" cy="85" rx="12" ry="18" fill="rgba(255,255,255,0.6)" />
+                        </svg>
+                        <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem; text-align: center; color: var(--clean-white); background: rgba(0,0,0,0.5); padding: 0.5rem; border-radius: 10px;">
+                            Click and drag to rotate
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="designer-controls">
+                    <div class="control-section">
+                        <h4>Choose Your Shade</h4>
+                        <p>Match your natural tooth color perfectly</p>
+                        <div class="color-options">
+                            <div class="color-swatch selected" style="background: #FAFAFA;" data-color="#FAFAFA" role="button" tabindex="0" aria-label="Select white shade"></div>
+                            <div class="color-swatch" style="background: #F5F5DC;" data-color="#F5F5DC" role="button" tabindex="0" aria-label="Select beige shade"></div>
+                            <div class="color-swatch" style="background: #FFF8DC;" data-color="#FFF8DC" role="button" tabindex="0" aria-label="Select cornsilk shade"></div>
+                            <div class="color-swatch" style="background: #FAEBD7;" data-color="#FAEBD7" role="button" tabindex="0" aria-label="Select antique white shade"></div>
+                            <div class="color-swatch" style="background: #FFE4B5;" data-color="#FFE4B5" role="button" tabindex="0" aria-label="Select moccasin shade"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <h4>Material Benefits</h4>
+                        <div id="materialBenefits">
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0;">✓ Natural tooth-like appearance</li>
+                                <li style="padding: 0.5rem 0;">✓ Excellent durability (15+ years)</li>
+                                <li style="padding: 0.5rem 0;">✓ Biocompatible material</li>
+                                <li style="padding: 0.5rem 0;">✓ Stain-resistant surface</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <h4>Your Crown Preview</h4>
+                        <p>This is how your crown will look from different angles. Our CEREC technology ensures precise fit and natural appearance.</p>
+                        <a href="#book" class="cta-button" style="width: 100%; margin-top: 1rem; text-align: center;">
+                            Create My Crown Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Procedure Steps Enhanced -->
+    <section class="procedure-animation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Crown Procedure: Step by Step</h2>
+                <p>See exactly what happens during your visit</p>
+            </div>
+            
+            <div class="animation-container">
+                <div class="procedure-stage active" id="stage1">
+                    <div class="stage-visual">
+                        <svg width="300" height="300" viewBox="0 0 300 300" role="img" aria-label="Digital impression stage">
+                            <rect x="50" y="100" width="200" height="150" fill="#0077BE" rx="10" opacity="0.2"/>
+                            <rect x="75" y="125" width="150" height="100" fill="#00A8A8" rx="5"/>
+                            <text x="150" y="175" text-anchor="middle" fill="white" font-size="20" font-weight="bold">3D SCAN</text>
+                        </svg>
+                        <h3 style="margin-top: 2rem;">Digital Impression</h3>
+                        <p>No messy molds! Our 3D scanner captures your tooth in seconds</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-stage" id="stage2">
+                    <div class="stage-visual">
+                        <svg width="300" height="300" viewBox="0 0 300 300" role="img" aria-label="Tooth preparation stage">
+                            <circle cx="150" cy="150" r="80" fill="#F5DEB3" />
+                            <path d="M150 100 L170 130 L150 160 L130 130 Z" fill="#8B4513" />
+                            <circle cx="150" cy="150" r="85" fill="none" stroke="#dc3545" stroke-width="3" stroke-dasharray="5,5"/>
+                        </svg>
+                        <h3 style="margin-top: 2rem;">Tooth Preparation</h3>
+                        <p>Gentle reshaping to make room for your new crown</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-stage" id="stage3">
+                    <div class="stage-visual">
+                        <svg width="300" height="300" viewBox="0 0 300 300" role="img" aria-label="CAD design stage">
+                            <rect x="50" y="50" width="200" height="200" fill="#00A8A8" rx="10" opacity="0.3"/>
+                            <circle cx="150" cy="150" r="60" fill="#0077BE" />
+                            <text x="150" y="155" text-anchor="middle" fill="white" font-size="16" font-weight="bold">DESIGNING</text>
+                            <circle cx="150" cy="150" r="65" fill="none" stroke="#28A745" stroke-width="3">
+                                <animate attributeName="stroke-dasharray" values="0 410;410 0" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
+                        <h3 style="margin-top: 2rem;">CAD Design</h3>
+                        <p>Computer designs your perfect crown in minutes</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-stage" id="stage4">
+                    <div class="stage-visual">
+                        <svg width="300" height="300" viewBox="0 0 300 300" role="img" aria-label="Crown creation stage">
+                            <rect x="75" y="75" width="150" height="150" fill="#28A745" rx="10" opacity="0.3"/>
+                            <path d="M150 100 C170 100 190 120 190 150 L190 180 C190 195 175 200 150 200 C125 200 110 195 110 180 L110 150 C110 120 130 100 150 100" 
+                                  fill="#FAFAFA" stroke="#00A8A8" stroke-width="2"/>
+                            <text x="150" y="230" text-anchor="middle" fill="#333" font-size="16" font-weight="bold">MILLING</text>
+                        </svg>
+                        <h3 style="margin-top: 2rem;">Crown Creation</h3>
+                        <p>CEREC mills your crown from a solid ceramic block</p>
+                    </div>
+                </div>
+                
+                <div class="procedure-stage" id="stage5">
+                    <div class="stage-visual">
+                        <svg width="300" height="300" viewBox="0 0 300 300" role="img" aria-label="Final placement stage">
+                            <circle cx="150" cy="150" r="100" fill="#28A745" opacity="0.2"/>
+                            <circle cx="150" cy="150" r="80" fill="#28A745" opacity="0.4"/>
+                            <circle cx="150" cy="150" r="60" fill="#28A745" opacity="0.6"/>
+                            <text x="150" y="155" text-anchor="middle" fill="white" font-size="24" font-weight="bold">✓</text>
+                        </svg>
+                        <h3 style="margin-top: 2rem;">Final Placement</h3>
+                        <p>Your new crown is bonded permanently - all in one visit!</p>
+                    </div>
+                </div>
+                
+                <div class="stage-controls">
+                    <button class="stage-btn active" data-stage="1" aria-label="View stage 1"></button>
+                    <button class="stage-btn" data-stage="2" aria-label="View stage 2"></button>
+                    <button class="stage-btn" data-stage="3" aria-label="View stage 3"></button>
+                    <button class="stage-btn" data-stage="4" aria-label="View stage 4"></button>
+                    <button class="stage-btn" data-stage="5" aria-label="View stage 5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Concerns Enhanced -->
+    <section id="concerns" class="concerns-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>We Understand Your Concerns</h2>
+                <p>Here's how we address common worries about crown & bridge procedures</p>
+            </div>
+            
+            <div class="concerns-grid">
+                <div class="concern-card">
+                    <div class="concern-icon" aria-hidden="true">😰</div>
+                    <h3 class="concern-title">Fear of Pain</h3>
+                    <p>"Will the procedure hurt?"</p>
+                    <div class="concern-solution">Our Solution:</div>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✓ Topical anesthetic before injection</li>
+                        <li>✓ Computer-controlled anesthesia</li>
+                        <li>✓ Sedation options available</li>
+                    </ul>
+                </div>
+                
+                <div class="concern-card">
+                    <div class="concern-icon" aria-hidden="true">⏰</div>
+                    <h3 class="concern-title">Time Commitment</h3>
+                    <p>"I can't take multiple days off work"</p>
+                    <div class="concern-solution">Our Solution:</div>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✓ Same-day CEREC crowns</li>
+                        <li>✓ No temporary crown needed</li>
+                        <li>✓ Complete in 2 hours</li>
+                    </ul>
+                </div>
+                
+                <div class="concern-card">
+                    <div class="concern-icon" aria-hidden="true">💰</div>
+                    <h3 class="concern-title">Cost Worries</h3>
+                    <p>"Can I afford quality treatment?"</p>
+                    <div class="concern-solution">Our Solution:</div>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✓ 0% financing available</li>
+                        <li>✓ Insurance maximization help</li>
+                        <li>✓ Price match guarantee</li>
+                    </ul>
+                </div>
+                
+                <div class="concern-card">
+                    <div class="concern-icon" aria-hidden="true">🎨</div>
+                    <h3 class="concern-title">Appearance Concerns</h3>
+                    <p>"Will it look natural?"</p>
+                    <div class="concern-solution">Our Solution:</div>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✓ Custom shade matching</li>
+                        <li>✓ 3D preview before creation</li>
+                        <li>✓ Adjustment guarantee</li>
+                    </ul>
+                </div>
+                
+                <div class="concern-card">
+                    <div class="concern-icon" aria-hidden="true">🔧</div>
+                    <h3 class="concern-title">Durability Questions</h3>
+                    <p>"How long will it last?"</p>
+                    <div class="concern-solution">Our Solution:</div>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✓ 10-year warranty</li>
+                        <li>✓ Premium materials only</li>
+                        <li>✓ Free yearly check-ups</li>
+                    </ul>
+                </div>
+                
+                <div class="concern-card">
+                    <div class="concern-icon" aria-hidden="true">🦷</div>
+                    <h3 class="concern-title">Tooth Preparation</h3>
+                    <p>"Will you damage my tooth?"</p>
+                    <div class="concern-solution">Our Solution:</div>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✓ Minimal tooth reduction</li>
+                        <li>✓ Preservation techniques</li>
+                        <li>✓ Microscope precision</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Material Comparison -->
+    <section id="materials" class="comparison-enhanced">
+        <div class="container">
+            <div class="section-header">
+                <h2>Crown & Bridge Material Comparison</h2>
+                <p>Find the perfect balance of aesthetics, strength, and value</p>
+            </div>
+            
+            <div class="comparison-interactive">
+                <div class="comparison-filters">
+                    <button class="filter-chip active" data-filter="all" aria-pressed="true">All Features</button>
+                    <button class="filter-chip" data-filter="aesthetics" aria-pressed="false">Aesthetics</button>
+                    <button class="filter-chip" data-filter="durability" aria-pressed="false">Durability</button>
+                    <button class="filter-chip" data-filter="cost" aria-pressed="false">Cost</button>
+                </div>
+                
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Feature</th>
+                                <th scope="col">Porcelain-Fused-Metal</th>
+                                <th scope="col">All-Ceramic/Porcelain</th>
+                                <th scope="col">Zirconia <span class="best-value">BEST VALUE</span></th>
+                                <th scope="col">Gold Alloy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="aesthetics">
+                                <td><strong>Natural Appearance</strong></td>
+                                <td><span class="rating-stars" aria-label="3 out of 5 stars">★★★☆☆</span></td>
+                                <td><span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span></td>
+                                <td><span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span></td>
+                                <td><span class="rating-stars" aria-label="1 out of 5 stars">★☆☆☆☆</span></td>
+                            </tr>
+                            <tr class="aesthetics">
+                                <td><strong>Color Matching</strong></td>
+                                <td>Good (metal may show)</td>
+                                <td>Excellent</td>
+                                <td>Excellent</td>
+                                <td>Not applicable</td>
+                            </tr>
+                            <tr class="durability">
+                                <td><strong>Strength Rating</strong></td>
+                                <td><span class="rating-stars" aria-label="4 out of 5 stars">★★★★☆</span></td>
+                                <td><span class="rating-stars" aria-label="3 out of 5 stars">★★★☆☆</span></td>
+                                <td><span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span></td>
+                                <td><span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span></td>
+                            </tr>
+                            <tr class="durability">
+                                <td><strong>Average Lifespan</strong></td>
+                                <td>10-15 years</td>
+                                <td>10-15 years</td>
+                                <td>20-30 years</td>
+                                <td>30+ years</td>
+                            </tr>
+                            <tr class="durability">
+                                <td><strong>Chip Resistance</strong></td>
+                                <td>Porcelain may chip</td>
+                                <td>Moderate</td>
+                                <td>Excellent</td>
+                                <td>No chipping</td>
+                            </tr>
+                            <tr class="cost">
+                                <td><strong>Price Range</strong></td>
+                                <td>$700-$1,200</td>
+                                <td>$800-$1,500</td>
+                                <td>$1,000-$2,000</td>
+                                <td>$1,200-$2,500</td>
+                            </tr>
+                            <tr class="cost">
+                                <td><strong>Insurance Coverage</strong></td>
+                                <td>Usually 50%</td>
+                                <td>Usually 50%</td>
+                                <td>Usually 50%</td>
+                                <td>Varies</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Same-Day Available</strong></td>
+                                <td>No</td>
+                                <td>Yes (CEREC)</td>
+                                <td>Yes (CEREC)</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best For</strong></td>
+                                <td>Back teeth, budget-conscious</td>
+                                <td>Front teeth, aesthetics priority</td>
+                                <td>Any tooth, best overall</td>
+                                <td>Heavy grinders, longevity</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Before/After Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real Patient Transformations</h2>
+                <p>See the life-changing results our patients have achieved</p>
+            </div>
+            
+            <div class="gallery-viewer">
+                <div class="gallery-main">
+                    <div class="gallery-slide active">
+                        <div class="before-after-container">
+                            <div class="before-section">
+                                <img src="https://via.placeholder.com/600x500/CCCCCC/666666?text=Before" alt="Before treatment showing damaged teeth" loading="lazy" width="600" height="500">
+                                <span class="image-label">BEFORE</span>
+                            </div>
+                            <div class="after-section">
+                                <img src="https://via.placeholder.com/600x500/0077BE/FFFFFF?text=After" alt="After treatment showing beautiful crowns" loading="lazy" width="600" height="500">
+                                <span class="image-label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="case-info">
+                            <h3>Full Smile Restoration</h3>
+                            <p>8 Zirconia crowns completed in just 2 visits. Patient regained confidence to smile freely.</p>
+                            <div style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                                <span><strong>Treatment time:</strong> 2 weeks</span>
+                                <span><strong>Material:</strong> Zirconia</span>
+                                <span><strong>Cost:</strong> $9,600 (financed at $160/mo)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-slide">
+                        <div class="before-after-container">
+                            <div class="before-section">
+                                <img src="https://via.placeholder.com/600x500/CCCCCC/666666?text=Damaged+Front+Teeth" alt="Before treatment showing damaged front teeth" loading="lazy" width="600" height="500">
+                                <span class="image-label">BEFORE</span>
+                            </div>
+                            <div class="after-section">
+                                <img src="https://via.placeholder.com/600x500/00A8A8/FFFFFF?text=Perfect+Restoration" alt="After treatment showing perfect restoration" loading="lazy" width="600" height="500">
+                                <span class="image-label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="case-info">
+                            <h3>Front Teeth Accident Recovery</h3>
+                            <p>4 all-ceramic crowns with same-day CEREC technology. Natural appearance restored.</p>
+                            <div style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                                <span><strong>Treatment time:</strong> Single visit</span>
+                                <span><strong>Material:</strong> E-max Ceramic</span>
+                                <span><strong>Cost:</strong> $4,800</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-slide">
+                        <div class="before-after-container">
+                            <div class="before-section">
+                                <img src="https://via.placeholder.com/600x500/CCCCCC/666666?text=Missing+Teeth" alt="Before treatment showing missing teeth" loading="lazy" width="600" height="500">
+                                <span class="image-label">BEFORE</span>
+                            </div>
+                            <div class="after-section">
+                                <img src="https://via.placeholder.com/600x500/28A745/FFFFFF?text=Bridge+Solution" alt="After treatment showing bridge solution" loading="lazy" width="600" height="500">
+                                <span class="image-label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="case-info">
+                            <h3>3-Unit Bridge Replacement</h3>
+                            <p>Replaced missing tooth with beautiful zirconia bridge. Full function restored.</p>
+                            <div style="display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                                <span><strong>Treatment time:</strong> 2 visits</span>
+                                <span><strong>Material:</strong> Zirconia</span>
+                                <span><strong>Cost:</strong> $3,600</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-thumbnails">
+                    <div class="thumbnail active" data-slide="0" role="button" tabindex="0" aria-label="View case 1">
+                        <img src="https://via.placeholder.com/150x100/0077BE/FFFFFF?text=Case+1" alt="Case 1 thumbnail" width="150" height="100">
+                    </div>
+                    <div class="thumbnail" data-slide="1" role="button" tabindex="0" aria-label="View case 2">
+                        <img src="https://via.placeholder.com/150x100/00A8A8/FFFFFF?text=Case+2" alt="Case 2 thumbnail" width="150" height="100">
+                    </div>
+                    <div class="thumbnail" data-slide="2" role="button" tabindex="0" aria-label="View case 3">
+                        <img src="https://via.placeholder.com/150x100/28A745/FFFFFF?text=Case+3" alt="Case 3 thumbnail" width="150" height="100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Guarantees Enhanced -->
+    <section class="guarantees-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--clean-white);">Our Rock-Solid Guarantees</h2>
+                <p style="color: var(--clean-white); opacity: 0.9;">We stand behind our work with industry-leading warranties</p>
+            </div>
+            
+            <div class="guarantees-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon" aria-hidden="true">🛡️</div>
+                    <h3 class="guarantee-title">Crown Warranty</h3>
+                    <div class="guarantee-years">10</div>
+                    <p>Years of coverage for defects or failure</p>
+                </div>
+                
+                <div class="guarantee-card">
+                    <div class="guarantee-icon" aria-hidden="true">✨</div>
+                    <h3 class="guarantee-title">Satisfaction Promise</h3>
+                    <div class="guarantee-years">100%</div>
+                    <p>Free adjustments until you're happy</p>
+                </div>
+                
+                <div class="guarantee-card">
+                    <div class="guarantee-icon" aria-hidden="true">🎯</div>
+                    <h3 class="guarantee-title">Success Rate</h3>
+                    <div class="guarantee-years">98%</div>
+                    <p>Of crowns last 15+ years</p>
+                </div>
+                
+                <div class="guarantee-card">
+                    <div class="guarantee-icon" aria-hidden="true">🔄</div>
+                    <h3 class="guarantee-title">Lifetime Option</h3>
+                    <div class="guarantee-years">∞</div>
+                    <p>Upgrade available for peace of mind</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section Enhanced -->
+    <section id="book" class="cta-section">
+        <div class="cta-content">
+            <h2>Transform Your Smile Today</h2>
+            <p>Don't let damaged teeth hold you back from living your best life</p>
+            
+            <div class="special-offer">
+                <h3>🎉 Limited Time Offer - This Week Only! 🎉</h3>
+                <ul style="list-style: none; font-size: 1.125rem; margin: 1rem 0;">
+                    <li>✓ FREE Consultation & 3D Scan ($299 value)</li>
+                    <li>✓ 20% OFF All Ceramic Crowns</li>
+                    <li>✓ 0% Financing for 24 Months</li>
+                    <li>✓ FREE Teeth Whitening with Treatment</li>
+                </ul>
+                <div class="offer-timer">
+                    <div>Offer expires in:</div>
+                    <div class="timer-unit"><span id="days">3</span>d</div>
+                    <div class="timer-unit"><span id="hours">14</span>h</div>
+                    <div class="timer-unit"><span id="minutes">27</span>m</div>
+                    <div class="timer-unit"><span id="seconds">45</span>s</div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="tel:5551234567" class="btn-primary" aria-label="Call SmileCare Dental">
+                    📞 Call Now: (555) 123-4567
+                </a>
+                <a href="#" class="btn-secondary" onclick="openScheduler()" aria-label="Schedule appointment online">
+                    Schedule Online
+                </a>
+            </div>
+            
+            <p style="margin-top: 1.5rem;">
+                <strong>Same-day appointments available!</strong><br>
+                Emergency? We'll see you today.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Enhanced -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Crown & Bridge Services</h4>
+                <ul>
+                    <li><a href="#" aria-label="Single crowns information">Single Crowns</a></li>
+                    <li><a href="#" aria-label="Dental bridges information">Dental Bridges</a></li>
+                    <li><a href="#" aria-label="CEREC same-day crowns">CEREC Same-Day</a></li>
+                    <li><a href="#" aria-label="Crown replacement services">Crown Replacement</a></li>
+                    <li><a href="#" aria-label="Emergency crowns">Emergency Crowns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Patient Resources</h4>
+                <ul>
+                    <li><a href="#" aria-label="Insurance coverage information">Insurance Coverage</a></li>
+                    <li><a href="#" aria-label="Financing options">Financing Options</a></li>
+                    <li><a href="#" aria-label="Before and after gallery">Before & After Gallery</a></li>
+                    <li><a href="#" aria-label="Patient reviews">Patient Reviews</a></li>
+                    <li><a href="#" aria-label="Frequently asked questions">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Why Choose Us</h4>
+                <ul>
+                    <li><a href="#" aria-label="CEREC technology information">CEREC Technology</a></li>
+                    <li><a href="#" aria-label="10-year warranty details">10-Year Warranty</a></li>
+                    <li><a href="#" aria-label="Same-day service">Same-Day Service</a></li>
+                    <li><a href="#" aria-label="Expert team information">Expert Team</a></li>
+                    <li><a href="#" aria-label="5-star reviews">5-Star Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact & Hours</h4>
+                <p>Emergency Line: <strong>(555) 123-4567</strong></p>
+                <p>Monday-Friday: 8am-6pm<br>
+                Saturday: 9am-4pm<br>
+                <span style="color: var(--success-green);">Same-day appointments available!</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
+                });
+            }
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                }
+            }
+        }
+
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="fillings">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain-Free Dental Fillings - Same Day Treatment | SmileCare Dental</title>
+    <meta name="description" content="Stop tooth pain instantly! Expert dental fillings with 98% pain-free experience. Same-day treatment, 0% financing, insurance accepted. Book today!">
+    <meta name="keywords" content="dental fillings, tooth pain relief, composite fillings, same day treatment, pain-free dentist">
+    <link rel="canonical" href="https://smilecare.dental/fillings">
+    <meta property="og:title" content="Pain-Free Dental Fillings - Same Day Treatment">
+    <meta property="og:description" content="Stop tooth pain instantly! 98% pain-free experience, same-day treatment available.">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: rgba(0, 168, 168, 0.1);
+            --warning-orange: #FF6B35;
+            --gradient-primary: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+        }
+        
+        /* Preload critical fonts */
+        @font-display: swap;
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            scroll-behavior: smooth;
+        }
+        
+        /* Screen reader only content */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Error messages */
+        .error-message {
+            color: var(--warning-orange);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-text {
+            color: #666;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        
+        /* Header Enhanced */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            will-change: transform;
+        }
+        
+        header.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-teal);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a:focus::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--trust-blue);
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--success-green);
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .cta-button:hover::before,
+        .cta-button:focus::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-button:hover {
+            background: #239a3b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        /* Hero Section Enhanced */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 8rem 5% 4rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .urgency-banner {
+            background: var(--warning-orange);
+            color: var(--clean-white);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .appointment-scarcity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .hero-stats > div {
+            text-align: center;
+        }
+        
+        .hero-stats strong {
+            font-size: 2rem;
+            display: block;
+        }
+        
+        /* Cost Calculator Enhanced */
+        .cost-calculator-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .calculator-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            min-height: 44px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+        }
+        
+        .insurance-toggle {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .toggle-switch.active {
+            background: var(--success-green);
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: var(--clean-white);
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+        
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(30px);
+        }
+        
+        .cost-result {
+            background: var(--light-teal);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .total-cost {
+            font-size: 3rem;
+            color: var(--trust-blue);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .savings-badge {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        /* Payment Plan Calculator */
+        .payment-calculator {
+            background: var(--light-teal);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .payment-option {
+            background: var(--clean-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .payment-option:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-5px);
+        }
+        
+        .payment-option.selected {
+            border-color: var(--trust-blue);
+            background: var(--trust-blue);
+            color: var(--clean-white);
+        }
+        
+        .monthly-payment {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            margin: 0.5rem 0;
+        }
+        
+        .payment-option.selected .monthly-payment {
+            color: var(--clean-white);
+        }
+        
+        /* 3D Visualization Enhanced */
+        .visualization-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .tooth-3d-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .tooth-model {
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+        }
+        
+        .tooth-model:active {
+            cursor: grabbing;
+        }
+        
+        .tooth-svg {
+            width: 200px;
+            height: 250px;
+            transform-style: preserve-3d;
+            animation: rotate3d 10s linear infinite;
+        }
+        
+        @keyframes rotate3d {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        
+        .procedure-steps-visual {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .step-card {
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .step-card:hover {
+            background: var(--light-teal);
+            transform: translateX(10px);
+        }
+        
+        .step-card.active {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            min-width: 40px;
+        }
+        
+        /* Pain Management Enhanced */
+        .pain-management-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .pain-scale-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .pain-scale {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .pain-level {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            border-radius: 10px;
+            border: 2px solid transparent;
+        }
+        
+        .pain-level:hover {
+            transform: scale(1.1);
+            border-color: var(--accent-teal);
+        }
+        
+        .pain-level:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+        }
+        
+        .pain-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pain-description {
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        
+        .pain-info-box {
+            background: var(--light-teal);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .pain-info-box.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        /* Material Comparison Enhanced */
+        .material-comparison {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .comparison-interactive {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .material-selector {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .material-option {
+            padding: 1rem 2rem;
+            background: var(--soft-gray);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .material-option:hover {
+            border-color: var(--accent-teal);
+        }
+        
+        .material-option.active,
+        .material-option[aria-pressed="true"] {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .material-details {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .material-details.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .detail-card {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .detail-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Gallery Enhanced */
+        .gallery-enhanced {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .gallery-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .gallery-filters {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--clean-white);
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--accent-teal);
+        }
+        
+        .filter-btn.active,
+        .filter-btn[aria-pressed="true"] {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border-color: var(--accent-teal);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .before-after-card {
+            background: var(--clean-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .before-after-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .before-after-slider {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            cursor: col-resize;
+        }
+        
+        .before-img, .after-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .after-img {
+            clip-path: inset(0 50% 0 0);
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-teal);
+            cursor: col-resize;
+            transform: translateX(-50%);
+        }
+        
+        .slider-handle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+        
+        .case-details {
+            padding: 1.5rem;
+        }
+        
+        .case-type {
+            color: var(--accent-teal);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        
+        /* Success Statistics Enhanced */
+        .success-stats {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-label {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        /* CTA Section Enhanced */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .appointment-slots {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        
+        .slots-remaining {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--warning-orange);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cta-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .cta-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            min-height: 44px;
+        }
+        
+        .cta-form button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            min-height: 44px;
+        }
+        
+        .cta-form button:hover {
+            background: #239a3b;
+            transform: translateY(-2px);
+        }
+        
+        /* Limited Time Offers Banner */
+        .offers-banner {
+            background: var(--warning-orange);
+            color: var(--clean-white);
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .offers-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            gap: 1rem;
+            font-weight: bold;
+        }
+        
+        .countdown-unit {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        /* Footer Enhanced */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--clean-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-teal);
+        }
+        
+        /* Mobile Responsiveness Enhanced */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .tooth-3d-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .material-selector {
+                flex-direction: column;
+            }
+            
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .offers-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-form {
+                flex-direction: column;
+            }
+            
+            .cta-form input {
+                min-width: 100%;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: var(--charcoal);
+            }
+            
+            .cta-button {
+                border: 3px solid var(--clean-white);
+            }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        /* Loading States */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: var(--clean-white);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">SmileCare Dental</div>
+            <ul class="nav-links">
+                <li><a href="#calculator">Cost Calculator</a></li>
+                <li><a href="#visualization">3D Demo</a></li>
+                <li><a href="#pain-scale">Pain Management</a></li>
+                <li><a href="#materials">Compare Materials</a></li>
+                <li><a href="#gallery">Real Results</a></li>
+                <li><a href="#book" class="cta-button">Book Same-Day Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section Enhanced -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <div class="urgency-banner">
+                    <div class="appointment-scarcity">
+                        ⚡ Limited Appointments Available This Week - Only 3 Slots Left!
+                    </div>
+                </div>
+                <h1>Stop Tooth Pain Today - Get Instant Relief in One Visit</h1>
+                <p>Advanced pain-free fillings that look natural, last 15+ years, and restore your smile in just one comfortable visit</p>
+                <div class="hero-stats">
+                    <div>
+                        <strong>98%</strong>
+                        <div>Pain-Free Experience</div>
+                    </div>
+                    <div>
+                        <strong>45min</strong>
+                        <div>Average Treatment Time</div>
+                    </div>
+                    <div>
+                        <strong>$89</strong>
+                        <div>Starting Price (Basic Filling)</div>
+                    </div>
+                </div>
+                <a href="#book" class="cta-button" style="font-size: 1.25rem; padding: 1rem 2rem;">
+                    Get Instant Pain Relief Today →
+                </a>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="https://via.placeholder.com/600x400/0077BE/FFFFFF?text=Pain-Free+Technology" alt="Advanced pain-free dental filling technology with digital precision" loading="eager" width="600" height="400">
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cost Calculator Enhanced -->
+    <section id="calculator" class="cost-calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Calculate Your Exact Filling Cost - No Surprises</h2>
+                <p>Instant transparent pricing with insurance benefits and 0% financing options</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h3>Personalized Cost Estimator</h3>
+                    <p>See your out-of-pocket cost in seconds</p>
+                </div>
+                
+                <form class="calculator-form" id="costCalculator">
+                    <div class="form-group">
+                        <label for="fillingsNumber">Number of Fillings Needed</label>
+                        <select id="fillingsNumber" aria-describedby="fillingsNumberHelp">
+                            <option value="" disabled selected>Select number of fillings</option>
+                            <option value="1">1 Filling</option>
+                            <option value="2">2 Fillings</option>
+                            <option value="3">3 Fillings</option>
+                            <option value="4">4+ Fillings</option>
+                        </select>
+                        <small id="fillingsNumberHelp" class="form-text">Not sure? We'll assess during your free consultation</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="surfaceType">Cavity Size/Surfaces</label>
+                        <select id="surfaceType" aria-describedby="surfaceTypeHelp">
+                            <option value="" disabled selected>Select cavity size</option>
+                            <option value="single">Single Surface (Small)</option>
+                            <option value="double">Two Surfaces (Medium)</option>
+                            <option value="triple">Three+ Surfaces (Large)</option>
+                        </select>
+                        <small id="surfaceTypeHelp" class="form-text">Larger cavities affect more tooth surfaces</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="materialType">Preferred Filling Material</label>
+                        <select id="materialType" aria-describedby="materialTypeHelp">
+                            <option value="" disabled selected>Select filling material</option>
+                            <option value="composite">Composite (Tooth-Colored)</option>
+                            <option value="amalgam">Amalgam (Silver)</option>
+                            <option value="ceramic">Ceramic (Premium)</option>
+                        </select>
+                        <small id="materialTypeHelp" class="form-text">We'll help you choose the best option for your needs</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Do you have dental insurance?</label>
+                        <div class="insurance-toggle">
+                            <span>No</span>
+                            <div class="toggle-switch" id="insuranceToggle" role="switch" aria-checked="false" tabindex="0">
+                                <div class="toggle-slider"></div>
+                            </div>
+                            <span>Yes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="insuranceDetails" style="display: none;">
+                        <label for="insuranceCoverage">Insurance Coverage Percentage</label>
+                        <select id="insuranceCoverage">
+                            <option value="50">50% Coverage</option>
+                            <option value="70">70% Coverage</option>
+                            <option value="80">80% Coverage</option>
+                            <option value="90">90% Coverage</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <div class="cost-result">
+                    <div>Your Estimated Cost:</div>
+                    <div class="total-cost" id="totalCost" role="status" aria-live="polite">$250</div>
+                    <div class="savings-badge">You Save $150 with Insurance!</div>
+                    
+                    <div class="payment-calculator">
+                        <h4>Monthly Payment Options</h4>
+                        <div class="payment-options">
+                            <div class="payment-option selected">
+                                <div>6 Months</div>
+                                <div class="monthly-payment">$42</div>
+                                <div style="font-size: 0.875rem;">0% Interest</div>
+                            </div>
+                            <div class="payment-option">
+                                <div>12 Months</div>
+                                <div class="monthly-payment">$21</div>
+                                <div style="font-size: 0.875rem;">0% Interest</div>
+                            </div>
+                            <div class="payment-option">
+                                <div>18 Months</div>
+                                <div class="monthly-payment">$14</div>
+                                <div style="font-size: 0.875rem;">0% Interest</div>
+                            </div>
+                            <div class="payment-option">
+                                <div>24 Months</div>
+                                <div class="monthly-payment">$12</div>
+                                <div style="font-size: 0.875rem;">5.9% APR</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button" style="margin-top: 1.5rem; width: 100%;" aria-label="Schedule appointment to lock in calculated price">
+                        Lock In This Price - Book Same-Day Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Tooth Visualization Enhanced -->
+    <section id="visualization" class="visualization-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Watch Your Pain-Free Filling Procedure</h2>
+                <p>Interactive 3D visualization shows exactly what happens during treatment</p>
+            </div>
+            
+            <div class="tooth-3d-container">
+                <div class="tooth-model">
+                    <svg class="tooth-svg" viewBox="0 0 200 250" role="img" aria-label="3D tooth model showing filling procedure">
+                        <!-- Simplified tooth shape -->
+                        <defs>
+                            <linearGradient id="toothGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f8f8f8;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="cavityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="fillingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FAFAFA;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Tooth body -->
+                        <path d="M100 20 C130 20 160 50 160 100 L160 180 C160 210 140 230 100 230 C60 230 40 210 40 180 L40 100 C40 50 70 20 100 20" 
+                              fill="url(#toothGradient)" stroke="#ccc" stroke-width="2"/>
+                        
+                        <!-- Crown -->
+                        <ellipse cx="100" cy="60" rx="50" ry="40" fill="url(#toothGradient)" stroke="#ccc" stroke-width="1"/>
+                        
+                        <!-- Cavity (will be animated) -->
+                        <circle id="cavity" cx="100" cy="60" r="20" fill="url(#cavityGradient)" opacity="0.8"/>
+                        
+                        <!-- Filling (initially hidden) -->
+                        <circle id="filling" cx="100" cy="60" r="20" fill="url(#fillingGradient)" opacity="0" stroke="#00A8A8" stroke-width="1"/>
+                    </svg>
+                    <div style="margin-top: 2rem; font-size: 0.875rem; opacity: 0.8;">
+                        Click on steps to see the procedure
+                    </div>
+                </div>
+                
+                <div class="procedure-steps-visual">
+                    <div class="step-card active" data-step="1" role="button" tabindex="0" aria-label="Step 1: Pain-free examination">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4>Pain-Free Examination</h4>
+                            <p>Advanced digital imaging locates cavities without discomfort</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="2" role="button" tabindex="0" aria-label="Step 2: Gentle numbing process">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h4>Gentle Numbing Process</h4>
+                            <p>Topical gel eliminates injection pain, then precise numbing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="3" role="button" tabindex="0" aria-label="Step 3: Precise decay removal">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4>Precise Decay Removal</h4>
+                            <p>Advanced laser technology removes decay while preserving healthy tooth</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="4" role="button" tabindex="0" aria-label="Step 4: Filling placement">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h4>Filling Placement</h4>
+                            <p>Layer-by-layer application of filling material</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card" data-step="5" role="button" tabindex="0" aria-label="Step 5: Shaping and polishing">
+                        <div class="step-number">5</div>
+                        <div>
+                            <h4>Shaping & Polishing</h4>
+                            <p>Perfect bite adjustment and smooth finish</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Scale Interactive Enhanced -->
+    <section id="pain-scale" class="pain-management-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zero Pain Guarantee - Your Comfort Is Our Promise</h2>
+                <p>Advanced pain management techniques ensure a completely comfortable experience</p>
+            </div>
+            
+            <div class="pain-scale-container">
+                <h3>Tell Us Your Comfort Preference</h3>
+                <div class="pain-scale">
+                    <div class="pain-level" data-level="1" role="button" tabindex="0" aria-label="Select no worries comfort level">
+                        <span class="pain-emoji" aria-hidden="true">😊</span>
+                        <strong>No Worries</strong>
+                        <div class="pain-description">Comfortable with dental visits</div>
+                    </div>
+                    <div class="pain-level" data-level="2" role="button" tabindex="0" aria-label="Select slight concern comfort level">
+                        <span class="pain-emoji" aria-hidden="true">😐</span>
+                        <strong>Slight Concern</strong>
+                        <div class="pain-description">A little nervous</div>
+                    </div>
+                    <div class="pain-level" data-level="3" role="button" tabindex="0" aria-label="Select moderate anxiety comfort level">
+                        <span class="pain-emoji" aria-hidden="true">😟</span>
+                        <strong>Moderate Anxiety</strong>
+                        <div class="pain-description">Pretty nervous</div>
+                    </div>
+                    <div class="pain-level" data-level="4" role="button" tabindex="0" aria-label="Select high anxiety comfort level">
+                        <span class="pain-emoji" aria-hidden="true">😰</span>
+                        <strong>High Anxiety</strong>
+                        <div class="pain-description">Very anxious</div>
+                    </div>
+                </div>
+                
+                <div class="pain-info-box" id="painInfo1" role="region" aria-live="polite">
+                    <h4>Perfect! We'll Make It Even Easier</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✓ Topical anesthetic gel before injection</li>
+                        <li>✓ Ultra-thin needles for minimal sensation</li>
+                        <li>✓ Relaxing music and aromatherapy available</li>
+                    </ul>
+                </div>
+                
+                <div class="pain-info-box" id="painInfo2" role="region" aria-live="polite">
+                    <h4>We'll Take Extra Care</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✓ Extended numbing time for complete comfort</li>
+                        <li>✓ Breaks whenever you need them</li>
+                        <li>✓ Hand signals to pause treatment</li>
+                        <li>✓ Noise-canceling headphones available</li>
+                    </ul>
+                </div>
+                
+                <div class="pain-info-box" id="painInfo3" role="region" aria-live="polite">
+                    <h4>Anxiety-Reducing Options</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✓ Nitrous oxide (laughing gas) available</li>
+                        <li>✓ Pre-appointment anti-anxiety medication</li>
+                        <li>✓ Dedicated comfort coordinator</li>
+                        <li>✓ Virtual reality distraction goggles</li>
+                    </ul>
+                </div>
+                
+                <div class="pain-info-box" id="painInfo4" role="region" aria-live="polite">
+                    <h4>Complete Sedation Options</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✓ Oral conscious sedation</li>
+                        <li>✓ IV sedation with monitoring</li>
+                        <li>✓ Sleep through your entire procedure</li>
+                        <li>✓ Wake up with treatment complete</li>
+                    </ul>
+                    <button class="cta-button" style="margin-top: 1rem;">
+                        Discuss Sedation Options →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Comparison Interactive Enhanced -->
+    <section id="materials" class="material-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Perfect Filling Material</h2>
+                <p>Compare options to find the ideal balance of aesthetics, durability, and value</p>
+            </div>
+            
+            <div class="comparison-interactive">
+                <div class="material-selector" role="tablist">
+                    <button class="material-option active" data-material="composite" role="tab" aria-pressed="true" aria-controls="compositeDetails">
+                        Composite (Tooth-Colored)
+                    </button>
+                    <button class="material-option" data-material="amalgam" role="tab" aria-pressed="false" aria-controls="amalgamDetails">
+                        Amalgam (Silver)
+                    </button>
+                    <button class="material-option" data-material="ceramic" role="tab" aria-pressed="false" aria-controls="ceramicDetails">
+                        Ceramic (Premium)
+                    </button>
+                </div>
+                
+                <div class="material-details active" id="compositeDetails" role="tabpanel" aria-labelledby="composite">
+                    <div class="detail-card">
+                        <div class="detail-icon">🎨</div>
+                        <h4>Appearance</h4>
+                        <div style="color: #FFD700;">★★★★★</div>
+                        <p>Perfectly matches your natural tooth color</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💪</div>
+                        <h4>Durability</h4>
+                        <div style="color: #FFD700;">★★★★☆</div>
+                        <p>7-10 years average lifespan</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💰</div>
+                        <h4>Cost</h4>
+                        <div style="font-size: 1.5rem; color: var(--trust-blue); font-weight: bold;">$150-300</div>
+                        <p>Mid-range pricing</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">⏱️</div>
+                        <h4>Procedure Time</h4>
+                        <div style="font-size: 1.5rem; color: var(--success-green); font-weight: bold;">30-60 min</div>
+                        <p>Single visit completion</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">🦷</div>
+                        <h4>Tooth Preservation</h4>
+                        <div style="color: #FFD700;">★★★★★</div>
+                        <p>Minimal drilling required</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">✨</div>
+                        <h4>Best For</h4>
+                        <p style="font-weight: bold;">Visible teeth, small to medium cavities</p>
+                    </div>
+                </div>
+                
+                <div class="material-details" id="amalgamDetails" role="tabpanel" aria-labelledby="amalgam">
+                    <div class="detail-card">
+                        <div class="detail-icon">🎨</div>
+                        <h4>Appearance</h4>
+                        <div style="color: #FFD700;">★★☆☆☆</div>
+                        <p>Silver/metallic color visible</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💪</div>
+                        <h4>Durability</h4>
+                        <div style="color: #FFD700;">★★★★★</div>
+                        <p>15-20 years average lifespan</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💰</div>
+                        <h4>Cost</h4>
+                        <div style="font-size: 1.5rem; color: var(--trust-blue); font-weight: bold;">$100-200</div>
+                        <p>Most affordable option</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">⏱️</div>
+                        <h4>Procedure Time</h4>
+                        <div style="font-size: 1.5rem; color: var(--success-green); font-weight: bold;">20-40 min</div>
+                        <p>Fastest placement</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">🦷</div>
+                        <h4>Tooth Preservation</h4>
+                        <div style="color: #FFD700;">★★★☆☆</div>
+                        <p>More tooth removal needed</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">✨</div>
+                        <h4>Best For</h4>
+                        <p style="font-weight: bold;">Back teeth, large cavities, budget-conscious</p>
+                    </div>
+                </div>
+                
+                <div class="material-details" id="ceramicDetails" role="tabpanel" aria-labelledby="ceramic">
+                    <div class="detail-card">
+                        <div class="detail-icon">🎨</div>
+                        <h4>Appearance</h4>
+                        <div style="color: #FFD700;">★★★★★</div>
+                        <p>Superior aesthetics, stain-resistant</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💪</div>
+                        <h4>Durability</h4>
+                        <div style="color: #FFD700;">★★★★★</div>
+                        <p>20+ years with proper care</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">💰</div>
+                        <h4>Cost</h4>
+                        <div style="font-size: 1.5rem; color: var(--trust-blue); font-weight: bold;">$400-600</div>
+                        <p>Premium investment</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">⏱️</div>
+                        <h4>Procedure Time</h4>
+                        <div style="font-size: 1.5rem; color: var(--warning-orange); font-weight: bold;">60-90 min</div>
+                        <p>May require 2 visits</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">🦷</div>
+                        <h4>Tooth Preservation</h4>
+                        <div style="color: #FFD700;">★★★★☆</div>
+                        <p>Conservative preparation</p>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">✨</div>
+                        <h4>Best For</h4>
+                        <p style="font-weight: bold;">Front teeth, patients wanting the best</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Before/After Gallery -->
+    <section id="gallery" class="gallery-enhanced">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real Patient Success Stories</h2>
+                <p>See dramatic before and after results from actual SmileCare patients</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-pressed="true">All Cases</button>
+                    <button class="filter-btn" data-filter="composite" role="tab" aria-pressed="false">Composite</button>
+                    <button class="filter-btn" data-filter="ceramic" role="tab" aria-pressed="false">Ceramic</button>
+                    <button class="filter-btn" data-filter="multiple" role="tab" aria-pressed="false">Multiple Fillings</button>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="before-after-card" data-category="composite">
+                        <div class="before-after-slider">
+                            <img src="https://via.placeholder.com/400x300/CCCCCC/666666?text=Before" alt="Before treatment showing damaged tooth" class="before-img" loading="lazy" width="400" height="300">
+                            <img src="https://via.placeholder.com/400x300/0077BE/FFFFFF?text=After" alt="After treatment showing beautiful restored tooth" class="after-img" loading="lazy" width="400" height="300">
+                            <div class="slider-handle" role="slider" aria-label="Compare before and after images" tabindex="0"></div>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-type">Front Tooth Composite</div>
+                            <h4>Chipped Tooth Repair</h4>
+                            <p>Single visit restoration with perfect color match</p>
+                            <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                                <span><strong>Time:</strong> 45 minutes</span>
+                                <span><strong>Cost:</strong> $250</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="before-after-card" data-category="ceramic">
+                        <div class="before-after-slider">
+                            <img src="https://via.placeholder.com/400x300/CCCCCC/666666?text=Large+Cavity" alt="Before treatment showing large cavity" class="before-img" loading="lazy" width="400" height="300">
+                            <img src="https://via.placeholder.com/400x300/00A8A8/FFFFFF?text=Ceramic+Restoration" alt="After treatment showing ceramic restoration" class="after-img" loading="lazy" width="400" height="300">
+                            <div class="slider-handle" role="slider" aria-label="Compare before and after images" tabindex="0"></div>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-type">Premium Ceramic Inlay</div>
+                            <h4>Molar Restoration</h4>
+                            <p>Lab-created ceramic for maximum durability</p>
+                            <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                                <span><strong>Time:</strong> 2 visits</span>
+                                <span><strong>Cost:</strong> $550</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="before-after-card" data-category="multiple">
+                        <div class="before-after-slider">
+                            <img src="https://via.placeholder.com/400x300/CCCCCC/666666?text=Multiple+Cavities" alt="Before treatment showing multiple cavities" class="before-img" loading="lazy" width="400" height="300">
+                            <img src="https://via.placeholder.com/400x300/28A745/FFFFFF?text=Complete+Restoration" alt="After treatment showing complete restoration" class="after-img" loading="lazy" width="400" height="300">
+                            <div class="slider-handle" role="slider" aria-label="Compare before and after images" tabindex="0"></div>
+                        </div>
+                        <div class="case-details">
+                            <div class="case-type">Full Quadrant Restoration</div>
+                            <h4>4 Teeth Restored</h4>
+                            <p>Complete treatment in single appointment</p>
+                            <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                                <span><strong>Time:</strong> 2 hours</span>
+                                <span><strong>Cost:</strong> $850</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Rate Statistics Enhanced -->
+    <section class="success-stats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why 10,000+ Patients Trust SmileCare</h2>
+                <p>Award-winning results that speak for themselves</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Pain-Free Experience Rate</div>
+                </div>
+                <div class="stat-card" style="background: var(--accent-teal);">
+                    <div class="stat-number">15min</div>
+                    <div class="stat-label">Average Wait Time</div>
+                </div>
+                <div class="stat-card" style="background: var(--success-green);">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Google Reviews Rating</div>
+                </div>
+                <div class="stat-card" style="background: var(--trust-blue);">
+                    <div class="stat-number">$0</div>
+                    <div class="stat-label">Emergency Exam Fee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section Enhanced -->
+    <section id="book" class="cta-section">
+        <div class="cta-content">
+            <h2>Stop Tooth Pain Before It Gets Worse</h2>
+            <p>Don't wait - tooth pain only gets worse and more expensive. Act today and save thousands!</p>
+            
+            <div class="appointment-slots">
+                <p>⚠️ Limited Availability Warning ⚠️</p>
+                <div class="slots-remaining">Only 3 appointments left this week!</div>
+                <p style="font-size: 0.875rem; margin-top: 0.5rem;">Next available: Tomorrow at 2:30 PM</p>
+            </div>
+            
+            <form class="cta-form" onsubmit="handleFormSubmit(event)" novalidate>
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" placeholder="Enter your email for instant appointment" required aria-describedby="email-error">
+                <div id="email-error" class="error-message" aria-live="polite"></div>
+                <button type="submit" aria-describedby="submit-help">
+                    Reserve My Emergency Spot <span class="loading" style="display: none;" aria-hidden="true"></span>
+                </button>
+                <small id="submit-help">Click to secure your same-day appointment</small>
+            </form>
+            
+            <p style="margin-top: 1rem; font-size: 1.1rem;">
+                Or call now: <strong style="font-size: 1.5rem;">(555) 123-4567</strong>
+            </p>
+            
+            <div style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <div>✓ Same-day appointments</div>
+                <div>✓ Insurance accepted</div>
+                <div>✓ Payment plans available</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited Time Offers Banner -->
+    <div class="offers-banner">
+        <div class="offers-content">
+            <div>
+                <strong>🎉 NEW PATIENT SPECIAL:</strong> $99 Exam, X-Ray & First Filling (Reg. $350)
+            </div>
+            <div class="countdown-timer">
+                <div>Offer ends in:</div>
+                <div class="countdown-unit"><span id="days">2</span>d</div>
+                <div class="countdown-unit"><span id="hours">14</span>h</div>
+                <div class="countdown-unit"><span id="minutes">32</span>m</div>
+                <div class="countdown-unit"><span id="seconds">15</span>s</div>
+            </div>
+            <a href="#book" class="cta-button" style="background: var(--clean-white); color: var(--warning-orange);">
+                Claim Offer
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Enhanced -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" aria-label="Emergency dental care information">Emergency Care</a>
+                <a href="#" aria-label="Insurance and financing options">Insurance & Financing</a>
+                <a href="#" aria-label="Read patient reviews">Patient Reviews</a>
+                <a href="#" aria-label="Learn about our technology">Our Technology</a>
+                <a href="#" aria-label="Contact us">Contact Us</a>
+            </div>
+            <p>&copy; 2024 SmileCare Dental. All rights reserved. | Emergency line available 24/7: (555) 123-4567</p>
+        </div>
+    </footer>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
+                });
+            }
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                }
+            }
+        }
+
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

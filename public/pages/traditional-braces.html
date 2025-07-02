@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="traditional-braces">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional Braces - Affordable & Effective Orthodontic Treatment | SmileCare Dental</title>
+    <meta name="description" content="Get a perfect smile with traditional metal braces. Proven effective for all ages with flexible payment plans starting at $89/month. Free consultation available.">
+    <meta name="keywords" content="traditional braces, metal braces, orthodontic treatment, teeth straightening, braces cost, affordable braces">
+    <link rel="canonical" href="https://smilecare.dental/services/traditional-braces">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --primary-blue: #0066CC;
+            --secondary-teal: #00A0A0;
+            --accent-orange: #FF6B35;
+            --success-green: #22C55E;
+            --error-red: #EF4444;
+            --warning-yellow: #F59E0B;
+            --neutral-gray: #6B7280;
+            --light-gray: #F3F4F6;
+            --dark-gray: #1F2937;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066CC 0%, #00A0A0 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        /* Button Styles with States */
+        .btn {
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: var(--accent-orange);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: #E55A2B;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn.loading {
+            color: transparent;
+        }
+        
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Features Grid */
+        .features {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+        
+        /* Bracket Type Selector */
+        .bracket-selector {
+            padding: 4rem 0;
+        }
+        
+        .bracket-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .bracket-option {
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+        
+        .bracket-option:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .bracket-option.selected {
+            border-color: var(--primary-blue);
+            background: rgba(0, 102, 204, 0.05);
+        }
+        
+        .bracket-option h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .bracket-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--success-green);
+        }
+        
+        /* Cost Calculator */
+        .cost-calculator {
+            background: var(--light-gray);
+            padding: 4rem 0;
+        }
+        
+        .calculator-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .form-group input.error {
+            border-color: var(--error-red);
+            background-color: rgba(239, 68, 68, 0.05);
+        }
+        
+        .error-message {
+            color: var(--error-red);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.has-error .error-message {
+            display: block;
+        }
+        
+        /* Timeline Tool */
+        .timeline {
+            padding: 4rem 0;
+        }
+        
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        
+        .timeline-marker {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .timeline-marker::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 60px;
+            background: var(--light-gray);
+        }
+        
+        .timeline-item:last-child .timeline-marker::after {
+            display: none;
+        }
+        
+        .timeline-content {
+            margin-left: 2rem;
+            flex: 1;
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Appointment Form */
+        .appointment-section {
+            padding: 4rem 0;
+            background: linear-gradient(to bottom, var(--white), var(--light-gray));
+        }
+        
+        .appointment-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto 0;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            color: var(--white);
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .notification[data-type="success"] {
+            background: var(--success-green);
+        }
+        
+        .notification[data-type="error"] {
+            background: var(--error-red);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        /* Floating Free Consultation Button */
+        .floating-consultation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+            z-index: 100;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .floating-consultation:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .floating-consultation {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.875rem 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid var(--primary-blue);
+            outline-offset: 2px;
+        }
+        
+        /* Loading spinner for buttons */
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav class="container">
+            <a href="homepage.html" class="logo">SmileCare Dental</a>
+            <div class="nav-links">
+                <a href="/services">Services</a>
+                <a href="/about">About</a>
+                <a href="/insurance">Insurance</a>
+                <a href="/contact">Contact</a>
+                <a href="tel:5551234567" class="btn btn-primary">Call Now</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Traditional Braces for a Perfect Smile</h1>
+                <p class="hero-subtitle">Proven effective orthodontic treatment with flexible payment plans starting at $89/month</p>
+                <div class="hero-cta">
+                    <a href="#appointment" class="btn btn-primary" data-action="schedule-consultation">
+                        <span>Get Free Consultation</span>
+                    </a>
+                    <a href="#calculator" class="btn btn-secondary" data-action="calculate-cost">
+                        <span>Calculate Your Cost</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Why Choose Traditional Braces?</h2>
+                <p style="text-align: center; color: var(--neutral-gray); max-width: 600px; margin: 0 auto;">
+                    Time-tested orthodontic solution with predictable results for all types of dental corrections
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💪</div>
+                        <h3>Most Effective</h3>
+                        <p>Capable of fixing even the most complex orthodontic issues with precision</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Affordable Options</h3>
+                        <p>Flexible payment plans and insurance coverage make treatment accessible</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3>Faster Results</h3>
+                        <p>Average treatment time of 18-24 months with visible improvements in weeks</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Customizable Colors</h3>
+                        <p>Express yourself with colorful bands - perfect for kids and teens</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍⚕️</div>
+                        <h3>Expert Care</h3>
+                        <p>Board-certified orthodontists with 20+ years of experience</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Precise Control</h3>
+                        <p>Exact tooth movement control for optimal results</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bracket Type Selector -->
+        <section class="bracket-selector">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Choose Your Bracket Type</h2>
+                <p style="text-align: center; color: var(--neutral-gray); max-width: 600px; margin: 0 auto;">
+                    Select the option that best fits your lifestyle and budget
+                </p>
+                
+                <div class="bracket-options">
+                    <div class="bracket-option" data-type="metal" role="button" tabindex="0" aria-pressed="false">
+                        <h3>Traditional Metal</h3>
+                        <p class="bracket-price">From $3,000</p>
+                        <p>Most affordable and durable option. Perfect for all ages.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Strongest material</li>
+                            <li>Shortest treatment time</li>
+                            <li>Colorful band options</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bracket-option" data-type="ceramic" role="button" tabindex="0" aria-pressed="false">
+                        <h3>Ceramic Brackets</h3>
+                        <p class="bracket-price">From $3,500</p>
+                        <p>Less visible option with tooth-colored brackets.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Blends with teeth</li>
+                            <li>Stain-resistant</li>
+                            <li>Professional appearance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bracket-option" data-type="self-ligating" role="button" tabindex="0" aria-pressed="false">
+                        <h3>Self-Ligating</h3>
+                        <p class="bracket-price">From $4,000</p>
+                        <p>Advanced brackets with built-in clips for faster treatment.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Fewer appointments</li>
+                            <li>Less discomfort</li>
+                            <li>Easier to clean</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-primary" data-action="get-virtual-assessment">
+                        Get Virtual Assessment
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cost Calculator -->
+        <section id="calculator" class="cost-calculator">
+            <div class="container">
+                <h2 style="text-align: center;">Calculate Your Monthly Payment</h2>
+                <p style="text-align: center; color: var(--neutral-gray); margin-bottom: 2rem;">
+                    Get an instant estimate with our payment calculator
+                </p>
+                
+                <form class="calculator-form" id="cost-calculator-form">
+                    <div class="form-group">
+                        <label for="bracket-type">Bracket Type</label>
+                        <select id="bracket-type" name="bracket-type" required>
+                            <option value="">Select bracket type</option>
+                            <option value="metal">Traditional Metal - $3,000</option>
+                            <option value="ceramic">Ceramic - $3,500</option>
+                            <option value="self-ligating">Self-Ligating - $4,000</option>
+                        </select>
+                        <span class="error-message">Please select a bracket type</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="treatment-length">Estimated Treatment Length</label>
+                        <select id="treatment-length" name="treatment-length" required>
+                            <option value="">Select duration</option>
+                            <option value="12">12 months</option>
+                            <option value="18">18 months</option>
+                            <option value="24">24 months</option>
+                            <option value="30">30 months</option>
+                        </select>
+                        <span class="error-message">Please select treatment length</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="down-payment">Down Payment</label>
+                        <input type="number" id="down-payment" name="down-payment" placeholder="Enter amount (optional)" min="0" max="5000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="insurance-coverage">Insurance Coverage</label>
+                        <input type="number" id="insurance-coverage" name="insurance-coverage" placeholder="Enter amount (optional)" min="0" max="3000">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Calculate Monthly Payment
+                    </button>
+                    
+                    <div id="calculation-result" style="margin-top: 2rem; padding: 1.5rem; background: var(--light-gray); border-radius: 8px; display: none;">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Your Estimated Monthly Payment</h3>
+                        <p style="font-size: 2rem; font-weight: 700; color: var(--success-green);">$<span id="monthly-payment">89</span>/month</p>
+                        <p style="color: var(--neutral-gray); margin-top: 0.5rem;">Based on your selections</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Timeline Section -->
+        <section class="timeline">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Your Treatment Journey</h2>
+                <p style="text-align: center; color: var(--neutral-gray); max-width: 600px; margin: 0 auto 3rem;">
+                    What to expect during your orthodontic treatment
+                </p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Free Consultation</h3>
+                            <p>Meet your orthodontist, get X-rays, and discuss your treatment plan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Braces Application</h3>
+                            <p>Painless 60-90 minute appointment to place your braces</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Regular Adjustments</h3>
+                            <p>Monthly visits for adjustments and progress monitoring</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>Braces Removal</h3>
+                            <p>Celebrate your new smile! Receive your custom retainer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Appointment Form -->
+        <section id="appointment" class="appointment-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Schedule Your Free Consultation</h2>
+                <p style="text-align: center; color: var(--neutral-gray); max-width: 600px; margin: 0 auto;">
+                    Take the first step towards your perfect smile. No obligation, no pressure.
+                </p>
+                
+                <form class="appointment-form" data-appointment>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                            <span class="error-message">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                            <span class="error-message">Please enter a valid email</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567">
+                            <span class="error-message">Please enter a valid phone number</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">Age of Patient</label>
+                            <select id="age" name="age">
+                                <option value="">Select age range</option>
+                                <option value="child">Child (6-12)</option>
+                                <option value="teen">Teen (13-17)</option>
+                                <option value="adult">Adult (18+)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferred-date">Preferred Date *</label>
+                            <input type="date" id="preferred-date" name="preferred-date" required aria-required="true">
+                            <span class="error-message">Please select a date</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-time">Preferred Time *</label>
+                            <select id="preferred-time" name="preferred-time" required aria-required="true">
+                                <option value="">Select time</option>
+                                <option value="morning">Morning (8AM - 12PM)</option>
+                                <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                <option value="evening">Evening (5PM - 7PM)</option>
+                            </select>
+                            <span class="error-message">Please select a time</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service-interest">Service Interest</label>
+                        <input type="hidden" id="service-interest" name="service-interest" value="Traditional Braces">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Tell us about your orthodontic goals or concerns"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
+                        Book Free Consultation
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; color: var(--neutral-gray); font-size: 0.875rem;">
+                        By submitting this form, you agree to receive SMS and email communications. Message and data rates may apply.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating Consultation Button -->
+    <a href="#appointment" class="floating-consultation" aria-label="Schedule free consultation">
+        <span>Free Consultation</span>
+        <span style="font-size: 1.25rem;">→</span>
+    </a>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Enhanced Production JavaScript -->
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'https://api.smilecare.dental';
+        const API_ENDPOINTS = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            calculateCost: '/api/cost-calculator',
+            virtualAssessment: '/api/virtual-assessment'
+        };
+        
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // GA4 Event Tracking
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    event_category: 'engagement',
+                    event_label: 'traditional_braces_page',
+                    ...parameters
+                });
+            }
+        }
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.setAttribute('aria-busy', 'true');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.setAttribute('aria-busy', 'false');
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            const icon = type === 'success' ? '✓' : '✕';
+            notification.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
+        // Form Validation
+        function validateForm(form) {
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    formGroup.classList.add('has-error');
+                    field.classList.add('error');
+                } else {
+                    formGroup.classList.remove('has-error');
+                    field.classList.remove('error');
+                }
+                
+                // Email validation
+                if (field.type === 'email' && field.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                }
+                
+                // Phone validation
+                if (field.type === 'tel' && field.value) {
+                    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+                    if (!phoneRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                }
+            });
+            
+            return isValid;
+        }
+        
+        // Bracket Type Selector
+        function initializeBracketSelector() {
+            const bracketOptions = document.querySelectorAll('.bracket-option');
+            
+            bracketOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected from all
+                    bracketOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                        opt.setAttribute('aria-pressed', 'false');
+                    });
+                    
+                    // Add selected to clicked
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    
+                    // Track selection
+                    trackEvent('bracket_type_selected', {
+                        bracket_type: this.dataset.type,
+                        price: this.querySelector('.bracket-price').textContent
+                    });
+                });
+                
+                // Keyboard support
+                option.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+        
+        // Cost Calculator
+        async function handleCostCalculation(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            if (!validateForm(form)) {
+                showNotification('Please fill in all required fields', 'error');
+                trackEvent('cost_calculator_validation_error');
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            
+            LoadingStateManager.setLoading(button, true, 'Calculating...');
+            
+            // Track calculation attempt
+            trackEvent('cost_calculator_submit', {
+                bracket_type: formData.get('bracket-type'),
+                treatment_length: formData.get('treatment-length'),
+                has_down_payment: !!formData.get('down-payment'),
+                has_insurance: !!formData.get('insurance-coverage')
+            });
+            
+            try {
+                // Calculate locally for demo (in production, this would be an API call)
+                const prices = {
+                    'metal': 3000,
+                    'ceramic': 3500,
+                    'self-ligating': 4000
+                };
+                
+                const basePrice = prices[formData.get('bracket-type')] || 3000;
+                const downPayment = parseFloat(formData.get('down-payment')) || 0;
+                const insurance = parseFloat(formData.get('insurance-coverage')) || 0;
+                const months = parseInt(formData.get('treatment-length')) || 24;
+                
+                const totalCost = basePrice - downPayment - insurance;
+                const monthlyPayment = Math.round(totalCost / months);
+                
+                // Show result
+                document.getElementById('monthly-payment').textContent = monthlyPayment;
+                document.getElementById('calculation-result').style.display = 'block';
+                
+                // Smooth scroll to result
+                document.getElementById('calculation-result').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+                
+                trackEvent('cost_calculator_success', {
+                    monthly_payment: monthlyPayment,
+                    total_cost: totalCost
+                });
+                
+                showNotification('Calculation complete! Monthly payment shown below.', 'success');
+                
+            } catch (error) {
+                console.error('Calculation error:', error);
+                trackEvent('cost_calculator_error', {
+                    error_message: error.message
+                });
+                showNotification('Unable to calculate. Please try again or call us.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+        
+        // Appointment Form Submission
+        async function handleAppointmentSubmission(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            if (!validateForm(form)) {
+                showNotification('Please fill in all required fields correctly', 'error');
+                trackEvent('appointment_form_validation_error');
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            
+            LoadingStateManager.setLoading(button, true, 'Booking...');
+            
+            const appointmentData = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                age: formData.get('age'),
+                preferredDate: formData.get('preferred-date'),
+                preferredTime: formData.get('preferred-time'),
+                serviceInterest: 'Traditional Braces',
+                message: formData.get('message'),
+                source: 'traditional-braces-page',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Track submission
+            trackEvent('appointment_form_submit', {
+                service: 'traditional_braces',
+                age_group: appointmentData.age,
+                preferred_time: appointmentData.preferredTime
+            });
+            
+            try {
+                const response = await fetch(API_BASE_URL + API_ENDPOINTS.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                trackEvent('appointment_booking_success', {
+                    appointment_id: result.appointmentId,
+                    service: 'traditional_braces'
+                });
+                
+                showNotification(
+                    `Thank you, ${appointmentData.name}! Your free consultation has been scheduled. We'll contact you within 1 hour to confirm.`,
+                    'success'
+                );
+                
+                // Reset form
+                form.reset();
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                trackEvent('appointment_booking_error', {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                showNotification(
+                    'Unable to book appointment. Please call us at (555) 123-4567 for immediate assistance.',
+                    'error'
+                );
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+        
+        // Virtual Assessment Handler
+        async function handleVirtualAssessment(button) {
+            LoadingStateManager.setLoading(button, true, 'Loading Assessment...');
+            
+            const selectedBracket = document.querySelector('.bracket-option.selected');
+            const bracketType = selectedBracket ? selectedBracket.dataset.type : null;
+            
+            trackEvent('virtual_assessment_request', {
+                bracket_type: bracketType || 'none_selected'
+            });
+            
+            try {
+                // In production, this would open a virtual assessment tool or schedule a video consultation
+                await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
+                
+                trackEvent('virtual_assessment_success');
+                
+                // Redirect to appointment form
+                document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    document.getElementById('name').focus();
+                }, 500);
+                
+                showNotification('Virtual assessment ready! Please fill out the form below to continue.', 'success');
+                
+            } catch (error) {
+                trackEvent('virtual_assessment_error');
+                showNotification('Unable to load assessment. Please try again or call us.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+        
+        // Initialize all interactive elements
+        function initializeInteractiveElements() {
+            // CTA buttons
+            document.querySelectorAll('[data-action]').forEach(button => {
+                button.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    
+                    const action = this.dataset.action;
+                    
+                    // Track all CTA clicks
+                    trackEvent('cta_click', {
+                        action: action,
+                        button_text: this.textContent.trim(),
+                        location: this.closest('section')?.className || 'unknown'
+                    });
+                    
+                    switch(action) {
+                        case 'schedule-consultation':
+                            document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => document.getElementById('name').focus(), 500);
+                            break;
+                            
+                        case 'calculate-cost':
+                            document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => document.getElementById('bracket-type').focus(), 500);
+                            break;
+                            
+                        case 'get-virtual-assessment':
+                            await handleVirtualAssessment(this);
+                            break;
+                    }
+                });
+            });
+            
+            // Phone links
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    trackEvent('phone_click', {
+                        location: this.closest('section')?.className || 'header'
+                    });
+                });
+            });
+            
+            // Mobile touch optimization
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.btn, .bracket-option').forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                });
+            }
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date for appointment picker
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('preferred-date').setAttribute('min', today);
+            
+            // Initialize components
+            initializeBracketSelector();
+            initializeInteractiveElements();
+            
+            // Attach form handlers
+            document.getElementById('cost-calculator-form').addEventListener('submit', handleCostCalculation);
+            document.querySelector('[data-appointment]').addEventListener('submit', handleAppointmentSubmission);
+            
+            // Real-time validation
+            document.querySelectorAll('input[required], select[required]').forEach(field => {
+                field.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (!this.value.trim()) {
+                        formGroup.classList.add('has-error');
+                        this.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('has-error');
+                        this.classList.remove('error');
+                    }
+                });
+            });
+            
+            // Floating button visibility
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', debounce(function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const floatingBtn = document.querySelector('.floating-consultation');
+                
+                if (scrollTop > 300) {
+                    floatingBtn.style.opacity = '1';
+                    floatingBtn.style.transform = 'translateY(0)';
+                } else {
+                    floatingBtn.style.opacity = '0';
+                    floatingBtn.style.transform = 'translateY(100px)';
+                }
+                
+                lastScrollTop = scrollTop;
+            }, 100));
+            
+            // Track page load
+            trackEvent('page_view', {
+                page_title: 'Traditional Braces',
+                page_location: window.location.href
+            });
+            
+            // Performance tracking
+            if ('PerformanceObserver' in window) {
+                const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (entry.name === 'first-contentful-paint') {
+                            trackEvent('performance_fcp', {
+                                value: Math.round(entry.startTime)
+                            });
+                        }
+                    }
+                });
+                observer.observe({ entryTypes: ['paint'] });
+            }
+        });
+        
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 6) {
+                value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+            } else if (value.length >= 3) {
+                value = value.slice(0, 3) + '-' + value.slice(3);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>

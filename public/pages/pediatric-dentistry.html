@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="pediatric-dentistry">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Dentistry - Fun & Gentle Dental Care for Kids | SmileCare Dental</title>
+    <meta name="description" content="Specialized pediatric dental care in a fun, kid-friendly environment. First visit free for children under 3. Expert care that makes kids actually enjoy going to the dentist!">
+    <meta name="keywords" content="pediatric dentist, kids dentist, children's dental care, baby teeth, dental sealants, fluoride treatment">
+    <link rel="canonical" href="https://smilecare.dental/services/pediatric-dentistry">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --kid-purple: #9333EA;
+            --kid-pink: #EC4899;
+            --kid-blue: #3B82F6;
+            --kid-green: #10B981;
+            --kid-yellow: #F59E0B;
+            --kid-orange: #F97316;
+            --soft-purple: #F3E8FF;
+            --soft-pink: #FCE7F3;
+            --parent-blue: #1E40AF;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-600: #4B5563;
+            --gray-900: #111827;
+            --success: #059669;
+            --error: #DC2626;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        /* Fun font for headings */
+        h1, h2, h3 {
+            font-family: 'Fredoka', cursive;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--parent-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kid-purple);
+            text-decoration: none;
+            font-family: 'Fredoka', cursive;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--kid-purple);
+        }
+        
+        /* Hero Section with fun animations */
+        .hero {
+            background: linear-gradient(135deg, var(--soft-purple) 0%, var(--soft-pink) 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '🦷';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            top: -2rem;
+            right: 5%;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '🌈';
+            position: absolute;
+            font-size: 6rem;
+            opacity: 0.1;
+            bottom: -2rem;
+            left: 10%;
+            animation: float 3s ease-in-out infinite 1.5s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--kid-purple);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Button Styles */
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: var(--kid-purple);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--kid-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--kid-purple);
+            border: 2px solid var(--kid-purple);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--soft-purple);
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn.loading {
+            color: transparent;
+        }
+        
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--kid-purple);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--kid-purple);
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--kid-purple);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Parent Info Section */
+        .parent-info {
+            background: var(--gray-50);
+            padding: 4rem 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .info-card h3 {
+            color: var(--parent-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+        
+        /* Kid-Friendly Activities Section */
+        .activities {
+            padding: 4rem 0;
+            background: linear-gradient(to bottom, var(--white), var(--soft-purple));
+        }
+        
+        .activity-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .activity-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .activity-card:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .activity-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Parent-Friendly Appointment Form */
+        .appointment-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .appointment-form {
+            background: var(--gray-50);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 2rem auto 0;
+            border: 3px solid var(--soft-purple);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-header h3 {
+            color: var(--kid-purple);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+        }
+        
+        .form-section-title {
+            font-weight: 600;
+            color: var(--parent-blue);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-900);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--gray-50);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--kid-purple);
+            box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+        }
+        
+        .form-group input.error {
+            border-color: var(--error);
+            background-color: rgba(220, 38, 38, 0.05);
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.has-error .error-message {
+            display: block;
+        }
+        
+        /* Child Selector Buttons */
+        .child-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .child-option {
+            padding: 1rem;
+            border: 2px solid var(--gray-50);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+        
+        .child-option:hover {
+            border-color: var(--kid-purple);
+            transform: translateY(-2px);
+        }
+        
+        .child-option.selected {
+            border-color: var(--kid-purple);
+            background: var(--soft-purple);
+        }
+        
+        .child-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Concern Checkboxes */
+        .concern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .concern-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .concern-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        .concern-item label {
+            cursor: pointer;
+            font-weight: normal;
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            color: var(--white);
+            font-weight: 500;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .notification[data-type="success"] {
+            background: var(--success);
+        }
+        
+        .notification[data-type="error"] {
+            background: var(--error);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        /* Floating Emergency Button for Parents */
+        .floating-emergency {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--error);
+            color: var(--white);
+            padding: 0.875rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+            z-index: 100;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .floating-emergency:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(220, 38, 38, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .floating-emergency {
+                bottom: 20px;
+                right: 20px;
+                padding: 0.75rem 1.25rem;
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid var(--kid-purple);
+            outline-offset: 2px;
+        }
+        
+        /* Fun animations for kids */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .bounce-animation {
+            animation: bounce 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav class="container">
+            <a href="homepage.html" class="logo">
+                <span>🦷</span>
+                SmileCare Kids
+            </a>
+            <div class="nav-links">
+                <a href="/services">Services</a>
+                <a href="/about">About</a>
+                <a href="/parents">For Parents</a>
+                <a href="/contact">Contact</a>
+                <a href="tel:5551234567" class="btn btn-primary">Call Now</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="bounce-animation">Where Kids Love Going to the Dentist! 🌟</h1>
+                <p class="hero-subtitle">Gentle, fun dental care that makes children smile. First visit FREE for kids under 3!</p>
+                <div class="hero-cta">
+                    <a href="#appointment" class="btn btn-primary" data-action="book-kids-appointment">
+                        <span>Book Your Child's Visit</span>
+                        <span>🎈</span>
+                    </a>
+                    <a href="#virtual-tour" class="btn btn-secondary" data-action="virtual-tour">
+                        <span>Take Virtual Tour</span>
+                        <span>🎮</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Kids Love SmileCare</h2>
+                <p class="section-subtitle">We've created a dental experience that's actually fun for children!</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Game Room</h3>
+                        <p>Play games while you wait! Xbox, PlayStation, and tablets available.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Prize Tower</h3>
+                        <p>Every child gets to pick a prize after their visit!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📺</div>
+                        <h3>Ceiling TVs</h3>
+                        <p>Watch your favorite shows during treatment.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🦄</div>
+                        <h3>Themed Rooms</h3>
+                        <p>Choose from underwater, space, or jungle themed rooms!</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">😊</div>
+                        <h3>No Scary Tools</h3>
+                        <p>We use kid-friendly names for all our instruments.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Art Wall</h3>
+                        <p>Your child's artwork could be featured on our wall!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Parent Information Section -->
+        <section class="parent-info">
+            <div class="container">
+                <h2 class="section-title">Information for Parents</h2>
+                <p class="section-subtitle">Everything you need to know about your child's dental care</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>First Visit Guide</h3>
+                        <p>We recommend the first visit by age 1 or within 6 months of the first tooth. The visit includes a gentle exam, cleaning, and parent education.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Insurance & Payment</h3>
+                        <p>We accept all major insurance plans and offer flexible payment options. CareCredit available with 0% financing for 12 months.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Preventive Care</h3>
+                        <p>Regular cleanings, fluoride treatments, and sealants can prevent 80% of cavities. We focus on prevention first!</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Behavior Management</h3>
+                        <p>Our team is specially trained in child psychology and uses positive reinforcement techniques to ensure comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Kid Activities Section -->
+        <section class="activities" id="virtual-tour">
+            <div class="container">
+                <h2 class="section-title">Fun Activities at Our Office</h2>
+                <p class="section-subtitle">See what makes our office special!</p>
+                
+                <div class="activity-cards">
+                    <div class="activity-card" data-activity="games">
+                        <div class="activity-icon">🎮</div>
+                        <h3>Video Games</h3>
+                        <p>Latest games available</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="movies">
+                        <div class="activity-icon">🎬</div>
+                        <h3>Movie Theater</h3>
+                        <p>Watch during treatment</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="playground">
+                        <div class="activity-icon">🛝</div>
+                        <h3>Indoor Playground</h3>
+                        <p>Safe & sanitized daily</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="crafts">
+                        <div class="activity-icon">🎨</div>
+                        <h3>Arts & Crafts</h3>
+                        <p>Create masterpieces</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="reading">
+                        <div class="activity-icon">📚</div>
+                        <h3>Story Corner</h3>
+                        <p>Hundreds of books</p>
+                    </div>
+                    
+                    <div class="activity-card" data-activity="photo">
+                        <div class="activity-icon">📸</div>
+                        <h3>Photo Booth</h3>
+                        <p>Fun props included</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Parent-Friendly Appointment Form -->
+        <section id="appointment" class="appointment-section">
+            <div class="container">
+                <h2 class="section-title">Schedule Your Child's Visit</h2>
+                <p class="section-subtitle">Quick and easy booking for busy parents</p>
+                
+                <form class="appointment-form" data-appointment>
+                    <div class="form-header">
+                        <h3>Let's Get Started! 🚀</h3>
+                        <p>Fill out this form and we'll contact you within 30 minutes during business hours</p>
+                    </div>
+                    
+                    <!-- Parent Information -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span>👨‍👩‍👧‍👦</span>
+                            Parent/Guardian Information
+                        </h4>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parent-name">Your Name *</label>
+                                <input type="text" id="parent-name" name="parent-name" required aria-required="true">
+                                <span class="error-message">Please enter your name</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="parent-email">Email Address *</label>
+                                <input type="email" id="parent-email" name="parent-email" required aria-required="true">
+                                <span class="error-message">Please enter a valid email</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="parent-phone">Phone Number *</label>
+                                <input type="tel" id="parent-phone" name="parent-phone" required aria-required="true" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567">
+                                <span class="error-message">Please enter a valid phone number</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-contact">Preferred Contact Method</label>
+                                <select id="preferred-contact" name="preferred-contact">
+                                    <option value="phone">Phone Call</option>
+                                    <option value="text">Text Message</option>
+                                    <option value="email">Email</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Child Information -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span>👶</span>
+                            Child Information
+                        </h4>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="child-name">Child's Name *</label>
+                                <input type="text" id="child-name" name="child-name" required aria-required="true">
+                                <span class="error-message">Please enter child's name</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="child-age">Child's Age *</label>
+                                <select id="child-age" name="child-age" required aria-required="true">
+                                    <option value="">Select age</option>
+                                    <option value="0-2">0-2 years (First visit FREE!)</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="6-8">6-8 years</option>
+                                    <option value="9-12">9-12 years</option>
+                                    <option value="13-17">13-17 years</option>
+                                </select>
+                                <span class="error-message">Please select child's age</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Is this your child's first dental visit?</label>
+                            <div class="child-selector">
+                                <div class="child-option" data-first-visit="yes" role="button" tabindex="0" aria-pressed="false">
+                                    <div class="child-icon">🌟</div>
+                                    <div>Yes, first visit!</div>
+                                </div>
+                                <div class="child-option" data-first-visit="no" role="button" tabindex="0" aria-pressed="false">
+                                    <div class="child-icon">😊</div>
+                                    <div>No, been before</div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="first-visit" name="first-visit" value="">
+                        </div>
+                    </div>
+                    
+                    <!-- Appointment Details -->
+                    <div class="form-section">
+                        <h4 class="form-section-title">
+                            <span>📅</span>
+                            Appointment Preferences
+                        </h4>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferred-date">Preferred Date *</label>
+                                <input type="date" id="preferred-date" name="preferred-date" required aria-required="true">
+                                <span class="error-message">Please select a date</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-time">Preferred Time *</label>
+                                <select id="preferred-time" name="preferred-time" required aria-required="true">
+                                    <option value="">Select time</option>
+                                    <option value="early-morning">Early Morning (8-9 AM)</option>
+                                    <option value="morning">Morning (9 AM-12 PM)</option>
+                                    <option value="after-school">After School (3-5 PM)</option>
+                                    <option value="evening">Evening (5-6 PM)</option>
+                                    <option value="saturday">Saturday</option>
+                                </select>
+                                <span class="error-message">Please select a time</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Reason for Visit (check all that apply)</label>
+                            <div class="concern-grid">
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-checkup" name="concerns" value="checkup">
+                                    <label for="concern-checkup">Regular Checkup</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-cleaning" name="concerns" value="cleaning">
+                                    <label for="concern-cleaning">Cleaning</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-cavity" name="concerns" value="cavity">
+                                    <label for="concern-cavity">Possible Cavity</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-pain" name="concerns" value="pain">
+                                    <label for="concern-pain">Tooth Pain</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-anxiety" name="concerns" value="anxiety">
+                                    <label for="concern-anxiety">Dental Anxiety</label>
+                                </div>
+                                <div class="concern-item">
+                                    <input type="checkbox" id="concern-other" name="concerns" value="other">
+                                    <label for="concern-other">Other Concern</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special-needs">Special Needs or Instructions (Optional)</label>
+                            <textarea id="special-needs" name="special-needs" rows="3" placeholder="Let us know about any special needs, fears, or medical conditions we should be aware of"></textarea>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" name="service-interest" value="Pediatric Dentistry">
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
+                        <span>Book Appointment</span>
+                        <span>🎉</span>
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; color: var(--gray-600); font-size: 0.875rem;">
+                        We'll confirm your appointment within 30 minutes during business hours
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating Emergency Button -->
+    <a href="tel:5551234567" class="floating-emergency" aria-label="Call for dental emergency">
+        <span>🚨</span>
+        <span>Dental Emergency?</span>
+    </a>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Enhanced Production JavaScript -->
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'https://api.smilecare.dental';
+        const API_ENDPOINTS = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact'
+        };
+        
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // GA4 Event Tracking
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    event_category: 'engagement',
+                    event_label: 'pediatric_dentistry_page',
+                    ...parameters
+                });
+            }
+        }
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.setAttribute('aria-busy', 'true');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.setAttribute('aria-busy', 'false');
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            const icon = type === 'success' ? '✓' : '✕';
+            notification.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
+        // Form Validation
+        function validateForm(form) {
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    formGroup.classList.add('has-error');
+                    field.classList.add('error');
+                } else {
+                    formGroup.classList.remove('has-error');
+                    field.classList.remove('error');
+                }
+                
+                // Email validation
+                if (field.type === 'email' && field.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                }
+                
+                // Phone validation
+                if (field.type === 'tel' && field.value) {
+                    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+                    if (!phoneRegex.test(field.value)) {
+                        isValid = false;
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                }
+            });
+            
+            // Check if first visit is selected
+            const firstVisitInput = form.querySelector('#first-visit');
+            if (!firstVisitInput.value) {
+                isValid = false;
+                showNotification('Please select if this is your child\'s first visit', 'error');
+            }
+            
+            return isValid;
+        }
+        
+        // Initialize Child Selectors
+        function initializeChildSelectors() {
+            const childOptions = document.querySelectorAll('.child-option');
+            const firstVisitInput = document.getElementById('first-visit');
+            
+            childOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const isFirstVisit = this.dataset.firstVisit;
+                    
+                    // Remove selected from all
+                    childOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                        opt.setAttribute('aria-pressed', 'false');
+                    });
+                    
+                    // Add selected to clicked
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    
+                    // Update hidden input
+                    firstVisitInput.value = isFirstVisit;
+                    
+                    // Track selection
+                    trackEvent('first_visit_selected', {
+                        is_first_visit: isFirstVisit
+                    });
+                    
+                    // Show special message for first visits
+                    if (isFirstVisit === 'yes') {
+                        const ageSelect = document.getElementById('child-age');
+                        if (ageSelect.value === '0-2') {
+                            showNotification('Great news! First visits are FREE for children under 3!', 'success');
+                        }
+                    }
+                });
+                
+                // Keyboard support
+                option.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+        
+        // Initialize Activity Cards
+        function initializeActivityCards() {
+            const activityCards = document.querySelectorAll('.activity-card');
+            
+            activityCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const activity = this.dataset.activity;
+                    
+                    // Add fun animation
+                    this.style.transform = 'scale(1.1) rotate(5deg)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 300);
+                    
+                    // Track activity interest
+                    trackEvent('activity_card_clicked', {
+                        activity_type: activity
+                    });
+                });
+            });
+        }
+        
+        // Parent-Friendly Appointment Submission
+        async function handleAppointmentSubmission(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            if (!validateForm(form)) {
+                trackEvent('appointment_form_validation_error');
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            
+            LoadingStateManager.setLoading(button, true, 'Booking...');
+            
+            // Collect selected concerns
+            const concerns = [];
+            form.querySelectorAll('input[name="concerns"]:checked').forEach(checkbox => {
+                concerns.push(checkbox.value);
+            });
+            
+            const appointmentData = {
+                parentName: formData.get('parent-name'),
+                parentEmail: formData.get('parent-email'),
+                parentPhone: formData.get('parent-phone'),
+                preferredContact: formData.get('preferred-contact'),
+                childName: formData.get('child-name'),
+                childAge: formData.get('child-age'),
+                isFirstVisit: formData.get('first-visit'),
+                preferredDate: formData.get('preferred-date'),
+                preferredTime: formData.get('preferred-time'),
+                concerns: concerns,
+                specialNeeds: formData.get('special-needs'),
+                serviceInterest: 'Pediatric Dentistry',
+                source: 'pediatric-dentistry-page',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Track submission
+            trackEvent('pediatric_appointment_submit', {
+                child_age: appointmentData.childAge,
+                is_first_visit: appointmentData.isFirstVisit,
+                concerns_count: concerns.length,
+                has_special_needs: !!appointmentData.specialNeeds
+            });
+            
+            try {
+                const response = await fetch(API_BASE_URL + API_ENDPOINTS.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                trackEvent('pediatric_appointment_success', {
+                    appointment_id: result.appointmentId,
+                    child_age: appointmentData.childAge
+                });
+                
+                // Special message for first visits under 3
+                let successMessage = `Perfect! ${appointmentData.childName}'s appointment has been scheduled. `;
+                if (appointmentData.isFirstVisit === 'yes' && appointmentData.childAge === '0-2') {
+                    successMessage += 'This first visit is completely FREE! ';
+                }
+                successMessage += 'We\'ll contact you within 30 minutes to confirm.';
+                
+                showNotification(successMessage, 'success');
+                
+                // Reset form
+                form.reset();
+                document.querySelectorAll('.child-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.setAttribute('aria-pressed', 'false');
+                });
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                trackEvent('pediatric_appointment_error', {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                showNotification(
+                    'Unable to book appointment online. Please call us at (555) 123-4567 and we\'ll help you right away!',
+                    'error'
+                );
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+        
+        // Initialize Interactive Elements
+        function initializeInteractiveElements() {
+            // CTA buttons
+            document.querySelectorAll('[data-action]').forEach(button => {
+                button.addEventListener('click', async function(e) {
+                    e.preventDefault();
+                    
+                    const action = this.dataset.action;
+                    
+                    // Track all CTA clicks
+                    trackEvent('cta_click', {
+                        action: action,
+                        button_text: this.textContent.trim(),
+                        location: this.closest('section')?.className || 'unknown'
+                    });
+                    
+                    switch(action) {
+                        case 'book-kids-appointment':
+                            document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => document.getElementById('parent-name').focus(), 500);
+                            break;
+                            
+                        case 'virtual-tour':
+                            document.getElementById('virtual-tour').scrollIntoView({ behavior: 'smooth' });
+                            // Animate activity cards
+                            document.querySelectorAll('.activity-card').forEach((card, index) => {
+                                setTimeout(() => {
+                                    card.style.transform = 'scale(1.05)';
+                                    setTimeout(() => {
+                                        card.style.transform = '';
+                                    }, 300);
+                                }, index * 100);
+                            });
+                            break;
+                    }
+                });
+            });
+            
+            // Phone links with special tracking for emergency
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    const isEmergency = this.classList.contains('floating-emergency');
+                    trackEvent('phone_click', {
+                        location: isEmergency ? 'emergency_button' : 'header',
+                        is_emergency: isEmergency
+                    });
+                });
+            });
+            
+            // Mobile touch optimization
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.btn, .child-option, .activity-card').forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                });
+            }
+        }
+        
+        // Age-based messaging
+        function handleAgeSelection() {
+            const ageSelect = document.getElementById('child-age');
+            const firstVisitValue = document.getElementById('first-visit').value;
+            
+            ageSelect.addEventListener('change', function() {
+                if (this.value === '0-2' && firstVisitValue === 'yes') {
+                    showNotification('Awesome! First visits are FREE for children under 3!', 'success');
+                    trackEvent('free_visit_eligible', {
+                        child_age: this.value
+                    });
+                }
+            });
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date for appointment picker
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('preferred-date').setAttribute('min', today);
+            
+            // Initialize components
+            initializeChildSelectors();
+            initializeActivityCards();
+            initializeInteractiveElements();
+            handleAgeSelection();
+            
+            // Attach form handler
+            document.querySelector('[data-appointment]').addEventListener('submit', handleAppointmentSubmission);
+            
+            // Real-time validation
+            document.querySelectorAll('input[required], select[required]').forEach(field => {
+                field.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (!this.value.trim()) {
+                        formGroup.classList.add('has-error');
+                        this.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('has-error');
+                        this.classList.remove('error');
+                    }
+                });
+            });
+            
+            // Phone number formatting
+            document.getElementById('parent-phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 6) {
+                    value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+                } else if (value.length >= 3) {
+                    value = value.slice(0, 3) + '-' + value.slice(3);
+                }
+                e.target.value = value;
+            });
+            
+            // Floating emergency button visibility
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', debounce(function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const floatingBtn = document.querySelector('.floating-emergency');
+                
+                if (scrollTop > 200) {
+                    floatingBtn.style.opacity = '1';
+                    floatingBtn.style.transform = 'translateY(0)';
+                } else {
+                    floatingBtn.style.opacity = '0';
+                    floatingBtn.style.transform = 'translateY(100px)';
+                }
+                
+                lastScrollTop = scrollTop;
+            }, 100));
+            
+            // Track page load
+            trackEvent('page_view', {
+                page_title: 'Pediatric Dentistry',
+                page_location: window.location.href
+            });
+            
+            // Add fun hover effects to emojis
+            document.querySelectorAll('.feature-icon, .activity-icon, .child-icon').forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.2) rotate(10deg)';
+                });
+                
+                icon.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

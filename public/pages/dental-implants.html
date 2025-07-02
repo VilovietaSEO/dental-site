@@ -1,0 +1,3071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="dental-implants">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Implants - Permanent Tooth Replacement Solutions | SmileCare Dental</title>
+    <meta name="description" content="Advanced dental implants with 3D-guided surgery. 98% success rate, lifetime warranty options. Free candidacy assessment and flexible financing available.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: rgba(0, 168, 168, 0.1);
+            --gradient-primary: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            --gradient-success: linear-gradient(135deg, var(--success-green), #20c245);
+            --warning-red: #dc3545;
+            --warning-orange: #FF6B35;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        header.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-teal);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #239a3b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        /* Hero Section Enhanced */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 8rem 5% 4rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .urgency-alert {
+            background: var(--warning-orange);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        /* Implant Cost Calculator Advanced */
+        .calculator-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .calculator-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .calculator-form {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .step-indicator {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .step-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            transition: all 0.3s;
+        }
+        
+        .step-dot.active {
+            background: var(--accent-teal);
+            transform: scale(1.5);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+        }
+        
+        .option-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .option-card {
+            padding: 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .option-card:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-3px);
+        }
+        
+        .option-card.selected {
+            border-color: var(--trust-blue);
+            background: var(--light-teal);
+        }
+        
+        .option-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .calculator-results {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .result-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .result-amount {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .result-breakdown {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .breakdown-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        
+        .financing-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .financing-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .financing-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .monthly-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--success-green);
+        }
+        
+        /* 3D Implant Visualization */
+        .visualization-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .visualization-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .implant-3d-viewer {
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            padding: 3rem;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .implant-model {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate3d 20s linear infinite;
+        }
+        
+        @keyframes rotate3d {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+        
+        .implant-parts {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .part-card {
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .part-card:hover {
+            background: var(--light-teal);
+            transform: translateX(10px);
+        }
+        
+        .part-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        /* Animated Procedure Timeline */
+        .procedure-timeline {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .timeline-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            position: relative;
+        }
+        
+        .timeline-track {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #ddd;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: var(--gradient-primary);
+            height: 0;
+            transition: height 1s ease-out;
+        }
+        
+        .timeline-stage {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s;
+        }
+        
+        .timeline-stage.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-stage:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .stage-content {
+            width: 45%;
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .stage-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--clean-white);
+            border: 4px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            z-index: 2;
+            transition: all 0.3s;
+        }
+        
+        .timeline-stage.visible .stage-marker {
+            border-color: var(--accent-teal);
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            transform: translateX(-50%) scale(1.2);
+        }
+        
+        .stage-time {
+            font-size: 0.875rem;
+            color: var(--accent-teal);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Pain & Sedation Explorer */
+        .sedation-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .sedation-explorer {
+            max-width: 1000px;
+            margin: 3rem auto;
+        }
+        
+        .anxiety-scale {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+        
+        .scale-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .scale-track {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            z-index: 1;
+        }
+        
+        .scale-fill {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+            width: 25%;
+            transition: width 0.3s;
+        }
+        
+        .scale-point {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .scale-point:hover {
+            transform: scale(1.1);
+        }
+        
+        .scale-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .scale-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .sedation-recommendation {
+            display: none;
+            background: var(--light-teal);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            animation: fadeIn 0.5s;
+        }
+        
+        .sedation-recommendation.active {
+            display: block;
+        }
+        
+        .sedation-options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .sedation-option-card {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sedation-option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+        
+        .sedation-option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .sedation-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Material Comparison Interactive */
+        .materials-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .materials-showcase {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .material-selector {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .material-tab {
+            padding: 1rem 2rem;
+            background: var(--clean-white);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .material-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--light-teal);
+            transition: width 0.3s;
+            z-index: -1;
+        }
+        
+        .material-tab:hover::before {
+            width: 100%;
+        }
+        
+        .material-tab.active {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .material-details {
+            display: none;
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .material-details.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        .material-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .material-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .durability-meter {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--soft-gray);
+            border-radius: 15px;
+        }
+        
+        .meter-bar {
+            height: 30px;
+            background: #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            background: var(--gradient-success);
+            transition: width 1s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: var(--clean-white);
+            font-weight: bold;
+        }
+        
+        /* Before/After Gallery Enhanced */
+        .gallery-section {
+            padding: 4rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .gallery-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .case-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--soft-gray);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover {
+            background: var(--light-teal);
+        }
+        
+        .filter-btn.active {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+        }
+        
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .case-card {
+            background: var(--soft-gray);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .case-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 250px;
+            position: relative;
+        }
+        
+        .before-img, .after-img {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .before-img img, .after-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .case-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .img-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: var(--clean-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+        
+        .case-content {
+            padding: 2rem;
+        }
+        
+        .case-type {
+            color: var(--accent-teal);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .case-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        /* Trust Indicators */
+        .trust-section {
+            padding: 4rem 5%;
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .trust-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .trust-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .trust-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .trust-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        /* Comparison Table Interactive */
+        .comparison-section {
+            padding: 4rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .comparison-interactive {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .comparison-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .comparison-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--clean-white);
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .comparison-btn:hover {
+            border-color: var(--accent-teal);
+        }
+        
+        .comparison-btn.active {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border-color: var(--accent-teal);
+        }
+        
+        .comparison-table {
+            background: var(--clean-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table tr:hover {
+            background: var(--light-teal);
+        }
+        
+        .winner {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+        
+        /* CTA Section with Urgency */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: var(--clean-white);
+            padding: 5rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before,
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .cta-section::before {
+            top: -150px;
+            left: -150px;
+        }
+        
+        .cta-section::after {
+            bottom: -150px;
+            right: -150px;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .limited-offer {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .offer-countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .countdown-unit {
+            background: rgba(255,255,255,0.2);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .btn-primary {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--clean-white);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--clean-white);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+        }
+        
+        /* Floating Action Buttons */
+        .floating-actions {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+            background: var(--trust-blue);
+        }
+        
+        .floating-btn.pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 4rem 5% 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            padding: 0.5rem 0;
+        }
+        
+        .footer-section a {
+            color: var(--clean-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-teal);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-grid,
+            .calculator-container,
+            .visualization-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .timeline-stage,
+            .timeline-stage:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .stage-content {
+                width: 100%;
+            }
+            
+            .timeline-track {
+                left: 20px;
+            }
+            
+            .stage-marker {
+                left: 20px;
+            }
+            
+            .comparison-table {
+                overflow-x: auto;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .floating-actions {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Loading States */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: var(--clean-white);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">SmileCare Dental</div>
+            <ul class="nav-links">
+                <li><a href="#calculator">Cost Calculator</a></li>
+                <li><a href="#visualization">3D Demo</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#sedation">Comfort Options</a></li>
+                <li><a href="#gallery">Real Results</a></li>
+                <li><a href="#book" class="cta-button">Free Implant Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section Enhanced -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <div class="urgency-alert">
+                        ⚠️ Missing Teeth? Every Day Matters - Bone Loss Starts Immediately!
+                    </div>
+                    <h1>Permanent Dental Implants That Feel Like Your Natural Teeth</h1>
+                    <p class="hero-subtitle">Advanced 3D-guided surgery with 98% success rate. Get your smile back in as little as 3 months.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">5,000+</span>
+                            <span class="stat-label">Implants Placed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Lifetime</span>
+                            <span class="stat-label">Warranty Available</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#calculator" class="cta-button" style="font-size: 1.25rem; padding: 1rem 2rem;">
+                            Calculate Your Exact Cost →
+                        </a>
+                        <a href="#book" class="btn-secondary">
+                            Am I a Candidate?
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="implant-3d-viewer" style="height: 400px;">
+                        <svg class="implant-model" viewBox="0 0 300 400">
+                            <defs>
+                                <linearGradient id="implantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="abutmentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="crownGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FAFAFA;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Implant Post -->
+                            <rect x="140" y="250" width="20" height="100" fill="url(#implantGradient)" rx="2"/>
+                            <path d="M140 250 L140 350 L142 348 L144 350 L146 348 L148 350 L150 348 L152 350 L154 348 L156 350 L158 348 L160 350 L160 250" 
+                                  fill="url(#implantGradient)" opacity="0.8"/>
+                            
+                            <!-- Abutment -->
+                            <path d="M145 200 L155 200 L160 250 L140 250 Z" fill="url(#abutmentGradient)"/>
+                            <ellipse cx="150" cy="200" rx="15" ry="5" fill="url(#abutmentGradient)"/>
+                            
+                            <!-- Crown -->
+                            <path d="M150 100 C175 100 200 125 200 165 L200 195 C200 210 180 220 150 220 C120 220 100 210 100 195 L100 165 C100 125 125 100 150 100" 
+                                  fill="url(#crownGradient)" stroke="#00A8A8" stroke-width="2"/>
+                            <ellipse cx="150" cy="120" rx="45" ry="35" fill="url(#crownGradient)" stroke="#00A8A8" stroke-width="1"/>
+                            
+                            <!-- Highlight on crown -->
+                            <ellipse cx="135" cy="115" rx="12" ry="18" fill="rgba(255,255,255,0.6)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Implant Cost Calculator -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Your Personalized Implant Cost</h2>
+                <p>Instant pricing with insurance coverage and financing options</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h3>Tell Us About Your Needs</h3>
+                    
+                    <!-- Step 1: Missing Teeth -->
+                    <div class="form-step active" id="step1">
+                        <div class="step-header">
+                            <h4>How many teeth are you missing?</h4>
+                            <div class="step-indicator">
+                                <span class="step-dot active"></span>
+                                <span class="step-dot"></span>
+                                <span class="step-dot"></span>
+                                <span class="step-dot"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="option-cards">
+                            <div class="option-card" data-teeth="1">
+                                <div class="option-icon">🦷</div>
+                                <strong>Single Tooth</strong>
+                                <p>One implant needed</p>
+                            </div>
+                            <div class="option-card" data-teeth="2-3">
+                                <div class="option-icon">🦷🦷</div>
+                                <strong>2-3 Teeth</strong>
+                                <p>Multiple implants</p>
+                            </div>
+                            <div class="option-card" data-teeth="4+">
+                                <div class="option-icon">🦷🦷🦷</div>
+                                <strong>4+ Teeth</strong>
+                                <p>Several implants</p>
+                            </div>
+                            <div class="option-card" data-teeth="full">
+                                <div class="option-icon">😁</div>
+                                <strong>Full Arch</strong>
+                                <p>All-on-4/6 solution</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Location -->
+                    <div class="form-step" id="step2">
+                        <div class="step-header">
+                            <h4>Where are the missing teeth?</h4>
+                            <div class="step-indicator">
+                                <span class="step-dot"></span>
+                                <span class="step-dot active"></span>
+                                <span class="step-dot"></span>
+                                <span class="step-dot"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="option-cards">
+                            <div class="option-card" data-location="front">
+                                <div class="option-icon">😊</div>
+                                <strong>Front Teeth</strong>
+                                <p>Visible when smiling</p>
+                            </div>
+                            <div class="option-card" data-location="back">
+                                <div class="option-icon">🦷</div>
+                                <strong>Back Teeth</strong>
+                                <p>Molars/premolars</p>
+                            </div>
+                            <div class="option-card" data-location="both">
+                                <div class="option-icon">😁</div>
+                                <strong>Both Areas</strong>
+                                <p>Front and back</p>
+                            </div>
+                            <div class="option-card" data-location="full">
+                                <div class="option-icon">👄</div>
+                                <strong>Complete Arch</strong>
+                                <p>Upper or lower</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Bone Health -->
+                    <div class="form-step" id="step3">
+                        <div class="step-header">
+                            <h4>How long have teeth been missing?</h4>
+                            <div class="step-indicator">
+                                <span class="step-dot"></span>
+                                <span class="step-dot"></span>
+                                <span class="step-dot active"></span>
+                                <span class="step-dot"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="option-cards">
+                            <div class="option-card" data-time="recent">
+                                <div class="option-icon">⏰</div>
+                                <strong>< 6 Months</strong>
+                                <p>Good bone likely</p>
+                            </div>
+                            <div class="option-card" data-time="moderate">
+                                <div class="option-icon">📅</div>
+                                <strong>6-24 Months</strong>
+                                <p>Some bone loss</p>
+                            </div>
+                            <div class="option-card" data-time="long">
+                                <div class="option-icon">📆</div>
+                                <strong>2-5 Years</strong>
+                                <p>Bone graft likely</p>
+                            </div>
+                            <div class="option-card" data-time="verylong">
+                                <div class="option-icon">🗓️</div>
+                                <strong>5+ Years</strong>
+                                <p>Extensive prep needed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Insurance -->
+                    <div class="form-step" id="step4">
+                        <div class="step-header">
+                            <h4>Do you have dental insurance?</h4>
+                            <div class="step-indicator">
+                                <span class="step-dot"></span>
+                                <span class="step-dot"></span>
+                                <span class="step-dot"></span>
+                                <span class="step-dot active"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Insurance Coverage</label>
+                            <select id="insuranceCoverage">
+                                <option value="none">No Insurance</option>
+                                <option value="basic">Basic Coverage (up to $1,500/year)</option>
+                                <option value="standard">Standard Coverage (up to $2,500/year)</option>
+                                <option value="premium">Premium Coverage (up to $5,000/year)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Flexible Spending Account (FSA/HSA)?</label>
+                            <select id="fsaHsa">
+                                <option value="no">No FSA/HSA</option>
+                                <option value="yes">Yes, I have FSA/HSA funds</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="cta-button" style="width: 100%; margin-top: 2rem;" onclick="calculateImplantCost()">
+                            Calculate My Cost →
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-header">
+                        <h3>Your Personalized Treatment Plan</h3>
+                        <div class="result-amount" id="totalCost">$3,500</div>
+                        <p>Total Investment</p>
+                    </div>
+                    
+                    <div class="result-breakdown">
+                        <div class="breakdown-item">
+                            <span>Implant(s) & Surgery</span>
+                            <span id="implantCost">$2,000</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Abutment(s)</span>
+                            <span id="abutmentCost">$500</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Crown(s)</span>
+                            <span id="crownCost">$1,200</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Bone Grafting (if needed)</span>
+                            <span id="boneCost">$0</span>
+                        </div>
+                        <div class="breakdown-item" style="color: var(--success-green);">
+                            <span>Insurance Coverage</span>
+                            <span id="insuranceAmount">-$200</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Your Cost</span>
+                            <span id="finalCost">$3,500</span>
+                        </div>
+                    </div>
+                    
+                    <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Monthly Payment Options</h4>
+                    <div class="financing-options">
+                        <div class="financing-card">
+                            <strong>12 Months</strong>
+                            <div class="monthly-amount">$292</div>
+                            <small>0% Interest</small>
+                        </div>
+                        <div class="financing-card">
+                            <strong>24 Months</strong>
+                            <div class="monthly-amount">$146</div>
+                            <small>0% Interest</small>
+                        </div>
+                        <div class="financing-card">
+                            <strong>60 Months</strong>
+                            <div class="monthly-amount">$67</div>
+                            <small>5.9% APR</small>
+                        </div>
+                        <div class="financing-card">
+                            <strong>84 Months</strong>
+                            <div class="monthly-amount">$52</div>
+                            <small>7.9% APR</small>
+                        </div>
+                    </div>
+                    
+                    <a href="#book" class="cta-button" style="width: 100%; margin-top: 2rem; text-align: center;">
+                        Schedule Free Consultation →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Implant Visualization -->
+    <section id="visualization" class="visualization-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Understanding Your Implant Components</h2>
+                <p>Click each part to learn how dental implants work</p>
+            </div>
+            
+            <div class="visualization-container">
+                <div class="implant-3d-viewer">
+                    <svg class="implant-model" viewBox="0 0 300 400">
+                        <!-- Same SVG as in hero but larger -->
+                        <defs>
+                            <linearGradient id="implantGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="abutmentGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="crownGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FAFAFA;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Implant Post with animation -->
+                        <g id="implantPost" style="cursor: pointer;">
+                            <rect x="140" y="250" width="20" height="100" fill="url(#implantGradient2)" rx="2"/>
+                            <path d="M140 250 L140 350 L142 348 L144 350 L146 348 L148 350 L150 348 L152 350 L154 348 L156 350 L158 348 L160 350 L160 250" 
+                                  fill="url(#implantGradient2)" opacity="0.8"/>
+                            <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+                        </g>
+                        
+                        <!-- Abutment with animation -->
+                        <g id="abutmentPart" style="cursor: pointer;">
+                            <path d="M145 200 L155 200 L160 250 L140 250 Z" fill="url(#abutmentGradient2)"/>
+                            <ellipse cx="150" cy="200" rx="15" ry="5" fill="url(#abutmentGradient2)"/>
+                            <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+                        </g>
+                        
+                        <!-- Crown with animation -->
+                        <g id="crownPart" style="cursor: pointer;">
+                            <path d="M150 100 C175 100 200 125 200 165 L200 195 C200 210 180 220 150 220 C120 220 100 210 100 195 L100 165 C100 125 125 100 150 100" 
+                                  fill="url(#crownGradient2)" stroke="#00A8A8" stroke-width="2"/>
+                            <ellipse cx="150" cy="120" rx="45" ry="35" fill="url(#crownGradient2)" stroke="#00A8A8" stroke-width="1"/>
+                            <ellipse cx="135" cy="115" rx="12" ry="18" fill="rgba(255,255,255,0.6)"/>
+                            <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="implant-parts">
+                    <div class="part-card" data-part="post">
+                        <div class="part-icon">🔩</div>
+                        <div>
+                            <h4>Titanium Implant Post</h4>
+                            <p>Biocompatible titanium screw that fuses with your jawbone</p>
+                            <ul style="list-style: none; padding: 0; margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li>✓ 98% success rate</li>
+                                <li>✓ Lifetime durability</li>
+                                <li>✓ Preserves jawbone</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="part-card" data-part="abutment">
+                        <div class="part-icon">🔗</div>
+                        <div>
+                            <h4>Custom Abutment</h4>
+                            <p>Precision connector between implant and crown</p>
+                            <ul style="list-style: none; padding: 0; margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li>✓ Perfect angle alignment</li>
+                                <li>✓ Gold or titanium options</li>
+                                <li>✓ Custom-milled fit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="part-card" data-part="crown">
+                        <div class="part-icon">👑</div>
+                        <div>
+                            <h4>Porcelain Crown</h4>
+                            <p>Natural-looking tooth replacement</p>
+                            <ul style="list-style: none; padding: 0; margin-top: 0.5rem; font-size: 0.875rem;">
+                                <li>✓ Matches your teeth perfectly</li>
+                                <li>✓ Stain-resistant material</li>
+                                <li>✓ 15-25 year lifespan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Procedure Timeline -->
+    <section id="process" class="procedure-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Implant Journey Timeline</h2>
+                <p>From consultation to your new smile - every step explained</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+                
+                <div class="timeline-stage" data-stage="1">
+                    <div class="stage-marker">1</div>
+                    <div class="stage-content">
+                        <div class="stage-time">Day 1 - Initial Consultation</div>
+                        <h3>3D Imaging & Treatment Planning</h3>
+                        <p>Advanced CBCT scan creates a detailed 3D map of your jawbone</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>✓ Digital impressions (no messy molds)</li>
+                            <li>✓ Bone density assessment</li>
+                            <li>✓ Custom treatment plan</li>
+                            <li>✓ Exact cost breakdown</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--light-teal); border-radius: 8px;">
+                            <strong>💡 Pro Tip:</strong> Bring your insurance card to maximize coverage
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-stage" data-stage="2">
+                    <div class="stage-marker">2</div>
+                    <div class="stage-content">
+                        <div class="stage-time">Week 2-3 - Surgery Day</div>
+                        <h3>Implant Placement Procedure</h3>
+                        <p>Minimally invasive guided surgery for precise placement</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>✓ Local anesthesia or sedation options</li>
+                            <li>✓ 30-60 minute procedure per implant</li>
+                            <li>✓ 3D-guided for accuracy</li>
+                            <li>✓ Same-day temporary tooth available</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--light-teal); border-radius: 8px;">
+                            <strong>🏥 Recovery:</strong> Most patients return to work in 1-2 days
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-stage" data-stage="3">
+                    <div class="stage-marker">3</div>
+                    <div class="stage-content">
+                        <div class="stage-time">Month 3-6 - Healing Phase</div>
+                        <h3>Osseointegration Process</h3>
+                        <p>Your implant fuses with the jawbone for rock-solid stability</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>✓ Regular check-ups every 4-6 weeks</li>
+                            <li>✓ Temporary crown looks natural</li>
+                            <li>✓ Normal eating (with care)</li>
+                            <li>✓ Bone integration monitoring</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--light-teal); border-radius: 8px;">
+                            <strong>⏱️ Faster Option:</strong> Some cases qualify for immediate loading
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-stage" data-stage="4">
+                    <div class="stage-marker">4</div>
+                    <div class="stage-content">
+                        <div class="stage-time">Month 4-6 - Final Restoration</div>
+                        <h3>Custom Crown Placement</h3>
+                        <p>Your permanent, natural-looking crown is created and placed</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>✓ Digital design for perfect fit</li>
+                            <li>✓ Color matching to your teeth</li>
+                            <li>✓ Bite adjustment for comfort</li>
+                            <li>✓ Final photos and celebration!</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--light-teal); border-radius: 8px;">
+                            <strong>🎉 Success:</strong> Enjoy your new tooth that feels completely natural
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-stage" data-stage="5">
+                    <div class="stage-marker">✓</div>
+                    <div class="stage-content">
+                        <div class="stage-time">Ongoing - Lifetime Care</div>
+                        <h3>Maintenance & Warranty</h3>
+                        <p>Simple care ensures your implant lasts a lifetime</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                            <li>✓ Regular cleanings (like natural teeth)</li>
+                            <li>✓ Annual check-ups included</li>
+                            <li>✓ Lifetime warranty option available</li>
+                            <li>✓ 24/7 emergency support</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--success-green); color: var(--clean-white); border-radius: 8px;">
+                            <strong>🛡️ Protected:</strong> Our implants come with comprehensive warranty options
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain & Sedation Explorer -->
+    <section id="sedation" class="sedation-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Comfort Is Our Priority</h2>
+                <p>Choose your ideal comfort level for a stress-free experience</p>
+            </div>
+            
+            <div class="sedation-explorer">
+                <div class="anxiety-scale">
+                    <h3>What's Your Anxiety Level?</h3>
+                    <p>Move the slider to see personalized comfort options</p>
+                    
+                    <div class="scale-container">
+                        <div class="scale-track">
+                            <div class="scale-fill" id="scaleFill"></div>
+                        </div>
+                        <div class="scale-point" data-level="1">
+                            <span class="scale-emoji">😊</span>
+                            <span class="scale-label">Relaxed</span>
+                        </div>
+                        <div class="scale-point" data-level="2">
+                            <span class="scale-emoji">😐</span>
+                            <span class="scale-label">Nervous</span>
+                        </div>
+                        <div class="scale-point" data-level="3">
+                            <span class="scale-emoji">😟</span>
+                            <span class="scale-label">Anxious</span>
+                        </div>
+                        <div class="scale-point" data-level="4">
+                            <span class="scale-emoji">😰</span>
+                            <span class="scale-label">Very Anxious</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sedation-recommendation" id="sedation1">
+                    <h4>Recommended: Local Anesthesia Only</h4>
+                    <p>You're comfortable with dental procedures. We'll ensure complete numbness with:</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li>✓ Topical gel before injection</li>
+                        <li>✓ Ultra-fine needles</li>
+                        <li>✓ Buffered anesthetic for comfort</li>
+                    </ul>
+                </div>
+                
+                <div class="sedation-recommendation" id="sedation2">
+                    <h4>Recommended: Nitrous Oxide (Laughing Gas)</h4>
+                    <p>Perfect for mild anxiety. You'll feel relaxed and comfortable:</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li>✓ Reduces anxiety immediately</li>
+                        <li>✓ Wears off quickly</li>
+                        <li>✓ Drive yourself home</li>
+                    </ul>
+                </div>
+                
+                <div class="sedation-recommendation" id="sedation3">
+                    <h4>Recommended: Oral Conscious Sedation</h4>
+                    <p>For moderate anxiety. You'll be deeply relaxed but conscious:</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li>✓ Take a pill 1 hour before</li>
+                        <li>✓ Little memory of procedure</li>
+                        <li>✓ Need a driver</li>
+                    </ul>
+                </div>
+                
+                <div class="sedation-recommendation" id="sedation4">
+                    <h4>Recommended: IV Sedation</h4>
+                    <p>For high anxiety. You'll sleep through the entire procedure:</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li>✓ Complete relaxation</li>
+                        <li>✓ No memory of procedure</li>
+                        <li>✓ Monitored by anesthesiologist</li>
+                    </ul>
+                </div>
+                
+                <div class="sedation-options-grid">
+                    <div class="sedation-option-card">
+                        <div class="sedation-icon">💨</div>
+                        <h4>Nitrous Oxide</h4>
+                        <p>Instant relaxation</p>
+                        <strong>+$150</strong>
+                    </div>
+                    <div class="sedation-option-card">
+                        <div class="sedation-icon">💊</div>
+                        <h4>Oral Sedation</h4>
+                        <p>Deep relaxation</p>
+                        <strong>+$300</strong>
+                    </div>
+                    <div class="sedation-option-card">
+                        <div class="sedation-icon">💉</div>
+                        <h4>IV Sedation</h4>
+                        <p>Sleep through it</p>
+                        <strong>+$800</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Comparison Interactive -->
+    <section class="materials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Implant System Comparison</h2>
+                <p>We only use premium implant systems for guaranteed success</p>
+            </div>
+            
+            <div class="materials-showcase">
+                <div class="material-selector">
+                    <button class="material-tab active" data-material="straumann">Straumann</button>
+                    <button class="material-tab" data-material="nobelBiocare">Nobel Biocare</button>
+                    <button class="material-tab" data-material="zimmer">Zimmer Biomet</button>
+                    <button class="material-tab" data-material="biohorizons">BioHorizons</button>
+                </div>
+                
+                <div class="material-details active" id="straumann">
+                    <h3>Straumann® - The Gold Standard</h3>
+                    <div class="material-grid">
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>SLActive® Surface</strong>
+                                <p>Fastest healing technology - reduces healing time by 50%</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Roxolid® Material</strong>
+                                <p>Stronger than pure titanium, ideal for small implants</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Lifetime Guarantee</strong>
+                                <p>Comprehensive warranty on all components</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>60+ Years Heritage</strong>
+                                <p>Most researched implant system worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="durability-meter">
+                        <h4>Success Rate</h4>
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="width: 98%;">98.8%</div>
+                        </div>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Based on 10-year clinical studies</p>
+                    </div>
+                </div>
+                
+                <div class="material-details" id="nobelBiocare">
+                    <h3>Nobel Biocare® - Innovation Leader</h3>
+                    <div class="material-grid">
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>All-on-4® Pioneer</strong>
+                                <p>Original developer of full-arch immediate loading</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>TiUnite® Surface</strong>
+                                <p>Enhanced osseointegration for challenging cases</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>NobelProcera®</strong>
+                                <p>CAD/CAM precision for perfect restorations</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Immediate Function</strong>
+                                <p>Same-day teeth protocols available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="durability-meter">
+                        <h4>Success Rate</h4>
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="width: 97%;">97.5%</div>
+                        </div>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Industry-leading innovation</p>
+                    </div>
+                </div>
+                
+                <div class="material-details" id="zimmer">
+                    <h3>Zimmer Biomet - American Excellence</h3>
+                    <div class="material-grid">
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Trabecular Metal™</strong>
+                                <p>Revolutionary porous technology for bone growth</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Platform Switching</strong>
+                                <p>Preserves more bone around implant</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Made in USA</strong>
+                                <p>Strict quality control standards</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Encode® Technology</strong>
+                                <p>Eliminates impression taking</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="durability-meter">
+                        <h4>Success Rate</h4>
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="width: 96%;">96.2%</div>
+                        </div>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Excellent for complex cases</p>
+                    </div>
+                </div>
+                
+                <div class="material-details" id="biohorizons">
+                    <h3>BioHorizons - Value Leader</h3>
+                    <div class="material-grid">
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Laser-Lok® Technology</strong>
+                                <p>Prevents bone loss at implant neck</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Cost-Effective</strong>
+                                <p>Premium quality at lower price point</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>TeethXpress®</strong>
+                                <p>Full-arch solution in one day</p>
+                            </div>
+                        </div>
+                        <div class="material-feature">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <strong>Comprehensive Warranty</strong>
+                                <p>Lifetime coverage available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="durability-meter">
+                        <h4>Success Rate</h4>
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="width: 95%;">95.3%</div>
+                        </div>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Best value for your investment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Before/After Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Life-Changing Transformations</h2>
+                <p>Real patients, real results - see what's possible</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="case-filter">
+                    <button class="filter-btn active" data-filter="all">All Cases</button>
+                    <button class="filter-btn" data-filter="single">Single Tooth</button>
+                    <button class="filter-btn" data-filter="multiple">Multiple Teeth</button>
+                    <button class="filter-btn" data-filter="fullarch">Full Arch</button>
+                </div>
+                
+                <div class="cases-grid">
+                    <div class="case-card" data-category="single">
+                        <div class="case-images">
+                            <div class="before-img">
+                                <img src="https://via.placeholder.com/350x250/CCCCCC/666666?text=Missing+Front+Tooth" alt="Before">
+                                <span class="img-label">BEFORE</span>
+                            </div>
+                            <div class="after-img">
+                                <img src="https://via.placeholder.com/350x250/0077BE/FFFFFF?text=Perfect+Restoration" alt="After">
+                                <span class="img-label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-type">Single Tooth Replacement</div>
+                            <h4>Front Tooth Implant</h4>
+                            <p>Lost tooth in accident - restored with immediate implant</p>
+                            <div class="case-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">4 months</div>
+                                    <div>Total time</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">$3,500</div>
+                                    <div>Total cost</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">Straumann</div>
+                                    <div>Implant type</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card" data-category="multiple">
+                        <div class="case-images">
+                            <div class="before-img">
+                                <img src="https://via.placeholder.com/350x250/CCCCCC/666666?text=Multiple+Missing" alt="Before">
+                                <span class="img-label">BEFORE</span>
+                            </div>
+                            <div class="after-img">
+                                <img src="https://via.placeholder.com/350x250/00A8A8/FFFFFF?text=Full+Restoration" alt="After">
+                                <span class="img-label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-type">Multiple Implants</div>
+                            <h4>3 Missing Molars Replaced</h4>
+                            <p>Restored chewing function with 3 implants and bridge</p>
+                            <div class="case-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">6 months</div>
+                                    <div>Total time</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">$8,900</div>
+                                    <div>Total cost</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">Nobel</div>
+                                    <div>Implant type</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card" data-category="fullarch">
+                        <div class="case-images">
+                            <div class="before-img">
+                                <img src="https://via.placeholder.com/350x250/CCCCCC/666666?text=Denture+Wearer" alt="Before">
+                                <span class="img-label">BEFORE</span>
+                            </div>
+                            <div class="after-img">
+                                <img src="https://via.placeholder.com/350x250/28A745/FFFFFF?text=All-on-4+Success" alt="After">
+                                <span class="img-label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-type">All-on-4® Full Arch</div>
+                            <h4>Complete Upper Restoration</h4>
+                            <p>From dentures to fixed teeth in one day</p>
+                            <div class="case-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">1 day</div>
+                                    <div>New teeth</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">$19,500</div>
+                                    <div>Total cost</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">4 implants</div>
+                                    <div>Full arch</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--clean-white);">Why 5,000+ Patients Trust Us</h2>
+                <p style="color: var(--clean-white); opacity: 0.9;">Industry-leading expertise and technology</p>
+            </div>
+            
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">🏆</div>
+                    <div class="trust-number">98%</div>
+                    <p>Success Rate</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">⭐</div>
+                    <div class="trust-number">4.9</div>
+                    <p>Google Rating</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🎓</div>
+                    <div class="trust-number">25+</div>
+                    <p>Years Experience</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🛡️</div>
+                    <div class="trust-number">Lifetime</div>
+                    <p>Warranty Available</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🏥</div>
+                    <div class="trust-number">AAID</div>
+                    <p>Certified Specialist</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💰</div>
+                    <div class="trust-number">$0</div>
+                    <p>Down Payment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Interactive -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Implants vs Other Options</h2>
+                <p>See why implants are the superior long-term investment</p>
+            </div>
+            
+            <div class="comparison-interactive">
+                <div class="comparison-controls">
+                    <button class="comparison-btn active" data-compare="all">View All</button>
+                    <button class="comparison-btn" data-compare="cost">Cost Analysis</button>
+                    <button class="comparison-btn" data-compare="comfort">Comfort & Function</button>
+                    <button class="comparison-btn" data-compare="longevity">Longevity</button>
+                </div>
+                
+                <div class="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Dental Implants <span class="winner">BEST</span></th>
+                                <th>Dental Bridge</th>
+                                <th>Dentures</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="all cost">
+                                <td><strong>Initial Cost</strong></td>
+                                <td>$3,000-$4,500 per tooth</td>
+                                <td>$2,000-$5,000 (3 units)</td>
+                                <td>$600-$1,800</td>
+                            </tr>
+                            <tr class="all cost longevity">
+                                <td><strong>Lifetime Cost</strong></td>
+                                <td style="color: var(--success-green); font-weight: bold;">Lowest - lasts 25+ years</td>
+                                <td>Higher - replace every 10-15 years</td>
+                                <td>Highest - replace every 5-8 years</td>
+                            </tr>
+                            <tr class="all comfort">
+                                <td><strong>Feels Like Natural Teeth</strong></td>
+                                <td style="color: var(--success-green);">✓ 100% natural feeling</td>
+                                <td>✓ Fixed in place</td>
+                                <td>✗ Can slip and slide</td>
+                            </tr>
+                            <tr class="all comfort">
+                                <td><strong>Eating Ability</strong></td>
+                                <td style="color: var(--success-green);">100% - eat anything</td>
+                                <td>90% - some restrictions</td>
+                                <td>25-50% - many restrictions</td>
+                            </tr>
+                            <tr class="all longevity">
+                                <td><strong>Bone Preservation</strong></td>
+                                <td style="color: var(--success-green);">✓ Prevents bone loss</td>
+                                <td>✗ Bone loss continues</td>
+                                <td>✗ Accelerates bone loss</td>
+                            </tr>
+                            <tr class="all comfort">
+                                <td><strong>Adjacent Teeth</strong></td>
+                                <td style="color: var(--success-green);">✓ No impact</td>
+                                <td>✗ Must grind down healthy teeth</td>
+                                <td>✓ No impact</td>
+                            </tr>
+                            <tr class="all comfort">
+                                <td><strong>Speech</strong></td>
+                                <td style="color: var(--success-green);">✓ Perfect speech</td>
+                                <td>✓ Normal speech</td>
+                                <td>✗ May affect speech</td>
+                            </tr>
+                            <tr class="all longevity">
+                                <td><strong>Maintenance</strong></td>
+                                <td style="color: var(--success-green);">Brush & floss normally</td>
+                                <td>Special flossing required</td>
+                                <td>Remove daily for cleaning</td>
+                            </tr>
+                            <tr class="all cost">
+                                <td><strong>Insurance Coverage</strong></td>
+                                <td>50% typical</td>
+                                <td>50% typical</td>
+                                <td>50% typical</td>
+                            </tr>
+                            <tr class="all longevity">
+                                <td><strong>Success Rate</strong></td>
+                                <td style="color: var(--success-green); font-weight: bold;">98% success rate</td>
+                                <td>85% at 10 years</td>
+                                <td>Variable</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Urgency -->
+    <section id="book" class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Get Your Smile Back?</h2>
+            <p>Join thousands who have transformed their lives with dental implants</p>
+            
+            <div class="limited-offer">
+                <h3>🎯 Limited February Special - Save $1,000! 🎯</h3>
+                <ul style="list-style: none; font-size: 1.125rem; margin: 1rem 0;">
+                    <li>✓ FREE 3D CT Scan ($495 value)</li>
+                    <li>✓ FREE Consultation ($299 value)</li>
+                    <li>✓ $500 OFF Each Implant</li>
+                    <li>✓ 0% Financing for 24 Months</li>
+                    <li>✓ FREE Teeth Whitening ($399 value)</li>
+                </ul>
+                <div class="offer-countdown">
+                    <div>Offer expires in:</div>
+                    <div class="countdown-unit">
+                        <div id="days">5</div>
+                        <small>days</small>
+                    </div>
+                    <div class="countdown-unit">
+                        <div id="hours">14</div>
+                        <small>hours</small>
+                    </div>
+                    <div class="countdown-unit">
+                        <div id="minutes">32</div>
+                        <small>mins</small>
+                    </div>
+                    <div class="countdown-unit">
+                        <div id="seconds">15</div>
+                        <small>secs</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="tel:5551234567" class="btn-primary pulse">
+                    📞 Call Now: (555) 123-4567
+                </a>
+                <a href="#" class="btn-secondary" onclick="showScheduler()">
+                    Schedule Online
+                </a>
+            </div>
+            
+            <p style="margin-top: 1.5rem; font-size: 1rem;">
+                <strong>Emergency?</strong> We offer same-day consultations for urgent cases<br>
+                <strong>After hours?</strong> Leave a message and we'll call you first thing
+            </p>
+        </div>
+    </section>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <div class="floating-btn pulse" onclick="window.location.href='tel:5551234567'">
+            📞
+        </div>
+        <div class="floating-btn" onclick="window.location.href='#calculator'">
+            💰
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Implant Services</h4>
+                <ul>
+                    <li><a href="#">Single Tooth Implants</a></li>
+                    <li><a href="#">Multiple Implants</a></li>
+                    <li><a href="#">All-on-4®</a></li>
+                    <li><a href="#">All-on-6</a></li>
+                    <li><a href="#">Implant Dentures</a></li>
+                    <li><a href="#">Bone Grafting</a></li>
+                    <li><a href="#">Sinus Lifts</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Patient Resources</h4>
+                <ul>
+                    <li><a href="#">Financing Calculator</a></li>
+                    <li><a href="#">Insurance Guide</a></li>
+                    <li><a href="#">Pre-Op Instructions</a></li>
+                    <li><a href="#">Post-Op Care</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Patient Forms</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Why Choose Us</h4>
+                <ul>
+                    <li><a href="#">3D Guided Surgery</a></li>
+                    <li><a href="#">AAID Specialist</a></li>
+                    <li><a href="#">Success Rates</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Warranties</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Awards</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact & Emergency</h4>
+                <p><strong>Emergency Line:</strong><br>
+                (555) 123-4567</p>
+                <p style="margin-top: 1rem;">
+                    <strong>Office Hours:</strong><br>
+                    Mon-Fri: 8am-6pm<br>
+                    Sat: 9am-2pm<br>
+                    <span style="color: var(--success-green);">Same-day consultations available</span>
+                </p>
+                <p style="margin-top: 1rem;">
+                    123 Main Street, Suite 100<br>
+                    Anytown, ST 12345
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 SmileCare Dental Implant Center. All rights reserved. | Advanced technology meets compassionate care.</p>
+        </div>
+    </footer>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
+                });
+            }
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                }
+            }
+        }
+
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

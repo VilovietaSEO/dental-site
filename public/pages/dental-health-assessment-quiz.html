@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take our comprehensive Dental Health Assessment Quiz. Get your personalized dental profile, treatment recommendations, and cost estimates in just 15 questions.">
+    <meta name="keywords" content="dental health quiz, oral health assessment, personalized dental care, dental profile quiz, cost calculator">
+    <title>Dental Health Assessment Quiz - Complete Version | SmileCare Dental</title>
+    
+    <style>
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: #E6F7F7;
+            --warning-orange: #FFA500;
+            --danger-red: #DC3545;
+            --purple-accent: #6f42c1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+            background: linear-gradient(135deg, var(--soft-gray) 0%, #e8f4f8 100%);
+            min-height: 100vh;
+        }
+        
+        /* Sticky Header */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--clean-white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .header-phone {
+            color: var(--success-green);
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Quiz Container */
+        .quiz-container {
+            max-width: 900px;
+            margin: 100px auto 50px;
+            background: var(--clean-white);
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Progress Bar Enhanced */
+        .progress-container {
+            background: linear-gradient(135deg, var(--light-teal) 0%, #d4f1f4 100%);
+            padding: 25px;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--trust-blue), var(--accent-teal));
+            border-radius: 6px;
+            width: 0%;
+            transition: width 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(255,255,255,0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255,255,255,0.2) 50%,
+                rgba(255,255,255,0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+            background-size: 30px 30px;
+            animation: progress-stripes 1s linear infinite;
+        }
+        
+        @keyframes progress-stripes {
+            0% { background-position: 0 0; }
+            100% { background-position: 30px 0; }
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--trust-blue);
+            font-size: 18px;
+        }
+        
+        /* Quiz Content */
+        .quiz-content {
+            padding: 50px;
+            min-height: 400px;
+        }
+        
+        .question-container {
+            animation: slideInUp 0.5s ease;
+        }
+        
+        .question-number {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .question-text {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        .answer-options {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .answer-option {
+            background: var(--soft-gray);
+            border: 3px solid transparent;
+            border-radius: 15px;
+            padding: 20px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+        }
+        
+        .answer-option:hover {
+            background: var(--light-teal);
+            border-color: var(--accent-teal);
+            transform: translateX(5px);
+        }
+        
+        .answer-option.selected {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border-color: var(--trust-blue);
+        }
+        
+        .answer-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        
+        /* Navigation Buttons */
+        .navigation-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+            background: var(--soft-gray);
+        }
+        
+        .nav-button {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+        
+        .nav-button.primary {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+        }
+        
+        .nav-button.primary:hover {
+            background: #005a8b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,119,190,0.3);
+        }
+        
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Results Container */
+        .results-container {
+            padding: 50px;
+            text-align: center;
+            display: none;
+        }
+        
+        .results-container h2 {
+            font-size: 36px;
+            color: var(--trust-blue);
+            margin-bottom: 20px;
+        }
+        
+        .profile-badge {
+            display: inline-block;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: white;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        /* Email Capture */
+        .email-capture {
+            background: var(--light-teal);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        
+        .email-form {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .email-input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid var(--accent-teal);
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        
+        .submit-button {
+            padding: 15px 30px;
+            background: var(--success-green);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        
+        /* Skip Button */
+        .skip-button {
+            background: none;
+            color: var(--charcoal);
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+        
+        .skip-button:hover {
+            opacity: 1;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .quiz-content {
+                padding: 30px 20px;
+            }
+            
+            .question-text {
+                font-size: 22px;
+            }
+            
+            .answer-option {
+                padding: 15px 20px;
+                font-size: 16px;
+            }
+            
+            .email-form {
+                flex-direction: column;
+            }
+            
+            .navigation-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header" id="stickyHeader">
+        <div class="header-content">
+            <a href="homepage.html" class="logo" aria-label="SmileCare Dental Home">SmileCare Dental</a>
+            <a href="tel:1-800-SMILE-NOW" class="header-phone" aria-label="Call us">
+                <span>📞</span>
+                <span>1-800-SMILE-NOW</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Quiz Container -->
+    <main class="quiz-container" role="main">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Question 1 of 15</div>
+        </div>
+
+        <!-- Quiz Content -->
+        <div class="quiz-content" id="quizContent">
+            <div class="question-container" id="questionContainer">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-container">
+            <button class="nav-button" id="prevButton" onclick="previousQuestion()" disabled>Previous</button>
+            <button class="nav-button primary" id="nextButton" onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!-- Results Container -->
+        <div class="results-container" id="resultsContainer">
+            <h2>Your Dental Health Profile</h2>
+            <div class="profile-badge" id="profileBadge"></div>
+            <p id="profileDescription"></p>
+            
+            <div class="email-capture">
+                <h3>Get Your Detailed Report</h3>
+                <p>Enter your email to receive personalized recommendations and cost estimates</p>
+                <form class="email-form" onsubmit="submitEmail(event)">
+                    <input type="email" class="email-input" placeholder="Enter your email" required>
+                    <button type="submit" class="submit-button">Get Report</button>
+                </form>
+                <button class="skip-button" onclick="skipEmail()">Skip for now</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Quiz Data
+        const quizQuestions = [
+            {
+                id: 1,
+                question: "When was your last dental cleaning?",
+                options: [
+                    "Within the last 6 months",
+                    "6-12 months ago",
+                    "1-2 years ago",
+                    "More than 2 years ago"
+                ]
+            },
+            {
+                id: 2,
+                question: "Are you currently experiencing any dental pain?",
+                options: [
+                    "No pain at all",
+                    "Mild sensitivity",
+                    "Moderate discomfort",
+                    "Severe pain"
+                ]
+            },
+            {
+                id: 3,
+                question: "How would you rate your current oral hygiene routine?",
+                options: [
+                    "Excellent (brush 2x daily, floss daily)",
+                    "Good (brush daily, floss occasionally)",
+                    "Fair (brush daily, rarely floss)",
+                    "Needs improvement"
+                ]
+            },
+            {
+                id: 4,
+                question: "Do you have any missing teeth?",
+                options: [
+                    "No missing teeth",
+                    "1-2 missing teeth",
+                    "3-5 missing teeth",
+                    "More than 5 missing teeth"
+                ]
+            },
+            {
+                id: 5,
+                question: "Are you interested in cosmetic dental improvements?",
+                options: [
+                    "Very interested",
+                    "Somewhat interested",
+                    "Maybe in the future",
+                    "Not interested"
+                ]
+            },
+            {
+                id: 6,
+                question: "Do your gums bleed when you brush or floss?",
+                options: [
+                    "Never",
+                    "Occasionally",
+                    "Frequently",
+                    "Always"
+                ]
+            },
+            {
+                id: 7,
+                question: "How satisfied are you with your smile?",
+                options: [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Not satisfied"
+                ]
+            },
+            {
+                id: 8,
+                question: "Do you have dental insurance?",
+                options: [
+                    "Yes, comprehensive coverage",
+                    "Yes, basic coverage",
+                    "No, but interested in payment plans",
+                    "No insurance"
+                ]
+            },
+            {
+                id: 9,
+                question: "Have you ever had orthodontic treatment?",
+                options: [
+                    "Yes, and I'm happy with results",
+                    "Yes, but need touch-ups",
+                    "No, but interested",
+                    "No, not interested"
+                ]
+            },
+            {
+                id: 10,
+                question: "Do you grind or clench your teeth?",
+                options: [
+                    "No",
+                    "Sometimes during the day",
+                    "At night while sleeping",
+                    "Both day and night"
+                ]
+            },
+            {
+                id: 11,
+                question: "How often do you consume sugary drinks or snacks?",
+                options: [
+                    "Rarely or never",
+                    "1-2 times per week",
+                    "3-5 times per week",
+                    "Daily"
+                ]
+            },
+            {
+                id: 12,
+                question: "Are you anxious about dental visits?",
+                options: [
+                    "Not at all",
+                    "Slightly anxious",
+                    "Moderately anxious",
+                    "Very anxious"
+                ]
+            },
+            {
+                id: 13,
+                question: "Do you have any chronic health conditions?",
+                options: [
+                    "No chronic conditions",
+                    "Diabetes",
+                    "Heart disease",
+                    "Other condition affecting oral health"
+                ]
+            },
+            {
+                id: 14,
+                question: "What's your primary dental concern?",
+                options: [
+                    "Preventive care",
+                    "Pain relief",
+                    "Cosmetic improvement",
+                    "Replacing missing teeth"
+                ]
+            },
+            {
+                id: 15,
+                question: "How soon would you like to schedule an appointment?",
+                options: [
+                    "As soon as possible",
+                    "Within the next week",
+                    "Within the next month",
+                    "Just exploring options"
+                ]
+            }
+        ];
+
+        // Quiz State
+        let currentQuestion = 0;
+        let answers = {};
+
+        // Initialize Quiz
+        function initializeQuiz() {
+            showQuestion(0);
+            updateProgress();
+        }
+
+        // Show Question
+        function showQuestion(index) {
+            const question = quizQuestions[index];
+            const container = document.getElementById('questionContainer');
+            
+            container.innerHTML = `
+                <div class="question-number">Question ${index + 1}</div>
+                <h2 class="question-text">${question.question}</h2>
+                <div class="answer-options">
+                    ${question.options.map((option, i) => `
+                        <label class="answer-option ${answers[index] === i ? 'selected' : ''}">
+                            <input type="radio" name="question${index}" value="${i}" 
+                                ${answers[index] === i ? 'checked' : ''}
+                                onchange="selectAnswer(${index}, ${i})">
+                            <span>${option}</span>
+                        </label>
+                    `).join('')}
+                </div>
+            `;
+            
+            // Update navigation buttons
+            document.getElementById('prevButton').disabled = index === 0;
+            document.getElementById('nextButton').textContent = 
+                index === quizQuestions.length - 1 ? 'See Results' : 'Next';
+        }
+
+        // Select Answer
+        function selectAnswer(questionIndex, answerIndex) {
+            answers[questionIndex] = answerIndex;
+            
+            // Update selected state
+            document.querySelectorAll('.answer-option').forEach((option, i) => {
+                option.classList.toggle('selected', i === answerIndex);
+            });
+        }
+
+        // Navigate Questions
+        function nextQuestion() {
+            if (answers[currentQuestion] === undefined) {
+                alert('Please select an answer before continuing.');
+                return;
+            }
+            
+            if (currentQuestion < quizQuestions.length - 1) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+                updateProgress();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+                updateProgress();
+            }
+        }
+
+        // Update Progress
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('progressText').textContent = 
+                `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+        }
+
+        // Calculate Profile
+        function calculateProfile() {
+            let score = 0;
+            Object.values(answers).forEach(answer => {
+                score += answer;
+            });
+            
+            const avgScore = score / Object.keys(answers).length;
+            
+            if (avgScore < 1) {
+                return {
+                    type: 'Guardian',
+                    description: 'You have excellent oral health habits! Keep up the great work with regular checkups.'
+                };
+            } else if (avgScore < 2) {
+                return {
+                    type: 'Explorer',
+                    description: 'You\'re doing well but there\'s room for improvement. Let\'s explore your options!'
+                };
+            } else if (avgScore < 3) {
+                return {
+                    type: 'Warrior',
+                    description: 'You\'re fighting some dental challenges. We can help you win the battle!'
+                };
+            } else {
+                return {
+                    type: 'Rebuilder',
+                    description: 'It\'s time for a fresh start. We\'ll help you rebuild your oral health!'
+                };
+            }
+        }
+
+        // Show Results
+        function showResults() {
+            const profile = calculateProfile();
+            
+            document.getElementById('quizContent').style.display = 'none';
+            document.querySelector('.navigation-container').style.display = 'none';
+            document.getElementById('resultsContainer').style.display = 'block';
+            
+            document.getElementById('profileBadge').textContent = `You're a ${profile.type}!`;
+            document.getElementById('profileDescription').textContent = profile.description;
+            
+            // Update progress to 100%
+            document.getElementById('progressFill').style.width = '100%';
+            document.getElementById('progressText').textContent = 'Quiz Complete!';
+        }
+
+        // Email Submission
+        function submitEmail(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // Here you would normally send this to your API
+            alert(`Thank you! We'll send your personalized report to ${email}`);
+            
+            // Redirect to booking page
+            window.location.href = 'book-appointment.html';
+        }
+
+        // Skip Email
+        function skipEmail() {
+            window.location.href = 'book-appointment.html';
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', initializeQuiz);
+    </script>
+</body>
+</html>

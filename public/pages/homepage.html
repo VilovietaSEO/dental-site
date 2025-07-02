@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Smile in One Visit | Modern Dental Care - 98% Patient Satisfaction</title>
+    <meta name="description" content="Join 15,000+ happy patients who've transformed their smiles. Same-day appointments, insurance savings calculator, and pain-free guarantee. Book your FREE consultation today!">
+    <meta name="keywords" content="dentist, dental care, teeth whitening, dental implants, cosmetic dentistry, emergency dental">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Transform Your Smile in One Visit | Modern Dental Care">
+    <meta property="og:description" content="Award-winning dental practice with 98% patient satisfaction. Same-day appointments available.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/dental-office-hero.jpg">
+    <link rel="canonical" href="https://moderndentalcare.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Critical CSS inlined for performance -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --warning-orange: #FF6B35;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10001;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Floating Action Button - Optimized */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 25px rgba(40, 167, 69, 0.5);
+            z-index: 999;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            will-change: transform;
+        }
+        
+        .floating-cta:hover, .floating-cta:focus {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(40, 167, 69, 0.6);
+            outline: 2px solid var(--clean-white);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 5px 25px rgba(40, 167, 69, 0.5); }
+            50% { box-shadow: 0 8px 35px rgba(40, 167, 69, 0.7); }
+            100% { box-shadow: 0 5px 25px rgba(40, 167, 69, 0.5); }
+        }
+        
+        /* Header & Navigation - Enhanced for accessibility */
+        header {
+            background: var(--clean-white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .top-bar {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .urgency-banner {
+            background: var(--warning-orange);
+            color: var(--clean-white);
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: bold;
+            animation: slideDown 0.5s ease;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info span {
+            margin-right: 1rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover, .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover, .cta-button:focus {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            outline: 2px solid var(--clean-white);
+        }
+        
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: 2px solid var(--trust-blue);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            color: var(--trust-blue);
+        }
+
+        .mobile-menu:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        /* Hero Section - Performance optimized */
+        .hero {
+            position: relative;
+            margin-top: 140px;
+            padding: 6rem 0;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(0,119,190,0.9), rgba(0,168,168,0.9));
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .hero-video.loaded {
+            opacity: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,119,190,0.85), rgba(0,168,168,0.85));
+            z-index: -1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: var(--clean-white);
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+            line-height: 1.2;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            animation: fadeInUp 1s ease;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            animation: fadeInUp 1.2s ease;
+            flex-wrap: wrap;
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: var(--clean-white);
+            border: 2px solid var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .secondary-button:hover, .secondary-button:focus {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+            outline: 2px solid var(--trust-blue);
+        }
+        
+        /* Appointment Widget - Enhanced accessibility */
+        .appointment-widget {
+            background: var(--clean-white);
+            padding: 3rem 0;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .widget-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .appointment-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            align-items: end;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            color: var(--trust-blue);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.2);
+        }
+
+        .form-group input:invalid,
+        .form-group select:invalid {
+            border-color: #dc3545;
+        }
+        
+        .submit-btn {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            height: fit-content;
+        }
+        
+        .submit-btn:hover, .submit-btn:focus {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            outline: 2px solid var(--clean-white);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Services Grid - Performance optimized */
+        .services {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: var(--trust-blue);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--trust-blue), var(--accent-teal));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover::before,
+        .service-card:focus::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover,
+        .service-card:focus {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-color: var(--trust-blue);
+            outline: none;
+        }
+
+        .service-card:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: var(--trust-blue);
+        }
+        
+        .service-card h3 {
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-price {
+            color: var(--success-green);
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        /* Insurance Calculator - Enhanced UX */
+        .calculator-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+        }
+        
+        .calculator-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .calculator-container h3 {
+            color: var(--trust-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .calc-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .calc-group label {
+            color: var(--charcoal);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .calc-group select,
+        .calc-group input {
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .calc-group select:focus,
+        .calc-group input:focus {
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0, 119, 190, 0.2);
+            outline: none;
+        }
+        
+        .calc-result {
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .calc-result.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .savings-amount {
+            font-size: 2.5rem;
+            color: var(--success-green);
+            font-weight: bold;
+        }
+        
+        /* Trust Building - Optimized animations */
+        .trust {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .trust-item {
+            padding: 1rem;
+            transition: var(--transition);
+        }
+        
+        .trust-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .trust-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            display: block;
+            animation: countUp 2s ease;
+        }
+        
+        /* Live Reviews Widget - Enhanced */
+        .reviews-widget {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .google-rating {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .rating-stars {
+            color: #FFC107;
+            font-size: 1.5rem;
+        }
+        
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--success-green);
+            font-size: 0.9rem;
+        }
+        
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--success-green);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .review-item {
+            background: var(--clean-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .review-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .reviewer-name {
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+        
+        .review-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Before/After Gallery - Lazy loading optimized */
+        .gallery-section {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .before-after {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .before-after:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        .before-after-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .before-after img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .after-image {
+            clip-path: inset(0 50% 0 0);
+            transition: clip-path 0.5s ease;
+        }
+        
+        .before-after:hover .after-image,
+        .before-after:focus .after-image {
+            clip-path: inset(0 0 0 0);
+        }
+        
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--clean-white);
+            transform: translateX(-50%);
+            transition: left 0.5s ease;
+        }
+        
+        .before-after:hover .slider-handle,
+        .before-after:focus .slider-handle {
+            left: 100%;
+        }
+        
+        .ba-labels {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        
+        .ba-label {
+            background: rgba(0,0,0,0.7);
+            color: var(--clean-white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Team Credentials - Enhanced */
+        .team-section {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            transition: var(--transition);
+            padding: 1rem;
+            border-radius: 15px;
+        }
+        
+        .team-member:hover,
+        .team-member:focus {
+            transform: translateY(-5px);
+            background: var(--soft-gray);
+        }
+
+        .team-member:focus {
+            outline: 2px solid var(--trust-blue);
+        }
+        
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--clean-white);
+        }
+        
+        .member-name {
+            font-size: 1.2rem;
+            color: var(--trust-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .member-title {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        
+        .credential-badge {
+            background: var(--soft-gray);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+        }
+        
+        /* Exit Intent Popup - Enhanced */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .exit-popup.show {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .popup-content {
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #999;
+            padding: 0.5rem;
+        }
+        
+        .popup-close:hover,
+        .popup-close:focus {
+            color: var(--charcoal);
+            outline: 2px solid var(--trust-blue);
+            border-radius: 4px;
+        }
+        
+        .popup-title {
+            font-size: 2rem;
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .popup-offer {
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .offer-badge {
+            background: var(--warning-orange);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .offer-value {
+            font-size: 3rem;
+            color: var(--success-green);
+            font-weight: bold;
+        }
+        
+        /* Footer - Enhanced */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--accent-teal);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: var(--clean-white);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 0.25rem;
+        }
+        
+        .footer-section a:hover,
+        .footer-section a:focus {
+            color: var(--accent-teal);
+            outline: 2px solid var(--accent-teal);
+            border-radius: 4px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #aaa;
+        }
+        
+        /* Mobile Bottom Navigation - Enhanced */
+        .mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--clean-white);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 998;
+        }
+        
+        .bottom-nav-items {
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem 0;
+        }
+        
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--charcoal);
+            padding: 0.5rem;
+            transition: var(--transition);
+            border-radius: 8px;
+        }
+        
+        .bottom-nav-item:hover,
+        .bottom-nav-item:focus,
+        .bottom-nav-item.active {
+            color: var(--trust-blue);
+            background: var(--soft-gray);
+            outline: none;
+        }
+        
+        .bottom-nav-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .bottom-nav-label {
+            font-size: 0.75rem;
+        }
+        
+        /* Animations - Performance optimized */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes countUp {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Error States */
+        .error {
+            border-color: #dc3545 !important;
+            background-color: #fff5f5;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Success States */
+        .success {
+            border-color: var(--success-green) !important;
+            background-color: #f0fff4;
+        }
+        
+        /* Mobile Responsive - Enhanced */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 140px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 140px);
+                background: var(--clean-white);
+                flex-direction: column;
+                padding: 2rem;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .mobile-bottom-nav {
+                display: block;
+            }
+            
+            .floating-cta {
+                bottom: 80px;
+                right: 20px;
+                padding: 0.75rem 1.25rem;
+            }
+            
+            .hero {
+                margin-top: 120px;
+                padding: 4rem 0;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .appointment-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .popup-content {
+                margin: 1rem;
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .service-card,
+            .review-item,
+            .popup-content {
+                border: 2px solid var(--charcoal);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .floating-cta,
+            .mobile-bottom-nav,
+            .exit-popup,
+            .hero-video {
+                display: none !important;
+            }
+            
+            .hero {
+                background: var(--trust-blue) !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Floating CTA Button -->
+    <a href="#appointment" class="floating-cta" aria-label="Book appointment now">
+        <span role="img" aria-label="Calendar">📅</span>
+        <span>Book Now</span>
+    </a>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+        <div class="popup-content">
+            <button class="popup-close" data-action="close-popup" aria-label="Close popup">&times;</button>
+            <h2 id="popup-title" class="popup-title">Wait! Don't Leave Yet!</h2>
+            <p>Get your FREE smile consultation and save on your first visit!</p>
+            <div class="popup-offer">
+                <div class="offer-badge">LIMITED TIME OFFER</div>
+                <div class="offer-value">$150 OFF</div>
+                <p>Your First Treatment + FREE X-Rays</p>
+            </div>
+            <a href="#appointment" class="cta-button" style="font-size: 1.2rem; padding: 1rem 2rem;" onclick="closeExitPopup()">Claim Your Offer Now</a>
+            <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">*Valid for new patients only. Expires in 48 hours.</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header role="banner">
+        <div class="urgency-banner">
+            <span role="img" aria-label="Party">🎉</span> Limited Slots Available This Week! Same-Day Emergency Appointments - Call Now: (555) 123-4567
+        </div>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <span><span role="img" aria-label="Phone">📞</span> (555) 123-4567</span>
+                        <span><span role="img" aria-label="Message">💬</span> Text: (555) 123-4568</span>
+                        <span><span role="img" aria-label="Clock">🕒</span> Open Now Until 6PM</span>
+                    </div>
+                    <div>
+                        <span><span role="img" aria-label="Location">📍</span> 123 Main St, Your City | <span role="img" aria-label="Star">⭐</span> 4.9/5 Google Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <a href="#main-content" class="logo">
+                <span role="img" aria-label="Tooth">🦷</span>
+                <span>Modern Dental Care</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="services-hub.html">Services</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#gallery">Results</a></li>
+                <li><a href="#appointment" class="cta-button">Book Free Consultation</a></li>
+            </ul>
+            <button class="mobile-menu" data-action="toggle-menu" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section with Video Background -->
+        <section class="hero" id="home" role="banner">
+            <video class="hero-video" autoplay muted loop playsinline loading="lazy" aria-hidden="true">
+                <source src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAA" type="video/mp4">
+            </video>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <h1>Get the Smile You've Always Wanted<br>in Just One Visit!</h1>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span>Patient Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15,000+</span>
+                        <span>Happy Smiles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60 Min</span>
+                        <span>Average Wait Time</span>
+                    </div>
+                </div>
+                <p>Transform your smile with pain-free technology and see results today!</p>
+                <div class="hero-buttons">
+                    <a href="#appointment" class="cta-button" style="font-size: 1.2rem; padding: 1rem 2rem;">
+                        Get Your FREE Consultation ($299 Value)
+                    </a>
+                    <a href="#calculator" class="secondary-button">Calculate Your Savings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Appointment Widget -->
+        <section class="appointment-widget" id="appointment">
+            <div class="widget-container">
+                <h2 style="text-align: center; color: var(--trust-blue); margin-bottom: 2rem;">Book Your Appointment in 30 Seconds</h2>
+                <form class="appointment-form" onsubmit="handleAppointment(event)" novalidate>
+                    <div class="form-group">
+                        <label for="service">Select Service *</label>
+                        <select id="service" required aria-describedby="service-error">
+                            <option value="">Choose a service...</option>
+                            <option value="consultation">Free Consultation</option>
+                            <option value="cleaning">Professional Cleaning</option>
+                            <option value="whitening">Teeth Whitening</option>
+                            <option value="emergency">Emergency Care</option>
+                            <option value="cosmetic">Cosmetic Consultation</option>
+                        </select>
+                        <div id="service-error" class="error-message" role="alert"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" required min="" aria-describedby="date-error">
+                        <div id="date-error" class="error-message" role="alert"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <select id="time" required aria-describedby="time-error">
+                            <option value="">Select time...</option>
+                            <option value="morning">Morning (8AM-12PM)</option>
+                            <option value="afternoon">Afternoon (12PM-4PM)</option>
+                            <option value="evening">Evening (4PM-6PM)</option>
+                        </select>
+                        <div id="time-error" class="error-message" role="alert"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="(555) 123-4567" required aria-describedby="phone-error">
+                        <div id="phone-error" class="error-message" role="alert"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">Book My Appointment →</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem; color: #666;">
+                    <span style="color: var(--success-green); font-weight: bold;" role="img" aria-label="Check">✓</span> Instant confirmation 
+                    <span style="color: var(--success-green); font-weight: bold;" role="img" aria-label="Check">✓</span> No payment required 
+                    <span style="color: var(--success-green); font-weight: bold;" role="img" aria-label="Check">✓</span> Free cancellation
+                </p>
+            </div>
+        </section>
+
+        <!-- Services with Enhanced Hover Effects -->
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">Transform Your Smile Today</h2>
+                <p class="section-subtitle">Same-day treatments available • Insurance accepted • Payment plans from $49/month</p>
+                <div class="services-grid">
+                    <div class="service-card" onclick="location.href='services-hub.html#general'" role="button" tabindex="0" onkeydown="handleCardKeydown(event, 'services-hub.html#general')">
+                        <div class="service-icon" role="img" aria-label="Tooth">🦷</div>
+                        <h3>General Dentistry</h3>
+                        <p>Comprehensive care to keep your smile healthy</p>
+                        <p class="service-price">Most insurance covers 100%</p>
+                    </div>
+                    <div class="service-card" onclick="location.href='services-hub.html#cosmetic'" role="button" tabindex="0" onkeydown="handleCardKeydown(event, 'services-hub.html#cosmetic')">
+                        <div class="service-icon" role="img" aria-label="Sparkles">✨</div>
+                        <h3>Cosmetic Dentistry</h3>
+                        <p>Professional whitening & veneers</p>
+                        <p class="service-price">Results in 1 visit</p>
+                    </div>
+                    <div class="service-card" onclick="location.href='services-hub.html#orthodontic'" role="button" tabindex="0" onkeydown="handleCardKeydown(event, 'services-hub.html#orthodontic')">
+                        <div class="service-icon" role="img" aria-label="Grinning face">😁</div>
+                        <h3>Clear Aligners</h3>
+                        <p>Straighten teeth invisibly</p>
+                        <p class="service-price">$99/month plans</p>
+                    </div>
+                    <div class="service-card" onclick="location.href='services-hub.html#implants'" role="button" tabindex="0" onkeydown="handleCardKeydown(event, 'services-hub.html#implants')">
+                        <div class="service-icon" role="img" aria-label="Gear">⚙️</div>
+                        <h3>Dental Implants</h3>
+                        <p>Permanent tooth replacement</p>
+                        <p class="service-price">Lifetime warranty</p>
+                    </div>
+                    <div class="service-card" onclick="location.href='services-hub.html#pediatric'" role="button" tabindex="0" onkeydown="handleCardKeydown(event, 'services-hub.html#pediatric')">
+                        <div class="service-icon" role="img" aria-label="Baby">👶</div>
+                        <h3>Kids Dentistry</h3>
+                        <p>Gentle care for little smiles</p>
+                        <p class="service-price">Free for under 5</p>
+                    </div>
+                    <div class="service-card" onclick="location.href='services-hub.html#emergency'" role="button" tabindex="0" onkeydown="handleCardKeydown(event, 'services-hub.html#emergency')">
+                        <div class="service-icon" role="img" aria-label="Siren">🚨</div>
+                        <h3>Emergency Care</h3>
+                        <p>Same-day pain relief</p>
+                        <p class="service-price">Open weekends</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insurance Savings Calculator -->
+        <section class="calculator-section" id="calculator">
+            <div class="container">
+                <h2 class="section-title" style="color: white; margin-bottom: 2rem;">See How Much You Can Save</h2>
+                <div class="calculator-container">
+                    <h3>Insurance Savings Calculator</h3>
+                    <form class="calculator-form" onsubmit="calculateSavings(event)" novalidate>
+                        <div class="calc-group">
+                            <label for="insurance">Your Insurance Provider</label>
+                            <select id="insurance" required aria-describedby="insurance-error">
+                                <option value="">Select your insurance...</option>
+                                <option value="delta">Delta Dental</option>
+                                <option value="cigna">Cigna</option>
+                                <option value="aetna">Aetna</option>
+                                <option value="bcbs">Blue Cross Blue Shield</option>
+                                <option value="metlife">MetLife</option>
+                                <option value="other">Other</option>
+                                <option value="none">No Insurance</option>
+                            </select>
+                            <div id="insurance-error" class="error-message" role="alert"></div>
+                        </div>
+                        <div class="calc-group">
+                            <label for="treatment">Treatment Needed</label>
+                            <select id="treatment" required aria-describedby="treatment-error">
+                                <option value="">Select treatment...</option>
+                                <option value="cleaning">Cleaning & Exam ($250)</option>
+                                <option value="filling">Fillings ($300-500)</option>
+                                <option value="crown">Crown ($1,200)</option>
+                                <option value="whitening">Whitening ($599)</option>
+                                <option value="invisalign">Invisalign ($5,000)</option>
+                            </select>
+                            <div id="treatment-error" class="error-message" role="alert"></div>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">Calculate My Savings</button>
+                    </form>
+                    <div class="calc-result" id="calcResult" role="region" aria-live="polite">
+                        <p>Your estimated savings:</p>
+                        <div class="savings-amount" id="savingsAmount">$0</div>
+                        <p>Plus get <strong>$150 OFF</strong> as a new patient!</p>
+                        <a href="#appointment" class="cta-button" style="margin-top: 1rem;">Lock In These Savings</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Building with Live Reviews -->
+        <section class="trust" id="reviews">
+            <div class="container">
+                <h2 class="section-title">Why 15,000+ Patients Trust Us</h2>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <span class="trust-number">25+</span>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-number">98%</span>
+                        <p>5-Star Reviews</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-number">0%</span>
+                        <p>Pain Guarantee</p>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-number">60min</span>
+                        <p>Or Less Wait Time</p>
+                    </div>
+                </div>
+                
+                <!-- Live Google Reviews -->
+                <div class="reviews-widget">
+                    <div class="review-header">
+                        <div class="google-rating">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjNDI4NUY0Ii8+CiAgPHRleHQgeD0iMjAiIHk9IjI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIyNCI+RzwvdGV4dD4KPC9zdmc+" alt="Google" style="width: 40px;">
+                            <div>
+                                <div class="rating-stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+                                <div>4.9 out of 5 (487 reviews)</div>
+                            </div>
+                        </div>
+                        <div class="live-indicator">
+                            <span class="live-dot" aria-hidden="true"></span>
+                            <span>Live Reviews</span>
+                        </div>
+                    </div>
+                    <div class="reviews-container">
+                        <div class="review-item">
+                            <div class="review-meta">
+                                <span class="reviewer-name">Sarah M.</span>
+                                <span class="review-date">2 hours ago</span>
+                            </div>
+                            <div class="rating-stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Just had my teeth whitened and WOW! The results are incredible. Dr. Smith and the team made me feel so comfortable. Highly recommend!"</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-meta">
+                                <span class="reviewer-name">James L.</span>
+                                <span class="review-date">Yesterday</span>
+                            </div>
+                            <div class="rating-stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+                            <p>"Emergency appointment on a Saturday - they saw me within an hour! Pain-free root canal. These guys are miracle workers!"</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-meta">
+                                <span class="reviewer-name">Maria G.</span>
+                                <span class="review-date">3 days ago</span>
+                            </div>
+                            <div class="rating-stars" role="img" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
+                            <p>"My kids actually LOVE going to the dentist now! The pediatric team is amazing. They make it fun and educational."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before/After Gallery -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Real Results from Real Patients</h2>
+                <p class="section-subtitle">Hover to see the amazing transformations</p>
+                <div class="gallery-grid">
+                    <div class="before-after" tabindex="0" role="button" aria-label="Before and after comparison 1">
+                        <div class="before-after-container">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U5ZTllOSIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2IiBmb250LXNpemU9IjI0Ij5CZWZvcmU8L3RleHQ+Cjwvc3ZnPg==" alt="Before dental treatment" class="before-image" loading="lazy">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2YwZjhmZiIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDA3N0JFIiBmb250LXNpemU9IjI0Ij5BZnRlcjwvdGV4dD4KPC9zdmc+" alt="After dental treatment" class="after-image" loading="lazy">
+                            <div class="slider-handle" aria-hidden="true"></div>
+                            <div class="ba-labels">
+                                <span class="ba-label">Before</span>
+                                <span class="ba-label">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after" tabindex="0" role="button" aria-label="Before and after comparison 2">
+                        <div class="before-after-container">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U5ZTllOSIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2IiBmb250LXNpemU9IjI0Ij5CZWZvcmU8L3RleHQ+Cjwvc3ZnPg==" alt="Before dental treatment" class="before-image" loading="lazy">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2YwZjhmZiIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDA3N0JFIiBmb250LXNpemU9IjI0Ij5BZnRlcjwvdGV4dD4KPC9zdmc+" alt="After dental treatment" class="after-image" loading="lazy">
+                            <div class="slider-handle" aria-hidden="true"></div>
+                            <div class="ba-labels">
+                                <span class="ba-label">Before</span>
+                                <span class="ba-label">After</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after" tabindex="0" role="button" aria-label="Before and after comparison 3">
+                        <div class="before-after-container">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2U5ZTllOSIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNjY2IiBmb250LXNpemU9IjI0Ij5CZWZvcmU8L3RleHQ+Cjwvc3ZnPg==" alt="Before dental treatment" class="before-image" loading="lazy">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2YwZjhmZiIvPgogIDx0ZXh0IHg9IjIwMCIgeT0iMTUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDA3N0JFIiBmb250LXNpemU9IjI0Ij5BZnRlcjwvdGV4dD4KPC9zdmc+" alt="After dental treatment" class="after-image" loading="lazy">
+                            <div class="slider-handle" aria-hidden="true"></div>
+                            <div class="ba-labels">
+                                <span class="ba-label">Before</span>
+                                <span class="ba-label">After</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem;">
+                    <a href="#appointment" class="cta-button">Start Your Transformation Today</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Team Credentials -->
+        <section class="team-section" id="team">
+            <div class="container">
+                <h2 class="section-title">Meet Your Award-Winning Team</h2>
+                <div class="team-grid">
+                    <div class="team-member" tabindex="0">
+                        <div class="member-photo" role="img" aria-label="Dr. Michael Smith">👨‍⚕️</div>
+                        <h3 class="member-name">Dr. Michael Smith</h3>
+                        <p class="member-title">Lead Dentist & Founder</p>
+                        <div class="credentials">
+                            <span class="credential-badge">DDS Harvard</span>
+                            <span class="credential-badge">25+ Years</span>
+                            <span class="credential-badge">Top 1% Invisalign</span>
+                            <span class="credential-badge">5000+ Implants</span>
+                        </div>
+                    </div>
+                    <div class="team-member" tabindex="0">
+                        <div class="member-photo" role="img" aria-label="Dr. Sarah Johnson">👩‍⚕️</div>
+                        <h3 class="member-name">Dr. Sarah Johnson</h3>
+                        <p class="member-title">Cosmetic Specialist</p>
+                        <div class="credentials">
+                            <span class="credential-badge">DMD NYU</span>
+                            <span class="credential-badge">Veneers Expert</span>
+                            <span class="credential-badge">Celebrity Dentist</span>
+                            <span class="credential-badge">15+ Years</span>
+                        </div>
+                    </div>
+                    <div class="team-member" tabindex="0">
+                        <div class="member-photo" role="img" aria-label="Dr. James Lee">👨‍⚕️</div>
+                        <h3 class="member-name">Dr. James Lee</h3>
+                        <p class="member-title">Pediatric Specialist</p>
+                        <div class="credentials">
+                            <span class="credential-badge">Pediatric Board</span>
+                            <span class="credential-badge">Child Psychology</span>
+                            <span class="credential-badge">Gentle Touch</span>
+                            <span class="credential-badge">10+ Years</span>
+                        </div>
+                    </div>
+                    <div class="team-member" tabindex="0">
+                        <div class="member-photo" role="img" aria-label="Dr. Emily Chen">👩‍⚕️</div>
+                        <h3 class="member-name">Dr. Emily Chen</h3>
+                        <p class="member-title">Orthodontist</p>
+                        <div class="credentials">
+                            <span class="credential-badge">MS Orthodontics</span>
+                            <span class="credential-badge">Invisalign Diamond</span>
+                            <span class="credential-badge">Fast Treatment</span>
+                            <span class="credential-badge">12+ Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="hero" style="padding: 4rem 0; margin-top: 0;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Love Your Smile?</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 2rem;">Join thousands who've transformed their smiles with us</p>
+                <div class="hero-stats" style="margin-bottom: 2rem;">
+                    <div class="stat-item">
+                        <span class="stat-number">$150</span>
+                        <span>New Patient Savings</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0%</span>
+                        <span>Interest for 18 Months</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span>Satisfaction Guarantee</span>
+                    </div>
+                </div>
+                <a href="#appointment" class="cta-button" style="font-size: 1.3rem; padding: 1.2rem 2.5rem;">
+                    Schedule Your FREE Consultation Now
+                </a>
+                <p style="margin-top: 1rem; opacity: 0.9;"><span role="img" aria-label="Clock">⏰</span> Next available slot: Today at 2:30 PM</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Modern Dental Care</h4>
+                    <p>Award-winning dental practice with 25+ years of excellence. We combine cutting-edge technology with compassionate care to deliver exceptional results.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 1rem;" aria-label="Facebook"><span role="img" aria-label="Facebook">📘</span></a>
+                        <a href="#" style="margin-right: 1rem;" aria-label="Instagram"><span role="img" aria-label="Instagram">📷</span></a>
+                        <a href="#" style="margin-right: 1rem;" aria-label="Twitter"><span role="img" aria-label="Twitter">🐦</span></a>
+                        <a href="#" aria-label="YouTube"><span role="img" aria-label="YouTube">📺</span></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services-hub.html#general">General Dentistry</a></li>
+                        <li><a href="services-hub.html#cosmetic">Cosmetic Dentistry</a></li>
+                        <li><a href="services-hub.html#orthodontic">Orthodontics</a></li>
+                        <li><a href="services-hub.html#implants">Dental Implants</a></li>
+                        <li><a href="services-hub.html#emergency">Emergency Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Patient Resources</h4>
+                    <ul>
+                        <li><a href="#forms">New Patient Forms</a></li>
+                        <li><a href="#insurance">Insurance & Financing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#blog">Dental Health Blog</a></li>
+                        <li><a href="#virtual">Virtual Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact & Hours</h4>
+                    <p><span role="img" aria-label="Location">📍</span> 123 Main Street<br>Your City, ST 12345</p>
+                    <p><span role="img" aria-label="Phone">📞</span> (555) 123-4567<br><span role="img" aria-label="Message">💬</span> Text: (555) 123-4568</p>
+                    <p><strong>Hours:</strong><br>
+                    Mon-Fri: 8AM-6PM<br>
+                    Saturday: 9AM-2PM<br>
+                    Emergency: 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Modern Dental Care. All rights reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms of Service</a> | <a href="#accessibility" style="color: #aaa;">Accessibility</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" role="navigation" aria-label="Mobile navigation">
+        <div class="bottom-nav-items">
+            <a href="tel:5551234567" class="bottom-nav-item" aria-label="Call us">
+                <span class="bottom-nav-icon" role="img" aria-label="Phone">📞</span>
+                <span class="bottom-nav-label">Call</span>
+            </a>
+            <a href="#appointment" class="bottom-nav-item" aria-label="Book appointment">
+                <span class="bottom-nav-icon" role="img" aria-label="Calendar">📅</span>
+                <span class="bottom-nav-label">Book</span>
+            </a>
+            <a href="services-hub.html" class="bottom-nav-item" aria-label="View services">
+                <span class="bottom-nav-icon" role="img" aria-label="Tooth">🦷</span>
+                <span class="bottom-nav-label">Services</span>
+            </a>
+            <a href="#calculator" class="bottom-nav-item" aria-label="Calculate savings">
+                <span class="bottom-nav-icon" role="img" aria-label="Money">💰</span>
+                <span class="bottom-nav-label">Savings</span>
+            </a>
+            <a href="#reviews" class="bottom-nav-item" aria-label="View reviews">
+                <span class="bottom-nav-icon" role="img" aria-label="Star">⭐</span>
+                <span class="bottom-nav-label">Reviews</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- JavaScript - Optimized and enhanced -->
+    <script>
+        // Performance optimizations
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // Enhanced form validation
+        function validateField(field, errorElement) {
+            const value = field.value.trim();
+            let isValid = true;
+            let message = '';
+
+            if (field.hasAttribute('required') && !value) {
+                isValid = false;
+                message = 'This field is required.';
+            } else if (field.type === 'tel' && value) {
+                const phoneRegex = /^[\d\s\-\(\)\+\.]+$/;
+                if (!phoneRegex.test(value)) {
+                    isValid = false;
+                    message = 'Please enter a valid phone number.';
+                }
+            } else if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    isValid = false;
+                    message = 'Please enter a valid email address.';
+                }
+            }
+
+            if (isValid) {
+                field.classList.remove('error');
+                field.classList.add('success');
+                errorElement.textContent = '';
+            } else {
+                field.classList.add('error');
+                field.classList.remove('success');
+                errorElement.textContent = message;
+            }
+
+            return isValid;
+        }
+
+        // Mobile Menu Toggle with accessibility
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const isActive = navLinks.classList.contains('active');
+            
+            navLinks.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded', !isActive);
+            
+            // Trap focus in mobile menu when open
+            if (!isActive) {
+                const firstLink = navLinks.querySelector('a');
+                if (firstLink) firstLink.focus();
+            }
+        }
+
+        // Enhanced keyboard navigation for service cards
+        function handleCardKeydown(event, url) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                window.location.href = url;
+            }
+        }
+
+        // Set minimum date to today with better error handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+            if (dateInput) {
+                const today = new Date();
+                const todayString = today.toISOString().split('T')[0];
+                dateInput.min = todayString;
+                dateInput.value = todayString;
+            }
+
+            // Add video loading optimization
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                video.addEventListener('loadeddata', function() {
+                    this.classList.add('loaded');
+                });
+            }
+
+            // Enhanced form validation
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                const inputs = form.querySelectorAll('input, select');
+                inputs.forEach(input => {
+                    const errorElement = document.getElementById(input.id + '-error');
+                    if (errorElement) {
+                        input.addEventListener('blur', () => validateField(input, errorElement));
+                        input.addEventListener('input', debounce(() => validateField(input, errorElement), 300));
+                    }
+                });
+            });
+        });
+
+        // Enhanced appointment form handler
+        function handleAppointment(e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            
+            // Validate all fields
+            let isFormValid = true;
+            const fields = ['service', 'date', 'time', 'phone'];
+            
+            fields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + '-error');
+                if (!validateField(field, errorElement)) {
+                    isFormValid = false;
+                }
+            });
+
+            if (!isFormValid) {
+                // Focus first invalid field
+                const firstError = form.querySelector('.error');
+                if (firstError) firstError.focus();
+                return;
+            }
+
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Booking...';
+
+            // Simulate API call
+            setTimeout(() => {
+                const service = document.getElementById('service').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const phone = document.getElementById('phone').value;
+                
+                // Show success message
+                alert(`Thank you! Your ${service} appointment is confirmed for ${date} (${time}). We'll text confirmation to ${phone} shortly.`);
+                
+                // Reset form and button state
+                form.reset();
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Book My Appointment →';
+                
+                // Clear validation states
+                fields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    field.classList.remove('success', 'error');
+                    const errorElement = document.getElementById(fieldId + '-error');
+                    if (errorElement) errorElement.textContent = '';
+                });
+            }, 1500);
+        }
+
+        // Enhanced insurance calculator
+        function calculateSavings(e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Validate fields
+            const insurance = document.getElementById('insurance');
+            const treatment = document.getElementById('treatment');
+            let isValid = true;
+
+            [insurance, treatment].forEach(field => {
+                const errorElement = document.getElementById(field.id + '-error');
+                if (!validateField(field, errorElement)) {
+                    isValid = false;
+                }
+            });
+
+            if (!isValid) return;
+
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Calculating...';
+
+            setTimeout(() => {
+                const treatmentCosts = {
+                    'cleaning': 250,
+                    'filling': 400,
+                    'crown': 1200,
+                    'whitening': 599,
+                    'invisalign': 5000
+                };
+                
+                const insuranceCoverage = {
+                    'delta': 0.8,
+                    'cigna': 0.75,
+                    'aetna': 0.7,
+                    'bcbs': 0.8,
+                    'metlife': 0.75,
+                    'other': 0.6,
+                    'none': 0
+                };
+                
+                const baseCost = treatmentCosts[treatment.value] || 0;
+                const coverage = insuranceCoverage[insurance.value] || 0;
+                let savings = Math.round(baseCost * coverage);
+                
+                // Add new patient discount
+                savings += 150;
+                
+                document.getElementById('savingsAmount').textContent = `$${savings}`;
+                document.getElementById('calcResult').classList.add('show');
+                
+                // Reset button state
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Calculate My Savings';
+                
+                // Announce to screen readers
+                document.getElementById('calcResult').setAttribute('aria-live', 'polite');
+            }, 1000);
+        }
+
+        // Enhanced exit intent popup
+        let exitIntentShown = false;
+        let mouseLeaveTimer;
+
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitIntentShown && window.pageYOffset > 100) {
+                mouseLeaveTimer = setTimeout(() => {
+                    exitIntentShown = true;
+                    const popup = document.getElementById('exitPopup');
+                    popup.classList.add('show');
+                    
+                    // Focus management for accessibility
+                    const closeBtn = popup.querySelector('.popup-close');
+                    if (closeBtn) closeBtn.focus();
+                }, 500);
+            }
+        });
+
+        document.addEventListener('mouseenter', function() {
+            if (mouseLeaveTimer) {
+                clearTimeout(mouseLeaveTimer);
+            }
+        });
+
+        function closeExitPopup() {
+            const popup = document.getElementById('exitPopup');
+            popup.classList.remove('show');
+            
+            // Return focus to trigger element or body
+            document.body.focus();
+        }
+
+        // Enhanced smooth scrolling with accessibility
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                
+                if (target) {
+                    const offset = 100;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Set focus to target for accessibility
+                    target.setAttribute('tabindex', '-1');
+                    target.focus();
+                }
+            });
+        });
+
+        // Optimized intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        // Initialize animations with respect for user preferences
+        document.addEventListener('DOMContentLoaded', function() {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            
+            if (!prefersReducedMotion) {
+                const animatedElements = document.querySelectorAll('.service-card, .trust-item, .team-member, .review-item');
+                animatedElements.forEach((element, index) => {
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(20px)';
+                    element.style.transition = 'all 0.6s ease';
+                    element.style.transitionDelay = `${index * 0.1}s`;
+                    observer.observe(element);
+                });
+            }
+        });
+
+        // Enhanced live review simulation
+        const reviewTimeUpdater = () => {
+            const reviews = document.querySelectorAll('.review-date');
+            if (reviews.length > 0) {
+                const times = ['Just now', '1 hour ago', '2 hours ago', '3 hours ago', 'Yesterday'];
+                reviews.forEach((review, index) => {
+                    if (Math.random() > 0.8) { // Less frequent updates
+                        review.textContent = times[Math.floor(Math.random() * times.length)];
+                    }
+                });
+            }
+        };
+
+        // Only update reviews when tab is visible
+        let reviewInterval;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                clearInterval(reviewInterval);
+            } else {
+                reviewInterval = setInterval(reviewTimeUpdater, 45000);
+            }
+        });
+
+        // Start review updates if page is visible
+        if (!document.hidden) {
+            reviewInterval = setInterval(reviewTimeUpdater, 45000);
+        }
+
+        // Enhanced keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            // Close popup with Escape key
+            if (e.key === 'Escape') {
+                const popup = document.getElementById('exitPopup');
+                if (popup.classList.contains('show')) {
+                    closeExitPopup();
+                }
+            }
+        });
+
+        // Service worker registration for performance (if available)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(function() {
+                    // Service worker registration failed - ignore silently
+                });
+            });
+        }
+
+        // Error tracking and reporting
+        window.addEventListener('error', function(e) {
+            // Log error for debugging (could send to analytics)
+            console.warn('JavaScript error:', e.error);
+        });
+
+        // Performance monitoring
+        window.addEventListener('load', function() {
+            // Mark important metrics
+            if ('performance' in window && 'mark' in performance) {
+                performance.mark('page-interactive');
+            }
+        });
+    </script>
+
+    <!-- Load Enhanced API Client -->
+    <script src="/api-client-v4.js"></script>
+    
+    <!-- Enhanced Button Functionality for Wave 4 -->
+    <script>
+        // Override button handlers with enhanced functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle all CTA buttons
+            document.querySelectorAll('[data-action="book-appointment"]').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dentalAPI.sendAnalyticsEvent('cta_clicked', {
+                        action: 'book_appointment',
+                        location: this.dataset.location || 'unknown',
+                        campaign: this.dataset.campaign || 'general'
+                    });
+                    window.location.href = '/book-appointment.html';
+                });
+            });
+
+            // Handle quiz button
+            const quizButton = document.querySelector('[data-action="take-quiz"]');
+            if (quizButton) {
+                quizButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dentalAPI.sendAnalyticsEvent('cta_clicked', {
+                        action: 'take_quiz',
+                        location: this.dataset.location || 'unknown'
+                    });
+                    window.location.href = '/dental-health-assessment-quiz.html';
+                });
+            }
+
+            // Handle quick appointment form
+            const quickAppointmentForm = document.getElementById('quickAppointmentForm');
+            if (quickAppointmentForm) {
+                quickAppointmentForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitButton = this.querySelector('[data-action="quick-appointment"]');
+                    
+                    // Validate form
+                    if (!this.checkValidity()) {
+                        this.reportValidity();
+                        return;
+                    }
+                    
+                    // Collect minimal data for quick booking
+                    const appointmentData = {
+                        patientInfo: {
+                            firstName: 'Quick',
+                            lastName: 'Booking',
+                            email: this.email.value.trim().toLowerCase(),
+                            phone: this.phone.value.trim(),
+                            isNewPatient: true
+                        },
+                        appointmentType: this.service.value,
+                        preferredDate: this.date.value,
+                        preferredTime: '09:00', // Default morning appointment
+                        notes: 'Quick booking from homepage'
+                    };
+                    
+                    try {
+                        const result = await dentalAPI.bookAppointment(submitButton, appointmentData);
+                        
+                        // Show success message
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'appointment-success';
+                        successMessage.innerHTML = `
+                            <h3>✅ Appointment Request Received!</h3>
+                            <p>Confirmation #: ${result.confirmationNumber}</p>
+                            <p>We'll call you within 2 hours to confirm your ${result.appointment.type} appointment.</p>
+                        `;
+                        successMessage.style.cssText = 'background: #28a745; color: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;';
+                        
+                        this.appendChild(successMessage);
+                        this.reset();
+                        
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                    } catch (error) {
+                        alert('We couldn\\'t process your appointment. Please call us at (555) 123-4567 or try again.');
+                    }
+                });
+            }
+
+            // Handle exit popup close button
+            const closePopupButton = document.querySelector('[data-action="close-popup"]');
+            if (closePopupButton) {
+                closePopupButton.addEventListener('click', closeExitPopup);
+            }
+
+            // Handle mobile menu toggle
+            const mobileMenuButton = document.querySelector('[data-action="toggle-menu"]');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', toggleMenu);
+            }
+
+            // Handle insurance calculator
+            const calculatorForm = document.getElementById('calculatorForm');
+            if (calculatorForm) {
+                calculatorForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    
+                    dentalAPI.sendAnalyticsEvent('insurance_calculator_used', {
+                        insurance: this.insurance.value,
+                        treatment: this.treatment.value
+                    });
+                    
+                    // Start loading
+                    dentalAPI.loadingManager.start(submitButton, 'Calculating...');
+                    
+                    // Simulate calculation
+                    setTimeout(() => {
+                        const savings = Math.floor(Math.random() * 500) + 200;
+                        const results = document.getElementById('calculatorResults');
+                        results.innerHTML = `
+                            <h3>Your Estimated Savings</h3>
+                            <div class="savings-amount">$${savings}</div>
+                            <p>With ${this.insurance.value} insurance for ${this.treatment.value}</p>
+                            <button class="cta-button" data-action="book-appointment" data-location="calculator" style="margin-top: 1rem;">
+                                Book Now & Save
+                            </button>
+                        `;
+                        results.style.display = 'block';
+                        
+                        dentalAPI.loadingManager.success(submitButton, 'Calculated!');
+                        
+                        // Add click handler to new button
+                        results.querySelector('[data-action="book-appointment"]').addEventListener('click', function() {
+                            dentalAPI.sendAnalyticsEvent('cta_clicked', {
+                                action: 'book_appointment',
+                                location: 'calculator',
+                                estimated_savings: savings
+                            });
+                            window.location.href = '/book-appointment.html';
+                        });
+                    }, 1000);
+                });
+            }
+
+            // Add smooth scrolling to anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Track scroll depth
+            let maxScroll = 0;
+            window.addEventListener('scroll', debounce(() => {
+                const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    if (scrollPercent === 25 || scrollPercent === 50 || scrollPercent === 75 || scrollPercent === 100) {
+                        dentalAPI.sendAnalyticsEvent('scroll_depth', {
+                            percent: scrollPercent
+                        });
+                    }
+                }
+            }, 100));
+        });
+    </script>
+</body>
+</html>

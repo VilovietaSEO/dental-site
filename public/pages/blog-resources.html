@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Blog & Resources - Expert Oral Health Education Hub | SmileCare Dental</title>
+    <meta name="description" content="Expert dental health resources, interactive tools, and educational content. Access downloadable guides, oral health calculators, and comprehensive dental information.">
+    <meta name="keywords" content="dental health, oral care, dental blog, dental resources, teeth cleaning, preventive dentistry">
+    <link rel="canonical" href="https://smilecare.com/dental-blog-resources">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: #E6F7F7;
+            --warning-orange: #FF8C00;
+            --soft-blue: #E8F4FD;
+            --text-gray: #666666;
+            --border-light: #E0E0E0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Header - Optimized for performance */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            will-change: transform;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+        
+        .nav-links a[aria-current="page"] {
+            color: var(--trust-blue);
+        }
+        
+        .nav-links a[aria-current="page"]::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--trust-blue);
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            display: inline-block;
+            border: 2px solid var(--success-green);
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button:hover,
+        .cta-button:focus {
+            background: #218838;
+            border-color: #218838;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            outline: none;
+        }
+        
+        /* Hero Section - Performance optimized */
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+            background-size: 40px 40px;
+            animation: float 25s linear infinite;
+            will-change: transform;
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-40px) translateY(-40px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-stat {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        /* Search Section - Enhanced UX */
+        .search-section {
+            background: var(--soft-gray);
+            padding: 3rem 0;
+        }
+        
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .search-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .search-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+        }
+        
+        .search-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            min-height: 44px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0,119,190,0.1);
+        }
+        
+        .search-button {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            min-height: 44px;
+            white-space: nowrap;
+        }
+        
+        .search-button:hover,
+        .search-button:focus {
+            background: #005a8b;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(0,119,190,0.3);
+            outline: none;
+        }
+        
+        .search-suggestions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .suggestion-tag {
+            background: var(--light-teal);
+            color: var(--trust-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            min-height: 36px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .suggestion-tag:hover,
+        .suggestion-tag:focus {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            transform: translateY(-1px);
+            outline: none;
+            border-color: var(--accent-teal);
+        }
+        
+        /* Filter System - Improved accessibility */
+        .filter-section {
+            background: var(--clean-white);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-tab {
+            background: var(--clean-white);
+            border: 2px solid var(--trust-blue);
+            color: var(--trust-blue);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .filter-tab:hover,
+        .filter-tab:focus,
+        .filter-tab.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            outline: none;
+            transform: translateY(-1px);
+        }
+        
+        .article-count {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Articles Grid - Performance optimized */
+        .articles-section {
+            padding: 3rem 0;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .article-card {
+            background: var(--clean-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            will-change: transform;
+        }
+        
+        .article-card:hover,
+        .article-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-bookmark {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            color: var(--trust-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1.2rem;
+            border: none;
+        }
+        
+        .article-bookmark:hover,
+        .article-bookmark:focus {
+            background: var(--success-green);
+            color: var(--clean-white);
+            transform: scale(1.1);
+            outline: none;
+        }
+        
+        .article-content {
+            padding: 2rem;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .article-category {
+            background: var(--light-teal);
+            color: var(--trust-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .article-reading-time {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .article-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            line-height: 1.4;
+            font-weight: 600;
+        }
+        
+        .article-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .read-more {
+            color: var(--trust-blue);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+        
+        .read-more:hover,
+        .read-more:focus {
+            gap: 1rem;
+            color: var(--accent-teal);
+            background: var(--soft-blue);
+            outline: none;
+        }
+        
+        .article-share {
+            background: var(--soft-gray);
+            color: var(--charcoal);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        
+        .article-share:hover,
+        .article-share:focus {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            transform: scale(1.1);
+            outline: none;
+        }
+        
+        /* Interactive Tools - Enhanced */
+        .tools-section {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tool-card {
+            background: var(--clean-white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--trust-blue), var(--accent-teal));
+        }
+        
+        .tool-card:hover,
+        .tool-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--accent-teal);
+        }
+        
+        .tool-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-teal);
+        }
+        
+        .tool-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+        
+        .tool-button {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+            min-height: 44px;
+        }
+        
+        .tool-button:hover,
+        .tool-button:focus {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+            outline: none;
+            box-shadow: 0 8px 20px rgba(0,168,168,0.3);
+        }
+        
+        /* Newsletter - Conversion optimized */
+        .newsletter {
+            background: linear-gradient(135deg, var(--light-teal), var(--soft-blue));
+            padding: 4rem 0;
+            margin: 4rem 0;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .newsletter h2 {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .newsletter-incentive {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 1rem 0 2rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            padding: 1rem 1.5rem;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            font-size: 1rem;
+            background: var(--clean-white);
+            transition: all 0.2s ease;
+            min-height: 50px;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0,168,168,0.1);
+        }
+        
+        /* Downloads Section */
+        .downloads-section {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+        
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .download-card {
+            background: var(--clean-white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-card:hover,
+        .download-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: var(--accent-teal);
+        }
+        
+        .download-icon {
+            font-size: 3.5rem;
+            color: var(--accent-teal);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .download-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+        
+        .download-description {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .download-button {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        
+        .download-button:hover,
+        .download-button:focus {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,168,168,0.3);
+            outline: none;
+        }
+        
+        /* Footer - Simplified */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+        }
+        
+        .footer-section a {
+            color: var(--clean-white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+            padding: 0.25rem 0;
+        }
+        
+        .footer-section a:hover,
+        .footer-section a:focus {
+            color: var(--accent-teal);
+            outline: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #999;
+        }
+        
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        /* Error States */
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        /* Success States */
+        .success-message {
+            background: #efe;
+            color: #363;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-row {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                min-width: 100%;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-input {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .filter-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tool-card,
+            .download-card {
+                padding: 1.5rem;
+            }
+            
+            .search-container {
+                padding: 1.5rem;
+            }
+            
+            .newsletter {
+                margin: 2rem 0;
+                padding: 2rem 0;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: #000;
+            }
+            
+            .article-card {
+                border: 2px solid var(--charcoal);
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .hero::before {
+                animation: none;
+            }
+        }
+        
+        /* Focus management */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <a href="homepage.html" class="logo" aria-label="SmileCare Dental - Home">SmileCare Dental</a>
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="services-hub.html">Services</a>
+                <a href="blog-resources.html" aria-current="page">Resources</a>
+                <a href="technology-comfort.html">About</a>
+                <a href="book-appointment.html">Contact</a>
+                <a href="book-appointment.html" class="cta-button">Book Appointment</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Dental Health Education Hub</h1>
+                    <p>Expert insights, interactive tools, and comprehensive resources to guide your oral health journey</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-number" data-count="500">500+</span>
+                            <span>Expert Articles</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number" data-count="50">50+</span>
+                            <span>Interactive Tools</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number" data-count="10000">10K+</span>
+                            <span>Monthly Readers</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">24/7</span>
+                            <span>Access</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section" aria-labelledby="search-heading">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-header">
+                        <h2 id="search-heading">Find Your Answers</h2>
+                        <p>Search our comprehensive dental health database</p>
+                    </div>
+                    <form class="search-row" role="search" onsubmit="return performSearch(event)">
+                        <label for="searchInput" class="visually-hidden">Search dental health topics</label>
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            id="searchInput"
+                            placeholder="What would you like to learn about?"
+                            aria-describedby="search-suggestions"
+                        >
+                        <button type="submit" class="search-button" aria-label="Search articles">
+                            🔍 Search
+                        </button>
+                    </form>
+                    <div class="search-suggestions" id="search-suggestions" aria-label="Popular search topics">
+                        <button type="button" class="suggestion-tag" onclick="searchSuggestion('cavity prevention')">Cavity Prevention</button>
+                        <button type="button" class="suggestion-tag" onclick="searchSuggestion('teeth whitening')">Teeth Whitening</button>
+                        <button type="button" class="suggestion-tag" onclick="searchSuggestion('gum disease')">Gum Disease</button>
+                        <button type="button" class="suggestion-tag" onclick="searchSuggestion('children dental')">Children's Dental</button>
+                        <button type="button" class="suggestion-tag" onclick="searchSuggestion('oral hygiene')">Oral Hygiene</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter System -->
+        <section class="filter-section" aria-labelledby="filter-heading">
+            <div class="container">
+                <h2 id="filter-heading" class="visually-hidden">Filter articles by category</h2>
+                <div class="filter-tabs" role="tablist" aria-label="Article categories">
+                    <button 
+                        role="tab" 
+                        class="filter-tab active" 
+                        aria-selected="true" 
+                        aria-controls="articles-grid"
+                        onclick="filterArticles('all')"
+                    >
+                        All Articles
+                    </button>
+                    <button 
+                        role="tab" 
+                        class="filter-tab" 
+                        aria-selected="false" 
+                        aria-controls="articles-grid"
+                        onclick="filterArticles('oral-health')"
+                    >
+                        Oral Health
+                    </button>
+                    <button 
+                        role="tab" 
+                        class="filter-tab" 
+                        aria-selected="false" 
+                        aria-controls="articles-grid"
+                        onclick="filterArticles('procedures')"
+                    >
+                        Procedures
+                    </button>
+                    <button 
+                        role="tab" 
+                        class="filter-tab" 
+                        aria-selected="false" 
+                        aria-controls="articles-grid"
+                        onclick="filterArticles('tips')"
+                    >
+                        Tips & Guides
+                    </button>
+                    <button 
+                        role="tab" 
+                        class="filter-tab" 
+                        aria-selected="false" 
+                        aria-controls="articles-grid"
+                        onclick="filterArticles('kids')"
+                    >
+                        Kids Dental
+                    </button>
+                    <button 
+                        role="tab" 
+                        class="filter-tab" 
+                        aria-selected="false" 
+                        aria-controls="articles-grid"
+                        onclick="filterArticles('nutrition')"
+                    >
+                        Nutrition
+                    </button>
+                </div>
+                <div class="article-count" id="articleCount" aria-live="polite">Showing 8 articles</div>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="articles-section" aria-labelledby="articles-heading">
+            <div class="container">
+                <h2 id="articles-heading" class="visually-hidden">Dental health articles</h2>
+                <div class="articles-grid" id="articles-grid" role="tabpanel">
+                    <!-- Article 1 -->
+                    <article class="article-card" data-category="oral-health">
+                        <div class="article-image" aria-hidden="true">🦷</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Oral Health</span>
+                                <span class="article-reading-time">⏱️ 5 min read</span>
+                            </div>
+                            <h3 class="article-title">The Complete Guide to Preventing Cavities</h3>
+                            <p class="article-excerpt">Discover proven strategies to keep cavities at bay, from proper brushing techniques to diet modifications that protect your teeth naturally.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about preventing cavities">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('cavity-prevention')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="article-card" data-category="procedures">
+                        <div class="article-image" aria-hidden="true">🏥</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Procedures</span>
+                                <span class="article-reading-time">⏱️ 7 min read</span>
+                            </div>
+                            <h3 class="article-title">What to Expect During a Root Canal</h3>
+                            <p class="article-excerpt">Demystifying root canal procedures: understand the step-by-step process, recovery timeline, and why modern techniques make it virtually painless.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about root canal procedures">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('root-canal-guide')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="article-card" data-category="tips">
+                        <div class="article-image" aria-hidden="true">✨</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Tips & Guides</span>
+                                <span class="article-reading-time">⏱️ 4 min read</span>
+                            </div>
+                            <h3 class="article-title">5 Natural Ways to Whiten Your Teeth</h3>
+                            <p class="article-excerpt">Discover safe, effective home remedies for naturally brighter teeth without harsh chemicals or expensive treatments.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about natural teeth whitening">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('natural-whitening')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="article-card" data-category="kids">
+                        <div class="article-image" aria-hidden="true">👶</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Kids Dental</span>
+                                <span class="article-reading-time">⏱️ 6 min read</span>
+                            </div>
+                            <h3 class="article-title">Making Dental Visits Fun for Children</h3>
+                            <p class="article-excerpt">Expert tips for parents to prepare children for dental visits and create positive associations with oral healthcare from an early age.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about children's dental visits">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('kids-dental-visits')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="article-card" data-category="nutrition">
+                        <div class="article-image" aria-hidden="true">🍎</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Nutrition</span>
+                                <span class="article-reading-time">⏱️ 5 min read</span>
+                            </div>
+                            <h3 class="article-title">Foods That Strengthen Your Teeth</h3>
+                            <p class="article-excerpt">Comprehensive nutritional guide to foods that promote dental health, including calcium-rich options and tooth-friendly snacks.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about tooth-friendly foods">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('tooth-friendly-foods')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="article-card" data-category="procedures">
+                        <div class="article-image" aria-hidden="true">💎</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Procedures</span>
+                                <span class="article-reading-time">⏱️ 8 min read</span>
+                            </div>
+                            <h3 class="article-title">Invisalign vs Traditional Braces: Complete Comparison</h3>
+                            <p class="article-excerpt">Comprehensive guide comparing cost, effectiveness, treatment time, and lifestyle impact of different orthodontic options.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about braces comparison">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('braces-comparison')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 7 -->
+                    <article class="article-card" data-category="oral-health">
+                        <div class="article-image" aria-hidden="true">🦠</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Oral Health</span>
+                                <span class="article-reading-time">⏱️ 6 min read</span>
+                            </div>
+                            <h3 class="article-title">Understanding Gum Disease: Prevention and Treatment</h3>
+                            <p class="article-excerpt">Learn about the stages of gum disease, early warning signs, and effective prevention strategies to maintain healthy gums.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about gum disease">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('gum-disease-guide')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 8 -->
+                    <article class="article-card" data-category="tips">
+                        <div class="article-image" aria-hidden="true">🪥</div>
+                        <button class="article-bookmark" onclick="toggleBookmark(this)" aria-label="Bookmark this article">🔖</button>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-category">Tips & Guides</span>
+                                <span class="article-reading-time">⏱️ 3 min read</span>
+                            </div>
+                            <h3 class="article-title">Perfect Brushing Technique: Step-by-Step Guide</h3>
+                            <p class="article-excerpt">Master the proper brushing technique with our detailed guide, including timing, pressure, and tool recommendations.</p>
+                            <div class="article-footer">
+                                <a href="#" class="read-more" aria-label="Read full article about brushing technique">Read More →</a>
+                                <button class="article-share" onclick="shareArticle('brushing-technique')" aria-label="Share this article">📤</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Tools Section -->
+        <section class="tools-section" aria-labelledby="tools-heading">
+            <div class="container">
+                <h2 id="tools-heading">Interactive Dental Health Tools</h2>
+                <p style="text-align: center; color: var(--text-gray); margin-bottom: 3rem;">Engage with our educational tools to learn and track your oral health</p>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon" aria-hidden="true">🧠</div>
+                        <h3>Oral Health Quiz</h3>
+                        <p>Test your dental knowledge with our interactive quiz and get personalized recommendations.</p>
+                        <button class="tool-button" onclick="startQuiz()">Take Quiz</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon" aria-hidden="true">⏰</div>
+                        <h3>Brushing Timer</h3>
+                        <p>2-minute interactive timer with brushing technique reminders and quadrant guidance.</p>
+                        <button class="tool-button" onclick="startBrushingTimer()">Start Timer</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon" aria-hidden="true">📋</div>
+                        <h3>Symptom Checker</h3>
+                        <p>Quick assessment tool to help identify potential dental issues and when to seek care.</p>
+                        <button class="tool-button" onclick="openSymptomChecker()">Check Symptoms</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon" aria-hidden="true">💰</div>
+                        <h3>Treatment Cost Calculator</h3>
+                        <p>Estimate costs for common dental procedures and explore insurance coverage options.</p>
+                        <button class="tool-button" onclick="openCostCalculator()">Calculate Costs</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon" aria-hidden="true">📅</div>
+                        <h3>Appointment Reminder</h3>
+                        <p>Set up personalized reminders for cleanings, checkups, and follow-up appointments.</p>
+                        <button class="tool-button" onclick="setReminders()">Set Reminders</button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon" aria-hidden="true">🦷</div>
+                        <h3>Interactive Tooth Map</h3>
+                        <p>Explore detailed tooth anatomy and learn about different dental conditions.</p>
+                        <button class="tool-button" onclick="openToothMap()">Explore Teeth</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter container" aria-labelledby="newsletter-heading">
+            <div class="newsletter-content">
+                <h2 id="newsletter-heading">Join Our Dental Health Community</h2>
+                <div class="newsletter-incentive">🎁 FREE Oral Health Guide + Monthly Tips</div>
+                <p>Get exclusive dental health insights, early access to new articles, and personalized oral care tips delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)" aria-labelledby="newsletter-heading">
+                    <label for="newsletter-email" class="visually-hidden">Enter your email address</label>
+                    <input 
+                        type="email" 
+                        id="newsletter-email"
+                        class="newsletter-input" 
+                        placeholder="Enter your email address" 
+                        required
+                        aria-describedby="newsletter-privacy"
+                    >
+                    <button type="submit" class="cta-button">Get Free Guide</button>
+                </form>
+                <p id="newsletter-privacy" style="font-size: 0.9rem; color: var(--text-gray); margin-top: 1rem;">Join 15,000+ subscribers. Unsubscribe anytime. Your privacy is protected.</p>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section class="downloads-section" aria-labelledby="downloads-heading">
+            <div class="container">
+                <h2 id="downloads-heading" style="text-align: center; margin-bottom: 1rem;">Premium Downloadable Resources</h2>
+                <p style="text-align: center; color: var(--text-gray); margin-bottom: 2rem;">Comprehensive guides and tools to support your oral health journey</p>
+                
+                <div class="downloads-grid">
+                    <div class="download-card">
+                        <div class="download-icon" aria-hidden="true">📋</div>
+                        <h3 class="download-title">Complete Oral Hygiene Checklist</h3>
+                        <p class="download-description">Comprehensive daily, weekly, and monthly routine guide for optimal dental health</p>
+                        <a href="#" class="download-button" aria-label="Download Oral Hygiene Checklist PDF">Download PDF</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon" aria-hidden="true">🦷</div>
+                        <h3 class="download-title">Interactive Kids Brushing Chart</h3>
+                        <p class="download-description">Fun, gamified tracking chart to encourage healthy brushing habits in children</p>
+                        <a href="#" class="download-button" aria-label="Download Kids Brushing Chart PDF">Download PDF</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon" aria-hidden="true">🍏</div>
+                        <h3 class="download-title">Tooth-Friendly Foods Guide</h3>
+                        <p class="download-description">Comprehensive nutrition guide with meal plans and snack ideas for healthy teeth</p>
+                        <a href="#" class="download-button" aria-label="Download Foods Guide PDF">Download PDF</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon" aria-hidden="true">📅</div>
+                        <h3 class="download-title">Dental Visit Planner & Tracker</h3>
+                        <p class="download-description">Organize appointments, track treatments, and plan your dental care schedule</p>
+                        <a href="#" class="download-button" aria-label="Download Visit Planner PDF">Download PDF</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon" aria-hidden="true">🚨</div>
+                        <h3 class="download-title">Dental Emergency Action Plan</h3>
+                        <p class="download-description">Step-by-step guide for handling common dental emergencies at home</p>
+                        <a href="#" class="download-button" aria-label="Download Emergency Plan PDF">Download PDF</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="download-icon" aria-hidden="true">💡</div>
+                        <h3 class="download-title">Cost-Saving Dental Tips</h3>
+                        <p class="download-description">Smart strategies to reduce dental costs while maintaining excellent oral health</p>
+                        <a href="#" class="download-button" aria-label="Download Cost-Saving Tips PDF">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="technology-comfort.html">About Us</a>
+                    <a href="services-hub.html">Our Services</a>
+                    <a href="blog-resources.html">Blog & Resources</a>
+                    <a href="book-appointment.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="general-dentistry.html">General Dentistry</a>
+                    <a href="preventive-care.html">Preventive Care</a>
+                    <a href="veneers.html">Cosmetic Dentistry</a>
+                    <a href="emergency-dentistry.html">Emergency Care</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Smile Street<br>Dental City, DC 12345</p>
+                    <p>Phone: <a href="tel:5551234567" style="color: inherit;">(555) 123-4567</a></p>
+                    <p>Email: <a href="mailto:info@smilecare.com" style="color: inherit;">info@smilecare.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 3:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p>Emergency: 24/7 Available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmileCare Dental. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Performance optimized JavaScript
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // Enhanced search functionality
+        function performSearch(event) {
+            if (event) event.preventDefault();
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (!searchTerm) return false;
+            
+            filterArticlesBySearch(searchTerm);
+            return false;
+        }
+
+        function searchSuggestion(term) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = term;
+            searchInput.focus();
+            filterArticlesBySearch(term.toLowerCase());
+        }
+
+        function filterArticlesBySearch(searchTerm) {
+            const articles = document.querySelectorAll('.article-card');
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const title = article.querySelector('.article-title').textContent.toLowerCase();
+                const excerpt = article.querySelector('.article-excerpt').textContent.toLowerCase();
+                const category = article.querySelector('.article-category').textContent.toLowerCase();
+                
+                const isVisible = searchTerm === '' || title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm);
+                
+                article.style.display = isVisible ? 'block' : 'none';
+                article.setAttribute('aria-hidden', !isVisible);
+                
+                if (isVisible) visibleCount++;
+            });
+            
+            updateArticleCount(visibleCount);
+            announceResults(visibleCount, searchTerm);
+        }
+
+        // Enhanced filter functionality with accessibility
+        function filterArticles(category) {
+            const tabs = document.querySelectorAll('.filter-tab');
+            const articles = document.querySelectorAll('.article-card');
+            let visibleCount = 0;
+            
+            // Update active tab
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+            });
+            
+            const activeTab = event.target.closest('.filter-tab');
+            activeTab.classList.add('active');
+            activeTab.setAttribute('aria-selected', 'true');
+            
+            // Filter articles
+            articles.forEach(article => {
+                const isVisible = category === 'all' || article.dataset.category === category;
+                article.style.display = isVisible ? 'block' : 'none';
+                article.setAttribute('aria-hidden', !isVisible);
+                
+                if (isVisible) visibleCount++;
+            });
+            
+            updateArticleCount(visibleCount);
+            announceResults(visibleCount, category === 'all' ? 'all categories' : category);
+        }
+
+        function updateArticleCount(count) {
+            const countElement = document.getElementById('articleCount');
+            countElement.textContent = `Showing ${count} article${count !== 1 ? 's' : ''}`;
+        }
+
+        function announceResults(count, filter) {
+            const announcement = `Found ${count} articles for ${filter}`;
+            const announcer = document.getElementById('articleCount');
+            announcer.setAttribute('aria-live', 'polite');
+        }
+
+        // Accessibility enhanced bookmark functionality
+        function toggleBookmark(element) {
+            const isBookmarked = element.textContent === '🔖';
+            const newState = isBookmarked ? '📌' : '🔖';
+            const newColor = isBookmarked ? 'var(--success-green)' : 'rgba(255,255,255,0.9)';
+            const textColor = isBookmarked ? 'var(--clean-white)' : 'var(--trust-blue)';
+            
+            element.textContent = newState;
+            element.style.background = newColor;
+            element.style.color = textColor;
+            element.setAttribute('aria-label', isBookmarked ? 'Remove bookmark' : 'Bookmark this article');
+            
+            // Show feedback
+            const feedback = isBookmarked ? 'Article bookmarked!' : 'Bookmark removed';
+            showNotification(feedback);
+        }
+
+        // Enhanced share functionality
+        async function shareArticle(articleId) {
+            const article = event.target.closest('.article-card');
+            const title = article.querySelector('.article-title').textContent;
+            const url = `${window.location.origin}${window.location.pathname}#${articleId}`;
+            
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: `${title} - SmileCare Dental`,
+                        text: 'Check out this helpful dental health article',
+                        url: url
+                    });
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        fallbackShare(url, title);
+                    }
+                }
+            } else {
+                fallbackShare(url, title);
+            }
+        }
+
+        async function fallbackShare(url, title) {
+            try {
+                await navigator.clipboard.writeText(url);
+                showNotification('Link copied to clipboard!');
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification('Link copied to clipboard!');
+            }
+        }
+
+        // Interactive tools with improved UX
+        function startQuiz() {
+            showNotification('Loading quiz...');
+            // In production, this would load the actual quiz
+            setTimeout(() => {
+                showNotification('Quiz feature coming soon! Contact us for personalized oral health assessment.');
+            }, 1000);
+        }
+
+        function startBrushingTimer() {
+            showNotification('Loading brushing timer...');
+            // In production, this would open the brushing timer
+            setTimeout(() => {
+                showNotification('Brushing timer feature coming soon! Remember to brush for 2 minutes.');
+            }, 1000);
+        }
+
+        function openSymptomChecker() {
+            showNotification('Loading symptom checker...');
+            setTimeout(() => {
+                showNotification('Symptom checker coming soon! For urgent issues, call (555) 123-4567.');
+            }, 1000);
+        }
+
+        function openCostCalculator() {
+            showNotification('Loading cost calculator...');
+            setTimeout(() => {
+                showNotification('Cost calculator coming soon! Call us for accurate treatment estimates.');
+            }, 1000);
+        }
+
+        function setReminders() {
+            showNotification('Loading reminder system...');
+            setTimeout(() => {
+                showNotification('Reminder system coming soon! Call (555) 123-4567 to schedule your appointment.');
+            }, 1000);
+        }
+
+        function openToothMap() {
+            showNotification('Loading interactive tooth map...');
+            setTimeout(() => {
+                showNotification('Interactive tooth map coming soon! Visit us for comprehensive oral health education.');
+            }, 1000);
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? '#dc3545' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 300px;
+                animation: slideIn 0.3s ease-out;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 4000);
+        }
+
+        // Newsletter subscription with validation
+        async function subscribeNewsletter(event) {
+            event.preventDefault();
+            const form = event.target;
+            const email = form.querySelector('input[type="email"]').value;
+            const button = form.querySelector('button');
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const originalText = button.textContent;
+            button.textContent = 'Subscribing...';
+            button.disabled = true;
+            
+            try {
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                showNotification(`Thank you for subscribing! Check ${email} for your free guide.`);
+                form.reset();
+            } catch (error) {
+                showNotification('Subscription failed. Please try again.', 'error');
+            } finally {
+                button.textContent = originalText;
+                button.disabled = false;
+            }
+        }
+
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', function(e) {
+            // Escape key closes modals/notifications
+            if (e.key === 'Escape') {
+                const notifications = document.querySelectorAll('.notification');
+                notifications.forEach(notification => notification.remove());
+            }
+            
+            // Enter key on suggestion tags
+            if (e.key === 'Enter' && e.target.classList.contains('suggestion-tag')) {
+                e.target.click();
+            }
+        });
+
+        // Search on enter key with debouncing
+        const debouncedSearch = debounce(() => {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (searchTerm.length > 2) {
+                filterArticlesBySearch(searchTerm);
+            } else if (searchTerm.length === 0) {
+                filterArticlesBySearch('');
+            }
+        }, 300);
+
+        document.getElementById('searchInput').addEventListener('input', debouncedSearch);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe all animatable elements
+            const animatableElements = document.querySelectorAll('.article-card, .tool-card, .download-card');
+            animatableElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(element);
+            });
+
+            // Initialize article count
+            updateArticleCount(document.querySelectorAll('.article-card').length);
+
+            // Focus management for better accessibility
+            const firstFocusableElement = document.querySelector('a[href], button:not([disabled]), input:not([disabled])');
+            if (firstFocusableElement && window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.focus();
+                }
+            }
+        });
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    
+    <!-- Enhanced API Client for Wave 4 -->
+    <script src="/api-client-v4.js"></script>
+    
+    <!-- Enhanced Button Functionality for Blog/Resources -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhance all CTA buttons
+            document.querySelectorAll('.cta-button').forEach(button => {
+                if (!button.dataset.action) {
+                    button.setAttribute('data-action', 'book-appointment');
+                    button.setAttribute('data-location', 'blog-resources');
+                }
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    dentalAPI.sendAnalyticsEvent('cta_clicked', {
+                        action: this.dataset.action || 'book_appointment',
+                        location: this.dataset.location || 'blog-resources',
+                        context: this.closest('.article-card')?.querySelector('h3')?.textContent || 'general'
+                    });
+                    
+                    if (this.dataset.action === 'download') {
+                        // Handle download
+                        const downloadUrl = this.dataset.url;
+                        window.open(downloadUrl, '_blank');
+                    } else {
+                        window.location.href = '/book-appointment.html';
+                    }
+                });
+                
+                // Add touch support
+                dentalAPI.addTouchSupport(button, function() {
+                    button.click();
+                });
+            });
+            
+            // Track article card clicks
+            document.querySelectorAll('.article-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.closest('button')) {
+                        const articleTitle = this.querySelector('h3').textContent;
+                        const category = this.querySelector('.article-category').textContent;
+                        
+                        dentalAPI.sendAnalyticsEvent('article_clicked', {
+                            title: articleTitle,
+                            category: category,
+                            location: 'blog-resources'
+                        });
+                    }
+                });
+            });
+            
+            // Track search usage
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                let searchTimeout;
+                searchInput.addEventListener('input', function() {
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(() => {
+                        if (this.value.trim()) {
+                            dentalAPI.sendAnalyticsEvent('search_performed', {
+                                query: this.value.trim(),
+                                location: 'blog-resources',
+                                results_count: document.querySelectorAll('.article-card:not([style*="display: none"])').length
+                            });
+                        }
+                    }, 1000); // Debounce for 1 second
+                });
+            }
+            
+            // Track filter usage
+            const originalFilterFunction = window.filterArticles;
+            window.filterArticles = function(category) {
+                // Call original function
+                if (originalFilterFunction) {
+                    originalFilterFunction(category);
+                }
+                
+                // Track analytics
+                dentalAPI.sendAnalyticsEvent('filter_used', {
+                    category: category,
+                    location: 'blog-resources'
+                });
+            };
+            
+            // Track downloadable resource clicks
+            document.querySelectorAll('[data-resource]').forEach(resource => {
+                resource.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const resourceName = this.dataset.resource;
+                    const resourceType = this.dataset.type || 'pdf';
+                    
+                    dentalAPI.sendAnalyticsEvent('resource_downloaded', {
+                        name: resourceName,
+                        type: resourceType,
+                        location: 'blog-resources'
+                    });
+                    
+                    // Simulate download (in production, would link to actual files)
+                    alert(`Download started: ${resourceName}.${resourceType}`);
+                });
+            });
+            
+            // Handle newsletter signup
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    
+                    if (!emailInput.value || !emailInput.checkValidity()) {
+                        emailInput.reportValidity();
+                        return;
+                    }
+                    
+                    const contactData = {
+                        email: emailInput.value.trim().toLowerCase(),
+                        name: 'Newsletter Subscriber',
+                        message: 'Newsletter subscription request',
+                        formType: 'newsletter',
+                        subject: 'Newsletter Signup'
+                    };
+                    
+                    try {
+                        const result = await dentalAPI.submitContact(submitButton, contactData);
+                        
+                        // Show success message
+                        this.innerHTML = `
+                            <div style="text-align: center; padding: 1rem;">
+                                <h3 style="color: #28a745;">✅ Successfully Subscribed!</h3>
+                                <p>Thank you for subscribing to our newsletter.</p>
+                            </div>
+                        `;
+                        
+                    } catch (error) {
+                        alert('Could not subscribe. Please try again later.');
+                    }
+                });
+            }
+            
+            // Track scroll depth on articles
+            const articleSections = document.querySelectorAll('.content-section');
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionTitle = entry.target.querySelector('h2')?.textContent || 'Unknown Section';
+                        dentalAPI.sendAnalyticsEvent('article_section_viewed', {
+                            section: sectionTitle,
+                            article: document.querySelector('h1')?.textContent || 'Blog Resources',
+                            location: 'blog-resources'
+                        });
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            articleSections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            // Add print tracking
+            window.addEventListener('beforeprint', function() {
+                dentalAPI.sendAnalyticsEvent('article_printed', {
+                    title: document.querySelector('h1')?.textContent || 'Blog Resources',
+                    location: 'blog-resources'
+                });
+            });
+            
+            // Track video plays if any
+            document.querySelectorAll('video').forEach(video => {
+                video.addEventListener('play', function() {
+                    dentalAPI.sendAnalyticsEvent('video_played', {
+                        video_title: this.getAttribute('data-title') || 'Unnamed Video',
+                        location: 'blog-resources'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="preventive-care">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventive Dental Care - Protect Your Smile | SmileCare Dental</title>
+    <meta name="description" content="Comprehensive preventive dental care services including cleanings, fluoride treatments, and sealants. Save money and protect your smile with prevention-focused care.">
+    <meta name="keywords" content="preventive dentistry, dental cleanings, fluoride treatment, dental sealants, oral cancer screening, dental prevention">
+    <link rel="canonical" href="https://smilecare.com/preventive-care">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: #E6F7F7;
+            --light-blue: #E6F2FF;
+            --warning-yellow: #FFC107;
+            --text-gray: #666666;
+            --border-light: #E0E0E0;
+            --error-red: #DC3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            will-change: transform;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+        
+        .nav-links a[aria-current="page"] {
+            color: var(--trust-blue);
+        }
+        
+        .nav-links a[aria-current="page"]::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--trust-blue);
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--success-green);
+            min-height: 44px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cta-button:hover,
+        .cta-button:focus {
+            background: #218838;
+            border-color: #218838;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            outline: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
+            color: var(--clean-white);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .hero::before {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+        
+        .hero::after {
+            width: 400px;
+            height: 400px;
+            bottom: -200px;
+            left: -200px;
+            animation-delay: -7s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero-text p {
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Prevention Importance */
+        .prevention-importance {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+        
+        .importance-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .importance-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .importance-header p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .comparison-card {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .comparison-card.prevention {
+            border: 2px solid var(--success-green);
+        }
+        
+        .comparison-card.treatment {
+            border: 2px solid var(--warning-yellow);
+        }
+        
+        .comparison-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .comparison-icon {
+            font-size: 2rem;
+        }
+
+        .comparison-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .comparison-list {
+            list-style: none;
+        }
+        
+        .comparison-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .comparison-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .prevention .comparison-list li::before {
+            color: var(--success-green);
+        }
+        
+        .treatment .comparison-list li::before {
+            color: var(--warning-yellow);
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .services-section p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--clean-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover,
+        .service-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: var(--accent-teal);
+        }
+        
+        .service-header {
+            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
+            color: var(--clean-white);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .service-content {
+            padding: 2rem;
+        }
+        
+        .service-content p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .service-content ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .service-content li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-gray);
+        }
+        
+        .service-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: bold;
+        }
+
+        .service-price {
+            background: var(--light-teal);
+            padding: 0.75rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .price-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 0.25rem;
+        }
+        
+        /* At-Home Care Tips */
+        .home-care {
+            padding: 4rem 0;
+            background: var(--light-teal);
+        }
+
+        .home-care h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .home-care p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .care-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .care-step {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .care-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--trust-blue), var(--accent-teal));
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+        
+        .care-step:hover::before,
+        .care-step:focus-within::before {
+            transform: scaleX(1);
+        }
+        
+        .care-step:hover,
+        .care-step:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--accent-teal);
+        }
+        
+        .step-number {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .care-step h3 {
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        .care-step p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        
+        /* Visit Frequency */
+        .visit-frequency {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+        
+        .frequency-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .frequency-content h2 {
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .frequency-content p {
+            color: var(--text-gray);
+            margin: 1rem 0;
+            line-height: 1.7;
+        }
+        
+        .frequency-chart {
+            background: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+        
+        .age-group {
+            background: var(--clean-white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .age-group:hover,
+        .age-group:focus {
+            transform: translateX(8px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            outline: none;
+        }
+        
+        .age-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        .age-label {
+            font-weight: bold;
+            color: var(--charcoal);
+        }
+        
+        .frequency-recommendation {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Cost Calculator */
+        .cost-calculator {
+            padding: 4rem 0;
+            background: var(--light-blue);
+        }
+        
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .calculator-container h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .calculator-container p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .calculator-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 0.75rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+            min-height: 44px;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0,119,190,0.1);
+        }
+        
+        .calculate-button {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 50px;
+        }
+        
+        .calculate-button:hover,
+        .calculate-button:focus {
+            background: #005a8b;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(0,119,190,0.3);
+            outline: none;
+        }
+
+        .calculate-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .calculator-result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--light-teal);
+            border-radius: 15px;
+            display: none;
+            text-align: center;
+        }
+        
+        .calculator-result.show {
+            display: block;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        
+        .savings-amount {
+            font-size: 2.5rem;
+            color: var(--success-green);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .savings-breakdown {
+            background: var(--clean-white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .savings-breakdown h4 {
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .breakdown-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            color: var(--success-green);
+        }
+        
+        /* Educational Videos */
+        .videos-section {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+
+        .videos-section h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .videos-section p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .video-card {
+            background: var(--clean-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .video-card:hover,
+        .video-card:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: var(--accent-teal);
+            outline: none;
+        }
+        
+        .video-thumbnail {
+            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 3rem;
+            position: relative;
+        }
+        
+        .play-button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--clean-white);
+            color: var(--trust-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .video-card:hover .play-button {
+            transform: scale(1.1);
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+        
+        .video-duration {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Benefits Showcase */
+        .benefits-showcase {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+
+        .benefits-showcase h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .benefits-showcase p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--soft-gray);
+            border-radius: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .benefit-item:hover,
+        .benefit-item:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .benefit-item h3 {
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        .benefit-item p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button-secondary {
+            background: transparent;
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--clean-white);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+        }
+        
+        .cta-button-secondary:hover,
+        .cta-button-secondary:focus {
+            background: var(--clean-white);
+            color: var(--trust-blue);
+            outline: none;
+        }
+
+        /* Floating Action Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success-green);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
+            z-index: 1000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            will-change: transform;
+        }
+
+        .floating-cta:hover,
+        .floating-cta:focus {
+            transform: scale(1.05);
+            background: #218838;
+            outline: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+        }
+        
+        .footer-section a {
+            color: var(--clean-white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+            padding: 0.25rem 0;
+        }
+        
+        .footer-section a:hover,
+        .footer-section a:focus {
+            color: var(--accent-teal);
+            outline: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #999;
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Error States */
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        /* Success States */
+        .success-message {
+            background: #efe;
+            color: #363;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content,
+            .comparison-grid,
+            .frequency-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-stats {
+                margin-top: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .floating-cta {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .service-card,
+            .care-step,
+            .benefit-item {
+                padding: 1.5rem;
+            }
+
+            .calculator-container {
+                padding: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 3rem 0;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: #000;
+            }
+            
+            .service-card,
+            .care-step {
+                border: 2px solid var(--charcoal);
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .hero::before,
+            .hero::after {
+                animation: none;
+            }
+        }
+
+        /* Focus management */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <a href="homepage.html" class="logo" aria-label="SmileCare Dental - Home">SmileCare Dental</a>
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="services-hub.html">Services</a>
+                <a href="blog-resources.html">Resources</a>
+                <a href="technology-comfort.html">About</a>
+                <a href="book-appointment.html">Contact</a>
+                <a href="book-appointment.html" class="cta-button">Book Appointment</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Floating Action Button -->
+    <a href="#schedule" class="floating-cta" aria-label="Quick appointment booking">📞 Book Now</a>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Preventive Dental Care</h1>
+                        <p>Protect your smile and save money with our comprehensive preventive care services</p>
+                        <a href="#schedule" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem; margin-top: 1rem; display: inline-flex;">Schedule Your Cleaning</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="90">90%</span>
+                            <div class="stat-label">of dental disease is preventable</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="5">5X</span>
+                            <div class="stat-label">less expensive than treatment</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="99">99%</span>
+                            <div class="stat-label">patient satisfaction rate</div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="2">2X</span>
+                            <div class="stat-label">yearly visits recommended</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prevention Importance -->
+        <section class="prevention-importance" aria-labelledby="importance-heading">
+            <div class="container">
+                <div class="importance-header">
+                    <h2 id="importance-heading">Why Prevention Matters</h2>
+                    <p>Investing in preventive care today saves you time, money, and discomfort tomorrow</p>
+                </div>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-card prevention">
+                        <div class="comparison-header">
+                            <span class="comparison-icon" aria-hidden="true">🛡️</span>
+                            <h3>With Preventive Care</h3>
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Regular cleanings: $150-200/visit</li>
+                            <li>Early cavity detection</li>
+                            <li>Minimal treatment needed</li>
+                            <li>Healthy teeth and gums</li>
+                            <li>Fresh breath and bright smile</li>
+                            <li>Lower lifetime dental costs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-card treatment">
+                        <div class="comparison-header">
+                            <span class="comparison-icon" aria-hidden="true">⚠️</span>
+                            <h3>Without Prevention</h3>
+                        </div>
+                        <ul class="comparison-list">
+                            <li>Root canal: $1,000-1,500</li>
+                            <li>Crown: $800-1,500</li>
+                            <li>Gum disease treatment: $500-10,000</li>
+                            <li>Tooth extraction: $200-600</li>
+                            <li>Dental implant: $3,000-5,000</li>
+                            <li>Pain and discomfort</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading">Our Preventive Care Services</h2>
+                <p>Comprehensive protection for your entire family</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon" aria-hidden="true">✨</span>
+                            <h3>Professional Cleanings</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Thorough cleaning to remove plaque and tartar that regular brushing can't reach.</p>
+                            <ul>
+                                <li>Plaque and tartar removal</li>
+                                <li>Teeth polishing</li>
+                                <li>Stain removal</li>
+                                <li>Fresh breath treatment</li>
+                                <li>Gum health assessment</li>
+                            </ul>
+                            <div class="service-price">
+                                <div class="price-value">Starting at $125</div>
+                                <div class="price-note">Covered by most insurance</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon" aria-hidden="true">💧</span>
+                            <h3>Fluoride Treatments</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Strengthen tooth enamel and prevent cavities with professional fluoride application.</p>
+                            <ul>
+                                <li>Quick, painless application</li>
+                                <li>Reduces cavity risk by 30%</li>
+                                <li>Safe for all ages</li>
+                                <li>Long-lasting protection</li>
+                                <li>Reverses early decay</li>
+                            </ul>
+                            <div class="service-price">
+                                <div class="price-value">Starting at $45</div>
+                                <div class="price-note">Often included with cleaning</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon" aria-hidden="true">🛡️</span>
+                            <h3>Dental Sealants</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Protective coating applied to molars to prevent cavities in hard-to-clean grooves.</p>
+                            <ul>
+                                <li>80% cavity reduction</li>
+                                <li>Lasts up to 10 years</li>
+                                <li>Ideal for children</li>
+                                <li>Painless application</li>
+                                <li>BPA-free materials</li>
+                            </ul>
+                            <div class="service-price">
+                                <div class="price-value">Starting at $35</div>
+                                <div class="price-note">Per tooth</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon" aria-hidden="true">🔍</span>
+                            <h3>Oral Cancer Screening</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Early detection saves lives. We screen for oral cancer at every checkup.</p>
+                            <ul>
+                                <li>Visual examination</li>
+                                <li>Tissue palpation</li>
+                                <li>Advanced screening tools</li>
+                                <li>Risk factor assessment</li>
+                                <li>Peace of mind</li>
+                            </ul>
+                            <div class="service-price">
+                                <div class="price-value">Included</div>
+                                <div class="price-note">With routine exam</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon" aria-hidden="true">📸</span>
+                            <h3>Digital X-Rays</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Advanced imaging to detect problems early when they're easier to treat.</p>
+                            <ul>
+                                <li>90% less radiation</li>
+                                <li>Instant results</li>
+                                <li>Early cavity detection</li>
+                                <li>Bone health monitoring</li>
+                                <li>Digital record keeping</li>
+                            </ul>
+                            <div class="service-price">
+                                <div class="price-value">Starting at $25</div>
+                                <div class="price-note">Per image</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon" aria-hidden="true">🦷</span>
+                            <h3>Custom Mouthguards</h3>
+                        </div>
+                        <div class="service-content">
+                            <p>Protect teeth from sports injuries and nighttime grinding.</p>
+                            <ul>
+                                <li>Custom fit for comfort</li>
+                                <li>Sports protection</li>
+                                <li>Nightguard for grinding</li>
+                                <li>Durable materials</li>
+                                <li>Prevents costly damage</li>
+                            </ul>
+                            <div class="service-price">
+                                <div class="price-value">Starting at $150</div>
+                                <div class="price-note">Sports or night guard</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- At-Home Care Tips -->
+        <section class="home-care" aria-labelledby="home-care-heading">
+            <div class="container">
+                <h2 id="home-care-heading">Your Daily Prevention Routine</h2>
+                <p>Simple steps for a lifetime of healthy smiles</p>
+                
+                <div class="care-steps">
+                    <div class="care-step" tabindex="0">
+                        <div class="step-number">1</div>
+                        <h3>Brush Twice Daily</h3>
+                        <p>Use fluoride toothpaste and brush for 2 minutes, morning and night</p>
+                    </div>
+                    
+                    <div class="care-step" tabindex="0">
+                        <div class="step-number">2</div>
+                        <h3>Floss Daily</h3>
+                        <p>Remove plaque between teeth where your toothbrush can't reach</p>
+                    </div>
+                    
+                    <div class="care-step" tabindex="0">
+                        <div class="step-number">3</div>
+                        <h3>Rinse with Mouthwash</h3>
+                        <p>Kill bacteria and freshen breath with antimicrobial rinse</p>
+                    </div>
+                    
+                    <div class="care-step" tabindex="0">
+                        <div class="step-number">4</div>
+                        <h3>Eat Tooth-Friendly Foods</h3>
+                        <p>Choose calcium-rich foods and limit sugary snacks and drinks</p>
+                    </div>
+                    
+                    <div class="care-step" tabindex="0">
+                        <div class="step-number">5</div>
+                        <h3>Stay Hydrated</h3>
+                        <p>Drink water throughout the day to wash away bacteria</p>
+                    </div>
+                    
+                    <div class="care-step" tabindex="0">
+                        <div class="step-number">6</div>
+                        <h3>Visit Us Regularly</h3>
+                        <p>Professional cleanings and checkups every 6 months</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Frequency -->
+        <section class="visit-frequency" aria-labelledby="frequency-heading">
+            <div class="container">
+                <div class="frequency-content">
+                    <div>
+                        <h2 id="frequency-heading">How Often Should You Visit?</h2>
+                        <p>Regular dental visits are essential for maintaining optimal oral health. The frequency depends on your age, risk factors, and current oral health status.</p>
+                        <p>Our team will create a personalized prevention schedule based on your individual needs. Most patients benefit from visits every six months, but some may need more frequent care.</p>
+                        <a href="#schedule" class="cta-button" style="margin-top: 1rem;">Book Your Visit</a>
+                    </div>
+                    
+                    <div class="frequency-chart">
+                        <div class="age-group" tabindex="0" role="button" aria-label="Children 2-17 years, recommended every 6 months">
+                            <span class="age-label">Children (2-17 years)</span>
+                            <span class="frequency-recommendation">Every 6 months</span>
+                        </div>
+                        <div class="age-group" tabindex="0" role="button" aria-label="Adults 18-64 years, recommended every 6 months">
+                            <span class="age-label">Adults (18-64 years)</span>
+                            <span class="frequency-recommendation">Every 6 months</span>
+                        </div>
+                        <div class="age-group" tabindex="0" role="button" aria-label="Seniors 65+ years, recommended every 4-6 months">
+                            <span class="age-label">Seniors (65+ years)</span>
+                            <span class="frequency-recommendation">Every 4-6 months</span>
+                        </div>
+                        <div class="age-group" tabindex="0" role="button" aria-label="High risk patients, recommended every 3-4 months">
+                            <span class="age-label">High Risk Patients</span>
+                            <span class="frequency-recommendation">Every 3-4 months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Calculator -->
+        <section class="cost-calculator" aria-labelledby="calculator-heading">
+            <div class="container">
+                <div class="calculator-container">
+                    <h2 id="calculator-heading">Prevention Savings Calculator</h2>
+                    <p>See how much you can save with preventive care</p>
+                    
+                    <form class="calculator-form" onsubmit="calculateSavings(event)" aria-labelledby="calculator-heading">
+                        <div class="form-group">
+                            <label for="age">Your Age</label>
+                            <input 
+                                type="number" 
+                                id="age" 
+                                min="18" 
+                                max="100" 
+                                required
+                                aria-describedby="age-help"
+                            >
+                            <small id="age-help" class="visually-hidden">Enter your age for personalized savings calculation</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="current-visits">Current Dental Visits Per Year</label>
+                            <select id="current-visits" required aria-describedby="visits-help">
+                                <option value="0">Never</option>
+                                <option value="1">Once a year</option>
+                                <option value="2">Twice a year</option>
+                                <option value="3">More than twice</option>
+                            </select>
+                            <small id="visits-help" class="visually-hidden">Select how often you currently visit the dentist</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="years">Calculate savings over how many years?</label>
+                            <input 
+                                type="number" 
+                                id="years" 
+                                min="1" 
+                                max="30" 
+                                value="10" 
+                                required
+                                aria-describedby="years-help"
+                            >
+                            <small id="years-help" class="visually-hidden">Enter number of years for savings projection</small>
+                        </div>
+                        
+                        <button type="submit" class="calculate-button">Calculate My Savings</button>
+                    </form>
+                    
+                    <div class="calculator-result" id="result" role="region" aria-live="polite">
+                        <div class="savings-amount" id="savingsAmount">$0</div>
+                        <p style="text-align: center; margin-bottom: 1rem;">Estimated savings with preventive care</p>
+                        <p style="text-align: center; color: var(--text-gray);">This includes avoided treatments like fillings, root canals, crowns, and gum disease treatment.</p>
+                        
+                        <div class="savings-breakdown" id="savingsBreakdown">
+                            <h4>Savings Breakdown:</h4>
+                            <div class="breakdown-item">
+                                <span>Annual preventive care cost:</span>
+                                <span id="preventiveCost">$400</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Avoided treatment costs:</span>
+                                <span id="avoidedCosts">$0</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Total net savings:</span>
+                                <span id="netSavings">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Videos -->
+        <section class="videos-section" aria-labelledby="videos-heading">
+            <div class="container">
+                <h2 id="videos-heading">Educational Videos</h2>
+                <p>Learn proper techniques and understand the importance of prevention</p>
+                
+                <div class="videos-grid">
+                    <div 
+                        class="video-card" 
+                        tabindex="0" 
+                        role="button"
+                        onclick="playVideo('brushing')"
+                        aria-label="Play video: Proper Brushing Technique, 3 minutes 45 seconds"
+                    >
+                        <div class="video-thumbnail">
+                            <span aria-hidden="true">🪥</span>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Proper Brushing Technique</h3>
+                            <p class="video-duration">3:45 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div 
+                        class="video-card" 
+                        tabindex="0" 
+                        role="button"
+                        onclick="playVideo('flossing')"
+                        aria-label="Play video: How to Floss Effectively, 2 minutes 30 seconds"
+                    >
+                        <div class="video-thumbnail">
+                            <span aria-hidden="true">🦷</span>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">How to Floss Effectively</h3>
+                            <p class="video-duration">2:30 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div 
+                        class="video-card" 
+                        tabindex="0" 
+                        role="button"
+                        onclick="playVideo('kids')"
+                        aria-label="Play video: Teaching Kids to Brush, 4 minutes 15 seconds"
+                    >
+                        <div class="video-thumbnail">
+                            <span aria-hidden="true">👶</span>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Teaching Kids to Brush</h3>
+                            <p class="video-duration">4:15 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div 
+                        class="video-card" 
+                        tabindex="0" 
+                        role="button"
+                        onclick="playVideo('diet')"
+                        aria-label="Play video: Foods for Healthy Teeth, 5 minutes"
+                    >
+                        <div class="video-thumbnail">
+                            <span aria-hidden="true">🍎</span>
+                            <div class="play-button" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Foods for Healthy Teeth</h3>
+                            <p class="video-duration">5:00 minutes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Showcase -->
+        <section class="benefits-showcase" aria-labelledby="benefits-heading">
+            <div class="container">
+                <h2 id="benefits-heading">Benefits of Preventive Care</h2>
+                <p>Discover why prevention is the cornerstone of excellent oral health</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">💰</span>
+                        <h3>Cost Savings</h3>
+                        <p>Preventive care costs significantly less than restorative treatments, saving you thousands over time.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">⏰</span>
+                        <h3>Time Efficiency</h3>
+                        <p>Regular cleanings take less time than complex procedures, keeping your dental visits quick and comfortable.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">😊</span>
+                        <h3>Better Comfort</h3>
+                        <p>Prevent pain and discomfort by catching issues early when treatment is simpler and more comfortable.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">❤️</span>
+                        <h3>Overall Health</h3>
+                        <p>Good oral health is linked to better cardiovascular health and reduced risk of systemic diseases.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">✨</span>
+                        <h3>Confident Smile</h3>
+                        <p>Maintain a bright, healthy smile that boosts your confidence in personal and professional situations.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span class="benefit-icon" aria-hidden="true">🛡️</span>
+                        <h3>Long-term Protection</h3>
+                        <p>Build a foundation for lifelong oral health with consistent preventive care and education.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="schedule" aria-labelledby="cta-heading">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-heading">Start Your Prevention Journey Today</h2>
+                    <p>Take the first step towards a lifetime of healthy smiles. Schedule your preventive care appointment now.</p>
+                    <div class="cta-buttons">
+                        <a href="book-appointment.html" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem;">Schedule Cleaning</a>
+                        <a href="tel:5551234567" class="cta-button-secondary">Call (555) 123-4567</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="technology-comfort.html">About Us</a>
+                    <a href="services-hub.html">Our Services</a>
+                    <a href="blog-resources.html">Blog & Resources</a>
+                    <a href="book-appointment.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="general-dentistry.html">General Dentistry</a>
+                    <a href="preventive-care.html" aria-current="page">Preventive Care</a>
+                    <a href="veneers.html">Cosmetic Dentistry</a>
+                    <a href="emergency-dentistry.html">Emergency Care</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Smile Street<br>Dental City, DC 12345</p>
+                    <p>Phone: <a href="tel:5551234567" style="color: inherit;">(555) 123-4567</a></p>
+                    <p>Email: <a href="mailto:info@smilecare.com" style="color: inherit;">info@smilecare.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 3:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p>Emergency: 24/7 Available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmileCare Dental. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': document.querySelector('meta[name="service-name"]')?.content || 'unknown',
+                    ...parameters
+                });
+            }
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                }
+            }
+        }
+
+        // Enhanced Form Submission with API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                    field.classList.remove('error');
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent(`submit_appointment_${serviceName}`, {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: `${serviceName}-page`,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent(`appointment_success_${serviceName}`, {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset any custom selectors
+                document.querySelectorAll('.urgency-option, .symptom-button').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent(`appointment_error_${serviceName}`, {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('.cta-button, .btn-primary, .btn-schedule, .btn-book, .appointment-btn, a[class*="button"]').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        // Don't prevent default for external links
+                        if (!this.href || this.href.startsWith('#') || this.href.includes(window.location.hostname)) {
+                            e.preventDefault();
+                        }
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent(`click_service_cta_${serviceName}`, {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book') || buttonText.includes('appointment')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler, #appointment, .appointment-form, .booking-form');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            } else {
+                                // If no scheduler section, go to appointment page
+                                window.location.href = '/book-appointment.html';
+                            }
+                        } else if (buttonText.includes('call') || buttonText.includes('phone')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        } else if (buttonText.includes('quote') || buttonText.includes('consultation')) {
+                            // Quote/consultation request
+                            await handleQuoteRequest(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent(`click_phone_${serviceName}`, {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta, .floating-btn, .sticky-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent(`insurance_verification_success_${serviceName}`);
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent(`insurance_verification_error_${serviceName}`);
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Handle quote/consultation requests
+        async function handleQuoteRequest(button) {
+            const serviceName = document.querySelector('meta[name="service-name"]')?.content || 'unknown';
+            LoadingStateManager.setLoading(button, true, 'Processing...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'quote_request',
+                        service: serviceName,
+                        source: `${serviceName}-page`,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+                
+                trackEvent(`quote_request_success_${serviceName}`);
+                showNotification('Quote request received! We\'ll email you a personalized quote within 2 hours.', 'success');
+                
+            } catch (error) {
+                trackEvent(`quote_request_error_${serviceName}`);
+                showNotification('Unable to process request. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all interactive elements
+            initializeCTAButtons();
+            initializePhoneLinks();
+            initializeFloatingCTA();
+            
+            // Set minimum date for appointment inputs
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('input[type="date"]').forEach(input => {
+                input.setAttribute('min', today);
+            });
+            
+            // Initialize form submit handlers
+            document.querySelectorAll('form').forEach(form => {
+                // Check if it's an appointment form
+                const hasAppointmentFields = form.querySelector('input[name="name"]') && 
+                                            form.querySelector('input[name="email"]') &&
+                                            form.querySelector('input[name="phone"]');
+                
+                if (hasAppointmentFields || form.classList.contains('appointment-form') || 
+                    form.classList.contains('booking-form') || form.hasAttribute('data-appointment')) {
+                    form.addEventListener('submit', submitAppointment);
+                }
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading, .loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after, .loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: #28A745 !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: #DC3545 !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid #0077BE;
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+            
+            /* Ensure buttons are clickable */
+            button, .cta-button, .btn-primary, .btn-schedule {
+                cursor: pointer;
+                user-select: none;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>

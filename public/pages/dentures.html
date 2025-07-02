@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dentures - Natural Comfort & Confidence | DentalCare Excellence</title>
+    <meta name="description" content="Premium denture solutions with 5-year warranty. Full, partial, and implant-supported dentures using state-of-the-art materials. Free consultation and instant cost calculator.">
+    <meta name="keywords" content="dentures, dental implants, partial dentures, full dentures, affordable dental care">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --warning-red: #DC3545;
+            --gold: #FFD700;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 20px rgba(0,0,0,0.15);
+            --shadow-heavy: 0 10px 30px rgba(0,0,0,0.2);
+            --border-radius: 10px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+            border-radius: 4px;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Container and layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and navigation */
+        header {
+            background-color: var(--clean-white);
+            box-shadow: var(--shadow-light);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+
+        .nav-links a:focus::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--trust-blue);
+        }
+
+        /* CTA Button with enhanced accessibility */
+        .cta-button {
+            background-color: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+            outline: 2px solid var(--success-green);
+            outline-offset: 2px;
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Hero section with improved contrast */
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%);
+            color: var(--clean-white);
+            padding: 8rem 0 4rem;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero-image {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Guarantee badges with ARIA support */
+        .guarantee-badges {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: var(--gold);
+            color: var(--charcoal);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Section headers with improved hierarchy */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Card components with enhanced interaction */
+        .denture-types {
+            padding: 4rem 0;
+            background-color: var(--soft-gray);
+        }
+
+        .denture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .denture-card {
+            background-color: var(--clean-white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .denture-card:hover,
+        .denture-card:focus-within {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--accent-teal);
+        }
+
+        .denture-card h3 {
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .price-range {
+            background-color: var(--accent-teal);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Enhanced comparison table */
+        .denture-comparison {
+            padding: 4rem 0;
+            background-color: var(--clean-white);
+        }
+
+        .comparison-tool {
+            background-color: var(--soft-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            min-width: 600px;
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 1rem;
+            background-color: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 1rem;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: var(--clean-white);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .check-mark {
+            color: var(--success-green);
+            font-weight: bold;
+        }
+
+        .x-mark {
+            color: var(--warning-red);
+            font-weight: bold;
+        }
+
+        /* Enhanced calculator with improved UX */
+        .cost-calculator {
+            padding: 4rem 0;
+            background-color: var(--soft-gray);
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .calculator-form {
+            background-color: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+            min-height: 44px;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+        }
+
+        .calculator-result {
+            background-color: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-medium);
+            text-align: center;
+        }
+
+        .total-cost {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--trust-blue);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        /* Enhanced testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            background-color: var(--soft-gray);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .mobile-menu:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+
+        /* Enhanced responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--clean-white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-medium);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+
+        /* Focus indicators for better accessibility */
+        *:focus {
+            outline: none;
+        }
+
+        button:focus,
+        a:focus,
+        input:focus,
+        select:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+
+        /* Loading state for interactive elements */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --shadow-light: 0 2px 10px rgba(0,0,0,0.3);
+                --shadow-medium: 0 5px 20px rgba(0,0,0,0.4);
+                --shadow-heavy: 0 10px 30px rgba(0,0,0,0.5);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .fade-in {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header,
+            .mobile-menu,
+            .cta-button {
+                display: none;
+            }
+            
+            .hero {
+                background: none;
+                color: black;
+            }
+        }
+    </style>
+    
+    <!-- Google tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <nav class="container" aria-label="Main navigation">
+            <div class="logo">DentalCare Excellence</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/dentures" aria-current="page">Dentures</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <a href="#consultation" class="cta-button">Free Consultation</a>
+            <button class="mobile-menu" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <div>
+                        <h1 id="hero-heading">Premium Denture Solutions for Natural, Confident Smiles</h1>
+                        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Experience state-of-the-art dentures that look, feel, and function like natural teeth. Our premium solutions combine comfort, aesthetics, and durability with industry-leading warranties.</p>
+                        <div class="guarantee-badges" role="list" aria-label="Our guarantees">
+                            <div class="badge" role="listitem">
+                                <span aria-hidden="true">🛡️</span> 5-Year Warranty
+                            </div>
+                            <div class="badge" role="listitem">
+                                <span aria-hidden="true">💯</span> Satisfaction Guarantee
+                            </div>
+                            <div class="badge" role="listitem">
+                                <span aria-hidden="true">🔄</span> Free Adjustments
+                            </div>
+                        </div>
+                        <a href="#consultation" class="cta-button" style="font-size: 1.2rem; padding: 1rem 2rem; margin-top: 2rem;">Get Your Free Consultation</a>
+                    </div>
+                    <div class="hero-image">
+                        <div style="font-size: 5rem;" aria-hidden="true">😊</div>
+                        <p style="font-size: 1.2rem; margin-top: 1rem;">Join thousands who've transformed their smiles</p>
+                        <div style="margin-top: 1rem; font-size: 0.9rem;">
+                            <strong>98.7% Patient Satisfaction Rate</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="denture-types" aria-labelledby="denture-types-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="denture-types-heading">Comprehensive Denture Options</h2>
+                    <p>Choose the perfect solution for your unique needs and budget</p>
+                </div>
+                <div class="denture-grid">
+                    <article class="denture-card fade-in">
+                        <div class="price-range">$800-$1,500</div>
+                        <span class="icon" aria-hidden="true">🦷</span>
+                        <h3>Full Dentures</h3>
+                        <p>Complete upper or lower arch replacement with natural-looking teeth. Our custom-fitted full dentures restore your entire smile with comfort and confidence.</p>
+                        <ul style="text-align: left; margin-top: 1rem; list-style: none;">
+                            <li><span aria-hidden="true">✓</span> Custom color matching</li>
+                            <li><span aria-hidden="true">✓</span> Natural gum appearance</li>
+                            <li><span aria-hidden="true">✓</span> Secure, comfortable fit</li>
+                            <li><span aria-hidden="true">✓</span> 5-year warranty included</li>
+                        </ul>
+                        <button class="cta-button" style="margin-top: 1rem; width: 100%;" onclick="selectDentureType('full')" aria-describedby="full-dentures-description">Calculate My Cost</button>
+                    </article>
+                    <article class="denture-card fade-in">
+                        <div class="price-range">$400-$800</div>
+                        <span class="icon" aria-hidden="true">⚡</span>
+                        <h3>Partial Dentures</h3>
+                        <p>Replace specific missing teeth while preserving your healthy natural teeth. Seamlessly blend with your existing smile.</p>
+                        <ul style="text-align: left; margin-top: 1rem; list-style: none;">
+                            <li><span aria-hidden="true">✓</span> Precision attachments</li>
+                            <li><span aria-hidden="true">✓</span> Flexible base options</li>
+                            <li><span aria-hidden="true">✓</span> Minimal adjustment period</li>
+                            <li><span aria-hidden="true">✓</span> Same-day repairs available</li>
+                        </ul>
+                        <button class="cta-button" style="margin-top: 1rem; width: 100%;" onclick="selectDentureType('partial')">Calculate My Cost</button>
+                    </article>
+                    <article class="denture-card fade-in">
+                        <div class="price-range">$3,000-$6,000</div>
+                        <span class="icon" aria-hidden="true">💎</span>
+                        <h3>Implant-Supported</h3>
+                        <p>The gold standard in denture stability. Dental implants provide unmatched security and bone preservation.</p>
+                        <ul style="text-align: left; margin-top: 1rem; list-style: none;">
+                            <li><span aria-hidden="true">✓</span> No slipping or clicking</li>
+                            <li><span aria-hidden="true">✓</span> Eat any food confidently</li>
+                            <li><span aria-hidden="true">✓</span> Preserves jawbone health</li>
+                            <li><span aria-hidden="true">✓</span> Lifetime implant warranty</li>
+                        </ul>
+                        <button class="cta-button" style="margin-top: 1rem; width: 100%;" onclick="selectDentureType('implant')">Calculate My Cost</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="denture-comparison" aria-labelledby="comparison-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="comparison-heading">Denture Type Comparison Tool</h2>
+                    <p>Compare features, benefits, and costs side by side</p>
+                </div>
+                <div class="comparison-tool">
+                    <div class="comparison-table">
+                        <div class="comparison-header" role="row">
+                            <div role="columnheader">Feature</div>
+                            <div role="columnheader">Traditional</div>
+                            <div role="columnheader">Partial</div>
+                            <div role="columnheader">Implant-Supported</div>
+                        </div>
+                        <div class="comparison-row" role="row">
+                            <div role="cell">Initial Cost</div>
+                            <div role="cell">$800-$1,500</div>
+                            <div role="cell">$400-$800</div>
+                            <div role="cell">$3,000-$6,000</div>
+                        </div>
+                        <div class="comparison-row" role="row">
+                            <div role="cell">Eating Ability</div>
+                            <div role="cell">Good</div>
+                            <div role="cell">Excellent</div>
+                            <div role="cell">Like Natural Teeth</div>
+                        </div>
+                        <div class="comparison-row" role="row">
+                            <div role="cell">Stability</div>
+                            <div role="cell">Good with Adhesive</div>
+                            <div role="cell">Very Good</div>
+                            <div role="cell">Excellent</div>
+                        </div>
+                        <div class="comparison-row" role="row">
+                            <div role="cell">Bone Preservation</div>
+                            <div role="cell"><span class="x-mark" aria-label="No">✗</span></div>
+                            <div role="cell"><span class="check-mark" aria-label="Partial">✓ Partial</span></div>
+                            <div role="cell"><span class="check-mark" aria-label="Complete">✓ Complete</span></div>
+                        </div>
+                        <div class="comparison-row" role="row">
+                            <div role="cell">Lifespan</div>
+                            <div role="cell">5-7 years</div>
+                            <div role="cell">7-10 years</div>
+                            <div role="cell">20+ years</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cost-calculator" aria-labelledby="calculator-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="calculator-heading">Denture Cost Calculator</h2>
+                    <p>Get an accurate estimate for your denture treatment</p>
+                </div>
+                <div class="calculator-grid">
+                    <div class="calculator-form">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--trust-blue);">Treatment Details</h3>
+                        <form id="costCalculatorForm" aria-label="Cost calculator form">
+                            <div class="form-group">
+                                <label for="dentureType">Denture Type</label>
+                                <select id="dentureType" onchange="calculateDentureCost()" aria-describedby="denture-type-help">
+                                    <option value="full">Full Dentures (Upper & Lower)</option>
+                                    <option value="full-upper">Full Dentures (Upper Only)</option>
+                                    <option value="full-lower">Full Dentures (Lower Only)</option>
+                                    <option value="partial">Partial Dentures</option>
+                                    <option value="implant-2">Implant-Supported (2 implants)</option>
+                                    <option value="implant-4">Implant-Supported (4 implants)</option>
+                                    <option value="implant-6">Implant-Supported (6 implants)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="materialQuality">Material Quality</label>
+                                <select id="materialQuality" onchange="calculateDentureCost()">
+                                    <option value="standard">Standard Acrylic</option>
+                                    <option value="premium">Premium Materials (+$300)</option>
+                                    <option value="luxury">Luxury Porcelain (+$800)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="insuranceCoverage">Insurance Coverage</label>
+                                <select id="insuranceCoverage" onchange="calculateDentureCost()">
+                                    <option value="none">No Insurance</option>
+                                    <option value="basic">Basic Coverage (50%)</option>
+                                    <option value="good">Good Coverage (70%)</option>
+                                    <option value="excellent">Excellent Coverage (80%)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Additional Services</label>
+                                <div style="margin-top: 0.5rem;">
+                                    <label style="font-weight: normal; display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                        <input type="checkbox" id="extraction" onchange="calculateDentureCost()" style="margin-right: 0.5rem; width: auto;" aria-describedby="extraction-help">
+                                        Tooth Extractions (+$150 per tooth)
+                                    </label>
+                                    <input type="number" id="extractionCount" placeholder="Number of extractions" style="margin-left: 1.5rem; width: calc(100% - 1.5rem);" onchange="calculateDentureCost()" aria-label="Number of extractions">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="calculator-result" role="region" aria-live="polite" aria-label="Cost calculation results">
+                        <h3 style="color: var(--trust-blue); margin-bottom: 1rem;">Your Estimated Cost</h3>
+                        <div class="total-cost" id="totalCost">$1,200</div>
+                        <div style="background-color: var(--soft-gray); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Base Treatment Cost:</span>
+                                <span id="baseCost">$1,200</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Material Upgrade:</span>
+                                <span id="materialCost">$0</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Extractions:</span>
+                                <span id="extractionCost">$0</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$1,200</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; border-top: 2px solid var(--trust-blue); padding-top: 0.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                <span>Insurance Savings:</span>
+                                <span id="insuranceSavings">-$0</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-weight: bold; color: var(--success-green);">
+                                <span>Your Out-of-Pocket:</span>
+                                <span id="finalCost">$1,200</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                            <strong>Financing available:</strong> As low as $<span id="monthlyPayment">50</span>/month
+                        </p>
+                        <button class="cta-button" style="margin-top: 1rem;">Schedule Free Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="testimonials-heading">Real Patients, Real Results</h2>
+                    <p>Hear from patients who love their new dentures</p>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card fade-in">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote style="font-style: italic; margin-bottom: 1rem;">"I was nervous about getting dentures at 68, but Dr. Chen made the whole process so comfortable. My new implant-supported dentures feel just like my natural teeth. I can eat corn on the cob again!"</blockquote>
+                        <cite style="font-weight: bold;">
+                            – Margaret K. <span style="background-color: var(--accent-teal); color: var(--clean-white); padding: 0.25rem 0.5rem; border-radius: 10px; font-size: 0.8rem; margin-left: 0.5rem;">Age 68</span>
+                        </cite>
+                    </article>
+                    <article class="testimonial-card fade-in">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote style="font-style: italic; margin-bottom: 1rem;">"The cost calculator helped me understand exactly what I'd pay. With my insurance, the partial dentures were very affordable. The 5-year warranty gives me such peace of mind."</blockquote>
+                        <cite style="font-weight: bold;">
+                            – Robert M. <span style="background-color: var(--accent-teal); color: var(--clean-white); padding: 0.25rem 0.5rem; border-radius: 10px; font-size: 0.8rem; margin-left: 0.5rem;">Age 72</span>
+                        </cite>
+                    </article>
+                    <article class="testimonial-card fade-in">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote style="font-style: italic; margin-bottom: 1rem;">"I love that they showed me all the maintenance costs upfront. No surprises! The payment plan made it easy to afford quality dentures on my fixed income."</blockquote>
+                        <cite style="font-weight: bold;">
+                            – Dorothy L. <span style="background-color: var(--accent-teal); color: var(--clean-white); padding: 0.25rem 0.5rem; border-radius: 10px; font-size: 0.8rem; margin-left: 0.5rem;">Age 75</span>
+                        </cite>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="consultation-cta" id="consultation" style="background: linear-gradient(135deg, var(--trust-blue) 0%, var(--accent-teal) 100%); color: var(--clean-white); padding: 4rem 0; text-align: center;" aria-labelledby="consultation-heading">
+            <div class="container">
+                <h2 id="consultation-heading" style="font-size: 2.5rem; margin-bottom: 1rem;">Start Your Smile Transformation Today</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">FREE Consultation includes exam, X-rays, and personalized treatment plan with transparent pricing</p>
+                <div style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 2rem; border-radius: 10px; max-width: 600px; margin: 2rem auto 0;">
+                    <form id="consultationForm" aria-label="Consultation request form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required aria-label="Your name" style="width: 100%; padding: 1rem; border: none; border-radius: 5px; font-size: 1rem; margin-bottom: 1rem;">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required aria-label="Phone number" style="width: 100%; padding: 1rem; border: none; border-radius: 5px; font-size: 1rem; margin-bottom: 1rem;">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required aria-label="Email address" style="width: 100%; padding: 1rem; border: none; border-radius: 5px; font-size: 1rem; margin-bottom: 1rem;">
+                        </div>
+                        <div class="form-group">
+                            <select required aria-label="Type of dentures interested in" style="width: 100%; padding: 1rem; border: none; border-radius: 5px; font-size: 1rem; margin-bottom: 1rem;">
+                                <option value="">Type of Dentures Interested In</option>
+                                <option value="full">Full Dentures</option>
+                                <option value="partial">Partial Dentures</option>
+                                <option value="implant">Implant-Supported Dentures</option>
+                                <option value="unsure">Not Sure - Need Consultation</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%; font-size: 1.2rem;">Schedule My Free Consultation</button>
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+                            <span aria-hidden="true">🛡️</span> Protected by our 5-year warranty and satisfaction guarantee
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" style="background-color: var(--charcoal); color: var(--clean-white); padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 DentalCare Excellence. All rights reserved.</p>
+            <p>State-of-the-art technology meets compassionate care</p>
+        </div>
+    </footer>
+
+    <script>
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'page_name': 'dentures',
+                    ...parameters
+                });
+            }
+        }
+        
+        // API Configuration
+        const API_CONFIG = {
+            consultation: '/api/book-consultation',
+            costCalculator: '/api/cost-calculator',
+            timeout: 10000
+        };
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.style.opacity = '0.6';
+                    element.style.cursor = 'not-allowed';
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.style.opacity = '';
+                    element.style.cursor = '';
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#28A745' : type === 'error' ? '#DC3545' : '#0077BE'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                z-index: 10000;
+                max-width: 90%;
+                animation: slideIn 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
+        // Enhanced mobile menu with accessibility
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const isOpen = navLinks.classList.contains('active');
+            
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+            
+            // Focus management
+            if (!isOpen) {
+                navLinks.querySelector('a').focus();
+            }
+        }
+
+        // Enhanced denture type selection
+        function selectDentureType(type) {
+            const dentureTypeSelect = document.getElementById('dentureType');
+            const typeMap = {
+                'full': 'full',
+                'partial': 'partial',
+                'implant': 'implant-4'
+            };
+            
+            dentureTypeSelect.value = typeMap[type] || 'full';
+            calculateDentureCost();
+            
+            // Track type selection
+            trackEvent('denture_type_selected', {
+                denture_type: type,
+                source: 'quick_select_button'
+            });
+            
+            // Smooth scroll with offset for fixed header
+            const calculator = document.querySelector('.cost-calculator');
+            if (calculator) {
+                const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+                const elementPosition = calculator.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Enhanced cost calculator with better UX
+        async function calculateDentureCost() {
+            const dentureType = document.getElementById('dentureType').value;
+            const materialQuality = document.getElementById('materialQuality').value;
+            const insuranceCoverage = document.getElementById('insuranceCoverage').value;
+            const extraction = document.getElementById('extraction').checked;
+            const extractionCount = parseInt(document.getElementById('extractionCount').value) || 0;
+
+            // Base costs with updated pricing
+            const baseCosts = {
+                'full': 1200,
+                'full-upper': 700,
+                'full-lower': 700,
+                'partial': 600,
+                'implant-2': 3500,
+                'implant-4': 5000,
+                'implant-6': 6500
+            };
+
+            const materialCosts = {
+                'standard': 0,
+                'premium': 300,
+                'luxury': 800
+            };
+
+            const insuranceRates = {
+                'none': 0,
+                'basic': 0.5,
+                'good': 0.7,
+                'excellent': 0.8
+            };
+
+            const baseCost = baseCosts[dentureType] || 1200;
+            const materialCost = materialCosts[materialQuality] || 0;
+            const extractionCost = extraction ? extractionCount * 150 : 0;
+            const subtotal = baseCost + materialCost + extractionCost;
+            const insuranceSavings = subtotal * (insuranceRates[insuranceCoverage] || 0);
+            const finalCost = subtotal - insuranceSavings;
+            const monthlyPayment = Math.round(finalCost / 24);
+
+            // Update display with animation
+            animateNumberChange('baseCost', baseCost);
+            animateNumberChange('materialCost', materialCost);
+            animateNumberChange('extractionCost', extractionCost);
+            animateNumberChange('subtotal', subtotal);
+            animateNumberChange('insuranceSavings', Math.round(insuranceSavings));
+            animateNumberChange('finalCost', Math.round(finalCost));
+            animateNumberChange('totalCost', Math.round(finalCost));
+            document.getElementById('monthlyPayment').textContent = monthlyPayment;
+            
+            // Track cost calculation
+            trackEvent('cost_calculated', {
+                denture_type: dentureType,
+                material_quality: materialQuality,
+                insurance_coverage: insuranceCoverage,
+                final_cost: Math.round(finalCost),
+                has_extractions: extraction
+            });
+            
+            // Send to API for analytics
+            try {
+                if (API_CONFIG.costCalculator) {
+                    await fetch(API_CONFIG.costCalculator, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            dentureType,
+                            materialQuality,
+                            insuranceCoverage,
+                            extractionCount,
+                            finalCost: Math.round(finalCost),
+                            timestamp: new Date().toISOString()
+                        })
+                    }).catch(() => {}); // Graceful fail
+                }
+            } catch (error) {
+                console.error('Cost calculator API error:', error);
+            }
+        }
+
+        // Animate number changes for better UX
+        function animateNumberChange(elementId, newValue) {
+            const element = document.getElementById(elementId);
+            const prefix = elementId === 'insuranceSavings' ? '-$' : '$';
+            element.style.opacity = '0.5';
+            setTimeout(() => {
+                element.textContent = prefix + newValue;
+                element.style.opacity = '1';
+            }, 150);
+        }
+
+        // Enhanced form submission with validation
+        const consultationForm = document.getElementById('consultationForm');
+        if (consultationForm) {
+            consultationForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const button = e.target.querySelector('button[type="submit"]');
+                const formData = new FormData(e.target);
+                const data = Object.fromEntries(formData);
+                
+                // Create or find error/success message elements
+                let errorDiv = e.target.querySelector('.error-message');
+                let successDiv = e.target.querySelector('.success-message');
+                
+                if (!errorDiv) {
+                    errorDiv = document.createElement('div');
+                    errorDiv.className = 'error-message';
+                    errorDiv.style.cssText = 'color: #DC3545; padding: 1rem; background: #FFEBEE; border-radius: 8px; margin: 1rem 0; display: none;';
+                    button.parentNode.insertBefore(errorDiv, button);
+                }
+                
+                if (!successDiv) {
+                    successDiv = document.createElement('div');
+                    successDiv.className = 'success-message';
+                    successDiv.style.cssText = 'color: #28A745; padding: 1rem; background: #E8F5E9; border-radius: 8px; margin: 1rem 0; display: none;';
+                    button.parentNode.insertBefore(successDiv, button);
+                }
+                
+                // Reset messages
+                errorDiv.style.display = 'none';
+                successDiv.style.display = 'none';
+                
+                // Validation
+                const inputs = this.querySelectorAll('input[required], select[required]');
+                let valid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        valid = false;
+                        input.style.borderColor = '#DC3545';
+                        input.addEventListener('input', function() {
+                            this.style.borderColor = '';
+                        }, { once: true });
+                    }
+                });
+                
+                if (!valid) {
+                    errorDiv.textContent = 'Please fill in all required fields.';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                // Email validation
+                const email = data.email;
+                if (email && !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                    errorDiv.textContent = 'Please enter a valid email address.';
+                    errorDiv.style.display = 'block';
+                    return;
+                }
+                
+                LoadingStateManager.setLoading(button, true, 'Submitting...');
+                
+                try {
+                    // Track form submission
+                    trackEvent('consultation_form_submitted', {
+                        denture_interest: data.dentureInterest || 'not_specified',
+                        form_location: 'consultation_section'
+                    });
+                    
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                    
+                    if (API_CONFIG.consultation) {
+                        const response = await fetch(API_CONFIG.consultation, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                ...data,
+                                service: 'dentures_consultation',
+                                timestamp: new Date().toISOString()
+                            })
+                        });
+                        
+                        if (!response.ok) throw new Error('API request failed');
+                    }
+                    
+                    // Show success
+                    successDiv.innerHTML = '<strong>Thank you!</strong> We will contact you within 24 hours to schedule your free consultation with transparent pricing.';
+                    successDiv.style.display = 'block';
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Track successful submission
+                    trackEvent('consultation_form_success');
+                    
+                    // Show notification
+                    showNotification('Consultation request submitted successfully!', 'success');
+                    
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    errorDiv.innerHTML = '<strong>Something went wrong.</strong> Please try again or call us at <a href="tel:1-800-SMILE-NOW" style="color: inherit; font-weight: bold;">1-800-SMILE-NOW</a>';
+                    errorDiv.style.display = 'block';
+                    
+                    trackEvent('consultation_form_error', {
+                        error_message: error.message
+                    });
+                } finally {
+                    LoadingStateManager.setLoading(button, false);
+                }
+            });
+        }
+
+        // Enhanced intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const elementPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Keyboard navigation enhancement
+        document.addEventListener('keydown', function(e) {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape') {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            }
+        });
+
+        // Mobile functionality enhancements
+        function enhanceMobileExperience() {
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            
+            if (isMobile) {
+                // Improve touch targets
+                document.querySelectorAll('button, .cta-button, a').forEach(btn => {
+                    const height = btn.offsetHeight;
+                    if (height < 44) {
+                        btn.style.minHeight = '44px';
+                        btn.style.padding = '12px 16px';
+                    }
+                });
+                
+                // Add touch feedback
+                document.addEventListener('touchstart', function(e) {
+                    if (e.target.matches('button, .cta-button, .denture-option, select, input[type="checkbox"]')) {
+                        e.target.style.transform = 'scale(0.95)';
+                    }
+                });
+                
+                document.addEventListener('touchend', function(e) {
+                    if (e.target.matches('button, .cta-button, .denture-option, select, input[type="checkbox"]')) {
+                        setTimeout(() => {
+                            e.target.style.transform = '';
+                        }, 100);
+                    }
+                });
+            }
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track page view
+            trackEvent('page_view', {
+                page_title: 'Dentures',
+                page_location: window.location.href
+            });
+            
+            // Initialize calculator
+            calculateDentureCost();
+            
+            // Enhance mobile experience
+            enhanceMobileExperience();
+            
+            // Track CTA button clicks
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    trackEvent('cta_click', {
+                        button_text: buttonText,
+                        button_location: this.closest('section')?.className || 'unknown'
+                    });
+                });
+            });
+            
+            // Track cost calculator interactions
+            const costInputs = document.querySelectorAll('#dentureType, #materialQuality, #insuranceCoverage, #extraction');
+            costInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    trackEvent('calculator_interaction', {
+                        field_changed: this.id,
+                        new_value: this.type === 'checkbox' ? this.checked : this.value
+                    });
+                });
+            });
+            
+            // Handle extraction checkbox toggle
+            const extractionCheckbox = document.getElementById('extraction');
+            const extractionCount = document.getElementById('extractionCount');
+            const extractionDetails = document.querySelector('.extraction-details');
+            
+            if (extractionCheckbox && extractionCount && extractionDetails) {
+                extractionCheckbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        extractionDetails.style.display = 'block';
+                        extractionCount.focus();
+                    } else {
+                        extractionDetails.style.display = 'none';
+                        extractionCount.value = '0';
+                    }
+                    calculateDentureCost();
+                });
+                
+                // Update extraction count display
+                extractionCount.addEventListener('input', function() {
+                    const countDisplay = document.getElementById('extraction-count');
+                    if (countDisplay) {
+                        countDisplay.textContent = this.value;
+                    }
+                    calculateDentureCost();
+                });
+            }
+            
+            // Add CSS for animations and loading states
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+                .loading { 
+                    position: relative;
+                    color: transparent !important;
+                }
+                .loading::after {
+                    content: '';
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border: 2px solid transparent;
+                    border-top-color: currentColor;
+                    border-radius: 50%;
+                    animation: spin 0.8s linear infinite;
+                }
+                @keyframes spin {
+                    to { transform: rotate(360deg); }
+                }
+                @media (max-width: 768px) {
+                    .cost-calculator select,
+                    .cost-calculator input {
+                        font-size: 16px; /* Prevent zoom on iOS */
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+
+        // Performance optimization: Lazy load non-critical scripts
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => {
+                // Additional non-critical functionality can be loaded here
+                console.log('Page fully loaded and interactive');
+            });
+        }
+        
+        // Error boundary for graceful degradation
+        window.addEventListener('error', function(event) {
+            console.error('JavaScript error:', event.error);
+            trackEvent('javascript_error', {
+                error_message: event.error?.message || 'Unknown error',
+                error_line: event.lineno
+            });
+        });
+        
+        // Service Worker registration for offline support (in production)
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+            navigator.serviceWorker.register('/sw.js').catch(console.error);
+        }
+    </script>
+</body>
+</html>

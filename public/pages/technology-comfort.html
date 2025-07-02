@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience state-of-the-art dental technology with unmatched comfort at DentalCare Excellence. CEREC same-day crowns, laser dentistry, and anxiety-free care.">
+    <meta name="keywords" content="dental technology, CEREC crowns, laser dentistry, digital dentistry, comfortable dental care, sedation dentistry">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Advanced Dental Technology & Patient Comfort | DentalCare Excellence">
+    <meta property="og:description" content="State-of-the-art technology meets compassionate care. Experience painless, efficient dental treatments with our cutting-edge equipment.">
+    <title>Advanced Technology & Patient Comfort | DentalCare Excellence</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: var(--clean-white);
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: var(--clean-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 119, 190, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--trust-blue);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--trust-blue);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--trust-blue);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+        }
+        
+        .cta-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 5rem 5% 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .tech-showcase {
+            padding: 5rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .tech-card {
+            background: var(--clean-white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid rgba(0, 119, 190, 0.1);
+        }
+        
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--trust-blue), var(--accent-teal));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .tech-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .tech-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            filter: grayscale(1);
+            transition: var(--transition);
+        }
+        
+        .tech-card:hover .tech-icon {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+        
+        .tech-card h3 {
+            color: var(--trust-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        
+        .tech-benefits {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tech-benefits li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .tech-benefits li:last-child {
+            border-bottom: none;
+        }
+        
+        .tech-benefits li:before {
+            content: "✓";
+            color: var(--success-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            top: 0.6rem;
+        }
+        
+        .tech-benefits li:hover {
+            padding-left: 2.5rem;
+            color: var(--trust-blue);
+        }
+        
+        .tech-comparison {
+            background: var(--clean-white);
+            padding: 2rem 0;
+            margin-top: 1.5rem;
+            border-top: 3px solid var(--accent-teal);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+        
+        .comparison-toggle {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .toggle-btn {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 168, 168, 0.3);
+        }
+        
+        .toggle-btn:hover {
+            background: #006b6b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 168, 168, 0.4);
+        }
+        
+        .comparison-content {
+            display: none;
+            animation: slideDown 0.4s ease;
+        }
+        
+        .comparison-content.active {
+            display: block;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        .comparison-col h4 {
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        .comparison-col p {
+            margin: 0.5rem 0;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .traditional {
+            opacity: 0.7;
+            position: relative;
+        }
+        
+        .traditional::before {
+            content: "✗";
+            color: #dc3545;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .modern {
+            color: var(--success-green);
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .modern::before {
+            content: "✓";
+            color: var(--success-green);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .equipment-tour {
+            padding: 5rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .tour-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .tour-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .tour-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--accent-teal), #00c9c9);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .tour-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+            transition: var(--transition);
+        }
+        
+        .tour-image:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .tour-image:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .tour-image::after {
+            content: "🔍 Click to Explore";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+            text-align: center;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .tour-image:hover::after {
+            transform: translateY(0);
+        }
+        
+        .tour-content h3 {
+            color: var(--trust-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .tour-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .tour-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        
+        .tour-features li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .tour-features li:before {
+            content: "🎯";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        .tour-features li:hover {
+            padding-left: 2.5rem;
+            color: var(--trust-blue);
+        }
+        
+        .comfort-section {
+            padding: 5rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .comfort-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .comfort-item {
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            background: var(--clean-white);
+            transition: var(--transition);
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 168, 168, 0.1);
+        }
+        
+        .comfort-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-teal), #00c9c9);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+        
+        .comfort-item:hover::before {
+            opacity: 1;
+        }
+        
+        .comfort-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .comfort-item > * {
+            position: relative;
+            z-index: 2;
+            transition: var(--transition);
+        }
+        
+        .comfort-item:hover > * {
+            color: var(--clean-white);
+        }
+        
+        .comfort-item:hover h3 {
+            color: var(--clean-white);
+        }
+        
+        .comfort-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            filter: grayscale(1);
+            transition: var(--transition);
+        }
+        
+        .comfort-item:hover .comfort-icon {
+            filter: grayscale(0);
+            transform: scale(1.2);
+        }
+        
+        .comfort-item h3 {
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .comfort-item p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .preview-btn {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 119, 190, 0.3);
+        }
+        
+        .comfort-item:hover .preview-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .preview-btn:hover {
+            background: #005a8b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 119, 190, 0.4);
+        }
+        
+        .anxiety-management {
+            padding: 5rem 5%;
+            background: var(--clean-white);
+        }
+        
+        .anxiety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .anxiety-card {
+            background: var(--soft-gray);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .anxiety-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--trust-blue));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .anxiety-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .anxiety-card:hover {
+            border-color: var(--accent-teal);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .anxiety-icon {
+            font-size: 3rem;
+            color: var(--trust-blue);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .anxiety-card:hover .anxiety-icon {
+            transform: scale(1.2);
+        }
+        
+        .anxiety-card h4 {
+            color: var(--trust-blue);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .anxiety-card p {
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .learn-more {
+            background: var(--accent-teal);
+            color: var(--clean-white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 168, 168, 0.3);
+        }
+        
+        .learn-more:hover {
+            background: #006b6b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 168, 168, 0.4);
+        }
+        
+        .safety-section {
+            padding: 5rem 5%;
+            background: var(--soft-gray);
+        }
+        
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .safety-item {
+            background: var(--clean-white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 3px solid transparent;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .safety-item:hover {
+            border-color: var(--trust-blue);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .safety-icon {
+            font-size: 3rem;
+            color: var(--trust-blue);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .safety-item:hover .safety-icon {
+            transform: scale(1.2);
+        }
+        
+        .safety-item h4 {
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        
+        .safety-item p {
+            line-height: 1.6;
+        }
+        
+        .innovation-cta {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 4rem 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .innovation-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: move 20s linear infinite;
+        }
+        
+        @keyframes move {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        .innovation-cta > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .innovation-cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .innovation-cta p {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .innovation-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .innovation-buttons .cta-button {
+            font-size: 1.1rem;
+            padding: 1.25rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quick-book {
+            background: var(--success-green);
+            border: 2px solid var(--success-green);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quick-book::before {
+            content: "⚡ Same Day Available";
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .quick-book:hover::before {
+            top: 0;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background: var(--clean-white);
+            max-width: 900px;
+            margin: 5% auto;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--charcoal);
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            background: var(--soft-gray);
+            transform: rotate(90deg);
+        }
+        
+        .modal-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .modal-header h3 {
+            color: var(--trust-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .demo-video {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, var(--soft-gray), #e8e8e8);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+            border: 2px dashed #ccc;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-video::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .feature-item {
+            background: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 119, 190, 0.1);
+        }
+        
+        .feature-item:hover {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--clean-white);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent-teal);
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-teal);
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        *:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 3rem 5% 2rem;
+            }
+            
+            .tour-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comfort-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .innovation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .innovation-buttons .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tech-card {
+                padding: 2rem;
+            }
+            
+            .comfort-item {
+                padding: 2rem;
+            }
+            
+            .anxiety-card {
+                padding: 2rem;
+            }
+            
+            .safety-item {
+                padding: 2rem;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        @media (prefers-contrast: high) {
+            .tech-card {
+                border: 2px solid var(--charcoal);
+            }
+            
+            .comfort-item {
+                border: 2px solid var(--charcoal);
+            }
+        }
+        
+        @media print {
+            .nav-links,
+            .modal,
+            .cta-button {
+                display: none !important;
+            }
+            
+            .hero {
+                background: var(--clean-white) !important;
+                color: var(--charcoal) !important;
+            }
+            
+            * {
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="homepage.html" class="logo" aria-label="DentalCare Excellence Home">DentalCare Excellence</a>
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="services-hub.html">Services</a>
+                <a href="technology-comfort.html" aria-current="page">Technology</a>
+                <a href="technology-comfort.html">About</a>
+                <a href="book-appointment.html">Contact</a>
+                <a href="book-appointment.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book Now Header'});">Book Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title" class="fade-in">State-of-the-Art Technology Meets Compassionate Care</h1>
+            <p class="fade-in">Experience dentistry redefined with cutting-edge equipment and unparalleled comfort amenities</p>
+        </section>
+
+        <section class="tech-showcase" aria-labelledby="tech-title">
+            <div class="section-header">
+                <h2 id="tech-title">Advanced Dental Technology</h2>
+                <p>Precision, efficiency, and comfort through innovation</p>
+            </div>
+            <div class="tech-grid">
+                <article class="tech-card fade-in" onclick="openTechDemo('cerec')" tabindex="0" role="button" aria-label="Learn about CEREC Same-Day Crowns">
+                    <div class="tech-icon" aria-hidden="true">🔬</div>
+                    <h3>CEREC Same-Day Crowns</h3>
+                    <ul class="tech-benefits">
+                        <li>Complete crown in one visit</li>
+                        <li>No messy impressions</li>
+                        <li>Perfect color matching</li>
+                        <li>3D design technology</li>
+                        <li>Durable ceramic material</li>
+                    </ul>
+                    <div class="tech-comparison">
+                        <div class="comparison-toggle">
+                            <button class="toggle-btn" onclick="toggleComparison(event, 'cerec-comp')" aria-expanded="false" aria-controls="cerec-comp">
+                                Compare Traditional vs CEREC
+                            </button>
+                        </div>
+                        <div class="comparison-content" id="cerec-comp" aria-hidden="true">
+                            <div class="comparison-table">
+                                <div class="comparison-col">
+                                    <h4>Traditional Method</h4>
+                                    <p class="traditional">2-3 visits required</p>
+                                    <p class="traditional">Messy impressions</p>
+                                    <p class="traditional">Temporary crown needed</p>
+                                    <p class="traditional">2-3 week wait time</p>
+                                </div>
+                                <div class="comparison-col">
+                                    <h4>CEREC Technology</h4>
+                                    <p class="modern">Single visit solution</p>
+                                    <p class="modern">Digital impressions</p>
+                                    <p class="modern">Permanent crown same day</p>
+                                    <p class="modern">Immediate results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="tech-card fade-in" onclick="openTechDemo('laser')" tabindex="0" role="button" aria-label="Learn about Laser Dentistry">
+                    <div class="tech-icon" aria-hidden="true">⚡</div>
+                    <h3>Laser Dentistry</h3>
+                    <ul class="tech-benefits">
+                        <li>Painless procedures</li>
+                        <li>Minimal bleeding</li>
+                        <li>Faster healing time</li>
+                        <li>No drill anxiety</li>
+                        <li>Precise treatment</li>
+                    </ul>
+                    <div class="tech-comparison">
+                        <div class="comparison-toggle">
+                            <button class="toggle-btn" onclick="toggleComparison(event, 'laser-comp')" aria-expanded="false" aria-controls="laser-comp">
+                                Compare Traditional vs Laser
+                            </button>
+                        </div>
+                        <div class="comparison-content" id="laser-comp" aria-hidden="true">
+                            <div class="comparison-table">
+                                <div class="comparison-col">
+                                    <h4>Traditional Drilling</h4>
+                                    <p class="traditional">Loud drilling sounds</p>
+                                    <p class="traditional">Vibration and pressure</p>
+                                    <p class="traditional">Often requires anesthesia</p>
+                                    <p class="traditional">Longer healing time</p>
+                                </div>
+                                <div class="comparison-col">
+                                    <h4>Laser Technology</h4>
+                                    <p class="modern">Virtually silent operation</p>
+                                    <p class="modern">No vibration or pressure</p>
+                                    <p class="modern">Often no anesthesia needed</p>
+                                    <p class="modern">Faster healing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="tech-card fade-in" onclick="openTechDemo('3d-imaging')" tabindex="0" role="button" aria-label="Learn about 3D Digital Imaging">
+                    <div class="tech-icon" aria-hidden="true">📸</div>
+                    <h3>3D Digital Imaging</h3>
+                    <ul class="tech-benefits">
+                        <li>Complete mouth scanning</li>
+                        <li>90% less radiation</li>
+                        <li>Instant results</li>
+                        <li>Accurate diagnosis</li>
+                        <li>Treatment planning</li>
+                    </ul>
+                    <div class="tech-comparison">
+                        <div class="comparison-toggle">
+                            <button class="toggle-btn" onclick="toggleComparison(event, 'imaging-comp')" aria-expanded="false" aria-controls="imaging-comp">
+                                Compare X-rays vs 3D Imaging
+                            </button>
+                        </div>
+                        <div class="comparison-content" id="imaging-comp" aria-hidden="true">
+                            <div class="comparison-table">
+                                <div class="comparison-col">
+                                    <h4>Traditional X-rays</h4>
+                                    <p class="traditional">2D flat images</p>
+                                    <p class="traditional">Higher radiation exposure</p>
+                                    <p class="traditional">Limited diagnostic info</p>
+                                    <p class="traditional">Film processing time</p>
+                                </div>
+                                <div class="comparison-col">
+                                    <h4>3D Digital Imaging</h4>
+                                    <p class="modern">3D detailed views</p>
+                                    <p class="modern">90% less radiation</p>
+                                    <p class="modern">Comprehensive diagnosis</p>
+                                    <p class="modern">Instant digital results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="tech-card fade-in" onclick="openTechDemo('digital-workflow')" tabindex="0" role="button" aria-label="Learn about Digital Workflow">
+                    <div class="tech-icon" aria-hidden="true">💻</div>
+                    <h3>Digital Workflow</h3>
+                    <ul class="tech-benefits">
+                        <li>Paperless records</li>
+                        <li>Cloud-based access</li>
+                        <li>Digital treatment plans</li>
+                        <li>Virtual consultations</li>
+                        <li>Automated reminders</li>
+                    </ul>
+                </article>
+                
+                <article class="tech-card fade-in" onclick="openTechDemo('intraoral')" tabindex="0" role="button" aria-label="Learn about Intraoral Cameras">
+                    <div class="tech-icon" aria-hidden="true">🦷</div>
+                    <h3>Intraoral Cameras</h3>
+                    <ul class="tech-benefits">
+                        <li>See what we see</li>
+                        <li>Early detection</li>
+                        <li>Patient education</li>
+                        <li>Insurance documentation</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                </article>
+                
+                <article class="tech-card fade-in" onclick="openTechDemo('guided-surgery')" tabindex="0" role="button" aria-label="Learn about Computer-Guided Surgery">
+                    <div class="tech-icon" aria-hidden="true">🎯</div>
+                    <h3>Computer-Guided Surgery</h3>
+                    <ul class="tech-benefits">
+                        <li>Implant precision</li>
+                        <li>Minimally invasive</li>
+                        <li>Predictable results</li>
+                        <li>Reduced surgery time</li>
+                        <li>Faster recovery</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="equipment-tour" aria-labelledby="tour-title">
+            <div class="section-header">
+                <h2 id="tour-title">Interactive Equipment Tour</h2>
+                <p>Explore our modern facility and cutting-edge technology</p>
+            </div>
+            <div class="tour-container">
+                <div class="tour-gallery">
+                    <div class="tour-image" onclick="openEquipmentTour('reception')" tabindex="0" role="button" aria-label="View Reception and Check-in area">Reception & Check-in</div>
+                    <div class="tour-image" onclick="openEquipmentTour('treatment')" tabindex="0" role="button" aria-label="View Treatment Rooms">Treatment Rooms</div>
+                    <div class="tour-image" onclick="openEquipmentTour('tech-suite')" tabindex="0" role="button" aria-label="View Technology Suite">Technology Suite</div>
+                    <div class="tour-image" onclick="openEquipmentTour('comfort')" tabindex="0" role="button" aria-label="View Comfort Amenities">Comfort Amenities</div>
+                </div>
+                <div class="tour-content">
+                    <h3>Experience Our State-of-the-Art Facility</h3>
+                    <p>Take an interactive tour of our modern dental practice. Our facility combines the latest technology with comfort-focused design to provide you with the best possible dental experience.</p>
+                    <ul class="tour-features">
+                        <li>360° virtual reality tour available</li>
+                        <li>Interactive equipment demonstrations</li>
+                        <li>Comfort amenity previews</li>
+                        <li>Real patient testimonials</li>
+                        <li>Technology benefit explanations</li>
+                    </ul>
+                    <button class="cta-button" onclick="startFullTour()" aria-label="Start Complete 360 degree virtual tour">Start Complete 360° Tour</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="comfort-section" aria-labelledby="comfort-title">
+            <div class="section-header">
+                <h2 id="comfort-title">Comfort Amenities</h2>
+                <p>Because your comfort is our priority</p>
+            </div>
+            <div class="comfort-features">
+                <article class="comfort-item fade-in" onclick="openComfortPreview('sedation')" tabindex="0" role="button" aria-label="Learn about sedation options">
+                    <div class="comfort-icon" aria-hidden="true">😴</div>
+                    <h3>Sedation Options</h3>
+                    <p>Nitrous oxide, oral sedation, and IV sedation available for anxiety-free visits</p>
+                    <button class="preview-btn" aria-label="Preview sedation experience">Preview Experience</button>
+                </article>
+                <article class="comfort-item fade-in" onclick="openComfortPreview('entertainment')" tabindex="0" role="button" aria-label="Learn about entertainment systems">
+                    <div class="comfort-icon" aria-hidden="true">🎬</div>
+                    <h3>Entertainment Systems</h3>
+                    <p>Personal TVs with Netflix, noise-canceling headphones, and virtual reality options</p>
+                    <button class="preview-btn" aria-label="Try virtual reality experience">Try Virtual Reality</button>
+                </article>
+                <article class="comfort-item fade-in" onclick="openComfortPreview('massage')" tabindex="0" role="button" aria-label="Learn about massage chairs">
+                    <div class="comfort-icon" aria-hidden="true">💆</div>
+                    <h3>Massage Chairs</h3>
+                    <p>Heated massage dental chairs with customizable settings for ultimate relaxation</p>
+                    <button class="preview-btn" aria-label="Feel the massage chair difference">Feel the Difference</button>
+                </article>
+                <article class="comfort-item fade-in" onclick="openComfortPreview('amenities')" tabindex="0" role="button" aria-label="Learn about comfort items">
+                    <div class="comfort-icon" aria-hidden="true">🌡️</div>
+                    <h3>Comfort Items</h3>
+                    <p>Warm blankets, neck pillows, aromatherapy, and refreshment station</p>
+                    <button class="preview-btn" aria-label="Explore comfort amenities">Explore Amenities</button>
+                </article>
+                <article class="comfort-item fade-in" onclick="openComfortPreview('environment')" tabindex="0" role="button" aria-label="Learn about calming environment">
+                    <div class="comfort-icon" aria-hidden="true">🎵</div>
+                    <h3>Calming Environment</h3>
+                    <p>Soothing music, nature sounds, and ambient lighting for a spa-like experience</p>
+                    <button class="preview-btn" aria-label="Listen to and see calming environment">Listen & See</button>
+                </article>
+                <article class="comfort-item fade-in" tabindex="0">
+                    <div class="comfort-icon" aria-hidden="true">⏰</div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Early morning, evening, and weekend appointments to fit your lifestyle</p>
+                    <button class="preview-btn" onclick="showAvailability()" aria-label="Check appointment availability">Check Availability</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="anxiety-management" aria-labelledby="anxiety-title">
+            <div class="section-header">
+                <h2 id="anxiety-title">Anxiety Management Options</h2>
+                <p>We understand dental anxiety and have solutions to help you feel at ease</p>
+            </div>
+            <div class="anxiety-grid">
+                <article class="anxiety-card fade-in" tabindex="0">
+                    <div class="anxiety-icon" aria-hidden="true">🧘</div>
+                    <h4>Relaxation Techniques</h4>
+                    <p>Guided breathing exercises and mindfulness techniques to help you relax before and during treatment</p>
+                    <button class="learn-more" onclick="openAnxietyInfo('relaxation')" aria-label="Learn relaxation techniques">Learn Techniques</button>
+                </article>
+                <article class="anxiety-card fade-in" tabindex="0">
+                    <div class="anxiety-icon" aria-hidden="true">💤</div>
+                    <h4>Sedation Dentistry</h4>
+                    <p>Various levels of sedation from mild nitrous oxide to IV sedation for complete comfort</p>
+                    <button class="learn-more" onclick="openAnxietyInfo('sedation')" aria-label="Explore sedation options">Explore Options</button>
+                </article>
+                <article class="anxiety-card fade-in" tabindex="0">
+                    <div class="anxiety-icon" aria-hidden="true">🤝</div>
+                    <h4>Communication Protocol</h4>
+                    <p>Clear signals and communication throughout your treatment so you always feel in control</p>
+                    <button class="learn-more" onclick="openAnxietyInfo('communication')" aria-label="See communication signals">See Signals</button>
+                </article>
+                <article class="anxiety-card fade-in" tabindex="0">
+                    <div class="anxiety-icon" aria-hidden="true">🎧</div>
+                    <h4>Distraction Methods</h4>
+                    <p>Music, podcasts, virtual reality, and other engaging distractions during procedures</p>
+                    <button class="learn-more" onclick="openAnxietyInfo('distraction')" aria-label="Try distraction options">Try Options</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="safety-section" aria-labelledby="safety-title">
+            <div class="section-header">
+                <h2 id="safety-title">Your Safety is Our Priority</h2>
+                <p>Advanced protocols for your protection</p>
+            </div>
+            <div class="safety-grid">
+                <article class="safety-item fade-in" tabindex="0">
+                    <div class="safety-icon" aria-hidden="true">🛡️</div>
+                    <h4>HEPA Air Filtration</h4>
+                    <p>Medical-grade air purification throughout the office</p>
+                </article>
+                <article class="safety-item fade-in" tabindex="0">
+                    <div class="safety-icon" aria-hidden="true">🧼</div>
+                    <h4>Enhanced Sterilization</h4>
+                    <p>Hospital-level autoclave and UV sterilization</p>
+                </article>
+                <article class="safety-item fade-in" tabindex="0">
+                    <div class="safety-icon" aria-hidden="true">👥</div>
+                    <h4>Limited Capacity</h4>
+                    <p>Spaced appointments for minimal contact</p>
+                </article>
+                <article class="safety-item fade-in" tabindex="0">
+                    <div class="safety-icon" aria-hidden="true">🌡️</div>
+                    <h4>Health Screening</h4>
+                    <p>Touchless temperature checks and health questionnaires</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="innovation-cta" aria-labelledby="cta-title">
+            <h2 id="cta-title">Experience the Future of Dentistry Today</h2>
+            <p>Join thousands of patients who've discovered a better way to care for their smiles</p>
+            <div class="innovation-buttons">
+                <a href="book-appointment.html" class="cta-button quick-book" aria-label="Schedule your visit with same day availability" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule Visit Technology'});">Schedule Your Visit</a>
+                <a href="tel:555-123-4567" class="cta-button" style="background: transparent; border: 2px solid white;" aria-label="Call us at 555-123-4567" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Call Technology'});">Call (555) 123-4567</a>
+                <button class="cta-button" onclick="startFullTour()" style="background: rgba(255,255,255,0.2); border: 2px solid white;" aria-label="Take virtual tour first">Take Virtual Tour First</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-links" aria-label="Footer navigation">
+                Privacy Policy
+                Terms of Service
+                Sitemap
+                Accessibility
+            </nav>
+            <p>&copy; 2024 DentalCare Excellence. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Technology Demos and Tours -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        // Track page view
+        gtag('event', 'page_view', {
+            'page_title': 'Technology & Comfort',
+            'page_location': window.location.href,
+            'page_path': '/technology-comfort'
+        });
+
+        // Performance optimization: Lazy load animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target); // Stop observing after animation
+                    
+                    // Track technology card views
+                    if (entry.target.classList.contains('tech-card')) {
+                        gtag('event', 'view_item', {
+                            'event_category': 'Technology',
+                            'event_label': entry.target.querySelector('h3').textContent
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Initialize fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Enhanced comparison toggle with accessibility
+        function toggleComparison(event, id) {
+            event.stopPropagation();
+            const button = event.target;
+            const content = document.getElementById(id);
+            const allComparisons = document.querySelectorAll('.comparison-content');
+            const allButtons = document.querySelectorAll('.toggle-btn');
+            
+            // Close all other comparisons
+            allComparisons.forEach((comp, index) => {
+                if (comp.id !== id) {
+                    comp.classList.remove('active');
+                    comp.setAttribute('aria-hidden', 'true');
+                    allButtons[index].setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle current comparison
+            const isExpanded = content.classList.contains('active');
+            content.classList.toggle('active');
+            content.setAttribute('aria-hidden', !isExpanded);
+            button.setAttribute('aria-expanded', !isExpanded);
+            
+            // Track comparison view
+            if (!isExpanded) {
+                gtag('event', 'comparison_view', {
+                    'event_category': 'Technology',
+                    'event_label': id
+                });
+            }
+            
+            // Scroll to content if opening
+            if (!isExpanded) {
+                setTimeout(() => {
+                    content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 300);
+            }
+        }
+
+        // Enhanced tech demo modal with performance optimization
+        function openTechDemo(techType) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track tech demo click
+            gtag('event', 'tech_demo_click', {
+                'event_category': 'Technology',
+                'event_label': techType,
+                'value': 1
+            });
+            
+            const techContent = {
+                'cerec': {
+                    title: 'CEREC Same-Day Crown Technology',
+                    description: 'Watch how we create a perfect crown in just one visit using advanced CAD/CAM technology.',
+                    features: ['3D Digital Scanning', 'Computer Design', 'In-Office Milling', 'Same-Day Placement'],
+                    benefits: 'Experience the convenience of leaving with your permanent crown in just one appointment.'
+                },
+                'laser': {
+                    title: 'Laser Dentistry Demonstration',
+                    description: 'Experience the precision and comfort of our state-of-the-art dental laser technology.',
+                    features: ['Painless Procedures', 'Precision Treatment', 'Faster Healing', 'No Anesthesia Needed'],
+                    benefits: 'Enjoy virtually pain-free dental procedures with our advanced laser technology.'
+                },
+                '3d-imaging': {
+                    title: '3D Digital Imaging System',
+                    description: 'See how our advanced imaging provides detailed 3D views with minimal radiation.',
+                    features: ['90% Less Radiation', 'Instant Results', '3D Visualization', 'Accurate Diagnosis'],
+                    benefits: 'Get more accurate diagnoses with significantly less radiation exposure.'
+                },
+                'digital-workflow': {
+                    title: 'Digital Workflow System',
+                    description: 'Explore our paperless, efficient digital systems that enhance your patient experience.',
+                    features: ['Paperless Records', 'Digital Treatment Plans', 'Cloud Access', 'Automated Reminders'],
+                    benefits: 'Experience streamlined, efficient care with our fully digital practice management.'
+                },
+                'intraoral': {
+                    title: 'Intraoral Camera Technology',
+                    description: 'See what we see with high-definition intraoral cameras for better diagnosis and education.',
+                    features: ['HD Imaging', 'Early Detection', 'Patient Education', 'Progress Tracking'],
+                    benefits: 'Understand your oral health better with clear, detailed images of your teeth and gums.'
+                },
+                'guided-surgery': {
+                    title: 'Computer-Guided Surgery',
+                    description: 'Learn about our precise, computer-guided approach to dental implant surgery.',
+                    features: ['Surgical Precision', 'Minimally Invasive', 'Predictable Results', 'Faster Recovery'],
+                    benefits: 'Experience more precise, comfortable implant surgery with faster healing times.'
+                }
+            };
+            
+            const content = techContent[techType];
+            if (!content) return;
+            
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h3 id="modal-title">${content.title}</h3>
+                    <p>${content.description}</p>
+                </div>
+                <div class="demo-video" role="img" aria-label="Interactive demonstration video placeholder">
+                    🎬 Interactive Demo Video<br>
+                    <small>In production, this would play the actual technology demonstration</small>
+                </div>
+                <div style="margin: 2rem 0; padding: 1.5rem; background: var(--soft-gray); border-radius: 8px;">
+                    <h4 style="color: var(--trust-blue); margin-bottom: 1rem;">Key Benefits:</h4>
+                    <p style="font-style: italic;">${content.benefits}</p>
+                </div>
+                <div class="feature-list">
+                    ${content.features.map(feature => `
+                        <div class="feature-item">
+                            <strong>${feature}</strong>
+                        </div>
+                    `).join('')}
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="book-appointment.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Experience Technology Modal'});">Experience This Technology</a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            
+            // Focus management
+            setTimeout(() => {
+                const closeButton = modal.querySelector('.close-modal');
+                closeButton.focus();
+            }, 100);
+            
+            // Trap focus within modal
+            trapFocus(modal);
+        }
+
+        // Enhanced equipment tour with improved UX
+        function openEquipmentTour(area) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track tour click
+            gtag('event', 'equipment_tour_click', {
+                'event_category': 'Technology',
+                'event_label': area
+            });
+            
+            const tourContent = {
+                'reception': {
+                    title: 'Reception & Check-in Area',
+                    description: 'Modern, welcoming space with digital check-in kiosks and comfortable seating.',
+                    features: ['Digital check-in tablets', 'Comfortable seating areas', 'Refreshment station', 'Free Wi-Fi']
+                },
+                'treatment': {
+                    title: 'Treatment Rooms',
+                    description: 'State-of-the-art treatment rooms equipped with the latest dental technology.',
+                    features: ['Individual entertainment systems', 'Massage chairs', 'Natural lighting', 'Advanced monitoring']
+                },
+                'tech-suite': {
+                    title: 'Technology Suite',
+                    description: 'Dedicated space for advanced diagnostics and treatment planning.',
+                    features: ['3D imaging equipment', 'CEREC milling unit', 'Digital scanners', 'Treatment planning software']
+                },
+                'comfort': {
+                    title: 'Comfort Amenities',
+                    description: 'Relaxation areas with massage chairs, entertainment systems, and refreshments.',
+                    features: ['Heated massage chairs', 'Aromatherapy options', 'Noise-canceling headphones', 'Virtual reality systems']
+                }
+            };
+            
+            const content = tourContent[area];
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h3 id="modal-title">${content.title}</h3>
+                    <p>${content.description}</p>
+                </div>
+                <div class="demo-video" role="img" aria-label="360 degree virtual tour placeholder">
+                    🏢 360° Virtual Tour<br>
+                    <small>Interactive tour would appear here</small>
+                </div>
+                <div style="margin: 2rem 0;">
+                    <h4 style="color: var(--trust-blue); margin-bottom: 1rem;">What You'll Find Here:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        ${content.features.map(feature => `
+                            <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--success-green);">✓</span>
+                                ${feature}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="cta-button" onclick="startFullTour()" style="margin-right: 1rem;">Start Complete Tour</button>
+                    <a href="book-appointment.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule Visit Tour Modal'});">Schedule Visit</a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            
+            // Focus management
+            setTimeout(() => {
+                const closeButton = modal.querySelector('.close-modal');
+                closeButton.focus();
+            }, 100);
+            
+            trapFocus(modal);
+        }
+
+        // Enhanced comfort preview
+        function openComfortPreview(amenity) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track comfort preview click
+            gtag('event', 'comfort_preview_click', {
+                'event_category': 'Comfort',
+                'event_label': amenity
+            });
+            
+            const comfortContent = {
+                'sedation': {
+                    title: 'Sedation Options Preview',
+                    description: 'Learn about our various sedation methods and experience virtual relaxation techniques.',
+                    options: ['Nitrous Oxide (Laughing Gas)', 'Oral Sedation', 'IV Sedation', 'General Anesthesia']
+                },
+                'entertainment': {
+                    title: 'Entertainment Systems Demo',
+                    description: 'Try our entertainment options including virtual reality experiences.',
+                    options: ['Personal TVs with Netflix', 'Noise-canceling headphones', 'Virtual reality headsets', 'Music streaming']
+                },
+                'massage': {
+                    title: 'Massage Chair Experience',
+                    description: 'Feel the comfort of our heated massage dental chairs with customizable settings.',
+                    options: ['Heat therapy', 'Multiple massage patterns', 'Intensity controls', 'Lumbar support']
+                },
+                'amenities': {
+                    title: 'Comfort Amenities Tour',
+                    description: 'Explore all our comfort items from warm blankets to aromatherapy options.',
+                    options: ['Heated blankets', 'Memory foam pillows', 'Essential oil diffusers', 'Refreshment station']
+                },
+                'environment': {
+                    title: 'Calming Environment Preview',
+                    description: 'Experience our soothing sounds and ambient lighting that creates a spa-like atmosphere.',
+                    options: ['Nature soundscapes', 'Soft ambient lighting', 'Temperature control', 'Aromatherapy']
+                }
+            };
+            
+            const content = comfortContent[amenity];
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h3 id="modal-title">${content.title}</h3>
+                    <p>${content.description}</p>
+                </div>
+                <div class="demo-video" role="img" aria-label="Interactive comfort preview placeholder">
+                    🎭 Interactive Preview<br>
+                    <small>Comfort preview experience would appear here</small>
+                </div>
+                <div style="margin: 2rem 0;">
+                    <h4 style="color: var(--trust-blue); margin-bottom: 1rem;">Available Options:</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        ${content.options.map(option => `
+                            <div style="background: var(--soft-gray); padding: 1rem; border-radius: 8px; text-align: center;">
+                                ${option}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="book-appointment.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Book with Amenities Modal'});">Book with These Amenities</a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            
+            setTimeout(() => {
+                const closeButton = modal.querySelector('.close-modal');
+                closeButton.focus();
+            }, 100);
+            
+            trapFocus(modal);
+        }
+
+        // Enhanced anxiety management info
+        function openAnxietyInfo(type) {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track anxiety info click
+            gtag('event', 'anxiety_info_click', {
+                'event_category': 'Anxiety Management',
+                'event_label': type
+            });
+            
+            const anxietyContent = {
+                'relaxation': {
+                    title: 'Relaxation Techniques',
+                    description: 'Interactive guide to breathing exercises and mindfulness techniques.',
+                    demo: 'Try our guided 5-minute relaxation exercise',
+                    techniques: ['4-7-8 breathing method', 'Progressive muscle relaxation', 'Mindfulness meditation', 'Visualization exercises']
+                },
+                'sedation': {
+                    title: 'Sedation Options',
+                    description: 'Learn about nitrous oxide, oral sedation, and IV sedation options.',
+                    demo: 'Consultation available to determine best option',
+                    techniques: ['Nitrous oxide for mild anxiety', 'Oral sedation for moderate anxiety', 'IV sedation for severe anxiety', 'Combination approaches']
+                },
+                'communication': {
+                    title: 'Communication Signals',
+                    description: 'Hand signals and communication methods to ensure you feel in control.',
+                    demo: 'Practice communication signals',
+                    techniques: ['Raise hand to pause', 'Thumbs up for okay', 'Point to mouth for discomfort', 'Written communication options']
+                },
+                'distraction': {
+                    title: 'Distraction Methods',
+                    description: 'Experience our entertainment and distraction options.',
+                    demo: 'Try virtual reality relaxation experience',
+                    techniques: ['Virtual reality escapes', 'Music and podcasts', 'Guided imagery', 'Breathing focus apps']
+                }
+            };
+            
+            const content = anxietyContent[type];
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h3 id="modal-title">${content.title}</h3>
+                    <p>${content.description}</p>
+                </div>
+                <div class="demo-video" role="img" aria-label="Interactive anxiety management demo placeholder">
+                    🧘 ${content.demo}<br>
+                    <small>Interactive experience would appear here</small>
+                </div>
+                <div style="margin: 2rem 0;">
+                    <h4 style="color: var(--trust-blue); margin-bottom: 1rem;">Available Techniques:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        ${content.techniques.map(technique => `
+                            <li style="padding: 0.75rem 0; padding-left: 2rem; position: relative; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                                <span style="position: absolute; left: 0; color: var(--success-green); font-size: 1.2rem;">🌟</span>
+                                ${technique}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="book-appointment.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule Consultation Anxiety Modal'});">Schedule Consultation</a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            
+            setTimeout(() => {
+                const closeButton = modal.querySelector('.close-modal');
+                closeButton.focus();
+            }, 100);
+            
+            trapFocus(modal);
+        }
+
+        // Show availability redirect with optimization
+        function showAvailability() {
+            // Track availability check
+            gtag('event', 'availability_check', {
+                'event_category': 'Scheduling',
+                'event_label': 'Technology Page'
+            });
+            
+            // Add loading state for better UX
+            event.target.innerHTML = '<div class="loading" style="display: inline-block; margin-right: 0.5rem;"></div>Loading...';
+            
+            setTimeout(() => {
+                window.location.href = 'book-appointment.html';
+            }, 500);
+        }
+
+        // Enhanced full tour function
+        function startFullTour() {
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            // Track full tour start
+            gtag('event', 'full_tour_start', {
+                'event_category': 'Technology',
+                'event_label': 'Complete 360 Tour'
+            });
+            
+            modalBody.innerHTML = `
+                <div class="modal-header">
+                    <h3 id="modal-title">Complete 360° Virtual Tour</h3>
+                    <p>Explore every aspect of our modern dental practice</p>
+                </div>
+                <div class="demo-video" role="img" aria-label="Complete virtual reality experience placeholder">
+                    🏢 Full Virtual Reality Experience<br>
+                    <small>Complete 360° tour would launch here</small>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-item"><strong>Reception Area</strong><br><small>Digital check-in & comfort</small></div>
+                    <div class="feature-item"><strong>Treatment Rooms</strong><br><small>State-of-the-art equipment</small></div>
+                    <div class="feature-item"><strong>Technology Suite</strong><br><small>Advanced diagnostics</small></div>
+                    <div class="feature-item"><strong>Comfort Areas</strong><br><small>Relaxation amenities</small></div>
+                    <div class="feature-item"><strong>Sterilization Center</strong><br><small>Safety protocols</small></div>
+                    <div class="feature-item"><strong>Consultation Rooms</strong><br><small>Private discussions</small></div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: var(--soft-gray); border-radius: 8px;">
+                    <p style="margin-bottom: 1rem;"><strong>Tour includes:</strong> Interactive hotspots, 360° room views, equipment demonstrations, and patient testimonials</p>
+                    <a href="book-appointment.html" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Schedule After Tour'});">Schedule After Tour</a>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            
+            setTimeout(() => {
+                const closeButton = modal.querySelector('.close-modal');
+                closeButton.focus();
+            }, 100);
+            
+            trapFocus(modal);
+        }
+
+        // Enhanced modal management with accessibility
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            
+            // Return focus to the element that opened the modal
+            if (window.lastFocusedElement) {
+                window.lastFocusedElement.focus();
+            }
+        }
+
+        // Focus trap utility for modals
+        function trapFocus(element) {
+            const focusableElements = element.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            element.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            lastElement.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            firstElement.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
+        }
+
+        // Enhanced click handlers with focus management
+        document.addEventListener('click', function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+            
+            // Store last focused element for modal returns
+            if (event.target.matches('[onclick*="open"]')) {
+                window.lastFocusedElement = event.target;
+            }
+        });
+
+        // Keyboard navigation enhancements
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('modal');
+            
+            // Close modal on Escape
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                closeModal();
+            }
+            
+            // Handle Enter/Space on card elements
+            if ((event.key === 'Enter' || event.key === ' ') && event.target.matches('.tech-card, .comfort-item, .tour-image')) {
+                event.preventDefault();
+                event.target.click();
+            }
+        });
+
+        // Enhanced smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Focus management for accessibility
+                    target.setAttribute('tabindex', '-1');
+                    target.focus();
+                }
+            });
+        });
+
+        // Performance: Preload critical resources
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload next likely page
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = 'book-appointment.html';
+            document.head.appendChild(link);
+            
+            // Initialize any additional performance optimizations
+            if ('serviceWorker' in navigator) {
+                // Service worker registration could go here for caching
+            }
+        });
+
+        // Analytics and performance tracking
+        function trackInteraction(action, element) {
+            // Google Analytics tracking
+            gtag('event', action, {
+                'event_category': 'User Interaction',
+                'event_label': element
+            });
+        }
+
+        // Add interaction tracking to key elements
+        document.querySelectorAll('.tech-card, .comfort-item, .cta-button').forEach(element => {
+            element.addEventListener('click', function() {
+                trackInteraction('click', this.querySelector('h3')?.textContent || this.textContent);
+            });
+        });
+
+        // Error tracking
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            // Track errors
+            gtag('event', 'exception', {
+                'description': e.error.toString(),
+                'fatal': false
+            });
+        });
+
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData && perfData.loadEventEnd - perfData.loadEventStart > 3000) {
+                        console.warn('Page load time exceeded 3 seconds');
+                        
+                        // Track slow page load
+                        gtag('event', 'timing_complete', {
+                            'name': 'load',
+                            'value': perfData.loadEventEnd - perfData.loadEventStart,
+                            'event_category': 'Performance'
+                        });
+                    }
+                }, 0);
+            });
+        }
+    </script>
+</body>
+</html>

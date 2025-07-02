@@ -1,0 +1,2870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Dentistry Services - Comprehensive Dental Care | SmileCare Dental</title>
+    <meta name="description" content="Complete general dentistry services including exams, cleanings, fillings, and crowns. State-of-the-art technology meets compassionate care for your family's oral health.">
+    <meta name="keywords" content="general dentistry, dental exams, dental cleanings, dental fillings, dental crowns, root canal, family dentist">
+    <link rel="canonical" href="https://smilecare.com/general-dentistry">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --light-teal: #E6F7F7;
+            --light-blue: #E6F2FF;
+            --warning-yellow: #FFC107;
+            --text-gray: #666666;
+            --border-light: #E0E0E0;
+            --error-red: #DC3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--clean-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            will-change: transform;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+        
+        .nav-links a[aria-current="page"] {
+            color: var(--trust-blue);
+        }
+        
+        .nav-links a[aria-current="page"]::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--trust-blue);
+        }
+        
+        .cta-button {
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--success-green);
+            min-height: 44px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cta-button:hover,
+        .cta-button:focus {
+            background: #218838;
+            border-color: #218838;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            outline: none;
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(45deg, #dc3545, #e74c3c);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 70px;
+            z-index: 999;
+            animation: emergencyPulse 2s infinite;
+        }
+
+        @keyframes emergencyPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        .emergency-text {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .emergency-phone {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .emergency-phone:hover,
+        .emergency-phone:focus {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+            outline: none;
+        }
+
+        /* Floating Action Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success-green);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
+            z-index: 1000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            will-change: transform;
+        }
+
+        .floating-cta:hover,
+        .floating-cta:focus {
+            transform: scale(1.05);
+            background: #218838;
+            outline: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            color: var(--clean-white);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: rotate(45deg);
+            animation: float 20s linear infinite;
+            will-change: transform;
+        }
+        
+        @keyframes float {
+            0% { transform: rotate(45deg) translate(0, 0); }
+            100% { transform: rotate(45deg) translate(50px, 50px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero-text p {
+            font-size: clamp(1.1rem, 3vw, 1.2rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Treatment Selector */
+        .treatment-selector {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+
+        .selector-container {
+            background: var(--clean-white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .selector-container h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+        }
+
+        .selector-container p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+
+        .symptom-checker {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .symptom-button {
+            background: var(--clean-white);
+            border: 2px solid var(--border-light);
+            padding: 1.5rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .symptom-button:hover,
+        .symptom-button:focus {
+            border-color: var(--accent-teal);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,168,168,0.1);
+            outline: none;
+        }
+
+        .symptom-button.selected {
+            border-color: var(--trust-blue);
+            background: var(--light-blue);
+        }
+
+        .treatment-result {
+            background: var(--light-teal);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            display: none;
+        }
+
+        .treatment-result.show {
+            display: block;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        
+        /* Service Overview */
+        .service-overview {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+        
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .overview-text h2 {
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .overview-text p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--soft-gray);
+            border-radius: 15px;
+            transition: transform 0.2s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        .overview-image {
+            background: linear-gradient(135deg, var(--accent-teal), var(--trust-blue));
+            border-radius: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--clean-white);
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Cost Calculator */
+        .cost-calculator {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--soft-gray);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .calculator-container h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-size: 1.8rem;
+        }
+
+        .calculator-container p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+
+        .calculator-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .form-group select, 
+        .form-group input {
+            padding: 0.75rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+            min-height: 44px;
+        }
+
+        .form-group select:focus, 
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0,119,190,0.1);
+        }
+
+        .calculator-result {
+            background: var(--clean-white);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            text-align: center;
+            display: none;
+        }
+
+        .calculator-result.show {
+            display: block;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .total-cost {
+            font-size: 2.5rem;
+            color: var(--success-green);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .savings-highlight {
+            background: var(--warning-yellow);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        
+        /* Services List */
+        .services-list {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+        
+        .services-list h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2rem);
+            color: var(--charcoal);
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-item {
+            background: var(--clean-white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--trust-blue), var(--accent-teal));
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+        
+        .service-item:hover,
+        .service-item:focus-within {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-item:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            color: var(--accent-teal);
+        }
+        
+        .service-item h3 {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .service-item p {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-price {
+            background: var(--light-teal);
+            padding: 0.75rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .price-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+
+        /* Technology Showcase */
+        .technology-showcase {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+
+        .technology-showcase h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+        }
+
+        .technology-showcase p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-card {
+            background: var(--clean-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover,
+        .tech-card:focus-within {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .tech-image {
+            background: linear-gradient(135deg, var(--trust-blue), var(--accent-teal));
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .tech-content {
+            padding: 2rem;
+        }
+
+        .tech-content h3 {
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        .tech-benefits {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .tech-benefits li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .tech-benefits li::before {
+            content: '⚡';
+            position: absolute;
+            left: 0;
+            color: var(--warning-yellow);
+        }
+
+        /* What to Expect */
+        .what-to-expect {
+            padding: 4rem 0;
+            background: var(--light-blue);
+        }
+
+        .what-to-expect h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+        }
+
+        .what-to-expect p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+        
+        .expect-timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+            position: relative;
+        }
+        
+        .expect-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--trust-blue);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 2rem;
+            background: var(--clean-white);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 0 2rem;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .timeline-content:hover,
+        .timeline-content:focus {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            outline: none;
+        }
+        
+        .timeline-dot {
+            width: 30px;
+            height: 30px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid var(--clean-white);
+            z-index: 1;
+        }
+        
+        .timeline-number {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-duration {
+            background: var(--accent-teal);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            display: inline-block;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--clean-white);
+        }
+
+        .benefits-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        .benefits-section p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-card {
+            padding: 2rem;
+            background: var(--soft-gray);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card:hover,
+        .benefit-card:focus-within {
+            border-color: var(--accent-teal);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,168,168,0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        /* Insurance Section */
+        .insurance-section {
+            padding: 4rem 0;
+            background: var(--clean-white);
+        }
+        
+        .insurance-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .insurance-info h2 {
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .insurance-info p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .insurance-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .insurance-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-gray);
+            transition: all 0.2s ease;
+        }
+
+        .insurance-list li:hover {
+            color: var(--trust-blue);
+            padding-left: 2.5rem;
+        }
+        
+        .insurance-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .insurance-cta {
+            background: var(--light-teal);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .insurance-cta h3 {
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .phone-highlight {
+            font-size: 1.5rem;
+            color: var(--trust-blue);
+            font-weight: bold;
+            margin: 1rem 0;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background: var(--soft-gray);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+        }
+
+        .faq-section p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-search {
+            background: var(--clean-white);
+            padding: 1rem;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-search input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            min-height: 40px;
+        }
+
+        .faq-search-icon {
+            color: var(--trust-blue);
+            font-size: 1.2rem;
+        }
+        
+        .faq-item {
+            background: var(--clean-white);
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--charcoal);
+            transition: background 0.2s ease;
+        }
+        
+        .faq-question:hover,
+        .faq-question:focus {
+            background: var(--soft-gray);
+            outline: none;
+        }
+        
+        .faq-question.active {
+            background: var(--trust-blue);
+            color: var(--clean-white);
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .faq-question.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Appointment Scheduler */
+        .appointment-scheduler {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--light-teal), var(--light-blue));
+        }
+        
+        .scheduler-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--clean-white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .scheduler-container h2 {
+            text-align: center;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .scheduler-container p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+            min-height: 44px;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--trust-blue);
+            box-shadow: 0 0 0 3px rgba(0,119,190,0.1);
+        }
+
+        .urgency-selector {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .urgency-option {
+            background: var(--soft-gray);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .urgency-option:hover,
+        .urgency-option:focus {
+            border-color: var(--accent-teal);
+            outline: none;
+        }
+
+        .urgency-option.selected {
+            background: var(--light-blue);
+            border-color: var(--trust-blue);
+        }
+
+        .urgency-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .submit-button {
+            width: 100%;
+            background: var(--success-green);
+            color: var(--clean-white);
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 50px;
+        }
+        
+        .submit-button:hover,
+        .submit-button:focus {
+            background: #218838;
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(40,167,69,0.3);
+            outline: none;
+        }
+
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--clean-white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+        }
+        
+        .footer-section a {
+            color: var(--clean-white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+            padding: 0.25rem 0;
+        }
+        
+        .footer-section a:hover,
+        .footer-section a:focus {
+            color: var(--accent-teal);
+            outline: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+            color: #999;
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Error States */
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        /* Success States */
+        .success-message {
+            background: #efe;
+            color: #363;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .overview-content,
+            .insurance-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .expect-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                margin-left: 40px;
+                margin-right: 0;
+            }
+
+            .floating-cta {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .urgency-selector {
+                grid-template-columns: 1fr;
+            }
+
+            .emergency-phone {
+                display: block;
+                margin: 0.5rem auto 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .service-item,
+            .benefit-card,
+            .tech-card {
+                padding: 1.5rem;
+            }
+
+            .selector-container,
+            .calculator-container,
+            .scheduler-container {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hero {
+                background: #000;
+            }
+            
+            .service-item,
+            .benefit-card {
+                border: 2px solid var(--charcoal);
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .hero::before {
+                animation: none;
+            }
+        }
+
+        /* Focus management */
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Emergency Banner -->
+    <div class="emergency-banner" role="banner">
+        <span class="emergency-text">🚨 Dental Emergency? We're Here 24/7!</span>
+        <a href="tel:5551234567" class="emergency-phone" aria-label="Call emergency dental line">Call (555) 123-4567</a>
+    </div>
+
+    <!-- Header -->
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <a href="homepage.html" class="logo" aria-label="SmileCare Dental - Home">SmileCare Dental</a>
+            <div class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="services-hub.html" aria-current="page">Services</a>
+                <a href="blog-resources.html">Resources</a>
+                <a href="technology-comfort.html">About</a>
+                <a href="book-appointment.html">Contact</a>
+                <a href="book-appointment.html" class="cta-button">Book Appointment</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Floating Action Button -->
+    <a href="#scheduler" class="floating-cta" aria-label="Quick appointment booking">📞 Book Now</a>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Your Complete Dental Health Partner</h1>
+                    <p>Experience comprehensive general dentistry with cutting-edge technology, compassionate care, and a commitment to your complete oral health</p>
+                    <a href="#scheduler" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem; margin-top: 1rem; display: inline-flex;">Schedule Your Visit Today</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">🏆</span>
+                        <div class="feature-title">Award-Winning Care</div>
+                        <div>Top-rated dental practice in the city</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">⚡</span>
+                        <div class="feature-title">Same-Day Service</div>
+                        <div>Emergency appointments available</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">💎</span>
+                        <div class="feature-title">Advanced Technology</div>
+                        <div>Digital X-rays & CEREC crowns</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon" aria-hidden="true">😊</span>
+                        <div class="feature-title">Comfort First</div>
+                        <div>Sedation options available</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Selector -->
+        <section class="treatment-selector" aria-labelledby="treatment-heading">
+            <div class="container">
+                <div class="selector-container">
+                    <h2 id="treatment-heading">What Brings You In Today?</h2>
+                    <p>Select your symptoms to find the right treatment</p>
+                    
+                    <div class="symptom-checker" role="radiogroup" aria-labelledby="treatment-heading">
+                        <button 
+                            type="button" 
+                            class="symptom-button" 
+                            role="radio" 
+                            aria-checked="false"
+                            onclick="selectSymptom('pain')"
+                            aria-describedby="pain-desc"
+                        >
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">😣</div>
+                            <div><strong>Tooth Pain</strong></div>
+                            <div id="pain-desc" style="font-size: 0.9rem; color: var(--text-gray);">Sharp or dull aching</div>
+                        </button>
+                        <button 
+                            type="button" 
+                            class="symptom-button" 
+                            role="radio" 
+                            aria-checked="false"
+                            onclick="selectSymptom('checkup')"
+                            aria-describedby="checkup-desc"
+                        >
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">🦷</div>
+                            <div><strong>Routine Checkup</strong></div>
+                            <div id="checkup-desc" style="font-size: 0.9rem; color: var(--text-gray);">Prevention & cleaning</div>
+                        </button>
+                        <button 
+                            type="button" 
+                            class="symptom-button" 
+                            role="radio" 
+                            aria-checked="false"
+                            onclick="selectSymptom('cosmetic')"
+                            aria-describedby="cosmetic-desc"
+                        >
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">✨</div>
+                            <div><strong>Smile Enhancement</strong></div>
+                            <div id="cosmetic-desc" style="font-size: 0.9rem; color: var(--text-gray);">Whitening & veneers</div>
+                        </button>
+                        <button 
+                            type="button" 
+                            class="symptom-button" 
+                            role="radio" 
+                            aria-checked="false"
+                            onclick="selectSymptom('broken')"
+                            aria-describedby="broken-desc"
+                        >
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">💔</div>
+                            <div><strong>Broken Tooth</strong></div>
+                            <div id="broken-desc" style="font-size: 0.9rem; color: var(--text-gray);">Chip, crack, or break</div>
+                        </button>
+                        <button 
+                            type="button" 
+                            class="symptom-button" 
+                            role="radio" 
+                            aria-checked="false"
+                            onclick="selectSymptom('gums')"
+                            aria-describedby="gums-desc"
+                        >
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">🩸</div>
+                            <div><strong>Gum Issues</strong></div>
+                            <div id="gums-desc" style="font-size: 0.9rem; color: var(--text-gray);">Bleeding or swelling</div>
+                        </button>
+                        <button 
+                            type="button" 
+                            class="symptom-button" 
+                            role="radio" 
+                            aria-checked="false"
+                            onclick="selectSymptom('missing')"
+                            aria-describedby="missing-desc"
+                        >
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">🔧</div>
+                            <div><strong>Missing Tooth</strong></div>
+                            <div id="missing-desc" style="font-size: 0.9rem; color: var(--text-gray);">Need replacement</div>
+                        </button>
+                    </div>
+                    
+                    <div class="treatment-result" id="treatmentResult" role="region" aria-live="polite">
+                        <h3 style="color: var(--trust-blue); margin-bottom: 1rem;" id="treatmentTitle">Recommended Treatment</h3>
+                        <p id="treatmentDescription">Based on your symptoms, here's what we recommend...</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#scheduler" class="cta-button">Schedule This Treatment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Overview -->
+        <section class="service-overview" aria-labelledby="overview-heading">
+            <div class="container">
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <h2 id="overview-heading">Your Partner in Oral Health Excellence</h2>
+                        <p>At SmileCare Dental, we believe exceptional general dentistry forms the foundation of lifelong healthy smiles. Our comprehensive approach combines cutting-edge technology with personalized care to address all your dental needs.</p>
+                        <p>From routine check-ups to complex treatments, our experienced team delivers the highest standard of care in a comfortable, welcoming environment. We take time to understand your unique needs and create customized treatment plans.</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="15000">15,000+</span>
+                                <div class="stat-label">Happy Patients</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="98">98%</span>
+                                <div class="stat-label">Satisfaction Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="25">25+</span>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <div class="stat-label">Emergency Care</div>
+                            </div>
+                        </div>
+                        <a href="#services" class="cta-button" style="margin-top: 2rem;">Explore Our Services</a>
+                    </div>
+                    <div class="overview-image" aria-hidden="true">
+                        🦷
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Calculator -->
+        <section class="cost-calculator" aria-labelledby="calculator-heading">
+            <div class="container">
+                <div class="calculator-container">
+                    <h2 id="calculator-heading">Treatment Cost Calculator</h2>
+                    <p>Get instant estimates for your dental care</p>
+                    
+                    <form class="calculator-form" onsubmit="calculateCost(event)" aria-labelledby="calculator-heading">
+                        <div class="form-group">
+                            <label for="treatmentType">Select Treatment</label>
+                            <select id="treatmentType" required aria-describedby="treatment-help">
+                                <option value="">Choose a treatment</option>
+                                <option value="cleaning">Professional Cleaning</option>
+                                <option value="filling">Filling</option>
+                                <option value="crown">Crown</option>
+                                <option value="root-canal">Root Canal</option>
+                                <option value="implant">Dental Implant</option>
+                                <option value="whitening">Teeth Whitening</option>
+                            </select>
+                            <small id="treatment-help" class="visually-hidden">Select the dental treatment you need for cost estimation</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="insuranceType">Insurance Coverage</label>
+                            <select id="insuranceType" required aria-describedby="insurance-help">
+                                <option value="none">No Insurance</option>
+                                <option value="basic">Basic Plan (50% coverage)</option>
+                                <option value="premium">Premium Plan (80% coverage)</option>
+                                <option value="membership">SmileCare Membership</option>
+                            </select>
+                            <small id="insurance-help" class="visually-hidden">Select your insurance coverage level</small>
+                        </div>
+                        
+                        <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Calculate Cost</button>
+                    </form>
+                    
+                    <div class="calculator-result" id="calculatorResult" role="region" aria-live="polite">
+                        <div class="total-cost" id="totalCost">$0</div>
+                        <p>Your estimated out-of-pocket cost</p>
+                        <div id="savingsInfo"></div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="#scheduler" class="cta-button">Book This Treatment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services List -->
+        <section class="services-list" id="services" aria-labelledby="services-heading">
+            <div class="container">
+                <h2 id="services-heading">Our Comprehensive General Dentistry Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <span class="service-icon" aria-hidden="true">🔍</span>
+                        <h3>Comprehensive Dental Exams</h3>
+                        <p>Thorough examinations using advanced diagnostic tools to detect issues early and maintain optimal oral health. Includes oral cancer screening and bite assessment.</p>
+                        <div class="service-price">
+                            <div class="price-value">Starting at $89</div>
+                            <div style="font-size: 0.9rem; color: var(--text-gray);">Most insurance covers 100%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <span class="service-icon" aria-hidden="true">✨</span>
+                        <h3>Professional Cleanings</h3>
+                        <p>Expert cleaning to remove plaque and tartar buildup, preventing gum disease and cavities. Includes polishing and fluoride treatment for lasting protection.</p>
+                        <div class="service-price">
+                            <div class="price-value">Starting at $125</div>
+                            <div style="font-size: 0.9rem; color: var(--text-gray);">Covered by most insurance</div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <span class="service-icon" aria-hidden="true">📸</span>
+                        <h3>Digital X-Rays</h3>
+                        <p>State-of-the-art digital radiography providing instant, detailed images with 90% less radiation than traditional x-rays. Essential for accurate diagnosis.</p>
+                        <div class="service-price">
+                            <div class="price-value">Starting at $45</div>
+                            <div style="font-size: 0.9rem; color: var(--text-gray);">Per image</div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <span class="service-icon" aria-hidden="true">🛡️</span>
+                        <h3>Tooth-Colored Fillings</h3>
+                        <p>Durable, aesthetically pleasing composite fillings that match your natural tooth color. Mercury-free and designed to last with proper care.</p>
+                        <div class="service-price">
+                            <div class="price-value">Starting at $189</div>
+                            <div style="font-size: 0.9rem; color: var(--text-gray);">Per surface</div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <span class="service-icon" aria-hidden="true">👑</span>
+                        <h3>Crowns & Bridges</h3>
+                        <p>Custom-made restorations to repair damaged teeth or replace missing ones. Crafted for perfect fit, function, and appearance using CEREC technology.</p>
+                        <div class="service-price">
+                            <div class="price-value">Starting at $895</div>
+                            <div style="font-size: 0.9rem; color: var(--text-gray);">Same-day available</div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <span class="service-icon" aria-hidden="true">🦷</span>
+                        <h3>Root Canal Therapy</h3>
+                        <p>Gentle, pain-free treatment to save infected teeth. Using modern techniques and rotary instruments for comfort and successful outcomes.</p>
+                        <div class="service-price">
+                            <div class="price-value">Starting at $695</div>
+                            <div style="font-size: 0.9rem; color: var(--text-gray);">Save your natural tooth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Showcase -->
+        <section class="technology-showcase" aria-labelledby="tech-heading">
+            <div class="container">
+                <h2 id="tech-heading">Advanced Technology for Better Care</h2>
+                <p>Experience the latest in dental innovation</p>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-image" aria-hidden="true">🖥️</div>
+                        <div class="tech-content">
+                            <h3>Digital X-Rays</h3>
+                            <p>Instant, high-resolution images with minimal radiation exposure.</p>
+                            <ul class="tech-benefits">
+                                <li>90% less radiation</li>
+                                <li>Instant results</li>
+                                <li>Enhanced diagnostic accuracy</li>
+                                <li>Environmentally friendly</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-image" aria-hidden="true">🏭</div>
+                        <div class="tech-content">
+                            <h3>CEREC Same-Day Crowns</h3>
+                            <p>Computer-aided design and milling for perfect-fit crowns in one visit.</p>
+                            <ul class="tech-benefits">
+                                <li>Same-day completion</li>
+                                <li>No temporary crowns</li>
+                                <li>Perfect color matching</li>
+                                <li>Durable porcelain material</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card">
+                        <div class="tech-image" aria-hidden="true">🔬</div>
+                        <div class="tech-content">
+                            <h3>Intraoral Cameras</h3>
+                            <p>See what we see with detailed real-time imaging of your mouth.</p>
+                            <ul class="tech-benefits">
+                                <li>Enhanced patient education</li>
+                                <li>Detailed documentation</li>
+                                <li>Early problem detection</li>
+                                <li>Better treatment planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect -->
+        <section class="what-to-expect" aria-labelledby="expect-heading">
+            <div class="container">
+                <h2 id="expect-heading">What to Expect During Your Visit</h2>
+                <p>We make every visit comfortable, efficient, and informative</p>
+                
+                <div class="expect-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" tabindex="0">
+                            <h3>Warm Welcome & Check-In</h3>
+                            <p>Our friendly team greets you and ensures all paperwork is complete. We'll review your medical history, discuss any concerns, and verify insurance.</p>
+                            <div class="timeline-duration">5-10 minutes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" tabindex="0">
+                            <h3>Comprehensive Examination</h3>
+                            <p>Your dentist performs a thorough exam using digital tools, including x-rays if needed. We check teeth, gums, bite, and overall oral health.</p>
+                            <div class="timeline-duration">15-20 minutes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" tabindex="0">
+                            <h3>Professional Cleaning</h3>
+                            <p>Our skilled hygienist gently removes plaque and tartar, polishes your teeth, and provides personalized oral hygiene education.</p>
+                            <div class="timeline-duration">30-45 minutes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" tabindex="0">
+                            <h3>Treatment Planning & Discussion</h3>
+                            <p>We discuss findings, answer questions, and create a personalized treatment plan. All options are clearly explained with cost estimates.</p>
+                            <div class="timeline-duration">10-15 minutes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section" aria-labelledby="benefits-heading">
+            <div class="container">
+                <h2 id="benefits-heading">Why Choose SmileCare for General Dentistry?</h2>
+                <p>Experience the difference of comprehensive, patient-centered care</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <span class="benefit-icon" aria-hidden="true">🛡️</span>
+                        <h3>Early Detection & Prevention</h3>
+                        <p>Catch problems early when they're easier and less expensive to treat, saving you time and money</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon" aria-hidden="true">💰</span>
+                        <h3>Cost-Effective Care</h3>
+                        <p>Preventive care costs far less than treating advanced dental problems - invest in your health</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon" aria-hidden="true">😊</span>
+                        <h3>Confident, Healthy Smile</h3>
+                        <p>Maintain a bright, healthy smile that boosts your confidence and improves quality of life</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon" aria-hidden="true">❤️</span>
+                        <h3>Overall Health Connection</h3>
+                        <p>Good oral health is linked to better overall health, reducing risks of heart disease and diabetes</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon" aria-hidden="true">⚡</span>
+                        <h3>Same-Day Solutions</h3>
+                        <p>CEREC technology allows us to create crowns and restorations in a single visit - no waiting</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <span class="benefit-icon" aria-hidden="true">🎯</span>
+                        <h3>Personalized Treatment</h3>
+                        <p>Every treatment plan is customized to your unique needs, lifestyle, and budget requirements</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insurance Section -->
+        <section class="insurance-section" aria-labelledby="insurance-heading">
+            <div class="container">
+                <div class="insurance-content">
+                    <div class="insurance-info">
+                        <h2 id="insurance-heading">Insurance Coverage & Payment Options</h2>
+                        <p>We believe quality dental care should be accessible to everyone. That's why we work with most major insurance providers and offer flexible payment options to fit any budget.</p>
+                        
+                        <ul class="insurance-list">
+                            <li>We accept most major dental insurance plans</li>
+                            <li>Our team handles insurance paperwork for you</li>
+                            <li>Transparent pricing with no hidden fees</li>
+                            <li>Flexible payment plans available</li>
+                            <li>Special discounts for uninsured patients</li>
+                            <li>CareCredit financing options</li>
+                            <li>Same-day treatment planning</li>
+                            <li>Emergency payment assistance</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="insurance-cta">
+                        <h3>Questions About Coverage?</h3>
+                        <p>Our insurance specialists are here to help you understand your benefits and maximize your coverage. Get a free estimate today!</p>
+                        <a href="tel:5551234567" class="phone-highlight">📞 (555) 123-4567</a>
+                        <a href="#scheduler" class="cta-button" style="margin-top: 1rem;">Verify My Insurance</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
+                <p>Get answers to common questions about general dentistry</p>
+                
+                <div class="faq-search">
+                    <span class="faq-search-icon" aria-hidden="true">🔍</span>
+                    <label for="faq-search-input" class="visually-hidden">Search frequently asked questions</label>
+                    <input 
+                        type="text" 
+                        id="faq-search-input"
+                        placeholder="Search FAQ..." 
+                        onkeyup="searchFAQ(this.value)"
+                        aria-describedby="faq-search-help"
+                    >
+                    <small id="faq-search-help" class="visually-hidden">Type to search through frequently asked questions</small>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item" data-keywords="visit frequency checkup cleaning">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+                            <span>How often should I visit the dentist?</span>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most patients should visit the dentist every six months for routine checkups and cleanings. However, some patients with specific conditions may need more frequent visits. Your dentist will recommend the ideal schedule based on your individual oral health needs and risk factors.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="exam included x-rays cleaning">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+                            <span>What's included in a routine dental exam?</span>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>A routine exam includes a comprehensive evaluation of your teeth, gums, and mouth. We check for cavities, gum disease, oral cancer, and other issues. Digital x-rays may be taken, and we'll assess your bite and jaw alignment. The exam is followed by a professional cleaning and personalized oral hygiene instructions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="emergency same day appointment urgent">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+                            <span>Do you offer same-day appointments for emergencies?</span>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We understand dental emergencies can't wait. We reserve time in our schedule for urgent cases and offer same-day appointments whenever possible. For after-hours emergencies, we provide a 24/7 emergency hotline for our patients at (555) 123-4567.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="cost price treatment insurance">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+                            <span>How much will my treatment cost?</span>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Treatment costs vary depending on your specific needs. We provide detailed cost estimates before any treatment begins and our interactive calculator above can give you instant estimates. If you have insurance, we'll calculate your out-of-pocket costs. We also offer payment plans and financing options to make treatment affordable.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" data-keywords="anxiety fear nervous sedation comfort">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+                            <span>What if I have dental anxiety?</span>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We specialize in helping anxious patients feel comfortable. We offer various comfort amenities, take breaks whenever needed, and explain everything we're doing. For patients with severe anxiety, we provide sedation options including nitrous oxide and oral sedation to ensure a relaxed, stress-free experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-keywords="technology digital xray cerec modern">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+                            <span>What technology do you use?</span>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We use state-of-the-art technology including digital x-rays (90% less radiation), CEREC same-day crowns, intraoral cameras for better visualization, and laser dentistry for precise, comfortable treatments. Our technology improves accuracy, reduces treatment time, and enhances your comfort.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Scheduler -->
+        <section class="appointment-scheduler" id="scheduler" aria-labelledby="scheduler-heading">
+            <div class="container">
+                <div class="scheduler-container">
+                    <h2 id="scheduler-heading">Schedule Your General Dentistry Appointment</h2>
+                    <p>Book online or call <a href="tel:5551234567" style="color: var(--trust-blue); text-decoration: none; font-weight: bold;">(555) 123-4567</a></p>
+                    
+                    <form onsubmit="submitAppointment(event)" aria-labelledby="scheduler-heading">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                required 
+                                aria-describedby="name-help"
+                                autocomplete="name"
+                            >
+                            <small id="name-help" class="visually-hidden">Enter your full name for the appointment</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                required
+                                aria-describedby="email-help"
+                                autocomplete="email"
+                            >
+                            <small id="email-help" class="visually-hidden">We'll send appointment confirmation to this email</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                required
+                                aria-describedby="phone-help"
+                                autocomplete="tel"
+                            >
+                            <small id="phone-help" class="visually-hidden">We'll call you to confirm appointment details</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" required aria-describedby="service-help">
+                                <option value="">Select a service</option>
+                                <option value="checkup">Routine Checkup & Cleaning</option>
+                                <option value="exam">New Patient Exam</option>
+                                <option value="filling">Filling</option>
+                                <option value="crown">Crown or Bridge</option>
+                                <option value="root-canal">Root Canal</option>
+                                <option value="emergency">Emergency Visit</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                            <small id="service-help" class="visually-hidden">Choose the dental service you need</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How urgent is your need?</label>
+                            <div class="urgency-selector" role="radiogroup" aria-labelledby="urgency-label">
+                                <button 
+                                    type="button" 
+                                    class="urgency-option" 
+                                    role="radio" 
+                                    aria-checked="false"
+                                    onclick="selectUrgency('routine')"
+                                >
+                                    <div class="urgency-icon" aria-hidden="true">📅</div>
+                                    <div><strong>Routine</strong></div>
+                                    <div style="font-size: 0.8rem;">Within 2 weeks</div>
+                                </button>
+                                <button 
+                                    type="button" 
+                                    class="urgency-option" 
+                                    role="radio" 
+                                    aria-checked="false"
+                                    onclick="selectUrgency('soon')"
+                                >
+                                    <div class="urgency-icon" aria-hidden="true">⏰</div>
+                                    <div><strong>Soon</strong></div>
+                                    <div style="font-size: 0.8rem;">Within a few days</div>
+                                </button>
+                                <button 
+                                    type="button" 
+                                    class="urgency-option" 
+                                    role="radio" 
+                                    aria-checked="false"
+                                    onclick="selectUrgency('urgent')"
+                                >
+                                    <div class="urgency-icon" aria-hidden="true">🚨</div>
+                                    <div><strong>Urgent</strong></div>
+                                    <div style="font-size: 0.8rem;">Today if possible</div>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-date">Preferred Date</label>
+                            <input 
+                                type="date" 
+                                id="preferred-date" 
+                                required
+                                aria-describedby="date-help"
+                            >
+                            <small id="date-help" class="visually-hidden">Choose your preferred appointment date</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Describe Your Concern (Optional)</label>
+                            <textarea 
+                                id="message" 
+                                rows="3" 
+                                placeholder="Tell us about any symptoms, concerns, or specific needs..."
+                                aria-describedby="message-help"
+                            ></textarea>
+                            <small id="message-help" class="visually-hidden">Optional: Describe any dental concerns or symptoms</small>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Request Appointment</button>
+                        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-gray);">
+                            🔒 Your information is secure and confidential
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="technology-comfort.html">About Us</a>
+                    <a href="services-hub.html">Our Services</a>
+                    <a href="blog-resources.html">Blog & Resources</a>
+                    <a href="book-appointment.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="general-dentistry.html">General Dentistry</a>
+                    <a href="preventive-care.html">Preventive Care</a>
+                    <a href="veneers.html">Cosmetic Dentistry</a>
+                    <a href="emergency-dentistry.html">Emergency Care</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Smile Street<br>Dental City, DC 12345</p>
+                    <p>Phone: <a href="tel:5551234567" style="color: inherit;">(555) 123-4567</a></p>
+                    <p>Email: <a href="mailto:info@smilecare.com" style="color: inherit;">info@smilecare.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 3:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <p>Emergency: 24/7 Available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmileCare Dental. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script>
+        // Performance optimized JavaScript with debouncing
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        // GA4 Event Tracking Helper
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    'service_name': 'general_dentistry',
+                    ...parameters
+                });
+            }
+        }
+
+        // API Configuration
+        const API_CONFIG = {
+            bookAppointment: '/api/book-appointment',
+            contact: '/api/contact',
+            timeout: 10000
+        };
+
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                }
+            }
+        }
+
+        // Treatment Selector with accessibility
+        function selectSymptom(symptom) {
+            // Clear previous selections
+            const buttons = document.querySelectorAll('.symptom-button');
+            buttons.forEach(btn => {
+                btn.classList.remove('selected');
+                btn.setAttribute('aria-checked', 'false');
+            });
+            
+            // Add selection to clicked button
+            const selectedButton = event.target.closest('.symptom-button');
+            selectedButton.classList.add('selected');
+            selectedButton.setAttribute('aria-checked', 'true');
+            
+            // Show treatment recommendation
+            const result = document.getElementById('treatmentResult');
+            const title = document.getElementById('treatmentTitle');
+            const description = document.getElementById('treatmentDescription');
+            
+            const treatments = {
+                'pain': {
+                    title: 'Emergency Dental Care Recommended',
+                    description: 'Tooth pain can indicate infection or damage that needs immediate attention. We recommend an emergency appointment for pain assessment, diagnosis, and immediate relief. Treatment may include antibiotics, pain management, and procedures like fillings or root canal therapy.'
+                },
+                'checkup': {
+                    title: 'Routine Preventive Care',
+                    description: 'Regular checkups are essential for maintaining oral health. We recommend a comprehensive exam with digital X-rays, professional cleaning, fluoride treatment, and oral cancer screening. This typically takes 60-90 minutes and is usually covered by insurance.'
+                },
+                'cosmetic': {
+                    title: 'Cosmetic Consultation',
+                    description: 'Enhance your smile with our cosmetic dentistry options. We recommend a cosmetic consultation to discuss teeth whitening, veneers, bonding, or other aesthetic treatments. We\'ll create a personalized treatment plan to achieve your dream smile.'
+                },
+                'broken': {
+                    title: 'Restorative Treatment Needed',
+                    description: 'Broken teeth require prompt treatment to prevent further damage and infection. Depending on the extent of damage, we may recommend bonding, crown, or in severe cases, root canal therapy. Same-day CEREC crowns available.'
+                },
+                'gums': {
+                    title: 'Periodontal Evaluation',
+                    description: 'Bleeding or swollen gums may indicate gum disease. We recommend a comprehensive periodontal evaluation, deep cleaning (scaling and root planing), and a personalized home care plan. Early treatment prevents progression to advanced gum disease.'
+                },
+                'missing': {
+                    title: 'Tooth Replacement Options',
+                    description: 'Missing teeth can be replaced with dental implants, bridges, or dentures. We recommend a consultation to evaluate your options. Dental implants are often the best long-term solution, providing permanent, natural-looking replacement teeth.'
+                }
+            };
+            
+            title.textContent = treatments[symptom].title;
+            description.textContent = treatments[symptom].description;
+            result.classList.add('show');
+            
+            // Announce to screen readers
+            result.setAttribute('aria-live', 'polite');
+            
+            // Scroll to result
+            result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Cost Calculator with error handling
+        async function calculateCost(event) {
+            event.preventDefault();
+            
+            const treatmentType = document.getElementById('treatmentType').value;
+            const insuranceType = document.getElementById('insuranceType').value;
+            const button = event.target.querySelector('button[type="submit"]');
+            
+            if (!treatmentType || !insuranceType) {
+                showNotification('Please select both treatment type and insurance coverage.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const originalText = button.textContent;
+            button.textContent = 'Calculating...';
+            button.disabled = true;
+            
+            try {
+                // Simulate API delay
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                const costs = {
+                    'cleaning': { base: 125, description: 'Professional Cleaning' },
+                    'filling': { base: 189, description: 'Tooth-Colored Filling' },
+                    'crown': { base: 895, description: 'CEREC Crown' },
+                    'root-canal': { base: 695, description: 'Root Canal Therapy' },
+                    'implant': { base: 2495, description: 'Dental Implant' },
+                    'whitening': { base: 399, description: 'Professional Whitening' }
+                };
+                
+                const coverage = {
+                    'none': 0,
+                    'basic': 0.5,
+                    'premium': 0.8,
+                    'membership': 0.2 // 20% discount
+                };
+                
+                const baseCost = costs[treatmentType].base;
+                const coverageAmount = coverage[insuranceType];
+                const finalCost = baseCost * (1 - coverageAmount);
+                
+                document.getElementById('totalCost').textContent = `$${Math.round(finalCost)}`;
+                
+                let savingsInfo = '';
+                if (insuranceType !== 'none') {
+                    const savings = baseCost - finalCost;
+                    const coverageType = insuranceType === 'membership' ? 'membership discount' : `${insuranceType} coverage`;
+                    savingsInfo = `<div class="savings-highlight">You save $${Math.round(savings)} with your ${coverageType}!</div>`;
+                }
+                
+                document.getElementById('savingsInfo').innerHTML = savingsInfo;
+                const result = document.getElementById('calculatorResult');
+                result.classList.add('show');
+                
+                // Scroll to result
+                result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            } catch (error) {
+                showNotification('Calculation failed. Please try again.', 'error');
+            } finally {
+                button.textContent = originalText;
+                button.disabled = false;
+            }
+        }
+
+        // Urgency Selector
+        function selectUrgency(urgency) {
+            const options = document.querySelectorAll('.urgency-option');
+            options.forEach(option => {
+                option.classList.remove('selected');
+                option.setAttribute('aria-checked', 'false');
+            });
+            
+            const selectedOption = event.target.closest('.urgency-option');
+            selectedOption.classList.add('selected');
+            selectedOption.setAttribute('aria-checked', 'true');
+        }
+
+        // FAQ Search with debouncing
+        const searchFAQ = debounce((query) => {
+            const items = document.querySelectorAll('.faq-item');
+            const searchQuery = query.toLowerCase();
+            let visibleCount = 0;
+            
+            items.forEach(item => {
+                const keywords = item.getAttribute('data-keywords');
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                const isVisible = keywords.includes(searchQuery) || 
+                                 question.includes(searchQuery) || 
+                                 answer.includes(searchQuery) || 
+                                 searchQuery === '';
+                
+                item.style.display = isVisible ? 'block' : 'none';
+                item.setAttribute('aria-hidden', !isVisible);
+                
+                if (isVisible) visibleCount++;
+            });
+            
+            // Announce results to screen readers
+            if (query) {
+                const announcement = `Found ${visibleCount} FAQ items matching "${query}"`;
+                announceToScreenReader(announcement);
+            }
+        }, 300);
+
+        // FAQ Toggle with accessibility
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+            const isExpanded = element.getAttribute('aria-expanded') === 'true';
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.setAttribute('aria-expanded', 'false');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                element.classList.add('active');
+                element.setAttribute('aria-expanded', 'true');
+                answer.classList.add('active');
+                
+                // Scroll into view if needed
+                setTimeout(() => {
+                    answer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+
+        // Form Submission with validation and API integration
+        async function submitAppointment(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            
+            // Validate required fields
+            const requiredFields = form.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--error-red)';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = 'var(--border-light)';
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Please fill in all required fields.', 'error');
+                trackEvent('form_validation_error', { form_type: 'appointment' });
+                return;
+            }
+            
+            // Show loading state
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            // Track form submission attempt
+            trackEvent('submit_appointment_general_dentistry', {
+                urgency: formData.get('urgency') || 'normal',
+                service_interest: formData.get('service-interest')
+            });
+            
+            try {
+                // Create appointment data object
+                const appointmentData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    preferredDate: formData.get('preferred-date'),
+                    preferredTime: formData.get('preferred-time'),
+                    serviceInterest: formData.get('service-interest'),
+                    urgency: formData.get('urgency'),
+                    message: formData.get('message'),
+                    source: 'general-dentistry-page',
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Make API call with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.timeout);
+                
+                const response = await fetch(API_CONFIG.bookAppointment, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(appointmentData),
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                // Track successful submission
+                trackEvent('appointment_success_general_dentistry', {
+                    appointment_id: result.appointmentId,
+                    urgency: appointmentData.urgency
+                });
+                
+                showNotification(`Thank you, ${appointmentData.name}! Your appointment request has been received. We'll contact you within 1 hour to confirm your appointment.`, 'success');
+                
+                // Reset form
+                form.reset();
+                
+                // Reset urgency selector
+                document.querySelectorAll('.urgency-option').forEach(option => {
+                    option.classList.remove('selected');
+                    option.setAttribute('aria-checked', 'false');
+                });
+                
+            } catch (error) {
+                console.error('Appointment submission error:', error);
+                
+                // Track error
+                trackEvent('appointment_error_general_dentistry', {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                if (error.name === 'AbortError') {
+                    showNotification('Request timed out. Please check your connection and try again.', 'error');
+                } else {
+                    showNotification('Appointment submission failed. Please try again or call (555) 123-4567.', 'error');
+                }
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Enhanced notification system
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.style.cssText = `
+                position: fixed; 
+                top: 20px; 
+                right: 20px; 
+                background: ${type === 'error' ? 'var(--error-red)' : 'var(--success-green)'}; 
+                color: white; 
+                padding: 1rem 2rem; 
+                border-radius: 25px; 
+                z-index: 10001;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                max-width: 350px;
+                animation: slideIn 0.3s ease-out;
+            `;
+            
+            notification.textContent = message;
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Screen reader announcements
+        function announceToScreenReader(message) {
+            const announcer = document.createElement('div');
+            announcer.setAttribute('aria-live', 'polite');
+            announcer.setAttribute('aria-atomic', 'true');
+            announcer.className = 'visually-hidden';
+            announcer.textContent = message;
+            
+            document.body.appendChild(announcer);
+            
+            setTimeout(() => {
+                document.body.removeChild(announcer);
+            }, 1000);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Focus management for accessibility
+                    if (target.hasAttribute('tabindex') || target.tagName === 'INPUT' || target.tagName === 'BUTTON') {
+                        target.focus();
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize on DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date for appointment to today
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('preferred-date');
+            if (dateInput) {
+                dateInput.setAttribute('min', today);
+            }
+
+            // Initialize all CTA buttons
+            initializeCTAButtons();
+            
+            // Initialize phone links
+            initializePhoneLinks();
+            
+            // Initialize floating CTA
+            initializeFloatingCTA();
+
+            // Observe all animatable elements
+            const animatableElements = document.querySelectorAll('.service-item, .benefit-card, .timeline-item, .tech-card, .stat-item');
+            animatableElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(element);
+            });
+
+            // Animate stat numbers
+            const statsObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                        entry.target.setAttribute('data-animated', 'true');
+                        animateStatNumbers();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.stats-grid').forEach(grid => {
+                statsObserver.observe(grid);
+            });
+        });
+
+        // Initialize all CTA buttons with proper functionality
+        function initializeCTAButtons() {
+            document.querySelectorAll('.cta-button').forEach(button => {
+                if (!button.hasAttribute('data-initialized')) {
+                    button.setAttribute('data-initialized', 'true');
+                    
+                    button.addEventListener('click', async function(e) {
+                        e.preventDefault();
+                        
+                        const buttonText = this.textContent.toLowerCase();
+                        const href = this.getAttribute('href');
+                        
+                        // Track button click
+                        trackEvent('click_service_cta_general_dentistry', {
+                            button_text: this.textContent,
+                            button_location: this.closest('section')?.className || 'unknown'
+                        });
+                        
+                        // Handle different button types
+                        if (href && href.startsWith('#')) {
+                            // Internal anchor link - scroll to section
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                // Focus for accessibility
+                                if (target.hasAttribute('tabindex') || target.querySelector('input, button')) {
+                                    setTimeout(() => {
+                                        const focusable = target.querySelector('input, button') || target;
+                                        focusable.focus();
+                                    }, 500);
+                                }
+                            }
+                        } else if (buttonText.includes('schedule') || buttonText.includes('book')) {
+                            // Appointment booking button
+                            const schedulerSection = document.querySelector('#scheduler');
+                            if (schedulerSection) {
+                                schedulerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                setTimeout(() => {
+                                    const firstInput = schedulerSection.querySelector('input');
+                                    if (firstInput) firstInput.focus();
+                                }, 500);
+                            }
+                        } else if (buttonText.includes('call')) {
+                            // Phone call button
+                            window.location.href = 'tel:5551234567';
+                        } else if (buttonText.includes('insurance')) {
+                            // Insurance verification
+                            await handleInsuranceVerification(this);
+                        }
+                    });
+                    
+                    // Add touch event handling for mobile
+                    button.addEventListener('touchstart', function() {
+                        this.classList.add('touch-active');
+                    });
+                    
+                    button.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.classList.remove('touch-active');
+                        }, 300);
+                    });
+                }
+            });
+        }
+
+        // Initialize phone links with tracking
+        function initializePhoneLinks() {
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                if (!link.hasAttribute('data-initialized')) {
+                    link.setAttribute('data-initialized', 'true');
+                    
+                    link.addEventListener('click', function(e) {
+                        // Track phone click
+                        trackEvent('click_phone_general_dentistry', {
+                            phone_location: this.closest('section')?.className || 'unknown',
+                            is_emergency: this.classList.contains('emergency-phone')
+                        });
+                    });
+                }
+            });
+        }
+
+        // Initialize floating CTA button
+        function initializeFloatingCTA() {
+            const floatingCTA = document.querySelector('.floating-cta');
+            if (floatingCTA && !floatingCTA.hasAttribute('data-initialized')) {
+                floatingCTA.setAttribute('data-initialized', 'true');
+                
+                // Add scroll-based visibility
+                let lastScrollTop = 0;
+                window.addEventListener('scroll', debounce(function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > 300) {
+                        floatingCTA.style.opacity = '1';
+                        floatingCTA.style.transform = 'scale(1)';
+                    } else {
+                        floatingCTA.style.opacity = '0';
+                        floatingCTA.style.transform = 'scale(0.8)';
+                    }
+                    
+                    // Hide when scrolling down, show when scrolling up
+                    if (scrollTop > lastScrollTop && scrollTop > 600) {
+                        floatingCTA.style.transform = 'translateY(100px)';
+                    } else {
+                        floatingCTA.style.transform = 'translateY(0)';
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                }, 100));
+                
+                // Add initial styles
+                floatingCTA.style.transition = 'all 0.3s ease';
+                floatingCTA.style.opacity = '0';
+                floatingCTA.style.transform = 'scale(0.8)';
+            }
+        }
+
+        // Handle insurance verification
+        async function handleInsuranceVerification(button) {
+            LoadingStateManager.setLoading(button, true, 'Verifying...');
+            
+            try {
+                const response = await fetch(API_CONFIG.contact, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        type: 'insurance_verification',
+                        source: 'general-dentistry-page',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Verification failed');
+                }
+                
+                trackEvent('insurance_verification_success_general_dentistry');
+                showNotification('Insurance verification initiated! Our team will contact you within 30 minutes.', 'success');
+                
+            } catch (error) {
+                trackEvent('insurance_verification_error_general_dentistry');
+                showNotification('Unable to process verification. Please call (555) 123-4567.', 'error');
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+
+        // Animate stat numbers
+        function animateStatNumbers() {
+            const stats = document.querySelectorAll('.stat-number[data-count]');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const suffix = stat.textContent.replace(/\d/g, '');
+                let current = 0;
+                const increment = target / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current) + suffix;
+                }, 30);
+            });
+        }
+
+        // Keyboard navigation improvements
+        document.addEventListener('keydown', function(e) {
+            // Escape key closes notifications
+            if (e.key === 'Escape') {
+                const notifications = document.querySelectorAll('.notification');
+                notifications.forEach(notification => notification.remove());
+            }
+            
+            // Enter/Space on custom buttons
+            if ((e.key === 'Enter' || e.key === ' ') && 
+                (e.target.classList.contains('symptom-button') || 
+                 e.target.classList.contains('urgency-option'))) {
+                e.preventDefault();
+                e.target.click();
+            }
+        });
+
+        // Add CSS animations and button states
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            /* Loading state for buttons */
+            button.loading {
+                position: relative;
+                color: transparent !important;
+            }
+            
+            button.loading::after {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -8px;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                border-top-color: transparent;
+                animation: spin 0.8s linear infinite;
+            }
+            
+            /* Touch active state for mobile */
+            .cta-button.touch-active {
+                transform: scale(0.95);
+                box-shadow: 0 2px 10px rgba(40, 167, 69, 0.2);
+            }
+            
+            /* Success/Error states for form fields */
+            input.success, select.success, textarea.success {
+                border-color: var(--success-green) !important;
+                background-color: rgba(40, 167, 69, 0.05);
+            }
+            
+            input.error, select.error, textarea.error {
+                border-color: var(--error-red) !important;
+                background-color: rgba(220, 53, 69, 0.05);
+            }
+            
+            /* Notification improvements */
+            .notification {
+                font-family: inherit;
+                font-weight: 500;
+                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .notification::before {
+                content: '✓';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            
+            .notification[data-type="error"]::before {
+                content: '✕';
+            }
+            
+            /* Focus visible improvements */
+            :focus-visible {
+                outline: 3px solid var(--trust-blue);
+                outline-offset: 2px;
+            }
+            
+            /* Smooth transitions for all interactive elements */
+            button, a, input, select, textarea {
+                transition: all 0.2s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Patient Special - $99 Complete Exam Package | DentalCare Excellence</title>
+    <meta name="description" content="New patients save over $300! Get a complete dental exam, X-rays, cleaning, and personalized treatment plan for only $99. Limited time offer with instant coupon generator.">
+    <meta name="keywords" content="new patient special, dental exam, dental cleaning, dental discount, affordable dentist">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="New Patient Special - $99 Complete Exam Package">
+    <meta property="og:description" content="Save over $300 on your first dental visit! Complete exam, X-rays, and cleaning for just $99.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            --trust-blue: #0077BE;
+            --clean-white: #FFFFFF;
+            --accent-teal: #00A8A8;
+            --soft-gray: #F5F5F5;
+            --charcoal: #333333;
+            --success-green: #28A745;
+            --warning-red: #DC3545;
+            --gold: #FFD700;
+            --info-blue: #17A2B8;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 20px rgba(0,0,0,0.15);
+            --shadow-heavy: 0 10px 30px rgba(0,0,0,0.2);
+            --border-radius: 10px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--clean-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--trust-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+            border-radius: 4px;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--clean-white);
+            box-shadow: var(--shadow-light);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--trust-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--trust-blue);
+            outline: none;
+        }
+
+        .nav-links a:focus::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--trust-blue);
+        }
+
+        .cta-button {
+            background-color: var(--success-green);
+            color: var(--clean-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            min-height: 44px;
+            min-width: 44px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+            outline: 2px solid var(--success-green);
+            outline-offset: 2px;
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .urgency-banner {
+            background: linear-gradient(90deg, var(--warning-red), #FF6B6B);
+            color: var(--clean-white);
+            text-align: center;
+            padding: 0.75rem;
+            font-weight: bold;
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--success-green) 0%, var(--accent-teal) 100%);
+            color: var(--clean-white);
+            padding: 8rem 0 4rem;
+            margin-top: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="90" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .price-highlight {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: bold;
+            color: var(--clean-white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            display: inline-block;
+        }
+
+        .price-highlight::after {
+            content: "SAVE $326!";
+            position: absolute;
+            top: -20px;
+            right: -60px;
+            background-color: var(--gold);
+            color: var(--charcoal);
+            padding: 0.25rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            transform: rotate(15deg);
+            animation: bounce 3s infinite;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            opacity: 0.8;
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .offer-card {
+            background-color: rgba(255,255,255,0.95);
+            color: var(--charcoal);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-heavy);
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .value-breakdown {
+            background-color: var(--soft-gray);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+        }
+
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .value-item:last-child {
+            border-top: 2px solid var(--success-green);
+            padding-top: 0.5rem;
+            font-weight: bold;
+            color: var(--success-green);
+        }
+
+        .countdown {
+            background: linear-gradient(45deg, var(--warning-red), #FF6B6B);
+            color: var(--clean-white);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .countdown::before {
+            content: "⏰";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+
+        .instant-coupon {
+            background: linear-gradient(45deg, var(--gold), #FFE55C);
+            color: var(--charcoal);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            border: 3px dashed var(--warning-red);
+            position: relative;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .coupon-code {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: bold;
+            margin: 0.5rem 0;
+            letter-spacing: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .copy-button {
+            background-color: var(--trust-blue);
+            color: var(--clean-white);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            transition: var(--transition);
+            min-height: 44px;
+        }
+
+        .copy-button:hover,
+        .copy-button:focus {
+            background-color: #0056a0;
+            transform: scale(1.05);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--trust-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .included-services {
+            padding: 4rem 0;
+            background-color: var(--soft-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background-color: var(--clean-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .service-item:hover,
+        .service-item:focus-within {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--accent-teal);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-value {
+            color: var(--accent-teal);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .bonus-tag {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background-color: var(--warning-red);
+            color: var(--clean-white);
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: bounce 3s infinite;
+        }
+
+        .first-visit {
+            padding: 4rem 0;
+        }
+
+        .visit-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+            background-color: var(--soft-gray);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--accent-teal);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .timeline-number {
+            background-color: var(--accent-teal);
+            color: var(--clean-white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow-light);
+        }
+
+        .timeline-content {
+            margin-left: 2rem;
+            flex: 1;
+        }
+
+        .time-estimate {
+            color: var(--accent-teal);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+            min-height: 44px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(0, 168, 168, 0.1);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .mobile-menu:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--clean-white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-medium);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .price-highlight::after {
+                top: -15px;
+                right: -30px;
+                font-size: 0.7rem;
+            }
+            
+            .urgency-banner {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        button:focus,
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid var(--trust-blue);
+            outline-offset: 2px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-contrast: high) {
+            :root {
+                --shadow-light: 0 2px 10px rgba(0,0,0,0.3);
+                --shadow-medium: 0 5px 20px rgba(0,0,0,0.4);
+                --shadow-heavy: 0 10px 30px rgba(0,0,0,0.5);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .fade-in {
+                opacity: 1;
+                transform: none;
+            }
+            
+            .price-highlight::after,
+            .bonus-tag {
+                animation: none;
+            }
+        }
+
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        @media print {
+            header,
+            .mobile-menu,
+            .cta-button,
+            .urgency-banner {
+                display: none;
+            }
+            
+            .hero {
+                background: none;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <nav class="container" aria-label="Main navigation">
+            <div class="logo">DentalCare Excellence</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/new-patient" aria-current="page">New Patients</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <a href="#book-now" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Claim Offer Header'});">Claim Offer</a>
+            <button class="mobile-menu" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <div class="urgency-banner" role="alert" aria-live="polite">
+        🔥 FLASH SALE: Only <span id="spotsLeft">7</span> New Patient Spots Remaining - Ends in <span id="flashTimer">4h 32m</span>!
+    </div>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <div class="hero-content">
+                    <div>
+                        <h1 id="hero-heading">New Patient Special: Complete Dental Care Package</h1>
+                        <p style="font-size: 1.3rem; margin-bottom: 1rem;">
+                            <span class="original-price">Regular Price $425</span>
+                        </p>
+                        <div class="price-highlight">$99</div>
+                        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Save Over $300 on Your First Visit!</p>
+                        <a href="#coupon-generator" class="cta-button" style="font-size: 1.3rem; padding: 1rem 2rem;" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Generate Coupon Hero'});">
+                            Generate My Instant Coupon
+                        </a>
+                        <div class="countdown" id="countdown">
+                            Offer Expires In: <span id="timer">2d 14h 32m</span>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <h2 style="color: var(--trust-blue); margin-bottom: 1rem;">What's Included:</h2>
+                        <ul style="text-align: left; list-style: none; font-size: 1.1rem;">
+                            <li><span aria-hidden="true">✓</span> Comprehensive Oral Exam</li>
+                            <li><span aria-hidden="true">✓</span> Full Digital X-Rays</li>
+                            <li><span aria-hidden="true">✓</span> Professional Cleaning</li>
+                            <li><span aria-hidden="true">✓</span> Personalized Treatment Plan</li>
+                            <li><span aria-hidden="true">✓</span> Take-Home Care Kit</li>
+                        </ul>
+                        <div class="value-breakdown">
+                            <div class="value-item">
+                                <span>Comprehensive Exam:</span>
+                                <span>$150</span>
+                            </div>
+                            <div class="value-item">
+                                <span>Digital X-Rays:</span>
+                                <span>$125</span>
+                            </div>
+                            <div class="value-item">
+                                <span>Professional Cleaning:</span>
+                                <span>$100</span>
+                            </div>
+                            <div class="value-item">
+                                <span>Treatment Plan:</span>
+                                <span>$50</span>
+                            </div>
+                            <div class="value-item">
+                                <span>Total Savings:</span>
+                                <span>$326</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+                            <div style="text-align: center; flex: 1; min-width: 150px;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">🏆</div>
+                                <small>5-Star Rated</small>
+                            </div>
+                            <div style="text-align: center; flex: 1; min-width: 150px;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">📋</div>
+                                <small>No Hidden Fees</small>
+                            </div>
+                            <div style="text-align: center; flex: 1; min-width: 150px;">
+                                <div style="font-size: 2rem; margin-bottom: 0.5rem;" aria-hidden="true">💳</div>
+                                <small>Insurance Welcome</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="included-services" id="coupon-generator" aria-labelledby="coupon-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="coupon-heading">Generate Your Instant Coupon</h2>
+                    <p>Click below to create your personalized $99 special offer coupon</p>
+                </div>
+                <div class="instant-coupon" id="couponSection" style="display: none;" role="region" aria-live="polite">
+                    <h3>🎉 Your Exclusive Coupon is Ready!</h3>
+                    <div class="coupon-code" id="couponCode" aria-label="Coupon code">SAVE99NOW</div>
+                    <p>Present this code at your appointment to secure your $99 special rate</p>
+                    <button class="copy-button" onclick="copyCoupon()" aria-label="Copy coupon code to clipboard">📋 Copy Code</button>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">
+                        <strong>Expires:</strong> <span id="couponExpiry"></span>
+                    </p>
+                </div>
+                <button class="cta-button" id="generateCoupon" onclick="generateCoupon()" style="font-size: 1.2rem; padding: 1rem 2rem;">
+                    🎟️ Generate My Instant Coupon
+                </button>
+            </div>
+        </section>
+
+        <section class="included-services" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="services-heading">Everything You Get for Just $99</h2>
+                    <p>Comprehensive care that typically costs over $425 at other practices</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-item fade-in">
+                        <span class="service-icon" aria-hidden="true">🔍</span>
+                        <h3>Complete Oral Examination</h3>
+                        <p>Thorough assessment of teeth, gums, bite, and oral cancer screening by our experienced dentists</p>
+                        <div class="service-value">$150 Value</div>
+                    </article>
+                    <article class="service-item fade-in">
+                        <span class="service-icon" aria-hidden="true">📸</span>
+                        <h3>Digital X-Ray Series</h3>
+                        <p>State-of-the-art digital imaging for accurate diagnosis with 90% less radiation</p>
+                        <div class="service-value">$125 Value</div>
+                    </article>
+                    <article class="service-item fade-in">
+                        <span class="service-icon" aria-hidden="true">✨</span>
+                        <h3>Professional Cleaning</h3>
+                        <p>Remove plaque, tartar, and stains for a brighter, healthier smile</p>
+                        <div class="service-value">$100 Value</div>
+                    </article>
+                    <article class="service-item fade-in">
+                        <span class="service-icon" aria-hidden="true">📊</span>
+                        <h3>Custom Treatment Plan</h3>
+                        <p>Detailed roadmap for optimal oral health with transparent pricing</p>
+                        <div class="service-value">$50 Value</div>
+                    </article>
+                    <article class="service-item fade-in">
+                        <div class="bonus-tag">BONUS!</div>
+                        <span class="service-icon" aria-hidden="true">💬</span>
+                        <h3>One-on-One Consultation</h3>
+                        <p>Discuss your goals and concerns with no pressure or judgment</p>
+                        <div class="service-value">Included Free</div>
+                    </article>
+                    <article class="service-item fade-in">
+                        <div class="bonus-tag">NEW!</div>
+                        <span class="service-icon" aria-hidden="true">🎁</span>
+                        <h3>Premium Care Kit</h3>
+                        <p>Electric toothbrush, fluoride toothpaste, and specialized floss to maintain your smile</p>
+                        <div class="service-value">$75 Value Gift</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="first-visit" aria-labelledby="visit-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="visit-heading">Your First Visit Experience</h2>
+                    <p>We've designed a comfortable, efficient process just for new patients</p>
+                </div>
+                <div class="visit-timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Warm Welcome <span class="time-estimate">(5 min)</span></h3>
+                            <p>Our friendly team greets you and helps you feel at home. Enjoy complimentary beverages in our modern, relaxing waiting area with WiFi and phone charging stations.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>Digital X-Rays <span class="time-estimate">(10 min)</span></h3>
+                            <p>Quick, comfortable digital imaging with instant results. Our advanced technology means 90% less radiation and clearer images for better diagnosis.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Comprehensive Exam <span class="time-estimate">(20 min)</span></h3>
+                            <p>Your dentist performs a thorough evaluation, explaining findings as they go. We believe in education, not surprises. You'll understand everything about your oral health.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Professional Cleaning <span class="time-estimate">(30 min)</span></h3>
+                            <p>Gentle yet thorough cleaning by our skilled hygienists. We use the latest ultrasonic technology for maximum comfort and effectiveness.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Treatment Discussion <span class="time-estimate">(15 min)</span></h3>
+                            <p>Review your personalized treatment plan with clear explanations and transparent pricing. No pressure, just honest recommendations tailored to your budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--soft-gray); padding: 4rem 0;" id="book-now" aria-labelledby="booking-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="booking-heading">Save Time - Pre-Fill Your Forms Now</h2>
+                    <p>Complete your paperwork online and save 15 minutes on your visit day</p>
+                </div>
+                <div style="background-color: var(--clean-white); padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-medium); max-width: 600px; margin: 0 auto;">
+                    <div style="background-color: var(--success-green); color: var(--clean-white); padding: 1rem; border-radius: 10px; text-align: center; margin-bottom: 2rem; font-weight: bold;">
+                        ⏱️ Pre-filling saves you 15 minutes at your appointment!
+                    </div>
+                    <form id="newPatientForm" aria-label="New patient information form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" required placeholder="John Smith" aria-describedby="name-help">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="john@email.com" aria-describedby="email-help">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="(555) 123-4567" aria-describedby="phone-help">
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentTime">Preferred Appointment Time *</label>
+                            <select id="appointmentTime" required aria-describedby="time-help">
+                                <option value="">Select preferred time</option>
+                                <option value="morning">Morning (8am-12pm)</option>
+                                <option value="afternoon">Afternoon (12pm-5pm)</option>
+                                <option value="evening">Evening (5pm-7pm)</option>
+                                <option value="saturday">Saturday</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="insurance">Insurance Provider (if applicable)</label>
+                            <input type="text" id="insurance" placeholder="e.g., Delta Dental, Aetna">
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Main Reason for Visit</label>
+                            <textarea id="reason" rows="3" placeholder="Tell us what brings you in or any concerns you have"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%; font-size: 1.2rem;">
+                            Secure My $99 Special Appointment
+                        </button>
+                        <p style="text-align: center; margin-top: 1rem; color: #666;">
+                            <small>🔒 Your information is secure and will never be shared</small>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: linear-gradient(135deg, var(--success-green) 0%, var(--accent-teal) 100%); color: var(--clean-white); padding: 4rem 0; text-align: center;" aria-labelledby="final-cta-heading">
+            <div class="container">
+                <div style="background-color: rgba(255,255,255,0.2); display: inline-block; padding: 1rem 2rem; border-radius: 50px; font-size: 1.2rem; font-weight: bold; margin-bottom: 2rem; animation: var(--animation-bounce);">
+                    ⚡ Only <span id="spotsLeft2">7</span> New Patient Appointments Left This Month
+                </div>
+                <h2 id="final-cta-heading" style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Experience Better Dental Care?</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 2rem;">Join our dental family and save over $300 on your first visit</p>
+                <button onclick="scrollToForm()" class="cta-button" style="font-size: 1.3rem; padding: 1rem 3rem;">
+                    Claim My $99 New Patient Special
+                </button>
+                <p style="margin-top: 1rem;">Or call now: <strong>(555) 123-4567</strong></p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                    🎟️ Mention your coupon code for instant savings
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" style="background-color: var(--charcoal); color: var(--clean-white); padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 DentalCare Excellence. All rights reserved.</p>
+            <p>State-of-the-art technology meets compassionate care</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const isOpen = navLinks.classList.contains('active');
+            
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+            
+            if (!isOpen) {
+                navLinks.querySelector('a').focus();
+            }
+        }
+
+        // Coupon generation with tracking
+        function generateCoupon() {
+            const coupons = ['SAVE99NOW', 'DENTAL99', 'SMILE99', 'NEWPATIENT99', 'SPECIAL99'];
+            const randomCoupon = coupons[Math.floor(Math.random() * coupons.length)];
+            
+            const generateBtn = document.getElementById('generateCoupon');
+            generateBtn.classList.add('loading');
+            generateBtn.textContent = 'Generating...';
+            
+            // Track coupon generation
+            gtag('event', 'generate', {
+                'event_category': 'Coupon',
+                'event_label': randomCoupon,
+                'value': 99
+            });
+            
+            setTimeout(() => {
+                document.getElementById('couponCode').textContent = randomCoupon;
+                document.getElementById('couponSection').style.display = 'block';
+                document.getElementById('generateCoupon').style.display = 'none';
+                
+                // Set expiry date (7 days from now)
+                const expiryDate = new Date();
+                expiryDate.setDate(expiryDate.getDate() + 7);
+                document.getElementById('couponExpiry').textContent = expiryDate.toLocaleDateString();
+                
+                // Announce to screen readers
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.style.position = 'absolute';
+                announcement.style.left = '-10000px';
+                announcement.textContent = `Coupon generated successfully. Your code is ${randomCoupon}`;
+                document.body.appendChild(announcement);
+                
+                setTimeout(() => document.body.removeChild(announcement), 3000);
+            }, 1000);
+        }
+
+        // Copy coupon functionality
+        function copyCoupon() {
+            const couponCode = document.getElementById('couponCode').textContent;
+            const button = document.querySelector('.copy-button');
+            
+            // Track coupon copy
+            gtag('event', 'copy', {
+                'event_category': 'Coupon',
+                'event_label': couponCode
+            });
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(couponCode).then(() => {
+                    showCopySuccess(button);
+                }).catch(() => {
+                    fallbackCopy(couponCode, button);
+                });
+            } else {
+                fallbackCopy(couponCode, button);
+            }
+        }
+
+        function fallbackCopy(text, button) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showCopySuccess(button);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                button.textContent = '❌ Copy Failed';
+                button.style.backgroundColor = 'var(--warning-red)';
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function showCopySuccess(button) {
+            button.textContent = '✓ Copied!';
+            button.style.backgroundColor = '#28A745';
+            
+            setTimeout(() => {
+                button.textContent = '📋 Copy Code';
+                button.style.backgroundColor = '#0077BE';
+            }, 2000);
+        }
+
+        // Form submission with validation and tracking
+        document.getElementById('newPatientForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validation
+            const requiredFields = this.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+            let firstInvalidField = null;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'var(--warning-red)';
+                    field.setAttribute('aria-invalid', 'true');
+                    
+                    if (!firstInvalidField) {
+                        firstInvalidField = field;
+                    }
+                } else {
+                    field.style.borderColor = '#e0e0e0';
+                    field.removeAttribute('aria-invalid');
+                }
+            });
+            
+            // Email validation
+            const emailField = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailField.value && !emailRegex.test(emailField.value)) {
+                isValid = false;
+                emailField.style.borderColor = 'var(--warning-red)';
+                emailField.setAttribute('aria-invalid', 'true');
+                if (!firstInvalidField) firstInvalidField = emailField;
+            }
+            
+            if (!isValid) {
+                firstInvalidField.focus();
+                // Announce error to screen readers
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.style.position = 'absolute';
+                announcement.style.left = '-10000px';
+                announcement.textContent = 'Please fill in all required fields correctly.';
+                document.body.appendChild(announcement);
+                setTimeout(() => document.body.removeChild(announcement), 3000);
+                return;
+            }
+            
+            // Track form submission
+            gtag('event', 'submit', {
+                'event_category': 'Form',
+                'event_label': 'New Patient Special',
+                'value': 99
+            });
+            
+            // Simulate API submission
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                appointmentTime: document.getElementById('appointmentTime').value,
+                insurance: document.getElementById('insurance').value,
+                reason: document.getElementById('reason').value,
+                offer: 'new-patient-special-99',
+                couponCode: document.getElementById('couponCode').textContent || 'NOT_GENERATED'
+            };
+            
+            // In production, send to API endpoint
+            console.log('Form data to submit:', formData);
+            
+            // Success handling
+            alert('Thank you! We\'ll contact you within 1 hour to confirm your appointment and secure your $99 special rate. Don\'t forget to mention your coupon code!');
+            this.reset();
+            updateSpots();
+        });
+
+        // Countdown timers
+        function updateCountdown() {
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 2);
+            endDate.setHours(23, 59, 59);
+            
+            const now = new Date();
+            const diff = endDate - now;
+            
+            if (diff <= 0) {
+                document.getElementById('timer').textContent = 'EXPIRED';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('timer').textContent = `${days}d ${hours}h ${minutes}m`;
+        }
+
+        function updateFlashTimer() {
+            const endTime = new Date();
+            endTime.setHours(endTime.getHours() + 4);
+            endTime.setMinutes(endTime.getMinutes() + 32);
+            
+            const now = new Date();
+            const diff = endTime - now;
+            
+            if (diff <= 0) {
+                document.getElementById('flashTimer').textContent = 'EXPIRED';
+                return;
+            }
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('flashTimer').textContent = `${hours}h ${minutes}m`;
+        }
+
+        // Update timers every minute
+        setInterval(updateCountdown, 60000);
+        setInterval(updateFlashTimer, 60000);
+        updateCountdown();
+        updateFlashTimer();
+
+        // Update spots with tracking
+        function updateSpots() {
+            const spots = document.getElementById('spotsLeft');
+            const spots2 = document.getElementById('spotsLeft2');
+            let currentSpots = parseInt(spots.textContent);
+            
+            if (currentSpots > 3) {
+                currentSpots--;
+                spots.textContent = currentSpots;
+                spots2.textContent = currentSpots;
+                
+                // Track urgency
+                if (currentSpots <= 5) {
+                    document.querySelector('.urgency-banner').style.background = 'linear-gradient(90deg, #DC3545, #FF0000)';
+                    
+                    gtag('event', 'view_item', {
+                        'event_category': 'Urgency',
+                        'event_label': 'Low Spots Warning',
+                        'value': currentSpots
+                    });
+                }
+            }
+        }
+
+        // Simulate realistic booking activity
+        setInterval(() => {
+            if (Math.random() > 0.85) {
+                updateSpots();
+            }
+        }, 45000);
+
+        // Scroll to form
+        function scrollToForm() {
+            const target = document.getElementById('book-now');
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const bannerHeight = document.querySelector('.urgency-banner').offsetHeight;
+            const elementPosition = target.offsetTop - headerHeight - bannerHeight - 20;
+            
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+            
+            // Track scroll to form
+            gtag('event', 'scroll', {
+                'event_category': 'Engagement',
+                'event_label': 'Scroll to Form'
+            });
+        }
+
+        // Intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Track section views
+                    if (entry.target.classList.contains('service-item')) {
+                        gtag('event', 'view_item', {
+                            'event_category': 'Content',
+                            'event_label': 'Service Item View'
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const bannerHeight = document.querySelector('.urgency-banner').offsetHeight;
+                    const elementPosition = target.offsetTop - headerHeight - bannerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Keyboard navigation enhancement
+        document.addEventListener('keydown', function(e) {
+            // ESC key closes mobile menu
+            if (e.key === 'Escape') {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
+            }
+        });
+
+        // Performance optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track page view
+            gtag('event', 'page_view', {
+                'page_title': 'New Patient Special',
+                'page_location': window.location.href,
+                'page_path': '/new-patient-special'
+            });
+            
+            // Preload critical elements
+            const criticalImages = document.querySelectorAll('img[data-src]');
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                criticalImages.forEach(img => imageObserver.observe(img));
+            }
+        });
+
+        // Error handling
+        window.addEventListener('error', function(e) {
+            console.error('JavaScript error:', e.error);
+            // Track errors
+            gtag('event', 'exception', {
+                'description': e.error.toString(),
+                'fatal': false
+            });
+        });
+
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData.loadEventEnd - perfData.loadEventStart > 3000) {
+                        console.warn('Page load time exceeded 3 seconds');
+                        
+                        // Track slow page load
+                        gtag('event', 'timing_complete', {
+                            'name': 'load',
+                            'value': perfData.loadEventEnd - perfData.loadEventStart,
+                            'event_category': 'Performance'
+                        });
+                    }
+                }, 0);
+            });
+        }
+    </script>
+</body>
+</html>

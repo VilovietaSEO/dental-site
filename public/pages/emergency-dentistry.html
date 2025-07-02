@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="service-name" content="emergency-dentistry">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Dental Care - 24/7 Immediate Relief | SmileCare Dental</title>
+    <meta name="description" content="Dental emergency? Get immediate relief 24/7. Same-day appointments, after-hours care, and urgent pain relief. Call now: (555) 123-4567">
+    <meta name="keywords" content="dental emergency, emergency dentist, tooth pain, broken tooth, dental trauma, 24 hour dentist">
+    <link rel="canonical" href="https://smilecare.dental/services/emergency-dentistry">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+    
+    <style>
+        :root {
+            --emergency-red: #DC2626;
+            --emergency-dark-red: #991B1B;
+            --emergency-light-red: #FEE2E2;
+            --emergency-orange: #EA580C;
+            --trust-blue: #1E40AF;
+            --success-green: #059669;
+            --warning-yellow: #D97706;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-600: #4B5563;
+            --gray-900: #111827;
+            --shadow-emergency: 0 10px 40px rgba(220, 38, 38, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--emergency-red);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Emergency Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-top: 4px solid var(--emergency-red);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--emergency-red);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo::before {
+            content: '🚨';
+            font-size: 1.25rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--emergency-red);
+        }
+        
+        /* Emergency Hero Section */
+        .emergency-hero {
+            background: linear-gradient(135deg, var(--emergency-red) 0%, var(--emergency-dark-red) 100%);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+        }
+        
+        .emergency-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .emergency-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+        
+        .emergency-hero .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .emergency-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Button Styles */
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-emergency {
+            background: var(--white);
+            color: var(--emergency-red);
+            font-size: 1.125rem;
+            padding: 1.25rem 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-emergency:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--emergency-red);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn.loading {
+            color: transparent;
+        }
+        
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Emergency Banner */
+        .emergency-banner {
+            background: var(--emergency-light-red);
+            border: 2px solid var(--emergency-red);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .emergency-banner h2 {
+            color: var(--emergency-red);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .emergency-banner p {
+            color: var(--emergency-dark-red);
+            font-size: 1.125rem;
+        }
+        
+        /* Emergency Types Grid */
+        .emergency-types {
+            padding: 4rem 0;
+            background: var(--gray-50);
+        }
+        
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .emergency-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .emergency-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            border-color: var(--emergency-red);
+        }
+        
+        .emergency-card.urgent {
+            border-color: var(--emergency-red);
+            background: var(--emergency-light-red);
+        }
+        
+        .emergency-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .emergency-card h3 {
+            color: var(--emergency-red);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .emergency-card p {
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-action {
+            color: var(--emergency-red);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .emergency-action:hover {
+            text-decoration: underline;
+        }
+        
+        /* Pain Assessment Section */
+        .pain-assessment {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .pain-scale {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .pain-scale-label {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+        
+        .pain-levels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            background: var(--gray-50);
+            padding: 1rem;
+            border-radius: 50px;
+        }
+        
+        .pain-level {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .pain-level:hover {
+            transform: scale(1.05);
+        }
+        
+        .pain-level[data-level="1-3"] {
+            background: var(--success-green);
+            color: var(--white);
+        }
+        
+        .pain-level[data-level="4-6"] {
+            background: var(--warning-yellow);
+            color: var(--white);
+        }
+        
+        .pain-level[data-level="7-10"] {
+            background: var(--emergency-red);
+            color: var(--white);
+        }
+        
+        .pain-level.selected {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Quick Actions Section */
+        .quick-actions {
+            padding: 4rem 0;
+            background: var(--gray-50);
+        }
+        
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .action-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .action-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .action-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--emergency-light-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+        
+        /* Appointment Form */
+        .appointment-section {
+            padding: 4rem 0;
+            background: var(--white);
+        }
+        
+        .appointment-form {
+            background: var(--gray-50);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 2rem auto 0;
+            border: 3px solid var(--emergency-red);
+        }
+        
+        .urgency-selector {
+            margin-bottom: 2rem;
+        }
+        
+        .urgency-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .urgency-option {
+            padding: 1rem;
+            border: 2px solid var(--gray-100);
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--white);
+        }
+        
+        .urgency-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .urgency-option.selected {
+            border-color: var(--emergency-red);
+            background: var(--emergency-light-red);
+        }
+        
+        .urgency-option[data-urgency="immediate"] {
+            border-color: var(--emergency-red);
+            background: var(--emergency-light-red);
+        }
+        
+        .urgency-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--gray-100);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--emergency-red);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+        
+        .form-group input.error {
+            border-color: var(--emergency-red);
+            background-color: var(--emergency-light-red);
+        }
+        
+        .error-message {
+            color: var(--emergency-red);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        
+        .form-group.has-error .error-message {
+            display: block;
+        }
+        
+        /* Floating Emergency Call Button */
+        .floating-emergency-call {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--emergency-red);
+            color: var(--white);
+            padding: 1.25rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: var(--shadow-emergency);
+            z-index: 1000;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            animation: pulse-emergency 2s infinite;
+        }
+        
+        .floating-emergency-call:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 50px rgba(220, 38, 38, 0.4);
+        }
+        
+        .floating-emergency-call .phone-icon {
+            font-size: 1.5rem;
+            animation: ring 1s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-emergency {
+            0% { box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3); }
+            50% { box-shadow: 0 10px 50px rgba(220, 38, 38, 0.5); }
+            100% { box-shadow: 0 10px 40px rgba(220, 38, 38, 0.3); }
+        }
+        
+        @keyframes ring {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30% { transform: rotate(-15deg); }
+            20%, 40% { transform: rotate(15deg); }
+            50% { transform: rotate(0deg); }
+        }
+        
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            color: var(--white);
+            font-weight: 500;
+            z-index: 1001;
+            animation: slideIn 0.3s ease-out;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .notification[data-type="success"] {
+            background: var(--success-green);
+        }
+        
+        .notification[data-type="error"] {
+            background: var(--emergency-red);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .emergency-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .floating-emergency-call {
+                bottom: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .emergency-cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-emergency {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid var(--emergency-red);
+            outline-offset: 2px;
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav class="container">
+            <a href="homepage.html" class="logo">Emergency Dental Care</a>
+            <div class="nav-links">
+                <a href="/services">Services</a>
+                <a href="/about">About</a>
+                <a href="/insurance">Insurance</a>
+                <a href="tel:5551234567" class="btn btn-emergency">📞 CALL NOW</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main">
+        <!-- Emergency Hero Section -->
+        <section class="emergency-hero">
+            <div class="container emergency-content">
+                <h1>Dental Emergency? We're Here 24/7</h1>
+                <p class="subtitle">Immediate pain relief and same-day appointments available</p>
+                <div class="emergency-cta-group">
+                    <a href="tel:5551234567" class="btn btn-emergency" data-action="call-emergency">
+                        <span class="phone-icon">📞</span>
+                        <span>Call Now: (555) 123-4567</span>
+                    </a>
+                    <a href="#appointment" class="btn btn-secondary" data-action="book-emergency">
+                        Book Emergency Visit
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Emergency Banner -->
+        <section class="container">
+            <div class="emergency-banner">
+                <h2>⚡ Same-Day Emergency Appointments Available</h2>
+                <p>We reserve time daily for dental emergencies. Call now for immediate assistance.</p>
+            </div>
+        </section>
+        
+        <!-- Emergency Types -->
+        <section class="emergency-types">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Common Dental Emergencies We Treat</h2>
+                <p style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    Don't suffer in pain. We provide immediate relief for all types of dental emergencies.
+                </p>
+                
+                <div class="types-grid">
+                    <div class="emergency-card urgent">
+                        <span class="emergency-icon">🦷</span>
+                        <h3>Severe Tooth Pain</h3>
+                        <p>Unbearable pain that won't go away with pain medication</p>
+                        <a href="tel:5551234567" class="emergency-action">Call Immediately →</a>
+                    </div>
+                    
+                    <div class="emergency-card urgent">
+                        <span class="emergency-icon">🩸</span>
+                        <h3>Knocked-Out Tooth</h3>
+                        <p>Time is critical! Save the tooth in milk and come immediately</p>
+                        <a href="tel:5551234567" class="emergency-action">Get Instructions →</a>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <span class="emergency-icon">💔</span>
+                        <h3>Broken/Chipped Tooth</h3>
+                        <p>Sharp edges causing cuts or significant cosmetic damage</p>
+                        <a href="#appointment" class="emergency-action">Book Now →</a>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <span class="emergency-icon">🔥</span>
+                        <h3>Dental Abscess</h3>
+                        <p>Swelling, fever, or pus around teeth or gums</p>
+                        <a href="#appointment" class="emergency-action">Book Now →</a>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <span class="emergency-icon">👑</span>
+                        <h3>Lost Crown/Filling</h3>
+                        <p>Exposed tooth causing sensitivity or pain</p>
+                        <a href="#appointment" class="emergency-action">Book Now →</a>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <span class="emergency-icon">🩹</span>
+                        <h3>Soft Tissue Injury</h3>
+                        <p>Cuts or tears to lips, cheeks, gums, or tongue</p>
+                        <a href="#appointment" class="emergency-action">Book Now →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pain Assessment -->
+        <section class="pain-assessment">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">How Severe Is Your Pain?</h2>
+                <p style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    Click on your pain level to get immediate recommendations
+                </p>
+                
+                <div class="pain-scale">
+                    <p class="pain-scale-label">Rate your pain from 1-10:</p>
+                    <div class="pain-levels">
+                        <div class="pain-level" data-level="1-3" role="button" tabindex="0">
+                            <div>😊</div>
+                            <div>Mild<br>1-3</div>
+                        </div>
+                        <div class="pain-level" data-level="4-6" role="button" tabindex="0">
+                            <div>😐</div>
+                            <div>Moderate<br>4-6</div>
+                        </div>
+                        <div class="pain-level" data-level="7-10" role="button" tabindex="0">
+                            <div>😰</div>
+                            <div>Severe<br>7-10</div>
+                        </div>
+                    </div>
+                    
+                    <div id="pain-recommendation" style="text-align: center; padding: 1.5rem; background: var(--gray-50); border-radius: 12px; display: none;">
+                        <h3 style="color: var(--emergency-red); margin-bottom: 0.5rem;">Recommendation</h3>
+                        <p id="pain-message"></p>
+                        <a href="#" id="pain-action" class="btn btn-emergency" style="margin-top: 1rem; display: inline-flex;">Take Action</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">What You Can Do Right Now</h2>
+                
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <div class="action-icon">💊</div>
+                        <h3>Pain Management</h3>
+                        <p>Take over-the-counter pain relievers as directed. Apply cold compress to reduce swelling.</p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">🧊</div>
+                        <h3>Reduce Swelling</h3>
+                        <p>Apply ice pack for 15-20 minutes at a time. Keep head elevated when lying down.</p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">🧂</div>
+                        <h3>Rinse & Clean</h3>
+                        <p>Gently rinse with warm salt water. Avoid extremely hot or cold foods and drinks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Emergency Appointment Form -->
+        <section id="appointment" class="appointment-section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: var(--emergency-red);">
+                    Emergency Appointment Request
+                </h2>
+                <p style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    For immediate assistance, please call. For less urgent matters, fill out this form.
+                </p>
+                
+                <form class="appointment-form" data-appointment>
+                    <!-- Urgency Selector -->
+                    <div class="urgency-selector">
+                        <label style="font-weight: 600; display: block; margin-bottom: 0.5rem;">
+                            How urgent is your situation? *
+                        </label>
+                        <div class="urgency-options">
+                            <div class="urgency-option" data-urgency="immediate" role="button" tabindex="0" aria-pressed="false">
+                                <span class="urgency-icon">🚨</span>
+                                <strong>Immediate</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Severe pain, trauma</p>
+                            </div>
+                            <div class="urgency-option" data-urgency="today" role="button" tabindex="0" aria-pressed="false">
+                                <span class="urgency-icon">⚡</span>
+                                <strong>Today</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Moderate pain</p>
+                            </div>
+                            <div class="urgency-option" data-urgency="soon" role="button" tabindex="0" aria-pressed="false">
+                                <span class="urgency-icon">📅</span>
+                                <strong>Soon</strong>
+                                <p style="font-size: 0.875rem; margin: 0;">Manageable pain</p>
+                            </div>
+                        </div>
+                        <input type="hidden" id="urgency" name="urgency" value="" required>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                            <span class="error-message">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567">
+                            <span class="error-message">Please enter a valid phone number</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email">
+                            <span class="error-message">Please enter a valid email</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-time">When can we call? *</label>
+                            <select id="preferred-time" name="preferred-time" required aria-required="true">
+                                <option value="">Select time</option>
+                                <option value="asap">ASAP</option>
+                                <option value="morning">This Morning</option>
+                                <option value="afternoon">This Afternoon</option>
+                                <option value="evening">This Evening</option>
+                                <option value="tomorrow">Tomorrow</option>
+                            </select>
+                            <span class="error-message">Please select when we can call</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Emergency Details -->
+                    <div class="form-group">
+                        <label for="emergency-type">Type of Emergency *</label>
+                        <select id="emergency-type" name="emergency-type" required aria-required="true">
+                            <option value="">Select emergency type</option>
+                            <option value="severe-pain">Severe Tooth Pain</option>
+                            <option value="knocked-out">Knocked-Out Tooth</option>
+                            <option value="broken-tooth">Broken/Chipped Tooth</option>
+                            <option value="abscess">Dental Abscess/Swelling</option>
+                            <option value="lost-filling">Lost Crown/Filling</option>
+                            <option value="injury">Soft Tissue Injury</option>
+                            <option value="other">Other Emergency</option>
+                        </select>
+                        <span class="error-message">Please select emergency type</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="symptoms">Describe Your Symptoms *</label>
+                        <textarea id="symptoms" name="symptoms" rows="4" required aria-required="true" placeholder="Please describe your pain level, when it started, and any other symptoms"></textarea>
+                        <span class="error-message">Please describe your symptoms</span>
+                    </div>
+                    
+                    <input type="hidden" name="service-interest" value="Emergency Dentistry">
+                    
+                    <button type="submit" class="btn btn-emergency" style="width: 100%; font-size: 1.125rem; padding: 1.25rem;">
+                        <span>Submit Emergency Request</span>
+                        <span>🚨</span>
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; color: var(--emergency-red); font-weight: 600;">
+                        For immediate assistance, please call: (555) 123-4567
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Floating Emergency Call Button -->
+    <a href="tel:5551234567" class="floating-emergency-call" aria-label="Call for immediate emergency assistance">
+        <span class="phone-icon">📞</span>
+        <span>CALL NOW</span>
+    </a>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'custom_map.dimension1': 'emergency_type',
+            'custom_map.dimension2': 'urgency_level'
+        });
+    </script>
+    
+    <!-- Enhanced Production JavaScript -->
+    <script>
+        // API Configuration
+        const API_BASE_URL = 'https://api.smilecare.dental';
+        const API_ENDPOINTS = {
+            bookAppointment: '/api/book-appointment',
+            emergencyNotification: '/api/emergency-notification'
+        };
+        
+        // Emergency Phone Number
+        const EMERGENCY_PHONE = '5551234567';
+        
+        // Utility Functions
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // GA4 Event Tracking with Emergency Context
+        function trackEvent(eventName, parameters = {}) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, {
+                    event_category: 'emergency',
+                    event_label: 'emergency_dentistry_page',
+                    ...parameters
+                });
+            }
+        }
+        
+        // Loading State Manager
+        class LoadingStateManager {
+            static setLoading(element, isLoading, loadingText = 'Loading...') {
+                if (isLoading) {
+                    element.dataset.originalText = element.textContent;
+                    element.textContent = loadingText;
+                    element.disabled = true;
+                    element.classList.add('loading');
+                    element.setAttribute('aria-busy', 'true');
+                } else {
+                    element.textContent = element.dataset.originalText || element.textContent;
+                    element.disabled = false;
+                    element.classList.remove('loading');
+                    element.setAttribute('aria-busy', 'false');
+                }
+            }
+        }
+        
+        // Notification System
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.setAttribute('data-type', type);
+            notification.setAttribute('role', 'alert');
+            notification.setAttribute('aria-live', 'assertive');
+            
+            const icon = type === 'success' ? '✓' : '⚠️';
+            notification.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => notification.remove(), 300);
+            }, 5000);
+        }
+        
+        // Form Validation
+        function validateForm(form) {
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    if (formGroup) {
+                        formGroup.classList.add('has-error');
+                        field.classList.add('error');
+                    }
+                } else {
+                    if (formGroup) {
+                        formGroup.classList.remove('has-error');
+                        field.classList.remove('error');
+                    }
+                }
+                
+                // Phone validation
+                if (field.type === 'tel' && field.value) {
+                    const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+                    if (!phoneRegex.test(field.value)) {
+                        isValid = false;
+                        if (formGroup) {
+                            formGroup.classList.add('has-error');
+                            field.classList.add('error');
+                        }
+                    }
+                }
+                
+                // Email validation (if provided)
+                if (field.type === 'email' && field.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        isValid = false;
+                        if (formGroup) {
+                            formGroup.classList.add('has-error');
+                            field.classList.add('error');
+                        }
+                    }
+                }
+            });
+            
+            // Check urgency selection
+            const urgencyInput = form.querySelector('#urgency');
+            if (!urgencyInput.value) {
+                isValid = false;
+                showNotification('Please select your urgency level', 'error');
+            }
+            
+            return isValid;
+        }
+        
+        // Initialize Urgency Selector
+        function initializeUrgencySelector() {
+            const urgencyOptions = document.querySelectorAll('.urgency-option');
+            const urgencyInput = document.getElementById('urgency');
+            
+            urgencyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const urgency = this.dataset.urgency;
+                    
+                    // Remove selected from all
+                    urgencyOptions.forEach(opt => {
+                        opt.classList.remove('selected');
+                        opt.setAttribute('aria-pressed', 'false');
+                    });
+                    
+                    // Add selected to clicked
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    
+                    // Update hidden input
+                    urgencyInput.value = urgency;
+                    
+                    // Track selection
+                    trackEvent('urgency_selected', {
+                        urgency_level: urgency,
+                        dimension2: urgency
+                    });
+                    
+                    // Show immediate action message
+                    if (urgency === 'immediate') {
+                        showNotification('For immediate care, please call us now at (555) 123-4567', 'error');
+                    }
+                });
+                
+                // Keyboard support
+                option.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+        
+        // Initialize Pain Assessment
+        function initializePainAssessment() {
+            const painLevels = document.querySelectorAll('.pain-level');
+            const recommendation = document.getElementById('pain-recommendation');
+            const painMessage = document.getElementById('pain-message');
+            const painAction = document.getElementById('pain-action');
+            
+            painLevels.forEach(level => {
+                level.addEventListener('click', function() {
+                    const painLevel = this.dataset.level;
+                    
+                    // Remove selected from all
+                    painLevels.forEach(l => l.classList.remove('selected'));
+                    
+                    // Add selected to clicked
+                    this.classList.add('selected');
+                    
+                    // Track pain level
+                    trackEvent('pain_level_selected', {
+                        pain_level: painLevel
+                    });
+                    
+                    // Show recommendation
+                    recommendation.style.display = 'block';
+                    
+                    switch(painLevel) {
+                        case '1-3':
+                            painMessage.textContent = 'Mild discomfort can often be managed at home. However, schedule an appointment to prevent it from getting worse.';
+                            painAction.textContent = 'Schedule Appointment';
+                            painAction.href = '#appointment';
+                            painAction.classList.remove('btn-emergency');
+                            painAction.classList.add('btn-primary');
+                            break;
+                            
+                        case '4-6':
+                            painMessage.textContent = 'Moderate pain requires prompt attention. Book a same-day appointment or call us for advice.';
+                            painAction.textContent = 'Book Same-Day Visit';
+                            painAction.href = '#appointment';
+                            painAction.classList.remove('btn-primary');
+                            painAction.classList.add('btn-emergency');
+                            break;
+                            
+                        case '7-10':
+                            painMessage.textContent = 'Severe pain is a dental emergency! Call us immediately for urgent care.';
+                            painAction.textContent = '📞 Call Now: (555) 123-4567';
+                            painAction.href = `tel:${EMERGENCY_PHONE}`;
+                            painAction.classList.remove('btn-primary');
+                            painAction.classList.add('btn-emergency');
+                            break;
+                    }
+                    
+                    // Smooth scroll to recommendation
+                    recommendation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+                
+                // Keyboard support
+                level.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+        
+        // Emergency Form Submission
+        async function handleEmergencySubmission(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            if (!validateForm(form)) {
+                trackEvent('emergency_form_validation_error');
+                return;
+            }
+            
+            const formData = new FormData(form);
+            const button = form.querySelector('button[type="submit"]');
+            
+            LoadingStateManager.setLoading(button, true, 'Submitting...');
+            
+            const emergencyData = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email') || '',
+                urgency: formData.get('urgency'),
+                preferredTime: formData.get('preferred-time'),
+                emergencyType: formData.get('emergency-type'),
+                symptoms: formData.get('symptoms'),
+                serviceInterest: 'Emergency Dentistry',
+                source: 'emergency-dentistry-page',
+                timestamp: new Date().toISOString()
+            };
+            
+            // Track submission
+            trackEvent('emergency_form_submit', {
+                urgency_level: emergencyData.urgency,
+                emergency_type: emergencyData.emergencyType,
+                dimension1: emergencyData.emergencyType,
+                dimension2: emergencyData.urgency
+            });
+            
+            try {
+                // Send emergency notification
+                const response = await fetch(API_BASE_URL + API_ENDPOINTS.emergencyNotification, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(emergencyData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                trackEvent('emergency_submission_success', {
+                    case_id: result.caseId,
+                    urgency_level: emergencyData.urgency
+                });
+                
+                // Show appropriate success message based on urgency
+                let successMessage = `Emergency request received, ${emergencyData.name}! `;
+                
+                switch(emergencyData.urgency) {
+                    case 'immediate':
+                        successMessage += 'A team member will call you within 5 minutes. If you can\'t wait, please call us directly.';
+                        break;
+                    case 'today':
+                        successMessage += 'We\'ll call you within 30 minutes to schedule a same-day appointment.';
+                        break;
+                    case 'soon':
+                        successMessage += 'We\'ll contact you within 2 hours to schedule your appointment.';
+                        break;
+                }
+                
+                showNotification(successMessage, 'success');
+                
+                // Reset form
+                form.reset();
+                document.querySelectorAll('.urgency-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                    opt.setAttribute('aria-pressed', 'false');
+                });
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+            } catch (error) {
+                console.error('Emergency submission error:', error);
+                
+                trackEvent('emergency_submission_error', {
+                    error_type: error.name,
+                    error_message: error.message
+                });
+                
+                showNotification(
+                    'Unable to submit emergency request. Please call us directly at (555) 123-4567 for immediate assistance.',
+                    'error'
+                );
+            } finally {
+                LoadingStateManager.setLoading(button, false);
+            }
+        }
+        
+        // Initialize Emergency CTAs
+        function initializeEmergencyCTAs() {
+            // All emergency call buttons
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const location = this.closest('section')?.className || 'unknown';
+                    const isFloating = this.classList.contains('floating-emergency-call');
+                    const isHero = this.dataset.action === 'call-emergency';
+                    
+                    trackEvent('emergency_call_click', {
+                        location: isFloating ? 'floating_button' : (isHero ? 'hero_cta' : location),
+                        phone_number: EMERGENCY_PHONE,
+                        is_floating: isFloating,
+                        is_hero: isHero
+                    });
+                    
+                    // Don't prevent default - let the call happen
+                });
+            });
+            
+            // Book emergency button
+            document.querySelectorAll('[data-action="book-emergency"]').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    trackEvent('book_emergency_click', {
+                        location: 'hero_section'
+                    });
+                    
+                    document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        document.getElementById('name').focus();
+                    }, 500);
+                });
+            });
+            
+            // Emergency action links in cards
+            document.querySelectorAll('.emergency-action').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const cardTitle = this.closest('.emergency-card').querySelector('h3').textContent;
+                    const isCall = this.href.includes('tel:');
+                    
+                    trackEvent('emergency_card_action', {
+                        emergency_type: cardTitle,
+                        action: isCall ? 'call' : 'book',
+                        dimension1: cardTitle
+                    });
+                    
+                    if (!isCall) {
+                        e.preventDefault();
+                        document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+        
+        // Mobile Touch Optimization
+        function initializeMobileOptimizations() {
+            if ('ontouchstart' in window) {
+                document.querySelectorAll('.btn, .urgency-option, .pain-level, .emergency-card').forEach(element => {
+                    element.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    });
+                    
+                    element.addEventListener('touchend', function() {
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                    });
+                });
+            }
+        }
+        
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize components
+            initializeUrgencySelector();
+            initializePainAssessment();
+            initializeEmergencyCTAs();
+            initializeMobileOptimizations();
+            
+            // Attach form handler
+            document.querySelector('[data-appointment]').addEventListener('submit', handleEmergencySubmission);
+            
+            // Real-time validation
+            document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+                field.addEventListener('blur', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (!this.value.trim()) {
+                        formGroup.classList.add('has-error');
+                        this.classList.add('error');
+                    } else {
+                        formGroup.classList.remove('has-error');
+                        this.classList.remove('error');
+                    }
+                });
+            });
+            
+            // Phone number formatting
+            document.getElementById('phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 6) {
+                    value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+                } else if (value.length >= 3) {
+                    value = value.slice(0, 3) + '-' + value.slice(3);
+                }
+                e.target.value = value;
+            });
+            
+            // Track page view with emergency context
+            trackEvent('emergency_page_view', {
+                page_title: 'Emergency Dentistry',
+                page_location: window.location.href,
+                entry_time: new Date().toISOString()
+            });
+            
+            // Set up urgent visual indicators
+            const floatingCall = document.querySelector('.floating-emergency-call');
+            
+            // Enhanced floating button visibility
+            let isScrolling = false;
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    floatingCall.style.transform = 'scale(0.9)';
+                    isScrolling = true;
+                }
+                
+                clearTimeout(window.scrollEndTimer);
+                window.scrollEndTimer = setTimeout(function() {
+                    floatingCall.style.transform = '';
+                    isScrolling = false;
+                }, 150);
+            });
+            
+            // Emergency type change handler
+            document.getElementById('emergency-type').addEventListener('change', function() {
+                if (this.value === 'knocked-out' || this.value === 'severe-pain') {
+                    showNotification('This is an urgent situation! Consider calling us immediately at (555) 123-4567', 'error');
+                }
+            });
+            
+            // Performance monitoring for emergency response
+            if ('PerformanceObserver' in window) {
+                const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (entry.name === 'first-contentful-paint') {
+                            trackEvent('emergency_page_performance', {
+                                fcp_time: Math.round(entry.startTime),
+                                metric: 'first_contentful_paint'
+                            });
+                        }
+                    }
+                });
+                observer.observe({ entryTypes: ['paint'] });
+            }
+        });
+    </script>
+</body>
+</html>

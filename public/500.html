@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error - Modern Dental Care</title>
+    <meta name="description" content="We're experiencing technical difficulties. Please try again later or contact us directly.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .error-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .error-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: #DC3545;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #DC3545;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #0077BE;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .contact-method a {
+            color: #0077BE;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-method a:hover {
+            color: #00A8A8;
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .btn-primary {
+            background: #0077BE;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #005a8e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 119, 190, 0.3);
+        }
+        
+        .status-info {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">!</div>
+        <h1>Technical Difficulties</h1>
+        <p>We're sorry, but something went wrong on our end. Our team has been notified and is working to fix the issue.</p>
+        
+        <div class="contact-info">
+            <h3>Need Immediate Assistance?</h3>
+            <div class="contact-method">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0077BE" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <span>Call us: <a href="tel:1-800-DENTIST">1-800-DENTIST</a></span>
+            </div>
+            <div class="contact-method">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0077BE" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span>Email: <a href="mailto:smile@moderndentalcare.com">smile@moderndentalcare.com</a></span>
+            </div>
+        </div>
+        
+        <a href="/" class="btn btn-primary">Try Homepage</a>
+        
+        <div class="status-info">
+            Error Code: 500 | Time: <span id="timestamp"></span>
+        </div>
+    </div>
+    
+    <script>
+        // Add current timestamp
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
