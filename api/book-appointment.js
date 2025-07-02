@@ -1,7 +1,19 @@
 // Vercel Serverless Function for handling appointment bookings
 // Production-ready with enhanced validation, error handling, and security
 
-import { supabase } from '../utils/supabase.js';
+const { createClient } = require('@supabase/supabase-js');
+
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const supabase = supabaseUrl && supabaseServiceKey 
+  ? createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    })
+  : null;
 
 // Helper function for input sanitization
 function sanitizeInput(input) {
@@ -196,7 +208,7 @@ export default async function handler(req, res) {
     // 6. Trigger Slack/Discord notification to staff
 
     // Save to database
-    const { data: appointment, error: dbError } = await supabase
+    const { data: appointment, error: dbError } = supabase ? await supabase
       .from('appointments')
       .insert({
         confirmation_number: confirmationNumber,
@@ -226,7 +238,7 @@ export default async function handler(req, res) {
         }
       })
       .select()
-      .single();
+      .single() : { data: null, error: 'Supabase not configured' };
 
     if (dbError) {
       console.error('Database error:', dbError);

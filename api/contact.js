@@ -1,7 +1,19 @@
 // Vercel Serverless Function for handling contact form submissions
 // Production-ready with enhanced validation, spam protection, and error handling
 
-import { supabase } from '../utils/supabase.js';
+const { createClient } = require('@supabase/supabase-js');
+
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const supabase = supabaseUrl && supabaseServiceKey 
+  ? createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    })
+  : null;
 
 // Helper functions
 function sanitizeInput(input) {
@@ -187,7 +199,7 @@ export default async function handler(req, res) {
 
     // Production integrations:
     // 1. Save to database
-    const { data: contact, error: dbError } = await supabase
+    const { data: contact, error: dbError } = supabase ? await supabase
       .from('contacts')
       .insert({
         ticket_id: ticketId,
@@ -203,7 +215,7 @@ export default async function handler(req, res) {
         user_agent: req.headers['user-agent']
       })
       .select()
-      .single();
+      .single() : { data: null, error: 'Supabase not configured' };
 
     if (dbError) {
       console.error('Database error:', dbError);

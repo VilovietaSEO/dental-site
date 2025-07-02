@@ -1,7 +1,19 @@
 // Vercel Serverless Function for capturing health quiz emails and results
 // Production-ready with validation, analytics, and marketing integration
 
-import { supabase } from '../utils/supabase.js';
+const { createClient } = require('@supabase/supabase-js');
+
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const supabase = supabaseUrl && supabaseServiceKey 
+  ? createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    })
+  : null;
 
 // Helper functions
 function sanitizeInput(input) {
@@ -178,7 +190,7 @@ export default async function handler(req, res) {
     // Production integrations:
 
     // 1. Save to database
-    const { data: quizRecord, error: dbError } = await supabase
+    const { data: quizRecord, error: dbError } = supabase ? await supabase
       .from('quiz_submissions')
       .insert({
         email: submission.email,
@@ -195,7 +207,7 @@ export default async function handler(req, res) {
         referrer: req.headers.referer || 'direct'
       })
       .select()
-      .single();
+      .single() : { data: null, error: 'Supabase not configured' };
 
     if (dbError) {
       console.error('Database error:', dbError);
